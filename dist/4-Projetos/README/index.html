@@ -1,0 +1,108 @@
+<h1>📋 GESTÃO DE PROJETOS</h1>
+<blockquote>
+<p><em>Iniciativas e projetos da empresa</em></p>
+</blockquote>
+<hr>
+<h2>🎯 <strong>PROPÓSITO</strong></h2>
+<p>Esta pasta contém todos os projetos e iniciativas da empresa, organizados por status e tipo. Utiliza frontmatter padronizado para facilitar consultas Dataview e automação.</p>
+<hr>
+<h2>📁 <strong>ESTRUTURA DE SUBPASTAS</strong></h2>
+<h3><strong>Ativos/</strong></h3>
+<ul>
+<li><strong>Propósito</strong>: Projetos em andamento</li>
+<li><strong>Status</strong>: Projetos com status “in-progress”</li>
+<li><strong>Conteúdo</strong>: Projetos ativos sendo executados</li>
+</ul>
+<h3><strong>Concluidos/</strong></h3>
+<ul>
+<li><strong>Propósito</strong>: Projetos finalizados</li>
+<li><strong>Status</strong>: Projetos com status “deployed” ou “archived”</li>
+<li><strong>Conteúdo</strong>: Projetos concluídos com sucesso</li>
+</ul>
+<h3><strong>Backlog/</strong></h3>
+<ul>
+<li><strong>Propósito</strong>: Ideias aprovadas</li>
+<li><strong>Status</strong>: Projetos com status “idea” ou “planning”</li>
+<li><strong>Conteúdo</strong>: Ideias aprovadas aguardando execução</li>
+</ul>
+<h3><strong>Pilotos/</strong></h3>
+<ul>
+<li><strong>Propósito</strong>: Experimentos e pilotos</li>
+<li><strong>Subpastas</strong>:
+<ul>
+<li><strong>Ideias/</strong> - Ideias de pilotos</li>
+<li><strong>Em-Execucao/</strong> - Pilotos ativos</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2>📊 <strong>FRONTMATTER PADRONIZADO</strong></h2>
+<h3><strong>Campos Obrigatórios</strong></h3>
+<pre><code class="language-yaml">---
+template: projeto-empresarial
+type: project                    # project | pilot
+status: idea                     # idea | planning | in-progress | pilot | deployed | archived
+priority: medium                 # low | medium | high | critical
+owner: &quot;&quot;                       # formato [[Nome]]
+market_segment: &quot;&quot;              # segmento de mercado
+effort_weeks: 0                 # inteiro (esforço em semanas)
+budget: 0                       # numérico R$ (sem formatação)
+metrics_first_month: &quot;&quot;         # string comparável
+ia_assets:                      # assets de IA utilizados
+  prompts: []                   # lista de prompts
+  models: []                    # modelos utilizados
+  datasets: []                  # datasets necessários
+compliance_level: 1             # 1=básico | 2=dados | 3=crítico
+legal_review: false             # boolean
+created:                # timestamp criação
+modified:               # timestamp modificação
+---
+</code></pre>
+<hr>
+<h2>📈 <strong>QUERIES DATAVIEW ÚTEIS</strong></h2>
+<h3><strong>Todos os Projetos</strong></h3>
+<pre><code class="language-dataview">TABLE choice(status, &quot;💡&quot;,&quot;📋&quot;,&quot;🚧&quot;,&quot;🧪&quot;,&quot;🚀&quot;) AS &quot;Status&quot;,
+ link(file.link, title) AS &quot;Projeto&quot;,
+ owner AS &quot;Owner&quot;,
+ effort_weeks + &quot;w&quot; AS &quot;Esforço&quot;,
+ &quot;R$ &quot; + budget AS &quot;Budget&quot;
+FROM &quot;4-Projetos&quot;
+WHERE type = &quot;project&quot; OR type = &quot;pilot&quot;
+SORT status, priority DESC, file.cday ASC
+</code></pre>
+<h3><strong>Projetos por Status</strong></h3>
+<pre><code class="language-dataview">TABLE length(rows) as &quot;Quantidade&quot;,
+ round(sum(budget) / 1000, 1) + &quot;k&quot; as &quot;Orçamento Total (R$)&quot;
+FROM &quot;4-Projetos&quot;
+WHERE type = &quot;project&quot; OR type = &quot;pilot&quot;
+GROUP BY status
+SORT length(rows) DESC
+</code></pre>
+<h3><strong>Projetos por Prioridade</strong></h3>
+<pre><code class="language-dataview">TABLE length(rows) as &quot;Quantidade&quot;,
+ round(sum(budget) / 1000, 1) + &quot;k&quot; as &quot;Orçamento Total (R$)&quot;
+FROM &quot;4-Projetos&quot;
+WHERE type = &quot;project&quot; OR type = &quot;pilot&quot;
+GROUP BY priority
+SORT priority DESC
+</code></pre>
+<hr>
+<h2>🔗 <strong>LINKS RÁPIDOS</strong></h2>
+<ul>
+<li><a href="/stubs/">0-Dashboard-Executivo&sol;Innovation-Pipeline</a> - Dashboard de pipeline</li>
+<li>[[z_Templates/Projetos/]] - Templates de projetos</li>
+<li>[[5-Processos/README]] - Processos de gestão</li>
+<li>[[6-Reunioes/README]] - Reuniões de projetos</li>
+</ul>
+<hr>
+<h2>📋 <strong>TEMPLATES DISPONÍVEIS</strong></h2>
+<ul>
+<li><strong><a href="http://project.md">project.md</a></strong> - Template para projetos principais</li>
+<li><strong><a href="http://pilot.md">pilot.md</a></strong> - Template para pilotos e experimentos</li>
+<li><strong><a href="http://task.md">task.md</a></strong> - Template para tarefas</li>
+<li><strong><a href="http://sprint.md">sprint.md</a></strong> - Template para sprints</li>
+<li><strong><a href="http://person.md">person.md</a></strong> - Template para pessoas</li>
+</ul>
+<hr>
+<p><strong>Status</strong>: 🔄 <strong>EM DESENVOLVIMENTO</strong><br>
+<strong>Próximo</strong>: Implementar templates e automação</p>

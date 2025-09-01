@@ -1,0 +1,246 @@
+<h1>📊 DASHBOARD DE CAPACIDADE DA EQUIPE</h1>
+<blockquote>
+<p><em>Visão executiva da capacidade, alocação e rendimento da equipe</em></p>
+</blockquote>
+<hr>
+<h2>🎯 <strong>RESUMO EXECUTIVO</strong></h2>
+<h3><strong>Capacidade Total da Equipe</strong></h3>
+<ul>
+<li><strong>Total de Pessoas</strong>: 0</li>
+<li><strong>Capacidade Semanal</strong>: 0h</li>
+<li><strong>Capacidade Mensal</strong>: 0h</li>
+<li><strong>Utilização Atual</strong>: 0%</li>
+</ul>
+<h3><strong>Status da Sprint Atual</strong></h3>
+<ul>
+<li><strong>Sprint</strong>: [[Sprint Atual]]</li>
+<li><strong>Capacidade Disponível</strong>: 0h</li>
+<li><strong>Horas Planejadas</strong>: 0h</li>
+<li><strong>Horas Realizadas</strong>: 0h</li>
+<li><strong>Progresso</strong>: 0%</li>
+</ul>
+<hr>
+<h2>👥 <strong>CAPACIDADE POR PESSOA</strong></h2>
+<h3><strong>Visão Geral da Equipe</strong></h3>
+<pre><code class="language-dataview">TABLE 
+  availability_weekly + &quot;h/sem&quot; AS &quot;Disponível&quot;,
+  availability_weekly - allocated_hours + &quot;h&quot; AS &quot;Livre&quot;,
+  round((allocated_hours / availability_weekly) * 100, 1) + &quot;%&quot; AS &quot;Utilização&quot;
+FROM &quot;2-Equipes&quot;
+WHERE type = &quot;person&quot; AND status = &quot;active&quot;
+SORT allocated_hours DESC
+</code></pre>
+<h3><strong>Capacidade por Departamento</strong></h3>
+<pre><code class="language-dataview">TABLE 
+  sum(availability_weekly) + &quot;h&quot; AS &quot;Capacidade Total&quot;,
+  sum(allocated_hours) + &quot;h&quot; AS &quot;Alocado&quot;,
+  round((sum(allocated_hours) / sum(availability_weekly)) * 100, 1) + &quot;%&quot; AS &quot;Utilização&quot;
+FROM &quot;2-Equipes&quot;
+WHERE type = &quot;person&quot; AND status = &quot;active&quot;
+GROUP BY department
+SORT sum(allocated_hours) DESC
+</code></pre>
+<h3><strong>Top 5 Mais Utilizados</strong></h3>
+<pre><code class="language-dataview">TABLE 
+  role AS &quot;Cargo&quot;,
+  department AS &quot;Departamento&quot;,
+  allocated_hours + &quot;h&quot; AS &quot;Alocado&quot;,
+  round((allocated_hours / availability_weekly) * 100, 1) + &quot;%&quot; AS &quot;Utilização&quot;
+FROM &quot;2-Equipes&quot;
+WHERE type = &quot;person&quot; AND status = &quot;active&quot;
+SORT allocated_hours DESC
+LIMIT 5
+</code></pre>
+<hr>
+<h2>📈 <strong>MÉTRICAS DE PERFORMANCE</strong></h2>
+<h3><strong>Produtividade por Departamento</strong></h3>
+<pre><code class="language-dataview">TABLE 
+  department AS &quot;Departamento&quot;,
+  sum(actual_hours) + &quot;h&quot; AS &quot;Horas Realizadas&quot;,
+  sum(estimated_hours) + &quot;h&quot; AS &quot;Horas Estimadas&quot;,
+  round((sum(actual_hours) / sum(estimated_hours)) * 100, 1) + &quot;%&quot; AS &quot;Eficiência&quot;
+FROM &quot;4-Projetos&quot;
+WHERE type = &quot;task&quot;
+GROUP BY department
+SORT sum(actual_hours) DESC
+</code></pre>
+<h3><strong>Precisão das Estimativas</strong></h3>
+<pre><code class="language-dataview">TABLE 
+  assignee AS &quot;Responsável&quot;,
+  sum(estimated_hours) + &quot;h&quot; AS &quot;Estimado&quot;,
+  sum(actual_hours) + &quot;h&quot; AS &quot;Realizado&quot;,
+  round(abs((sum(estimated_hours) - sum(actual_hours)) / sum(estimated_hours)) * 100, 1) + &quot;%&quot; AS &quot;Variação&quot;
+FROM &quot;4-Projetos&quot;
+WHERE type = &quot;task&quot; AND actual_hours &gt; 0
+GROUP BY assignee
+SORT sum(actual_hours) DESC
+</code></pre>
+<hr>
+<h2>🎯 <strong>SPRINTS E PROJETOS</strong></h2>
+<h3><strong>Status das Sprints</strong></h3>
+<pre><code class="language-dataview">TABLE 
+  choice(status, &quot;📋&quot;,&quot;🚧&quot;,&quot;✅&quot;) AS &quot;Status&quot;,
+  start_date + &quot; a &quot; + end_date AS &quot;Período&quot;,
+  total_capacity_hours + &quot;h&quot; AS &quot;Capacidade&quot;,
+  planned_hours + &quot;h&quot; AS &quot;Planejado&quot;,
+  actual_hours + &quot;h&quot; AS &quot;Realizado&quot;,
+  round(completion_rate, 1) + &quot;%&quot; AS &quot;Conclusão&quot;
+FROM &quot;4-Projetos&quot;
+WHERE type = &quot;sprint&quot;
+SORT start_date DESC
+</code></pre>
+<h3><strong>Projetos por Status</strong></h3>
+<pre><code class="language-dataview">TABLE 
+  choice(status, &quot;💡&quot;,&quot;🚧&quot;,&quot;✅&quot;) AS &quot;Status&quot;,
+  owner AS &quot;Responsável&quot;,
+  effort_weeks + &quot;w&quot; AS &quot;Duração&quot;,
+  budget + &quot;R$&quot; AS &quot;Orçamento&quot;
+FROM &quot;4-Projetos&quot;
+WHERE type = &quot;project&quot;
+SORT status, priority DESC
+</code></pre>
+<h3><strong>Progresso por Projeto</strong></h3>
+<pre><code class="language-dataview">TABLE 
+  link(file.link, title) AS &quot;Projeto&quot;,
+  round((actual_hours / estimated_hours) * 100, 1) + &quot;%&quot; AS &quot;Progresso&quot;,
+  actual_hours + &quot;h/&quot; + estimated_hours + &quot;h&quot; AS &quot;Horas&quot;
+FROM &quot;4-Projetos&quot;
+WHERE type = &quot;project&quot;
+SORT actual_hours DESC
+</code></pre>
+<hr>
+<h2>⚠️ <strong>ALERTAS E RISCOS</strong></h2>
+<h3><strong>Pessoas Sobrecarregadas</strong></h3>
+<pre><code class="language-dataview">TABLE 
+  role AS &quot;Cargo&quot;,
+  department AS &quot;Departamento&quot;,
+  allocated_hours + &quot;h&quot; AS &quot;Alocado&quot;,
+  round((allocated_hours / availability_weekly) * 100, 1) + &quot;%&quot; AS &quot;Utilização&quot;
+FROM &quot;2-Equipes&quot;
+WHERE type = &quot;person&quot; AND status = &quot;active&quot; AND (allocated_hours / availability_weekly) &gt; 0.8
+SORT allocated_hours DESC
+</code></pre>
+<h3><strong>Pessoas Subutilizadas</strong></h3>
+<pre><code class="language-dataview">TABLE 
+  role AS &quot;Cargo&quot;,
+  department AS &quot;Departamento&quot;,
+  allocated_hours + &quot;h&quot; AS &quot;Alocado&quot;,
+  round((allocated_hours / availability_weekly) * 100, 1) + &quot;%&quot; AS &quot;Utilização&quot;
+FROM &quot;2-Equipes&quot;
+WHERE type = &quot;person&quot; AND status = &quot;active&quot; AND (allocated_hours / availability_weekly) &lt; 0.3
+SORT allocated_hours ASC
+</code></pre>
+<h3><strong>Sprints em Risco</strong></h3>
+<pre><code class="language-dataview">TABLE 
+  sprint_number AS &quot;Sprint&quot;,
+  round((planned_hours / total_capacity_hours) * 100, 1) + &quot;%&quot; AS &quot;Utilização Planejada&quot;,
+  round(completion_rate, 1) + &quot;%&quot; AS &quot;Progresso&quot;,
+  status AS &quot;Status&quot;
+FROM &quot;4-Projetos&quot;
+WHERE type = &quot;sprint&quot; AND (planned_hours / total_capacity_hours) &gt; 0.9
+SORT sprint_number DESC
+</code></pre>
+<hr>
+<h2>📊 <strong>TENDÊNCIAS E ANÁLISES</strong></h2>
+<h3><strong>Evolução da Capacidade (Últimos 3 Meses)</strong></h3>
+<pre><code class="language-dataview">TABLE 
+  dateformat(created, &quot;MMMM yyyy&quot;) AS &quot;Mês&quot;,
+  sum(availability_weekly) + &quot;h&quot; AS &quot;Capacidade Total&quot;,
+  sum(allocated_hours) + &quot;h&quot; AS &quot;Alocado&quot;,
+  round((sum(allocated_hours) / sum(availability_weekly)) * 100, 1) + &quot;%&quot; AS &quot;Utilização&quot;
+FROM &quot;2-Equipes&quot;
+WHERE type = &quot;person&quot; AND status = &quot;active&quot;
+GROUP BY dateformat(created, &quot;MMMM yyyy&quot;)
+SORT created DESC
+LIMIT 3
+</code></pre>
+<h3><strong>Performance por Sprint</strong></h3>
+<pre><code class="language-dataview">TABLE 
+  sprint_number AS &quot;Sprint&quot;,
+  round((actual_hours / planned_hours) * 100, 1) + &quot;%&quot; AS &quot;Eficiência&quot;,
+  tasks_completed + &quot;/&quot; + tasks_count AS &quot;Tarefas&quot;,
+  round(completion_rate, 1) + &quot;%&quot; AS &quot;Conclusão&quot;
+FROM &quot;4-Projetos&quot;
+WHERE type = &quot;sprint&quot;
+SORT sprint_number DESC
+</code></pre>
+<hr>
+<h2>🎯 <strong>RECOMENDAÇÕES</strong></h2>
+<h3><strong>Otimizações de Capacidade</strong></h3>
+<h4><strong>Redistribuição de Carga</strong></h4>
+<ul>
+<li><strong>Pessoas sobrecarregadas</strong>: [Lista de pessoas com &gt;80% utilização]</li>
+<li><strong>Ações recomendadas</strong>: Redistribuir tarefas para pessoas com menor utilização</li>
+<li><strong>Impacto esperado</strong>: Melhorar qualidade e reduzir riscos de burnout</li>
+</ul>
+<h4><strong>Melhoria de Estimativas</strong></h4>
+<ul>
+<li><strong>Pessoas com baixa precisão</strong>: [Lista de pessoas com &gt;30% variação]</li>
+<li><strong>Ações recomendadas</strong>: Treinamento em estimativas e revisão de processos</li>
+<li><strong>Impacto esperado</strong>: Melhor planejamento e previsibilidade</li>
+</ul>
+<h4><strong>Otimização de Sprints</strong></h4>
+<ul>
+<li><strong>Sprints com alta utilização</strong>: [Lista de sprints com &gt;90% utilização]</li>
+<li><strong>Ações recomendadas</strong>: Reduzir escopo ou aumentar duração</li>
+<li><strong>Impacto esperado</strong>: Maior flexibilidade e menor risco</li>
+</ul>
+<hr>
+<h2>📋 <strong>PRÓXIMAS AÇÕES</strong></h2>
+<h3><strong>Ações Imediatas (Esta Semana)</strong></h3>
+<ul>
+<li>[ ] Revisar alocação de pessoas sobrecarregadas</li>
+<li>[ ] Ajustar estimativas de tarefas em andamento</li>
+<li>[ ] Planejar próxima sprint considerando capacidade real</li>
+</ul>
+<h3><strong>Ações de Médio Prazo (Próximo Mês)</strong></h3>
+<ul>
+<li>[ ] Implementar treinamento em estimativas</li>
+<li>[ ] Revisar processos de planejamento de sprint</li>
+<li>[ ] Desenvolver métricas de qualidade</li>
+</ul>
+<h3><strong>Ações de Longo Prazo (Próximo Trimestre)</strong></h3>
+<ul>
+<li>[ ] Avaliar necessidade de contratações</li>
+<li>[ ] Implementar ferramentas de automação</li>
+<li>[ ] Desenvolver plano de crescimento da equipe</li>
+</ul>
+<hr>
+<h2>🔗 <strong>LINKS RÁPIDOS</strong></h2>
+<h3><strong>Sistema de Gestão</strong></h3>
+<ul>
+<li>[[5-Processos/Sistema_Gestao_Capacidade_Sprints]] - Sistema completo</li>
+<li>[[z_Templates/Projetos/Template_Pessoa]] - Template de pessoa</li>
+<li>[[z_Templates/Projetos/Template_Sprint]] - Template de sprint</li>
+<li>[[z_Templates/Projetos/Template_Tarefa]] - Template de tarefa</li>
+</ul>
+<h3><strong>Formulários</strong></h3>
+<ul>
+<li>[[utils/forms/Formulario_Capacidade_Pessoas]] - Formulário de capacidade</li>
+</ul>
+<h3><strong>Dashboards Relacionados</strong></h3>
+<ul>
+<li><a href="/stubs/">0-Dashboard-Executivo&sol;Home-Executivo</a> - Dashboard principal</li>
+<li><a href="/stubs/">0-Dashboard-Executivo&sol;KPIs-Principais</a> - KPIs da empresa</li>
+<li>[[0-Dashboard-Executivo/Sistema_Metricas_Avancadas]] - Métricas avançadas</li>
+</ul>
+<hr>
+<h2>📈 <strong>MÉTRICAS DE REFERÊNCIA</strong></h2>
+<h3><strong>Benchmarks de Qualidade</strong></h3>
+<ul>
+<li><strong>Utilização ideal</strong>: 60-80%</li>
+<li><strong>Eficiência da sprint</strong>: &gt; 80%</li>
+<li><strong>Precisão das estimativas</strong>: ±20%</li>
+<li><strong>Taxa de conclusão</strong>: &gt; 90%</li>
+</ul>
+<h3><strong>Indicadores de Risco</strong></h3>
+<ul>
+<li><strong>Sobrecarga</strong>: &gt; 90% utilização</li>
+<li><strong>Subutilização</strong>: &lt; 30% utilização</li>
+<li><strong>Baixa precisão</strong>: &gt; 30% variação</li>
+<li><strong>Sprint em risco</strong>: &gt; 90% utilização planejada</li>
+</ul>
+<hr>
+<p><strong>Status</strong>: ✅ <strong>ATIVO</strong><br>
+<strong>Última Atualização</strong>: 2025-01-20<br>
+<strong>Próxima Revisão</strong>: 2025-01-27</p>

@@ -1,0 +1,425 @@
+<h1>📊 SISTEMA DE GESTÃO DE CAPACIDADE E SPRINTS</h1>
+<blockquote>
+<p><em>Sistema integrado para controle de capacidade, alocação e rendimento por sprint</em></p>
+</blockquote>
+<hr>
+<h2>🎯 <strong>PROPÓSITO</strong></h2>
+<p>Este sistema permite gerenciar eficientemente a capacidade de trabalho de cada pessoa, alocar tarefas de forma otimizada e acompanhar o rendimento por sprint, considerando que todos têm outros compromissos e empregos.</p>
+<hr>
+<h2>🏗️ <strong>ESTRUTURA DO SISTEMA</strong></h2>
+<h3><strong>Componentes Principais</strong></h3>
+<h4><strong>1. Pessoas</strong></h4>
+<ul>
+<li><strong>Nome da pessoa</strong></li>
+<li><strong>Horas disponíveis por semana/mês</strong></li>
+<li><strong>Horas alocadas na sprint</strong> (soma das horas estimadas das tarefas atribuídas)</li>
+<li><strong>Horas trabalhadas no mês</strong> (soma das horas realizadas em tarefas concluídas)</li>
+<li><strong>Horas trabalhadas no total</strong> (soma de todas as horas realizadas)</li>
+</ul>
+<h4><strong>2. Projetos</strong></h4>
+<ul>
+<li><strong>Nome do projeto</strong></li>
+<li><strong>Status</strong> (Ideia, Em andamento, Concluído)</li>
+<li><strong>Datas de início e conclusão</strong></li>
+<li><strong>Horas estimadas</strong> (soma das tarefas associadas)</li>
+<li><strong>Horas realizadas</strong> (soma das tarefas concluídas)</li>
+<li><strong>Relação com tarefas e sprints</strong></li>
+</ul>
+<h4><strong>3. Sprints</strong></h4>
+<ul>
+<li><strong>Nome da sprint</strong></li>
+<li><strong>Datas de início e fim</strong></li>
+<li><strong>Capacidade total em horas</strong> (soma das horas disponíveis das pessoas)</li>
+<li><strong>Horas planejadas</strong> (soma das horas estimadas das tarefas da sprint)</li>
+<li><strong>Horas realizadas</strong> (soma das horas registradas nas tarefas da sprint)</li>
+<li><strong>Status</strong> (Planejada, Em andamento, Concluída)</li>
+<li><strong>Relação com pessoas e tarefas</strong></li>
+</ul>
+<h4><strong>4. Tarefas</strong></h4>
+<ul>
+<li><strong>Nome da tarefa</strong></li>
+<li><strong>Projeto associado</strong></li>
+<li><strong>Sprint associada</strong></li>
+<li><strong>Pessoa responsável</strong></li>
+<li><strong>Tempo estimado original</strong></li>
+<li><strong>Tempo estimado atualizado</strong></li>
+<li><strong>Tempo realizado</strong></li>
+<li><strong>Status</strong> (Backlog, Em andamento, Concluída, Bloqueada)</li>
+<li><strong>Datas de início e conclusão</strong></li>
+<li><strong>Observações</strong></li>
+</ul>
+<hr>
+<h2>📋 <strong>REGRAS E CÁLCULOS IMPORTANTES</strong></h2>
+<h3><strong>Cálculos de Capacidade</strong></h3>
+<h4><strong>Horas Alocadas por Pessoa</strong></h4>
+<pre><code>Horas Alocadas = Σ(Horas Estimadas das Tarefas da Pessoa na Sprint)
+</code></pre>
+<h4><strong>Horas Disponíveis Restantes</strong></h4>
+<pre><code>Horas Disponíveis Restantes = Horas Disponíveis - Horas Alocadas
+</code></pre>
+<h4><strong>Controle de Sprint</strong></h4>
+<pre><code>Capacidade Total da Sprint = Σ(Horas Disponíveis de Todas as Pessoas)
+Horas Planejadas = Σ(Horas Estimadas das Tarefas da Sprint)
+Saldo = Capacidade Total - Horas Planejadas
+</code></pre>
+<h4><strong>Horas Mensais Trabalhadas</strong></h4>
+<pre><code>Horas Mensais = Σ(Tempo Realizado em Tarefas Concluídas no Mês)
+</code></pre>
+<h3><strong>Regras de Negócio</strong></h3>
+<h4><strong>1. Limites de Capacidade</strong></h4>
+<ul>
+<li><strong>Máximo 80% de utilização</strong> por pessoa por sprint</li>
+<li><strong>Mínimo 20% de buffer</strong> para imprevistos</li>
+<li><strong>Capacidade total da sprint</strong> não pode exceder 100% da equipe</li>
+</ul>
+<h4><strong>2. Priorização</strong></h4>
+<ul>
+<li><strong>Tarefas críticas</strong> têm prioridade sobre tarefas normais</li>
+<li><strong>Dependências</strong> devem ser respeitadas na alocação</li>
+<li><strong>Especialização</strong> da pessoa deve ser considerada</li>
+</ul>
+<h4><strong>3. Flexibilidade</strong></h4>
+<ul>
+<li><strong>Estimativas podem ser ajustadas</strong> durante a sprint</li>
+<li><strong>Tarefas podem ser realocadas</strong> se necessário</li>
+<li><strong>Horas extras</strong> devem ser aprovadas previamente</li>
+</ul>
+<hr>
+<h2>📊 <strong>MÉTRICAS E KPIs</strong></h2>
+<h3><strong>Métricas de Capacidade</strong></h3>
+<h4><strong>Utilização por Pessoa</strong></h4>
+<pre><code>Utilização (%) = (Horas Alocadas / Horas Disponíveis) × 100
+</code></pre>
+<h4><strong>Eficiência da Sprint</strong></h4>
+<pre><code>Eficiência (%) = (Horas Realizadas / Horas Planejadas) × 100
+</code></pre>
+<h4><strong>Precisão das Estimativas</strong></h4>
+<pre><code>Precisão (%) = |(Horas Estimadas - Horas Realizadas) / Horas Estimadas| × 100
+</code></pre>
+<h3><strong>Métricas de Produtividade</strong></h3>
+<h4><strong>Velocidade da Equipe</strong></h4>
+<pre><code>Velocidade = Σ(Story Points Concluídos) / Número de Sprints
+</code></pre>
+<h4><strong>Throughput</strong></h4>
+<pre><code>Throughput = Número de Tarefas Concluídas / Período de Tempo
+</code></pre>
+<h4><strong>Lead Time</strong></h4>
+<pre><code>Lead Time = Data de Conclusão - Data de Início
+</code></pre>
+<hr>
+<h2>🔄 <strong>WORKFLOW DE GESTÃO</strong></h2>
+<h3><strong>1. Planejamento de Sprint</strong></h3>
+<h4><strong>Passo 1: Definir Capacidade</strong></h4>
+<ul>
+<li>[x] Listar todas as pessoas disponíveis</li>
+<li>[x] Confirmar horas disponíveis por pessoa</li>
+<li>[x] Calcular capacidade total da sprint</li>
+</ul>
+<h4><strong>Passo 2: Selecionar Tarefas</strong></h4>
+<ul>
+<li>[ ] Revisar backlog de tarefas</li>
+<li>[ ] Priorizar tarefas por importância</li>
+<li>[ ] Estimar horas para cada tarefa</li>
+</ul>
+<h4><strong>Passo 3: Alocar Tarefas</strong></h4>
+<ul>
+<li>[ ] Distribuir tarefas considerando especialização</li>
+<li>[ ] Verificar limites de capacidade</li>
+<li>[ ] Validar dependências</li>
+</ul>
+<h4><strong>Passo 4: Validar Sprint</strong></h4>
+<ul>
+<li>[ ] Confirmar que capacidade ≥ horas planejadas</li>
+<li>[ ] Aprovar sprint com equipe</li>
+<li>[ ] Documentar decisões</li>
+</ul>
+<h3><strong>2. Execução da Sprint</strong></h3>
+<h4><strong>Passo 1: Acompanhamento Diário</strong></h4>
+<ul>
+<li>[ ] Registrar horas trabalhadas</li>
+<li>[ ] Atualizar progresso das tarefas</li>
+<li>[ ] Identificar bloqueios</li>
+</ul>
+<h4><strong>Passo 2: Ajustes Durante Sprint</strong></h4>
+<ul>
+<li>[ ] Revisar estimativas se necessário</li>
+<li>[ ] Realocar tarefas se preciso</li>
+<li>[ ] Comunicar mudanças à equipe</li>
+</ul>
+<h4><strong>Passo 3: Controle de Qualidade</strong></h4>
+<ul>
+<li>[ ] Validar entregáveis</li>
+<li>[ ] Aprovar tarefas concluídas</li>
+<li>[ ] Documentar lições aprendidas</li>
+</ul>
+<h3><strong>3. Encerramento da Sprint</strong></h3>
+<h4><strong>Passo 1: Revisão de Resultados</strong></h4>
+<ul>
+<li>[ ] Comparar planejado vs realizado</li>
+<li>[ ] Analisar métricas de performance</li>
+<li>[ ] Identificar melhorias</li>
+</ul>
+<h4><strong>Passo 2: Retrospectiva</strong></h4>
+<ul>
+<li>[ ] Coletar feedback da equipe</li>
+<li>[ ] Documentar lições aprendidas</li>
+<li>[ ] Definir ações de melhoria</li>
+</ul>
+<h4><strong>Passo 3: Atualização de Dados</strong></h4>
+<ul>
+<li>[ ] Atualizar métricas históricas</li>
+<li>[ ] Ajustar estimativas futuras</li>
+<li>[ ] Preparar próxima sprint</li>
+</ul>
+<hr>
+<h2>📈 <strong>DASHBOARDS E RELATÓRIOS</strong></h2>
+<h3><strong>Dashboard de Capacidade</strong></h3>
+<h4><strong>Visão Geral da Equipe</strong></h4>
+<pre><code class="language-dataview">TABLE 
+  availability_weekly + &quot;h/sem&quot; AS &quot;Disponível&quot;,
+  availability_weekly - allocated_hours + &quot;h&quot; AS &quot;Livre&quot;,
+  round((allocated_hours / availability_weekly) * 100, 1) + &quot;%&quot; AS &quot;Utilização&quot;
+FROM &quot;2-Equipes&quot;
+WHERE type = &quot;person&quot;
+SORT allocated_hours DESC
+</code></pre>
+<h4><strong>Capacidade por Departamento</strong></h4>
+<pre><code class="language-dataview">TABLE 
+  sum(availability_weekly) + &quot;h&quot; AS &quot;Capacidade Total&quot;,
+  sum(allocated_hours) + &quot;h&quot; AS &quot;Alocado&quot;,
+  round((sum(allocated_hours) / sum(availability_weekly)) * 100, 1) + &quot;%&quot; AS &quot;Utilização&quot;
+FROM &quot;2-Equipes&quot;
+WHERE type = &quot;person&quot;
+GROUP BY department
+SORT sum(allocated_hours) DESC
+</code></pre>
+<h3><strong>Dashboard de Sprints</strong></h3>
+<h4><strong>Status das Sprints</strong></h4>
+<pre><code class="language-dataview">TABLE 
+  choice(status, &quot;📋&quot;,&quot;🚧&quot;,&quot;✅&quot;) AS &quot;Status&quot;,
+  start_date + &quot; a &quot; + end_date AS &quot;Período&quot;,
+  total_capacity_hours + &quot;h&quot; AS &quot;Capacidade&quot;,
+  planned_hours + &quot;h&quot; AS &quot;Planejado&quot;,
+  actual_hours + &quot;h&quot; AS &quot;Realizado&quot;,
+  round(completion_rate, 1) + &quot;%&quot; AS &quot;Conclusão&quot;
+FROM &quot;4-Projetos&quot;
+WHERE type = &quot;sprint&quot;
+SORT start_date DESC
+</code></pre>
+<h4><strong>Performance por Sprint</strong></h4>
+<pre><code class="language-dataview">TABLE 
+  sprint_number AS &quot;Sprint&quot;,
+  round((actual_hours / planned_hours) * 100, 1) + &quot;%&quot; AS &quot;Eficiência&quot;,
+  tasks_completed + &quot;/&quot; + tasks_count AS &quot;Tarefas&quot;,
+  round(completion_rate, 1) + &quot;%&quot; AS &quot;Conclusão&quot;
+FROM &quot;4-Projetos&quot;
+WHERE type = &quot;sprint&quot;
+SORT sprint_number DESC
+</code></pre>
+<h3><strong>Dashboard de Projetos</strong></h3>
+<h4><strong>Status dos Projetos</strong></h4>
+<pre><code class="language-dataview">TABLE 
+  choice(status, &quot;💡&quot;,&quot;🚧&quot;,&quot;✅&quot;) AS &quot;Status&quot;,
+  owner AS &quot;Responsável&quot;,
+  effort_weeks + &quot;w&quot; AS &quot;Duração&quot;,
+  budget + &quot;R$&quot; AS &quot;Orçamento&quot;
+FROM &quot;4-Projetos&quot;
+WHERE type = &quot;project&quot;
+SORT status, priority DESC
+</code></pre>
+<h4><strong>Progresso por Projeto</strong></h4>
+<pre><code class="language-dataview">TABLE 
+  link(file.link, title) AS &quot;Projeto&quot;,
+  round((actual_hours / estimated_hours) * 100, 1) + &quot;%&quot; AS &quot;Progresso&quot;,
+  actual_hours + &quot;h/&quot; + estimated_hours + &quot;h&quot; AS &quot;Horas&quot;
+FROM &quot;4-Projetos&quot;
+WHERE type = &quot;project&quot;
+SORT actual_hours DESC
+</code></pre>
+<hr>
+<h2>🛠️ <strong>FERRAMENTAS E TEMPLATES</strong></h2>
+<h3><strong>Templates Disponíveis</strong></h3>
+<h4><strong>1. Template de Pessoa</strong></h4>
+<ul>
+<li><strong>Arquivo</strong>: <code>z_Templates/Projetos/Template_Pessoa.md</code></li>
+<li><strong>Uso</strong>: Criar perfil de cada membro da equipe</li>
+<li><strong>Campos</strong>: Capacidade, especialização, histórico</li>
+</ul>
+<h4><strong>2. Template de Sprint</strong></h4>
+<ul>
+<li><strong>Arquivo</strong>: <code>z_Templates/Projetos/Template_Sprint.md</code></li>
+<li><strong>Uso</strong>: Planejar e acompanhar sprints</li>
+<li><strong>Campos</strong>: Capacidade, tarefas, métricas</li>
+</ul>
+<h4><strong>3. Template de Tarefa</strong></h4>
+<ul>
+<li><strong>Arquivo</strong>: <code>z_Templates/Projetos/Template_Tarefa.md</code></li>
+<li><strong>Uso</strong>: Detalhar e acompanhar tarefas</li>
+<li><strong>Campos</strong>: Estimativas, progresso, dependências</li>
+</ul>
+<h4><strong>4. Template de Projeto</strong></h4>
+<ul>
+<li><strong>Arquivo</strong>: <code>z_Templates/Projetos/Template_Projeto.md</code></li>
+<li><strong>Uso</strong>: Gerenciar projetos completos</li>
+<li><strong>Campos</strong>: Escopo, cronograma, recursos</li>
+</ul>
+<h3><strong>Scripts de Automação</strong></h3>
+<h4><strong>1. Cálculo de Capacidade</strong></h4>
+<pre><code class="language-python">def calcular_capacidade_sprint(pessoas, sprint):
+    capacidade_total = sum(p.availability_weekly for p in pessoas)
+    horas_planejadas = sum(t.estimated_hours for t in sprint.tarefas)
+    return {
+        'capacidade_total': capacidade_total,
+        'horas_planejadas': horas_planejadas,
+        'saldo': capacidade_total - horas_planejadas,
+        'utilizacao': (horas_planejadas / capacidade_total) * 100
+    }
+</code></pre>
+<h4><strong>2. Validação de Alocação</strong></h4>
+<pre><code class="language-python">def validar_alocacao(pessoa, tarefas_sprint):
+    horas_alocadas = sum(t.estimated_hours for t in tarefas_sprint if t.assignee == pessoa)
+    utilizacao = (horas_alocadas / pessoa.availability_weekly) * 100
+    
+    if utilizacao &gt; 80:
+        return False, f&quot;Utilização muito alta: {utilizacao:.1f}%&quot;
+    elif utilizacao &lt; 20:
+        return False, f&quot;Utilização muito baixa: {utilizacao:.1f}%&quot;
+    else:
+        return True, f&quot;Utilização adequada: {utilizacao:.1f}%&quot;
+</code></pre>
+<hr>
+<h2>📝 <strong>PROCEDIMENTOS OPERACIONAIS</strong></h2>
+<h3><strong>Procedimento 1: Criação de Nova Sprint</strong></h3>
+<h4><strong>1.1 Preparação</strong></h4>
+<ul>
+<li>[ ] Definir período da sprint (2-4 semanas)</li>
+<li>[ ] Confirmar disponibilidade da equipe</li>
+<li>[ ] Revisar backlog de tarefas</li>
+</ul>
+<h4><strong>1.2 Planejamento</strong></h4>
+<ul>
+<li>[ ] Calcular capacidade total disponível</li>
+<li>[ ] Selecionar tarefas prioritárias</li>
+<li>[ ] Estimar horas para cada tarefa</li>
+</ul>
+<h4><strong>1.3 Alocação</strong></h4>
+<ul>
+<li>[ ] Distribuir tarefas por pessoa</li>
+<li>[ ] Validar limites de capacidade</li>
+<li>[ ] Confirmar dependências</li>
+</ul>
+<h4><strong>1.4 Aprovação</strong></h4>
+<ul>
+<li>[ ] Revisar sprint com equipe</li>
+<li>[ ] Aprovar cronograma final</li>
+<li>[ ] Documentar decisões</li>
+</ul>
+<h3><strong>Procedimento 2: Acompanhamento Diário</strong></h3>
+<h4><strong>2.1 Standup Diário</strong></h4>
+<ul>
+<li>[ ] Cada pessoa reporta progresso</li>
+<li>[ ] Identificar bloqueios</li>
+<li>[ ] Ajustar estimativas se necessário</li>
+</ul>
+<h4><strong>2.2 Atualização de Dados</strong></h4>
+<ul>
+<li>[ ] Registrar horas trabalhadas</li>
+<li>[ ] Atualizar status das tarefas</li>
+<li>[ ] Calcular métricas de progresso</li>
+</ul>
+<h4><strong>2.3 Comunicação</strong></h4>
+<ul>
+<li>[ ] Informar mudanças à equipe</li>
+<li>[ ] Escalar problemas se necessário</li>
+<li>[ ] Documentar decisões importantes</li>
+</ul>
+<h3><strong>Procedimento 3: Encerramento de Sprint</strong></h3>
+<h4><strong>3.1 Revisão Final</strong></h4>
+<ul>
+<li>[ ] Validar todas as tarefas</li>
+<li>[ ] Calcular métricas finais</li>
+<li>[ ] Preparar relatório de resultados</li>
+</ul>
+<h4><strong>3.2 Retrospectiva</strong></h4>
+<ul>
+<li>[ ] Coletar feedback da equipe</li>
+<li>[ ] Identificar melhorias</li>
+<li>[ ] Definir ações para próxima sprint</li>
+</ul>
+<h4><strong>3.3 Atualização de Dados</strong></h4>
+<ul>
+<li>[ ] Atualizar métricas históricas</li>
+<li>[ ] Ajustar estimativas futuras</li>
+<li>[ ] Preparar planejamento da próxima sprint</li>
+</ul>
+<hr>
+<h2>🔍 <strong>CONTROLES DE QUALIDADE</strong></h2>
+<h3><strong>Checklist de Validação</strong></h3>
+<h4><strong>Antes de Iniciar Sprint</strong></h4>
+<ul>
+<li>[ ] Capacidade total calculada e validada</li>
+<li>[ ] Tarefas estimadas e priorizadas</li>
+<li>[ ] Alocação respeita limites de capacidade</li>
+<li>[ ] Dependências identificadas e respeitadas</li>
+<li>[ ] Equipe aprovou o planejamento</li>
+</ul>
+<h4><strong>Durante a Sprint</strong></h4>
+<ul>
+<li>[ ] Progresso acompanhado diariamente</li>
+<li>[ ] Estimativas atualizadas quando necessário</li>
+<li>[ ] Bloqueios identificados e resolvidos</li>
+<li>[ ] Comunicação mantida com equipe</li>
+<li>[ ] Qualidade dos entregáveis validada</li>
+</ul>
+<h4><strong>Ao Final da Sprint</strong></h4>
+<ul>
+<li>[ ] Todas as tarefas revisadas</li>
+<li>[ ] Métricas calculadas e analisadas</li>
+<li>[ ] Retrospectiva realizada</li>
+<li>[ ] Lições aprendidas documentadas</li>
+<li>[ ] Próxima sprint planejada</li>
+</ul>
+<h3><strong>Indicadores de Qualidade</strong></h3>
+<h4><strong>Indicadores de Capacidade</strong></h4>
+<ul>
+<li><strong>Utilização ideal</strong>: 60-80%</li>
+<li><strong>Subutilização</strong>: &lt; 50%</li>
+<li><strong>Sobrecarga</strong>: &gt; 90%</li>
+</ul>
+<h4><strong>Indicadores de Produtividade</strong></h4>
+<ul>
+<li><strong>Eficiência da sprint</strong>: &gt; 80%</li>
+<li><strong>Precisão das estimativas</strong>: ±20%</li>
+<li><strong>Taxa de conclusão</strong>: &gt; 90%</li>
+</ul>
+<h4><strong>Indicadores de Qualidade</strong></h4>
+<ul>
+<li><strong>Tarefas sem rework</strong>: &gt; 95%</li>
+<li><strong>Satisfação da equipe</strong>: &gt; 7/10</li>
+<li><strong>Cumprimento de prazos</strong>: &gt; 85%</li>
+</ul>
+<hr>
+<h2>📚 <strong>REFERÊNCIAS E LINKS</strong></h2>
+<h3><strong>Templates Relacionados</strong></h3>
+<ul>
+<li>[[z_Templates/Projetos/Template_Pessoa]] - Template para pessoas</li>
+<li>[[z_Templates/Projetos/Template_Sprint]] - Template para sprints</li>
+<li>[[z_Templates/Projetos/Template_Tarefa]] - Template para tarefas</li>
+<li>[[z_Templates/Projetos/Template_Projeto]] - Template para projetos</li>
+</ul>
+<h3><strong>Dashboards Relacionados</strong></h3>
+<ul>
+<li><a href="/stubs/">0-Dashboard-Executivo&sol;Home-Executivo</a> - Dashboard principal</li>
+<li><a href="/stubs/">0-Dashboard-Executivo&sol;KPIs-Principais</a> - KPIs da empresa</li>
+<li>[[0-Dashboard-Executivo/Sistema_Metricas_Avancadas]] - Métricas avançadas</li>
+</ul>
+<h3><strong>Processos Relacionados</strong></h3>
+<ul>
+<li>[[5-Processos/README]] - Processos da empresa</li>
+<li>[[4-Projetos/README]] - Gestão de projetos</li>
+<li>[[6-Reunioes/README]] - Reuniões e decisões</li>
+</ul>
+<hr>
+<p><strong>Status</strong>: ✅ <strong>IMPLEMENTADO</strong><br>
+<strong>Versão</strong>: 1.0<br>
+<strong>Última Atualização</strong>: 2025-01-20</p>

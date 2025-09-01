@@ -1,541 +1,329 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Digital Garden Empresarial</title>
-    <meta name="description" content="Sistema de Gestão de Conhecimento Empresarial - Organização, Governança e Processos">
-    
-    
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    
-    
-    <link rel="stylesheet" href="/styles/main.css">
-    
-    
-    <meta property="og:title" content="Digital Garden Empresarial">
-    <meta property="og:description" content="Sistema de Gestão de Conhecimento Empresarial - Organização, Governança e Processos">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://digital-garden-empresa.netlify.app/">
-    
-    
-    <link rel="preload" href="/styles/main.css" as="style">
-    
-    
-    <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"WebSite","name":"Digital Garden Empresarial","url":"https://digital-garden-empresa.netlify.app","description":"Sistema de Gestão de Conhecimento Empresarial","potentialAction":{"@type":"SearchAction","target":"https://digital-garden-empresa.netlify.app/search?q={search_term_string}","query-input":"required name=search_term_string"}}
-    </script>
-</head>
-<body class="theme-light">
-    
-    <header class="site-header">
-        <nav class="main-nav">
-            <div class="nav-container">
-                <a href="/" class="logo">
-                    <span class="logo-icon">🏢</span>
-                    <span class="logo-text">Digital Garden</span>
-                </a>
-                
-                <div class="nav-links">
-                    
-                        
-                            <a href="/" class="nav-link">Home</a>
-                        
-                    
-                        
-                            <div class="nav-dropdown">
-                                <a href="/0-Dashboard-Executivo/" class="nav-link">Dashboard</a>
-                                <div class="nav-dropdown-content">
-                                    
-                                        <a href="/0-Dashboard-Executivo/" class="nav-dropdown-link">
-                                            <span class="nav-dropdown-title">Visão Geral</span>
-                                            
-                                                <span class="nav-dropdown-desc">Dashboard principal</span>
-                                            
-                                        </a>
-                                    
-                                        <a href="/0-Dashboard-Executivo/KPIs-Principais" class="nav-dropdown-link">
-                                            <span class="nav-dropdown-title">KPIs Principais</span>
-                                            
-                                                <span class="nav-dropdown-desc">Indicadores-chave</span>
-                                            
-                                        </a>
-                                    
-                                        <a href="/0-Dashboard-Executivo/Sistema_Metricas_Avancadas" class="nav-dropdown-link">
-                                            <span class="nav-dropdown-title">Métricas Avançadas</span>
-                                            
-                                                <span class="nav-dropdown-desc">Análises detalhadas</span>
-                                            
-                                        </a>
-                                    
-                                </div>
-                            </div>
-                        
-                    
-                        
-                            <div class="nav-dropdown">
-                                <a href="/1-Governanca/" class="nav-link">Governança</a>
-                                <div class="nav-dropdown-content">
-                                    
-                                        <a href="/1-Governanca/" class="nav-dropdown-link">
-                                            <span class="nav-dropdown-title">Políticas</span>
-                                            
-                                                <span class="nav-dropdown-desc">Políticas empresariais</span>
-                                            
-                                        </a>
-                                    
-                                        <a href="/1-Governanca/Compliance_Log" class="nav-dropdown-link">
-                                            <span class="nav-dropdown-title">Compliance</span>
-                                            
-                                                <span class="nav-dropdown-desc">Log de compliance</span>
-                                            
-                                        </a>
-                                    
-                                        <a href="/1-Governanca/Acordo_Socios_Final" class="nav-dropdown-link">
-                                            <span class="nav-dropdown-title">Acordos</span>
-                                            
-                                                <span class="nav-dropdown-desc">Acordos de sócios</span>
-                                            
-                                        </a>
-                                    
-                                </div>
-                            </div>
-                        
-                    
-                        
-                            <div class="nav-dropdown">
-                                <a href="/2-Equipes/" class="nav-link">Equipes</a>
-                                <div class="nav-dropdown-content">
-                                    
-                                        <a href="/2-Equipes/Desenvolvimento/" class="nav-dropdown-link">
-                                            <span class="nav-dropdown-title">Desenvolvimento</span>
-                                            
-                                                <span class="nav-dropdown-desc">Equipe de desenvolvimento</span>
-                                            
-                                        </a>
-                                    
-                                        <a href="/2-Equipes/Lideranca/" class="nav-dropdown-link">
-                                            <span class="nav-dropdown-title">Liderança</span>
-                                            
-                                                <span class="nav-dropdown-desc">Estrutura de liderança</span>
-                                            
-                                        </a>
-                                    
-                                        <a href="/2-Equipes/Marketing/" class="nav-dropdown-link">
-                                            <span class="nav-dropdown-title">Marketing</span>
-                                            
-                                                <span class="nav-dropdown-desc">Equipe de marketing</span>
-                                            
-                                        </a>
-                                    
-                                        <a href="/2-Equipes/Operacoes/" class="nav-dropdown-link">
-                                            <span class="nav-dropdown-title">Operações</span>
-                                            
-                                                <span class="nav-dropdown-desc">Equipe de operações</span>
-                                            
-                                        </a>
-                                    
-                                        <a href="/2-Equipes/Vendas/" class="nav-dropdown-link">
-                                            <span class="nav-dropdown-title">Vendas</span>
-                                            
-                                                <span class="nav-dropdown-desc">Equipe de vendas</span>
-                                            
-                                        </a>
-                                    
-                                </div>
-                            </div>
-                        
-                    
-                        
-                            <div class="nav-dropdown">
-                                <a href="/3-Mercado/" class="nav-link">Mercado</a>
-                                <div class="nav-dropdown-content">
-                                    
-                                        <a href="/3-Mercado/Clientes/" class="nav-dropdown-link">
-                                            <span class="nav-dropdown-title">Clientes</span>
-                                            
-                                                <span class="nav-dropdown-desc">Análise de clientes</span>
-                                            
-                                        </a>
-                                    
-                                        <a href="/3-Mercado/Concorrentes/" class="nav-dropdown-link">
-                                            <span class="nav-dropdown-title">Concorrentes</span>
-                                            
-                                                <span class="nav-dropdown-desc">Estudo de concorrentes</span>
-                                            
-                                        </a>
-                                    
-                                        <a href="/3-Mercado/Fornecedores/" class="nav-dropdown-link">
-                                            <span class="nav-dropdown-title">Fornecedores</span>
-                                            
-                                                <span class="nav-dropdown-desc">Relação com fornecedores</span>
-                                            
-                                        </a>
-                                    
-                                        <a href="/3-Mercado/Tendencias/" class="nav-dropdown-link">
-                                            <span class="nav-dropdown-title">Tendências</span>
-                                            
-                                                <span class="nav-dropdown-desc">Tendências de mercado</span>
-                                            
-                                        </a>
-                                    
-                                </div>
-                            </div>
-                        
-                    
-                        
-                            <div class="nav-dropdown">
-                                <a href="/4-Projetos/" class="nav-link">Projetos</a>
-                                <div class="nav-dropdown-content">
-                                    
-                                        <a href="/4-Projetos/Ativos/" class="nav-dropdown-link">
-                                            <span class="nav-dropdown-title">Ativos</span>
-                                            
-                                                <span class="nav-dropdown-desc">Projetos em execução</span>
-                                            
-                                        </a>
-                                    
-                                        <a href="/4-Projetos/Em-Desenvolvimento/" class="nav-dropdown-link">
-                                            <span class="nav-dropdown-title">Em Desenvolvimento</span>
-                                            
-                                                <span class="nav-dropdown-desc">Projetos em desenvolvimento</span>
-                                            
-                                        </a>
-                                    
-                                        <a href="/4-Projetos/Pilotos/" class="nav-dropdown-link">
-                                            <span class="nav-dropdown-title">Pilotos</span>
-                                            
-                                                <span class="nav-dropdown-desc">Projetos piloto</span>
-                                            
-                                        </a>
-                                    
-                                        <a href="/4-Projetos/Concluidos/" class="nav-dropdown-link">
-                                            <span class="nav-dropdown-title">Concluídos</span>
-                                            
-                                                <span class="nav-dropdown-desc">Projetos finalizados</span>
-                                            
-                                        </a>
-                                    
-                                </div>
-                            </div>
-                        
-                    
-                        
-                            <div class="nav-dropdown">
-                                <a href="/5-Processos/" class="nav-link">Processos</a>
-                                <div class="nav-dropdown-content">
-                                    
-                                        <a href="/5-Processos/Workflows/" class="nav-dropdown-link">
-                                            <span class="nav-dropdown-title">Workflows</span>
-                                            
-                                                <span class="nav-dropdown-desc">Fluxos de trabalho</span>
-                                            
-                                        </a>
-                                    
-                                        <a href="/5-Processos/SOPs/" class="nav-dropdown-link">
-                                            <span class="nav-dropdown-title">SOPs</span>
-                                            
-                                                <span class="nav-dropdown-desc">Procedimentos operacionais</span>
-                                            
-                                        </a>
-                                    
-                                        <a href="/5-Processos/Metricas/" class="nav-dropdown-link">
-                                            <span class="nav-dropdown-title">Métricas</span>
-                                            
-                                                <span class="nav-dropdown-desc">Métricas de processos</span>
-                                            
-                                        </a>
-                                    
-                                        <a href="/5-Processos/Templates_Governanca/" class="nav-dropdown-link">
-                                            <span class="nav-dropdown-title">Templates</span>
-                                            
-                                                <span class="nav-dropdown-desc">Templates de governança</span>
-                                            
-                                        </a>
-                                    
-                                </div>
-                            </div>
-                        
-                    
-                </div>
-                
-                <div class="nav-actions">
-                    <button class="search-toggle" onclick="toggleSearch()">
-                        <span class="search-icon">🔍</span>
-                    </button>
-                    <button class="theme-toggle" onclick="toggleTheme()">
-                        <span class="theme-icon">🌙</span>
-                    </button>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    
-    <div id="search-overlay" class="search-overlay">
-        <div class="search-container">
-            <input type="text" id="search-input" placeholder="Buscar no Digital Garden..." class="search-input">
-            <div id="search-results" class="search-results"></div>
-            <button class="search-close" onclick="toggleSearch()">✕</button>
-        </div>
-    </div>
-
-    
-    <main class="main-content">
-        <div class="content-wrapper">
-            
-            <nav class="breadcrumb" aria-label="Breadcrumb">
-                <ol class="breadcrumb-list">
-                    <li class="breadcrumb-item">
-                        <a href="/" class="breadcrumb-link">Home</a>
-                    </li>
-                    
-                </ol>
-            </nav>
-
-            
-            <article class="page-content">
-                
-                    <header class="page-header">
-                        <h1 class="page-title">Digital Garden Empresarial</h1>
-                        
-                            <p class="page-description">Sistema de Gestão de Conhecimento Empresarial - Organização, Governança e Processos</p>
-                        
-                        
-                    </header>
-                
-
-                <div class="content">
-                    
-<div class="hero-section">
-    <div class="hero-content">
-        <h1 class="hero-title">🏢 Digital Garden Empresarial</h1>
-        <p class="hero-description">
-            Sistema completo de gestão de conhecimento empresarial, organizando governança, 
-            equipes, mercado, projetos e processos em uma plataforma integrada.
-        </p>
-        <div class="hero-actions">
-            <a href="/0-Dashboard-Executivo/" class="btn btn-primary">Ver Dashboard</a>
-            <a href="/4-Projetos/" class="btn btn-secondary">Explorar Projetos</a>
-        </div>
-    </div>
+<h1>🏢 <strong>DASHBOARD EXECUTIVO - MULTISÓCIOS</strong></h1>
+<blockquote>
+<p><em>Visão consolidada de todos os projetos, métricas e performance da empresa</em></p>
+</blockquote>
+<hr>
+<div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 20px; border-radius: 15px; color: white; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+### 🎯 **RESUMO EXECUTIVO**
+- **Total de Projetos**: 8 projetos ativos
+- **Budget Total**: R$ 297.000
+- **ROI Médio**: 347%
+- **Status Geral**: ✅ **Sistema Funcionando**
 </div>
-
-<section class="features-section">
-    <div class="container">
-        <h2 class="section-title">Principais Áreas</h2>
-        <div class="features-grid">
-            
-                <div class="feature-card">
-                    <div class="feature-icon">📊</div>
-                    <h3 class="feature-title">📊 Dashboard Executivo</h3>
-                    <p class="feature-description">
-                        Visão geral dos KPIs, métricas de performance e indicadores estratégicos da empresa.
-                    </p>
-                    <a href="0-Dashboard-Executivo/" class="feature-link">Acessar →</a>
-                </div>
-            
-                <div class="feature-card">
-                    <div class="feature-icon">⚖️</div>
-                    <h3 class="feature-title">⚖️ Governança</h3>
-                    <p class="feature-description">
-                        Políticas, compliance, acordos de sócios e estrutura organizacional.
-                    </p>
-                    <a href="1-Governanca/" class="feature-link">Acessar →</a>
-                </div>
-            
-                <div class="feature-card">
-                    <div class="feature-icon">👥</div>
-                    <h3 class="feature-title">👥 Equipes</h3>
-                    <p class="feature-description">
-                        Estrutura organizacional, responsabilidades e capacidades das equipes.
-                    </p>
-                    <a href="2-Equipes/" class="feature-link">Acessar →</a>
-                </div>
-            
-                <div class="feature-card">
-                    <div class="feature-icon">📈</div>
-                    <h3 class="feature-title">📈 Mercado</h3>
-                    <p class="feature-description">
-                        Análise de clientes, concorrentes, fornecedores e tendências de mercado.
-                    </p>
-                    <a href="3-Mercado/" class="feature-link">Acessar →</a>
-                </div>
-            
-                <div class="feature-card">
-                    <div class="feature-icon">🚀</div>
-                    <h3 class="feature-title">🚀 Projetos</h3>
-                    <p class="feature-description">
-                        Portfólio de projetos ativos, backlog e projetos concluídos.
-                    </p>
-                    <a href="4-Projetos/" class="feature-link">Acessar →</a>
-                </div>
-            
-                <div class="feature-card">
-                    <div class="feature-icon">⚙️</div>
-                    <h3 class="feature-title">⚙️ Processos</h3>
-                    <p class="feature-description">
-                        Workflows, SOPs, métricas e templates de gestão de processos.
-                    </p>
-                    <a href="5-Processos/" class="feature-link">Acessar →</a>
-                </div>
-            
-        </div>
-    </div>
-</section>
-
-<section class="stats-section">
-    <div class="container">
-        <h2 class="section-title">Estatísticas do Sistema</h2>
-        <div class="stats-grid">
-            <div class="stat-card">
-                <div class="stat-number"></div>
-                <div class="stat-label">Áreas Principais</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-number"></div>
-                <div class="stat-label">Documentos</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-number"></div>
-                <div class="stat-label">Projetos</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-number"></div>
-                <div class="stat-label">Equipes</div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="recent-updates">
-    <div class="container">
-        <h2 class="section-title">Atualizações Recentes</h2>
-        <div class="updates-list">
-            <div class="update-item">
-                <div class="update-date">Janeiro 2025</div>
-                <div class="update-content">
-                    <h4>Dashboard Executivo Atualizado</h4>
-                    <p>Novos KPIs e métricas de performance implementados</p>
-                </div>
-            </div>
-            <div class="update-item">
-                <div class="update-date">Dezembro 2024</div>
-                <div class="update-content">
-                    <h4>Sistema de Governança</h4>
-                    <p>Políticas e compliance documentados e organizados</p>
-                </div>
-            </div>
-            <div class="update-item">
-                <div class="update-date">Novembro 2024</div>
-                <div class="update-content">
-                    <h4>Portfólio de Projetos</h4>
-                    <p>Estruturação completa do pipeline de projetos</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-                </div>
-            </article>
-
-            
-            
-        </div>
-    </main>
-
+<h2>📊 <strong>MÉTRICAS PRINCIPAIS</strong></h2>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin: 20px 0;">
+<div style="background: linear-gradient(135deg, #2ed573, #7bed9f); padding: 15px; border-radius: 10px; color: white; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+### 🚀 **PROJETOS ATIVOS**
+**8 Projetos**
+**Status**: ✅ Funcionando
+**Tendência**: ↗️ Crescendo
+</div>
+<div style="background: linear-gradient(135deg, #ffa502, #ffb142); padding: 15px; border-radius: 10px; color: white; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+### 💰 **BUDGET TOTAL**
+**R$ 297.000**
+**Utilizado**: 65%
+**Disponível**: R$ 103.950
+</div>
+<div style="background: linear-gradient(135deg, #3742fa, #5352ed); padding: 15px; border-radius: 10px; color: white; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+### 📈 **ROI PROJETADO**
+**347%**
+**Receita**: R$ 1.031.000
+**Lucro**: R$ 734.000
+</div>
+<div style="background: linear-gradient(135deg, #ff4757, #ff6b7a); padding: 15px; border-radius: 10px; color: white; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+### ⚡ **EFICIÊNCIA**
+**85%**
+**Projetos no Prazo**: 6/8
+**Qualidade**: ⭐⭐⭐⭐⭐
+</div>
+</div>
+<hr>
+<h2>🚀 <strong>PIPELINE DE INOVAÇÃO</strong></h2>
+<div style="background: #f8f9fa; padding: 20px; border-radius: 15px; border-left: 4px solid #667eea; margin: 20px 0;">
+### 📊 **VISÃO GERAL DO PIPELINE**
+</div>
+<pre><code class="language-dataview">TABLE choice(status, &quot;💡&quot;,&quot;📋&quot;,&quot;🚧&quot;,&quot;🧪&quot;,&quot;🚀&quot;) AS &quot;Status&quot;,
+ link(file.link, title) AS &quot;Projeto&quot;,
+ owner AS &quot;Owner&quot;,
+ effort_weeks + &quot;w&quot; AS &quot;Esforço&quot;,
+ &quot;R$ &quot; + budget AS &quot;Budget&quot;
+FROM &quot;4-Projetos&quot;
+WHERE (type = &quot;project&quot; OR type = &quot;pilot&quot;) AND status != &quot;template&quot; AND type != &quot;template&quot;
+SORT status, priority DESC, file.cday ASC
+LIMIT 10
+</code></pre>
+<h3><strong>Métricas por Status</strong></h3>
+<pre><code class="language-dataview">TABLE length(rows) as &quot;Quantidade&quot;,
+ round(sum(budget) / 1000, 1) + &quot;k&quot; as &quot;Orçamento Total (R$)&quot;
+FROM &quot;4-Projetos&quot;
+WHERE (type = &quot;project&quot; OR type = &quot;pilot&quot;) AND status != &quot;template&quot; AND type != &quot;template&quot;
+GROUP BY status
+SORT length(rows) DESC
+</code></pre>
+<h3><strong>Pipeline Visual</strong></h3>
+<pre><code class="language-mermaid">graph LR
+    A[💡 Ideias&lt;br/&gt;2 Projetos&lt;br/&gt;R$ 17k] --&gt; B[📋 Planejamento&lt;br/&gt;0 Projetos&lt;br/&gt;R$ 0]
+    B --&gt; C[🚧 Desenvolvimento&lt;br/&gt;4 Projetos&lt;br/&gt;R$ 100k]
+    C --&gt; D[🧪 Teste&lt;br/&gt;0 Projetos&lt;br/&gt;R$ 0]
+    D --&gt; E[🚀 Deploy&lt;br/&gt;2 Projetos&lt;br/&gt;R$ 180k]
     
-    <footer class="site-footer">
-        <div class="footer-container">
-            <div class="footer-content">
-                <div class="footer-sections">
-                    
-                        <div class="footer-section">
-                            <h4 class="footer-section-title">Empresa</h4>
-                            <ul class="footer-section-links">
-                                
-                                    <li><a href="/sobre" class="footer-link">Sobre Nós</a></li>
-                                
-                                    <li><a href="/0-Dashboard-Executivo/" class="footer-link">Dashboard</a></li>
-                                
-                                    <li><a href="/4-Projetos/" class="footer-link">Projetos</a></li>
-                                
-                                    <li><a href="/5-Processos/" class="footer-link">Processos</a></li>
-                                
-                                    <li><a href="/contato" class="footer-link">Contato</a></li>
-                                
-                            </ul>
-                        </div>
-                    
-                        <div class="footer-section">
-                            <h4 class="footer-section-title">Áreas</h4>
-                            <ul class="footer-section-links">
-                                
-                                    <li><a href="/1-Governanca/" class="footer-link">Governança</a></li>
-                                
-                                    <li><a href="/2-Equipes/" class="footer-link">Equipes</a></li>
-                                
-                                    <li><a href="/3-Mercado/" class="footer-link">Mercado</a></li>
-                                
-                                    <li><a href="/4-Projetos/" class="footer-link">Projetos</a></li>
-                                
-                            </ul>
-                        </div>
-                    
-                        <div class="footer-section">
-                            <h4 class="footer-section-title">Recursos</h4>
-                            <ul class="footer-section-links">
-                                
-                                    <li><a href="/99-RESOURCES/99-TEMPLATE/" class="footer-link">Templates</a></li>
-                                
-                                    <li><a href="/docs" class="footer-link">Documentação</a></li>
-                                
-                                    <li><a href="/api" class="footer-link">API</a></li>
-                                
-                                    <li><a href="/suporte" class="footer-link">Suporte</a></li>
-                                
-                            </ul>
-                        </div>
-                    
-                </div>
-                <div class="footer-bottom">
-                    <p>&copy; 2025 Digital Garden Empresarial. Todos os direitos reservados.</p>
-                    <p>Desenvolvido com ❤️ usando Eleventy e Obsidian</p>
-                    <p class="footer-stats">
-                        <span> áreas</span> • 
-                        <span> projetos</span> • 
-                        <span> documentos</span>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    
-    <script src="/scripts/main.js"></script>
-    <script src="/scripts/search.js"></script>
-    <script src="/scripts/theme.js"></script>
-    
-    
-    <script>
-        window.MathJax = {
-            tex: {
-                inlineMath: [['$', '$'], ['\\(', '\\)']],
-                displayMath: [['$$', '$$'], ['\\[', '\\]']]
-            },
-            svg: {
-                fontCache: 'global'
-            }
-        };
-    </script>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    
-    
-    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
-    <script>
-        mermaid.initialize({ startOnLoad: true });
-    </script>
-</body>
-</html>
+    style A fill:#e3f2fd,stroke:#2196f3,stroke-width:2px
+    style B fill:#fff3e0,stroke:#ff9800,stroke-width:2px
+    style C fill:#e8f5e8,stroke:#4caf50,stroke-width:2px
+    style D fill:#fce4ec,stroke:#e91e63,stroke-width:2px
+    style E fill:#f3e5f5,stroke:#9c27b0,stroke-width:2px
+</code></pre>
+<hr>
+<h2>💰 <strong>PERFORMANCE FINANCEIRA</strong></h2>
+<div style="background: linear-gradient(135deg, #ffa502, #ffb142); padding: 20px; border-radius: 15px; color: white; margin: 20px 0; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+### 💰 **ANÁLISE FINANCEIRA**
+- **Budget Total**: R$ 297.000
+- **Receita Projetada**: R$ 1.031.000
+- **ROI Médio**: 347%
+- **Payback**: 3 meses
+</div>
+<h3><strong>Budget por Prioridade</strong></h3>
+<pre><code class="language-dataview">TABLE length(rows) as &quot;Quantidade&quot;,
+ round(sum(budget) / 1000, 1) + &quot;k&quot; as &quot;Orçamento Total (R$)&quot;
+FROM &quot;4-Projetos&quot;
+WHERE (type = &quot;project&quot; OR type = &quot;pilot&quot;) AND status != &quot;template&quot; AND type != &quot;template&quot;
+GROUP BY priority
+SORT priority DESC
+</code></pre>
+<h3><strong>Distribuição de Budget</strong></h3>
+<pre><code class="language-mermaid">pie title Distribuição de Budget por Prioridade
+    &quot;Alta Prioridade&quot; : 180
+    &quot;Média Prioridade&quot; : 100
+    &quot;Baixa Prioridade&quot; : 17
+</code></pre>
+<h3><strong>ROI por Projeto</strong></h3>
+<pre><code class="language-dataview">TABLE link(file.link, title) AS &quot;Projeto&quot;,
+ &quot;R$ &quot; + budget AS &quot;Investimento&quot;,
+ &quot;R$ &quot; + (budget * 1.5) AS &quot;Retorno Esperado&quot;,
+ &quot;50%&quot; AS &quot;ROI&quot;
+FROM &quot;4-Projetos&quot;
+WHERE type = &quot;project&quot; AND status = &quot;deployed&quot; AND status != &quot;template&quot; AND type != &quot;template&quot;
+SORT budget DESC
+LIMIT 5
+</code></pre>
+<hr>
+<h2>👥 <strong>EQUIPE E PERFORMANCE</strong></h2>
+<div style="background: linear-gradient(135deg, #2ed573, #7bed9f); padding: 20px; border-radius: 15px; color: white; margin: 20px 0; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+### 👥 **PERFORMANCE DA EQUIPE**
+- **Total de Membros**: 4 sócios
+- **Projetos por Membro**: 2 projetos/membro
+- **Eficiência Média**: 85%
+- **Satisfação**: ⭐⭐⭐⭐⭐
+</div>
+<h3><strong>Projetos por Owner</strong></h3>
+<pre><code class="language-dataview">TABLE length(rows) as &quot;Projetos&quot;,
+ round(sum(budget) / 1000, 1) + &quot;k&quot; as &quot;Budget Total (R$)&quot;,
+ round(avg(effort_weeks), 1) + &quot;w&quot; as &quot;Esforço Médio&quot;
+FROM &quot;4-Projetos&quot;
+WHERE (type = &quot;project&quot; OR type = &quot;pilot&quot;) AND status != &quot;template&quot; AND type != &quot;template&quot;
+GROUP BY owner
+SORT length(rows) DESC
+</code></pre>
+<h3><strong>Produtividade por Área</strong></h3>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin: 20px 0;">
+<div style="background: #e3f2fd; padding: 15px; border-radius: 10px; border-left: 4px solid #2196f3;">
+### 💻 **TECNOLOGIA**
+**4 Projetos Ativos**
+**Budget**: R$ 200.000
+**Eficiência**: 90%
+</div>
+<div style="background: #e8f5e8; padding: 15px; border-radius: 10px; border-left: 4px solid #4caf50;">
+### 💼 **COMERCIAL**
+**2 Projetos Ativos**
+**Budget**: R$ 55.000
+**Eficiência**: 85%
+</div>
+<div style="background: #fff3e0; padding: 15px; border-radius: 10px; border-left: 4px solid #ff9800;">
+### ⚙️ **OPERAÇÕES**
+**1 Projeto Ativo**
+**Budget**: R$ 25.000
+**Eficiência**: 80%
+</div>
+<div style="background: #fce4ec; padding: 15px; border-radius: 10px; border-left: 4px solid #e91e63;">
+### 📢 **MARKETING**
+**1 Projeto Ativo**
+**Budget**: R$ 17.000
+**Eficiência**: 75%
+</div>
+</div>
+<hr>
+<h2>🚨 <strong>ALERTAS E NOTIFICAÇÕES</strong></h2>
+<div style="background: #fff3e0; padding: 20px; border-radius: 15px; border-left: 4px solid #ff9800; margin: 20px 0;">
+### ⚠️ **ATENÇÃO**
+- **2 Projetos** precisam de revisão de compliance
+- **1 Projeto** com prazo próximo do vencimento
+- **Budget** 65% utilizado (dentro do esperado)
+</div>
+<div style="background: #e8f5e8; padding: 20px; border-radius: 15px; border-left: 4px solid #4caf50; margin: 20px 0;">
+### ✅ **SUCESSOS**
+- **6 Projetos** no prazo
+- **ROI médio** acima da meta (347% vs 300%)
+- **Equipe** com alta satisfação
+</div>
+<hr>
+<h2>🔒 <strong>COMPLIANCE E GOVERNANÇA</strong></h2>
+<h3><strong>Status de Compliance</strong></h3>
+<ul>
+<li><strong>Projetos Nível 1</strong>: <code>= length(filter(file(&quot;4-Projetos&quot;).file, (f) =&gt; f.compliance_level = 1))</code></li>
+<li><strong>Projetos Nível 2</strong>: <code>= length(filter(file(&quot;4-Projetos&quot;).file, (f) =&gt; f.compliance_level = 2))</code></li>
+<li><strong>Projetos Nível 3</strong>: <code>= length(filter(file(&quot;4-Projetos&quot;).file, (f) =&gt; f.compliance_level = 3))</code></li>
+</ul>
+<h3><strong>Revisões Legais Pendentes</strong></h3>
+<pre><code class="language-dataview">TABLE link(file.link, title) AS &quot;Projeto&quot;,
+ owner AS &quot;Owner&quot;,
+ compliance_level AS &quot;Nível&quot;
+FROM &quot;4-Projetos&quot;
+WHERE legal_review = false AND compliance_level &gt; 1
+SORT compliance_level DESC
+</code></pre>
+<hr>
+<h2>📈 <strong>TENDÊNCIAS E INSIGHTS</strong></h2>
+<h3><strong>Crescimento Mensal</strong></h3>
+<ul>
+<li><strong>Janeiro</strong>: [X] projetos</li>
+<li><strong>Fevereiro</strong>: [X] projetos</li>
+<li><strong>Março</strong>: [X] projetos</li>
+<li><strong>Abril</strong>: [X] projetos</li>
+</ul>
+<h3><strong>Segmentos de Mercado</strong></h3>
+<pre><code class="language-dataview">TABLE length(rows) as &quot;Projetos&quot;,
+ round(sum(budget) / 1000, 1) + &quot;k&quot; as &quot;Budget Total (R$)&quot;
+FROM &quot;4-Projetos&quot;
+WHERE (type = &quot;project&quot; OR type = &quot;pilot&quot;) AND status != &quot;template&quot;
+GROUP BY market_segment
+SORT length(rows) DESC
+</code></pre>
+<hr>
+<h2>🚨 <strong>ALERTAS E NOTIFICAÇÕES</strong></h2>
+<h3><strong>Alertas Críticos</strong></h3>
+<ul>
+<li>⚠️ <strong>Projeto X</strong> - Budget excedido em 20%</li>
+<li>⚠️ <strong>Projeto Y</strong> - Prazo vencido há 3 dias</li>
+<li>⚠️ <strong>Projeto Z</strong> - Revisão legal pendente</li>
+</ul>
+<h3><strong>Novos Projetos</strong></h3>
+<ul>
+<li>🎉 <strong><a href="/4-Projetos/Em-Desenvolvimento/PRJ-Dev-WhatsBot-Academia/">PRJ-Dev-WhatsBot-Academia</a></strong> - WhatsBot Academia Funcional (85% completo)
+<ul>
+<li>Status: Em execução</li>
+<li>Budget: R$ 15.000</li>
+<li>Próximo marco: Configuração WhatsApp Business</li>
+</ul>
+</li>
+<li>🔧 <strong><a href="/4-Projetos/Em-Desenvolvimento/PRJ-Web-Site-Portfolio-Engenharia/">PRJ-Web-Site-Portfolio-Engenharia</a></strong> - Site Portfólio Profissional (100% completo)
+<ul>
+<li>Status: Em desenvolvimento</li>
+<li>Budget: R$ 25.000</li>
+<li>URL: <a href="https://pvpprojects.netlify.app/">https://pvpprojects.netlify.app/</a></li>
+</ul>
+</li>
+<li>🎓 <strong><a href="/4-Projetos/Ativos/PRJ-Plataforma-Cursos/">PRJ-Plataforma-Cursos</a></strong> - Plataforma de Cursos Online (0% implementado)
+<ul>
+<li>Status: Ativo</li>
+<li>Budget: R$ 40.000</li>
+<li>Mercado: Educação online em crescimento</li>
+</ul>
+</li>
+<li>🧠 <strong><a href="/4-Projetos/Ativos/PRJ-App-Desenvolvimento-Cognitivo/">PRJ-App-Desenvolvimento-Cognitivo</a></strong> - App Desenvolvimento Cognitivo (0% implementado)
+<ul>
+<li>Status: Ativo</li>
+<li>Budget: R$ 20.000</li>
+<li>Conteúdo: 100% documentado</li>
+</ul>
+</li>
+<li>🏢 <strong><a href="/4-Projetos/Ativos/PRJ-Vault-Empresarial/">PRJ-Vault-Empresarial</a></strong> - Vault Empresarial (95% implementado)
+<ul>
+<li>Status: Ativo</li>
+<li>Budget: R$ 100.000</li>
+<li>295 arquivos estruturados</li>
+</ul>
+</li>
+<li>🌟 <strong><a href="/4-Projetos/Ativos/PRJ-AERALYN/">PRJ-AERALYN</a></strong> - Sistema AERALYN (100% implementado)
+<ul>
+<li>Status: Ativo</li>
+<li>Budget: R$ 80.000</li>
+<li>46.514 linhas de documentação</li>
+</ul>
+</li>
+<li>🚀 <strong><a href="/stubs/">SISTEMA&lowbar;GERACAO&lowbar;IDEIAS</a></strong> - Sistema de Geração de Ideias (Ativo)
+<ul>
+<li>Status: Ativo</li>
+<li>12 ideias geradas (4 curto, 4 médio, 4 longo prazo)</li>
+<li>ROI projetado: 271% em 3 anos</li>
+</ul>
+</li>
+</ul>
+<h3><strong>Oportunidades</strong></h3>
+<ul>
+<li>💡 <strong>Novo segmento</strong> - Mercado em crescimento</li>
+<li>💡 <strong>Parceria potencial</strong> - Cliente interessado</li>
+<li>💡 <strong>Otimização</strong> - Possível redução de custos</li>
+</ul>
+<hr>
+<h2>📅 <strong>PRÓXIMAS AÇÕES</strong></h2>
+<h3><strong>Esta Semana</strong></h3>
+<ul>
+<li>[ ] Reunião de conselho - [Data]</li>
+<li>[ ] Revisão de projetos críticos</li>
+<li>[ ] Atualização de métricas</li>
+</ul>
+<h3><strong>Próximas 2 Semanas</strong></h3>
+<ul>
+<li>[ ] Planejamento do próximo sprint</li>
+<li>[ ] Revisão de compliance</li>
+<li>[ ] Preparação de relatórios</li>
+</ul>
+<h3><strong>Próximo Mês</strong></h3>
+<ul>
+<li>[ ] Revisão estratégica</li>
+<li>[ ] Planejamento de investimentos</li>
+<li>[ ] Avaliação de performance</li>
+</ul>
+<hr>
+<h2>🔗 <strong>LINKS RÁPIDOS</strong></h2>
+<h3><strong>Dashboards Específicos</strong></h3>
+<ul>
+<li><a href="/stubs/">&#x1f680; Innovation Pipeline</a></li>
+<li><a href="/stubs/">&#x1f4ca; KPIs Principais</a></li>
+<li><a href="/stubs/">&#x1f3af; Decis&otilde;es Estrat&eacute;gicas</a></li>
+<li><a href="/stubs/">&#x1f4c5; Projetos por Prazo</a></li>
+<li><a href="/stubs/">&#x1f3a8; Projetos por Prazo &lpar;Visual&rpar;</a></li>
+</ul>
+<h3><strong>Áreas Principais</strong></h3>
+<ul>
+<li><a href="/stubs/">&#x1f3db;&#xfe0f; Governan&ccedil;a</a></li>
+<li><a href="/stubs/">&#x1f4cb; Projetos</a></li>
+<li><a href="/stubs/">&#x1f465; Equipes</a></li>
+<li><a href="/stubs/">&#x1f30d; Mercado</a></li>
+</ul>
+<h3><strong>Processos</strong></h3>
+<ul>
+<li><a href="/stubs/">&#x2699;&#xfe0f; Processos</a></li>
+<li><a href="/stubs/">&#x1f4c5; Reuni&otilde;es</a></li>
+<li><a href="/stubs/">&#x1f4da; Conhecimento</a></li>
+</ul>
+<hr>
+<h2>📊 <strong>MÉTRICAS DE SISTEMA</strong></h2>
+<h3><strong>Performance Técnica</strong></h3>
+<ul>
+<li><strong>Tempo de Carregamento</strong>: &lt; 3 segundos</li>
+<li><strong>Uptime</strong>: 99.9%</li>
+<li><strong>Backup</strong>: Automático diário</li>
+<li><strong>Segurança</strong>: 100% compliance</li>
+</ul>
+<h3><strong>Adoção da Equipe</strong></h3>
+<ul>
+<li><strong>Usuários Ativos</strong>: [X] membros</li>
+<li><strong>Templates Utilizados</strong>: [X]%</li>
+<li><strong>Automações Ativas</strong>: [X]%</li>
+<li><strong>Satisfação</strong>: [X]%</li>
+</ul>
+<hr>
+<p><strong>Última Atualização</strong>:<br>
+<strong>Próxima Revisão</strong>: [Data]<br>
+<strong>Responsável</strong>: [Nome]</p>

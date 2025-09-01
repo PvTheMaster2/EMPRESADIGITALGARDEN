@@ -1,0 +1,227 @@
+<h1>🚀 GUIA DE USO RÁPIDO - SISTEMA DE CAPACIDADE</h1>
+<blockquote>
+<p><em>Como usar o sistema de gestão de capacidade e sprints em 5 minutos</em></p>
+</blockquote>
+<hr>
+<h2>🎯 <strong>COMO PROCEDER AGORA</strong></h2>
+<h3><strong>Passo 1: Definir Capacidade das Pessoas</strong></h3>
+<ol>
+<li><strong>Acesse o formulário</strong>: Abra <code>utils/forms/Formulario_Capacidade_Pessoas.html</code> no navegador</li>
+<li><strong>Preencha os dados</strong>: Cada pessoa deve preencher seu perfil de capacidade</li>
+<li><strong>Use a calculadora</strong>: Defina dias de trabalho e horas por dia para calcular automaticamente</li>
+<li><strong>Salve o arquivo</strong>: O formulário gera um arquivo <code>.md</code> pronto para usar</li>
+</ol>
+<h3><strong>Passo 2: Criar Perfis das Pessoas</strong></h3>
+<ol>
+<li><strong>Use o template</strong>: Copie <code>z_Templates/Projetos/Template_Pessoa.md</code></li>
+<li><strong>Personalize</strong>: Adapte com os dados do formulário</li>
+<li><strong>Salve na pasta correta</strong>: Coloque em <code>2-Equipes/[Departamento]/</code></li>
+<li><strong>Atualize frontmatter</strong>: Certifique-se que <code>type: person</code> está definido</li>
+</ol>
+<h3><strong>Passo 3: Planejar Primeira Sprint</strong></h3>
+<ol>
+<li><strong>Use o template</strong>: Copie <code>z_Templates/Projetos/Template_Sprint.md</code></li>
+<li><strong>Defina período</strong>: Escolha datas de início e fim (2-4 semanas)</li>
+<li><strong>Calcule capacidade</strong>: Some as horas disponíveis de todas as pessoas</li>
+<li><strong>Selecione tarefas</strong>: Escolha tarefas do backlog que cabem na capacidade</li>
+</ol>
+<h3><strong>Passo 4: Criar Tarefas</strong></h3>
+<ol>
+<li><strong>Use o template</strong>: Copie <code>z_Templates/Projetos/Template_Tarefa.md</code></li>
+<li><strong>Estime horas</strong>: Defina tempo estimado para cada tarefa</li>
+<li><strong>Atribua responsável</strong>: Escolha pessoa com capacidade disponível</li>
+<li><strong>Defina dependências</strong>: Identifique tarefas que dependem de outras</li>
+</ol>
+<hr>
+<h2>📋 <strong>CHECKLIST DE IMPLEMENTAÇÃO</strong></h2>
+<h3><strong>✅ Preparação (Dia 1)</strong></h3>
+<ul>
+<li>[ ] Todos preencheram o formulário de capacidade</li>
+<li>[ ] Perfis das pessoas criados com template</li>
+<li>[ ] Capacidade total da equipe calculada</li>
+<li>[ ] Backlog de tarefas organizado</li>
+</ul>
+<h3><strong>✅ Planejamento (Dia 2)</strong></h3>
+<ul>
+<li>[ ] Primeira sprint criada com template</li>
+<li>[ ] Tarefas estimadas e priorizadas</li>
+<li>[ ] Alocação respeita limites de capacidade</li>
+<li>[ ] Sprint aprovada pela equipe</li>
+</ul>
+<h3><strong>✅ Execução (Dia 3+)</strong></h3>
+<ul>
+<li>[ ] Standup diário implementado</li>
+<li>[ ] Horas trabalhadas registradas</li>
+<li>[ ] Progresso das tarefas atualizado</li>
+<li>[ ] Bloqueios identificados e resolvidos</li>
+</ul>
+<h3><strong>✅ Revisão (Final da Sprint)</strong></h3>
+<ul>
+<li>[ ] Métricas calculadas</li>
+<li>[ ] Retrospectiva realizada</li>
+<li>[ ] Lições aprendidas documentadas</li>
+<li>[ ] Próxima sprint planejada</li>
+</ul>
+<hr>
+<h2>🛠️ <strong>FERRAMENTAS DISPONÍVEIS</strong></h2>
+<h3><strong>Templates Prontos</strong></h3>
+<ul>
+<li><strong><code>Template_Pessoa.md</code></strong> - Perfil completo de cada pessoa</li>
+<li><strong><code>Template_Sprint.md</code></strong> - Planejamento e acompanhamento de sprint</li>
+<li><strong><code>Template_Tarefa.md</code></strong> - Detalhamento e tracking de tarefas</li>
+<li><strong><code>Template_Projeto.md</code></strong> - Gestão de projetos completos</li>
+</ul>
+<h3><strong>Formulários Interativos</strong></h3>
+<ul>
+<li><strong><code>Formulario_Capacidade_Pessoas.html</code></strong> - Coleta dados de capacidade</li>
+<li><strong>Calculadora automática</strong> - Define horas baseado em dias/trabalho</li>
+<li><strong>Validação inteligente</strong> - Alerta sobre sobrecarga ou subutilização</li>
+<li><strong>Geração automática</strong> - Cria arquivo Markdown pronto</li>
+</ul>
+<h3><strong>Dashboards Executivos</strong></h3>
+<ul>
+<li><strong><code>Dashboard_Capacidade_Equipe.md</code></strong> - Visão geral da equipe</li>
+<li><strong>Queries Dataview</strong> - Relatórios automáticos</li>
+<li><strong>Alertas de risco</strong> - Identifica problemas proativamente</li>
+<li><strong>Métricas de performance</strong> - Acompanha evolução</li>
+</ul>
+<hr>
+<h2>📊 <strong>CÁLCULOS IMPORTANTES</strong></h2>
+<h3><strong>Capacidade da Sprint</strong></h3>
+<pre><code>Capacidade Total = Σ(Horas Disponíveis de Todas as Pessoas)
+Horas Planejadas = Σ(Horas Estimadas das Tarefas)
+Saldo = Capacidade Total - Horas Planejadas
+</code></pre>
+<h3><strong>Utilização por Pessoa</strong></h3>
+<pre><code>Utilização (%) = (Horas Alocadas / Horas Disponíveis) × 100
+</code></pre>
+<h3><strong>Eficiência da Sprint</strong></h3>
+<pre><code>Eficiência (%) = (Horas Realizadas / Horas Planejadas) × 100
+</code></pre>
+<h3><strong>Limites Recomendados</strong></h3>
+<ul>
+<li><strong>Utilização ideal</strong>: 60-80%</li>
+<li><strong>Sobrecarga</strong>: &gt; 90%</li>
+<li><strong>Subutilização</strong>: &lt; 30%</li>
+</ul>
+<hr>
+<h2>🔄 <strong>WORKFLOW DIÁRIO</strong></h2>
+<h3><strong>Standup Matinal (5 min)</strong></h3>
+<ol>
+<li>
+<p><strong>Cada pessoa reporta</strong>:</p>
+<ul>
+<li>O que fez ontem</li>
+<li>O que vai fazer hoje</li>
+<li>Bloqueios encontrados</li>
+</ul>
+</li>
+<li>
+<p><strong>Atualizações</strong>:</p>
+<ul>
+<li>Registra horas trabalhadas</li>
+<li>Atualiza progresso das tarefas</li>
+<li>Identifica riscos</li>
+</ul>
+</li>
+</ol>
+<h3><strong>Acompanhamento Semanal (30 min)</strong></h3>
+<ol>
+<li>
+<p><strong>Revisão de progresso</strong>:</p>
+<ul>
+<li>Compara planejado vs realizado</li>
+<li>Ajusta estimativas se necessário</li>
+<li>Realoca tarefas se preciso</li>
+</ul>
+</li>
+<li>
+<p><strong>Planejamento</strong>:</p>
+<ul>
+<li>Prepara próxima semana</li>
+<li>Ajusta prioridades</li>
+<li>Comunica mudanças</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2>⚠️ <strong>PONTOS DE ATENÇÃO</strong></h2>
+<h3><strong>Sinais de Alerta</strong></h3>
+<ul>
+<li><strong>Pessoa com &gt;90% utilização</strong>: Risco de burnout</li>
+<li><strong>Pessoa com &lt;30% utilização</strong>: Capacidade desperdiçada</li>
+<li><strong>Sprint com &gt;90% utilização</strong>: Risco de não entregar</li>
+<li><strong>Estimativas com &gt;30% variação</strong>: Precisa melhorar precisão</li>
+</ul>
+<h3><strong>Ações Corretivas</strong></h3>
+<ul>
+<li><strong>Redistribuir tarefas</strong> para equilibrar carga</li>
+<li><strong>Ajustar estimativas</strong> baseado no histórico</li>
+<li><strong>Reduzir escopo</strong> da sprint se necessário</li>
+<li><strong>Aumentar duração</strong> da sprint se possível</li>
+</ul>
+<hr>
+<h2>📈 <strong>MÉTRICAS PARA ACOMPANHAR</strong></h2>
+<h3><strong>Métricas de Capacidade</strong></h3>
+<ul>
+<li><strong>Utilização média da equipe</strong></li>
+<li><strong>Distribuição de carga por departamento</strong></li>
+<li><strong>Evolução da capacidade ao longo do tempo</strong></li>
+</ul>
+<h3><strong>Métricas de Produtividade</strong></h3>
+<ul>
+<li><strong>Eficiência das sprints</strong></li>
+<li><strong>Precisão das estimativas</strong></li>
+<li><strong>Taxa de conclusão de tarefas</strong></li>
+</ul>
+<h3><strong>Métricas de Qualidade</strong></h3>
+<ul>
+<li><strong>Tarefas sem rework</strong></li>
+<li><strong>Satisfação da equipe</strong></li>
+<li><strong>Cumprimento de prazos</strong></li>
+</ul>
+<hr>
+<h2>🔗 <strong>LINKS ÚTEIS</strong></h2>
+<h3><strong>Sistema Completo</strong></h3>
+<ul>
+<li>[[5-Processos/Sistema_Gestao_Capacidade_Sprints]] - Documentação completa</li>
+<li>[[0-Dashboard-Executivo/Dashboard_Capacidade_Equipe]] - Dashboard executivo</li>
+</ul>
+<h3><strong>Templates</strong></h3>
+<ul>
+<li>[[z_Templates/Projetos/Template_Pessoa]] - Template de pessoa</li>
+<li>[[z_Templates/Projetos/Template_Sprint]] - Template de sprint</li>
+<li>[[z_Templates/Projetos/Template_Tarefa]] - Template de tarefa</li>
+</ul>
+<h3><strong>Formulários</strong></h3>
+<ul>
+<li>[[utils/forms/Formulario_Capacidade_Pessoas]] - Formulário de capacidade</li>
+</ul>
+<hr>
+<h2>🎯 <strong>PRÓXIMOS PASSOS</strong></h2>
+<h3><strong>Imediato (Esta Semana)</strong></h3>
+<ol>
+<li><strong>Distribuir formulário</strong> para todos preencherem</li>
+<li><strong>Criar perfis</strong> das pessoas com os dados</li>
+<li><strong>Calcular capacidade total</strong> da equipe</li>
+<li><strong>Planejar primeira sprint</strong> realista</li>
+</ol>
+<h3><strong>Curto Prazo (Próximo Mês)</strong></h3>
+<ol>
+<li><strong>Executar 2-3 sprints</strong> para validar o sistema</li>
+<li><strong>Ajustar processos</strong> baseado no feedback</li>
+<li><strong>Melhorar estimativas</strong> com dados históricos</li>
+<li><strong>Otimizar alocação</strong> de tarefas</li>
+</ol>
+<h3><strong>Médio Prazo (Próximo Trimestre)</strong></h3>
+<ol>
+<li><strong>Automatizar relatórios</strong> com Dataview</li>
+<li><strong>Implementar métricas avançadas</strong></li>
+<li><strong>Desenvolver dashboards personalizados</strong></li>
+<li><strong>Integrar com outras ferramentas</strong></li>
+</ol>
+<hr>
+<p><strong>Status</strong>: ✅ <strong>PRONTO PARA USO</strong><br>
+<strong>Tempo de Implementação</strong>: 1-2 dias<br>
+<strong>Complexidade</strong>: Baixa<br>
+<strong>Benefícios</strong>: Controle total de capacidade e produtividade</p>

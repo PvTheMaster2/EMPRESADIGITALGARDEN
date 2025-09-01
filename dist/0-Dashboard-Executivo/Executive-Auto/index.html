@@ -1,0 +1,174 @@
+<h1>📊 <strong>DASHBOARD EXECUTIVO AUTOMÁTICO</strong></h1>
+<blockquote>
+<p><em>Dashboard gerado automaticamente com métricas em tempo real</em></p>
+</blockquote>
+<hr>
+<h2>🎯 <strong>RESUMO EXECUTIVO</strong></h2>
+<h3><strong>Status Geral</strong></h3>
+<ul>
+<li><strong>Total de Projetos</strong>: 2</li>
+<li><strong>Projetos Ativos</strong>: 1</li>
+<li><strong>Projetos Concluídos</strong>: 0</li>
+<li><strong>Pilotos Ativos</strong>: 1</li>
+<li><strong>Pilotos Prontos</strong>: 0</li>
+<li><strong>Violações de Compliance</strong>: 0</li>
+</ul>
+<h3><strong>Métricas Principais</strong></h3>
+<ul>
+<li><strong>Score Médio de Validação</strong>: 0.0</li>
+<li><strong>Reuniões Recentes</strong>: 1</li>
+<li><strong>Ações Pendentes</strong>: 3</li>
+</ul>
+<hr>
+<h2>📋 <strong>PROJETOS ATIVOS</strong></h2>
+<pre><code class="language-dataview">TABLE title, status, priority, effort_weeks, kpi_primary, owner, validation_score, compliance_level
+FROM &quot;4-Projetos&quot;
+WHERE status != &quot;archived&quot; AND status != &quot;template&quot;
+SORT priority desc, modified desc
+</code></pre>
+<hr>
+<h2>🧪 <strong>PILOTOS EM EXECUÇÃO</strong></h2>
+<pre><code class="language-dataview">TABLE title, status, pilot_stage, sample_size, validation_score, owner, gating_criteria
+FROM &quot;4-Projetos/Pilotos&quot;
+WHERE status != &quot;archived&quot;
+SORT validation_score desc, modified desc
+</code></pre>
+<hr>
+<h2>📊 <strong>MÉTRICAS POR PRIORIDADE</strong></h2>
+<pre><code class="language-dataview">TABLE length(rows) as &quot;Quantidade&quot;, 
+       round(average(priority)) as &quot;Prioridade Média&quot;,
+       sum(budget) as &quot;Budget Total&quot;
+FROM &quot;4-Projetos&quot;
+WHERE status != &quot;archived&quot; AND status != &quot;template&quot;
+GROUP BY priority
+SORT priority desc
+</code></pre>
+<hr>
+<h2>📈 <strong>MÉTRICAS POR STATUS</strong></h2>
+<pre><code class="language-dataview">TABLE length(rows) as &quot;Quantidade&quot;,
+       round(average(effort_weeks)) as &quot;Esforço Médio (semanas)&quot;,
+       sum(budget) as &quot;Budget Total&quot;
+FROM &quot;4-Projetos&quot;
+WHERE status != &quot;archived&quot; AND status != &quot;template&quot;
+GROUP BY status
+SORT status asc
+</code></pre>
+<hr>
+<h2>🔒 <strong>COMPLIANCE E GOVERNANÇA</strong></h2>
+<h3><strong>Projetos por Nível de Compliance</strong></h3>
+<pre><code class="language-dataview">TABLE length(rows) as &quot;Quantidade&quot;,
+       sum(budget) as &quot;Budget Total&quot;
+FROM &quot;4-Projetos&quot;
+WHERE status != &quot;archived&quot; AND status != &quot;template&quot;
+GROUP BY compliance_level
+SORT compliance_level asc
+</code></pre>
+<h3><strong>Alertas de Compliance</strong></h3>
+<pre><code class="language-dataview">TABLE title, compliance_level, legal_review, owner
+FROM &quot;4-Projetos&quot;
+WHERE compliance_level &gt; 1 AND legal_review = false AND status != &quot;template&quot;
+SORT compliance_level desc
+</code></pre>
+<hr>
+<h2>📅 <strong>REUNIÕES RECENTES</strong></h2>
+<pre><code class="language-dataview">TABLE title, date, decisions, action_items, participants
+FROM &quot;6-Reunioes&quot;
+WHERE date &gt;= date(today) - dur(30 days)
+SORT date desc
+LIMIT 5
+</code></pre>
+<hr>
+<h2>🎯 <strong>PILOTOS PRONTOS PARA REVISÃO</strong></h2>
+<pre><code class="language-dataview">TABLE title, validation_score, pilot_stage, owner, gating_criteria
+FROM &quot;4-Projetos/Pilotos&quot;
+WHERE validation_score &gt;= 2.5 AND status = &quot;done&quot;
+SORT validation_score desc
+</code></pre>
+<hr>
+<h2>📝 <strong>AÇÕES PENDENTES</strong></h2>
+<pre><code class="language-dataview">TABLE title, action_items, date
+FROM &quot;6-Reunioes&quot;
+WHERE date &gt;= date(today) - dur(30 days) AND action_items
+SORT date desc
+</code></pre>
+<hr>
+<h2>🔗 <strong>PROJETOS POR OWNER</strong></h2>
+<pre><code class="language-dataview">TABLE length(rows) as &quot;Quantidade de Projetos&quot;,
+       round(average(effort_weeks)) as &quot;Esforço Médio&quot;,
+       sum(budget) as &quot;Budget Total&quot;
+FROM &quot;4-Projetos&quot;
+WHERE status != &quot;archived&quot; AND status != &quot;template&quot;
+GROUP BY owner
+SORT length(rows) desc
+</code></pre>
+<hr>
+<h2>📊 <strong>MÉTRICAS DE VALIDAÇÃO</strong></h2>
+<h3><strong>Distribuição de Scores</strong></h3>
+<pre><code class="language-dataview">TABLE length(rows) as &quot;Quantidade&quot;,
+       round(average(validation_score), 2) as &quot;Score Médio&quot;
+FROM &quot;4-Projetos/Pilotos&quot;
+WHERE status != &quot;archived&quot;
+GROUP BY validation_score
+SORT validation_score desc
+</code></pre>
+<hr>
+<h2>🚨 <strong>ALERTAS E NOTIFICAÇÕES</strong></h2>
+<h3><strong>Projetos com Budget Alto</strong></h3>
+<pre><code class="language-dataview">TABLE title, budget, owner, status
+FROM &quot;4-Projetos&quot;
+WHERE budget &gt; 50000 AND status != &quot;archived&quot; AND status != &quot;template&quot; AND type != &quot;template&quot;
+SORT budget desc
+</code></pre>
+<h3><strong>Projetos Atrasados</strong></h3>
+<pre><code class="language-dataview">TABLE title, effort_weeks, modified, owner
+FROM &quot;4-Projetos&quot;
+WHERE modified &lt; date(today) - dur(30 days) AND status = &quot;in-progress&quot; AND status != &quot;template&quot; AND type != &quot;template&quot;
+SORT modified asc
+</code></pre>
+<hr>
+<h2>📈 <strong>TENDÊNCIAS E INSIGHTS</strong></h2>
+<h3><strong>Crescimento de Projetos</strong></h3>
+<ul>
+<li><strong>Projetos Criados (Último Mês)</strong>: 2</li>
+<li><strong>Taxa de Conclusão</strong>: 0%</li>
+<li><strong>Tempo Médio de Execução</strong>: 8 semanas</li>
+</ul>
+<h3><strong>Performance de Pilotos</strong></h3>
+<ul>
+<li><strong>Taxa de Sucesso</strong>: 0%</li>
+<li><strong>Score Médio de Validação</strong>: 0.0</li>
+<li><strong>Pilotos Prontos para Escala</strong>: 0</li>
+</ul>
+<hr>
+<h2>🎯 <strong>RECOMENDAÇÕES</strong></h2>
+<h3><strong>Ações Imediatas</strong></h3>
+<ol>
+<li><strong>Revisar Compliance</strong>: Verificar projetos com compliance_level &gt; 1</li>
+<li><strong>Acompanhar Pilotos</strong>: Monitorar progresso dos pilotos em execução</li>
+<li><strong>Atualizar Métricas</strong>: Revisar KPIs e critérios de sucesso</li>
+</ol>
+<h3><strong>Melhorias Sugeridas</strong></h3>
+<ol>
+<li><strong>Automatizar Alertas</strong>: Configurar notificações para projetos atrasados</li>
+<li><strong>Dashboard em Tempo Real</strong>: Implementar atualizações automáticas</li>
+<li><strong>Métricas de ROI</strong>: Adicionar métricas de retorno sobre investimento</li>
+</ol>
+<hr>
+<h2>📅 <strong>PRÓXIMAS AÇÕES</strong></h2>
+<h3><strong>Esta Semana</strong></h3>
+<ul>
+<li>[ ] Revisar todos os projetos com compliance_level &gt; 1</li>
+<li>[ ] Atualizar métricas de validação dos pilotos</li>
+<li>[ ] Preparar relatório para reunião executiva</li>
+</ul>
+<h3><strong>Próximas 2 Semanas</strong></h3>
+<ul>
+<li>[ ] Implementar sistema de alertas automáticos</li>
+<li>[ ] Configurar métricas de ROI</li>
+<li>[ ] Treinar equipe no uso dos novos templates</li>
+</ul>
+<hr>
+<p><strong>Status</strong>: 🤖 <strong>GERADO AUTOMATICAMENTE</strong><br>
+<strong>Última Atualização</strong>: 31/08/2025 21:45<br>
+<strong>Próxima Atualização</strong>: 01/09/2025 22:45<br>
+<strong>Owner</strong>: <a href="/stubs/">Pedro Vitor</a></p>
