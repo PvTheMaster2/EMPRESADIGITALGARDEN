@@ -47,12 +47,12 @@
   <!-- Sidebar Navigation -->
   <nav class="sidebar" id="sidebar">
     <div class="sidebar-header">
-      <button class="sidebar-toggle" onclick="toggleSidebar()">
-        <span class="hamburger"></span>
-      </button>
       <div class="sidebar-brand">
         <a href="/" class="brand-link">🌱 Digital Garden</a>
       </div>
+      <button class="sidebar-close" onclick="closeSidebar()" title="Fechar sidebar">
+        <span class="close-icon">✕</span>
+      </button>
     </div>
     
     <div class="sidebar-content">
@@ -61,7 +61,8 @@
       </div>
       
       <div class="sidebar-tree">
-        {% for item in navigation.tree %}
+        {% set navData = navigation.tree %}
+        {% for item in navData %}
         <div class="tree-item" data-level="0">
           <div class="tree-node">
             <button class="tree-toggle" onclick="toggleTreeNode(this)" {% if not item.children %}style="visibility: hidden;"{% endif %}>

@@ -26,6 +26,7 @@
 .sidebar-header {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding: 1rem;
   border-bottom: 1px solid #333;
   background: #252525;
@@ -44,6 +45,28 @@
 
 .sidebar-toggle:hover {
   background: #333;
+}
+
+/* Sidebar close button */
+.sidebar-close {
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+  font-size: 1.2rem;
+}
+
+.sidebar-close:hover {
+  background: #333;
+  color: #ff6b6b;
+}
+
+.close-icon {
+  display: block;
+  line-height: 1;
 }
 
 .hamburger {
