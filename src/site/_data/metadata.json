@@ -1,0 +1,44 @@
+{
+  "title": "Digital Garden Empresarial",
+  "description": "Sistema de Gestão de Conhecimento Empresarial - Organização, Governança e Processos",
+  "url": "https://digital-garden-empresa.netlify.app",
+  "author": "Pedro Vitor",
+  "language": "pt-BR",
+  "timezone": "America/Sao_Paulo",
+  "social": {
+    "twitter": "@digitalgarden",
+    "linkedin": "digital-garden-empresa"
+  },
+  "navigation": [
+    {
+      "title": "Dashboard Executivo",
+      "url": "/0-Dashboard-Executivo/",
+      "icon": "📊"
+    },
+    {
+      "title": "Governança",
+      "url": "/1-Governanca/",
+      "icon": "⚖️"
+    },
+    {
+      "title": "Equipes",
+      "url": "/2-Equipes/",
+      "icon": "👥"
+    },
+    {
+      "title": "Mercado",
+      "url": "/3-Mercado/",
+      "icon": "📈"
+    },
+    {
+      "title": "Projetos",
+      "url": "/4-Projetos/",
+      "icon": "🚀"
+    },
+    {
+      "title": "Processos",
+      "url": "/5-Processos/",
+      "icon": "⚙️"
+    }
+  ]
+}
