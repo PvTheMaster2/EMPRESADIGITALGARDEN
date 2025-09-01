@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "0-Dashboard-Executivo/Dashboard-Projetos-Prazo-Visual.md",
+                "file": "0-Dashboard-Executivo/Home-Executivo.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Dashboard-Projetos-Prazo-Visual"
+              "title": "Home-Executivo"
             }
           }
         ]
@@ -471,23 +471,27 @@
   },
   "active": "eacfb2a7981353a9",
   "lastOpenFiles": [
-    "dist/index.html",
-    "dist/scripts/theme.js",
-    "dist/scripts/search.js",
-    "dist/scripts/main.js",
-    "dist/scripts",
-    "dist",
+    "node_modules/whatwg-encoding/lib/whatwg-encoding.js",
+    "node_modules/whatwg-encoding/lib/supported-names.json",
+    "node_modules/whatwg-encoding/lib/labels-to-names.json",
+    "node_modules/whatwg-encoding/README.md",
+    "node_modules/whatwg-encoding/package.json",
+    "node_modules/whatwg-encoding/LICENSE.txt",
+    "node_modules/whatwg-encoding/lib",
+    "node_modules/whatwg-encoding",
+    "node_modules/markdown-it/bin/markdown-it.mjs",
+    "node_modules/markdown-it/bin",
+    "node_modules/cross-spawn/lib/util/resolveCommand.js",
+    "node_modules/cross-spawn/lib/util/readShebang.js",
+    "0-Dashboard-Executivo/Dashboard-Projetos-Prazo-Visual.md",
+    "node_modules/posthtml-render/readme.md",
+    "node_modules/posthtml-render/changelog.md",
     "4-Projetos/Em-Desenvolvimento/PRJ-Web-Site-Portfolio-Engenharia.md",
-    "node_modules/@emnapi/runtime/LICENSE",
-    "node_modules/@img/sharp-darwin-arm64",
-    "node_modules/@emnapi/runtime",
     "4-Projetos/Em-Desenvolvimento/PRJ-Dev-WhatsBot-Academia.md",
     "4-Projetos/Ativos/PRJ-Vault-Empresarial.md",
     "4-Projetos/Ativos/PRJ-Plataforma-Cursos.md",
     "4-Projetos/Ativos/PRJ-App-Desenvolvimento-Cognitivo.md",
     "4-Projetos/Ativos/PRJ-AERALYN.md",
-    "0-Dashboard-Executivo/Dashboard-Projetos-Prazo-Visual.md",
-    "node_modules/dotenv/LICENSE",
     "node_modules/@emnapi/runtime/README.md",
     "node_modules/juice/node_modules/css-select/README.md",
     "node_modules/math-intrinsics/README.md",
@@ -503,9 +507,6 @@
     "node_modules/markdown-it-task-checkbox/test/fixtures/dirty.md",
     "node_modules/markdown-it-task-checkbox/test/fixtures/ordered.md",
     "node_modules/markdown-it-task-checkbox/test/fixtures/bullet.md",
-    "node_modules/markdown-it-task-checkbox/README.md",
-    "node_modules/flatted/README.md",
-    "node_modules/@11ty/eleventy-plugin-rss/README.md",
     "node_modules/eleventy-plugin-gen-favicons/test/img/testing.png",
     "node_modules/eleventy-plugin-gen-favicons/test/img/notsquare.png",
     "node_modules/eleventy-plugin-gen-favicons/test/img/nick.svg",

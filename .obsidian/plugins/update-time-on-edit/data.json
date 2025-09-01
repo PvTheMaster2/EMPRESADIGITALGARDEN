@@ -644,6 +644,8 @@
     "node_modules/web-resource-inliner/node_modules/htmlparser2/README.md": "d65e558519b7b27e3766386f82c76512c30fe39df5443b523055adc2694924ae",
     "node_modules/math-intrinsics/CHANGELOG.md": "f759b53919d86b872f72f2e2b9a392cd5b27876c9f4d901e58544e5948992f60",
     "node_modules/math-intrinsics/README.md": "cd499688b6431ec5eb92ac3b4c164558784ac70ebb91dfadf53c7e72beb03e9d",
-    "node_modules/juice/node_modules/css-select/README.md": "19a799ee4446fdff01e1d828eda7939329d796d5f1aec0af33fe6df6dc3f04fa"
+    "node_modules/juice/node_modules/css-select/README.md": "19a799ee4446fdff01e1d828eda7939329d796d5f1aec0af33fe6df6dc3f04fa",
+    "node_modules/posthtml-render/changelog.md": "261eb31a96d4a53a033892730a97dda8c1226ad164acddaf31e5e859b2035d37",
+    "node_modules/whatwg-encoding/README.md": "c84a7b7aab4bf8b5b8cd592334eaa0c56b544900e1e08978cac7d7fbf4103268"
   }
 }
