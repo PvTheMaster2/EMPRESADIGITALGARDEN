@@ -1,11 +1,15 @@
 ---
 title: Governança Empresarial
 created: 2025-09-01
-updated: 2025-09-01T16:30
+updated: 2025-09-01T19:43
 type: overview
 status: active
 priority: high
 owner: Pedro Vitor
+eleventyNavigation:
+  key: governanca
+  title: ⚖️ Governança
+  order: 1
 ---
 
 # 🏛️ **GOVERNANÇA EMPRESARIAL**

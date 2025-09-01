@@ -1,11 +1,15 @@
 ---
 title: Equipes Multisócios
 created: 2025-09-01
-updated: 2025-09-01T16:19
+updated: 2025-09-01T19:43
 type: overview
 status: active
 priority: high
 owner: Pedro Vitor
+eleventyNavigation:
+  key: equipes
+  title: 👥 Equipes
+  order: 2
 ---
 
 # 👥 **EQUIPES MULTISÓCIOS**

@@ -1,11 +1,15 @@
 ---
 title: Reuniões e Atas
 created: 2025-09-01
-updated: 2025-09-01T16:30
+updated: 2025-09-01T19:44
 type: overview
 status: active
 priority: medium
 owner: Pedro Vitor
+eleventyNavigation:
+  key: reunioes
+  title: 📅 Reuniões
+  order: 6
 ---
 
 # 📅 **REUNIÕES E ATAS**

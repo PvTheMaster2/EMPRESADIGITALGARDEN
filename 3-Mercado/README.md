@@ -1,11 +1,15 @@
 ---
 title: Análise de Mercado
 created: 2025-09-01
-updated: 2025-09-01T16:19
+updated: 2025-09-01T19:43
 type: overview
 status: active
 priority: high
 owner: Pedro Vitor
+eleventyNavigation:
+  key: mercado
+  title: 🌍 Mercado
+  order: 3
 ---
 
 # 🌍 **ANÁLISE DE MERCADO**

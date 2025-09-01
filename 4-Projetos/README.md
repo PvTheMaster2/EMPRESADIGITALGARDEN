@@ -1,6 +1,15 @@
 ---
+title: Portfólio de Projetos
 created: 2025-08-31T21:15
-updated: 2025-09-01T01:46
+updated: 2025-09-01T19:43
+type: overview
+status: active
+priority: high
+owner: Pedro Vitor
+eleventyNavigation:
+  key: projetos
+  title: 📋 Projetos
+  order: 4
 ---
 # 📋 GESTÃO DE PROJETOS
 

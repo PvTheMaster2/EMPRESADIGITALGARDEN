@@ -18,12 +18,16 @@ const markdownItMultimdTable = require("markdown-it-multimd-table");
 const markdownItLinkAttributes = require("markdown-it-link-attributes");
 const markdownItExternalLinks = require("markdown-it-external-links");
 const markdownItPlantuml = require("markdown-it-plantuml");
+const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 
 module.exports = function (eleventyConfig) {
   // Plugin para suportar links [[Wiki]] e embeds (![[arquivo]])
   eleventyConfig.addPlugin(pluginInterlinker, {
     // Opções padrão funcionam bem para nosso caso
   });
+
+  // Plugin para navegação hierárquica e breadcrumbs
+  eleventyConfig.addPlugin(eleventyNavigationPlugin);
 
   // Copy static assets
   eleventyConfig.addPassthroughCopy("99 - RESOURCES/Imagens");

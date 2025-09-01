@@ -1,11 +1,15 @@
 ---
 title: Processos Empresariais
 created: 2025-09-01
-updated: 2025-09-01T16:30
+updated: 2025-09-01T19:43
 type: overview
 status: active
 priority: medium
 owner: Pedro Vitor
+eleventyNavigation:
+  key: processos
+  title: ⚙️ Processos
+  order: 5
 ---
 
 # ⚙️ **PROCESSOS EMPRESARIAIS**

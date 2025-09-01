@@ -1,11 +1,15 @@
 ---
 title: Base de Conhecimento
 created: 2025-09-01
-updated: 2025-09-01T16:19
+updated: 2025-09-01T19:44
 type: overview
 status: active
 priority: medium
 owner: Pedro Vitor
+eleventyNavigation:
+  key: conhecimento
+  title: 🧠 Conhecimento
+  order: 7
 ---
 
 # 🧠 **BASE DE CONHECIMENTO**
