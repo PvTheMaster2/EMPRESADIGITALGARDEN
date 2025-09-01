@@ -651,7 +651,7 @@
     "node_modules/@sindresorhus/slugify/readme.md": "34960149a0350c317b52c5bad687d2b01d3095874f157568e7ecb7af323b6074",
     "node_modules/markdown-it-mathjax3/README.md": "ea7d65ef58d173b6d9e66e41181bcfb47a47cea8940a7a069f5d79c6801fbc28",
     "node_modules/markdown-it-plantuml/README.md": "58a522a501daf8f30817692d08f379b25073a635cfac9a91063e2c6f458b723e",
-    "0-Dashboard-Executivo/index.md": "4b23794e1e0e7291c0773332119b6b9a7199d3b59a7aa2162bf84a5714513010",
+    "0-Dashboard-Executivo/index.md": "ee3cc3f69ffb1b82ae0b8ebf7074531231cc91125bfa655e3ee15d67539523d4",
     "node_modules/balanced-match/LICENSE.md": "307bfda5936ba1476d8178ca3243218b17951df45caeccc1401968dbfc0bb7ae",
     "node_modules/balanced-match/README.md": "ebada4faf02ae3faa6ebe1f8c76ff3ec1cf6d6349ae2a52dd5adb4ca800f6a19",
     "node_modules/yallist/README.md": "34a05333319689dab5b6400771506dbfaa5bf2b930429b8ff72bddd3bdc56e45",
@@ -743,6 +743,9 @@
     "node_modules/dependency-graph/CHANGELOG.md": "68c745a65489a499be85ada8289a43969f32d70bdd8cbc1f41f43fdfc78250b8",
     "node_modules/@11ty/eleventy/node_modules/argparse/CHANGELOG.md": "41523ea53c5c1855cc52ea1de03b4932741f0be8ec3e13b1f9d7f6ca2f1394ad",
     "TESTE-DEPLOY.md": "27b8b6bab3f03d8540bdd8cdf6dd8381bd84b8d33d2c629d9c27d4091a212ebb",
-    "STATUS-DEPLOY.md": "fcaa97caf358670a59c58e82ccfacadd2ca9a4829e7a11102c44e75cd05967c9"
+    "STATUS-DEPLOY.md": "fcaa97caf358670a59c58e82ccfacadd2ca9a4829e7a11102c44e75cd05967c9",
+    "2-Equipes/README.md": "afc0f55e97df1c5718bf2c4d4b6492e767ef0e3441b1e581f0c7b297518db1d2",
+    "3-Mercado/README.md": "908ddfe78c1c22c0c770a3d81efb7643466b7d3c4fa8326c8c84f88f90c1c63e",
+    "7-Conhecimento/README.md": "b905e15cc78725de591ac62aadb2213146b0c77f5cf720e891f4325c5def80e7"
   }
 }

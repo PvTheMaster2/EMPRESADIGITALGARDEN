@@ -4,7 +4,7 @@ description: Visão geral do conhecimento empresarial e projetos em andamento
 permalink: /dashboard-overview/
 layout: base.njk
 created: 2025-09-01T15:18
-updated: 2025-09-01T15:27
+updated: 2025-09-01T16:17
 ---
 
 # 🌱 Digital Garden Empresarial
@@ -81,32 +81,32 @@ Bem-vindo ao sistema de gestão de conhecimento da empresa. Este ambiente integr
 <div class="navigation-grid">
 
 <div class="nav-card">
-  <h3>📈 [Projetos](/projetos/)</h3>
+  <h3>📈 [Projetos](/4-projetos/)</h3>
   <p>Portfólio completo, pilotos, ideias e análises de ROI</p>
 </div>
 
 <div class="nav-card">
-  <h3>⚖️ [Governança](/governanca/)</h3>
+  <h3>⚖️ [Governança](/1-governanca/)</h3>
   <p>Políticas, compliance, acordo de sócios e ética</p>
 </div>
 
 <div class="nav-card">
-  <h3>👥 [Equipes](/equipes/)</h3>
+  <h3>👥 [Equipes](/2-equipes/)</h3>
   <p>Estrutura organizacional e capacidades</p>
 </div>
 
 <div class="nav-card">
-  <h3>🎯 [Processos](/processos/)</h3>
+  <h3>🎯 [Processos](/5-processos/)</h3>
   <p>SOPs, workflows e sistemas de gestão</p>
 </div>
 
 <div class="nav-card">
-  <h3>🌍 [Mercado](/mercado/)</h3>
+  <h3>🌍 [Mercado](/3-mercado/)</h3>
   <p>Clientes, concorrentes e tendências</p>
 </div>
 
 <div class="nav-card">
-  <h3>🧠 [Conhecimento](/conhecimento/)</h3>
+  <h3>🧠 [Conhecimento](/7-conhecimento/)</h3>
   <p>Base de conhecimento e aprendizados</p>
 </div>
 
