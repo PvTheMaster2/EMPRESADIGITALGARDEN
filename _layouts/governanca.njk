@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="theme-dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ title or page.fileSlug }} - {{ site.title }}</title>
+  <meta name="description" content="{{ description or site.description }}" />
+  
+  <!-- CSS do tema Obsidian e customizações -->
+  <link rel="stylesheet" href="/styles/main.css" />
+  <link rel="stylesheet" href="/styles/sidebar.css" />
+  <link rel="stylesheet" href="/styles/governanca.css" />
+  
+  <!-- Favicon e meta tags para PWA -->
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+  <meta name="theme-color" content="#1e1e1e" />
+</head>
+<body class="layout-governanca">
+  
+  <header class="site-header">
+    <nav class="main-navigation">
+      <div class="nav-brand">
+        <button class="mobile-sidebar-toggle" onclick="toggleSidebar()">
+          <span class="hamburger"></span>
+        </button>
+        <a href="/" class="brand-link">
+          🌱 {{ site.title }}
+        </a>
+      </div>
+      
+      <div class="nav-links">
+        <a href="/dashboard-executivo/">Dashboard</a>
+        <a href="/governanca/" class="active">Governança</a>
+        <a href="/projetos/">Projetos</a>
+        <a href="/equipes/">Equipes</a>
+        <a href="/processos/">Processos</a>
+        <a href="/reunioes/">Reuniões</a>
+        <a href="/conhecimento/">Conhecimento</a>
+      </div>
+      
+      <div class="nav-tools">
+        <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
+        <button class="search-toggle" onclick="toggleSearch()">🔍</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Sidebar Navigation -->
+  <nav class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <button class="sidebar-toggle" onclick="toggleSidebar()">
+        <span class="hamburger"></span>
+      </button>
+      <div class="sidebar-brand">
+        <a href="/" class="brand-link">🌱 Digital Garden</a>
+      </div>
+    </div>
+    
+    <div class="sidebar-content">
+      <div class="sidebar-search">
+        <input type="search" placeholder="Buscar páginas..." class="search-input" id="sidebar-search">
+      </div>
+      
+      <div class="sidebar-tree">
+        <!-- Navegação será carregada via JavaScript -->
+        <div id="navigation-tree"></div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <div class="content-wrapper">
+      
+      <!-- Breadcrumbs -->
+      {% if page.url != '/' and eleventyNavigation %}
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">🏠 Home</a></li>
+          <li><a href="/governanca/">⚖️ Governança</a></li>
+          {% set breadcrumbNav = collections.all | eleventyNavigationBreadcrumb(eleventyNavigation.key) %}
+          {% for crumb in breadcrumbNav %}
+            <li>
+              {% if loop.last %}
+                <span aria-current="page">{{ crumb.title }}</span>
+              {% else %}
+                <a href="{{ crumb.url }}">{{ crumb.title }}</a>
+              {% endif %}
+            </li>
+          {% endfor %}
+        </ol>
+      </nav>
+      {% endif %}
+
+      <!-- Governance Header -->
+      <article class="governance-page">
+        <header class="governance-header">
+          {% if title %}
+          <h1 class="governance-title">{{ title }}</h1>
+          {% endif %}
+          
+          <!-- Document Status Bar -->
+          <div class="governance-status-bar">
+            {% if status %}
+            <div class="status-badge status-{{ status | slugify }}">
+              {% if status == "draft" %}📝 Rascunho{% endif %}
+              {% if status == "review" %}🔍 Em Revisão{% endif %}
+              {% if status == "approved" %}✅ Aprovado{% endif %}
+              {% if status == "final" %}🔒 Final{% endif %}
+              {% if status == "archived" %}📦 Arquivado{% endif %}
+            </div>
+            {% endif %}
+            
+            {% if type %}
+            <div class="type-badge type-{{ type | slugify }}">
+              {% if type == "documento-legal" %}⚖️ Legal{% endif %}
+              {% if type == "politica" %}📋 Política{% endif %}
+              {% if type == "processo" %}⚙️ Processo{% endif %}
+              {% if type == "compliance" %}🛡️ Compliance{% endif %}
+              {% if type == "contrato" %}📄 Contrato{% endif %}
+            </div>
+            {% endif %}
+            
+            {% if priority %}
+            <div class="priority-badge priority-{{ priority | slugify }}">
+              {% if priority == "critical" %}⚫ Crítica{% endif %}
+              {% if priority == "high" %}🔴 Alta{% endif %}
+              {% if priority == "medium" %}🟡 Média{% endif %}
+              {% if priority == "low" %}🟢 Baixa{% endif %}
+            </div>
+            {% endif %}
+          </div>
+        </header>
+
+        <!-- Governance Info Cards -->
+        <div class="governance-info-grid">
+          
+          <!-- Document Info Card -->
+          <div class="info-card document-card">
+            <div class="card-icon">📄</div>
+            <div class="card-content">
+              <h3>Informações do Documento</h3>
+              {% if version %}
+              <div class="info-item">
+                <span class="info-label">Versão:</span>
+                <span class="info-value">v{{ version }}</span>
+              </div>
+              {% endif %}
+              {% if owner %}
+              <div class="info-item">
+                <span class="info-label">Responsável:</span>
+                <span class="info-value">{{ owner | replace("[[", "") | replace("]]", "") }}</span>
+              </div>
+              {% endif %}
+              {% if legal_review %}
+              <div class="info-item">
+                <span class="info-label">Revisão Legal:</span>
+                <span class="info-value">{% if legal_review %}✅ Aprovado{% else %}⏳ Pendente{% endif %}</span>
+              </div>
+              {% endif %}
+            </div>
+          </div>
+
+          <!-- Compliance Card -->
+          {% if compliance_level or legal_review %}
+          <div class="info-card compliance-card">
+            <div class="card-icon">🛡️</div>
+            <div class="card-content">
+              <h3>Compliance & Legal</h3>
+              {% if compliance_level %}
+              <div class="info-item">
+                <span class="info-label">Nível:</span>
+                <span class="info-value compliance-level-{{ compliance_level }}">
+                  {% if compliance_level == 1 %}🟢 Básico{% endif %}
+                  {% if compliance_level == 2 %}🟡 Intermediário{% endif %}
+                  {% if compliance_level == 3 %}🔴 Avançado{% endif %}
+                  {% if compliance_level == 4 %}⚫ Crítico{% endif %}
+                </span>
+              </div>
+              {% endif %}
+              {% if legal_review_date %}
+              <div class="info-item">
+                <span class="info-label">Data Revisão:</span>
+                <span class="info-value">{{ legal_review_date | date("DD/MM/YYYY") }}</span>
+              </div>
+              {% endif %}
+              {% if next_review %}
+              <div class="info-item">
+                <span class="info-label">Próxima Revisão:</span>
+                <span class="info-value">{{ next_review | date("DD/MM/YYYY") }}</span>
+              </div>
+              {% endif %}
+            </div>
+          </div>
+          {% endif %}
+
+          <!-- Timeline Card -->
+          <div class="info-card timeline-card">
+            <div class="card-icon">⏱️</div>
+            <div class="card-content">
+              <h3>Timeline</h3>
+              {% if created %}
+              <div class="info-item">
+                <span class="info-label">Criado:</span>
+                <span class="info-value">{{ created | date("DD/MM/YYYY") }}</span>
+              </div>
+              {% endif %}
+              {% if modified %}
+              <div class="info-item">
+                <span class="info-label">Modificado:</span>
+                <span class="info-value">{{ modified | date("DD/MM/YYYY") }}</span>
+              </div>
+              {% endif %}
+              {% if updated %}
+              <div class="info-item">
+                <span class="info-label">Atualizado:</span>
+                <span class="info-value">{{ updated | date("DD/MM/YYYY HH:mm") }}</span>
+              </div>
+              {% endif %}
+            </div>
+          </div>
+
+          <!-- Stakeholders Card -->
+          {% if stakeholders or approvers %}
+          <div class="info-card stakeholders-card">
+            <div class="card-icon">👥</div>
+            <div class="card-content">
+              <h3>Stakeholders</h3>
+              {% if approvers %}
+              <div class="stakeholder-section">
+                <h4>Aprovadores</h4>
+                <div class="stakeholders-list">
+                  {% for approver in approvers %}
+                  <div class="stakeholder-badge">
+                    <span class="stakeholder-avatar">{{ approver | first }}</span>
+                    <span class="stakeholder-name">{{ approver | replace("[[", "") | replace("]]", "") }}</span>
+                  </div>
+                  {% endfor %}
+                </div>
+              </div>
+              {% endif %}
+              {% if stakeholders %}
+              <div class="stakeholder-section">
+                <h4>Interessados</h4>
+                <div class="stakeholders-list">
+                  {% for stakeholder in stakeholders %}
+                  <div class="stakeholder-badge secondary">
+                    <span class="stakeholder-avatar">{{ stakeholder | first }}</span>
+                    <span class="stakeholder-name">{{ stakeholder | replace("[[", "") | replace("]]", "") }}</span>
+                  </div>
+                  {% endfor %}
+                </div>
+              </div>
+              {% endif %}
+            </div>
+          </div>
+          {% endif %}
+
+        </div>
+
+        <!-- Governance Content -->
+        <div class="governance-content">
+          {{ content | safe }}
+        </div>
+
+        <!-- Legal Notice -->
+        {% if type == "documento-legal" or legal_review %}
+        <div class="legal-notice">
+          <div class="notice-header">
+            <div class="notice-icon">⚖️</div>
+            <strong>Aviso Legal</strong>
+          </div>
+          <div class="notice-content">
+            <p>Este documento possui implicações legais. Qualquer modificação deve ser revisada pelo departamento jurídico antes da implementação.</p>
+            {% if legal_review_date %}
+            <p><strong>Última revisão legal:</strong> {{ legal_review_date | date("DD/MM/YYYY") }}</p>
+            {% endif %}
+          </div>
+        </div>
+        {% endif %}
+
+        <!-- Version History -->
+        {% if version and version > 1 %}
+        <div class="version-history">
+          <h3>📋 Histórico de Versões</h3>
+          <div class="version-timeline">
+            <div class="version-item current">
+              <div class="version-marker">{{ version }}</div>
+              <div class="version-info">
+                <div class="version-title">Versão Atual</div>
+                <div class="version-date">{{ modified | date("DD/MM/YYYY") }}</div>
+              </div>
+            </div>
+            {% for i in range(1, version) %}
+            <div class="version-item">
+              <div class="version-marker">{{ version - i }}</div>
+              <div class="version-info">
+                <div class="version-title">Versão Anterior</div>
+                <div class="version-date">Histórico</div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+        {% endif %}
+
+        <!-- Related Documents -->
+        <div class="related-documents">
+          <h3>🔗 Documentos Relacionados</h3>
+          <div class="related-links">
+            {% set relatedDocs = collections.all | filterByTags("governanca") | limit(5) %}
+            {% for doc in relatedDocs %}
+              {% if doc.url != page.url %}
+              <a href="{{ doc.url }}" class="related-link">
+                <div class="related-icon">
+                  {% if doc.data.type == "documento-legal" %}⚖️{% endif %}
+                  {% if doc.data.type == "politica" %}📋{% endif %}
+                  {% if doc.data.type == "processo" %}⚙️{% endif %}
+                  {% if doc.data.type == "compliance" %}🛡️{% endif %}
+                  {% if doc.data.type == "contrato" %}📄{% endif %}
+                  {% if not doc.data.type %}📄{% endif %}
+                </div>
+                <div class="related-info">
+                  <div class="related-title">{{ doc.data.title or doc.fileSlug }}</div>
+                  <div class="related-type">{{ doc.data.type or "Documento" }}</div>
+                </div>
+                <div class="related-status">
+                  {% if doc.data.status == "final" %}🔒{% endif %}
+                  {% if doc.data.status == "approved" %}✅{% endif %}
+                  {% if doc.data.status == "review" %}🔍{% endif %}
+                  {% if doc.data.status == "draft" %}📝{% endif %}
+                </div>
+              </a>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+
+      </article>
+    </div>
+  </main>
+
+  <!-- JavaScript -->
+  <script src="/scripts/main.js"></script>
+  <script>
+    // Governance-specific JavaScript
+    document.addEventListener('DOMContentLoaded', function() {
+      // Highlight governance navigation
+      const govNav = document.querySelector('.nav-links a[href="/governanca/"]');
+      if (govNav) {
+        govNav.classList.add('active');
+      }
+      
+      // Animate info cards
+      const infoCards = document.querySelectorAll('.info-card');
+      infoCards.forEach((card, index) => {
+        card.style.animationDelay = `${index * 0.1}s`;
+        card.classList.add('animate-in');
+      });
+      
+      // Auto-generate stakeholder avatars
+      const stakeholderBadges = document.querySelectorAll('.stakeholder-badge');
+      stakeholderBadges.forEach(badge => {
+        const avatar = badge.querySelector('.stakeholder-avatar');
+        const name = badge.querySelector('.stakeholder-name').textContent;
+        avatar.textContent = name.charAt(0).toUpperCase();
+      });
+      
+      // Add security warning for critical documents
+      const criticalDocs = document.querySelectorAll('.priority-critical');
+      if (criticalDocs.length > 0) {
+        console.warn('🔒 Documento crítico carregado. Acesso registrado para auditoria.');
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,4 +1,174 @@
-<h1>📅 <strong>REUNIÕES E ATAS</strong></h1>
+<!DOCTYPE html>
+<html lang="pt-BR" class="theme-dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reuniões e Atas - Digital Garden Empresarial</title>
+  <meta name="description" content="Sistema de Gestão de Conhecimento Empresarial" />
+  
+  <!-- CSS do tema Obsidian e customizações -->
+  <link rel="stylesheet" href="/styles/main.css" />
+  <link rel="stylesheet" href="/styles/sidebar.css" />
+  <link rel="stylesheet" href="/styles/reuniao.css" />
+  
+  <!-- Favicon e meta tags para PWA -->
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+  <meta name="theme-color" content="#1e1e1e" />
+</head>
+<body class="layout-reuniao">
+  
+  <header class="site-header">
+    <nav class="main-navigation">
+      <div class="nav-brand">
+        <button class="mobile-sidebar-toggle" onclick="toggleSidebar()">
+          <span class="hamburger"></span>
+        </button>
+        <a href="/" class="brand-link">
+          🌱 Digital Garden Empresarial
+        </a>
+      </div>
+      
+      <div class="nav-links">
+        <a href="/dashboard-executivo/">Dashboard</a>
+        <a href="/governanca/">Governança</a>
+        <a href="/projetos/">Projetos</a>
+        <a href="/equipes/">Equipes</a>
+        <a href="/processos/">Processos</a>
+        <a href="/reunioes/" class="active">Reuniões</a>
+        <a href="/conhecimento/">Conhecimento</a>
+      </div>
+      
+      <div class="nav-tools">
+        <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
+        <button class="search-toggle" onclick="toggleSearch()">🔍</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Sidebar Navigation -->
+  <nav class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <button class="sidebar-toggle" onclick="toggleSidebar()">
+        <span class="hamburger"></span>
+      </button>
+      <div class="sidebar-brand">
+        <a href="/" class="brand-link">🌱 Digital Garden</a>
+      </div>
+    </div>
+    
+    <div class="sidebar-content">
+      <div class="sidebar-search">
+        <input type="search" placeholder="Buscar páginas..." class="search-input" id="sidebar-search">
+      </div>
+      
+      <div class="sidebar-tree">
+        <!-- Navegação será carregada via JavaScript -->
+        <div id="navigation-tree"></div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <div class="content-wrapper">
+      
+      <!-- Breadcrumbs -->
+      
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">🏠 Home</a></li>
+          <li><a href="/reunioes/">📅 Reuniões</a></li>
+          
+          
+        </ol>
+      </nav>
+      
+
+      <!-- Meeting Header -->
+      <article class="meeting-page">
+        <header class="meeting-header">
+          
+          <h1 class="meeting-title">Reuniões e Atas</h1>
+          
+          
+          <!-- Meeting Status Bar -->
+          <div class="meeting-status-bar">
+            
+            <div class="status-badge status-active">
+              
+              
+              
+              
+              
+            </div>
+            
+            
+            
+            
+            
+            <div class="priority-badge priority-medium">
+              
+              🟡 Média
+              
+              
+            </div>
+            
+          </div>
+        </header>
+
+        <!-- Meeting Info Cards -->
+        <div class="meeting-info-grid">
+          
+          <!-- Date & Time Card -->
+          
+
+          <!-- Participants Card -->
+          
+
+          <!-- Meeting Details Card -->
+          <div class="info-card details-card">
+            <div class="card-icon">📋</div>
+            <div class="card-content">
+              <h3>Detalhes</h3>
+              
+              
+              <div class="info-item">
+                <span class="info-label">Facilitador:</span>
+                <span class="info-value">Pedro Vitor</span>
+              </div>
+              
+              
+            </div>
+          </div>
+
+          <!-- Status Card -->
+          
+          <div class="info-card status-card">
+            <div class="card-icon">⏱️</div>
+            <div class="card-content">
+              <h3>Timeline</h3>
+              
+              <div class="info-item">
+                <span class="info-label">Criado:</span>
+                <span class="info-value">2025-09-01</span>
+              </div>
+              
+              
+              
+              <div class="info-item">
+                <span class="info-label">Atualizado:</span>
+                <span class="info-value">2025-09-01</span>
+              </div>
+              
+            </div>
+          </div>
+          
+
+        </div>
+
+        <!-- Meeting Content -->
+        <div class="meeting-content">
+          <h1>📅 <strong>REUNIÕES E ATAS</strong></h1>
 <blockquote>
 <p><em>Registros de decisões e acompanhamento estratégico</em></p>
 </blockquote>
@@ -84,3 +254,93 @@
 </ul>
 <hr>
 <p><em>Reuniões eficazes geram decisões claras e ações objetivas.</em></p>
+
+        </div>
+
+        <!-- Action Items Section -->
+        
+
+        <!-- Related Meetings -->
+        <div class="related-meetings">
+          <h3>🔗 Reuniões Relacionadas</h3>
+          <div class="related-links">
+            
+            
+              
+              <a href="/6-Reunioes/2025-08-31-Reuniao-Executiva-Sistema/" class="related-link">
+                <div class="related-icon">📅</div>
+                <div class="related-info">
+                  <div class="related-title">ReuniãO Executiva Sistema</div>
+                  <div class="related-date">2025-08-31</div>
+                </div>
+              </a>
+              
+            
+              
+              <a href="/6-Reunioes/2025-09-01-Reuniao-Analise-Pessimista-Projetos/" class="related-link">
+                <div class="related-icon">📅</div>
+                <div class="related-info">
+                  <div class="related-title">ReuniãO Analise Pessimista Projetos</div>
+                  <div class="related-date"></div>
+                </div>
+              </a>
+              
+            
+              
+              <a href="/6-Reunioes/2025-09-01-Reuniao-Criacao-Projeto-WhatsBot/" class="related-link">
+                <div class="related-icon">📅</div>
+                <div class="related-info">
+                  <div class="related-title">ReuniãO Criacao Projeto WhatsBot</div>
+                  <div class="related-date"></div>
+                </div>
+              </a>
+              
+            
+              
+              <a href="/6-Reunioes/2025-09-01-Reuniao-Criacao-Sistema-Geracao-Ideias/" class="related-link">
+                <div class="related-icon">📅</div>
+                <div class="related-info">
+                  <div class="related-title">ReuniãO Criacao Sistema Geracao Ideias</div>
+                  <div class="related-date"></div>
+                </div>
+              </a>
+              
+            
+              
+            
+          </div>
+        </div>
+
+      </article>
+    </div>
+  </main>
+
+  <!-- JavaScript -->
+  <script src="/scripts/main.js"></script>
+  <script>
+    // Meeting-specific JavaScript
+    document.addEventListener('DOMContentLoaded', function() {
+      // Highlight meeting navigation
+      const meetingNav = document.querySelector('.nav-links a[href="/reunioes/"]');
+      if (meetingNav) {
+        meetingNav.classList.add('active');
+      }
+      
+      // Animate info cards
+      const infoCards = document.querySelectorAll('.info-card');
+      infoCards.forEach((card, index) => {
+        card.style.animationDelay = `${index * 0.1}s`;
+        card.classList.add('animate-in');
+      });
+      
+      // Auto-generate participant avatars
+      const participantBadges = document.querySelectorAll('.participant-badge');
+      participantBadges.forEach(badge => {
+        const avatar = badge.querySelector('.participant-avatar');
+        const name = badge.querySelector('.participant-name').textContent;
+        avatar.textContent = name.charAt(0).toUpperCase();
+      });
+    });
+  </script>
+</body>
+</html>

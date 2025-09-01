@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sistema Metricas Avancadas - Digital Garden Empresarial</title>
-  <meta name="description" content="Sistema de Gestão de Conhecimento Empresarial" />
+  <title>{{ title or page.fileSlug }} - {{ site.title }}</title>
+  <meta name="description" content="{{ description or site.description }}" />
   
   <!-- CSS do tema Obsidian e customizações -->
   <link rel="stylesheet" href="/styles/main.css" />
@@ -27,7 +27,7 @@
           <span class="hamburger"></span>
         </button>
         <a href="/" class="brand-link">
-          🌱 Digital Garden Empresarial
+          🌱 {{ site.title }}
         </a>
       </div>
       
@@ -79,11 +79,11 @@
       <!-- Dashboard Header -->
       <header class="dashboard-header">
         <div class="dashboard-title-section">
-          
-          <h1 class="dashboard-title">Sistema Metricas Avancadas</h1>
-          
+          {% if title %}
+          <h1 class="dashboard-title">{{ title }}</h1>
+          {% endif %}
           <div class="dashboard-subtitle">
-            <span class="last-updated">Última atualização: 2025-09-01</span>
+            <span class="last-updated">Última atualização: {{ updated | date("DD/MM/YYYY HH:mm") or "Agora" }}</span>
             <span class="auto-refresh">🔄 Atualização automática</span>
           </div>
         </div>
@@ -330,283 +330,11 @@
       </div>
 
       <!-- Dashboard Content (for additional content from markdown) -->
-      
+      {% if content %}
       <div class="dashboard-content">
-        <h1>📊 <strong>SISTEMA DE MÉTRICAS AVANÇADAS</strong></h1>
-<blockquote>
-<p><em>Dashboard centralizado para monitoramento de performance e KPIs empresariais</em></p>
-</blockquote>
-<hr>
-<h2>🎯 <strong>RESUMO EXECUTIVO</strong></h2>
-<h3><strong>Objetivo</strong></h3>
-<p>Estabelecer sistema abrangente de métricas para monitorar performance, identificar tendências e tomar decisões baseadas em dados.</p>
-<h3><strong>Principais Categorias</strong></h3>
-<ul>
-<li><strong>Financeiras</strong>: Receita, lucro, margem, fluxo de caixa</li>
-<li><strong>Operacionais</strong>: Produtividade, eficiência, qualidade</li>
-<li><strong>Comerciais</strong>: Vendas, conversão, retenção</li>
-<li><strong>Estratégicas</strong>: Crescimento, inovação, posicionamento</li>
-</ul>
-<hr>
-<h2>💰 <strong>MÉTRICAS FINANCEIRAS</strong></h2>
-<h3><strong>Receita e Crescimento</strong></h3>
-<pre><code class="language-dataview">TABLE 
-  title as &quot;Projeto&quot;,
-  budget as &quot;Budget&quot;,
-  kpi_primary as &quot;KPI Principal&quot;,
-  status as &quot;Status&quot;
-FROM &quot;4-Projetos&quot;
-WHERE status = &quot;in-progress&quot; OR status = &quot;deployed&quot;
-SORT budget desc
-</code></pre>
-<h3><strong>Margem e Rentabilidade</strong></h3>
-<ul>
-<li><strong>Margem Bruta</strong>: (Receita - Custos Diretos) / Receita</li>
-<li><strong>Margem Líquida</strong>: (Lucro Líquido) / Receita</li>
-<li><strong>ROI por Projeto</strong>: (Lucro - Investimento) / Investimento</li>
-<li><strong>Payback Period</strong>: Tempo para recuperar investimento</li>
-</ul>
-<h3><strong>Fluxo de Caixa</strong></h3>
-<ul>
-<li><strong>Cash Flow Operacional</strong>: Entradas - Saídas operacionais</li>
-<li><strong>Cash Flow de Investimento</strong>: Investimentos em ativos</li>
-<li><strong>Cash Flow de Financiamento</strong>: Empréstimos e dividendos</li>
-<li><strong>Saldo de Caixa</strong>: Posição atual</li>
-</ul>
-<hr>
-<h2>⚙️ <strong>MÉTRICAS OPERACIONAIS</strong></h2>
-<h3><strong>Produtividade da Equipe</strong></h3>
-<pre><code class="language-dataview">TABLE 
-  owner as &quot;Responsável&quot;,
-  effort_weeks as &quot;Esforço (semanas)&quot;,
-  status as &quot;Status&quot;,
-  validation_score as &quot;Score&quot;
-FROM &quot;4-Projetos&quot;
-WHERE type = &quot;project&quot;
-SORT effort_weeks desc
-</code></pre>
-<h3><strong>Eficiência de Processos</strong></h3>
-<ul>
-<li><strong>Tempo de Entrega</strong>: Data fim - Data início</li>
-<li><strong>Taxa de Conclusão</strong>: Projetos finalizados / Total</li>
-<li><strong>Qualidade</strong>: Score de validação médio</li>
-<li><strong>Reutilização</strong>: Ativos reutilizados / Total criados</li>
-</ul>
-<h3><strong>Gestão de Recursos</strong></h3>
-<ul>
-<li><strong>Utilização de Capacidade</strong>: Horas trabalhadas / Horas disponíveis</li>
-<li><strong>Ociosidade</strong>: Tempo não produtivo / Tempo total</li>
-<li><strong>Eficiência de Custos</strong>: Valor entregue / Custo total</li>
-</ul>
-<hr>
-<h2>🎯 <strong>MÉTRICAS COMERCIAIS</strong></h2>
-<h3><strong>Pipeline de Vendas</strong></h3>
-<pre><code class="language-dataview">TABLE 
-  title as &quot;Lead/Cliente&quot;,
-  status as &quot;Status&quot;,
-  budget as &quot;Valor&quot;,
-  owner as &quot;Responsável&quot;
-FROM &quot;1-Comercial&quot;
-WHERE status = &quot;prospect&quot; OR status = &quot;qualified&quot; OR status = &quot;proposal&quot;
-SORT budget desc
-</code></pre>
-<h3><strong>Conversão e Retenção</strong></h3>
-<ul>
-<li><strong>Taxa de Conversão</strong>: Vendas / Leads qualificados</li>
-<li><strong>Tempo de Venda</strong>: Data fechamento - Data primeiro contato</li>
-<li><strong>Ticket Médio</strong>: Receita total / Número de vendas</li>
-<li><strong>Taxa de Retenção</strong>: Clientes recorrentes / Total</li>
-</ul>
-<h3><strong>Satisfação do Cliente</strong></h3>
-<ul>
-<li><strong>NPS (Net Promoter Score)</strong>: Promotores - Detratores</li>
-<li><strong>CSAT (Customer Satisfaction)</strong>: Satisfação média</li>
-<li><strong>Churn Rate</strong>: Clientes perdidos / Total</li>
-<li><strong>Lifetime Value</strong>: Valor total por cliente</li>
-</ul>
-<hr>
-<h2>🚀 <strong>MÉTRICAS ESTRATÉGICAS</strong></h2>
-<h3><strong>Crescimento e Inovação</strong></h3>
-<pre><code class="language-dataview">TABLE 
-  title as &quot;Inovação&quot;,
-  status as &quot;Status&quot;,
-  validation_score as &quot;Score&quot;,
-  type as &quot;Tipo&quot;
-FROM &quot;4-Projetos&quot;
-WHERE type = &quot;pilot&quot;
-SORT validation_score desc
-</code></pre>
-<h3><strong>Posicionamento de Mercado</strong></h3>
-<ul>
-<li><strong>Market Share</strong>: Participação no mercado</li>
-<li><strong>Brand Awareness</strong>: Reconhecimento da marca</li>
-<li><strong>Competitive Position</strong>: Posição vs concorrentes</li>
-<li><strong>Innovation Index</strong>: Índice de inovação</li>
-</ul>
-<h3><strong>Sustentabilidade</strong></h3>
-<ul>
-<li><strong>Crescimento Orgânico</strong>: Crescimento sem investimentos externos</li>
-<li><strong>Eficiência Energética</strong>: Consumo / Produção</li>
-<li><strong>Impacto Social</strong>: Benefícios para sociedade</li>
-<li><strong>Governança</strong>: Score de compliance</li>
-</ul>
-<hr>
-<h2>📈 <strong>DASHBOARDS ESPECÍFICOS</strong></h2>
-<h3><strong>Dashboard Executivo</strong></h3>
-<pre><code class="language-dataview">TABLE 
-  title as &quot;Métrica&quot;,
-  status as &quot;Status Atual&quot;,
-  kpi_primary as &quot;Meta&quot;,
-  validation_score as &quot;Performance&quot;
-FROM &quot;0-Dashboard-Executivo&quot;
-WHERE type = &quot;metric&quot;
-SORT validation_score desc
-</code></pre>
-<h3><strong>Dashboard de Projetos</strong></h3>
-<pre><code class="language-dataview">TABLE 
-  title as &quot;Projeto&quot;,
-  owner as &quot;Responsável&quot;,
-  effort_weeks as &quot;Duração&quot;,
-  budget as &quot;Orçamento&quot;,
-  status as &quot;Status&quot;
-FROM &quot;4-Projetos&quot;
-WHERE status != &quot;archived&quot;
-SORT status asc, effort_weeks desc
-</code></pre>
-<h3><strong>Dashboard de Pilotos</strong></h3>
-<pre><code class="language-dataview">TABLE 
-  title as &quot;Piloto&quot;,
-  pilot_stage as &quot;Fase&quot;,
-  sample_size as &quot;Amostra&quot;,
-  validation_score as &quot;Score&quot;,
-  status as &quot;Status&quot;
-FROM &quot;4-Projetos&quot;
-WHERE type = &quot;pilot&quot;
-SORT pilot_stage asc, validation_score desc
-</code></pre>
-<hr>
-<h2>🔄 <strong>PROCESSO DE COLETA E ANÁLISE</strong></h2>
-<h3><strong>Frequência de Coleta</strong></h3>
-<ul>
-<li><strong>Diária</strong>: Métricas operacionais críticas</li>
-<li><strong>Semanal</strong>: Métricas de projetos e vendas</li>
-<li><strong>Mensal</strong>: Métricas financeiras e estratégicas</li>
-<li><strong>Trimestral</strong>: Revisão completa e planejamento</li>
-</ul>
-<h3><strong>Responsabilidades</strong></h3>
-<ul>
-<li><strong><a href="/stubs/">Pedro Vitor</a></strong>: Métricas técnicas e estratégicas</li>
-<li><strong><a href="/stubs/">Lu&iacute;s</a></strong>: Métricas comerciais e de vendas</li>
-<li><strong><a href="/stubs/">Gui</a></strong>: Métricas operacionais e de qualidade</li>
-<li><strong><a href="/stubs/">Participante 6</a></strong>: Métricas de compliance</li>
-</ul>
-<h3><strong>Ferramentas de Coleta</strong></h3>
-<ul>
-<li><strong>Obsidian</strong>: Centralização e visualização</li>
-<li><strong>Dataview</strong>: Queries automáticas</li>
-<li><strong>Cursor</strong>: Automação e alertas</li>
-<li><strong>Planilhas</strong>: Análises avançadas</li>
-</ul>
-<hr>
-<h2>🎯 <strong>ALERTAS E NOTIFICAÇÕES</strong></h2>
-<h3><strong>Alertas Críticos</strong></h3>
-<ul>
-<li><strong>Budget</strong>: Projeto ultrapassando 80% do orçamento</li>
-<li><strong>Prazo</strong>: Projeto com atraso superior a 1 semana</li>
-<li><strong>Qualidade</strong>: Score de validação abaixo de 3.0</li>
-<li><strong>Compliance</strong>: Violação de políticas</li>
-</ul>
-<h3><strong>Alertas de Performance</strong></h3>
-<ul>
-<li><strong>Baixa Conversão</strong>: Taxa abaixo de 20%</li>
-<li><strong>Alto Churn</strong>: Taxa acima de 10%</li>
-<li><strong>Baixa Produtividade</strong>: Eficiência abaixo de 70%</li>
-<li><strong>Baixa Satisfação</strong>: NPS abaixo de 50</li>
-</ul>
-<h3><strong>Canais de Notificação</strong></h3>
-<ul>
-<li><strong>Slack</strong>: Alertas em tempo real</li>
-<li><strong>Email</strong>: Relatórios semanais</li>
-<li><strong>Obsidian</strong>: Dashboards atualizados</li>
-<li><strong>Reuniões</strong>: Discussão mensal</li>
-</ul>
-<hr>
-<h2>📊 <strong>RELATÓRIOS E ANÁLISES</strong></h2>
-<h3><strong>Relatório Semanal</strong></h3>
-<ul>
-<li><strong>Resumo Executivo</strong>: Principais métricas</li>
-<li><strong>Projetos</strong>: Status e progresso</li>
-<li><strong>Vendas</strong>: Pipeline e conversões</li>
-<li><strong>Operações</strong>: Eficiência e qualidade</li>
-</ul>
-<h3><strong>Relatório Mensal</strong></h3>
-<ul>
-<li><strong>Análise Financeira</strong>: Receita, custos, lucro</li>
-<li><strong>Análise de Tendências</strong>: Crescimento e performance</li>
-<li><strong>Análise de Riscos</strong>: Identificação e mitigação</li>
-<li><strong>Planejamento</strong>: Ajustes e metas</li>
-</ul>
-<h3><strong>Relatório Trimestral</strong></h3>
-<ul>
-<li><strong>Revisão Estratégica</strong>: Alinhamento com objetivos</li>
-<li><strong>Análise de Mercado</strong>: Posicionamento e oportunidades</li>
-<li><strong>Análise de Competitividade</strong>: Comparação com concorrentes</li>
-<li><strong>Planejamento Estratégico</strong>: Próximos passos</li>
-</ul>
-<hr>
-<h2>🎯 <strong>CRITÉRIOS DE SUCESSO</strong></h2>
-<h3><strong>Métricas de Qualidade</strong></h3>
-<ul>
-<li>[ ] <strong>90%</strong> das métricas coletadas automaticamente</li>
-<li>[ ] <strong>100%</strong> dos alertas funcionando</li>
-<li>[ ] <strong>95%</strong> de precisão nas previsões</li>
-<li>[ ] <strong>100%</strong> de compliance com LGPD</li>
-</ul>
-<h3><strong>Métricas de Performance</strong></h3>
-<ul>
-<li>[ ] <strong>30%</strong> de crescimento anual</li>
-<li>[ ] <strong>25%</strong> de margem de lucro</li>
-<li>[ ] <strong>80%</strong> de satisfação do cliente</li>
-<li>[ ] <strong>90%</strong> de eficiência operacional</li>
-</ul>
-<h3><strong>Métricas de Inovação</strong></h3>
-<ul>
-<li>[ ] <strong>5</strong> projetos piloto por trimestre</li>
-<li>[ ] <strong>70%</strong> de taxa de sucesso em pilotos</li>
-<li>[ ] <strong>3</strong> inovações implementadas por ano</li>
-<li>[ ] <strong>50%</strong> de receita de produtos novos</li>
-</ul>
-<hr>
-<h2>🔧 <strong>MELHORIAS CONTÍNUAS</strong></h2>
-<h3><strong>Processo de Otimização</strong></h3>
-<ol>
-<li><strong>Coleta de Feedback</strong>: Input dos usuários</li>
-<li><strong>Análise de Dados</strong>: Identificação de padrões</li>
-<li><strong>Testes A/B</strong>: Comparação de abordagens</li>
-<li><strong>Implementação</strong>: Aplicação de melhorias</li>
-</ol>
-<h3><strong>Automação</strong></h3>
-<ul>
-<li><strong>Coleta Automática</strong>: Integração com sistemas</li>
-<li><strong>Análise Automática</strong>: IA para insights</li>
-<li><strong>Alertas Automáticos</strong>: Notificações inteligentes</li>
-<li><strong>Relatórios Automáticos</strong>: Geração programada</li>
-</ul>
-<h3><strong>Treinamento</strong></h3>
-<ul>
-<li><strong>Workshops</strong>: Capacitação da equipe</li>
-<li><strong>Documentação</strong>: Guias e tutoriais</li>
-<li><strong>Suporte</strong>: Ajuda e esclarecimentos</li>
-<li><strong>Feedback</strong>: Melhoria contínua</li>
-</ul>
-<hr>
-<p><strong>Status</strong>: ✅ <strong>ATIVO</strong><br>
-<strong>Owner</strong>: <a href="/stubs/">Pedro Vitor</a><br>
-<strong>Próxima Atualização</strong>: Semanal<br>
-<strong>Versão</strong>: 1.0</p>
-
+        {{ content | safe }}
       </div>
-      
+      {% endif %}
 
     </div>
   </main>

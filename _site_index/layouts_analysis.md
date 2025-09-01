@@ -1,37 +1,49 @@
 ---
 created: 2025-09-01T19:58
-updated: 2025-09-01T20:03
+updated: 2025-09-01T20:13
 ---
 # 🎨 Layouts Analysis
 
-**Generated**: 2025-09-01T23:03:09.595Z
+**Generated**: 2025-09-01T23:13:35.876Z
 
 ## 📊 Layout Distribution
 
-### BASE Layout (57 pages)
+### BASE Layout (45 pages)
 
 **Example Page**: /0-Dashboard-Executivo/Dashboard-Projetos-Prazo/
-**Title**: 
+**Title**: Dashboard Projetos Prazo - Digital Garden Empresarial
 **Pages using this layout**:
-- /0-Dashboard-Executivo/Dashboard-Projetos-Prazo/ - ""
-- /0-Dashboard-Executivo/Dashboard-Projetos-Prazo-Visual/ - ""
-- /0-Dashboard-Executivo/Dashboard_Capacidade_Equipe/ - ""
-- /0-Dashboard-Executivo/Decisoes-Estrategicas/ - ""
-- /0-Dashboard-Executivo/Executive-Auto/ - ""
-- /0-Dashboard-Executivo/Innovation-Pipeline/ - ""
-- /0-Dashboard-Executivo/KPIs-Principais/ - ""
-- /0-Dashboard-Executivo/Sistema_Metricas_Avancadas/ - ""
-- /1-Governanca/Acordo_Socios_Final/ - ""
-- /1-Governanca/Compliance_Log/ - ""
-- ... and 47 more
+- /0-Dashboard-Executivo/Dashboard-Projetos-Prazo/ - "Dashboard Projetos Prazo - Digital Garden Empresarial"
+- /0-Dashboard-Executivo/Dashboard-Projetos-Prazo-Visual/ - "Dashboard Projetos Prazo Visual - Digital Garden Empresarial"
+- /0-Dashboard-Executivo/Dashboard_Capacidade_Equipe/ - "Dashboard Capacidade Equipe - Digital Garden Empresarial"
+- /0-Dashboard-Executivo/Decisoes-Estrategicas/ - "Decisões Estratégicas - Digital Garden Empresarial"
+- /0-Dashboard-Executivo/Executive-Auto/ - "Executive Auto - Digital Garden Empresarial"
+- /0-Dashboard-Executivo/Innovation-Pipeline/ - "Innovation Pipeline - Digital Garden Empresarial"
+- /0-Dashboard-Executivo/KPIs-Principais/ - "KPIs Principais - Digital Garden Empresarial"
+- /0-Dashboard-Executivo/Sistema_Metricas_Avancadas/ - "Sistema Metricas Avancadas - Digital Garden Empresarial"
+- /1000 - REUNIOES/30_08-25 REUNIAO INICIAL/10 - Prompt organização atas de reuniao a partir de transcrição / - ""
+- /1000 - REUNIOES/30_08-25 REUNIAO INICIAL/advanced-multisocios-components/ - "MultiSócios - Componentes Avançados | Anime.js Timeline"
+- ... and 35 more
 
 ### DASHBOARD Layout (1 pages)
 
 **Example Page**: /
 **Title**: Dashboard Executivo - Home - Digital Garden Empresarial
-**Metadata Fields**: status
 **Pages using this layout**:
 - / - "Dashboard Executivo - Home - Digital Garden Empresarial"
+
+### GOVERNANCA Layout (7 pages)
+
+**Example Page**: /1-Governanca/Acordo_Socios_Final/
+**Title**: Acordo De Socios Final - Digital Garden Empresarial
+**Pages using this layout**:
+- /1-Governanca/Acordo_Socios_Final/ - "Acordo De Socios Final - Digital Garden Empresarial"
+- /1-Governanca/Compliance_Log/ - "Log de Compliance - Digital Garden Empresarial"
+- /1-Governanca/etica_uso_IA/ - "Etica Uso IA - Digital Garden Empresarial"
+- /1-Governanca/FAQ_Compliance/ - "FAQ   Compliance - Digital Garden Empresarial"
+- /1-Governanca/Manual_Treinamento_Compliance/ - "Manual De Treinamento Compliance - Digital Garden Empresarial"
+- /1-Governanca/Playbook_Comercial_v0/ - "Playbook Comercial V0 - Digital Garden Empresarial"
+- /1-Governanca/README/ - "Governança Empresarial - Digital Garden Empresarial"
 
 ### PROJETO Layout (19 pages)
 
@@ -50,10 +62,31 @@ updated: 2025-09-01T20:03
 - /4-Projetos/README/ - "Portfólio de Projetos - Digital Garden Empresarial"
 - ... and 9 more
 
+### REUNIAO Layout (5 pages)
+
+**Example Page**: /6-Reunioes/2025-08-31-Reuniao-Executiva-Sistema/
+**Title**: ReuniãO Executiva Sistema - Digital Garden Empresarial
+**Pages using this layout**:
+- /6-Reunioes/2025-08-31-Reuniao-Executiva-Sistema/ - "ReuniãO Executiva Sistema - Digital Garden Empresarial"
+- /6-Reunioes/2025-09-01-Reuniao-Analise-Pessimista-Projetos/ - "ReuniãO Analise Pessimista Projetos - Digital Garden Empresarial"
+- /6-Reunioes/2025-09-01-Reuniao-Criacao-Projeto-WhatsBot/ - "ReuniãO Criacao Projeto WhatsBot - Digital Garden Empresarial"
+- /6-Reunioes/2025-09-01-Reuniao-Criacao-Sistema-Geracao-Ideias/ - "ReuniãO Criacao Sistema Geracao Ideias - Digital Garden Empresarial"
+- /6-Reunioes/README/ - "Reuniões e Atas - Digital Garden Empresarial"
+
 ## 💡 Layout Recommendations
 
 ### Projeto Layout
 - **Current**: 19 pages using base layout
 - **Recommendation**: Create specific projeto.njk layout
 - **Fields to highlight**: status, budget, effort_weeks, owner
+
+### Reunião Layout
+- **Current**: 5 pages using base layout
+- **Recommendation**: Create specific reuniao.njk layout
+- **Fields to highlight**: meeting_date, participants, duration
+
+### Governança Layout
+- **Current**: 7 pages using base layout
+- **Recommendation**: Create specific governanca.njk layout
+- **Fields to highlight**: version, legal_review, compliance_level
 

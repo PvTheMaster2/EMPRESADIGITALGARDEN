@@ -3,10 +3,15 @@
     {
       "url": "/0-Dashboard-Executivo/Dashboard-Projetos-Prazo/",
       "filePath": "dist\\0-Dashboard-Executivo\\Dashboard-Projetos-Prazo\\index.html",
-      "title": "",
-      "h1": "📊 DASHBOARD DE PROJETOS POR PRAZO",
-      "metaDescription": "",
+      "title": "Dashboard Projetos Prazo - Digital Garden Empresarial",
+      "h1": "Dashboard Projetos Prazo",
+      "metaDescription": "Sistema de Gestão de Conhecimento Empresarial",
       "headings": [
+        {
+          "level": 1,
+          "text": "Dashboard Projetos Prazo",
+          "id": null
+        },
         {
           "level": 1,
           "text": "📊 DASHBOARD DE PROJETOS POR PRAZO",
@@ -65,6 +70,31 @@
         {
           "level": 2,
           "text": "🔗 LINKS RÁPIDOS",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "📊 Timeline de Projetos",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "💰 Distribuição de Budget",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "🔔 Atualizações Recentes",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "⚠️ Alertas",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "⚡ Ações Rápidas",
           "id": null
         },
         {
@@ -220,6 +250,51 @@
       ],
       "links": [
         {
+          "text": "🌱 Digital Garden Empresarial",
+          "href": "/",
+          "isInternal": true
+        },
+        {
+          "text": "Dashboard",
+          "href": "/dashboard-executivo/",
+          "isInternal": true
+        },
+        {
+          "text": "Governança",
+          "href": "/governanca/",
+          "isInternal": true
+        },
+        {
+          "text": "Projetos",
+          "href": "/projetos/",
+          "isInternal": true
+        },
+        {
+          "text": "Equipes",
+          "href": "/equipes/",
+          "isInternal": true
+        },
+        {
+          "text": "Processos",
+          "href": "/processos/",
+          "isInternal": true
+        },
+        {
+          "text": "Reuniões",
+          "href": "/reunioes/",
+          "isInternal": true
+        },
+        {
+          "text": "Conhecimento",
+          "href": "/conhecimento/",
+          "isInternal": true
+        },
+        {
+          "text": "🌱 Digital Garden",
+          "href": "/",
+          "isInternal": true
+        },
+        {
           "text": "Pedro Vitor",
           "href": "/stubs/",
           "isInternal": true
@@ -302,10 +377,15 @@
     {
       "url": "/0-Dashboard-Executivo/Dashboard-Projetos-Prazo-Visual/",
       "filePath": "dist\\0-Dashboard-Executivo\\Dashboard-Projetos-Prazo-Visual\\index.html",
-      "title": "",
-      "h1": "🏢 <%= tp.file.title %>",
-      "metaDescription": "",
+      "title": "Dashboard Projetos Prazo Visual - Digital Garden Empresarial",
+      "h1": "Dashboard Projetos Prazo Visual",
+      "metaDescription": "Sistema de Gestão de Conhecimento Empresarial",
       "headings": [
+        {
+          "level": 1,
+          "text": "Dashboard Projetos Prazo Visual",
+          "id": null
+        },
         {
           "level": 1,
           "text": "🏢 <%= tp.file.title %>",
@@ -393,7 +473,7 @@
         },
         {
           "level": 2,
-          "text": "Status: 📝 RASCUNHO\nSubmetido por:\nData: 08/04/2025\nPróxima Ação: Reunião de discussão\ntemplate: projeto-empresarial\ntype: pilot\nstatus: idea\npriority: medium\nowner: “[[Seu Nome]]”\nmarket_segment: Tecnologia\neffort_weeks: 4\nbudget: 10000\nkpi_primary: 3 clientes teste no primeiro mês\nvalidation_score: 0\nia_assets:\nprompts:\n- Análise de dados\nmodels:\n- GPT-4\ndatasets:\n- Dados de teste\ncompliance_level: 1\nlegal_review: false\nhypothesis_id: HYP-001\npilot_stage: design\nsample_size: 10\nconsent_required: false\ndata_schema: schema_v1\ngating_criteria: validation_score >= 2.5\ntags: []\ncreated: 2025-08-31\nmodified: 2025-08-31\nversion: 1\nupdated: 2025-08-31T21:56",
+          "text": "Status: 📝 RASCUNHO\nSubmetido por:\nData: 08/04/2025\nPróxima Ação: Reunião de discussão\ntemplate: projeto-empresarial\ntype: pilot\nstatus: idea\npriority: medium\nowner: “Seu Nome”\nmarket_segment: Tecnologia\neffort_weeks: 4\nbudget: 10000\nkpi_primary: 3 clientes teste no primeiro mês\nvalidation_score: 0\nia_assets:\nprompts:\n- Análise de dados\nmodels:\n- GPT-4\ndatasets:\n- Dados de teste\ncompliance_level: 1\nlegal_review: false\nhypothesis_id: HYP-001\npilot_stage: design\nsample_size: 10\nconsent_required: false\ndata_schema: schema_v1\ngating_criteria: validation_score >= 2.5\ntags: []\ncreated: 2025-08-31\nmodified: 2025-08-31\nversion: 1\nupdated: 2025-08-31T21:56",
           "id": null
         },
         {
@@ -644,6 +724,31 @@
         {
           "level": 2,
           "text": "🔗 LINKS RÁPIDOS",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "📊 Timeline de Projetos",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "💰 Distribuição de Budget",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "🔔 Atualizações Recentes",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "⚠️ Alertas",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "⚡ Ações Rápidas",
           "id": null
         },
         {
@@ -1009,7 +1114,92 @@
       ],
       "links": [
         {
+          "text": "🌱 Digital Garden Empresarial",
+          "href": "/",
+          "isInternal": true
+        },
+        {
+          "text": "Dashboard",
+          "href": "/dashboard-executivo/",
+          "isInternal": true
+        },
+        {
+          "text": "Governança",
+          "href": "/governanca/",
+          "isInternal": true
+        },
+        {
+          "text": "Projetos",
+          "href": "/projetos/",
+          "isInternal": true
+        },
+        {
+          "text": "Equipes",
+          "href": "/equipes/",
+          "isInternal": true
+        },
+        {
+          "text": "Processos",
+          "href": "/processos/",
+          "isInternal": true
+        },
+        {
+          "text": "Reuniões",
+          "href": "/reunioes/",
+          "isInternal": true
+        },
+        {
+          "text": "Conhecimento",
+          "href": "/conhecimento/",
+          "isInternal": true
+        },
+        {
+          "text": "🌱 Digital Garden",
+          "href": "/",
+          "isInternal": true
+        },
+        {
+          "text": "🏠 Home Executivo",
+          "href": "/stubs/",
+          "isInternal": true
+        },
+        {
+          "text": "🚀 Innovation Pipeline",
+          "href": "/stubs/",
+          "isInternal": true
+        },
+        {
+          "text": "📊 KPIs Principais",
+          "href": "/stubs/",
+          "isInternal": true
+        },
+        {
+          "text": "📁 Projetos",
+          "href": "/stubs/",
+          "isInternal": true
+        },
+        {
+          "text": "🤝 Reuniões",
+          "href": "/stubs/",
+          "isInternal": true
+        },
+        {
+          "text": "Seu Nome",
+          "href": "/stubs/",
+          "isInternal": true
+        },
+        {
           "text": "Pedro Vitor",
+          "href": "/stubs/",
+          "isInternal": true
+        },
+        {
+          "text": "Projeto Principal",
+          "href": "/stubs/",
+          "isInternal": true
+        },
+        {
+          "text": "Outros Pilotos",
           "href": "/stubs/",
           "isInternal": true
         },
@@ -1030,6 +1220,31 @@
         },
         {
           "text": "Pedro Vitor",
+          "href": "/stubs/",
+          "isInternal": true
+        },
+        {
+          "text": "🏠 Home Executivo",
+          "href": "/stubs/",
+          "isInternal": true
+        },
+        {
+          "text": "🚀 Innovation Pipeline",
+          "href": "/stubs/",
+          "isInternal": true
+        },
+        {
+          "text": "📊 KPIs Principais",
+          "href": "/stubs/",
+          "isInternal": true
+        },
+        {
+          "text": "📁 Projetos",
+          "href": "/stubs/",
+          "isInternal": true
+        },
+        {
+          "text": "🤝 Reuniões",
           "href": "/stubs/",
           "isInternal": true
         },
@@ -1060,6 +1275,56 @@
         },
         {
           "text": "Pedro Vitor",
+          "href": "/stubs/",
+          "isInternal": true
+        },
+        {
+          "text": "🏠 Home Executivo",
+          "href": "/stubs/",
+          "isInternal": true
+        },
+        {
+          "text": "🚀 Innovation Pipeline",
+          "href": "/stubs/",
+          "isInternal": true
+        },
+        {
+          "text": "📊 KPIs Principais",
+          "href": "/stubs/",
+          "isInternal": true
+        },
+        {
+          "text": "📁 Projetos",
+          "href": "/stubs/",
+          "isInternal": true
+        },
+        {
+          "text": "🤝 Reuniões",
+          "href": "/stubs/",
+          "isInternal": true
+        },
+        {
+          "text": "🏠 Home Executivo",
+          "href": "/stubs/",
+          "isInternal": true
+        },
+        {
+          "text": "🚀 Innovation Pipeline",
+          "href": "/stubs/",
+          "isInternal": true
+        },
+        {
+          "text": "📊 KPIs Principais",
+          "href": "/stubs/",
+          "isInternal": true
+        },
+        {
+          "text": "📁 Projetos",
+          "href": "/stubs/",
+          "isInternal": true
+        },
+        {
+          "text": "🤝 Reuniões",
           "href": "/stubs/",
           "isInternal": true
         },
@@ -1106,10 +1371,15 @@
     {
       "url": "/0-Dashboard-Executivo/Dashboard_Capacidade_Equipe/",
       "filePath": "dist\\0-Dashboard-Executivo\\Dashboard_Capacidade_Equipe\\index.html",
-      "title": "",
-      "h1": "📊 DASHBOARD DE CAPACIDADE DA EQUIPE",
-      "metaDescription": "",
+      "title": "Dashboard Capacidade Equipe - Digital Garden Empresarial",
+      "h1": "Dashboard Capacidade Equipe",
+      "metaDescription": "Sistema de Gestão de Conhecimento Empresarial",
       "headings": [
+        {
+          "level": 1,
+          "text": "Dashboard Capacidade Equipe",
+          "id": null
+        },
         {
           "level": 1,
           "text": "📊 DASHBOARD DE CAPACIDADE DA EQUIPE",
@@ -1163,6 +1433,31 @@
         {
           "level": 2,
           "text": "📈 MÉTRICAS DE REFERÊNCIA",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "📊 Timeline de Projetos",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "💰 Distribuição de Budget",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "🔔 Atualizações Recentes",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "⚠️ Alertas",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "⚡ Ações Rápidas",
           "id": null
         },
         {
@@ -1303,12 +1598,92 @@
       ],
       "links": [
         {
+          "text": "🌱 Digital Garden Empresarial",
+          "href": "/",
+          "isInternal": true
+        },
+        {
+          "text": "Dashboard",
+          "href": "/dashboard-executivo/",
+          "isInternal": true
+        },
+        {
+          "text": "Governança",
+          "href": "/governanca/",
+          "isInternal": true
+        },
+        {
+          "text": "Projetos",
+          "href": "/projetos/",
+          "isInternal": true
+        },
+        {
+          "text": "Equipes",
+          "href": "/equipes/",
+          "isInternal": true
+        },
+        {
+          "text": "Processos",
+          "href": "/processos/",
+          "isInternal": true
+        },
+        {
+          "text": "Reuniões",
+          "href": "/reunioes/",
+          "isInternal": true
+        },
+        {
+          "text": "Conhecimento",
+          "href": "/conhecimento/",
+          "isInternal": true
+        },
+        {
+          "text": "🌱 Digital Garden",
+          "href": "/",
+          "isInternal": true
+        },
+        {
+          "text": "Sprint Atual",
+          "href": "/stubs/",
+          "isInternal": true
+        },
+        {
+          "text": "5-Processos/Sistema_Gestao_Capacidade_Sprints",
+          "href": "/stubs/",
+          "isInternal": true
+        },
+        {
+          "text": "z_Templates/Projetos/Template_Pessoa",
+          "href": "/stubs/",
+          "isInternal": true
+        },
+        {
+          "text": "z_Templates/Projetos/Template_Sprint",
+          "href": "/stubs/",
+          "isInternal": true
+        },
+        {
+          "text": "z_Templates/Projetos/Template_Tarefa",
+          "href": "/stubs/",
+          "isInternal": true
+        },
+        {
+          "text": "utils/forms/Formulario_Capacidade_Pessoas",
+          "href": "/stubs/",
+          "isInternal": true
+        },
+        {
           "text": "0-Dashboard-Executivo/Home-Executivo",
           "href": "/stubs/",
           "isInternal": true
         },
         {
           "text": "0-Dashboard-Executivo/KPIs-Principais",
+          "href": "/stubs/",
+          "isInternal": true
+        },
+        {
+          "text": "0-Dashboard-Executivo/Sistema_Metricas_Avancadas",
           "href": "/stubs/",
           "isInternal": true
         }
@@ -1320,10 +1695,15 @@
     {
       "url": "/0-Dashboard-Executivo/Decisoes-Estrategicas/",
       "filePath": "dist\\0-Dashboard-Executivo\\Decisoes-Estrategicas\\index.html",
-      "title": "",
-      "h1": "🎯 DECISÕES ESTRATÉGICAS",
-      "metaDescription": "",
+      "title": "Decisões Estratégicas - Digital Garden Empresarial",
+      "h1": "Decisões Estratégicas",
+      "metaDescription": "Sistema de Gestão de Conhecimento Empresarial",
       "headings": [
+        {
+          "level": 1,
+          "text": "Decisões Estratégicas",
+          "id": null
+        },
         {
           "level": 1,
           "text": "🎯 DECISÕES ESTRATÉGICAS",
@@ -1357,6 +1737,31 @@
         {
           "level": 2,
           "text": "📅 Agenda Estratégica",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "📊 Timeline de Projetos",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "💰 Distribuição de Budget",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "🔔 Atualizações Recentes",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "⚠️ Alertas",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "⚡ Ações Rápidas",
           "id": null
         },
         {
@@ -1420,7 +1825,53 @@
           "id": null
         }
       ],
-      "links": [],
+      "links": [
+        {
+          "text": "🌱 Digital Garden Empresarial",
+          "href": "/",
+          "isInternal": true
+        },
+        {
+          "text": "Dashboard",
+          "href": "/dashboard-executivo/",
+          "isInternal": true
+        },
+        {
+          "text": "Governança",
+          "href": "/governanca/",
+          "isInternal": true
+        },
+        {
+          "text": "Projetos",
+          "href": "/projetos/",
+          "isInternal": true
+        },
+        {
+          "text": "Equipes",
+          "href": "/equipes/",
+          "isInternal": true
+        },
+        {
+          "text": "Processos",
+          "href": "/processos/",
+          "isInternal": true
+        },
+        {
+          "text": "Reuniões",
+          "href": "/reunioes/",
+          "isInternal": true
+        },
+        {
+          "text": "Conhecimento",
+          "href": "/conhecimento/",
+          "isInternal": true
+        },
+        {
+          "text": "🌱 Digital Garden",
+          "href": "/",
+          "isInternal": true
+        }
+      ],
       "pageMetadata": {},
       "layoutType": "base",
       "wordCount": 0
@@ -1428,10 +1879,15 @@
     {
       "url": "/0-Dashboard-Executivo/Executive-Auto/",
       "filePath": "dist\\0-Dashboard-Executivo\\Executive-Auto\\index.html",
-      "title": "",
-      "h1": "📊 DASHBOARD EXECUTIVO AUTOMÁTICO",
-      "metaDescription": "",
+      "title": "Executive Auto - Digital Garden Empresarial",
+      "h1": "Executive Auto",
+      "metaDescription": "Sistema de Gestão de Conhecimento Empresarial",
       "headings": [
+        {
+          "level": 1,
+          "text": "Executive Auto",
+          "id": null
+        },
         {
           "level": 1,
           "text": "📊 DASHBOARD EXECUTIVO AUTOMÁTICO",
@@ -1514,6 +1970,31 @@
         },
         {
           "level": 3,
+          "text": "📊 Timeline de Projetos",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "💰 Distribuição de Budget",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "🔔 Atualizações Recentes",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "⚠️ Alertas",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "⚡ Ações Rápidas",
+          "id": null
+        },
+        {
+          "level": 3,
           "text": "Status Geral",
           "id": null
         },
@@ -1580,6 +2061,51 @@
       ],
       "links": [
         {
+          "text": "🌱 Digital Garden Empresarial",
+          "href": "/",
+          "isInternal": true
+        },
+        {
+          "text": "Dashboard",
+          "href": "/dashboard-executivo/",
+          "isInternal": true
+        },
+        {
+          "text": "Governança",
+          "href": "/governanca/",
+          "isInternal": true
+        },
+        {
+          "text": "Projetos",
+          "href": "/projetos/",
+          "isInternal": true
+        },
+        {
+          "text": "Equipes",
+          "href": "/equipes/",
+          "isInternal": true
+        },
+        {
+          "text": "Processos",
+          "href": "/processos/",
+          "isInternal": true
+        },
+        {
+          "text": "Reuniões",
+          "href": "/reunioes/",
+          "isInternal": true
+        },
+        {
+          "text": "Conhecimento",
+          "href": "/conhecimento/",
+          "isInternal": true
+        },
+        {
+          "text": "🌱 Digital Garden",
+          "href": "/",
+          "isInternal": true
+        },
+        {
           "text": "Pedro Vitor",
           "href": "/stubs/",
           "isInternal": true
@@ -1592,10 +2118,15 @@
     {
       "url": "/0-Dashboard-Executivo/Innovation-Pipeline/",
       "filePath": "dist\\0-Dashboard-Executivo\\Innovation-Pipeline\\index.html",
-      "title": "",
-      "h1": "🚀 INNOVATION PIPELINE - MULTISÓCIOS",
-      "metaDescription": "",
+      "title": "Innovation Pipeline - Digital Garden Empresarial",
+      "h1": "Innovation Pipeline",
+      "metaDescription": "Sistema de Gestão de Conhecimento Empresarial",
       "headings": [
+        {
+          "level": 1,
+          "text": "Innovation Pipeline",
+          "id": null
+        },
         {
           "level": 1,
           "text": "🚀 INNOVATION PIPELINE - MULTISÓCIOS",
@@ -1624,6 +2155,31 @@
         {
           "level": 2,
           "text": "🔗 LINKS RÁPIDOS",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "📊 Timeline de Projetos",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "💰 Distribuição de Budget",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "🔔 Atualizações Recentes",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "⚠️ Alertas",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "⚡ Ações Rápidas",
           "id": null
         },
         {
@@ -1659,7 +2215,67 @@
       ],
       "links": [
         {
-          "text": "etica_uso_IA",
+          "text": "🌱 Digital Garden Empresarial",
+          "href": "/",
+          "isInternal": true
+        },
+        {
+          "text": "Dashboard",
+          "href": "/dashboard-executivo/",
+          "isInternal": true
+        },
+        {
+          "text": "Governança",
+          "href": "/governanca/",
+          "isInternal": true
+        },
+        {
+          "text": "Projetos",
+          "href": "/projetos/",
+          "isInternal": true
+        },
+        {
+          "text": "Equipes",
+          "href": "/equipes/",
+          "isInternal": true
+        },
+        {
+          "text": "Processos",
+          "href": "/processos/",
+          "isInternal": true
+        },
+        {
+          "text": "Reuniões",
+          "href": "/reunioes/",
+          "isInternal": true
+        },
+        {
+          "text": "Conhecimento",
+          "href": "/conhecimento/",
+          "isInternal": true
+        },
+        {
+          "text": "🌱 Digital Garden",
+          "href": "/",
+          "isInternal": true
+        },
+        {
+          "text": "Dashboard Executivo - Home",
+          "href": "/",
+          "isInternal": true
+        },
+        {
+          "text": "KPIs Principais",
+          "href": "/0-Dashboard-Executivo/KPIs-Principais/",
+          "isInternal": true
+        },
+        {
+          "text": "Decisões Estratégicas",
+          "href": "/0-Dashboard-Executivo/Decisoes-Estrategicas/",
+          "isInternal": true
+        },
+        {
+          "text": "Etica Uso IA",
           "href": "/1-Governanca/etica_uso_IA/",
           "isInternal": true
         }
@@ -1671,10 +2287,15 @@
     {
       "url": "/0-Dashboard-Executivo/KPIs-Principais/",
       "filePath": "dist\\0-Dashboard-Executivo\\KPIs-Principais\\index.html",
-      "title": "",
-      "h1": "📊 KPIs PRINCIPAIS - MULTISÓCIOS",
-      "metaDescription": "",
+      "title": "KPIs Principais - Digital Garden Empresarial",
+      "h1": "KPIs Principais",
+      "metaDescription": "Sistema de Gestão de Conhecimento Empresarial",
       "headings": [
+        {
+          "level": 1,
+          "text": "KPIs Principais",
+          "id": null
+        },
         {
           "level": 1,
           "text": "📊 KPIs PRINCIPAIS - MULTISÓCIOS",
@@ -1728,6 +2349,31 @@
         {
           "level": 2,
           "text": "🔄 ATUALIZAÇÃO AUTOMÁTICA",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "📊 Timeline de Projetos",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "💰 Distribuição de Budget",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "🔔 Atualizações Recentes",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "⚠️ Alertas",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "⚡ Ações Rápidas",
           "id": null
         },
         {
@@ -1866,7 +2512,53 @@
           "id": null
         }
       ],
-      "links": [],
+      "links": [
+        {
+          "text": "🌱 Digital Garden Empresarial",
+          "href": "/",
+          "isInternal": true
+        },
+        {
+          "text": "Dashboard",
+          "href": "/dashboard-executivo/",
+          "isInternal": true
+        },
+        {
+          "text": "Governança",
+          "href": "/governanca/",
+          "isInternal": true
+        },
+        {
+          "text": "Projetos",
+          "href": "/projetos/",
+          "isInternal": true
+        },
+        {
+          "text": "Equipes",
+          "href": "/equipes/",
+          "isInternal": true
+        },
+        {
+          "text": "Processos",
+          "href": "/processos/",
+          "isInternal": true
+        },
+        {
+          "text": "Reuniões",
+          "href": "/reunioes/",
+          "isInternal": true
+        },
+        {
+          "text": "Conhecimento",
+          "href": "/conhecimento/",
+          "isInternal": true
+        },
+        {
+          "text": "🌱 Digital Garden",
+          "href": "/",
+          "isInternal": true
+        }
+      ],
       "pageMetadata": {},
       "layoutType": "base",
       "wordCount": 0
@@ -1874,10 +2566,15 @@
     {
       "url": "/0-Dashboard-Executivo/Sistema_Metricas_Avancadas/",
       "filePath": "dist\\0-Dashboard-Executivo\\Sistema_Metricas_Avancadas\\index.html",
-      "title": "",
-      "h1": "📊 SISTEMA DE MÉTRICAS AVANÇADAS",
-      "metaDescription": "",
+      "title": "Sistema Metricas Avancadas - Digital Garden Empresarial",
+      "h1": "Sistema Metricas Avancadas",
+      "metaDescription": "Sistema de Gestão de Conhecimento Empresarial",
       "headings": [
+        {
+          "level": 1,
+          "text": "Sistema Metricas Avancadas",
+          "id": null
+        },
         {
           "level": 1,
           "text": "📊 SISTEMA DE MÉTRICAS AVANÇADAS",
@@ -1936,6 +2633,31 @@
         {
           "level": 2,
           "text": "🔧 MELHORIAS CONTÍNUAS",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "📊 Timeline de Projetos",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "💰 Distribuição de Budget",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "🔔 Atualizações Recentes",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "⚠️ Alertas",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "⚡ Ações Rápidas",
           "id": null
         },
         {
@@ -2101,6 +2823,51 @@
       ],
       "links": [
         {
+          "text": "🌱 Digital Garden Empresarial",
+          "href": "/",
+          "isInternal": true
+        },
+        {
+          "text": "Dashboard",
+          "href": "/dashboard-executivo/",
+          "isInternal": true
+        },
+        {
+          "text": "Governança",
+          "href": "/governanca/",
+          "isInternal": true
+        },
+        {
+          "text": "Projetos",
+          "href": "/projetos/",
+          "isInternal": true
+        },
+        {
+          "text": "Equipes",
+          "href": "/equipes/",
+          "isInternal": true
+        },
+        {
+          "text": "Processos",
+          "href": "/processos/",
+          "isInternal": true
+        },
+        {
+          "text": "Reuniões",
+          "href": "/reunioes/",
+          "isInternal": true
+        },
+        {
+          "text": "Conhecimento",
+          "href": "/conhecimento/",
+          "isInternal": true
+        },
+        {
+          "text": "🌱 Digital Garden",
+          "href": "/",
+          "isInternal": true
+        },
+        {
           "text": "Pedro Vitor",
           "href": "/stubs/",
           "isInternal": true
@@ -2133,10 +2900,15 @@
     {
       "url": "/1-Governanca/Acordo_Socios_Final/",
       "filePath": "dist\\1-Governanca\\Acordo_Socios_Final\\index.html",
-      "title": "",
-      "h1": "🤝 ACORDO SOCIETÁRIO FINAL",
-      "metaDescription": "",
+      "title": "Acordo De Socios Final - Digital Garden Empresarial",
+      "h1": "Acordo De Socios Final",
+      "metaDescription": "Sistema de Gestão de Conhecimento Empresarial",
       "headings": [
+        {
+          "level": 1,
+          "text": "Acordo De Socios Final",
+          "id": null
+        },
         {
           "level": 1,
           "text": "🤝 ACORDO SOCIETÁRIO FINAL",
@@ -2200,6 +2972,26 @@
         {
           "level": 2,
           "text": "📝 ANEXOS",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Informações do Documento",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Compliance & Legal",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Timeline",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Stakeholders",
           "id": null
         },
         {
@@ -2386,10 +3178,85 @@
           "level": 3,
           "text": "Anexo C: Processo de Decisão",
           "id": null
+        },
+        {
+          "level": 3,
+          "text": "🔗 Documentos Relacionados",
+          "id": null
+        },
+        {
+          "level": 4,
+          "text": "Interessados",
+          "id": null
         }
       ],
       "links": [
         {
+          "text": "🌱 Digital Garden Empresarial",
+          "href": "/",
+          "isInternal": true
+        },
+        {
+          "text": "Dashboard",
+          "href": "/dashboard-executivo/",
+          "isInternal": true
+        },
+        {
+          "text": "Governança",
+          "href": "/governanca/",
+          "isInternal": true
+        },
+        {
+          "text": "Projetos",
+          "href": "/projetos/",
+          "isInternal": true
+        },
+        {
+          "text": "Equipes",
+          "href": "/equipes/",
+          "isInternal": true
+        },
+        {
+          "text": "Processos",
+          "href": "/processos/",
+          "isInternal": true
+        },
+        {
+          "text": "Reuniões",
+          "href": "/reunioes/",
+          "isInternal": true
+        },
+        {
+          "text": "Conhecimento",
+          "href": "/conhecimento/",
+          "isInternal": true
+        },
+        {
+          "text": "🌱 Digital Garden",
+          "href": "/",
+          "isInternal": true
+        },
+        {
+          "text": "Pedro Vitor",
+          "href": "/stubs/",
+          "isInternal": true
+        },
+        {
+          "text": "Luís",
+          "href": "/stubs/",
+          "isInternal": true
+        },
+        {
+          "text": "Gui",
+          "href": "/stubs/",
+          "isInternal": true
+        },
+        {
+          "text": "Participante 6",
+          "href": "/stubs/",
+          "isInternal": true
+        },
+        {
           "text": "Pedro Vitor",
           "href": "/stubs/",
           "isInternal": true
@@ -2455,42 +3322,47 @@
           "isInternal": true
         },
         {
-          "text": "Luís",
-          "href": "/stubs/",
-          "isInternal": true
-        },
-        {
-          "text": "Gui",
-          "href": "/stubs/",
-          "isInternal": true
-        },
-        {
           "text": "Participante 6",
           "href": "/stubs/",
           "isInternal": true
         },
         {
-          "text": "Pedro Vitor",
-          "href": "/stubs/",
+          "text": "Log de Compliance\n                  log",
+          "href": "/1-Governanca/Compliance_Log/",
           "isInternal": true
         },
         {
-          "text": "Participante 6",
-          "href": "/stubs/",
+          "text": "FAQ   Compliance\n                  faq",
+          "href": "/1-Governanca/FAQ_Compliance/",
+          "isInternal": true
+        },
+        {
+          "text": "Etica Uso IA\n                  policy",
+          "href": "/1-Governanca/etica_uso_IA/",
+          "isInternal": true
+        },
+        {
+          "text": "Manual De Treinamento Compliance\n                  manual",
+          "href": "/1-Governanca/Manual_Treinamento_Compliance/",
           "isInternal": true
         }
       ],
       "pageMetadata": {},
-      "layoutType": "base",
+      "layoutType": "governanca",
       "wordCount": 0
     },
     {
       "url": "/1-Governanca/Compliance_Log/",
       "filePath": "dist\\1-Governanca\\Compliance_Log\\index.html",
-      "title": "",
-      "h1": "📋 LOG DE COMPLIANCE - 01/09/2025",
-      "metaDescription": "",
+      "title": "Log de Compliance - Digital Garden Empresarial",
+      "h1": "Log de Compliance",
+      "metaDescription": "Sistema de Gestão de Conhecimento Empresarial",
       "headings": [
+        {
+          "level": 1,
+          "text": "Log de Compliance",
+          "id": null
+        },
         {
           "level": 1,
           "text": "📋 LOG DE COMPLIANCE - 01/09/2025",
@@ -2539,6 +3411,26 @@
         {
           "level": 2,
           "text": "📝 OBSERVAÇÕES ADICIONAIS",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Informações do Documento",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Compliance & Legal",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Timeline",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Stakeholders",
           "id": null
         },
         {
@@ -2650,11 +3542,66 @@
           "level": 3,
           "text": "Melhorias Identificadas",
           "id": null
+        },
+        {
+          "level": 3,
+          "text": "🔗 Documentos Relacionados",
+          "id": null
+        },
+        {
+          "level": 4,
+          "text": "Interessados",
+          "id": null
         }
       ],
       "links": [
         {
-          "text": "etica_uso_IA",
+          "text": "🌱 Digital Garden Empresarial",
+          "href": "/",
+          "isInternal": true
+        },
+        {
+          "text": "Dashboard",
+          "href": "/dashboard-executivo/",
+          "isInternal": true
+        },
+        {
+          "text": "Governança",
+          "href": "/governanca/",
+          "isInternal": true
+        },
+        {
+          "text": "Projetos",
+          "href": "/projetos/",
+          "isInternal": true
+        },
+        {
+          "text": "Equipes",
+          "href": "/equipes/",
+          "isInternal": true
+        },
+        {
+          "text": "Processos",
+          "href": "/processos/",
+          "isInternal": true
+        },
+        {
+          "text": "Reuniões",
+          "href": "/reunioes/",
+          "isInternal": true
+        },
+        {
+          "text": "Conhecimento",
+          "href": "/conhecimento/",
+          "isInternal": true
+        },
+        {
+          "text": "🌱 Digital Garden",
+          "href": "/",
+          "isInternal": true
+        },
+        {
+          "text": "Etica Uso IA",
           "href": "/1-Governanca/etica_uso_IA/",
           "isInternal": true
         },
@@ -2667,19 +3614,44 @@
           "text": "CHECKLIST_FINAL",
           "href": "/stubs/",
           "isInternal": true
+        },
+        {
+          "text": "⚖️\n                  \n                  \n                  \n                  \n                  \n                \n                \n                  Acordo De Socios Final\n                  documento-legal\n                \n                \n                  🔒",
+          "href": "/1-Governanca/Acordo_Socios_Final/",
+          "isInternal": true
+        },
+        {
+          "text": "FAQ   Compliance\n                  faq",
+          "href": "/1-Governanca/FAQ_Compliance/",
+          "isInternal": true
+        },
+        {
+          "text": "Etica Uso IA\n                  policy",
+          "href": "/1-Governanca/etica_uso_IA/",
+          "isInternal": true
+        },
+        {
+          "text": "Manual De Treinamento Compliance\n                  manual",
+          "href": "/1-Governanca/Manual_Treinamento_Compliance/",
+          "isInternal": true
         }
       ],
       "pageMetadata": {},
-      "layoutType": "base",
+      "layoutType": "governanca",
       "wordCount": 0
     },
     {
       "url": "/1-Governanca/etica_uso_IA/",
       "filePath": "dist\\1-Governanca\\etica_uso_IA\\index.html",
-      "title": "",
-      "h1": "🧠 POLÍTICA DE ÉTICA E USO DE INTELIGÊNCIA ARTIFICIAL",
-      "metaDescription": "",
+      "title": "Etica Uso IA - Digital Garden Empresarial",
+      "h1": "Etica Uso IA",
+      "metaDescription": "Sistema de Gestão de Conhecimento Empresarial",
       "headings": [
+        {
+          "level": 1,
+          "text": "Etica Uso IA",
+          "id": null
+        },
         {
           "level": 1,
           "text": "🧠 POLÍTICA DE ÉTICA E USO DE INTELIGÊNCIA ARTIFICIAL",
@@ -2738,6 +3710,26 @@
         {
           "level": 2,
           "text": "📞 CONTATOS DE EMERGÊNCIA",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Informações do Documento",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Compliance & Legal",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Timeline",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Stakeholders",
           "id": null
         },
         {
@@ -2874,11 +3866,71 @@
           "level": 3,
           "text": "Contatos de Emergência",
           "id": null
+        },
+        {
+          "level": 3,
+          "text": "🔗 Documentos Relacionados",
+          "id": null
+        },
+        {
+          "level": 4,
+          "text": "Interessados",
+          "id": null
         }
       ],
       "links": [
         {
+          "text": "🌱 Digital Garden Empresarial",
+          "href": "/",
+          "isInternal": true
+        },
+        {
+          "text": "Dashboard",
+          "href": "/dashboard-executivo/",
+          "isInternal": true
+        },
+        {
+          "text": "Governança",
+          "href": "/governanca/",
+          "isInternal": true
+        },
+        {
+          "text": "Projetos",
+          "href": "/projetos/",
+          "isInternal": true
+        },
+        {
+          "text": "Equipes",
+          "href": "/equipes/",
+          "isInternal": true
+        },
+        {
+          "text": "Processos",
+          "href": "/processos/",
+          "isInternal": true
+        },
+        {
+          "text": "Reuniões",
+          "href": "/reunioes/",
+          "isInternal": true
+        },
+        {
+          "text": "Conhecimento",
+          "href": "/conhecimento/",
+          "isInternal": true
+        },
+        {
+          "text": "🌱 Digital Garden",
+          "href": "/",
+          "isInternal": true
+        },
+        {
           "text": "Template_Acordo_Socios",
+          "href": "/stubs/",
+          "isInternal": true
+        },
+        {
+          "text": "Template_Politica_Financeira",
           "href": "/stubs/",
           "isInternal": true
         },
@@ -2911,19 +3963,44 @@
           "text": "Participante 6",
           "href": "/stubs/",
           "isInternal": true
+        },
+        {
+          "text": "⚖️\n                  \n                  \n                  \n                  \n                  \n                \n                \n                  Acordo De Socios Final\n                  documento-legal\n                \n                \n                  🔒",
+          "href": "/1-Governanca/Acordo_Socios_Final/",
+          "isInternal": true
+        },
+        {
+          "text": "Log de Compliance\n                  log",
+          "href": "/1-Governanca/Compliance_Log/",
+          "isInternal": true
+        },
+        {
+          "text": "FAQ   Compliance\n                  faq",
+          "href": "/1-Governanca/FAQ_Compliance/",
+          "isInternal": true
+        },
+        {
+          "text": "Manual De Treinamento Compliance\n                  manual",
+          "href": "/1-Governanca/Manual_Treinamento_Compliance/",
+          "isInternal": true
         }
       ],
       "pageMetadata": {},
-      "layoutType": "base",
+      "layoutType": "governanca",
       "wordCount": 0
     },
     {
       "url": "/1-Governanca/FAQ_Compliance/",
       "filePath": "dist\\1-Governanca\\FAQ_Compliance\\index.html",
-      "title": "",
-      "h1": "❓ FAQ - COMPLIANCE E SISTEMA",
-      "metaDescription": "",
+      "title": "FAQ   Compliance - Digital Garden Empresarial",
+      "h1": "FAQ   Compliance",
+      "metaDescription": "Sistema de Gestão de Conhecimento Empresarial",
       "headings": [
+        {
+          "level": 1,
+          "text": "FAQ   Compliance",
+          "id": null
+        },
         {
           "level": 1,
           "text": "❓ FAQ - COMPLIANCE E SISTEMA",
@@ -2982,6 +4059,26 @@
         {
           "level": 2,
           "text": "📚 RECURSOS ADICIONAIS",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Informações do Documento",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Compliance & Legal",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Timeline",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Stakeholders",
           "id": null
         },
         {
@@ -3183,9 +4280,64 @@
           "level": 3,
           "text": "Horários de Suporte",
           "id": null
+        },
+        {
+          "level": 3,
+          "text": "🔗 Documentos Relacionados",
+          "id": null
+        },
+        {
+          "level": 4,
+          "text": "Interessados",
+          "id": null
         }
       ],
       "links": [
+        {
+          "text": "🌱 Digital Garden Empresarial",
+          "href": "/",
+          "isInternal": true
+        },
+        {
+          "text": "Dashboard",
+          "href": "/dashboard-executivo/",
+          "isInternal": true
+        },
+        {
+          "text": "Governança",
+          "href": "/governanca/",
+          "isInternal": true
+        },
+        {
+          "text": "Projetos",
+          "href": "/projetos/",
+          "isInternal": true
+        },
+        {
+          "text": "Equipes",
+          "href": "/equipes/",
+          "isInternal": true
+        },
+        {
+          "text": "Processos",
+          "href": "/processos/",
+          "isInternal": true
+        },
+        {
+          "text": "Reuniões",
+          "href": "/reunioes/",
+          "isInternal": true
+        },
+        {
+          "text": "Conhecimento",
+          "href": "/conhecimento/",
+          "isInternal": true
+        },
+        {
+          "text": "🌱 Digital Garden",
+          "href": "/",
+          "isInternal": true
+        },
         {
           "text": "Pedro Vitor",
           "href": "/stubs/",
@@ -3212,8 +4364,18 @@
           "isInternal": true
         },
         {
-          "text": "etica_uso_IA",
+          "text": "Manual De Treinamento Compliance",
+          "href": "/1-Governanca/Manual_Treinamento_Compliance/",
+          "isInternal": true
+        },
+        {
+          "text": "Etica Uso IA",
           "href": "/1-Governanca/etica_uso_IA/",
+          "isInternal": true
+        },
+        {
+          "text": "Template_Compliance_Log",
+          "href": "/stubs/",
           "isInternal": true
         },
         {
@@ -3225,19 +4387,44 @@
           "text": "Gui",
           "href": "/stubs/",
           "isInternal": true
+        },
+        {
+          "text": "⚖️\n                  \n                  \n                  \n                  \n                  \n                \n                \n                  Acordo De Socios Final\n                  documento-legal\n                \n                \n                  🔒",
+          "href": "/1-Governanca/Acordo_Socios_Final/",
+          "isInternal": true
+        },
+        {
+          "text": "Log de Compliance\n                  log",
+          "href": "/1-Governanca/Compliance_Log/",
+          "isInternal": true
+        },
+        {
+          "text": "Etica Uso IA\n                  policy",
+          "href": "/1-Governanca/etica_uso_IA/",
+          "isInternal": true
+        },
+        {
+          "text": "Manual De Treinamento Compliance\n                  manual",
+          "href": "/1-Governanca/Manual_Treinamento_Compliance/",
+          "isInternal": true
         }
       ],
       "pageMetadata": {},
-      "layoutType": "base",
+      "layoutType": "governanca",
       "wordCount": 0
     },
     {
       "url": "/1-Governanca/Manual_Treinamento_Compliance/",
       "filePath": "dist\\1-Governanca\\Manual_Treinamento_Compliance\\index.html",
-      "title": "",
-      "h1": "📚 MANUAL DE TREINAMENTO - COMPLIANCE E SISTEMA",
-      "metaDescription": "",
+      "title": "Manual De Treinamento Compliance - Digital Garden Empresarial",
+      "h1": "Manual De Treinamento Compliance",
+      "metaDescription": "Sistema de Gestão de Conhecimento Empresarial",
       "headings": [
+        {
+          "level": 1,
+          "text": "Manual De Treinamento Compliance",
+          "id": null
+        },
         {
           "level": 1,
           "text": "📚 MANUAL DE TREINAMENTO - COMPLIANCE E SISTEMA",
@@ -3286,6 +4473,26 @@
         {
           "level": 2,
           "text": "📅 CRONOGRAMA DE TREINAMENTO",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Informações do Documento",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Compliance & Legal",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Timeline",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Stakeholders",
           "id": null
         },
         {
@@ -3401,6 +4608,16 @@
         {
           "level": 3,
           "text": "Semana 2",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "🔗 Documentos Relacionados",
+          "id": null
+        },
+        {
+          "level": 4,
+          "text": "Interessados",
           "id": null
         },
         {
@@ -3606,6 +4823,51 @@
       ],
       "links": [
         {
+          "text": "🌱 Digital Garden Empresarial",
+          "href": "/",
+          "isInternal": true
+        },
+        {
+          "text": "Dashboard",
+          "href": "/dashboard-executivo/",
+          "isInternal": true
+        },
+        {
+          "text": "Governança",
+          "href": "/governanca/",
+          "isInternal": true
+        },
+        {
+          "text": "Projetos",
+          "href": "/projetos/",
+          "isInternal": true
+        },
+        {
+          "text": "Equipes",
+          "href": "/equipes/",
+          "isInternal": true
+        },
+        {
+          "text": "Processos",
+          "href": "/processos/",
+          "isInternal": true
+        },
+        {
+          "text": "Reuniões",
+          "href": "/reunioes/",
+          "isInternal": true
+        },
+        {
+          "text": "Conhecimento",
+          "href": "/conhecimento/",
+          "isInternal": true
+        },
+        {
+          "text": "🌱 Digital Garden",
+          "href": "/",
+          "isInternal": true
+        },
+        {
           "text": "Participante 6",
           "href": "/stubs/",
           "isInternal": true
@@ -3616,8 +4878,13 @@
           "isInternal": true
         },
         {
-          "text": "etica_uso_IA",
+          "text": "Etica Uso IA",
           "href": "/1-Governanca/etica_uso_IA/",
+          "isInternal": true
+        },
+        {
+          "text": "Log de Compliance",
+          "href": "/1-Governanca/Compliance_Log/",
           "isInternal": true
         },
         {
@@ -3649,19 +4916,44 @@
           "text": "Gui",
           "href": "/stubs/",
           "isInternal": true
+        },
+        {
+          "text": "⚖️\n                  \n                  \n                  \n                  \n                  \n                \n                \n                  Acordo De Socios Final\n                  documento-legal\n                \n                \n                  🔒",
+          "href": "/1-Governanca/Acordo_Socios_Final/",
+          "isInternal": true
+        },
+        {
+          "text": "Log de Compliance\n                  log",
+          "href": "/1-Governanca/Compliance_Log/",
+          "isInternal": true
+        },
+        {
+          "text": "FAQ   Compliance\n                  faq",
+          "href": "/1-Governanca/FAQ_Compliance/",
+          "isInternal": true
+        },
+        {
+          "text": "Etica Uso IA\n                  policy",
+          "href": "/1-Governanca/etica_uso_IA/",
+          "isInternal": true
         }
       ],
       "pageMetadata": {},
-      "layoutType": "base",
+      "layoutType": "governanca",
       "wordCount": 0
     },
     {
       "url": "/1-Governanca/Playbook_Comercial_v0/",
       "filePath": "dist\\1-Governanca\\Playbook_Comercial_v0\\index.html",
-      "title": "",
-      "h1": "💼 PLAYBOOK COMERCIAL v0",
-      "metaDescription": "",
+      "title": "Playbook Comercial V0 - Digital Garden Empresarial",
+      "h1": "Playbook Comercial V0",
+      "metaDescription": "Sistema de Gestão de Conhecimento Empresarial",
       "headings": [
+        {
+          "level": 1,
+          "text": "Playbook Comercial V0",
+          "id": null
+        },
         {
           "level": 1,
           "text": "💼 PLAYBOOK COMERCIAL v0",
@@ -3710,6 +5002,26 @@
         {
           "level": 2,
           "text": "🚨 GESTÃO DE RISCOS",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Informações do Documento",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Compliance & Legal",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Timeline",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Stakeholders",
           "id": null
         },
         {
@@ -3858,6 +5170,16 @@
           "id": null
         },
         {
+          "level": 3,
+          "text": "🔗 Documentos Relacionados",
+          "id": null
+        },
+        {
+          "level": 4,
+          "text": "Interessados",
+          "id": null
+        },
+        {
           "level": 4,
           "text": "Fontes de Leads",
           "id": null
@@ -3910,22 +5232,97 @@
       ],
       "links": [
         {
+          "text": "🌱 Digital Garden Empresarial",
+          "href": "/",
+          "isInternal": true
+        },
+        {
+          "text": "Dashboard",
+          "href": "/dashboard-executivo/",
+          "isInternal": true
+        },
+        {
+          "text": "Governança",
+          "href": "/governanca/",
+          "isInternal": true
+        },
+        {
+          "text": "Projetos",
+          "href": "/projetos/",
+          "isInternal": true
+        },
+        {
+          "text": "Equipes",
+          "href": "/equipes/",
+          "isInternal": true
+        },
+        {
+          "text": "Processos",
+          "href": "/processos/",
+          "isInternal": true
+        },
+        {
+          "text": "Reuniões",
+          "href": "/reunioes/",
+          "isInternal": true
+        },
+        {
+          "text": "Conhecimento",
+          "href": "/conhecimento/",
+          "isInternal": true
+        },
+        {
+          "text": "🌱 Digital Garden",
+          "href": "/",
+          "isInternal": true
+        },
+        {
           "text": "Luís",
           "href": "/stubs/",
+          "isInternal": true
+        },
+        {
+          "text": "⚖️\n                  \n                  \n                  \n                  \n                  \n                \n                \n                  Acordo De Socios Final\n                  documento-legal\n                \n                \n                  🔒",
+          "href": "/1-Governanca/Acordo_Socios_Final/",
+          "isInternal": true
+        },
+        {
+          "text": "Log de Compliance\n                  log",
+          "href": "/1-Governanca/Compliance_Log/",
+          "isInternal": true
+        },
+        {
+          "text": "FAQ   Compliance\n                  faq",
+          "href": "/1-Governanca/FAQ_Compliance/",
+          "isInternal": true
+        },
+        {
+          "text": "Etica Uso IA\n                  policy",
+          "href": "/1-Governanca/etica_uso_IA/",
+          "isInternal": true
+        },
+        {
+          "text": "Manual De Treinamento Compliance\n                  manual",
+          "href": "/1-Governanca/Manual_Treinamento_Compliance/",
           "isInternal": true
         }
       ],
       "pageMetadata": {},
-      "layoutType": "base",
+      "layoutType": "governanca",
       "wordCount": 0
     },
     {
       "url": "/1-Governanca/README/",
       "filePath": "dist\\1-Governanca\\README\\index.html",
-      "title": "",
-      "h1": "🏛️ GOVERNANÇA EMPRESARIAL",
-      "metaDescription": "",
+      "title": "Governança Empresarial - Digital Garden Empresarial",
+      "h1": "Governança Empresarial",
+      "metaDescription": "Sistema de Gestão de Conhecimento Empresarial",
       "headings": [
+        {
+          "level": 1,
+          "text": "Governança Empresarial",
+          "id": null
+        },
         {
           "level": 1,
           "text": "🏛️ GOVERNANÇA EMPRESARIAL",
@@ -3949,6 +5346,26 @@
         {
           "level": 2,
           "text": "📅 Próximas Ações",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Informações do Documento",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Compliance & Legal",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Timeline",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Stakeholders",
           "id": null
         },
         {
@@ -3980,9 +5397,74 @@
           "level": 3,
           "text": "📈 Playbook Comercial",
           "id": null
+        },
+        {
+          "level": 3,
+          "text": "🔗 Documentos Relacionados",
+          "id": null
+        },
+        {
+          "level": 4,
+          "text": "Interessados",
+          "id": null
         }
       ],
       "links": [
+        {
+          "text": "🌱 Digital Garden Empresarial",
+          "href": "/",
+          "isInternal": true
+        },
+        {
+          "text": "Dashboard",
+          "href": "/dashboard-executivo/",
+          "isInternal": true
+        },
+        {
+          "text": "Governança",
+          "href": "/governanca/",
+          "isInternal": true
+        },
+        {
+          "text": "Projetos",
+          "href": "/projetos/",
+          "isInternal": true
+        },
+        {
+          "text": "Equipes",
+          "href": "/equipes/",
+          "isInternal": true
+        },
+        {
+          "text": "Processos",
+          "href": "/processos/",
+          "isInternal": true
+        },
+        {
+          "text": "Reuniões",
+          "href": "/reunioes/",
+          "isInternal": true
+        },
+        {
+          "text": "Conhecimento",
+          "href": "/conhecimento/",
+          "isInternal": true
+        },
+        {
+          "text": "🌱 Digital Garden",
+          "href": "/",
+          "isInternal": true
+        },
+        {
+          "text": "🏠 Home",
+          "href": "/",
+          "isInternal": true
+        },
+        {
+          "text": "⚖️ Governança",
+          "href": "/governanca/",
+          "isInternal": true
+        },
         {
           "text": "Acordo de Sócios",
           "href": "./Acordo_Socios_Final/",
@@ -4012,10 +5494,35 @@
           "text": "Playbook Comercial",
           "href": "./Playbook_Comercial_v0/",
           "isInternal": true
+        },
+        {
+          "text": "⚖️\n                  \n                  \n                  \n                  \n                  \n                \n                \n                  Acordo De Socios Final\n                  documento-legal\n                \n                \n                  🔒",
+          "href": "/1-Governanca/Acordo_Socios_Final/",
+          "isInternal": true
+        },
+        {
+          "text": "Log de Compliance\n                  log",
+          "href": "/1-Governanca/Compliance_Log/",
+          "isInternal": true
+        },
+        {
+          "text": "FAQ   Compliance\n                  faq",
+          "href": "/1-Governanca/FAQ_Compliance/",
+          "isInternal": true
+        },
+        {
+          "text": "Etica Uso IA\n                  policy",
+          "href": "/1-Governanca/etica_uso_IA/",
+          "isInternal": true
+        },
+        {
+          "text": "Manual De Treinamento Compliance\n                  manual",
+          "href": "/1-Governanca/Manual_Treinamento_Compliance/",
+          "isInternal": true
         }
       ],
       "pageMetadata": {},
-      "layoutType": "base",
+      "layoutType": "governanca",
       "wordCount": 0
     },
     {
@@ -11774,7 +13281,7 @@
           "isInternal": true
         },
         {
-          "text": "Playbook_Comercial_v0",
+          "text": "Playbook Comercial V0",
           "href": "/1-Governanca/Playbook_Comercial_v0/",
           "isInternal": true
         },
@@ -11784,7 +13291,7 @@
           "isInternal": true
         },
         {
-          "text": "Sistema_Metricas_Avancadas",
+          "text": "Sistema Metricas Avancadas",
           "href": "/0-Dashboard-Executivo/Sistema_Metricas_Avancadas/",
           "isInternal": true
         },
@@ -12445,7 +13952,33 @@
           "id": null
         }
       ],
-      "links": [],
+      "links": [
+        {
+          "text": "5-Processos/Sistema_Gestao_Capacidade_Sprints",
+          "href": "/stubs/",
+          "isInternal": true
+        },
+        {
+          "text": "z_Templates/Projetos/Template_Pessoa",
+          "href": "/stubs/",
+          "isInternal": true
+        },
+        {
+          "text": "z_Templates/Projetos/Template_Sprint",
+          "href": "/stubs/",
+          "isInternal": true
+        },
+        {
+          "text": "z_Templates/Projetos/Template_Tarefa",
+          "href": "/stubs/",
+          "isInternal": true
+        },
+        {
+          "text": "utils/forms/Formulario_Capacidade_Pessoas",
+          "href": "/stubs/",
+          "isInternal": true
+        }
+      ],
       "pageMetadata": {},
       "layoutType": "base",
       "wordCount": 0
@@ -12989,12 +14522,32 @@
       ],
       "links": [
         {
+          "text": "z_Templates/Projetos/Template_Pessoa",
+          "href": "/stubs/",
+          "isInternal": true
+        },
+        {
+          "text": "z_Templates/Projetos/Template_Sprint",
+          "href": "/stubs/",
+          "isInternal": true
+        },
+        {
+          "text": "z_Templates/Projetos/Template_Tarefa",
+          "href": "/stubs/",
+          "isInternal": true
+        },
+        {
           "text": "0-Dashboard-Executivo/Home-Executivo",
           "href": "/stubs/",
           "isInternal": true
         },
         {
           "text": "0-Dashboard-Executivo/KPIs-Principais",
+          "href": "/stubs/",
+          "isInternal": true
+        },
+        {
+          "text": "0-Dashboard-Executivo/Sistema_Metricas_Avancadas",
           "href": "/stubs/",
           "isInternal": true
         },
@@ -13016,10 +14569,15 @@
     {
       "url": "/6-Reunioes/2025-08-31-Reuniao-Executiva-Sistema/",
       "filePath": "dist\\6-Reunioes\\2025-08-31-Reuniao-Executiva-Sistema\\index.html",
-      "title": "",
-      "h1": "Reunião Executiva - Sistema Empresarial",
-      "metaDescription": "",
+      "title": "ReuniãO Executiva Sistema - Digital Garden Empresarial",
+      "h1": "ReuniãO Executiva Sistema",
+      "metaDescription": "Sistema de Gestão de Conhecimento Empresarial",
       "headings": [
+        {
+          "level": 1,
+          "text": "ReuniãO Executiva Sistema",
+          "id": null
+        },
         {
           "level": 1,
           "text": "Reunião Executiva - Sistema Empresarial",
@@ -13073,6 +14631,31 @@
         {
           "level": 2,
           "text": "📝 OBSERVAÇÕES ADICIONAIS",
+          "id": null
+        },
+        {
+          "level": 2,
+          "text": "📋 Próximos Passos",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Data & Horário",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Participantes (4)",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Detalhes",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Timeline",
           "id": null
         },
         {
@@ -13219,9 +14802,59 @@
           "level": 3,
           "text": "Recomendações",
           "id": null
+        },
+        {
+          "level": 3,
+          "text": "🔗 Reuniões Relacionadas",
+          "id": null
         }
       ],
       "links": [
+        {
+          "text": "🌱 Digital Garden Empresarial",
+          "href": "/",
+          "isInternal": true
+        },
+        {
+          "text": "Dashboard",
+          "href": "/dashboard-executivo/",
+          "isInternal": true
+        },
+        {
+          "text": "Governança",
+          "href": "/governanca/",
+          "isInternal": true
+        },
+        {
+          "text": "Projetos",
+          "href": "/projetos/",
+          "isInternal": true
+        },
+        {
+          "text": "Equipes",
+          "href": "/equipes/",
+          "isInternal": true
+        },
+        {
+          "text": "Processos",
+          "href": "/processos/",
+          "isInternal": true
+        },
+        {
+          "text": "Reuniões",
+          "href": "/reunioes/",
+          "isInternal": true
+        },
+        {
+          "text": "Conhecimento",
+          "href": "/conhecimento/",
+          "isInternal": true
+        },
+        {
+          "text": "🌱 Digital Garden",
+          "href": "/",
+          "isInternal": true
+        },
         {
           "text": "Pedro Vitor",
           "href": "/stubs/",
@@ -13278,22 +14911,57 @@
           "isInternal": true
         },
         {
+          "text": "TEMPLATE Projeto Exemplo Sistema",
+          "href": "/4-Projetos/Templates/TEMPLATE Projeto-Exemplo-Sistema/",
+          "isInternal": true
+        },
+        {
+          "text": "TEMPLATE Piloto Exemplo Sistema",
+          "href": "/4-Projetos/Templates/TEMPLATE Piloto-Exemplo-Sistema/",
+          "isInternal": true
+        },
+        {
           "text": "Pedro Vitor",
           "href": "/stubs/",
+          "isInternal": true
+        },
+        {
+          "text": "📅\n                \n                  ReuniãO Analise Pessimista Projetos",
+          "href": "/6-Reunioes/2025-09-01-Reuniao-Analise-Pessimista-Projetos/",
+          "isInternal": true
+        },
+        {
+          "text": "📅\n                \n                  ReuniãO Criacao Projeto WhatsBot",
+          "href": "/6-Reunioes/2025-09-01-Reuniao-Criacao-Projeto-WhatsBot/",
+          "isInternal": true
+        },
+        {
+          "text": "📅\n                \n                  ReuniãO Criacao Sistema Geracao Ideias",
+          "href": "/6-Reunioes/2025-09-01-Reuniao-Criacao-Sistema-Geracao-Ideias/",
+          "isInternal": true
+        },
+        {
+          "text": "📅\n                \n                  Reuniões e Atas",
+          "href": "/6-Reunioes/README/",
           "isInternal": true
         }
       ],
       "pageMetadata": {},
-      "layoutType": "base",
+      "layoutType": "reuniao",
       "wordCount": 0
     },
     {
       "url": "/6-Reunioes/2025-09-01-Reuniao-Analise-Pessimista-Projetos/",
       "filePath": "dist\\6-Reunioes\\2025-09-01-Reuniao-Analise-Pessimista-Projetos\\index.html",
-      "title": "",
-      "h1": "🔍 Reunião - Análise Pessimista dos Projetos",
-      "metaDescription": "",
+      "title": "ReuniãO Analise Pessimista Projetos - Digital Garden Empresarial",
+      "h1": "ReuniãO Analise Pessimista Projetos",
+      "metaDescription": "Sistema de Gestão de Conhecimento Empresarial",
       "headings": [
+        {
+          "level": 1,
+          "text": "ReuniãO Analise Pessimista Projetos",
+          "id": null
+        },
         {
           "level": 1,
           "text": "🔍 Reunião - Análise Pessimista dos Projetos",
@@ -13352,6 +15020,16 @@
         {
           "level": 2,
           "text": "✅ CONCLUSÃO",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Detalhes",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Timeline",
           "id": null
         },
         {
@@ -13480,6 +15158,11 @@
           "id": null
         },
         {
+          "level": 3,
+          "text": "🔗 Reuniões Relacionadas",
+          "id": null
+        },
+        {
           "level": 4,
           "text": "Problemas Estruturais",
           "id": null
@@ -13507,22 +15190,92 @@
       ],
       "links": [
         {
+          "text": "🌱 Digital Garden Empresarial",
+          "href": "/",
+          "isInternal": true
+        },
+        {
+          "text": "Dashboard",
+          "href": "/dashboard-executivo/",
+          "isInternal": true
+        },
+        {
+          "text": "Governança",
+          "href": "/governanca/",
+          "isInternal": true
+        },
+        {
+          "text": "Projetos",
+          "href": "/projetos/",
+          "isInternal": true
+        },
+        {
+          "text": "Equipes",
+          "href": "/equipes/",
+          "isInternal": true
+        },
+        {
+          "text": "Processos",
+          "href": "/processos/",
+          "isInternal": true
+        },
+        {
+          "text": "Reuniões",
+          "href": "/reunioes/",
+          "isInternal": true
+        },
+        {
+          "text": "Conhecimento",
+          "href": "/conhecimento/",
+          "isInternal": true
+        },
+        {
+          "text": "🌱 Digital Garden",
+          "href": "/",
+          "isInternal": true
+        },
+        {
           "text": "Pedro Vitor",
           "href": "/stubs/",
+          "isInternal": true
+        },
+        {
+          "text": "📅\n                \n                  ReuniãO Executiva Sistema\n                  2025-08-31",
+          "href": "/6-Reunioes/2025-08-31-Reuniao-Executiva-Sistema/",
+          "isInternal": true
+        },
+        {
+          "text": "📅\n                \n                  ReuniãO Criacao Projeto WhatsBot",
+          "href": "/6-Reunioes/2025-09-01-Reuniao-Criacao-Projeto-WhatsBot/",
+          "isInternal": true
+        },
+        {
+          "text": "📅\n                \n                  ReuniãO Criacao Sistema Geracao Ideias",
+          "href": "/6-Reunioes/2025-09-01-Reuniao-Criacao-Sistema-Geracao-Ideias/",
+          "isInternal": true
+        },
+        {
+          "text": "📅\n                \n                  Reuniões e Atas",
+          "href": "/6-Reunioes/README/",
           "isInternal": true
         }
       ],
       "pageMetadata": {},
-      "layoutType": "base",
+      "layoutType": "reuniao",
       "wordCount": 0
     },
     {
       "url": "/6-Reunioes/2025-09-01-Reuniao-Criacao-Projeto-WhatsBot/",
       "filePath": "dist\\6-Reunioes\\2025-09-01-Reuniao-Criacao-Projeto-WhatsBot\\index.html",
-      "title": "",
-      "h1": "📋 Reunião - Criação Projeto WhatsBot Academia Funcional",
-      "metaDescription": "",
+      "title": "ReuniãO Criacao Projeto WhatsBot - Digital Garden Empresarial",
+      "h1": "ReuniãO Criacao Projeto WhatsBot",
+      "metaDescription": "Sistema de Gestão de Conhecimento Empresarial",
       "headings": [
+        {
+          "level": 1,
+          "text": "ReuniãO Criacao Projeto WhatsBot",
+          "id": null
+        },
         {
           "level": 1,
           "text": "📋 Reunião - Criação Projeto WhatsBot Academia Funcional",
@@ -13566,6 +15319,16 @@
         {
           "level": 2,
           "text": "📝 OBSERVAÇÕES ADICIONAIS",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Detalhes",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Timeline",
           "id": null
         },
         {
@@ -13637,9 +15400,59 @@
           "level": 3,
           "text": "Oportunidades",
           "id": null
+        },
+        {
+          "level": 3,
+          "text": "🔗 Reuniões Relacionadas",
+          "id": null
         }
       ],
       "links": [
+        {
+          "text": "🌱 Digital Garden Empresarial",
+          "href": "/",
+          "isInternal": true
+        },
+        {
+          "text": "Dashboard",
+          "href": "/dashboard-executivo/",
+          "isInternal": true
+        },
+        {
+          "text": "Governança",
+          "href": "/governanca/",
+          "isInternal": true
+        },
+        {
+          "text": "Projetos",
+          "href": "/projetos/",
+          "isInternal": true
+        },
+        {
+          "text": "Equipes",
+          "href": "/equipes/",
+          "isInternal": true
+        },
+        {
+          "text": "Processos",
+          "href": "/processos/",
+          "isInternal": true
+        },
+        {
+          "text": "Reuniões",
+          "href": "/reunioes/",
+          "isInternal": true
+        },
+        {
+          "text": "Conhecimento",
+          "href": "/conhecimento/",
+          "isInternal": true
+        },
+        {
+          "text": "🌱 Digital Garden",
+          "href": "/",
+          "isInternal": true
+        },
         {
           "text": "Pedro Vitor",
           "href": "/stubs/",
@@ -13666,22 +15479,57 @@
           "isInternal": true
         },
         {
+          "text": "Dashboard Executivo - Home",
+          "href": "/",
+          "isInternal": true
+        },
+        {
+          "text": "Innovation Pipeline",
+          "href": "/0-Dashboard-Executivo/Innovation-Pipeline/",
+          "isInternal": true
+        },
+        {
           "text": "Pedro Vitor",
           "href": "/stubs/",
+          "isInternal": true
+        },
+        {
+          "text": "📅\n                \n                  ReuniãO Executiva Sistema\n                  2025-08-31",
+          "href": "/6-Reunioes/2025-08-31-Reuniao-Executiva-Sistema/",
+          "isInternal": true
+        },
+        {
+          "text": "📅\n                \n                  ReuniãO Analise Pessimista Projetos",
+          "href": "/6-Reunioes/2025-09-01-Reuniao-Analise-Pessimista-Projetos/",
+          "isInternal": true
+        },
+        {
+          "text": "📅\n                \n                  ReuniãO Criacao Sistema Geracao Ideias",
+          "href": "/6-Reunioes/2025-09-01-Reuniao-Criacao-Sistema-Geracao-Ideias/",
+          "isInternal": true
+        },
+        {
+          "text": "📅\n                \n                  Reuniões e Atas",
+          "href": "/6-Reunioes/README/",
           "isInternal": true
         }
       ],
       "pageMetadata": {},
-      "layoutType": "base",
+      "layoutType": "reuniao",
       "wordCount": 0
     },
     {
       "url": "/6-Reunioes/2025-09-01-Reuniao-Criacao-Sistema-Geracao-Ideias/",
       "filePath": "dist\\6-Reunioes\\2025-09-01-Reuniao-Criacao-Sistema-Geracao-Ideias\\index.html",
-      "title": "",
-      "h1": "🚀 Reunião - Criação Sistema de Geração de Ideias",
-      "metaDescription": "",
+      "title": "ReuniãO Criacao Sistema Geracao Ideias - Digital Garden Empresarial",
+      "h1": "ReuniãO Criacao Sistema Geracao Ideias",
+      "metaDescription": "Sistema de Gestão de Conhecimento Empresarial",
       "headings": [
+        {
+          "level": 1,
+          "text": "ReuniãO Criacao Sistema Geracao Ideias",
+          "id": null
+        },
         {
           "level": 1,
           "text": "🚀 Reunião - Criação Sistema de Geração de Ideias",
@@ -13725,6 +15573,16 @@
         {
           "level": 2,
           "text": "📝 OBSERVAÇÕES ADICIONAIS",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Detalhes",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Timeline",
           "id": null
         },
         {
@@ -13796,9 +15654,59 @@
           "level": 3,
           "text": "Oportunidades",
           "id": null
+        },
+        {
+          "level": 3,
+          "text": "🔗 Reuniões Relacionadas",
+          "id": null
         }
       ],
       "links": [
+        {
+          "text": "🌱 Digital Garden Empresarial",
+          "href": "/",
+          "isInternal": true
+        },
+        {
+          "text": "Dashboard",
+          "href": "/dashboard-executivo/",
+          "isInternal": true
+        },
+        {
+          "text": "Governança",
+          "href": "/governanca/",
+          "isInternal": true
+        },
+        {
+          "text": "Projetos",
+          "href": "/projetos/",
+          "isInternal": true
+        },
+        {
+          "text": "Equipes",
+          "href": "/equipes/",
+          "isInternal": true
+        },
+        {
+          "text": "Processos",
+          "href": "/processos/",
+          "isInternal": true
+        },
+        {
+          "text": "Reuniões",
+          "href": "/reunioes/",
+          "isInternal": true
+        },
+        {
+          "text": "Conhecimento",
+          "href": "/conhecimento/",
+          "isInternal": true
+        },
+        {
+          "text": "🌱 Digital Garden",
+          "href": "/",
+          "isInternal": true
+        },
         {
           "text": "Pedro Vitor",
           "href": "/stubs/",
@@ -13820,6 +15728,11 @@
           "isInternal": true
         },
         {
+          "text": "Dashboard Executivo - Home",
+          "href": "/",
+          "isInternal": true
+        },
+        {
           "text": "PROXIMAS_ACOES",
           "href": "/stubs/",
           "isInternal": true
@@ -13828,19 +15741,44 @@
           "text": "Pedro Vitor",
           "href": "/stubs/",
           "isInternal": true
+        },
+        {
+          "text": "📅\n                \n                  ReuniãO Executiva Sistema\n                  2025-08-31",
+          "href": "/6-Reunioes/2025-08-31-Reuniao-Executiva-Sistema/",
+          "isInternal": true
+        },
+        {
+          "text": "📅\n                \n                  ReuniãO Analise Pessimista Projetos",
+          "href": "/6-Reunioes/2025-09-01-Reuniao-Analise-Pessimista-Projetos/",
+          "isInternal": true
+        },
+        {
+          "text": "📅\n                \n                  ReuniãO Criacao Projeto WhatsBot",
+          "href": "/6-Reunioes/2025-09-01-Reuniao-Criacao-Projeto-WhatsBot/",
+          "isInternal": true
+        },
+        {
+          "text": "📅\n                \n                  Reuniões e Atas",
+          "href": "/6-Reunioes/README/",
+          "isInternal": true
         }
       ],
       "pageMetadata": {},
-      "layoutType": "base",
+      "layoutType": "reuniao",
       "wordCount": 0
     },
     {
       "url": "/6-Reunioes/README/",
       "filePath": "dist\\6-Reunioes\\README\\index.html",
-      "title": "",
-      "h1": "📅 REUNIÕES E ATAS",
-      "metaDescription": "",
+      "title": "Reuniões e Atas - Digital Garden Empresarial",
+      "h1": "Reuniões e Atas",
+      "metaDescription": "Sistema de Gestão de Conhecimento Empresarial",
       "headings": [
+        {
+          "level": 1,
+          "text": "Reuniões e Atas",
+          "id": null
+        },
         {
           "level": 1,
           "text": "📅 REUNIÕES E ATAS",
@@ -13874,6 +15812,16 @@
         {
           "level": 2,
           "text": "📚 Arquivo Histórico",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Detalhes",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Timeline",
           "id": null
         },
         {
@@ -13930,9 +15878,69 @@
           "level": 3,
           "text": "📁 [Reuniões Históricas](/1000 - reunioes/)",
           "id": null
+        },
+        {
+          "level": 3,
+          "text": "🔗 Reuniões Relacionadas",
+          "id": null
         }
       ],
       "links": [
+        {
+          "text": "🌱 Digital Garden Empresarial",
+          "href": "/",
+          "isInternal": true
+        },
+        {
+          "text": "Dashboard",
+          "href": "/dashboard-executivo/",
+          "isInternal": true
+        },
+        {
+          "text": "Governança",
+          "href": "/governanca/",
+          "isInternal": true
+        },
+        {
+          "text": "Projetos",
+          "href": "/projetos/",
+          "isInternal": true
+        },
+        {
+          "text": "Equipes",
+          "href": "/equipes/",
+          "isInternal": true
+        },
+        {
+          "text": "Processos",
+          "href": "/processos/",
+          "isInternal": true
+        },
+        {
+          "text": "Reuniões",
+          "href": "/reunioes/",
+          "isInternal": true
+        },
+        {
+          "text": "Conhecimento",
+          "href": "/conhecimento/",
+          "isInternal": true
+        },
+        {
+          "text": "🌱 Digital Garden",
+          "href": "/",
+          "isInternal": true
+        },
+        {
+          "text": "🏠 Home",
+          "href": "/",
+          "isInternal": true
+        },
+        {
+          "text": "📅 Reuniões",
+          "href": "/reunioes/",
+          "isInternal": true
+        },
         {
           "text": "Reunião Executiva - Sistema",
           "href": "./2025-08-31-Reuniao-Executiva-Sistema/",
@@ -13952,10 +15960,30 @@
           "text": "Sistema de Geração de Ideias",
           "href": "./2025-09-01-Reuniao-Criacao-Sistema-Geracao-Ideias/",
           "isInternal": true
+        },
+        {
+          "text": "📅\n                \n                  ReuniãO Executiva Sistema\n                  2025-08-31",
+          "href": "/6-Reunioes/2025-08-31-Reuniao-Executiva-Sistema/",
+          "isInternal": true
+        },
+        {
+          "text": "📅\n                \n                  ReuniãO Analise Pessimista Projetos",
+          "href": "/6-Reunioes/2025-09-01-Reuniao-Analise-Pessimista-Projetos/",
+          "isInternal": true
+        },
+        {
+          "text": "📅\n                \n                  ReuniãO Criacao Projeto WhatsBot",
+          "href": "/6-Reunioes/2025-09-01-Reuniao-Criacao-Projeto-WhatsBot/",
+          "isInternal": true
+        },
+        {
+          "text": "📅\n                \n                  ReuniãO Criacao Sistema Geracao Ideias",
+          "href": "/6-Reunioes/2025-09-01-Reuniao-Criacao-Sistema-Geracao-Ideias/",
+          "isInternal": true
         }
       ],
       "pageMetadata": {},
-      "layoutType": "base",
+      "layoutType": "reuniao",
       "wordCount": 0
     },
     {
@@ -14295,6 +16323,31 @@
           "text": "Pedro Vitor",
           "href": "/stubs/",
           "isInternal": true
+        },
+        {
+          "text": "🏠 Home Executivo",
+          "href": "/stubs/",
+          "isInternal": true
+        },
+        {
+          "text": "🚀 Innovation Pipeline",
+          "href": "/stubs/",
+          "isInternal": true
+        },
+        {
+          "text": "📊 KPIs Principais",
+          "href": "/stubs/",
+          "isInternal": true
+        },
+        {
+          "text": "📁 Projetos",
+          "href": "/stubs/",
+          "isInternal": true
+        },
+        {
+          "text": "🤝 Reuniões",
+          "href": "/stubs/",
+          "isInternal": true
         }
       ],
       "pageMetadata": {},
@@ -14349,7 +16402,33 @@
           "id": null
         }
       ],
-      "links": [],
+      "links": [
+        {
+          "text": "🏠 Home Executivo",
+          "href": "/stubs/",
+          "isInternal": true
+        },
+        {
+          "text": "🚀 Innovation Pipeline",
+          "href": "/stubs/",
+          "isInternal": true
+        },
+        {
+          "text": "📊 KPIs Principais",
+          "href": "/stubs/",
+          "isInternal": true
+        },
+        {
+          "text": "📁 Projetos",
+          "href": "/stubs/",
+          "isInternal": true
+        },
+        {
+          "text": "🤝 Reuniões",
+          "href": "/stubs/",
+          "isInternal": true
+        }
+      ],
       "pageMetadata": {},
       "layoutType": "base",
       "wordCount": 0
@@ -14402,7 +16481,33 @@
           "id": null
         }
       ],
-      "links": [],
+      "links": [
+        {
+          "text": "🏠 Home Executivo",
+          "href": "/stubs/",
+          "isInternal": true
+        },
+        {
+          "text": "🚀 Innovation Pipeline",
+          "href": "/stubs/",
+          "isInternal": true
+        },
+        {
+          "text": "📊 KPIs Principais",
+          "href": "/stubs/",
+          "isInternal": true
+        },
+        {
+          "text": "📁 Projetos",
+          "href": "/stubs/",
+          "isInternal": true
+        },
+        {
+          "text": "🤝 Reuniões",
+          "href": "/stubs/",
+          "isInternal": true
+        }
+      ],
       "pageMetadata": {},
       "layoutType": "base",
       "wordCount": 0
@@ -14666,7 +16771,7 @@
         },
         {
           "level": 2,
-          "text": "Status: 📝 RASCUNHO\nSubmetido por:\nData:\nPróxima Ação: Reunião de discussão\ntemplate: projeto-empresarial\ntype: pilot\nstatus: idea\npriority: medium\nowner: “[[Seu Nome]]”\nmarket_segment: Tecnologia\neffort_weeks: 4\nbudget: 10000\nkpi_primary: 3 clientes teste no primeiro mês\nvalidation_score: 0\nia_assets:\nprompts:\n- Análise de dados\nmodels:\n- GPT-4\ndatasets:\n- Dados de teste\ncompliance_level: 1\nlegal_review: false\nhypothesis_id: HYP-001\npilot_stage: design\nsample_size: 10\nconsent_required: false\ndata_schema: schema_v1\ngating_criteria: validation_score >= 2.5\ntags: []\ncreated: 2025-08-31\nmodified: 2025-08-31\nversion: 1\nupdated: 2025-08-31T21:56",
+          "text": "Status: 📝 RASCUNHO\nSubmetido por:\nData:\nPróxima Ação: Reunião de discussão\ntemplate: projeto-empresarial\ntype: pilot\nstatus: idea\npriority: medium\nowner: “Seu Nome”\nmarket_segment: Tecnologia\neffort_weeks: 4\nbudget: 10000\nkpi_primary: 3 clientes teste no primeiro mês\nvalidation_score: 0\nia_assets:\nprompts:\n- Análise de dados\nmodels:\n- GPT-4\ndatasets:\n- Dados de teste\ncompliance_level: 1\nlegal_review: false\nhypothesis_id: HYP-001\npilot_stage: design\nsample_size: 10\nconsent_required: false\ndata_schema: schema_v1\ngating_criteria: validation_score >= 2.5\ntags: []\ncreated: 2025-08-31\nmodified: 2025-08-31\nversion: 1\nupdated: 2025-08-31T21:56",
           "id": null
         },
         {
@@ -14916,6 +17021,21 @@
         }
       ],
       "links": [
+        {
+          "text": "Seu Nome",
+          "href": "/stubs/",
+          "isInternal": true
+        },
+        {
+          "text": "Projeto Principal",
+          "href": "/stubs/",
+          "isInternal": true
+        },
+        {
+          "text": "Outros Pilotos",
+          "href": "/stubs/",
+          "isInternal": true
+        },
         {
           "text": "Briefing do Piloto",
           "href": "/stubs/",
@@ -15328,6 +17448,11 @@
         },
         {
           "level": 3,
+          "text": "🏷️\n            Relacionados",
+          "id": null
+        },
+        {
+          "level": 3,
           "text": "ℹ️\n            Informações",
           "id": null
         }
@@ -15729,13 +17854,18 @@
           "isInternal": true
         },
         {
+          "text": "Acordo De Socios Final",
+          "href": "/1-Governanca/Acordo_Socios_Final/",
+          "isInternal": true
+        },
+        {
           "text": "Log de Compliance",
           "href": "/1-Governanca/Compliance_Log/",
           "isInternal": true
         },
         {
-          "text": "Governança Empresarial",
-          "href": "/1-Governanca/README/",
+          "text": "Etica Uso IA",
+          "href": "/1-Governanca/etica_uso_IA/",
           "isInternal": true
         },
         {
@@ -15749,6 +17879,16 @@
           "isInternal": true
         },
         {
+          "text": "ReuniãO Criacao Sistema Geracao Ideias",
+          "href": "/6-Reunioes/2025-09-01-Reuniao-Criacao-Sistema-Geracao-Ideias/",
+          "isInternal": true
+        },
+        {
+          "text": "ReuniãO Criacao Projeto WhatsBot",
+          "href": "/6-Reunioes/2025-09-01-Reuniao-Criacao-Projeto-WhatsBot/",
+          "isInternal": true
+        },
+        {
           "text": "Ver todas as reuniões →",
           "href": "/6-reunioes/",
           "isInternal": true
@@ -15756,6 +17896,31 @@
         {
           "text": "wiki",
           "href": "/stubs/",
+          "isInternal": true
+        },
+        {
+          "text": "Dashboard Projetos Prazo Visual",
+          "href": "/0-Dashboard-Executivo/Dashboard-Projetos-Prazo-Visual/",
+          "isInternal": true
+        },
+        {
+          "text": "Dashboard Projetos Prazo",
+          "href": "/0-Dashboard-Executivo/Dashboard-Projetos-Prazo/",
+          "isInternal": true
+        },
+        {
+          "text": "Dashboard Capacidade Equipe",
+          "href": "/0-Dashboard-Executivo/Dashboard_Capacidade_Equipe/",
+          "isInternal": true
+        },
+        {
+          "text": "Executive Auto",
+          "href": "/0-Dashboard-Executivo/Executive-Auto/",
+          "isInternal": true
+        },
+        {
+          "text": "Dashboard Executivo - Home",
+          "href": "/",
           "isInternal": true
         },
         {
@@ -15774,9 +17939,14 @@
           "isInternal": true
         }
       ],
-      "pageMetadata": {},
+      "pageMetadata": {
+        "tags": [
+          "dashboard",
+          "executivo"
+        ]
+      },
       "layoutType": "base",
-      "wordCount": 210
+      "wordCount": 224
     },
     {
       "url": "/",
@@ -15848,6 +18018,31 @@
         {
           "level": 2,
           "text": "📊 MÉTRICAS DE SISTEMA",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "📊 Timeline de Projetos",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "💰 Distribuição de Budget",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "🔔 Atualizações Recentes",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "⚠️ Alertas",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "⚡ Ações Rápidas",
           "id": null
         },
         {
@@ -15959,11 +18154,6 @@
           "level": 3,
           "text": "Adoção da Equipe",
           "id": null
-        },
-        {
-          "level": 3,
-          "text": "ℹ️\n            Informações",
-          "id": null
         }
       ],
       "links": [
@@ -16010,331 +18200,6 @@
         {
           "text": "🌱 Digital Garden",
           "href": "/",
-          "isInternal": true
-        },
-        {
-          "text": "🏠 Home",
-          "href": "/",
-          "isInternal": true
-        },
-        {
-          "text": "📊 Dashboard Executivo",
-          "href": "/dashboard-overview/",
-          "isInternal": true
-        },
-        {
-          "text": "💡 Innovation Pipeline",
-          "href": "/0-dashboard-executivo/innovation-pipeline/",
-          "isInternal": true
-        },
-        {
-          "text": "📈 KPIs Principais",
-          "href": "/0-dashboard-executivo/kpis-principais/",
-          "isInternal": true
-        },
-        {
-          "text": "🎯 Decisões Estratégicas",
-          "href": "/0-dashboard-executivo/decisoes-estrategicas/",
-          "isInternal": true
-        },
-        {
-          "text": "📅 Projetos por Prazo",
-          "href": "/0-dashboard-executivo/dashboard-projetos-prazo/",
-          "isInternal": true
-        },
-        {
-          "text": "🎨 Projetos Visuais",
-          "href": "/0-dashboard-executivo/dashboard-projetos-prazo-visual/",
-          "isInternal": true
-        },
-        {
-          "text": "👥 Capacidade da Equipe",
-          "href": "/0-dashboard-executivo/dashboard_capacidade_equipe/",
-          "isInternal": true
-        },
-        {
-          "text": "⚡ Executive Auto",
-          "href": "/0-dashboard-executivo/executive-auto/",
-          "isInternal": true
-        },
-        {
-          "text": "📊 Métricas Avançadas",
-          "href": "/0-dashboard-executivo/sistema_metricas_avancadas/",
-          "isInternal": true
-        },
-        {
-          "text": "🏛️ Governança",
-          "href": "/1-governanca/",
-          "isInternal": true
-        },
-        {
-          "text": "📜 Acordo de Sócios",
-          "href": "/1-governanca/acordo_socios_final/",
-          "isInternal": true
-        },
-        {
-          "text": "⚖️ Compliance Log",
-          "href": "/1-governanca/compliance_log/",
-          "isInternal": true
-        },
-        {
-          "text": "🤖 Ética no Uso de IA",
-          "href": "/1-governanca/etica_uso_ia/",
-          "isInternal": true
-        },
-        {
-          "text": "❓ FAQ Compliance",
-          "href": "/1-governanca/faq_compliance/",
-          "isInternal": true
-        },
-        {
-          "text": "📚 Manual de Treinamento",
-          "href": "/1-governanca/manual_treinamento_compliance/",
-          "isInternal": true
-        },
-        {
-          "text": "📈 Playbook Comercial",
-          "href": "/1-governanca/playbook_comercial_v0/",
-          "isInternal": true
-        },
-        {
-          "text": "👥 Equipes",
-          "href": "/2-equipes/",
-          "isInternal": true
-        },
-        {
-          "text": "💻 Desenvolvimento",
-          "href": "/2-equipes/desenvolvimento/",
-          "isInternal": true
-        },
-        {
-          "text": "🎯 Marketing",
-          "href": "/2-equipes/marketing/",
-          "isInternal": true
-        },
-        {
-          "text": "💼 Vendas",
-          "href": "/2-equipes/vendas/",
-          "isInternal": true
-        },
-        {
-          "text": "⚙️ Operações",
-          "href": "/2-equipes/operacoes/",
-          "isInternal": true
-        },
-        {
-          "text": "👔 Liderança",
-          "href": "/2-equipes/lideranca/",
-          "isInternal": true
-        },
-        {
-          "text": "🌍 Mercado",
-          "href": "/3-mercado/",
-          "isInternal": true
-        },
-        {
-          "text": "👥 Clientes",
-          "href": "/3-mercado/clientes/",
-          "isInternal": true
-        },
-        {
-          "text": "⚔️ Concorrentes",
-          "href": "/3-mercado/concorrentes/",
-          "isInternal": true
-        },
-        {
-          "text": "🤝 Fornecedores",
-          "href": "/3-mercado/fornecedores/",
-          "isInternal": true
-        },
-        {
-          "text": "🚀 Tendências",
-          "href": "/3-mercado/tendencias/",
-          "isInternal": true
-        },
-        {
-          "text": "📋 Projetos",
-          "href": "/4-projetos/",
-          "isInternal": true
-        },
-        {
-          "text": "🚀 Ativos",
-          "href": "/4-projetos/ativos/",
-          "isInternal": true
-        },
-        {
-          "text": "🌟 PRJ-AERALYN",
-          "href": "/4-projetos/ativos/prj-aeralyn/",
-          "isInternal": true
-        },
-        {
-          "text": "🎮 Trip-Match",
-          "href": "/4-projetos/ativos/prj-trip-match/",
-          "isInternal": true
-        },
-        {
-          "text": "🏢 Vault Empresarial",
-          "href": "/4-projetos/ativos/prj-vault-empresarial/",
-          "isInternal": true
-        },
-        {
-          "text": "🎓 Curso IA Inteligente",
-          "href": "/4-projetos/ativos/prj-curso-ia-inteligente/",
-          "isInternal": true
-        },
-        {
-          "text": "📱 App Desenvolvimento",
-          "href": "/4-projetos/ativos/prj-app-desenvolvimento-cognitivo/",
-          "isInternal": true
-        },
-        {
-          "text": "🎵 Nostalgia Musical",
-          "href": "/4-projetos/ativos/prj-nostalgia-musical/",
-          "isInternal": true
-        },
-        {
-          "text": "🎓 Plataforma Cursos",
-          "href": "/4-projetos/ativos/prj-plataforma-cursos/",
-          "isInternal": true
-        },
-        {
-          "text": "⚡ Em Desenvolvimento",
-          "href": "/4-projetos/em-desenvolvimento/",
-          "isInternal": true
-        },
-        {
-          "text": "🤖 WhatsBot Academia",
-          "href": "/4-projetos/em-desenvolvimento/prj-dev-whatsbot-academia/",
-          "isInternal": true
-        },
-        {
-          "text": "🌐 Portfolio Engenharia",
-          "href": "/4-projetos/em-desenvolvimento/prj-web-site-portfolio-engenharia/",
-          "isInternal": true
-        },
-        {
-          "text": "📝 Templates",
-          "href": "/4-projetos/templates/",
-          "isInternal": true
-        },
-        {
-          "text": "📋 Exemplo Intake",
-          "href": "/4-projetos/templates/exemplo_intake_preenchido/",
-          "isInternal": true
-        },
-        {
-          "text": "⚡ Minimalista",
-          "href": "/4-projetos/templates/exemplo_minimalista/",
-          "isInternal": true
-        },
-        {
-          "text": "🎯 Primeira Cartada",
-          "href": "/4-projetos/templates/exemplo_primeira_cartada/",
-          "isInternal": true
-        },
-        {
-          "text": "🏗️ Template Piloto",
-          "href": "/4-projetos/templates/template piloto-exemplo-sistema/",
-          "isInternal": true
-        },
-        {
-          "text": "🏢 CRM Arquitetos",
-          "href": "/4-projetos/templates/template piloto_crm_arquitetos/",
-          "isInternal": true
-        },
-        {
-          "text": "⚙️ Processos",
-          "href": "/5-processos/",
-          "isInternal": true
-        },
-        {
-          "text": "📈 Gestão de Sprints",
-          "href": "/5-processos/sistema_gestao_capacidade_sprints/",
-          "isInternal": true
-        },
-        {
-          "text": "📖 Guia do Sistema",
-          "href": "/5-processos/guia_uso_sistema_capacidade/",
-          "isInternal": true
-        },
-        {
-          "text": "📋 SOPs",
-          "href": "/5-processos/sops/",
-          "isInternal": true
-        },
-        {
-          "text": "⚡ Workflows",
-          "href": "/5-processos/workflows/",
-          "isInternal": true
-        },
-        {
-          "text": "📊 Métricas",
-          "href": "/5-processos/metricas/",
-          "isInternal": true
-        },
-        {
-          "text": "📅 Reuniões",
-          "href": "/6-reunioes/",
-          "isInternal": true
-        },
-        {
-          "text": "🎯 Reunião Executiva",
-          "href": "/6-reunioes/2025-08-31-reuniao-executiva-sistema/",
-          "isInternal": true
-        },
-        {
-          "text": "📊 Análise Pessimista",
-          "href": "/6-reunioes/2025-09-01-reuniao-analise-pessimista-projetos/",
-          "isInternal": true
-        },
-        {
-          "text": "🤖 Criação WhatsBot",
-          "href": "/6-reunioes/2025-09-01-reuniao-criacao-projeto-whatsbot/",
-          "isInternal": true
-        },
-        {
-          "text": "💡 Sistema de Ideias",
-          "href": "/6-reunioes/2025-09-01-reuniao-criacao-sistema-geracao-ideias/",
-          "isInternal": true
-        },
-        {
-          "text": "👔 Conselho",
-          "href": "/6-reunioes/conselho/",
-          "isInternal": true
-        },
-        {
-          "text": "⚡ Operacional",
-          "href": "/6-reunioes/operacional/",
-          "isInternal": true
-        },
-        {
-          "text": "📋 Projetos",
-          "href": "/6-reunioes/projetos/",
-          "isInternal": true
-        },
-        {
-          "text": "🧠 Conhecimento",
-          "href": "/7-conhecimento/",
-          "isInternal": true
-        },
-        {
-          "text": "🤖 Inteligência Artificial",
-          "href": "/7-conhecimento/ia/",
-          "isInternal": true
-        },
-        {
-          "text": "💻 Tecnologia",
-          "href": "/7-conhecimento/tecnologia/",
-          "isInternal": true
-        },
-        {
-          "text": "📈 Negócios",
-          "href": "/7-conhecimento/negocios/",
-          "isInternal": true
-        },
-        {
-          "text": "🏗️ Processos",
-          "href": "/7-conhecimento/processos/",
           "isInternal": true
         },
         {
@@ -16431,28 +18296,11 @@
           "text": "📚 Conhecimento",
           "href": "/7-conhecimento/",
           "isInternal": true
-        },
-        {
-          "text": "Dashboard",
-          "href": "/dashboard-executivo/",
-          "isInternal": true
-        },
-        {
-          "text": "Governança",
-          "href": "/governanca/",
-          "isInternal": true
-        },
-        {
-          "text": "Projetos",
-          "href": "/projetos/",
-          "isInternal": true
         }
       ],
-      "pageMetadata": {
-        "status": "active"
-      },
+      "pageMetadata": {},
       "layoutType": "dashboard",
-      "wordCount": 998
+      "wordCount": 0
     },
     {
       "url": "/MAPA-URLS/",
@@ -17264,7 +19112,7 @@
         },
         {
           "level": 3,
-          "text": "NO TITLE (66)",
+          "text": "NO TITLE (47)",
           "id": null
         },
         {
@@ -17302,7 +19150,7 @@
         },
         {
           "level": 3,
-          "text": "BASE Layout (75 pages)",
+          "text": "BASE Layout (57 pages)",
           "id": null
         },
         {
@@ -17312,7 +19160,7 @@
         },
         {
           "level": 3,
-          "text": "PROJETO Layout (1 pages)",
+          "text": "PROJETO Layout (19 pages)",
           "id": null
         },
         {
@@ -17428,87 +19276,12 @@
   "structure": {},
   "stats": {
     "totalPages": 77,
-    "pagesWithoutTitle": 47,
+    "pagesWithoutTitle": 27,
     "pagesWithoutH1": 5,
     "brokenLinks": 0,
-    "totalLinks": 633
+    "totalLinks": 876
   },
   "issues": [
-    {
-      "type": "no_title",
-      "url": "/0-Dashboard-Executivo/Dashboard-Projetos-Prazo/",
-      "message": "Página sem título definido"
-    },
-    {
-      "type": "no_title",
-      "url": "/0-Dashboard-Executivo/Dashboard-Projetos-Prazo-Visual/",
-      "message": "Página sem título definido"
-    },
-    {
-      "type": "no_title",
-      "url": "/0-Dashboard-Executivo/Dashboard_Capacidade_Equipe/",
-      "message": "Página sem título definido"
-    },
-    {
-      "type": "no_title",
-      "url": "/0-Dashboard-Executivo/Decisoes-Estrategicas/",
-      "message": "Página sem título definido"
-    },
-    {
-      "type": "no_title",
-      "url": "/0-Dashboard-Executivo/Executive-Auto/",
-      "message": "Página sem título definido"
-    },
-    {
-      "type": "no_title",
-      "url": "/0-Dashboard-Executivo/Innovation-Pipeline/",
-      "message": "Página sem título definido"
-    },
-    {
-      "type": "no_title",
-      "url": "/0-Dashboard-Executivo/KPIs-Principais/",
-      "message": "Página sem título definido"
-    },
-    {
-      "type": "no_title",
-      "url": "/0-Dashboard-Executivo/Sistema_Metricas_Avancadas/",
-      "message": "Página sem título definido"
-    },
-    {
-      "type": "no_title",
-      "url": "/1-Governanca/Acordo_Socios_Final/",
-      "message": "Página sem título definido"
-    },
-    {
-      "type": "no_title",
-      "url": "/1-Governanca/Compliance_Log/",
-      "message": "Página sem título definido"
-    },
-    {
-      "type": "no_title",
-      "url": "/1-Governanca/etica_uso_IA/",
-      "message": "Página sem título definido"
-    },
-    {
-      "type": "no_title",
-      "url": "/1-Governanca/FAQ_Compliance/",
-      "message": "Página sem título definido"
-    },
-    {
-      "type": "no_title",
-      "url": "/1-Governanca/Manual_Treinamento_Compliance/",
-      "message": "Página sem título definido"
-    },
-    {
-      "type": "no_title",
-      "url": "/1-Governanca/Playbook_Comercial_v0/",
-      "message": "Página sem título definido"
-    },
-    {
-      "type": "no_title",
-      "url": "/1-Governanca/README/",
-      "message": "Página sem título definido"
-    },
     {
       "type": "no_title",
       "url": "/1000 - REUNIOES/30_08-25 REUNIAO INICIAL/10 - Prompt organização atas de reuniao a partir de transcrição /",
@@ -17552,31 +19325,6 @@
     {
       "type": "no_title",
       "url": "/5-Processos/Sistema_Gestao_Capacidade_Sprints/",
-      "message": "Página sem título definido"
-    },
-    {
-      "type": "no_title",
-      "url": "/6-Reunioes/2025-08-31-Reuniao-Executiva-Sistema/",
-      "message": "Página sem título definido"
-    },
-    {
-      "type": "no_title",
-      "url": "/6-Reunioes/2025-09-01-Reuniao-Analise-Pessimista-Projetos/",
-      "message": "Página sem título definido"
-    },
-    {
-      "type": "no_title",
-      "url": "/6-Reunioes/2025-09-01-Reuniao-Criacao-Projeto-WhatsBot/",
-      "message": "Página sem título definido"
-    },
-    {
-      "type": "no_title",
-      "url": "/6-Reunioes/2025-09-01-Reuniao-Criacao-Sistema-Geracao-Ideias/",
-      "message": "Página sem título definido"
-    },
-    {
-      "type": "no_title",
-      "url": "/6-Reunioes/README/",
       "message": "Página sem título definido"
     },
     {

@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="theme-dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ title or page.fileSlug }} - {{ site.title }}</title>
+  <meta name="description" content="{{ description or site.description }}" />
+  
+  <!-- CSS do tema Obsidian e customizações -->
+  <link rel="stylesheet" href="/styles/main.css" />
+  <link rel="stylesheet" href="/styles/sidebar.css" />
+  <link rel="stylesheet" href="/styles/reuniao.css" />
+  
+  <!-- Favicon e meta tags para PWA -->
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+  <meta name="theme-color" content="#1e1e1e" />
+</head>
+<body class="layout-reuniao">
+  
+  <header class="site-header">
+    <nav class="main-navigation">
+      <div class="nav-brand">
+        <button class="mobile-sidebar-toggle" onclick="toggleSidebar()">
+          <span class="hamburger"></span>
+        </button>
+        <a href="/" class="brand-link">
+          🌱 {{ site.title }}
+        </a>
+      </div>
+      
+      <div class="nav-links">
+        <a href="/dashboard-executivo/">Dashboard</a>
+        <a href="/governanca/">Governança</a>
+        <a href="/projetos/">Projetos</a>
+        <a href="/equipes/">Equipes</a>
+        <a href="/processos/">Processos</a>
+        <a href="/reunioes/" class="active">Reuniões</a>
+        <a href="/conhecimento/">Conhecimento</a>
+      </div>
+      
+      <div class="nav-tools">
+        <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
+        <button class="search-toggle" onclick="toggleSearch()">🔍</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Sidebar Navigation -->
+  <nav class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <button class="sidebar-toggle" onclick="toggleSidebar()">
+        <span class="hamburger"></span>
+      </button>
+      <div class="sidebar-brand">
+        <a href="/" class="brand-link">🌱 Digital Garden</a>
+      </div>
+    </div>
+    
+    <div class="sidebar-content">
+      <div class="sidebar-search">
+        <input type="search" placeholder="Buscar páginas..." class="search-input" id="sidebar-search">
+      </div>
+      
+      <div class="sidebar-tree">
+        <!-- Navegação será carregada via JavaScript -->
+        <div id="navigation-tree"></div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <div class="content-wrapper">
+      
+      <!-- Breadcrumbs -->
+      {% if page.url != '/' and eleventyNavigation %}
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">🏠 Home</a></li>
+          <li><a href="/reunioes/">📅 Reuniões</a></li>
+          {% set breadcrumbNav = collections.all | eleventyNavigationBreadcrumb(eleventyNavigation.key) %}
+          {% for crumb in breadcrumbNav %}
+            <li>
+              {% if loop.last %}
+                <span aria-current="page">{{ crumb.title }}</span>
+              {% else %}
+                <a href="{{ crumb.url }}">{{ crumb.title }}</a>
+              {% endif %}
+            </li>
+          {% endfor %}
+        </ol>
+      </nav>
+      {% endif %}
+
+      <!-- Meeting Header -->
+      <article class="meeting-page">
+        <header class="meeting-header">
+          {% if title %}
+          <h1 class="meeting-title">{{ title }}</h1>
+          {% endif %}
+          
+          <!-- Meeting Status Bar -->
+          <div class="meeting-status-bar">
+            {% if status %}
+            <div class="status-badge status-{{ status | slugify }}">
+              {% if status == "scheduled" %}📅 Agendada{% endif %}
+              {% if status == "in-progress" %}⏳ Em Andamento{% endif %}
+              {% if status == "completed" %}✅ Concluída{% endif %}
+              {% if status == "cancelled" %}❌ Cancelada{% endif %}
+              {% if status == "postponed" %}⏸️ Adiada{% endif %}
+            </div>
+            {% endif %}
+            
+            {% if category %}
+            <div class="category-badge category-{{ category | slugify }}">
+              {% if category == "executiva" %}👔 Executiva{% endif %}
+              {% if category == "tecnica" %}🔧 Técnica{% endif %}
+              {% if category == "comercial" %}💼 Comercial{% endif %}
+              {% if category == "planejamento" %}📋 Planejamento{% endif %}
+              {% if category == "revisao" %}🔍 Revisão{% endif %}
+            </div>
+            {% endif %}
+            
+            {% if priority %}
+            <div class="priority-badge priority-{{ priority | slugify }}">
+              {% if priority == "high" %}🔴 Alta{% endif %}
+              {% if priority == "medium" %}🟡 Média{% endif %}
+              {% if priority == "low" %}🟢 Baixa{% endif %}
+              {% if priority == "urgent" %}⚫ Urgente{% endif %}
+            </div>
+            {% endif %}
+          </div>
+        </header>
+
+        <!-- Meeting Info Cards -->
+        <div class="meeting-info-grid">
+          
+          <!-- Date & Time Card -->
+          {% if meeting_date or duration %}
+          <div class="info-card datetime-card">
+            <div class="card-icon">📅</div>
+            <div class="card-content">
+              <h3>Data & Horário</h3>
+              {% if meeting_date %}
+              <div class="info-item">
+                <span class="info-label">Data:</span>
+                <span class="info-value">{{ meeting_date | date("DD/MM/YYYY") }}</span>
+              </div>
+              {% endif %}
+              {% if duration %}
+              <div class="info-item">
+                <span class="info-label">Duração:</span>
+                <span class="info-value">{{ duration }}</span>
+              </div>
+              {% endif %}
+              {% if location %}
+              <div class="info-item">
+                <span class="info-label">Local:</span>
+                <span class="info-value">{{ location }}</span>
+              </div>
+              {% endif %}
+            </div>
+          </div>
+          {% endif %}
+
+          <!-- Participants Card -->
+          {% if participants and participants.length > 0 %}
+          <div class="info-card participants-card">
+            <div class="card-icon">👥</div>
+            <div class="card-content">
+              <h3>Participantes ({{ participants.length }})</h3>
+              <div class="participants-list">
+                {% for participant in participants %}
+                <div class="participant-badge">
+                  <span class="participant-avatar">{{ participant | first }}</span>
+                  <span class="participant-name">{{ participant | replace("[[", "") | replace("]]", "") }}</span>
+                </div>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+          {% endif %}
+
+          <!-- Meeting Details Card -->
+          <div class="info-card details-card">
+            <div class="card-icon">📋</div>
+            <div class="card-content">
+              <h3>Detalhes</h3>
+              {% if meeting_id %}
+              <div class="info-item">
+                <span class="info-label">ID:</span>
+                <span class="info-value">{{ meeting_id }}</span>
+              </div>
+              {% endif %}
+              {% if owner %}
+              <div class="info-item">
+                <span class="info-label">Facilitador:</span>
+                <span class="info-value">{{ owner | replace("[[", "") | replace("]]", "") }}</span>
+              </div>
+              {% endif %}
+              {% if follow_up_required %}
+              <div class="info-item">
+                <span class="info-label">Follow-up:</span>
+                <span class="info-value">{% if follow_up_required %}✅ Necessário{% else %}❌ Não{% endif %}</span>
+              </div>
+              {% endif %}
+            </div>
+          </div>
+
+          <!-- Status Card -->
+          {% if created or modified %}
+          <div class="info-card status-card">
+            <div class="card-icon">⏱️</div>
+            <div class="card-content">
+              <h3>Timeline</h3>
+              {% if created %}
+              <div class="info-item">
+                <span class="info-label">Criado:</span>
+                <span class="info-value">{{ created | date("DD/MM/YYYY") }}</span>
+              </div>
+              {% endif %}
+              {% if modified %}
+              <div class="info-item">
+                <span class="info-label">Modificado:</span>
+                <span class="info-value">{{ modified | date("DD/MM/YYYY") }}</span>
+              </div>
+              {% endif %}
+              {% if updated %}
+              <div class="info-item">
+                <span class="info-label">Atualizado:</span>
+                <span class="info-value">{{ updated | date("DD/MM/YYYY HH:mm") }}</span>
+              </div>
+              {% endif %}
+            </div>
+          </div>
+          {% endif %}
+
+        </div>
+
+        <!-- Meeting Content -->
+        <div class="meeting-content">
+          {{ content | safe }}
+        </div>
+
+        <!-- Action Items Section -->
+        {% if follow_up_required %}
+        <div class="action-items-section">
+          <h2>📋 Próximos Passos</h2>
+          <div class="action-items-notice">
+            <div class="notice-icon">⚠️</div>
+            <div class="notice-content">
+              <strong>Follow-up necessário!</strong>
+              <p>Esta reunião requer acompanhamento. Verifique as ações definidas no conteúdo acima.</p>
+            </div>
+          </div>
+        </div>
+        {% endif %}
+
+        <!-- Related Meetings -->
+        <div class="related-meetings">
+          <h3>🔗 Reuniões Relacionadas</h3>
+          <div class="related-links">
+            {% set relatedMeetings = collections.all | filterByTags("meeting") | limit(5) %}
+            {% for meeting in relatedMeetings %}
+              {% if meeting.url != page.url %}
+              <a href="{{ meeting.url }}" class="related-link">
+                <div class="related-icon">📅</div>
+                <div class="related-info">
+                  <div class="related-title">{{ meeting.data.title or meeting.fileSlug }}</div>
+                  <div class="related-date">{{ meeting.data.meeting_date | date("DD/MM/YYYY") }}</div>
+                </div>
+              </a>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+
+      </article>
+    </div>
+  </main>
+
+  <!-- JavaScript -->
+  <script src="/scripts/main.js"></script>
+  <script>
+    // Meeting-specific JavaScript
+    document.addEventListener('DOMContentLoaded', function() {
+      // Highlight meeting navigation
+      const meetingNav = document.querySelector('.nav-links a[href="/reunioes/"]');
+      if (meetingNav) {
+        meetingNav.classList.add('active');
+      }
+      
+      // Animate info cards
+      const infoCards = document.querySelectorAll('.info-card');
+      infoCards.forEach((card, index) => {
+        card.style.animationDelay = `${index * 0.1}s`;
+        card.classList.add('animate-in');
+      });
+      
+      // Auto-generate participant avatars
+      const participantBadges = document.querySelectorAll('.participant-badge');
+      participantBadges.forEach(badge => {
+        const avatar = badge.querySelector('.participant-avatar');
+        const name = badge.querySelector('.participant-name').textContent;
+        avatar.textContent = name.charAt(0).toUpperCase();
+      });
+    });
+  </script>
+</body>
+</html>

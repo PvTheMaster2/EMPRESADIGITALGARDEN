@@ -1,47 +1,47 @@
 ---
 created: 2025-09-01T19:58
-updated: 2025-09-01T20:03
+updated: 2025-09-01T20:13
 ---
 # 🌳 Site Structure Outline
 
-**Generated**: 2025-09-01T23:03:09.589Z
+**Generated**: 2025-09-01T23:13:35.871Z
 **Total Pages**: 77
 
 ## 📁 0-DASHBOARD-EXECUTIVO
 
-    - **/0-Dashboard-Executivo/Dashboard-Projetos-Prazo/** - "" (base)
-      - H1: 📊 DASHBOARD DE PROJETOS POR PRAZO
-    - **/0-Dashboard-Executivo/Dashboard-Projetos-Prazo-Visual/** - "" (base)
-      - H1: 🏢 <%= tp.file.title %>
-    - **/0-Dashboard-Executivo/Dashboard_Capacidade_Equipe/** - "" (base)
-      - H1: 📊 DASHBOARD DE CAPACIDADE DA EQUIPE
-    - **/0-Dashboard-Executivo/Decisoes-Estrategicas/** - "" (base)
-      - H1: 🎯 DECISÕES ESTRATÉGICAS
-    - **/0-Dashboard-Executivo/Executive-Auto/** - "" (base)
-      - H1: 📊 DASHBOARD EXECUTIVO AUTOMÁTICO
-    - **/0-Dashboard-Executivo/Innovation-Pipeline/** - "" (base)
-      - H1: 🚀 INNOVATION PIPELINE - MULTISÓCIOS
-    - **/0-Dashboard-Executivo/KPIs-Principais/** - "" (base)
-      - H1: 📊 KPIs PRINCIPAIS - MULTISÓCIOS
-    - **/0-Dashboard-Executivo/Sistema_Metricas_Avancadas/** - "" (base)
-      - H1: 📊 SISTEMA DE MÉTRICAS AVANÇADAS
+    - **/0-Dashboard-Executivo/Dashboard-Projetos-Prazo/** - "Dashboard Projetos Prazo - Digital Garden Empresarial" (base)
+      - H1: Dashboard Projetos Prazo
+    - **/0-Dashboard-Executivo/Dashboard-Projetos-Prazo-Visual/** - "Dashboard Projetos Prazo Visual - Digital Garden Empresarial" (base)
+      - H1: Dashboard Projetos Prazo Visual
+    - **/0-Dashboard-Executivo/Dashboard_Capacidade_Equipe/** - "Dashboard Capacidade Equipe - Digital Garden Empresarial" (base)
+      - H1: Dashboard Capacidade Equipe
+    - **/0-Dashboard-Executivo/Decisoes-Estrategicas/** - "Decisões Estratégicas - Digital Garden Empresarial" (base)
+      - H1: Decisões Estratégicas
+    - **/0-Dashboard-Executivo/Executive-Auto/** - "Executive Auto - Digital Garden Empresarial" (base)
+      - H1: Executive Auto
+    - **/0-Dashboard-Executivo/Innovation-Pipeline/** - "Innovation Pipeline - Digital Garden Empresarial" (base)
+      - H1: Innovation Pipeline
+    - **/0-Dashboard-Executivo/KPIs-Principais/** - "KPIs Principais - Digital Garden Empresarial" (base)
+      - H1: KPIs Principais
+    - **/0-Dashboard-Executivo/Sistema_Metricas_Avancadas/** - "Sistema Metricas Avancadas - Digital Garden Empresarial" (base)
+      - H1: Sistema Metricas Avancadas
 
 ## 📁 1-GOVERNANCA
 
-    - **/1-Governanca/Acordo_Socios_Final/** - "" (base)
-      - H1: 🤝 ACORDO SOCIETÁRIO FINAL
-    - **/1-Governanca/Compliance_Log/** - "" (base)
-      - H1: 📋 LOG DE COMPLIANCE - 01/09/2025
-    - **/1-Governanca/etica_uso_IA/** - "" (base)
-      - H1: 🧠 POLÍTICA DE ÉTICA E USO DE INTELIGÊNCIA ARTIFICIAL
-    - **/1-Governanca/FAQ_Compliance/** - "" (base)
-      - H1: ❓ FAQ - COMPLIANCE E SISTEMA
-    - **/1-Governanca/Manual_Treinamento_Compliance/** - "" (base)
-      - H1: 📚 MANUAL DE TREINAMENTO - COMPLIANCE E SISTEMA
-    - **/1-Governanca/Playbook_Comercial_v0/** - "" (base)
-      - H1: 💼 PLAYBOOK COMERCIAL v0
-    - **/1-Governanca/README/** - "" (base)
-      - H1: 🏛️ GOVERNANÇA EMPRESARIAL
+    - **/1-Governanca/Acordo_Socios_Final/** - "Acordo De Socios Final - Digital Garden Empresarial" (governanca)
+      - H1: Acordo De Socios Final
+    - **/1-Governanca/Compliance_Log/** - "Log de Compliance - Digital Garden Empresarial" (governanca)
+      - H1: Log de Compliance
+    - **/1-Governanca/etica_uso_IA/** - "Etica Uso IA - Digital Garden Empresarial" (governanca)
+      - H1: Etica Uso IA
+    - **/1-Governanca/FAQ_Compliance/** - "FAQ   Compliance - Digital Garden Empresarial" (governanca)
+      - H1: FAQ   Compliance
+    - **/1-Governanca/Manual_Treinamento_Compliance/** - "Manual De Treinamento Compliance - Digital Garden Empresarial" (governanca)
+      - H1: Manual De Treinamento Compliance
+    - **/1-Governanca/Playbook_Comercial_v0/** - "Playbook Comercial V0 - Digital Garden Empresarial" (governanca)
+      - H1: Playbook Comercial V0
+    - **/1-Governanca/README/** - "Governança Empresarial - Digital Garden Empresarial" (governanca)
+      - H1: Governança Empresarial
 
 ## 📁 1000 - REUNIOES
 
@@ -128,16 +128,16 @@ updated: 2025-09-01T20:03
 
 ## 📁 6-REUNIOES
 
-    - **/6-Reunioes/2025-08-31-Reuniao-Executiva-Sistema/** - "" (base)
-      - H1: Reunião Executiva - Sistema Empresarial
-    - **/6-Reunioes/2025-09-01-Reuniao-Analise-Pessimista-Projetos/** - "" (base)
-      - H1: 🔍 Reunião - Análise Pessimista dos Projetos
-    - **/6-Reunioes/2025-09-01-Reuniao-Criacao-Projeto-WhatsBot/** - "" (base)
-      - H1: 📋 Reunião - Criação Projeto WhatsBot Academia Funcional
-    - **/6-Reunioes/2025-09-01-Reuniao-Criacao-Sistema-Geracao-Ideias/** - "" (base)
-      - H1: 🚀 Reunião - Criação Sistema de Geração de Ideias
-    - **/6-Reunioes/README/** - "" (base)
-      - H1: 📅 REUNIÕES E ATAS
+    - **/6-Reunioes/2025-08-31-Reuniao-Executiva-Sistema/** - "ReuniãO Executiva Sistema - Digital Garden Empresarial" (reuniao)
+      - H1: ReuniãO Executiva Sistema
+    - **/6-Reunioes/2025-09-01-Reuniao-Analise-Pessimista-Projetos/** - "ReuniãO Analise Pessimista Projetos - Digital Garden Empresarial" (reuniao)
+      - H1: ReuniãO Analise Pessimista Projetos
+    - **/6-Reunioes/2025-09-01-Reuniao-Criacao-Projeto-WhatsBot/** - "ReuniãO Criacao Projeto WhatsBot - Digital Garden Empresarial" (reuniao)
+      - H1: ReuniãO Criacao Projeto WhatsBot
+    - **/6-Reunioes/2025-09-01-Reuniao-Criacao-Sistema-Geracao-Ideias/** - "ReuniãO Criacao Sistema Geracao Ideias - Digital Garden Empresarial" (reuniao)
+      - H1: ReuniãO Criacao Sistema Geracao Ideias
+    - **/6-Reunioes/README/** - "Reuniões e Atas - Digital Garden Empresarial" (reuniao)
+      - H1: Reuniões e Atas
 
 ## 📁 7-CONHECIMENTO
 
@@ -194,7 +194,6 @@ updated: 2025-09-01T20:03
 
 - **/** - "Dashboard Executivo - Home - Digital Garden Empresarial" (dashboard)
   - H1: Dashboard Executivo - Home
-  - Status: active
 
 ## 📁 SOBRE-SISTEMA
 
