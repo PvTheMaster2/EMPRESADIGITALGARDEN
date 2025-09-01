@@ -1,7 +1,7 @@
 ---
 title: Sistema de Gestão de Capacidade e Sprints
 created: 2025-01-20T10:00
-updated: 2025-09-01T20:31
+updated: 2025-09-01T20:33
 type: system
 ---
 # 📊 SISTEMA DE GESTÃO DE CAPACIDADE E SPRINTS

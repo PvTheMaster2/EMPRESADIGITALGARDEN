@@ -1,7 +1,7 @@
 ---
 title: Guia de Uso - Sistema de Capacidade
 created: 2025-01-20T10:00
-updated: 2025-09-01T20:31
+updated: 2025-09-01T20:33
 type: guide
 ---
 # 🚀 GUIA DE USO RÁPIDO - SISTEMA DE CAPACIDADE
