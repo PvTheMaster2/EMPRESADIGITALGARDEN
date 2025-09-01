@@ -1,0 +1,531 @@
+{
+  "main": {
+    "id": "c7d30e9b97fec99e",
+    "type": "split",
+    "children": [
+      {
+        "id": "b45bb5c28bbbbff3",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "eacfb2a7981353a9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "0-Dashboard-Executivo/Dashboard-Projetos-Prazo-Visual.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Dashboard-Projetos-Prazo-Visual"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "9ad8475d5dedca88",
+    "type": "split",
+    "children": [
+      {
+        "id": "ac9a35054d1a2913",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3e6d224aebbb97dc",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": true
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "373c30763f1e971a",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "tag:#latency",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "3b8d98a0ed392a76",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 381.50418853759766
+  },
+  "right": {
+    "id": "24023d18c86abac7",
+    "type": "split",
+    "children": [
+      {
+        "id": "b4aef97fd367a375",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b1fa14afaa4bf854",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "0-Dashboard-Executivo/Sistema_Metricas_Avancadas.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Sistema_Metricas_Avancadas"
+            }
+          },
+          {
+            "id": "22dcdd2207748ebf",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "0-Dashboard-Executivo/Sistema_Metricas_Avancadas.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": false
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Sistema_Metricas_Avancadas"
+            }
+          },
+          {
+            "id": "b9c40afd727e26f1",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "00 - INBOX/02 - PDF/A Ciência do Yoga  ( I .K Taimni ).pdf",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of A Ciência do Yoga  ( I .K Taimni )"
+            }
+          },
+          {
+            "id": "ac9eea412d912b4f",
+            "type": "leaf",
+            "state": {
+              "type": "semantic-search-tab",
+              "state": {},
+              "icon": "lucide-ghost",
+              "title": "semantic-search-tab"
+            }
+          },
+          {
+            "id": "b5321f493253d01f",
+            "type": "leaf",
+            "state": {
+              "type": "copilot-tab",
+              "state": {},
+              "icon": "lucide-ghost",
+              "title": "copilot-tab"
+            }
+          },
+          {
+            "id": "c7f4c79be55b4383",
+            "type": "leaf",
+            "state": {
+              "type": "smart-connections-view",
+              "state": {},
+              "icon": "lucide-ghost",
+              "title": "smart-connections-view"
+            }
+          },
+          {
+            "id": "b0faf2c5b8efcde3",
+            "type": "leaf",
+            "state": {
+              "type": "semantic-search-tab",
+              "state": {},
+              "icon": "lucide-ghost",
+              "title": "semantic-search-tab"
+            }
+          },
+          {
+            "id": "5fea98c379d4c823",
+            "type": "leaf",
+            "state": {
+              "type": "copilot-tab",
+              "state": {},
+              "icon": "lucide-ghost",
+              "title": "copilot-tab"
+            }
+          },
+          {
+            "id": "70f6e70b3dd1acf9",
+            "type": "leaf",
+            "state": {
+              "type": "copilot-chat-view",
+              "state": {},
+              "icon": "lucide-ghost",
+              "title": "copilot-chat-view"
+            }
+          },
+          {
+            "id": "2b42502ab90e0af9",
+            "type": "leaf",
+            "state": {
+              "type": "smart-chat-view",
+              "state": {},
+              "icon": "lucide-ghost",
+              "title": "smart-chat-view"
+            }
+          },
+          {
+            "id": "cb9a4f7219db4ab4",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "23b0fedb64247dd2",
+            "type": "leaf",
+            "state": {
+              "type": "semantic-search-tab",
+              "state": {},
+              "icon": "lucide-ghost",
+              "title": "semantic-search-tab"
+            }
+          },
+          {
+            "id": "099a47dd5248dc60",
+            "type": "leaf",
+            "state": {
+              "type": "copilot-tab",
+              "state": {},
+              "icon": "lucide-ghost",
+              "title": "copilot-tab"
+            }
+          },
+          {
+            "id": "e9f506667395fad3",
+            "type": "leaf",
+            "state": {
+              "type": "semantic-search-tab",
+              "state": {},
+              "icon": "lucide-ghost",
+              "title": "semantic-search-tab"
+            }
+          },
+          {
+            "id": "913475aef3de3e09",
+            "type": "leaf",
+            "state": {
+              "type": "copilot-tab",
+              "state": {},
+              "icon": "lucide-ghost",
+              "title": "copilot-tab"
+            }
+          },
+          {
+            "id": "fe976ef56b5207e7",
+            "type": "leaf",
+            "state": {
+              "type": "semantic-search-tab",
+              "state": {},
+              "icon": "lucide-ghost",
+              "title": "semantic-search-tab"
+            }
+          },
+          {
+            "id": "f1547c463ca1858d",
+            "type": "leaf",
+            "state": {
+              "type": "copilot-tab",
+              "state": {},
+              "icon": "lucide-ghost",
+              "title": "copilot-tab"
+            }
+          },
+          {
+            "id": "8069f5019c110488",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {},
+              "icon": "lucide-ghost",
+              "title": "calendar"
+            }
+          },
+          {
+            "id": "aabaf1c0a335a6fe",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          },
+          {
+            "id": "74031ae947793022",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          },
+          {
+            "id": "8deb27aacd659433",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          },
+          {
+            "id": "a725c98c946a8054",
+            "type": "leaf",
+            "state": {
+              "type": "semantic-search-tab",
+              "state": {},
+              "icon": "lucide-ghost",
+              "title": "semantic-search-tab"
+            }
+          },
+          {
+            "id": "eb0a0274c3797020",
+            "type": "leaf",
+            "state": {
+              "type": "copilot-tab",
+              "state": {},
+              "icon": "lucide-ghost",
+              "title": "copilot-tab"
+            }
+          },
+          {
+            "id": "9097e7bbbfe69d26",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          },
+          {
+            "id": "798192b8b9b157b8",
+            "type": "leaf",
+            "state": {
+              "type": "BC-matrix",
+              "state": {},
+              "icon": "lucide-ghost",
+              "title": "BC-matrix"
+            }
+          },
+          {
+            "id": "6880fb4278380581",
+            "type": "leaf",
+            "state": {
+              "type": "BC-tree",
+              "state": {},
+              "icon": "lucide-ghost",
+              "title": "BC-tree"
+            }
+          },
+          {
+            "id": "fb29f3586917bc41",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          },
+          {
+            "id": "8667f56ac0c66804",
+            "type": "leaf",
+            "state": {
+              "type": "semantic-search-tab",
+              "state": {},
+              "icon": "lucide-ghost",
+              "title": "semantic-search-tab"
+            }
+          },
+          {
+            "id": "e44e74958696eb70",
+            "type": "leaf",
+            "state": {
+              "type": "copilot-tab",
+              "state": {},
+              "icon": "lucide-ghost",
+              "title": "copilot-tab"
+            }
+          },
+          {
+            "id": "2eaf26fa1ce631c0",
+            "type": "leaf",
+            "state": {
+              "type": "graph-analysis",
+              "state": {},
+              "icon": "lucide-ghost",
+              "title": "graph-analysis"
+            }
+          },
+          {
+            "id": "7bdb9d4675d10748",
+            "type": "leaf",
+            "state": {
+              "type": "semantic-search-tab",
+              "state": {},
+              "icon": "search",
+              "title": "Semantic Search"
+            }
+          },
+          {
+            "id": "6e920dad67b0d62c",
+            "type": "leaf",
+            "state": {
+              "type": "copilot-tab",
+              "state": {},
+              "icon": "star",
+              "title": "AI"
+            }
+          },
+          {
+            "id": "4a1333008d0e1dda",
+            "type": "leaf",
+            "state": {
+              "type": "graph-analysis",
+              "state": {},
+              "icon": "GA-ICON",
+              "title": "Graph Analysis"
+            }
+          }
+        ],
+        "currentTab": 32
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200.5,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "bases:Create new base": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "obsidian-book-search-plugin:Create new book note": false,
+      "obsidian-projects:Open projects": false,
+      "copilot:Open Copilot Chat": false,
+      "smart-connections:Open: View Smart Connections": false,
+      "smart-connections:Open: Smart Chat Conversation": false,
+      "templater-obsidian:Templater": false,
+      "digitalgarden:Digital Garden Publication Center": false,
+      "obsidian-kanban:Create new board": false,
+      "obsidian-excalidraw-plugin:New drawing": false
+    }
+  },
+  "active": "4a1333008d0e1dda",
+  "lastOpenFiles": [
+    "DIGITAL-GARDEN-EMPRESA",
+    "0-Dashboard-Executivo/Sistema_Metricas_Avancadas.md",
+    "0-Dashboard-Executivo/Home-Executivo.md",
+    "0-Dashboard-Executivo/Innovation-Pipeline.md",
+    "0-Dashboard-Executivo/Dashboard-Projetos-Prazo-Visual.md",
+    "99 - RESOURCES/99 - TEMPLATE/Dashboard-Projetos-Prazo-Visual-Template.md",
+    "0-Dashboard-Executivo/Executive-Auto.md",
+    "99 - RESOURCES/99 - TEMPLATE/Dashboard-Visual-Template-Fixed.md",
+    "99 - RESOURCES/Dashboard-Visual-Template-Fixed.md",
+    "99 - RESOURCES/99 - TEMPLATE/image.png",
+    "0-Dashboard-Executivo/Dashboard-Projetos-Prazo.md",
+    "0-Dashboard-Executivo/Dashboard_Capacidade_Equipe.md",
+    "0-Dashboard-Executivo/KPIs-Principais.md",
+    "99 - RESOURCES/99 - TEMPLATE/Dashboard-Visual-Template.md",
+    "4-Projetos/Ativos/PRJ-Plataforma-Cursos.md",
+    "PLANO_PADRONIZACAO_TEMPLATES.md",
+    "1-Governanca/Manual_Treinamento_Compliance.md",
+    "1-Governanca/FAQ_Compliance.md",
+    "1-Governanca/etica_uso_IA.md",
+    "1-Governanca/Compliance_Log.md",
+    "1-Governanca/Acordo_Socios_Final.md",
+    "4-Projetos/Templates/TEMPLATE Piloto_CRM_Arquitetos.md",
+    "Pedro Vitor.md",
+    "4-Projetos/Templates/README.md",
+    "4-Projetos/Templates/TEMPLATE Piloto-Exemplo-Sistema.md",
+    "4-Projetos/Templates/Exemplo_Primeira_Cartada.md",
+    "4-Projetos/Templates/Exemplo_Minimalista.md",
+    "4-Projetos/Templates",
+    "combine_project.py",
+    "4-Projetos/Em-Desenvolvimento",
+    "env.example",
+    "requirements.txt",
+    "cursor_settings_seguro.json",
+    "scripts/update_dashboard.py",
+    "scripts",
+    "docs/CANVAS SISTEMA IDEIA.canvas",
+    "Nova pasta",
+    "docs",
+    "teste.canvas",
+    "CANVAS SISTEMA IDEIA.canvas",
+    "99 - RESOURCES/Imagens/Pasted image 20250424000929.png",
+    "99 - RESOURCES/Imagens/Pasted image 20250424000902.png",
+    "99 - RESOURCES/Imagens/Pasted image 20250424000810.png",
+    "99 - RESOURCES/Imagens/Pasted image 20250424000643.png",
+    "99 - RESOURCES/Imagens/Pasted image 20250424000551.png",
+    "99 - RESOURCES/Imagens/Pasted image 20250424000515.png",
+    "99 - RESOURCES/Imagens/Pasted image 20250424000449.png",
+    "99 - RESOURCES/Imagens/Pasted image 20250424000420.png",
+    "99 - RESOURCES/Imagens/Pasted image 20250424000327.png",
+    "00 - INBOX/00 - ANTIGOS/Untitled.canvas",
+    "Untitled.canvas",
+    "Untitled 2.canvas",
+    "Untitled 1.canvas",
+    "utils/00 - INBOX/00 - ANTIGOS/Untitled.canvas",
+    "00 - ANTIGOS/Untitled.canvas",
+    "Starter-Kit/5_Structure/Canvases/About - 1_Fleeting Notes.canvas"
+  ]
+}
