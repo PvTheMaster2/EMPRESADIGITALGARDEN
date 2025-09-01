@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "4-Projetos/Em-Desenvolvimento/PRJ-Web-Site-Portfolio-Engenharia.md",
+                "file": "0-Dashboard-Executivo/Dashboard-Projetos-Prazo-Visual.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "PRJ-Web-Site-Portfolio-Engenharia"
+              "title": "Dashboard-Projetos-Prazo-Visual"
             }
           }
         ]
@@ -471,22 +471,23 @@
   },
   "active": "eacfb2a7981353a9",
   "lastOpenFiles": [
+    "dist/index.html",
+    "dist/scripts/theme.js",
+    "dist/scripts/search.js",
+    "dist/scripts/main.js",
+    "dist/scripts",
+    "dist",
+    "4-Projetos/Em-Desenvolvimento/PRJ-Web-Site-Portfolio-Engenharia.md",
+    "node_modules/@emnapi/runtime/LICENSE",
+    "node_modules/@img/sharp-darwin-arm64",
+    "node_modules/@emnapi/runtime",
     "4-Projetos/Em-Desenvolvimento/PRJ-Dev-WhatsBot-Academia.md",
     "4-Projetos/Ativos/PRJ-Vault-Empresarial.md",
     "4-Projetos/Ativos/PRJ-Plataforma-Cursos.md",
     "4-Projetos/Ativos/PRJ-App-Desenvolvimento-Cognitivo.md",
     "4-Projetos/Ativos/PRJ-AERALYN.md",
     "0-Dashboard-Executivo/Dashboard-Projetos-Prazo-Visual.md",
-    "dist/index.html",
-    "dist/scripts/search.js",
-    "dist/scripts/main.js",
-    "dist/scripts/theme.js",
-    "dist/scripts",
-    "dist",
     "node_modules/dotenv/LICENSE",
-    "node_modules/@emnapi/runtime/dist/emnapi.mjs",
-    "node_modules/@emnapi/runtime/dist/emnapi.min.mjs",
-    "node_modules/@emnapi/runtime/dist/emnapi.min.js",
     "node_modules/@emnapi/runtime/README.md",
     "node_modules/juice/node_modules/css-select/README.md",
     "node_modules/math-intrinsics/README.md",
@@ -505,8 +506,6 @@
     "node_modules/markdown-it-task-checkbox/README.md",
     "node_modules/flatted/README.md",
     "node_modules/@11ty/eleventy-plugin-rss/README.md",
-    "node_modules/parse5-htmlparser2-tree-adapter/README.md",
-    "node_modules/whatwg-mimetype/README.md",
     "node_modules/eleventy-plugin-gen-favicons/test/img/testing.png",
     "node_modules/eleventy-plugin-gen-favicons/test/img/notsquare.png",
     "node_modules/eleventy-plugin-gen-favicons/test/img/nick.svg",
