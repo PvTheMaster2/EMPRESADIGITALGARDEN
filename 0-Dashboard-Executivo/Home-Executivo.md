@@ -1,7 +1,7 @@
 ---
 title: Dashboard Executivo - Home
 created: 2025-09-01
-updated: 2025-09-01T16:26
+updated: 2025-09-01T16:29
 type: dashboard
 status: active
 priority: high
