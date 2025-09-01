@@ -1,7 +1,7 @@
 ---
 title: Dashboard Executivo - Home
 created: 2025-09-01
-updated: 2025-09-01T15:27
+updated: 2025-09-01T16:26
 type: dashboard
 status: active
 priority: high
@@ -326,22 +326,22 @@ SORT length(rows) DESC
 ## 🔗 **LINKS RÁPIDOS**
 
 ### **Dashboards Específicos**
-- [[0-Dashboard-Executivo/Innovation-Pipeline|🚀 Innovation Pipeline]]
-- [[0-Dashboard-Executivo/KPIs-Principais|📊 KPIs Principais]]
-- [[0-Dashboard-Executivo/Decisoes-Estrategicas|🎯 Decisões Estratégicas]]
-- [[0-Dashboard-Executivo/Dashboard-Projetos-Prazo|📅 Projetos por Prazo]]
-- [[0-Dashboard-Executivo/Dashboard-Projetos-Prazo-Visual|🎨 Projetos por Prazo (Visual)]]
+- [🚀 Innovation Pipeline](/0-dashboard-executivo/innovation-pipeline/)
+- [📊 KPIs Principais](/0-dashboard-executivo/kpis-principais/)
+- [🎯 Decisões Estratégicas](/0-dashboard-executivo/decisoes-estrategicas/)
+- [📅 Projetos por Prazo](/0-dashboard-executivo/dashboard-projetos-prazo/)
+- [🎨 Projetos por Prazo (Visual)](/0-dashboard-executivo/dashboard-projetos-prazo-visual/)
 
 ### **Áreas Principais**
-- [[1-Governanca/|🏛️ Governança]]
-- [[4-Projetos/|📋 Projetos]]
-- [[2-Equipes/|👥 Equipes]]
-- [[3-Mercado/|🌍 Mercado]]
+- [🏛️ Governança](/1-governanca/)
+- [📋 Projetos](/4-projetos/)
+- [👥 Equipes](/2-equipes/)
+- [🌍 Mercado](/3-mercado/)
 
 ### **Processos**
-- [[5-Processos/|⚙️ Processos]]
-- [[6-Reunioes/|📅 Reuniões]]
-- [[7-Conhecimento/|📚 Conhecimento]]
+- [⚙️ Processos](/5-processos/)
+- [📅 Reuniões](/6-reunioes/)
+- [📚 Conhecimento](/7-conhecimento/)
 
 ---
 

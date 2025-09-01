@@ -232,7 +232,7 @@
     "z_Templates/Projetos/Template_Piloto.md": "d33352f21367a29da0aaf641a82b7cb1e7e13c600c82b61fc67cc8149cf8345f",
     "z_Templates/Reunioes/Template_Reuniao.md": "ac5163dfdbd2ede5d4db83829fa3cc0a656ada3800784980faa247a6ff3795c2",
     "z_Templates/Empresariais/Template_Acordo_Socios.md": "354735571f2145d6d8e26483a9e53cf1e886c059778f4e4677b5f7bec5e33e5c",
-    "0-Dashboard-Executivo/Home-Executivo.md": "a727c2bae7c3ce2357e183fa3e1410f315311746b400e93cc2a8f51f70031b46",
+    "0-Dashboard-Executivo/Home-Executivo.md": "a596adfd797a8c5a2e4d695e461f5b9d14abbd3d71c61234348acfc584978b56",
     "0-Dashboard-Executivo/KPIs-Principais.md": "13e1591c7dba8e39ebc8430c99baf88e009313cbeb50d3b55ba79b51694eafb0",
     "10 - PERMANENT/01 - PERMANENT NOTES/PLANO CRIAÇÃO/README.md": "a5ab002a5d35cf565c042c925968986dd91f49d6d889fefeae0ce7ce4b10f413",
     "z_Templates/Empresariais/Template_Politica_Financeira.md": "bd397471e11a6dd0aa2b1002abbbfc047238a1a3658a627e6468f03373d0697d",
@@ -651,7 +651,7 @@
     "node_modules/@sindresorhus/slugify/readme.md": "34960149a0350c317b52c5bad687d2b01d3095874f157568e7ecb7af323b6074",
     "node_modules/markdown-it-mathjax3/README.md": "ea7d65ef58d173b6d9e66e41181bcfb47a47cea8940a7a069f5d79c6801fbc28",
     "node_modules/markdown-it-plantuml/README.md": "58a522a501daf8f30817692d08f379b25073a635cfac9a91063e2c6f458b723e",
-    "0-Dashboard-Executivo/index.md": "0ea7d76122f25d2cc11d72418fb2c8b643118446b4dcf1f193581878f1ef7ec9",
+    "0-Dashboard-Executivo/index.md": "a1bf5855971212c4c5cf6fb54ffa57c54c9558dd172253616e258cb8e14c6dc1",
     "node_modules/balanced-match/LICENSE.md": "307bfda5936ba1476d8178ca3243218b17951df45caeccc1401968dbfc0bb7ae",
     "node_modules/balanced-match/README.md": "ebada4faf02ae3faa6ebe1f8c76ff3ec1cf6d6349ae2a52dd5adb4ca800f6a19",
     "node_modules/yallist/README.md": "34a05333319689dab5b6400771506dbfaa5bf2b930429b8ff72bddd3bdc56e45",
@@ -748,6 +748,10 @@
     "3-Mercado/README.md": "359f9592a03ff0cf1dfd543b21a30cd8f99e4ac15b5e753928640075b80aa73c",
     "7-Conhecimento/README.md": "0ad4b4e701499e7aeddb8ea99639466b387053688eda66de479f870c426a4fcf",
     "node_modules/escape-string-regexp/readme.md": "1d7a2399e27322254d5cfce3141775cf37fe2bc60088e4d52597ab61492dfd73",
-    "node_modules/normalize-path/README.md": "8bf8f2a58cb06825704de0c1425ae9d8a05df3c6c69403153bba42525d4f2934"
+    "node_modules/normalize-path/README.md": "8bf8f2a58cb06825704de0c1425ae9d8a05df3c6c69403153bba42525d4f2934",
+    "1-Governanca/README.md": "79dca021b8f3b978912a0001a48118e8c772e49e2e3d6c183b871ec899041438",
+    "5-Processos/README.md": "c6fa3bb65cd126e250951df016f22b67be3f9979f53062defa805c85007e2768",
+    "6-Reunioes/README.md": "ee581c0b5bc7a26c2a1a99baff289f0d8d46e31a27bf141fcf5a390b2cf75890",
+    "0-Dashboard-Executivo/Decisoes-Estrategicas.md": "f6342a518a308a95cd083f1a445a3f46cc99951eede23bcd819c1fa24f36ce6b"
   }
 }
