@@ -1,0 +1,66 @@
+<div class="project-card" data-status="{{ project.status | slugify }}">
+  <header class="card-header">
+    <h3 class="card-title">
+      <a href="{{ project.url }}">{{ project.title }}</a>
+    </h3>
+    
+    {% if project.status %}
+    <span class="card-status status-{{ project.status | slugify }}">
+      {{ project.status }}
+    </span>
+    {% endif %}
+  </header>
+
+  <div class="card-content">
+    {% if project.description %}
+    <p class="card-description">{{ project.description | truncate(120) }}</p>
+    {% endif %}
+
+    <div class="card-meta">
+      {% if project.effort_weeks %}
+      <div class="meta-item">
+        <span class="meta-icon">⏱️</span>
+        <span class="meta-text">{{ project.effort_weeks }} semana{% if project.effort_weeks > 1 %}s{% endif %}</span>
+      </div>
+      {% endif %}
+
+      {% if project.validation_score %}
+      <div class="meta-item">
+        <span class="meta-icon">⭐</span>
+        <span class="meta-text">{{ project.validation_score }}/10</span>
+      </div>
+      {% endif %}
+
+      {% if project.investment %}
+      <div class="meta-item">
+        <span class="meta-icon">💰</span>
+        <span class="meta-text">{{ project.investment }}</span>
+      </div>
+      {% endif %}
+
+      {% if project.revenue_potential %}
+      <div class="meta-item">
+        <span class="meta-icon">📈</span>
+        <span class="meta-text">{{ project.revenue_potential }}</span>
+      </div>
+      {% endif %}
+    </div>
+
+    {% if project.tags %}
+    <div class="card-tags">
+      {% for tag in project.tags %}
+      <span class="tag tag-{{ tag | slugify }}">{{ tag }}</span>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+
+  {% if project.decision %}
+  <footer class="card-footer">
+    <div class="decision-block mini">
+      <span class="decision-icon">✅</span>
+      <span class="decision-text">{{ project.decision | truncate(80) }}</span>
+    </div>
+  </footer>
+  {% endif %}
+</div>

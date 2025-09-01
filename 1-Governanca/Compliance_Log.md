@@ -1,22 +1,20 @@
 ---
-template: compliance-log
+title: Log de Compliance
 type: log
 category: compliance
 status: active
 priority: high
-owner: "[[Participante 6]]"
-created:
-  "{ date }":
-modified:
-  "{ date }":
-log_id: LOG-{{date:YYYYMMDD}}-{{random:0001-9999}}
+owner: Participante 6
+created: 2025-09-01
+modified: 2025-09-01
+log_id: LOG-20250901-0001
 compliance_level: 1
 incident_type: normal
 severity: low
-updated: 2025-09-01T01:46
+updated: 2025-09-01T15:27
 ---
 
-# 📋 **LOG DE COMPLIANCE - {{date:DD/MM/YYYY}}**
+# 📋 **LOG DE COMPLIANCE - 01/09/2025**
 
 > *Registro de atividades de compliance e auditoria*
 
@@ -25,11 +23,11 @@ updated: 2025-09-01T01:46
 ## 📋 **INFORMAÇÕES BÁSICAS**
 
 ### **Identificação**
-- **Log ID**: {{log_id}}
-- **Data**: {{date:DD/MM/YYYY}}
-- **Hora**: {{date:HH:mm}}
-- **Responsável**: {{owner}}
-- **Nível de Compliance**: {{compliance_level}}
+- **Log ID**: LOG-20250901-0001
+- **Data**: 01/09/2025
+- **Hora**: 15:21
+- **Responsável**: Participante 6
+- **Nível de Compliance**: 1
 
 ### **Tipo de Atividade**
 - **Tipo**: [normal | incidente | auditoria | revisão]
@@ -171,4 +169,4 @@ updated: 2025-09-01T01:46
 
 **Status**: ✅ **ATIVO**  
 **Próxima Ação**: [Próxima ação necessária]  
-**Owner**: {{owner}}
+**Owner**: Participante 6

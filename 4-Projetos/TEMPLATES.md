@@ -1,6 +1,8 @@
 ---
+title: Templates de Projetos
 created: 2025-09-01T02:40
-updated: 2025-09-01T02:40
+updated: 2025-09-01T15:27
+permalink: /projetos/templates-guia/
 ---
 # 📋 **TEMPLATES DE PROJETOS**
 

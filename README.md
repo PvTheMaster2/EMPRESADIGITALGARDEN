@@ -1,9 +1,11 @@
 ---
+title: Sistema Empresarial Multisócios
 created: 2025-08-31T21:00
-updated: 2025-09-01T01:46
+updated: 2025-09-01T15:27
 version: 2
 status: active
-owner: "[[Pedro Vitor]]"
+owner: Pedro Vitor
+permalink: /sobre-sistema/
 ---
 
 # 🏢 **SISTEMA EMPRESARIAL MULTISÓCIOS**

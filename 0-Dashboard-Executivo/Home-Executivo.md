@@ -1,13 +1,14 @@
 ---
+title: Dashboard Executivo - Home
 created: 2025-09-01
-updated: 2025-09-01T01:46
-template: dashboard-projetos-prazo-visual
+updated: 2025-09-01T15:27
 type: dashboard
 status: active
 priority: high
-owner: "[[Pedro Vitor]]"
+owner: Pedro Vitor
 version: 1
 css_class: dashboard-visual
+permalink: /
 ---
 # 🏢 **DASHBOARD EXECUTIVO - MULTISÓCIOS**
 
