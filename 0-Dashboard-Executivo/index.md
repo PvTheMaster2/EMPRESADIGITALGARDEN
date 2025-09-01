@@ -4,7 +4,7 @@ description: Visão geral do conhecimento empresarial e projetos em andamento
 permalink: /dashboard-overview/
 layout: base.njk
 created: 2025-09-01T15:18
-updated: 2025-09-01T16:21
+updated: 2025-09-01T16:24
 ---
 
 # 🌱 Digital Garden Empresarial
@@ -26,7 +26,7 @@ Bem-vindo ao sistema de gestão de conhecimento da empresa. Este ambiente integr
 {% endfor %}
 
 {% if projetosAtivos.length > 4 %}
-<a href="/projetos/ativos/" class="view-all-link">Ver todos os {{ projetosAtivos.length }} projetos ativos →</a>
+<a href="/4-projetos/ativos/" class="view-all-link">Ver todos os {{ projetosAtivos.length }} projetos ativos →</a>
 {% endif %}
 
 ### ⚡ Em Andamento
@@ -40,7 +40,7 @@ Bem-vindo ao sistema de gestão de conhecimento da empresa. Este ambiente integr
 {% endfor %}
 
 {% if projetosAndamento.length > 3 %}
-<a href="/projetos/em-andamento/" class="view-all-link">Ver todos →</a>
+<a href="/4-projetos/em-desenvolvimento/" class="view-all-link">Ver todos →</a>
 {% endif %}
 
 ### ⭐ Pilotos Validados
@@ -61,7 +61,7 @@ Bem-vindo ao sistema de gestão de conhecimento da empresa. Este ambiente integr
 - **[{{ doc.data.title }}]({{ doc.url }})**
 {% endfor %}
 
-<a href="/governanca/" class="view-all-link">Ver toda a governança →</a>
+<a href="/1-governanca/" class="view-all-link">Ver toda a governança →</a>
 
 ### 🤝 Reuniões Recentes  
 {% set reunioesRecentes = collections.reunioes | reverse %}
@@ -72,7 +72,7 @@ Bem-vindo ao sistema de gestão de conhecimento da empresa. Este ambiente integr
   {% if reuniao.data.date %}({{ reuniao.data.date | date("dd/MM/yyyy") }}){% endif %}
 {% endfor %}
 
-<a href="/reunioes/" class="view-all-link">Ver todas as reuniões →</a>
+<a href="/6-reunioes/" class="view-all-link">Ver todas as reuniões →</a>
 
 </div>
 
