@@ -1,7 +1,7 @@
 ---
 title: Equipes Multisócios
 created: 2025-09-01
-updated: 2025-09-01T16:18
+updated: 2025-09-01T16:19
 type: overview
 status: active
 priority: high
