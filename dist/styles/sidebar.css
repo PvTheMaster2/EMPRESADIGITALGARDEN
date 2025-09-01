@@ -238,8 +238,15 @@ body.sidebar-open {
 }
 
 /* Main content adjustment */
-.site-main {
+.main-content {
   transition: margin-left 0.3s ease;
+  margin-left: 0;
+}
+
+.content-wrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
 }
 
 /* Desktop adjustments */
@@ -249,7 +256,7 @@ body.sidebar-open {
     position: fixed;
   }
   
-  .site-main {
+  .main-content {
     margin-left: 280px;
   }
   
@@ -320,7 +327,7 @@ body.sidebar-open {
     left: -260px;
   }
   
-  .site-main {
+  .main-content {
     margin-left: 0;
   }
   

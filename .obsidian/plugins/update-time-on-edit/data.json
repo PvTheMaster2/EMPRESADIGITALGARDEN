@@ -231,7 +231,7 @@
     "z_Templates/Projetos/Template_Piloto.md": "d33352f21367a29da0aaf641a82b7cb1e7e13c600c82b61fc67cc8149cf8345f",
     "z_Templates/Reunioes/Template_Reuniao.md": "ac5163dfdbd2ede5d4db83829fa3cc0a656ada3800784980faa247a6ff3795c2",
     "z_Templates/Empresariais/Template_Acordo_Socios.md": "354735571f2145d6d8e26483a9e53cf1e886c059778f4e4677b5f7bec5e33e5c",
-    "0-Dashboard-Executivo/Home-Executivo.md": "1323ba5479663d1f41d3bf7bdb686d9f143b2a7e072fedaf55cdd64bc552b517",
+    "0-Dashboard-Executivo/Home-Executivo.md": "f81935eb25320e7baa3eb358ea755e726c398d36b21d982f40eee780bea5006a",
     "0-Dashboard-Executivo/KPIs-Principais.md": "13e1591c7dba8e39ebc8430c99baf88e009313cbeb50d3b55ba79b51694eafb0",
     "10 - PERMANENT/01 - PERMANENT NOTES/PLANO CRIAÇÃO/README.md": "a5ab002a5d35cf565c042c925968986dd91f49d6d889fefeae0ce7ce4b10f413",
     "z_Templates/Empresariais/Template_Politica_Financeira.md": "bd397471e11a6dd0aa2b1002abbbfc047238a1a3658a627e6468f03373d0697d",
@@ -810,8 +810,8 @@
     "node_modules/@photogabble/eleventy-plugin-interlinker/node_modules/webidl-conversions/LICENSE.md": "a8178541ce078072de68715ab510844a711584b4bfad406ccb518123f69789b6",
     "node_modules/@photogabble/eleventy-plugin-interlinker/node_modules/webidl-conversions/README.md": "ad877361bf4ad8659014ffaf8efc1c5a7396fceeb9cfd73d964891b28950f263",
     "node_modules/@photogabble/eleventy-plugin-interlinker/node_modules/whatwg-url/README.md": "998a5003ac7627918b4b56cc730e918157f352592da8ec6d4eb2a6fe9d3d20ff",
-    "_site_index/issues.md": "1b99b7f123b3e458e049c1f24ca5f7e84beb227f31dcaf1a674f8bf56b2dc663",
-    "_site_index/layouts_analysis.md": "645758e8c6de6108e2ad941f1dba00404e09cdb76f71b04d6c8526f98c404210",
-    "_site_index/site_outline.md": "c0b20f72b30134727d26dcb375955014035d2c5e7ee77f5dd7d7c3c550b2a712"
+    "_site_index/issues.md": "0e62fc232ca2a270d5591503f4600fa13857aae998e4b1331ea04b62270a1543",
+    "_site_index/layouts_analysis.md": "7ad285a323d0a1552e6bafcf916f97d5f81664e94dd1ff76e34a549d7886a5a3",
+    "_site_index/site_outline.md": "341a749b2c7d94364f4fbb31c0a044b85402292d52e189d0c31bc50998da0640"
   }
 }

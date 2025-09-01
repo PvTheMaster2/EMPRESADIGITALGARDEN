@@ -2,7 +2,7 @@
 title: Dashboard Executivo - Home
 layout: dashboard.njk
 created: 2025-09-01
-updated: 2025-09-01T20:12
+updated: 2025-09-01T20:16
 type: dashboard
 status: active
 priority: high
