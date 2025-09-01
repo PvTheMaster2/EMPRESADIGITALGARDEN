@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Garden Empresarial</title>
+    <meta name="description" content="Sistema de Gestão de Conhecimento Empresarial - Organização, Governança e Processos">
+    
+    
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    
+    <link rel="stylesheet" href="/styles/main.css">
+    
+    
+    <meta property="og:title" content="Digital Garden Empresarial">
+    <meta property="og:description" content="Sistema de Gestão de Conhecimento Empresarial - Organização, Governança e Processos">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://digital-garden-empresa.netlify.app/">
+    
+    
+    <link rel="preload" href="/styles/main.css" as="style">
+    
+    
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"WebSite","name":"Digital Garden Empresarial","url":"https://digital-garden-empresa.netlify.app","description":"Sistema de Gestão de Conhecimento Empresarial","potentialAction":{"@type":"SearchAction","target":"https://digital-garden-empresa.netlify.app/search?q={search_term_string}","query-input":"required name=search_term_string"}}
+    </script>
+</head>
+<body class="theme-light">
+    
+    <header class="site-header">
+        <nav class="main-nav">
+            <div class="nav-container">
+                <a href="/" class="logo">
+                    <span class="logo-icon">🏢</span>
+                    <span class="logo-text">Digital Garden</span>
+                </a>
+                
+                <div class="nav-links">
+                    
+                        
+                            <a href="/" class="nav-link">Home</a>
+                        
+                    
+                        
+                            <div class="nav-dropdown">
+                                <a href="/0-Dashboard-Executivo/" class="nav-link">Dashboard</a>
+                                <div class="nav-dropdown-content">
+                                    
+                                        <a href="/0-Dashboard-Executivo/" class="nav-dropdown-link">
+                                            <span class="nav-dropdown-title">Visão Geral</span>
+                                            
+                                                <span class="nav-dropdown-desc">Dashboard principal</span>
+                                            
+                                        </a>
+                                    
+                                        <a href="/0-Dashboard-Executivo/KPIs-Principais" class="nav-dropdown-link">
+                                            <span class="nav-dropdown-title">KPIs Principais</span>
+                                            
+                                                <span class="nav-dropdown-desc">Indicadores-chave</span>
+                                            
+                                        </a>
+                                    
+                                        <a href="/0-Dashboard-Executivo/Sistema_Metricas_Avancadas" class="nav-dropdown-link">
+                                            <span class="nav-dropdown-title">Métricas Avançadas</span>
+                                            
+                                                <span class="nav-dropdown-desc">Análises detalhadas</span>
+                                            
+                                        </a>
+                                    
+                                </div>
+                            </div>
+                        
+                    
+                        
+                            <div class="nav-dropdown">
+                                <a href="/1-Governanca/" class="nav-link">Governança</a>
+                                <div class="nav-dropdown-content">
+                                    
+                                        <a href="/1-Governanca/" class="nav-dropdown-link">
+                                            <span class="nav-dropdown-title">Políticas</span>
+                                            
+                                                <span class="nav-dropdown-desc">Políticas empresariais</span>
+                                            
+                                        </a>
+                                    
+                                        <a href="/1-Governanca/Compliance_Log" class="nav-dropdown-link">
+                                            <span class="nav-dropdown-title">Compliance</span>
+                                            
+                                                <span class="nav-dropdown-desc">Log de compliance</span>
+                                            
+                                        </a>
+                                    
+                                        <a href="/1-Governanca/Acordo_Socios_Final" class="nav-dropdown-link">
+                                            <span class="nav-dropdown-title">Acordos</span>
+                                            
+                                                <span class="nav-dropdown-desc">Acordos de sócios</span>
+                                            
+                                        </a>
+                                    
+                                </div>
+                            </div>
+                        
+                    
+                        
+                            <div class="nav-dropdown">
+                                <a href="/2-Equipes/" class="nav-link">Equipes</a>
+                                <div class="nav-dropdown-content">
+                                    
+                                        <a href="/2-Equipes/Desenvolvimento/" class="nav-dropdown-link">
+                                            <span class="nav-dropdown-title">Desenvolvimento</span>
+                                            
+                                                <span class="nav-dropdown-desc">Equipe de desenvolvimento</span>
+                                            
+                                        </a>
+                                    
+                                        <a href="/2-Equipes/Lideranca/" class="nav-dropdown-link">
+                                            <span class="nav-dropdown-title">Liderança</span>
+                                            
+                                                <span class="nav-dropdown-desc">Estrutura de liderança</span>
+                                            
+                                        </a>
+                                    
+                                        <a href="/2-Equipes/Marketing/" class="nav-dropdown-link">
+                                            <span class="nav-dropdown-title">Marketing</span>
+                                            
+                                                <span class="nav-dropdown-desc">Equipe de marketing</span>
+                                            
+                                        </a>
+                                    
+                                        <a href="/2-Equipes/Operacoes/" class="nav-dropdown-link">
+                                            <span class="nav-dropdown-title">Operações</span>
+                                            
+                                                <span class="nav-dropdown-desc">Equipe de operações</span>
+                                            
+                                        </a>
+                                    
+                                        <a href="/2-Equipes/Vendas/" class="nav-dropdown-link">
+                                            <span class="nav-dropdown-title">Vendas</span>
+                                            
+                                                <span class="nav-dropdown-desc">Equipe de vendas</span>
+                                            
+                                        </a>
+                                    
+                                </div>
+                            </div>
+                        
+                    
+                        
+                            <div class="nav-dropdown">
+                                <a href="/3-Mercado/" class="nav-link">Mercado</a>
+                                <div class="nav-dropdown-content">
+                                    
+                                        <a href="/3-Mercado/Clientes/" class="nav-dropdown-link">
+                                            <span class="nav-dropdown-title">Clientes</span>
+                                            
+                                                <span class="nav-dropdown-desc">Análise de clientes</span>
+                                            
+                                        </a>
+                                    
+                                        <a href="/3-Mercado/Concorrentes/" class="nav-dropdown-link">
+                                            <span class="nav-dropdown-title">Concorrentes</span>
+                                            
+                                                <span class="nav-dropdown-desc">Estudo de concorrentes</span>
+                                            
+                                        </a>
+                                    
+                                        <a href="/3-Mercado/Fornecedores/" class="nav-dropdown-link">
+                                            <span class="nav-dropdown-title">Fornecedores</span>
+                                            
+                                                <span class="nav-dropdown-desc">Relação com fornecedores</span>
+                                            
+                                        </a>
+                                    
+                                        <a href="/3-Mercado/Tendencias/" class="nav-dropdown-link">
+                                            <span class="nav-dropdown-title">Tendências</span>
+                                            
+                                                <span class="nav-dropdown-desc">Tendências de mercado</span>
+                                            
+                                        </a>
+                                    
+                                </div>
+                            </div>
+                        
+                    
+                        
+                            <div class="nav-dropdown">
+                                <a href="/4-Projetos/" class="nav-link">Projetos</a>
+                                <div class="nav-dropdown-content">
+                                    
+                                        <a href="/4-Projetos/Ativos/" class="nav-dropdown-link">
+                                            <span class="nav-dropdown-title">Ativos</span>
+                                            
+                                                <span class="nav-dropdown-desc">Projetos em execução</span>
+                                            
+                                        </a>
+                                    
+                                        <a href="/4-Projetos/Em-Desenvolvimento/" class="nav-dropdown-link">
+                                            <span class="nav-dropdown-title">Em Desenvolvimento</span>
+                                            
+                                                <span class="nav-dropdown-desc">Projetos em desenvolvimento</span>
+                                            
+                                        </a>
+                                    
+                                        <a href="/4-Projetos/Pilotos/" class="nav-dropdown-link">
+                                            <span class="nav-dropdown-title">Pilotos</span>
+                                            
+                                                <span class="nav-dropdown-desc">Projetos piloto</span>
+                                            
+                                        </a>
+                                    
+                                        <a href="/4-Projetos/Concluidos/" class="nav-dropdown-link">
+                                            <span class="nav-dropdown-title">Concluídos</span>
+                                            
+                                                <span class="nav-dropdown-desc">Projetos finalizados</span>
+                                            
+                                        </a>
+                                    
+                                </div>
+                            </div>
+                        
+                    
+                        
+                            <div class="nav-dropdown">
+                                <a href="/5-Processos/" class="nav-link">Processos</a>
+                                <div class="nav-dropdown-content">
+                                    
+                                        <a href="/5-Processos/Workflows/" class="nav-dropdown-link">
+                                            <span class="nav-dropdown-title">Workflows</span>
+                                            
+                                                <span class="nav-dropdown-desc">Fluxos de trabalho</span>
+                                            
+                                        </a>
+                                    
+                                        <a href="/5-Processos/SOPs/" class="nav-dropdown-link">
+                                            <span class="nav-dropdown-title">SOPs</span>
+                                            
+                                                <span class="nav-dropdown-desc">Procedimentos operacionais</span>
+                                            
+                                        </a>
+                                    
+                                        <a href="/5-Processos/Metricas/" class="nav-dropdown-link">
+                                            <span class="nav-dropdown-title">Métricas</span>
+                                            
+                                                <span class="nav-dropdown-desc">Métricas de processos</span>
+                                            
+                                        </a>
+                                    
+                                        <a href="/5-Processos/Templates_Governanca/" class="nav-dropdown-link">
+                                            <span class="nav-dropdown-title">Templates</span>
+                                            
+                                                <span class="nav-dropdown-desc">Templates de governança</span>
+                                            
+                                        </a>
+                                    
+                                </div>
+                            </div>
+                        
+                    
+                </div>
+                
+                <div class="nav-actions">
+                    <button class="search-toggle" onclick="toggleSearch()">
+                        <span class="search-icon">🔍</span>
+                    </button>
+                    <button class="theme-toggle" onclick="toggleTheme()">
+                        <span class="theme-icon">🌙</span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    
+    <div id="search-overlay" class="search-overlay">
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Buscar no Digital Garden..." class="search-input">
+            <div id="search-results" class="search-results"></div>
+            <button class="search-close" onclick="toggleSearch()">✕</button>
+        </div>
+    </div>
+
+    
+    <main class="main-content">
+        <div class="content-wrapper">
+            
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+                <ol class="breadcrumb-list">
+                    <li class="breadcrumb-item">
+                        <a href="/" class="breadcrumb-link">Home</a>
+                    </li>
+                    
+                </ol>
+            </nav>
+
+            
+            <article class="page-content">
+                
+                    <header class="page-header">
+                        <h1 class="page-title">Digital Garden Empresarial</h1>
+                        
+                            <p class="page-description">Sistema de Gestão de Conhecimento Empresarial - Organização, Governança e Processos</p>
+                        
+                        
+                    </header>
+                
+
+                <div class="content">
+                    
+<div class="hero-section">
+    <div class="hero-content">
+        <h1 class="hero-title">🏢 Digital Garden Empresarial</h1>
+        <p class="hero-description">
+            Sistema completo de gestão de conhecimento empresarial, organizando governança, 
+            equipes, mercado, projetos e processos em uma plataforma integrada.
+        </p>
+        <div class="hero-actions">
+            <a href="/0-Dashboard-Executivo/" class="btn btn-primary">Ver Dashboard</a>
+            <a href="/4-Projetos/" class="btn btn-secondary">Explorar Projetos</a>
+        </div>
+    </div>
+</div>
+
+<section class="features-section">
+    <div class="container">
+        <h2 class="section-title">Principais Áreas</h2>
+        <div class="features-grid">
+            
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3 class="feature-title">📊 Dashboard Executivo</h3>
+                    <p class="feature-description">
+                        Visão geral dos KPIs, métricas de performance e indicadores estratégicos da empresa.
+                    </p>
+                    <a href="0-Dashboard-Executivo/" class="feature-link">Acessar →</a>
+                </div>
+            
+                <div class="feature-card">
+                    <div class="feature-icon">⚖️</div>
+                    <h3 class="feature-title">⚖️ Governança</h3>
+                    <p class="feature-description">
+                        Políticas, compliance, acordos de sócios e estrutura organizacional.
+                    </p>
+                    <a href="1-Governanca/" class="feature-link">Acessar →</a>
+                </div>
+            
+                <div class="feature-card">
+                    <div class="feature-icon">👥</div>
+                    <h3 class="feature-title">👥 Equipes</h3>
+                    <p class="feature-description">
+                        Estrutura organizacional, responsabilidades e capacidades das equipes.
+                    </p>
+                    <a href="2-Equipes/" class="feature-link">Acessar →</a>
+                </div>
+            
+                <div class="feature-card">
+                    <div class="feature-icon">📈</div>
+                    <h3 class="feature-title">📈 Mercado</h3>
+                    <p class="feature-description">
+                        Análise de clientes, concorrentes, fornecedores e tendências de mercado.
+                    </p>
+                    <a href="3-Mercado/" class="feature-link">Acessar →</a>
+                </div>
+            
+                <div class="feature-card">
+                    <div class="feature-icon">🚀</div>
+                    <h3 class="feature-title">🚀 Projetos</h3>
+                    <p class="feature-description">
+                        Portfólio de projetos ativos, backlog e projetos concluídos.
+                    </p>
+                    <a href="4-Projetos/" class="feature-link">Acessar →</a>
+                </div>
+            
+                <div class="feature-card">
+                    <div class="feature-icon">⚙️</div>
+                    <h3 class="feature-title">⚙️ Processos</h3>
+                    <p class="feature-description">
+                        Workflows, SOPs, métricas e templates de gestão de processos.
+                    </p>
+                    <a href="5-Processos/" class="feature-link">Acessar →</a>
+                </div>
+            
+        </div>
+    </div>
+</section>
+
+<section class="stats-section">
+    <div class="container">
+        <h2 class="section-title">Estatísticas do Sistema</h2>
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number"></div>
+                <div class="stat-label">Áreas Principais</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number"></div>
+                <div class="stat-label">Documentos</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number"></div>
+                <div class="stat-label">Projetos</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number"></div>
+                <div class="stat-label">Equipes</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="recent-updates">
+    <div class="container">
+        <h2 class="section-title">Atualizações Recentes</h2>
+        <div class="updates-list">
+            <div class="update-item">
+                <div class="update-date">Janeiro 2025</div>
+                <div class="update-content">
+                    <h4>Dashboard Executivo Atualizado</h4>
+                    <p>Novos KPIs e métricas de performance implementados</p>
+                </div>
+            </div>
+            <div class="update-item">
+                <div class="update-date">Dezembro 2024</div>
+                <div class="update-content">
+                    <h4>Sistema de Governança</h4>
+                    <p>Políticas e compliance documentados e organizados</p>
+                </div>
+            </div>
+            <div class="update-item">
+                <div class="update-date">Novembro 2024</div>
+                <div class="update-content">
+                    <h4>Portfólio de Projetos</h4>
+                    <p>Estruturação completa do pipeline de projetos</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+                </div>
+            </article>
+
+            
+            
+        </div>
+    </main>
+
+    
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-sections">
+                    
+                        <div class="footer-section">
+                            <h4 class="footer-section-title">Empresa</h4>
+                            <ul class="footer-section-links">
+                                
+                                    <li><a href="/sobre" class="footer-link">Sobre Nós</a></li>
+                                
+                                    <li><a href="/0-Dashboard-Executivo/" class="footer-link">Dashboard</a></li>
+                                
+                                    <li><a href="/4-Projetos/" class="footer-link">Projetos</a></li>
+                                
+                                    <li><a href="/5-Processos/" class="footer-link">Processos</a></li>
+                                
+                                    <li><a href="/contato" class="footer-link">Contato</a></li>
+                                
+                            </ul>
+                        </div>
+                    
+                        <div class="footer-section">
+                            <h4 class="footer-section-title">Áreas</h4>
+                            <ul class="footer-section-links">
+                                
+                                    <li><a href="/1-Governanca/" class="footer-link">Governança</a></li>
+                                
+                                    <li><a href="/2-Equipes/" class="footer-link">Equipes</a></li>
+                                
+                                    <li><a href="/3-Mercado/" class="footer-link">Mercado</a></li>
+                                
+                                    <li><a href="/4-Projetos/" class="footer-link">Projetos</a></li>
+                                
+                            </ul>
+                        </div>
+                    
+                        <div class="footer-section">
+                            <h4 class="footer-section-title">Recursos</h4>
+                            <ul class="footer-section-links">
+                                
+                                    <li><a href="/99-RESOURCES/99-TEMPLATE/" class="footer-link">Templates</a></li>
+                                
+                                    <li><a href="/docs" class="footer-link">Documentação</a></li>
+                                
+                                    <li><a href="/api" class="footer-link">API</a></li>
+                                
+                                    <li><a href="/suporte" class="footer-link">Suporte</a></li>
+                                
+                            </ul>
+                        </div>
+                    
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 Digital Garden Empresarial. Todos os direitos reservados.</p>
+                    <p>Desenvolvido com ❤️ usando Eleventy e Obsidian</p>
+                    <p class="footer-stats">
+                        <span> áreas</span> • 
+                        <span> projetos</span> • 
+                        <span> documentos</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    
+    <script src="/scripts/main.js"></script>
+    <script src="/scripts/search.js"></script>
+    <script src="/scripts/theme.js"></script>
+    
+    
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+</body>
+</html>

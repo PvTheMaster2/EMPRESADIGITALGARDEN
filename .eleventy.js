@@ -3,7 +3,7 @@ const markdownIt = require("markdown-it");
 const fs = require("fs");
 const matter = require("gray-matter");
 const faviconsPlugin = require("eleventy-plugin-gen-favicons");
-const tocPlugin = require("eleventy-plugin-nesting-toc");
+const tocPlugin = require("eleventy-plugin-toc");
 const { parse } = require("node-html-parser");
 const htmlMinifier = require("html-minifier-terser");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
@@ -125,7 +125,7 @@ module.exports = function (eleventyConfig) {
     .use(require("markdown-it-anchor"), {
       slugify: headerToId,
     })
-    .use(require("markdown-it-mark"))
+    // .use(require("markdown-it-mark")) // Removido temporariamente
     .use(require("markdown-it-footnote"))
     .use(function (md) {
       md.renderer.rules.hashtag_open = function (tokens, idx) {
