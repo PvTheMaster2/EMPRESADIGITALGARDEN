@@ -741,6 +741,7 @@
     "node_modules/acorn-walk/README.md": "7efc6a81e24755d60eed969a943e4c5698bde8fdea243ffb2124083c926c344f",
     "node_modules/send/README.md": "4ce884b19ba91ed485597261d98dc52401caf76b54c2e068023e77997ac66dfc",
     "node_modules/dependency-graph/CHANGELOG.md": "68c745a65489a499be85ada8289a43969f32d70bdd8cbc1f41f43fdfc78250b8",
-    "node_modules/@11ty/eleventy/node_modules/argparse/CHANGELOG.md": "41523ea53c5c1855cc52ea1de03b4932741f0be8ec3e13b1f9d7f6ca2f1394ad"
+    "node_modules/@11ty/eleventy/node_modules/argparse/CHANGELOG.md": "41523ea53c5c1855cc52ea1de03b4932741f0be8ec3e13b1f9d7f6ca2f1394ad",
+    "TESTE-DEPLOY.md": "27b8b6bab3f03d8540bdd8cdf6dd8381bd84b8d33d2c629d9c27d4091a212ebb"
   }
 }
