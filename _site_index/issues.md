@@ -1,23 +1,24 @@
 ---
 created: 2025-09-01T19:58
-updated: 2025-09-01T20:28
+updated: 2025-09-01T20:32
 ---
 # 🔍 Site Audit Report
 
-**Generated**: 2025-09-01T23:28:57.637Z
+**Generated**: 2025-09-01T23:32:33.124Z
 
 ## 📊 Statistics
 
-- **Total Pages**: 77
-- **Pages without Title**: 27
+- **Total Pages**: 78
+- **Pages without Title**: 28
 - **Pages without H1**: 5
-- **Total Internal Links**: 876
-- **Total Issues**: 32
+- **Total Internal Links**: 879
+- **Total Issues**: 33
 
 ## ⚠️ Issues Found
 
-### NO TITLE (27)
+### NO TITLE (28)
 
+- **/.cursor/rules/**: Página sem título definido
 - **/1000 - REUNIOES/30_08-25 REUNIAO INICIAL/10 - Prompt organização atas de reuniao a partir de transcrição /**: Página sem título definido
 - **/1000 - REUNIOES/30_08-25 REUNIAO INICIAL/INSTRUCOES_RAPIDAS/**: Página sem título definido
 - **/1000 - REUNIOES/30_08-25 REUNIAO INICIAL/plano_revista_multisocios/**: Página sem título definido

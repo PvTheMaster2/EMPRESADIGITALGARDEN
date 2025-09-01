@@ -1,6 +1,8 @@
 ---
+title: Mapa de URLs - Digital Garden
 created: 2025-09-01T16:23
-updated: 2025-09-01T17:04
+updated: 2025-09-01T20:31
+type: reference
 ---
 # 🗺️ **MAPA COMPLETO DE URLs - DIGITAL GARDEN EMPRESARIAL**
 

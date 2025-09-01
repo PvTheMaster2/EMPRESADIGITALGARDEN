@@ -1,11 +1,16 @@
 ---
 created: 2025-09-01T19:58
-updated: 2025-09-01T20:28
+updated: 2025-09-01T20:32
 ---
 # 🌳 Site Structure Outline
 
-**Generated**: 2025-09-01T23:28:57.632Z
-**Total Pages**: 77
+**Generated**: 2025-09-01T23:32:33.118Z
+**Total Pages**: 78
+
+## 📁 .CURSOR
+
+    - **/.cursor/rules/** - "" (base)
+      - H1: 🎯 Cursor Rules - Digital Garden Empresarial
 
 ## 📁 0-DASHBOARD-EXECUTIVO
 

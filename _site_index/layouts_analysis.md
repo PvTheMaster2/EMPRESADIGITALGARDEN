@@ -1,18 +1,19 @@
 ---
 created: 2025-09-01T19:58
-updated: 2025-09-01T20:28
+updated: 2025-09-01T20:32
 ---
 # 🎨 Layouts Analysis
 
-**Generated**: 2025-09-01T23:28:57.640Z
+**Generated**: 2025-09-01T23:32:33.128Z
 
 ## 📊 Layout Distribution
 
-### BASE Layout (45 pages)
+### BASE Layout (46 pages)
 
-**Example Page**: /0-Dashboard-Executivo/Dashboard-Projetos-Prazo/
-**Title**: Dashboard Projetos Prazo - Digital Garden Empresarial
+**Example Page**: /.cursor/rules/
+**Title**: 
 **Pages using this layout**:
+- /.cursor/rules/ - ""
 - /0-Dashboard-Executivo/Dashboard-Projetos-Prazo/ - "Dashboard Projetos Prazo - Digital Garden Empresarial"
 - /0-Dashboard-Executivo/Dashboard-Projetos-Prazo-Visual/ - "Dashboard Projetos Prazo Visual - Digital Garden Empresarial"
 - /0-Dashboard-Executivo/Dashboard_Capacidade_Equipe/ - "Dashboard Capacidade Equipe - Digital Garden Empresarial"
@@ -22,8 +23,7 @@ updated: 2025-09-01T20:28
 - /0-Dashboard-Executivo/KPIs-Principais/ - "KPIs Principais - Digital Garden Empresarial"
 - /0-Dashboard-Executivo/Sistema_Metricas_Avancadas/ - "Sistema Metricas Avancadas - Digital Garden Empresarial"
 - /1000 - REUNIOES/30_08-25 REUNIAO INICIAL/10 - Prompt organização atas de reuniao a partir de transcrição / - ""
-- /1000 - REUNIOES/30_08-25 REUNIAO INICIAL/advanced-multisocios-components/ - "MultiSócios - Componentes Avançados | Anime.js Timeline"
-- ... and 35 more
+- ... and 36 more
 
 ### DASHBOARD Layout (1 pages)
 

@@ -262,9 +262,9 @@
     "z_Templates/Projetos/Template_Pessoa.md": "f3a7bd7312441ddba971ab415980ee3baed7bd6f327bfe5df6777f09cab6416e",
     "z_Templates/Projetos/Template_Sprint.md": "3f61d8a2ceb32d576629ccf7465fb5fe02159e93770b4cbb07d3e022c013d250",
     "z_Templates/Projetos/Template_Tarefa.md": "ebd4896d7ca30d2250136060321d9e8278f5c5344e8103e9b41bff2feaf241f9",
-    "5-Processos/Sistema_Gestao_Capacidade_Sprints.md": "0c5e54b108cca72c58a49cd6cc44462b20b6c775bdf127300611c65d34261b40",
+    "5-Processos/Sistema_Gestao_Capacidade_Sprints.md": "2a9e4a5db6f49913009c7b26862a4902e1bcb338878c25ce305ebfebb1c7a3b2",
     "0-Dashboard-Executivo/Dashboard_Capacidade_Equipe.md": "e46dd4eae61800ae280490f99acedfad5cebcc235bd0574ae4c9af18956cfc4b",
-    "5-Processos/Guia_Uso_Sistema_Capacidade.md": "bef34450a06baa557268fd22cb583bea5c7416897b9be00ed0ed86764cec564e",
+    "5-Processos/Guia_Uso_Sistema_Capacidade.md": "b58482cb112949e881621e60a737a8a2ca4577a50c08f4e309189369d06eb25a",
     "utils/forms/README_SOLUCAO_IOS.md": "91ae471941435b91b2df7b10f221d1410337b4789c1f20d49327d593ae13363c",
     "SPRINTS_FINAL.md": "cffc06cabe7c841a4caa17110a97bdc97d59d37d7aa6bc7ac42059013d7c8ba0",
     "ESTRUTURA_COMPLETA_ARQUITETURA.md": "fbbaff2a6e07507d303c21375c0e982fc1068b6e996d87d31c036e04de63aea2",
@@ -751,7 +751,7 @@
     "0-Dashboard-Executivo/Decisoes-Estrategicas.md": "f6342a518a308a95cd083f1a445a3f46cc99951eede23bcd819c1fa24f36ce6b",
     "node_modules/@jridgewell/trace-mapping/README.md": "a9c20cfdd554224198e85deceb5c0ddc3ca0295fedccbc39831abcf2ba4fa82c",
     "node_modules/web-resource-inliner/node_modules/domutils/node_modules/domhandler/readme.md": "75daf52d86cb26d769e0a09544aca4a57a601b0914a86d19394ec463ff3d0dcc",
-    "MAPA-URLS.md": "746fdf23359ed1d3dfb40971bae70dd616a2ffba9f3802649d955074afb635d6",
+    "MAPA-URLS.md": "18dbe615c5e1b0a02dbd38a6eac4f9a207ba8540ccdad3362bcc3babf8fa6e24",
     "node_modules/xml-name-validator/README.md": "8371404cdbc02f5d60569b3715d13e7c3e0017ee41fdea61d02d4db98e60b0af",
     "node_modules/w3c-xmlserializer/LICENSE.md": "ebe3558d8f4bd405c1821083296ddc44101b79a28c2a36c935eefb7082d97e7f",
     "node_modules/w3c-xmlserializer/README.md": "ef69968e2470f4736b32dd204ef5ba4c8def7c5eaee390f8bb0b3b1da0c18bcb",
@@ -810,8 +810,8 @@
     "node_modules/@photogabble/eleventy-plugin-interlinker/node_modules/webidl-conversions/LICENSE.md": "a8178541ce078072de68715ab510844a711584b4bfad406ccb518123f69789b6",
     "node_modules/@photogabble/eleventy-plugin-interlinker/node_modules/webidl-conversions/README.md": "ad877361bf4ad8659014ffaf8efc1c5a7396fceeb9cfd73d964891b28950f263",
     "node_modules/@photogabble/eleventy-plugin-interlinker/node_modules/whatwg-url/README.md": "998a5003ac7627918b4b56cc730e918157f352592da8ec6d4eb2a6fe9d3d20ff",
-    "_site_index/issues.md": "2b65094ea984bc3397c7ece1ead55a1db142281f8651268f6a8995a5b77d1d81",
-    "_site_index/layouts_analysis.md": "a78be1d6a37d055d22abb059a3751ff0b6348b63b613eef2fbee8043345fd665",
-    "_site_index/site_outline.md": "6e0b7a686b42f4497612fe6f9ba41e5dfc46799b765044dbb7fb824f660bd27f"
+    "_site_index/issues.md": "54fc7a3bdc167960688eb4868e912a59782319e3af75168f048b3542967eb0ff",
+    "_site_index/layouts_analysis.md": "e81cbbd893c7d734ac14013419ed5034619a78864266f3f19838e5a519beb32b",
+    "_site_index/site_outline.md": "10a4e9c7a9c2fd1e9b87143220dc29def8e44062f9fbd69e6a39900d3bfabaa1"
   }
 }

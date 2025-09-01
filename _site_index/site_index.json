@@ -1,6 +1,134 @@
 {
   "pages": [
     {
+      "url": "/.cursor/rules/",
+      "filePath": "dist\\.cursor\\rules\\index.html",
+      "title": "",
+      "h1": "🎯 Cursor Rules - Digital Garden Empresarial",
+      "metaDescription": "",
+      "headings": [
+        {
+          "level": 1,
+          "text": "🎯 Cursor Rules - Digital Garden Empresarial",
+          "id": null
+        },
+        {
+          "level": 2,
+          "text": "📋 Context Pack Integration",
+          "id": null
+        },
+        {
+          "level": 2,
+          "text": "🔍 Processo de Análise",
+          "id": null
+        },
+        {
+          "level": 2,
+          "text": "📁 Estrutura de Layouts",
+          "id": null
+        },
+        {
+          "level": 2,
+          "text": "🚨 Issues Críticos (Prioridade)",
+          "id": null
+        },
+        {
+          "level": 2,
+          "text": "🔗 Links e Navegação",
+          "id": null
+        },
+        {
+          "level": 2,
+          "text": "🛠️ Comandos Úteis",
+          "id": null
+        },
+        {
+          "level": 2,
+          "text": "📊 Métricas de Qualidade",
+          "id": null
+        },
+        {
+          "level": 2,
+          "text": "🔄 Workflow de Manutenção",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Antes de Editar:",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Ao Propor Mudanças:",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Por Diretório:",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Campos Obrigatórios:",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "1. Títulos Ausentes (27 páginas)",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "2. Páginas sem H1 (5 páginas)",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "3. Layout Base Excessivo (45 páginas)",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "URLs Corretas:",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Sidebar Navigation:",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Auditoria Estrutural:",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Plano de Layout:",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Correção de Links:",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Targets:",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Build Status:",
+          "id": null
+        }
+      ],
+      "links": [],
+      "pageMetadata": {},
+      "layoutType": "base",
+      "wordCount": 0
+    },
+    {
       "url": "/0-Dashboard-Executivo/Dashboard-Projetos-Prazo/",
       "filePath": "dist\\0-Dashboard-Executivo\\Dashboard-Projetos-Prazo\\index.html",
       "title": "Dashboard Projetos Prazo - Digital Garden Empresarial",
@@ -13959,6 +14087,11 @@
           "isInternal": true
         },
         {
+          "text": "0-Dashboard-Executivo/Dashboard_Capacidade_Equipe",
+          "href": "/stubs/",
+          "isInternal": true
+        },
+        {
           "text": "z_Templates/Projetos/Template_Pessoa",
           "href": "/stubs/",
           "isInternal": true
@@ -14537,6 +14670,11 @@
           "isInternal": true
         },
         {
+          "text": "z_Templates/Projetos/Template_Projeto",
+          "href": "/stubs/",
+          "isInternal": true
+        },
+        {
           "text": "0-Dashboard-Executivo/Home-Executivo",
           "href": "/stubs/",
           "isInternal": true
@@ -14553,6 +14691,11 @@
         },
         {
           "text": "5-Processos/README",
+          "href": "/stubs/",
+          "isInternal": true
+        },
+        {
+          "text": "4-Projetos/README",
           "href": "/stubs/",
           "isInternal": true
         },
@@ -19295,13 +19438,18 @@
   ],
   "structure": {},
   "stats": {
-    "totalPages": 77,
-    "pagesWithoutTitle": 27,
+    "totalPages": 78,
+    "pagesWithoutTitle": 28,
     "pagesWithoutH1": 5,
     "brokenLinks": 0,
-    "totalLinks": 876
+    "totalLinks": 879
   },
   "issues": [
+    {
+      "type": "no_title",
+      "url": "/.cursor/rules/",
+      "message": "Página sem título definido"
+    },
     {
       "type": "no_title",
       "url": "/1000 - REUNIOES/30_08-25 REUNIAO INICIAL/10 - Prompt organização atas de reuniao a partir de transcrição /",
