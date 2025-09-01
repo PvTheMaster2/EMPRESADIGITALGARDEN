@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="theme-dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ title or page.fileSlug }} - {{ site.title }}</title>
+  <meta name="description" content="{{ description or site.description }}" />
+  
+  <!-- CSS do tema Obsidian e customizações -->
+  <link rel="stylesheet" href="/styles/main.css" />
+  <link rel="stylesheet" href="/styles/sidebar.css" />
+  <link rel="stylesheet" href="/styles/projeto.css" />
+  
+  <!-- Favicon e meta tags para PWA -->
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+  <meta name="theme-color" content="#1e1e1e" />
+</head>
+<body class="layout-projeto">
+  
+  <header class="site-header">
+    <nav class="main-navigation">
+      <div class="nav-brand">
+        <button class="mobile-sidebar-toggle" onclick="toggleSidebar()">
+          <span class="hamburger"></span>
+        </button>
+        <a href="/" class="brand-link">
+          🌱 {{ site.title }}
+        </a>
+      </div>
+      
+      <div class="nav-links">
+        <a href="/dashboard-executivo/">Dashboard</a>
+        <a href="/governanca/">Governança</a>
+        <a href="/projetos/" class="active">Projetos</a>
+        <a href="/equipes/">Equipes</a>
+        <a href="/processos/">Processos</a>
+        <a href="/reunioes/">Reuniões</a>
+        <a href="/conhecimento/">Conhecimento</a>
+      </div>
+      
+      <div class="nav-tools">
+        <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
+        <button class="search-toggle" onclick="toggleSearch()">🔍</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Sidebar Navigation -->
+  <nav class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <button class="sidebar-toggle" onclick="toggleSidebar()">
+        <span class="hamburger"></span>
+      </button>
+      <div class="sidebar-brand">
+        <a href="/" class="brand-link">🌱 Digital Garden</a>
+      </div>
+    </div>
+    
+    <div class="sidebar-content">
+      <div class="sidebar-search">
+        <input type="search" placeholder="Buscar páginas..." class="search-input" id="sidebar-search">
+      </div>
+      
+      <div class="sidebar-tree">
+        <!-- Navegação será carregada via JavaScript -->
+        <div id="navigation-tree"></div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <div class="content-wrapper">
+      
+      <!-- Breadcrumbs -->
+      {% if page.url != '/' and eleventyNavigation %}
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">🏠 Home</a></li>
+          <li><a href="/projetos/">📋 Projetos</a></li>
+          {% set breadcrumbNav = collections.all | eleventyNavigationBreadcrumb(eleventyNavigation.key) %}
+          {% for crumb in breadcrumbNav %}
+            <li>
+              {% if loop.last %}
+                <span aria-current="page">{{ crumb.title }}</span>
+              {% else %}
+                <a href="{{ crumb.url }}">{{ crumb.title }}</a>
+              {% endif %}
+            </li>
+          {% endfor %}
+        </ol>
+      </nav>
+      {% endif %}
+
+      <!-- Project Header -->
+      <article class="project-page">
+        <header class="project-header">
+          {% if title %}
+          <h1 class="project-title">{{ title }}</h1>
+          {% endif %}
+          
+          <!-- Project Status Bar -->
+          <div class="project-status-bar">
+            {% if status %}
+            <div class="status-badge status-{{ status | slugify }}">
+              {% if status == "active" %}🟢 Ativo{% endif %}
+              {% if status == "idea" %}💡 Ideia{% endif %}
+              {% if status == "development" %}🚧 Desenvolvimento{% endif %}
+              {% if status == "completed" %}✅ Concluído{% endif %}
+              {% if status == "paused" %}⏸️ Pausado{% endif %}
+              {% if status == "cancelled" %}❌ Cancelado{% endif %}
+            </div>
+            {% endif %}
+            
+            {% if priority %}
+            <div class="priority-badge priority-{{ priority | slugify }}">
+              {% if priority == "high" %}🔴 Alta{% endif %}
+              {% if priority == "medium" %}🟡 Média{% endif %}
+              {% if priority == "low" %}🟢 Baixa{% endif %}
+              {% if priority == "critical" %}⚫ Crítica{% endif %}
+            </div>
+            {% endif %}
+            
+            {% if owner %}
+            <div class="owner-badge">
+              👤 {{ owner | replace("[[", "") | replace("]]", "") }}
+            </div>
+            {% endif %}
+          </div>
+        </header>
+
+        <!-- Project Metrics Cards -->
+        {% if budget or effort_weeks or validation_score or roi_esperado %}
+        <div class="project-metrics">
+          
+          {% if budget %}
+          <div class="metric-card budget-card">
+            <div class="metric-icon">💰</div>
+            <div class="metric-content">
+              <div class="metric-label">Orçamento</div>
+              <div class="metric-value">R$ {{ budget | number }}</div>
+            </div>
+          </div>
+          {% endif %}
+          
+          {% if effort_weeks %}
+          <div class="metric-card effort-card">
+            <div class="metric-icon">⏱️</div>
+            <div class="metric-content">
+              <div class="metric-label">Esforço</div>
+              <div class="metric-value">{{ effort_weeks }} semana{% if effort_weeks > 1 %}s{% endif %}</div>
+            </div>
+          </div>
+          {% endif %}
+          
+          {% if validation_score %}
+          <div class="metric-card score-card">
+            <div class="metric-icon">⭐</div>
+            <div class="metric-content">
+              <div class="metric-label">Score</div>
+              <div class="metric-value">{{ validation_score }}/10</div>
+            </div>
+          </div>
+          {% endif %}
+          
+          {% if roi_esperado %}
+          <div class="metric-card roi-card">
+            <div class="metric-icon">📈</div>
+            <div class="metric-content">
+              <div class="metric-label">ROI Esperado</div>
+              <div class="metric-value">{{ roi_esperado }}%</div>
+            </div>
+          </div>
+          {% endif %}
+          
+        </div>
+        {% endif %}
+
+        <!-- Project Details Grid -->
+        <div class="project-details">
+          
+          <!-- Main Content -->
+          <div class="project-content">
+            {{ content | safe }}
+          </div>
+          
+          <!-- Sidebar with metadata -->
+          <div class="project-sidebar">
+            
+            <!-- Project Info -->
+            <div class="info-card">
+              <h3>📊 Informações do Projeto</h3>
+              <div class="info-grid">
+                
+                {% if market_segment %}
+                <div class="info-item">
+                  <span class="info-label">🌍 Segmento:</span>
+                  <span class="info-value">{{ market_segment }}</span>
+                </div>
+                {% endif %}
+                
+                {% if type %}
+                <div class="info-item">
+                  <span class="info-label">📋 Tipo:</span>
+                  <span class="info-value">{{ type }}</span>
+                </div>
+                {% endif %}
+                
+                {% if compliance_level %}
+                <div class="info-item">
+                  <span class="info-label">🔒 Compliance:</span>
+                  <span class="info-value">Nível {{ compliance_level }}</span>
+                </div>
+                {% endif %}
+                
+                {% if legal_review %}
+                <div class="info-item">
+                  <span class="info-label">⚖️ Review Legal:</span>
+                  <span class="info-value">{% if legal_review %}✅ Aprovado{% else %}⏳ Pendente{% endif %}</span>
+                </div>
+                {% endif %}
+                
+                {% if created %}
+                <div class="info-item">
+                  <span class="info-label">📅 Criado:</span>
+                  <span class="info-value">{{ created | date("DD/MM/YYYY") }}</span>
+                </div>
+                {% endif %}
+                
+                {% if updated %}
+                <div class="info-item">
+                  <span class="info-label">🔄 Atualizado:</span>
+                  <span class="info-value">{{ updated | date("DD/MM/YYYY HH:mm") }}</span>
+                </div>
+                {% endif %}
+                
+              </div>
+            </div>
+
+            <!-- IA Assets -->
+            {% if ia_assets %}
+            <div class="info-card">
+              <h3>🤖 Recursos de IA</h3>
+              
+              {% if ia_assets.prompts and ia_assets.prompts.length > 0 %}
+              <div class="ia-section">
+                <h4>💬 Prompts</h4>
+                <ul class="ia-list">
+                  {% for prompt in ia_assets.prompts %}
+                  <li>{{ prompt }}</li>
+                  {% endfor %}
+                </ul>
+              </div>
+              {% endif %}
+              
+              {% if ia_assets.models and ia_assets.models.length > 0 %}
+              <div class="ia-section">
+                <h4>🧠 Modelos</h4>
+                <ul class="ia-list">
+                  {% for model in ia_assets.models %}
+                  <li>{{ model }}</li>
+                  {% endfor %}
+                </ul>
+              </div>
+              {% endif %}
+              
+              {% if ia_assets.datasets and ia_assets.datasets.length > 0 %}
+              <div class="ia-section">
+                <h4>📊 Datasets</h4>
+                <ul class="ia-list">
+                  {% for dataset in ia_assets.datasets %}
+                  <li>{{ dataset }}</li>
+                  {% endfor %}
+                </ul>
+              </div>
+              {% endif %}
+            </div>
+            {% endif %}
+
+            <!-- Tags -->
+            {% if tags and tags.length > 0 %}
+            <div class="info-card">
+              <h3>🏷️ Tags</h3>
+              <div class="tags-container">
+                {% for tag in tags %}
+                <span class="tag tag-{{ tag | slugify }}">{{ tag }}</span>
+                {% endfor %}
+              </div>
+            </div>
+            {% endif %}
+
+          </div>
+        </div>
+
+        <!-- Decision Block -->
+        {% if decision %}
+        <div class="decision-block">
+          <div class="decision-header">
+            <span class="decision-icon">✅</span>
+            <strong>Decisão do Projeto:</strong>
+          </div>
+          <div class="decision-content">
+            {{ decision | markdown | safe }}
+          </div>
+        </div>
+        {% endif %}
+
+      </article>
+    </div>
+  </main>
+
+  <!-- JavaScript -->
+  <script src="/scripts/main.js"></script>
+  <script>
+    // Project-specific JavaScript
+    document.addEventListener('DOMContentLoaded', function() {
+      // Highlight project navigation
+      const projectNav = document.querySelector('.nav-links a[href="/projetos/"]');
+      if (projectNav) {
+        projectNav.classList.add('active');
+      }
+      
+      // Animate metric cards
+      const metricCards = document.querySelectorAll('.metric-card');
+      metricCards.forEach((card, index) => {
+        card.style.animationDelay = `${index * 0.1}s`;
+        card.classList.add('animate-in');
+      });
+    });
+  </script>
+</body>
+</html>

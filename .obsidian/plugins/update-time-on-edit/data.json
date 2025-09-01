@@ -231,7 +231,7 @@
     "z_Templates/Projetos/Template_Piloto.md": "d33352f21367a29da0aaf641a82b7cb1e7e13c600c82b61fc67cc8149cf8345f",
     "z_Templates/Reunioes/Template_Reuniao.md": "ac5163dfdbd2ede5d4db83829fa3cc0a656ada3800784980faa247a6ff3795c2",
     "z_Templates/Empresariais/Template_Acordo_Socios.md": "354735571f2145d6d8e26483a9e53cf1e886c059778f4e4677b5f7bec5e33e5c",
-    "0-Dashboard-Executivo/Home-Executivo.md": "03168c0b860e9871230800f7b0ee8c9176e5680bee800dc2ab0c6895f8dc9b5f",
+    "0-Dashboard-Executivo/Home-Executivo.md": "c0ca34e98cac695c75ee4fa2e75e6fb62ed55efd9306a8238d02ae815c8b8be3",
     "0-Dashboard-Executivo/KPIs-Principais.md": "13e1591c7dba8e39ebc8430c99baf88e009313cbeb50d3b55ba79b51694eafb0",
     "10 - PERMANENT/01 - PERMANENT NOTES/PLANO CRIAÇÃO/README.md": "a5ab002a5d35cf565c042c925968986dd91f49d6d889fefeae0ce7ce4b10f413",
     "z_Templates/Empresariais/Template_Politica_Financeira.md": "bd397471e11a6dd0aa2b1002abbbfc047238a1a3658a627e6468f03373d0697d",
@@ -804,6 +804,14 @@
     "node_modules/@11ty/eleventy-navigation/sample/no-key.md": "7e50cab4aec0b1e5e7dd67aca30253d4a403925933070af285c04e2d78ef7644",
     "node_modules/@11ty/eleventy-navigation/sample/no-nav.md": "0211460b021f59685246741fa1b3a42cba24d034575003bb83b5bdbf482800c0",
     "node_modules/is-potential-custom-element-name/README.md": "3909f32e1e1ecfedc90bdc1894ce46d3e1a3ffdfc55d8d382083aa8127326500",
-    "node_modules/combined-stream/Readme.md": "e593d59ab8f41f8ca85a7e3c2a24a3f4079cab04b834d2cbc4966784b4c5977d"
+    "node_modules/combined-stream/Readme.md": "e593d59ab8f41f8ca85a7e3c2a24a3f4079cab04b834d2cbc4966784b4c5977d",
+    "node_modules/@photogabble/eleventy-plugin-interlinker/node_modules/tr46/LICENSE.md": "88b289a802dcc90a6e29e3eba47cab9feaf529d51f0f4a5388d4e954118ce300",
+    "node_modules/@photogabble/eleventy-plugin-interlinker/node_modules/tr46/README.md": "adc2700cbc91f1a633696b4079ab5721733f08a26176d03364b7fb8c6117906a",
+    "node_modules/@photogabble/eleventy-plugin-interlinker/node_modules/webidl-conversions/LICENSE.md": "a8178541ce078072de68715ab510844a711584b4bfad406ccb518123f69789b6",
+    "node_modules/@photogabble/eleventy-plugin-interlinker/node_modules/webidl-conversions/README.md": "ad877361bf4ad8659014ffaf8efc1c5a7396fceeb9cfd73d964891b28950f263",
+    "node_modules/@photogabble/eleventy-plugin-interlinker/node_modules/whatwg-url/README.md": "998a5003ac7627918b4b56cc730e918157f352592da8ec6d4eb2a6fe9d3d20ff",
+    "_site_index/issues.md": "84f3a8a559bafa33f006a4d6aaeb4712ff93cc2be39223bccdfe6d59d373daf2",
+    "_site_index/layouts_analysis.md": "3da64d6b2f9e57805516727e00dd35ee26e4b128a702d073aae6f52b911ec8e9",
+    "_site_index/site_outline.md": "97e1da4fd6ed6ad77e1a2c38b798b4761afb4f66f8d63b79e5639005b392c08c"
   }
 }

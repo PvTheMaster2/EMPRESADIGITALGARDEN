@@ -1,4 +1,289 @@
-<h1>🧠 <strong>App de Desenvolvimento Cognitivo e Lógico</strong></h1>
+<!DOCTYPE html>
+<html lang="pt-BR" class="theme-dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>App Desenvolvimento Cognitivo - Digital Garden Empresarial</title>
+  <meta name="description" content="Sistema de Gestão de Conhecimento Empresarial" />
+  
+  <!-- CSS do tema Obsidian e customizações -->
+  <link rel="stylesheet" href="/styles/main.css" />
+  <link rel="stylesheet" href="/styles/sidebar.css" />
+  <link rel="stylesheet" href="/styles/projeto.css" />
+  
+  <!-- Favicon e meta tags para PWA -->
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+  <meta name="theme-color" content="#1e1e1e" />
+</head>
+<body class="layout-projeto">
+  
+  <header class="site-header">
+    <nav class="main-navigation">
+      <div class="nav-brand">
+        <button class="mobile-sidebar-toggle" onclick="toggleSidebar()">
+          <span class="hamburger"></span>
+        </button>
+        <a href="/" class="brand-link">
+          🌱 Digital Garden Empresarial
+        </a>
+      </div>
+      
+      <div class="nav-links">
+        <a href="/dashboard-executivo/">Dashboard</a>
+        <a href="/governanca/">Governança</a>
+        <a href="/projetos/" class="active">Projetos</a>
+        <a href="/equipes/">Equipes</a>
+        <a href="/processos/">Processos</a>
+        <a href="/reunioes/">Reuniões</a>
+        <a href="/conhecimento/">Conhecimento</a>
+      </div>
+      
+      <div class="nav-tools">
+        <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
+        <button class="search-toggle" onclick="toggleSearch()">🔍</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Sidebar Navigation -->
+  <nav class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <button class="sidebar-toggle" onclick="toggleSidebar()">
+        <span class="hamburger"></span>
+      </button>
+      <div class="sidebar-brand">
+        <a href="/" class="brand-link">🌱 Digital Garden</a>
+      </div>
+    </div>
+    
+    <div class="sidebar-content">
+      <div class="sidebar-search">
+        <input type="search" placeholder="Buscar páginas..." class="search-input" id="sidebar-search">
+      </div>
+      
+      <div class="sidebar-tree">
+        module.exports = {
+  tree: [
+    {
+      title: "🏠 Home",
+      url: "/",
+      icon: "🏠"
+    },
+    {
+      title: "📊 Dashboard Executivo",
+      url: "/dashboard-overview/",
+      icon: "📊",
+      children: [
+        { title: "💡 Innovation Pipeline", url: "/0-dashboard-executivo/innovation-pipeline/" },
+        { title: "📈 KPIs Principais", url: "/0-dashboard-executivo/kpis-principais/" },
+        { title: "🎯 Decisões Estratégicas", url: "/0-dashboard-executivo/decisoes-estrategicas/" },
+        { title: "📅 Projetos por Prazo", url: "/0-dashboard-executivo/dashboard-projetos-prazo/" },
+        { title: "🎨 Projetos Visuais", url: "/0-dashboard-executivo/dashboard-projetos-prazo-visual/" },
+        { title: "👥 Capacidade da Equipe", url: "/0-dashboard-executivo/dashboard_capacidade_equipe/" },
+        { title: "⚡ Executive Auto", url: "/0-dashboard-executivo/executive-auto/" },
+        { title: "📊 Métricas Avançadas", url: "/0-dashboard-executivo/sistema_metricas_avancadas/" }
+      ]
+    },
+    {
+      title: "🏛️ Governança",
+      url: "/1-governanca/",
+      icon: "🏛️",
+      children: [
+        { title: "📜 Acordo de Sócios", url: "/1-governanca/acordo_socios_final/" },
+        { title: "⚖️ Compliance Log", url: "/1-governanca/compliance_log/" },
+        { title: "🤖 Ética no Uso de IA", url: "/1-governanca/etica_uso_ia/" },
+        { title: "❓ FAQ Compliance", url: "/1-governanca/faq_compliance/" },
+        { title: "📚 Manual de Treinamento", url: "/1-governanca/manual_treinamento_compliance/" },
+        { title: "📈 Playbook Comercial", url: "/1-governanca/playbook_comercial_v0/" }
+      ]
+    },
+    {
+      title: "👥 Equipes",
+      url: "/2-equipes/",
+      icon: "👥",
+      children: [
+        { title: "💻 Desenvolvimento", url: "/2-equipes/desenvolvimento/" },
+        { title: "🎯 Marketing", url: "/2-equipes/marketing/" },
+        { title: "💼 Vendas", url: "/2-equipes/vendas/" },
+        { title: "⚙️ Operações", url: "/2-equipes/operacoes/" },
+        { title: "👔 Liderança", url: "/2-equipes/lideranca/" }
+      ]
+    },
+    {
+      title: "🌍 Mercado",
+      url: "/3-mercado/",
+      icon: "🌍",
+      children: [
+        { title: "👥 Clientes", url: "/3-mercado/clientes/" },
+        { title: "⚔️ Concorrentes", url: "/3-mercado/concorrentes/" },
+        { title: "🤝 Fornecedores", url: "/3-mercado/fornecedores/" },
+        { title: "🚀 Tendências", url: "/3-mercado/tendencias/" }
+      ]
+    },
+    {
+      title: "📋 Projetos",
+      url: "/4-projetos/",
+      icon: "📋",
+      children: [
+        {
+          title: "🚀 Ativos",
+          url: "/4-projetos/ativos/",
+          children: [
+            { title: "🌟 PRJ-AERALYN", url: "/4-projetos/ativos/prj-aeralyn/" },
+            { title: "🎮 Trip-Match", url: "/4-projetos/ativos/prj-trip-match/" },
+            { title: "🏢 Vault Empresarial", url: "/4-projetos/ativos/prj-vault-empresarial/" },
+            { title: "🎓 Curso IA Inteligente", url: "/4-projetos/ativos/prj-curso-ia-inteligente/" },
+            { title: "📱 App Desenvolvimento", url: "/4-projetos/ativos/prj-app-desenvolvimento-cognitivo/" },
+            { title: "🎵 Nostalgia Musical", url: "/4-projetos/ativos/prj-nostalgia-musical/" },
+            { title: "🎓 Plataforma Cursos", url: "/4-projetos/ativos/prj-plataforma-cursos/" }
+          ]
+        },
+        {
+          title: "⚡ Em Desenvolvimento",
+          url: "/4-projetos/em-desenvolvimento/",
+          children: [
+            { title: "🤖 WhatsBot Academia", url: "/4-projetos/em-desenvolvimento/prj-dev-whatsbot-academia/" },
+            { title: "🌐 Portfolio Engenharia", url: "/4-projetos/em-desenvolvimento/prj-web-site-portfolio-engenharia/" }
+          ]
+        },
+        {
+          title: "📝 Templates",
+          url: "/4-projetos/templates/",
+          children: [
+            { title: "📋 Exemplo Intake", url: "/4-projetos/templates/exemplo_intake_preenchido/" },
+            { title: "⚡ Minimalista", url: "/4-projetos/templates/exemplo_minimalista/" },
+            { title: "🎯 Primeira Cartada", url: "/4-projetos/templates/exemplo_primeira_cartada/" },
+            { title: "🏗️ Template Piloto", url: "/4-projetos/templates/template piloto-exemplo-sistema/" },
+            { title: "🏢 CRM Arquitetos", url: "/4-projetos/templates/template piloto_crm_arquitetos/" }
+          ]
+        }
+      ]
+    },
+    {
+      title: "⚙️ Processos",
+      url: "/5-processos/",
+      icon: "⚙️",
+      children: [
+        { title: "📈 Gestão de Sprints", url: "/5-processos/sistema_gestao_capacidade_sprints/" },
+        { title: "📖 Guia do Sistema", url: "/5-processos/guia_uso_sistema_capacidade/" },
+        { title: "📋 SOPs", url: "/5-processos/sops/" },
+        { title: "⚡ Workflows", url: "/5-processos/workflows/" },
+        { title: "📊 Métricas", url: "/5-processos/metricas/" }
+      ]
+    },
+    {
+      title: "📅 Reuniões",
+      url: "/6-reunioes/",
+      icon: "📅",
+      children: [
+        { title: "🎯 Reunião Executiva", url: "/6-reunioes/2025-08-31-reuniao-executiva-sistema/" },
+        { title: "📊 Análise Pessimista", url: "/6-reunioes/2025-09-01-reuniao-analise-pessimista-projetos/" },
+        { title: "🤖 Criação WhatsBot", url: "/6-reunioes/2025-09-01-reuniao-criacao-projeto-whatsbot/" },
+        { title: "💡 Sistema de Ideias", url: "/6-reunioes/2025-09-01-reuniao-criacao-sistema-geracao-ideias/" },
+        { title: "👔 Conselho", url: "/6-reunioes/conselho/" },
+        { title: "⚡ Operacional", url: "/6-reunioes/operacional/" },
+        { title: "📋 Projetos", url: "/6-reunioes/projetos/" }
+      ]
+    },
+    {
+      title: "🧠 Conhecimento",
+      url: "/7-conhecimento/",
+      icon: "🧠",
+      children: [
+        { title: "🤖 Inteligência Artificial", url: "/7-conhecimento/ia/" },
+        { title: "💻 Tecnologia", url: "/7-conhecimento/tecnologia/" },
+        { title: "📈 Negócios", url: "/7-conhecimento/negocios/" },
+        { title: "🏗️ Processos", url: "/7-conhecimento/processos/" }
+      ]
+    }
+  ]
+};
+
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <div class="content-wrapper">
+      
+      <!-- Breadcrumbs -->
+      
+
+      <!-- Project Header -->
+      <article class="project-page">
+        <header class="project-header">
+          
+          <h1 class="project-title">App Desenvolvimento Cognitivo</h1>
+          
+          
+          <!-- Project Status Bar -->
+          <div class="project-status-bar">
+            
+            <div class="status-badge status-planning">
+              
+              
+              
+              
+              
+              
+            </div>
+            
+            
+            
+            <div class="priority-badge priority-high">
+              🔴 Alta
+              
+              
+              
+            </div>
+            
+            
+            
+            <div class="owner-badge">
+              👤 Pedro Vitor
+            </div>
+            
+          </div>
+        </header>
+
+        <!-- Project Metrics Cards -->
+        
+        <div class="project-metrics">
+          
+          
+          <div class="metric-card budget-card">
+            <div class="metric-icon">💰</div>
+            <div class="metric-content">
+              <div class="metric-label">Orçamento</div>
+              <div class="metric-value">R$ 20.000</div>
+            </div>
+          </div>
+          
+          
+          
+          <div class="metric-card effort-card">
+            <div class="metric-icon">⏱️</div>
+            <div class="metric-content">
+              <div class="metric-label">Esforço</div>
+              <div class="metric-value">12 semanas</div>
+            </div>
+          </div>
+          
+          
+          
+          
+          
+          
+        </div>
+        
+
+        <!-- Project Details Grid -->
+        <div class="project-details">
+          
+          <!-- Main Content -->
+          <div class="project-content">
+            <h1>🧠 <strong>App de Desenvolvimento Cognitivo e Lógico</strong></h1>
 <blockquote>
 <p><em>Aplicativo para treinamento mental abrangente com exercícios de lógica, linguagem, criatividade e inteligência emocional</em></p>
 </blockquote>
@@ -208,7 +493,7 @@
 <h2>📚 <strong>REFERÊNCIAS</strong></h2>
 <h3><strong>Documentação Técnica</strong></h3>
 <ul>
-<li>[[MELHORAR RACIOCINIO_DIARIO_APP]] - Plano completo de desenvolvimento cognitivo</li>
+<li><a href="/stubs/">MELHORAR RACIOCINIO&lowbar;DIARIO&lowbar;APP</a> - Plano completo de desenvolvimento cognitivo</li>
 <li><strong>Base científica</strong>: Neuroplasticidade e desenvolvimento cerebral</li>
 <li><strong>Referências</strong>: Raymond Smullyan, 501 Problems, HOME Program</li>
 </ul>
@@ -255,3 +540,153 @@
 <strong>Última Atualização</strong>: 2025-09-01<br>
 <strong>Status</strong>: 📝 <strong>PLANEJADO - CONTEÚDO PRONTO PARA IMPLEMENTAÇÃO</strong><br>
 <strong>Implementação</strong>: 0% (apenas documentação)</p>
+
+          </div>
+          
+          <!-- Sidebar with metadata -->
+          <div class="project-sidebar">
+            
+            <!-- Project Info -->
+            <div class="info-card">
+              <h3>📊 Informações do Projeto</h3>
+              <div class="info-grid">
+                
+                
+                <div class="info-item">
+                  <span class="info-label">🌍 Segmento:</span>
+                  <span class="info-value">Desenvolvimento Pessoal e Educação</span>
+                </div>
+                
+                
+                
+                <div class="info-item">
+                  <span class="info-label">📋 Tipo:</span>
+                  <span class="info-value">project</span>
+                </div>
+                
+                
+                
+                <div class="info-item">
+                  <span class="info-label">🔒 Compliance:</span>
+                  <span class="info-value">Nível 1</span>
+                </div>
+                
+                
+                
+                
+                
+                <div class="info-item">
+                  <span class="info-label">📅 Criado:</span>
+                  <span class="info-value">2025-09-01</span>
+                </div>
+                
+                
+                
+                <div class="info-item">
+                  <span class="info-label">🔄 Atualizado:</span>
+                  <span class="info-value">2025-09-01</span>
+                </div>
+                
+                
+              </div>
+            </div>
+
+            <!-- IA Assets -->
+            
+            <div class="info-card">
+              <h3>🤖 Recursos de IA</h3>
+              
+              
+              <div class="ia-section">
+                <h4>💬 Prompts</h4>
+                <ul class="ia-list">
+                  
+                  <li>Sistema de exercícios cognitivos personalizados</li>
+                  
+                  <li>Análise de progresso mental</li>
+                  
+                  <li>Geração de rotinas de treinamento</li>
+                  
+                </ul>
+              </div>
+              
+              
+              
+              <div class="ia-section">
+                <h4>🧠 Modelos</h4>
+                <ul class="ia-list">
+                  
+                  <li>Flutter Framework</li>
+                  
+                  <li>Node.js/Express</li>
+                  
+                  <li>SQLite Database</li>
+                  
+                </ul>
+              </div>
+              
+              
+              
+              <div class="ia-section">
+                <h4>📊 Datasets</h4>
+                <ul class="ia-list">
+                  
+                  <li>Base de exercícios cognitivos</li>
+                  
+                  <li>Métricas de progresso mental</li>
+                  
+                </ul>
+              </div>
+              
+            </div>
+            
+
+            <!-- Tags -->
+            
+            <div class="info-card">
+              <h3>🏷️ Tags</h3>
+              <div class="tags-container">
+                
+                <span class="tag tag-projeto">projeto</span>
+                
+                <span class="tag tag-projeto-planning">projeto-planning</span>
+                
+                <span class="tag tag-prioridade-high">prioridade-high</span>
+                
+                <span class="tag tag-desenvolvimento-pessoal-e-educao">desenvolvimento-pessoal-e-educação</span>
+                
+              </div>
+            </div>
+            
+
+          </div>
+        </div>
+
+        <!-- Decision Block -->
+        
+
+      </article>
+    </div>
+  </main>
+
+  <!-- JavaScript -->
+  <script src="/scripts/main.js"></script>
+  <script>
+    // Project-specific JavaScript
+    document.addEventListener('DOMContentLoaded', function() {
+      // Highlight project navigation
+      const projectNav = document.querySelector('.nav-links a[href="/projetos/"]');
+      if (projectNav) {
+        projectNav.classList.add('active');
+      }
+      
+      // Animate metric cards
+      const metricCards = document.querySelectorAll('.metric-card');
+      metricCards.forEach((card, index) => {
+        card.style.animationDelay = `${index * 0.1}s`;
+        card.classList.add('animate-in');
+      });
+    });
+  </script>
+</body>
+</html>

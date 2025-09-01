@@ -137,6 +137,14 @@ module.exports = function (eleventyConfig) {
     return "/" + path + "/";
   });
 
+  // Filtro para formatação de números
+  eleventyConfig.addFilter("number", function(num) {
+    if (num === null || num === undefined || num === '') return '';
+    const numValue = parseFloat(num);
+    if (isNaN(numValue)) return num;
+    return new Intl.NumberFormat("pt-BR").format(numValue);
+  });
+
   // Add shortcodes
   eleventyConfig.addShortcode("year", function () {
     return new Date().getFullYear();
