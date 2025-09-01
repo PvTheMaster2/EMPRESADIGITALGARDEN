@@ -1,10 +1,10 @@
 ---
 created: 2025-09-01T19:58
-updated: 2025-09-01T20:19
+updated: 2025-09-01T20:24
 ---
 # 🌳 Site Structure Outline
 
-**Generated**: 2025-09-01T23:19:27.259Z
+**Generated**: 2025-09-01T23:24:25.890Z
 **Total Pages**: 77
 
 ## 📁 0-DASHBOARD-EXECUTIVO
