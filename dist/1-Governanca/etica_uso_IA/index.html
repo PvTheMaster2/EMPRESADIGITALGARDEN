@@ -46,7 +46,7 @@
   </header>
 
   <!-- Sidebar Navigation -->
-  <nav class="sidebar" id="sidebar">
+  <aside class="sidebar" data-state="closed" aria-hidden="true">
     <div class="sidebar-header">
       <button class="sidebar-toggle" onclick="toggleSidebar()">
         <span class="hamburger"></span>
@@ -66,10 +66,13 @@
         <div id="navigation-tree"></div>
       </div>
     </div>
-  </nav>
+  </aside>
+
+  <!-- Overlay para mobile -->
+  <div class="sidebar-overlay" aria-hidden="true"></div>
 
   <!-- Main Content -->
-  <main class="main-content">
+  <main id="main" class="site-main" tabindex="-1">
     <div class="content-wrapper">
       
       <!-- Breadcrumbs -->
@@ -622,6 +625,7 @@
 
   <!-- JavaScript -->
   <script src="/scripts/main.js"></script>
+  <script src="/scripts/sidebar.js" defer></script>
   <script>
     // Governance-specific JavaScript
     document.addEventListener('DOMContentLoaded', function() {
