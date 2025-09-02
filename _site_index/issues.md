@@ -1,22 +1,22 @@
 ---
 created: 2025-09-01T19:58
-updated: 2025-09-01T22:09
+updated: 2025-09-01T22:11
 ---
 # 🔍 Site Audit Report
 
-**Generated**: 2025-09-02T01:09:28.736Z
+**Generated**: 2025-09-02T01:11:37.670Z
 
 ## 📊 Statistics
 
-- **Total Pages**: 79
-- **Pages without Title**: 28
+- **Total Pages**: 94
+- **Pages without Title**: 43
 - **Pages without H1**: 5
-- **Total Internal Links**: 1086
-- **Total Issues**: 33
+- **Total Internal Links**: 1151
+- **Total Issues**: 48
 
 ## ⚠️ Issues Found
 
-### NO TITLE (28)
+### NO TITLE (43)
 
 - **/.cursor/rules/**: Página sem título definido
 - **/1000 - REUNIOES/30_08-25 REUNIAO INICIAL/10 - Prompt organização atas de reuniao a partir de transcrição /**: Página sem título definido
@@ -43,6 +43,21 @@ updated: 2025-09-01T22:09
 - **/99 - RESOURCES/99 - TEMPLATE/TEMPLATE_R00/**: Página sem título definido
 - **/MAPA-URLS/**: Página sem título definido
 - **/sobre-sistema/**: Página sem título definido
+- **/tags/anlise/**: Página sem título definido
+- **/tags/correo/**: Página sem título definido
+- **/tags/criao/**: Página sem título definido
+- **/tags/estratgia/**: Página sem título definido
+- **/tags/governanca/**: Página sem título definido
+- **/tags/ideias/**: Página sem título definido
+- **/tags/pilotosvalidados/**: Página sem título definido
+- **/tags/projeto/**: Página sem título definido
+- **/tags/projetos/**: Página sem título definido
+- **/tags/projetosandamento/**: Página sem título definido
+- **/tags/projetosativos/**: Página sem título definido
+- **/tags/reunio/**: Página sem título definido
+- **/tags/reunioes/**: Página sem título definido
+- **/tags/sistema/**: Página sem título definido
+- **/tags/whatsbot/**: Página sem título definido
 - **/_site_index/issues/**: Página sem título definido
 - **/_site_index/layouts_analysis/**: Página sem título definido
 - **/_site_index/site_outline/**: Página sem título definido

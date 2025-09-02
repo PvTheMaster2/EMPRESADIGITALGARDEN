@@ -8,11 +8,46 @@
     </h3>
     <div class="tags-list">
       {% for tag in tags %}
-        {% if tag != 'template' %}
-        <span class="tag tag-{{ tag | slugify }}">{{ tag }}</span>
+        {% if tag != 'template' and tag != 'all' %}
+        <a href="/tags/{{ tag | slugify }}/" class="tag tag-{{ tag | slugify }}">{{ tag }}</a>
         {% endif %}
       {% endfor %}
     </div>
+  </section>
+  {% endif %}
+
+  <!-- Backlinks automáticos -->
+  {% set currentUrl = page.url %}
+  {% set currentTitle = title %}
+  {% set autoBacklinks = [] %}
+  
+  {% for item in collections.all %}
+    {% if item.url != currentUrl and item.templateContent %}
+      {% set content = item.templateContent | striptags %}
+      {% if content.includes(currentTitle) or content.includes(page.fileSlug) %}
+        {% set autoBacklinks = (autoBacklinks.push(item), autoBacklinks) %}
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+  
+  {% if autoBacklinks.length > 0 %}
+  <section class="backlinks-section">
+    <h3 class="sidebar-title">
+      <span class="sidebar-icon">🔗</span>
+      Referenciado em
+    </h3>
+    <ul class="backlinks-list">
+      {% for link in autoBacklinks %}
+      <li class="backlink-item">
+        <a href="{{ link.url }}" class="backlink-link">
+          {{ link.data.title or link.fileSlug }}
+        </a>
+        {% if link.data.type %}
+        <span class="backlink-type">{{ link.data.type }}</span>
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ul>
   </section>
   {% endif %}
 

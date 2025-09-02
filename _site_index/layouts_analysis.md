@@ -1,14 +1,14 @@
 ---
 created: 2025-09-01T19:58
-updated: 2025-09-01T22:09
+updated: 2025-09-01T22:11
 ---
 # 🎨 Layouts Analysis
 
-**Generated**: 2025-09-02T01:09:28.738Z
+**Generated**: 2025-09-02T01:11:37.672Z
 
 ## 📊 Layout Distribution
 
-### BASE Layout (47 pages)
+### BASE Layout (59 pages)
 
 **Example Page**: /.cursor/rules/
 **Title**: 
@@ -23,7 +23,7 @@ updated: 2025-09-01T22:09
 - /0-Dashboard-Executivo/KPIs-Principais/ - "KPIs Principais - Digital Garden Empresarial"
 - /0-Dashboard-Executivo/Sistema_Metricas_Avancadas/ - "Sistema Metricas Avancadas - Digital Garden Empresarial"
 - /1000 - REUNIOES/30_08-25 REUNIAO INICIAL/10 - Prompt organização atas de reuniao a partir de transcrição / - ""
-- ... and 37 more
+- ... and 49 more
 
 ### DASHBOARD Layout (1 pages)
 
@@ -32,7 +32,7 @@ updated: 2025-09-01T22:09
 **Pages using this layout**:
 - / - "Dashboard Executivo - Home - Digital Garden Empresarial"
 
-### GOVERNANCA Layout (7 pages)
+### GOVERNANCA Layout (8 pages)
 
 **Example Page**: /1-Governanca/Acordo_Socios_Final/
 **Title**: Acordo De Socios Final - Digital Garden Empresarial
@@ -44,8 +44,9 @@ updated: 2025-09-01T22:09
 - /1-Governanca/Manual_Treinamento_Compliance/ - "Manual De Treinamento Compliance - Digital Garden Empresarial"
 - /1-Governanca/Playbook_Comercial_v0/ - "Playbook Comercial V0 - Digital Garden Empresarial"
 - /1-Governanca/README/ - "Governança Empresarial - Digital Garden Empresarial"
+- /tags/governanca/ - ""
 
-### PROJETO Layout (19 pages)
+### PROJETO Layout (20 pages)
 
 **Example Page**: /4-Projetos/Ativos/PRJ-AERALYN/
 **Title**: AERALYN - Digital Garden Empresarial
@@ -60,9 +61,9 @@ updated: 2025-09-01T22:09
 - /4-Projetos/Em-Desenvolvimento/PRJ-Dev-WhatsBot-Academia/ - "Dev WhatsBot Academia - Digital Garden Empresarial"
 - /4-Projetos/Em-Desenvolvimento/PRJ-Web-Site-Portfolio-Engenharia/ - "Web Site Portfolio Engenharia - Digital Garden Empresarial"
 - /4-Projetos/README/ - "Portfólio de Projetos - Digital Garden Empresarial"
-- ... and 9 more
+- ... and 10 more
 
-### REUNIAO Layout (5 pages)
+### REUNIAO Layout (6 pages)
 
 **Example Page**: /6-Reunioes/2025-08-31-Reuniao-Executiva-Sistema/
 **Title**: ReuniãO Executiva Sistema - Digital Garden Empresarial
@@ -72,21 +73,22 @@ updated: 2025-09-01T22:09
 - /6-Reunioes/2025-09-01-Reuniao-Criacao-Projeto-WhatsBot/ - "ReuniãO Criacao Projeto WhatsBot - Digital Garden Empresarial"
 - /6-Reunioes/2025-09-01-Reuniao-Criacao-Sistema-Geracao-Ideias/ - "ReuniãO Criacao Sistema Geracao Ideias - Digital Garden Empresarial"
 - /6-Reunioes/README/ - "Reuniões e Atas - Digital Garden Empresarial"
+- /tags/reunioes/ - ""
 
 ## 💡 Layout Recommendations
 
 ### Projeto Layout
-- **Current**: 19 pages using base layout
+- **Current**: 20 pages using base layout
 - **Recommendation**: Create specific projeto.njk layout
 - **Fields to highlight**: status, budget, effort_weeks, owner
 
 ### Reunião Layout
-- **Current**: 5 pages using base layout
+- **Current**: 6 pages using base layout
 - **Recommendation**: Create specific reuniao.njk layout
 - **Fields to highlight**: meeting_date, participants, duration
 
 ### Governança Layout
-- **Current**: 7 pages using base layout
+- **Current**: 8 pages using base layout
 - **Recommendation**: Create specific governanca.njk layout
 - **Fields to highlight**: version, legal_review, compliance_level
 

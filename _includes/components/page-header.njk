@@ -6,8 +6,8 @@
     {% if tags and tags.length > 0 %}
     <div class="page-tags">
       {% for tag in tags %}
-        {% if tag != 'template' %}
-        <span class="tag tag-{{ tag | slugify }}">{{ tag }}</span>
+        {% if tag != 'template' and tag != 'all' %}
+        <a href="/tags/{{ tag | slugify }}/" class="tag tag-{{ tag | slugify }}">{{ tag }}</a>
         {% endif %}
       {% endfor %}
     </div>

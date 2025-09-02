@@ -1,0 +1,74 @@
+---
+pagination:
+  data: collections
+  size: 1
+  alias: tag
+  filter:
+    - all
+    - nav
+    - post
+    - posts
+    - tagList
+permalink: /tags/{{ tag | slugify }}/
+eleventyComputed:
+  title: "Tag: {{ tag }}"
+---
+
+<div class="tag-page">
+  <header class="page-header">
+    <h1>🏷️ Tag: {{ tag }}</h1>
+    <p class="tag-description">
+      Páginas marcadas com <span class="tag tag-{{ tag | slugify }}">{{ tag }}</span>
+    </p>
+  </header>
+
+  <div class="tagged-content">
+    {% set taggedPages = collections[tag] %}
+    {% if taggedPages.length > 0 %}
+    
+    <div class="content-stats">
+      <p><strong>{{ taggedPages.length }}</strong> página{% if taggedPages.length > 1 %}s{% endif %} encontrada{% if taggedPages.length > 1 %}s{% endif %}</p>
+    </div>
+
+    <div class="tagged-pages-grid">
+      {% for page in taggedPages %}
+      <article class="page-card">
+        <header class="card-header">
+          <h3 class="card-title">
+            <a href="{{ page.url }}">{{ page.data.title or page.fileSlug }}</a>
+          </h3>
+          {% if page.data.status %}
+          <span class="status status-{{ page.data.status | slugify }}">{{ page.data.status }}</span>
+          {% endif %}
+        </header>
+        
+        <div class="card-meta">
+          {% if page.data.type %}
+          <span class="page-type">📄 {{ page.data.type }}</span>
+          {% endif %}
+          
+          {% if page.data.created %}
+          <span class="page-date">📅 {{ page.data.created | date("dd/MM/yyyy") }}</span>
+          {% endif %}
+        </div>
+        
+        {% if page.templateContent %}
+        <div class="card-excerpt">
+          {{ page.templateContent | striptags | truncate(150) }}
+        </div>
+        {% endif %}
+      </article>
+      {% endfor %}
+    </div>
+    
+    {% else %}
+    <div class="empty-state">
+      <p>Nenhuma página encontrada com a tag <strong>{{ tag }}</strong>.</p>
+    </div>
+    {% endif %}
+  </div>
+
+  <nav class="tag-navigation">
+    <a href="/" class="btn btn-secondary">← Voltar ao Início</a>
+  </nav>
+</div>

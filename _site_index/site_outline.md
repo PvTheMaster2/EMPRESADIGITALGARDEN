@@ -1,11 +1,11 @@
 ---
 created: 2025-09-01T19:58
-updated: 2025-09-01T22:09
+updated: 2025-09-01T22:11
 ---
 # 🌳 Site Structure Outline
 
-**Generated**: 2025-09-02T01:09:28.732Z
-**Total Pages**: 79
+**Generated**: 2025-09-02T01:11:37.668Z
+**Total Pages**: 94
 
 ## 📁 .CURSOR
 
@@ -209,4 +209,37 @@ updated: 2025-09-01T22:09
 
   - **/sobre-sistema/** - "" (base)
     - H1: 🏢 SISTEMA EMPRESARIAL MULTISÓCIOS
+
+## 📁 TAGS
+
+    - **/tags/anlise/** - "" (base)
+      - H1: 🏷️ Tag: análise
+    - **/tags/correo/** - "" (base)
+      - H1: 🏷️ Tag: correção
+    - **/tags/criao/** - "" (base)
+      - H1: 🏷️ Tag: criação
+    - **/tags/estratgia/** - "" (base)
+      - H1: 🏷️ Tag: estratégia
+    - **/tags/governanca/** - "" (governanca)
+      - H1: 🏷️ Tag: governanca
+    - **/tags/ideias/** - "" (base)
+      - H1: 🏷️ Tag: ideias
+    - **/tags/pilotosvalidados/** - "" (base)
+      - H1: 🏷️ Tag: pilotos_validados
+    - **/tags/projeto/** - "" (base)
+      - H1: 🏷️ Tag: projeto
+    - **/tags/projetos/** - "" (projeto)
+      - H1: 🏷️ Tag: projetos
+    - **/tags/projetosandamento/** - "" (base)
+      - H1: 🏷️ Tag: projetos_andamento
+    - **/tags/projetosativos/** - "" (base)
+      - H1: 🏷️ Tag: projetos_ativos
+    - **/tags/reunio/** - "" (base)
+      - H1: 🏷️ Tag: reunião
+    - **/tags/reunioes/** - "" (reuniao)
+      - H1: 🏷️ Tag: reunioes
+    - **/tags/sistema/** - "" (base)
+      - H1: 🏷️ Tag: sistema
+    - **/tags/whatsbot/** - "" (base)
+      - H1: 🏷️ Tag: whatsbot
 

@@ -20341,6 +20341,866 @@
       "wordCount": 0
     },
     {
+      "url": "/tags/anlise/",
+      "filePath": "dist\\tags\\anlise\\index.html",
+      "title": "",
+      "h1": "🏷️ Tag: análise",
+      "metaDescription": "",
+      "headings": [
+        {
+          "level": 1,
+          "text": "🏷️ Tag: análise",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "ReuniãO Analise Pessimista Projetos",
+          "id": null
+        }
+      ],
+      "links": [
+        {
+          "text": "ReuniãO Analise Pessimista Projetos",
+          "href": "/6-Reunioes/2025-09-01-Reuniao-Analise-Pessimista-Projetos/",
+          "isInternal": true
+        },
+        {
+          "text": "← Voltar ao Início",
+          "href": "/",
+          "isInternal": true
+        }
+      ],
+      "pageMetadata": {},
+      "layoutType": "base",
+      "wordCount": 0
+    },
+    {
+      "url": "/tags/correo/",
+      "filePath": "dist\\tags\\correo\\index.html",
+      "title": "",
+      "h1": "🏷️ Tag: correção",
+      "metaDescription": "",
+      "headings": [
+        {
+          "level": 1,
+          "text": "🏷️ Tag: correção",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "ReuniãO Analise Pessimista Projetos",
+          "id": null
+        }
+      ],
+      "links": [
+        {
+          "text": "ReuniãO Analise Pessimista Projetos",
+          "href": "/6-Reunioes/2025-09-01-Reuniao-Analise-Pessimista-Projetos/",
+          "isInternal": true
+        },
+        {
+          "text": "← Voltar ao Início",
+          "href": "/",
+          "isInternal": true
+        }
+      ],
+      "pageMetadata": {},
+      "layoutType": "base",
+      "wordCount": 0
+    },
+    {
+      "url": "/tags/criao/",
+      "filePath": "dist\\tags\\criao\\index.html",
+      "title": "",
+      "h1": "🏷️ Tag: criação",
+      "metaDescription": "",
+      "headings": [
+        {
+          "level": 1,
+          "text": "🏷️ Tag: criação",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "ReuniãO Criacao Projeto WhatsBot",
+          "id": null
+        }
+      ],
+      "links": [
+        {
+          "text": "ReuniãO Criacao Projeto WhatsBot",
+          "href": "/6-Reunioes/2025-09-01-Reuniao-Criacao-Projeto-WhatsBot/",
+          "isInternal": true
+        },
+        {
+          "text": "← Voltar ao Início",
+          "href": "/",
+          "isInternal": true
+        }
+      ],
+      "pageMetadata": {},
+      "layoutType": "base",
+      "wordCount": 0
+    },
+    {
+      "url": "/tags/estratgia/",
+      "filePath": "dist\\tags\\estratgia\\index.html",
+      "title": "",
+      "h1": "🏷️ Tag: estratégia",
+      "metaDescription": "",
+      "headings": [
+        {
+          "level": 1,
+          "text": "🏷️ Tag: estratégia",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "ReuniãO Criacao Sistema Geracao Ideias",
+          "id": null
+        }
+      ],
+      "links": [
+        {
+          "text": "ReuniãO Criacao Sistema Geracao Ideias",
+          "href": "/6-Reunioes/2025-09-01-Reuniao-Criacao-Sistema-Geracao-Ideias/",
+          "isInternal": true
+        },
+        {
+          "text": "← Voltar ao Início",
+          "href": "/",
+          "isInternal": true
+        }
+      ],
+      "pageMetadata": {},
+      "layoutType": "base",
+      "wordCount": 0
+    },
+    {
+      "url": "/tags/governanca/",
+      "filePath": "dist\\tags\\governanca\\index.html",
+      "title": "",
+      "h1": "🏷️ Tag: governanca",
+      "metaDescription": "",
+      "headings": [
+        {
+          "level": 1,
+          "text": "🏷️ Tag: governanca",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Acordo De Socios Final",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Log de Compliance",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Etica Uso IA",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "FAQ   Compliance",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Manual De Treinamento Compliance",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Playbook Comercial V0",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Governança Empresarial",
+          "id": null
+        }
+      ],
+      "links": [
+        {
+          "text": "Acordo De Socios Final",
+          "href": "/1-Governanca/Acordo_Socios_Final/",
+          "isInternal": true
+        },
+        {
+          "text": "Log de Compliance",
+          "href": "/1-Governanca/Compliance_Log/",
+          "isInternal": true
+        },
+        {
+          "text": "Etica Uso IA",
+          "href": "/1-Governanca/etica_uso_IA/",
+          "isInternal": true
+        },
+        {
+          "text": "FAQ   Compliance",
+          "href": "/1-Governanca/FAQ_Compliance/",
+          "isInternal": true
+        },
+        {
+          "text": "Manual De Treinamento Compliance",
+          "href": "/1-Governanca/Manual_Treinamento_Compliance/",
+          "isInternal": true
+        },
+        {
+          "text": "Playbook Comercial V0",
+          "href": "/1-Governanca/Playbook_Comercial_v0/",
+          "isInternal": true
+        },
+        {
+          "text": "Governança Empresarial",
+          "href": "/1-Governanca/README/",
+          "isInternal": true
+        },
+        {
+          "text": "← Voltar ao Início",
+          "href": "/",
+          "isInternal": true
+        }
+      ],
+      "pageMetadata": {},
+      "layoutType": "governanca",
+      "wordCount": 0
+    },
+    {
+      "url": "/tags/ideias/",
+      "filePath": "dist\\tags\\ideias\\index.html",
+      "title": "",
+      "h1": "🏷️ Tag: ideias",
+      "metaDescription": "",
+      "headings": [
+        {
+          "level": 1,
+          "text": "🏷️ Tag: ideias",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "ReuniãO Criacao Sistema Geracao Ideias",
+          "id": null
+        }
+      ],
+      "links": [
+        {
+          "text": "ReuniãO Criacao Sistema Geracao Ideias",
+          "href": "/6-Reunioes/2025-09-01-Reuniao-Criacao-Sistema-Geracao-Ideias/",
+          "isInternal": true
+        },
+        {
+          "text": "← Voltar ao Início",
+          "href": "/",
+          "isInternal": true
+        }
+      ],
+      "pageMetadata": {},
+      "layoutType": "base",
+      "wordCount": 0
+    },
+    {
+      "url": "/tags/pilotosvalidados/",
+      "filePath": "dist\\tags\\pilotosvalidados\\index.html",
+      "title": "",
+      "h1": "🏷️ Tag: pilotos_validados",
+      "metaDescription": "",
+      "headings": [
+        {
+          "level": 1,
+          "text": "🏷️ Tag: pilotos_validados",
+          "id": null
+        }
+      ],
+      "links": [
+        {
+          "text": "← Voltar ao Início",
+          "href": "/",
+          "isInternal": true
+        }
+      ],
+      "pageMetadata": {},
+      "layoutType": "base",
+      "wordCount": 0
+    },
+    {
+      "url": "/tags/projeto/",
+      "filePath": "dist\\tags\\projeto\\index.html",
+      "title": "",
+      "h1": "🏷️ Tag: projeto",
+      "metaDescription": "",
+      "headings": [
+        {
+          "level": 1,
+          "text": "🏷️ Tag: projeto",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Assistente de Transcrição Jurídica com IA",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "ReuniãO Criacao Projeto WhatsBot",
+          "id": null
+        }
+      ],
+      "links": [
+        {
+          "text": "Assistente de Transcrição Jurídica com IA",
+          "href": "/4-Projetos/Templates/TEMPLATE 2025-01-20 — projeto — Assistente-Transcricao-Juridica/",
+          "isInternal": true
+        },
+        {
+          "text": "ReuniãO Criacao Projeto WhatsBot",
+          "href": "/6-Reunioes/2025-09-01-Reuniao-Criacao-Projeto-WhatsBot/",
+          "isInternal": true
+        },
+        {
+          "text": "← Voltar ao Início",
+          "href": "/",
+          "isInternal": true
+        }
+      ],
+      "pageMetadata": {},
+      "layoutType": "base",
+      "wordCount": 0
+    },
+    {
+      "url": "/tags/projetos/",
+      "filePath": "dist\\tags\\projetos\\index.html",
+      "title": "",
+      "h1": "🏷️ Tag: projetos",
+      "metaDescription": "",
+      "headings": [
+        {
+          "level": 1,
+          "text": "🏷️ Tag: projetos",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Assistente de Transcrição Jurídica com IA",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Portfólio de Projetos",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Templates de Projetos",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "AERALYN",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "App Desenvolvimento Cognitivo",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Curso IA Inteligente",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Nostalgia Musical",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Plataforma Cursos",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Trip Match",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Vault Empresarial",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Dev WhatsBot Academia",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Web Site Portfolio Engenharia",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Exemplo Intake Preenchido",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Exemplo Minimalista",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Exemplo Primeira Cartada",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "README",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "TEMPLATE Piloto Exemplo Sistema",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "TEMPLATE Piloto CRM Arquitetos",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "TEMPLATE Projeto Exemplo Sistema",
+          "id": null
+        }
+      ],
+      "links": [
+        {
+          "text": "Assistente de Transcrição Jurídica com IA",
+          "href": "/4-Projetos/Templates/TEMPLATE 2025-01-20 — projeto — Assistente-Transcricao-Juridica/",
+          "isInternal": true
+        },
+        {
+          "text": "Portfólio de Projetos",
+          "href": "/4-Projetos/README/",
+          "isInternal": true
+        },
+        {
+          "text": "Templates de Projetos",
+          "href": "/projetos/templates-guia/",
+          "isInternal": true
+        },
+        {
+          "text": "AERALYN",
+          "href": "/4-Projetos/Ativos/PRJ-AERALYN/",
+          "isInternal": true
+        },
+        {
+          "text": "App Desenvolvimento Cognitivo",
+          "href": "/4-Projetos/Ativos/PRJ-App-Desenvolvimento-Cognitivo/",
+          "isInternal": true
+        },
+        {
+          "text": "Curso IA Inteligente",
+          "href": "/4-Projetos/Ativos/PRJ-Curso-IA-Inteligente/",
+          "isInternal": true
+        },
+        {
+          "text": "Nostalgia Musical",
+          "href": "/4-Projetos/Ativos/PRJ-Nostalgia-Musical/",
+          "isInternal": true
+        },
+        {
+          "text": "Plataforma Cursos",
+          "href": "/4-Projetos/Ativos/PRJ-Plataforma-Cursos/",
+          "isInternal": true
+        },
+        {
+          "text": "Trip Match",
+          "href": "/4-Projetos/Ativos/PRJ-Trip-Match/",
+          "isInternal": true
+        },
+        {
+          "text": "Vault Empresarial",
+          "href": "/4-Projetos/Ativos/PRJ-Vault-Empresarial/",
+          "isInternal": true
+        },
+        {
+          "text": "Dev WhatsBot Academia",
+          "href": "/4-Projetos/Em-Desenvolvimento/PRJ-Dev-WhatsBot-Academia/",
+          "isInternal": true
+        },
+        {
+          "text": "Web Site Portfolio Engenharia",
+          "href": "/4-Projetos/Em-Desenvolvimento/PRJ-Web-Site-Portfolio-Engenharia/",
+          "isInternal": true
+        },
+        {
+          "text": "Exemplo Intake Preenchido",
+          "href": "/4-Projetos/Templates/Exemplo_Intake_Preenchido/",
+          "isInternal": true
+        },
+        {
+          "text": "Exemplo Minimalista",
+          "href": "/4-Projetos/Templates/Exemplo_Minimalista/",
+          "isInternal": true
+        },
+        {
+          "text": "Exemplo Primeira Cartada",
+          "href": "/4-Projetos/Templates/Exemplo_Primeira_Cartada/",
+          "isInternal": true
+        },
+        {
+          "text": "README",
+          "href": "/4-Projetos/Templates/README/",
+          "isInternal": true
+        },
+        {
+          "text": "TEMPLATE Piloto Exemplo Sistema",
+          "href": "/4-Projetos/Templates/TEMPLATE Piloto-Exemplo-Sistema/",
+          "isInternal": true
+        },
+        {
+          "text": "TEMPLATE Piloto CRM Arquitetos",
+          "href": "/4-Projetos/Templates/TEMPLATE Piloto_CRM_Arquitetos/",
+          "isInternal": true
+        },
+        {
+          "text": "TEMPLATE Projeto Exemplo Sistema",
+          "href": "/4-Projetos/Templates/TEMPLATE Projeto-Exemplo-Sistema/",
+          "isInternal": true
+        },
+        {
+          "text": "← Voltar ao Início",
+          "href": "/",
+          "isInternal": true
+        }
+      ],
+      "pageMetadata": {},
+      "layoutType": "projeto",
+      "wordCount": 0
+    },
+    {
+      "url": "/tags/projetosandamento/",
+      "filePath": "dist\\tags\\projetosandamento\\index.html",
+      "title": "",
+      "h1": "🏷️ Tag: projetos_andamento",
+      "metaDescription": "",
+      "headings": [
+        {
+          "level": 1,
+          "text": "🏷️ Tag: projetos_andamento",
+          "id": null
+        }
+      ],
+      "links": [
+        {
+          "text": "← Voltar ao Início",
+          "href": "/",
+          "isInternal": true
+        }
+      ],
+      "pageMetadata": {},
+      "layoutType": "base",
+      "wordCount": 0
+    },
+    {
+      "url": "/tags/projetosativos/",
+      "filePath": "dist\\tags\\projetosativos\\index.html",
+      "title": "",
+      "h1": "🏷️ Tag: projetos_ativos",
+      "metaDescription": "",
+      "headings": [
+        {
+          "level": 1,
+          "text": "🏷️ Tag: projetos_ativos",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "AERALYN",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "App Desenvolvimento Cognitivo",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Curso IA Inteligente",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Nostalgia Musical",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Plataforma Cursos",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Trip Match",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Vault Empresarial",
+          "id": null
+        }
+      ],
+      "links": [
+        {
+          "text": "AERALYN",
+          "href": "/4-Projetos/Ativos/PRJ-AERALYN/",
+          "isInternal": true
+        },
+        {
+          "text": "App Desenvolvimento Cognitivo",
+          "href": "/4-Projetos/Ativos/PRJ-App-Desenvolvimento-Cognitivo/",
+          "isInternal": true
+        },
+        {
+          "text": "Curso IA Inteligente",
+          "href": "/4-Projetos/Ativos/PRJ-Curso-IA-Inteligente/",
+          "isInternal": true
+        },
+        {
+          "text": "Nostalgia Musical",
+          "href": "/4-Projetos/Ativos/PRJ-Nostalgia-Musical/",
+          "isInternal": true
+        },
+        {
+          "text": "Plataforma Cursos",
+          "href": "/4-Projetos/Ativos/PRJ-Plataforma-Cursos/",
+          "isInternal": true
+        },
+        {
+          "text": "Trip Match",
+          "href": "/4-Projetos/Ativos/PRJ-Trip-Match/",
+          "isInternal": true
+        },
+        {
+          "text": "Vault Empresarial",
+          "href": "/4-Projetos/Ativos/PRJ-Vault-Empresarial/",
+          "isInternal": true
+        },
+        {
+          "text": "← Voltar ao Início",
+          "href": "/",
+          "isInternal": true
+        }
+      ],
+      "pageMetadata": {},
+      "layoutType": "base",
+      "wordCount": 0
+    },
+    {
+      "url": "/tags/reunio/",
+      "filePath": "dist\\tags\\reunio\\index.html",
+      "title": "",
+      "h1": "🏷️ Tag: reunião",
+      "metaDescription": "",
+      "headings": [
+        {
+          "level": 1,
+          "text": "🏷️ Tag: reunião",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "ReuniãO Analise Pessimista Projetos",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "ReuniãO Criacao Projeto WhatsBot",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "ReuniãO Criacao Sistema Geracao Ideias",
+          "id": null
+        }
+      ],
+      "links": [
+        {
+          "text": "ReuniãO Analise Pessimista Projetos",
+          "href": "/6-Reunioes/2025-09-01-Reuniao-Analise-Pessimista-Projetos/",
+          "isInternal": true
+        },
+        {
+          "text": "ReuniãO Criacao Projeto WhatsBot",
+          "href": "/6-Reunioes/2025-09-01-Reuniao-Criacao-Projeto-WhatsBot/",
+          "isInternal": true
+        },
+        {
+          "text": "ReuniãO Criacao Sistema Geracao Ideias",
+          "href": "/6-Reunioes/2025-09-01-Reuniao-Criacao-Sistema-Geracao-Ideias/",
+          "isInternal": true
+        },
+        {
+          "text": "← Voltar ao Início",
+          "href": "/",
+          "isInternal": true
+        }
+      ],
+      "pageMetadata": {},
+      "layoutType": "base",
+      "wordCount": 0
+    },
+    {
+      "url": "/tags/reunioes/",
+      "filePath": "dist\\tags\\reunioes\\index.html",
+      "title": "",
+      "h1": "🏷️ Tag: reunioes",
+      "metaDescription": "",
+      "headings": [
+        {
+          "level": 1,
+          "text": "🏷️ Tag: reunioes",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "ReuniãO Executiva Sistema",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "ReuniãO Analise Pessimista Projetos",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "ReuniãO Criacao Projeto WhatsBot",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "ReuniãO Criacao Sistema Geracao Ideias",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Reuniões e Atas",
+          "id": null
+        }
+      ],
+      "links": [
+        {
+          "text": "ReuniãO Executiva Sistema",
+          "href": "/6-Reunioes/2025-08-31-Reuniao-Executiva-Sistema/",
+          "isInternal": true
+        },
+        {
+          "text": "ReuniãO Analise Pessimista Projetos",
+          "href": "/6-Reunioes/2025-09-01-Reuniao-Analise-Pessimista-Projetos/",
+          "isInternal": true
+        },
+        {
+          "text": "ReuniãO Criacao Projeto WhatsBot",
+          "href": "/6-Reunioes/2025-09-01-Reuniao-Criacao-Projeto-WhatsBot/",
+          "isInternal": true
+        },
+        {
+          "text": "ReuniãO Criacao Sistema Geracao Ideias",
+          "href": "/6-Reunioes/2025-09-01-Reuniao-Criacao-Sistema-Geracao-Ideias/",
+          "isInternal": true
+        },
+        {
+          "text": "Reuniões e Atas",
+          "href": "/6-Reunioes/README/",
+          "isInternal": true
+        },
+        {
+          "text": "← Voltar ao Início",
+          "href": "/",
+          "isInternal": true
+        }
+      ],
+      "pageMetadata": {},
+      "layoutType": "reuniao",
+      "wordCount": 0
+    },
+    {
+      "url": "/tags/sistema/",
+      "filePath": "dist\\tags\\sistema\\index.html",
+      "title": "",
+      "h1": "🏷️ Tag: sistema",
+      "metaDescription": "",
+      "headings": [
+        {
+          "level": 1,
+          "text": "🏷️ Tag: sistema",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "ReuniãO Criacao Sistema Geracao Ideias",
+          "id": null
+        }
+      ],
+      "links": [
+        {
+          "text": "ReuniãO Criacao Sistema Geracao Ideias",
+          "href": "/6-Reunioes/2025-09-01-Reuniao-Criacao-Sistema-Geracao-Ideias/",
+          "isInternal": true
+        },
+        {
+          "text": "← Voltar ao Início",
+          "href": "/",
+          "isInternal": true
+        }
+      ],
+      "pageMetadata": {},
+      "layoutType": "base",
+      "wordCount": 0
+    },
+    {
+      "url": "/tags/whatsbot/",
+      "filePath": "dist\\tags\\whatsbot\\index.html",
+      "title": "",
+      "h1": "🏷️ Tag: whatsbot",
+      "metaDescription": "",
+      "headings": [
+        {
+          "level": 1,
+          "text": "🏷️ Tag: whatsbot",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "ReuniãO Criacao Projeto WhatsBot",
+          "id": null
+        }
+      ],
+      "links": [
+        {
+          "text": "ReuniãO Criacao Projeto WhatsBot",
+          "href": "/6-Reunioes/2025-09-01-Reuniao-Criacao-Projeto-WhatsBot/",
+          "isInternal": true
+        },
+        {
+          "text": "← Voltar ao Início",
+          "href": "/",
+          "isInternal": true
+        }
+      ],
+      "pageMetadata": {},
+      "layoutType": "base",
+      "wordCount": 0
+    },
+    {
       "url": "/_site_index/issues/",
       "filePath": "dist\\_site_index\\issues\\index.html",
       "title": "",
@@ -20557,11 +21417,11 @@
   ],
   "structure": {},
   "stats": {
-    "totalPages": 79,
-    "pagesWithoutTitle": 28,
+    "totalPages": 94,
+    "pagesWithoutTitle": 43,
     "pagesWithoutH1": 5,
     "brokenLinks": 0,
-    "totalLinks": 1086
+    "totalLinks": 1151
   },
   "issues": [
     {
@@ -20712,6 +21572,81 @@
     {
       "type": "no_title",
       "url": "/sobre-sistema/",
+      "message": "Página sem título definido"
+    },
+    {
+      "type": "no_title",
+      "url": "/tags/anlise/",
+      "message": "Página sem título definido"
+    },
+    {
+      "type": "no_title",
+      "url": "/tags/correo/",
+      "message": "Página sem título definido"
+    },
+    {
+      "type": "no_title",
+      "url": "/tags/criao/",
+      "message": "Página sem título definido"
+    },
+    {
+      "type": "no_title",
+      "url": "/tags/estratgia/",
+      "message": "Página sem título definido"
+    },
+    {
+      "type": "no_title",
+      "url": "/tags/governanca/",
+      "message": "Página sem título definido"
+    },
+    {
+      "type": "no_title",
+      "url": "/tags/ideias/",
+      "message": "Página sem título definido"
+    },
+    {
+      "type": "no_title",
+      "url": "/tags/pilotosvalidados/",
+      "message": "Página sem título definido"
+    },
+    {
+      "type": "no_title",
+      "url": "/tags/projeto/",
+      "message": "Página sem título definido"
+    },
+    {
+      "type": "no_title",
+      "url": "/tags/projetos/",
+      "message": "Página sem título definido"
+    },
+    {
+      "type": "no_title",
+      "url": "/tags/projetosandamento/",
+      "message": "Página sem título definido"
+    },
+    {
+      "type": "no_title",
+      "url": "/tags/projetosativos/",
+      "message": "Página sem título definido"
+    },
+    {
+      "type": "no_title",
+      "url": "/tags/reunio/",
+      "message": "Página sem título definido"
+    },
+    {
+      "type": "no_title",
+      "url": "/tags/reunioes/",
+      "message": "Página sem título definido"
+    },
+    {
+      "type": "no_title",
+      "url": "/tags/sistema/",
+      "message": "Página sem título definido"
+    },
+    {
+      "type": "no_title",
+      "url": "/tags/whatsbot/",
       "message": "Página sem título definido"
     },
     {
