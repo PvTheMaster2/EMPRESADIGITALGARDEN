@@ -2,7 +2,7 @@
 layout: base.njk
 title: Sidebar Self Test
 created: 2025-09-01T21:18
-updated: 2025-09-01T21:22
+updated: 2025-09-01T21:31
 ---
 
 <button class="mobile-sidebar-toggle" onclick="toggleSidebar()">🔧 Abrir/Fechar Sidebar</button>
