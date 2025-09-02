@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="theme-dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAQ   Compliance - Digital Garden Empresarial</title>
+  <meta name="description" content="Sistema de Gestão de Conhecimento Empresarial" />
+  
+  <!-- CSS do tema Obsidian e customizações -->
+  <link rel="stylesheet" href="/styles/main.css" />
+  <link rel="stylesheet" href="/styles/sidebar.css" />
+  <link rel="stylesheet" href="/styles/governanca.css" />
+  
+  <!-- Favicon e meta tags para PWA -->
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+  <meta name="theme-color" content="#1e1e1e" />
+</head>
+<body class="layout-governanca">
+  
+  <header class="site-header">
+    <nav class="main-navigation">
+      <div class="nav-brand">
+        <button class="mobile-sidebar-toggle" onclick="toggleSidebar()">
+          <span class="hamburger"></span>
+        </button>
+        <a href="/" class="brand-link">
+          🌱 Digital Garden Empresarial
+        </a>
+      </div>
+      
+      <div class="nav-links">
+        <a href="/">Dashboard</a>
+        <a href="/1-Governanca/README/" class="active">Governança</a>
+        <a href="/4-Projetos/README/">Projetos</a>
+        <a href="/2-Equipes/README/">Equipes</a>
+        <a href="/5-Processos/README/">Processos</a>
+        <a href="/6-Reunioes/README/">Reuniões</a>
+        <a href="/7-Conhecimento/README/">Conhecimento</a>
+      </div>
+      
+      <div class="nav-tools">
+        <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
+        <button class="search-toggle" onclick="toggleSearch()">🔍</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Sidebar Navigation -->
+  <aside class="sidebar" data-state="closed" aria-hidden="true">
+    <div class="sidebar-header">
+      <button class="sidebar-toggle" onclick="toggleSidebar()">
+        <span class="hamburger"></span>
+      </button>
+      <div class="sidebar-brand">
+        <a href="/" class="brand-link">🌱 Digital Garden</a>
+      </div>
+    </div>
+    
+    <div class="sidebar-content">
+      <div class="sidebar-search">
+        <input type="search" placeholder="Buscar páginas..." class="search-input" id="sidebar-search">
+      </div>
+      
+      <div class="sidebar-tree">
+        <!-- Navegação será carregada via JavaScript -->
+        <div id="navigation-tree"></div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Overlay para mobile -->
+  <div class="sidebar-overlay" aria-hidden="true"></div>
+
+  <!-- Main Content -->
+  <main id="main" class="site-main" tabindex="-1">
+    <div class="content-wrapper">
+      
+      <!-- Breadcrumbs -->
+      
+
+      <!-- Governance Header -->
+      <article class="governance-page">
+        <header class="governance-header">
+          
+          <h1 class="governance-title">FAQ   Compliance</h1>
+          
+          
+          <!-- Document Status Bar -->
+          <div class="governance-status-bar">
+            
+            <div class="status-badge status-active">
+              
+              
+              
+              
+              
+            </div>
+            
+            
+            
+            <div class="type-badge type-faq">
+              
+              
+              
+              
+              
+            </div>
+            
+            
+            
+            <div class="priority-badge priority-high">
+              
+              🔴 Alta
+              
+              
+            </div>
+            
+          </div>
+        </header>
+
+        <!-- Governance Info Cards -->
+        <div class="governance-info-grid">
+          
+          <!-- Document Info Card -->
+          <div class="info-card document-card">
+            <div class="card-icon">📄</div>
+            <div class="card-content">
+              <h3>Informações do Documento</h3>
+              
+              <div class="info-item">
+                <span class="info-label">Versão:</span>
+                <span class="info-value">v1.0</span>
+              </div>
+              
+              
+              <div class="info-item">
+                <span class="info-label">Responsável:</span>
+                <span class="info-value">Gui</span>
+              </div>
+              
+              
+            </div>
+          </div>
+
+          <!-- Compliance Card -->
+          
+          <div class="info-card compliance-card">
+            <div class="card-icon">🛡️</div>
+            <div class="card-content">
+              <h3>Compliance & Legal</h3>
+              
+              <div class="info-item">
+                <span class="info-label">Nível:</span>
+                <span class="info-value compliance-level-1">
+                  🟢 Básico
+                  
+                  
+                  
+                </span>
+              </div>
+              
+              
+              
+              <div class="info-item">
+                <span class="info-label">Próxima Revisão:</span>
+                <span class="info-value">2026-08-31</span>
+              </div>
+              
+            </div>
+          </div>
+          
+
+          <!-- Timeline Card -->
+          <div class="info-card timeline-card">
+            <div class="card-icon">⏱️</div>
+            <div class="card-content">
+              <h3>Timeline</h3>
+              
+              <div class="info-item">
+                <span class="info-label">Criado:</span>
+                <span class="info-value">2025-08-31</span>
+              </div>
+              
+              
+              <div class="info-item">
+                <span class="info-label">Modificado:</span>
+                <span class="info-value">2025-08-31</span>
+              </div>
+              
+              
+              <div class="info-item">
+                <span class="info-label">Atualizado:</span>
+                <span class="info-value">2025-09-01</span>
+              </div>
+              
+            </div>
+          </div>
+
+          <!-- Stakeholders Card -->
+          
+          <div class="info-card stakeholders-card">
+            <div class="card-icon">👥</div>
+            <div class="card-content">
+              <h3>Stakeholders</h3>
+              
+              
+              <div class="stakeholder-section">
+                <h4>Interessados</h4>
+                <div class="stakeholders-list">
+                  
+                  <div class="stakeholder-badge secondary">
+                    <span class="stakeholder-avatar">G</span>
+                    <span class="stakeholder-name">Gui</span>
+                  </div>
+                  
+                </div>
+              </div>
+              
+            </div>
+          </div>
+          
+
+        </div>
+
+        <!-- Governance Content -->
+        <div class="governance-content">
+          <h1>❓ <strong>FAQ - COMPLIANCE E SISTEMA</strong></h1>
+<blockquote>
+<p><em>Perguntas frequentes sobre uso responsável do sistema empresarial</em></p>
+</blockquote>
+<hr>
+<h2>📋 <strong>PERGUNTAS GERAIS</strong></h2>
+<h3><strong>Q1: O que é compliance no contexto do nosso sistema?</strong></h3>
+<p><strong>R</strong>: Compliance é o conjunto de práticas que garantem que todas as atividades da empresa estejam em conformidade com:</p>
+<ul>
+<li>Políticas internas de uso de IA</li>
+<li>Lei Geral de Proteção de Dados (LGPD)</li>
+<li>Boas práticas de segurança</li>
+<li>Ética empresarial</li>
+</ul>
+<h3><strong>Q2: Por que precisamos de compliance para IA?</strong></h3>
+<p><strong>R</strong>: Porque o uso de IA envolve:</p>
+<ul>
+<li><strong>Riscos</strong>: Decisões automáticas podem ter impactos significativos</li>
+<li><strong>Dados</strong>: Processamento de informações pessoais e sensíveis</li>
+<li><strong>Responsabilidade</strong>: A empresa é responsável pelos outputs da IA</li>
+<li><strong>Transparência</strong>: Stakeholders precisam entender como decisões são tomadas</li>
+</ul>
+<h3><strong>Q3: Quem precisa seguir as políticas de compliance?</strong></h3>
+<p><strong>R</strong>: <strong>Todos</strong> que utilizam o sistema:</p>
+<ul>
+<li>Colaboradores da empresa</li>
+<li>Sócios e stakeholders</li>
+<li>Terceiros autorizados</li>
+<li>Consultores e parceiros</li>
+</ul>
+<hr>
+<h2>🛠️ <strong>USO DO SISTEMA</strong></h2>
+<h3><strong>Q4: Como criar um novo projeto no sistema?</strong></h3>
+<p><strong>R</strong>:</p>
+<ol>
+<li>Abrir pasta <code>4-Projetos/</code></li>
+<li>Escolher pasta apropriada (Ativos/Pilotos/Backlog)</li>
+<li>Criar novo arquivo <code>.md</code></li>
+<li>Aplicar template <code>Template_Projeto.md</code></li>
+<li>Preencher frontmatter obrigatório</li>
+<li>Definir compliance level adequado</li>
+</ol>
+<h3><strong>Q5: Qual compliance level usar para meu projeto?</strong></h3>
+<p><strong>R</strong>:</p>
+<ul>
+<li><strong>Nível 1</strong>: Projetos internos, sem dados pessoais</li>
+<li><strong>Nível 2</strong>: Com dados pessoais, impacto moderado</li>
+<li><strong>Nível 3</strong>: Decisões críticas, alto impacto financeiro/operacional</li>
+</ul>
+<h3><strong>Q6: Como documentar uso de IA no projeto?</strong></h3>
+<p><strong>R</strong>: No frontmatter do projeto:</p>
+<pre><code class="language-yaml">ia_assets:
+  prompts: [&quot;Análise de mercado&quot;, &quot;Geração de relatório&quot;]
+  models: [&quot;GPT-4&quot;, &quot;Claude-3&quot;]
+  datasets: [&quot;Dados públicos&quot;, &quot;Relatórios anônimos&quot;]
+compliance_level: 2
+legal_review: true
+</code></pre>
+<h3><strong>Q7: Onde encontrar os dashboards do sistema?</strong></h3>
+<p><strong>R</strong>: Na pasta <code>0-Dashboard-Executivo/</code>:</p>
+<ul>
+<li><code>Home-Executivo.md</code> - Visão geral</li>
+<li><code>KPIs-Principais.md</code> - Métricas principais</li>
+<li><code>Innovation-Pipeline.md</code> - Pipeline de inovação</li>
+</ul>
+<hr>
+<h2>🔒 <strong>SEGURANÇA E PRIVACIDADE</strong></h2>
+<h3><strong>Q8: O que são dados pessoais?</strong></h3>
+<p><strong>R</strong>: Qualquer informação que identifique uma pessoa:</p>
+<ul>
+<li>Nomes, emails, CPFs</li>
+<li>Endereços, telefones</li>
+<li>Dados biométricos</li>
+<li>Histórico de navegação</li>
+</ul>
+<h3><strong>Q9: Como proteger dados pessoais?</strong></h3>
+<p><strong>R</strong>:</p>
+<ol>
+<li><strong>Anonimizar</strong>: Remover identificadores</li>
+<li><strong>Minimizar</strong>: Coletar apenas o necessário</li>
+<li><strong>Criptografar</strong>: Proteger em trânsito e repouso</li>
+<li><strong>Consentir</strong>: Obter autorização explícita</li>
+</ol>
+<h3><strong>Q10: Posso usar dados pessoais sem consentimento?</strong></h3>
+<p><strong>R</strong>: <strong>NÃO</strong>. Sempre é necessário:</p>
+<ul>
+<li>Consentimento explícito</li>
+<li>Base legal adequada</li>
+<li>Finalidade específica</li>
+<li>Documentação completa</li>
+</ul>
+<h3><strong>Q11: O que fazer se suspeitar de violação de dados?</strong></h3>
+<p><strong>R</strong>:</p>
+<ol>
+<li><strong>Imediato</strong>: Contatar lead de compliance</li>
+<li><strong>Documentar</strong>: Preencher relatório de incidente</li>
+<li><strong>Contenção</strong>: Ação imediata para conter danos</li>
+<li><strong>Análise</strong>: Investigação completa</li>
+</ol>
+<hr>
+<h2>📊 <strong>MÉTRICAS E MONITORAMENTO</strong></h2>
+<h3><strong>Q12: Como verificar se meu projeto está em compliance?</strong></h3>
+<p><strong>R</strong>:</p>
+<ol>
+<li>Verificar frontmatter completo</li>
+<li>Confirmar compliance level adequado</li>
+<li>Validar documentação de IA</li>
+<li>Verificar aprovações necessárias</li>
+<li>Revisar logs de auditoria</li>
+</ol>
+<h3><strong>Q13: Quais métricas de compliance são importantes?</strong></h3>
+<p><strong>R</strong>:</p>
+<ul>
+<li><strong>Taxa de Aprovação</strong>: % de solicitações aprovadas</li>
+<li><strong>Tempo de Aprovação</strong>: Tempo médio de aprovação</li>
+<li><strong>Taxa de Violação</strong>: % de violações de política</li>
+<li><strong>Satisfação</strong>: Satisfação da equipe com processos</li>
+</ul>
+<h3><strong>Q14: Como acessar logs de auditoria?</strong></h3>
+<p><strong>R</strong>:</p>
+<ul>
+<li><strong>Logs Diários</strong>: Sistema automático</li>
+<li><strong>Logs de Compliance</strong>: Template <code>Template_Compliance_Log.md</code></li>
+<li><strong>Logs de Projeto</strong>: Frontmatter de cada projeto</li>
+<li><strong>Logs de Sistema</strong>: Dashboard executivo</li>
+</ul>
+<hr>
+<h2>🚨 <strong>INCIDENTES E PROBLEMAS</strong></h2>
+<h3><strong>Q15: O que é um incidente de compliance?</strong></h3>
+<p><strong>R</strong>: Qualquer situação que viole:</p>
+<ul>
+<li>Políticas de IA</li>
+<li>Proteção de dados</li>
+<li>Procedimentos de segurança</li>
+<li>Aprovações necessárias</li>
+</ul>
+<h3><strong>Q16: Como reportar um incidente?</strong></h3>
+<p><strong>R</strong>:</p>
+<ol>
+<li><strong>Contato Imediato</strong>: Lead de compliance</li>
+<li><strong>Email</strong>: <a href="mailto:compliance@empresa.com">compliance@empresa.com</a></li>
+<li><strong>Slack</strong>: #compliance-emergency</li>
+<li><strong>Documentação</strong>: Relatório detalhado</li>
+</ol>
+<h3><strong>Q17: Quais são as consequências de violar compliance?</strong></h3>
+<p><strong>R</strong>:</p>
+<ul>
+<li><strong>Primeira vez</strong>: Aviso e treinamento</li>
+<li><strong>Segunda vez</strong>: Suspensão temporária</li>
+<li><strong>Terceira vez</strong>: Suspensão permanente</li>
+<li><strong>Crítico</strong>: Ação legal imediata</li>
+</ul>
+<h3><strong>Q18: Como corrigir uma violação de compliance?</strong></h3>
+<p><strong>R</strong>:</p>
+<ol>
+<li><strong>Identificar</strong>: Causa raiz do problema</li>
+<li><strong>Corrigir</strong>: Implementar solução imediata</li>
+<li><strong>Documentar</strong>: Registrar ações tomadas</li>
+<li><strong>Prevenir</strong>: Implementar controles adicionais</li>
+<li><strong>Treinar</strong>: Capacitar equipe</li>
+</ol>
+<hr>
+<h2>📚 <strong>TREINAMENTO E CERTIFICAÇÃO</strong></h2>
+<h3><strong>Q19: Quem precisa fazer treinamento de compliance?</strong></h3>
+<p><strong>R</strong>: <strong>Todos</strong> os colaboradores:</p>
+<ul>
+<li>Treinamento inicial obrigatório</li>
+<li>Reciclagem anual</li>
+<li>Treinamento específico por função</li>
+<li>Certificação obrigatória</li>
+</ul>
+<h3><strong>Q20: Como obter certificação de compliance?</strong></h3>
+<p><strong>R</strong>:</p>
+<ol>
+<li>Participar do treinamento completo</li>
+<li>Aprovar teste teórico (80% mínimo)</li>
+<li>Concluir exercícios práticos (100%)</li>
+<li>Assinar compromisso de compliance</li>
+<li>Receber certificado válido por 1 ano</li>
+</ol>
+<h3><strong>Q21: O que acontece se não renovar a certificação?</strong></h3>
+<p><strong>R</strong>:</p>
+<ul>
+<li><strong>Aviso</strong>: 30 dias antes do vencimento</li>
+<li><strong>Suspensão</strong>: Acesso limitado ao sistema</li>
+<li><strong>Treinamento</strong>: Reciclagem obrigatória</li>
+<li><strong>Reativação</strong>: Após nova certificação</li>
+</ul>
+<h3><strong>Q22: Onde encontrar materiais de treinamento?</strong></h3>
+<p><strong>R</strong>:</p>
+<ul>
+<li><code>Manual_Treinamento_Compliance.md</code></li>
+<li><code>etica_uso_IA.md</code></li>
+<li>Templates de compliance</li>
+<li>Vídeos de treinamento</li>
+<li>Exercícios práticos</li>
+</ul>
+<hr>
+<h2>🔧 <strong>SUPORTE TÉCNICO</strong></h2>
+<h3><strong>Q23: Como obter ajuda técnica?</strong></h3>
+<p><strong>R</strong>:</p>
+<ul>
+<li><strong>Lead Técnico</strong>: <a href="/stubs/">Pedro Vitor</a></li>
+<li><strong>Lead Compliance</strong>: <a href="/stubs/">Participante 6</a></li>
+<li><strong>Email</strong>: <a href="mailto:suporte@empresa.com">suporte@empresa.com</a></li>
+<li><strong>Slack</strong>: #suporte-tecnico</li>
+</ul>
+<h3><strong>Q24: Como reportar bugs no sistema?</strong></h3>
+<p><strong>R</strong>:</p>
+<ol>
+<li>Documentar o problema</li>
+<li>Capturar screenshots</li>
+<li>Descrever passos para reproduzir</li>
+<li>Enviar para lead técnico</li>
+<li>Acompanhar resolução</li>
+</ol>
+<h3><strong>Q25: Como solicitar novas funcionalidades?</strong></h3>
+<p><strong>R</strong>:</p>
+<ol>
+<li>Documentar necessidade</li>
+<li>Justificar benefício</li>
+<li>Avaliar impacto de compliance</li>
+<li>Submeter para aprovação</li>
+<li>Implementar após aprovação</li>
+</ol>
+<h3><strong>Q26: Como acessar o sistema remotamente?</strong></h3>
+<p><strong>R</strong>:</p>
+<ul>
+<li><strong>VPN</strong>: Obrigatória para acesso externo</li>
+<li><strong>2FA</strong>: Autenticação de dois fatores</li>
+<li><strong>Logs</strong>: Todos os acessos são registrados</li>
+<li><strong>Aprovação</strong>: Necessária para novos dispositivos</li>
+</ul>
+<hr>
+<h2>📋 <strong>PROCEDIMENTOS</strong></h2>
+<h3><strong>Q27: Como solicitar aprovação para projeto?</strong></h3>
+<p><strong>R</strong>:</p>
+<ol>
+<li>Completar documentação do projeto</li>
+<li>Definir compliance level adequado</li>
+<li>Submeter para aprovação via sistema</li>
+<li>Aguardar revisão dos responsáveis</li>
+<li>Implementar feedback recebido</li>
+</ol>
+<h3><strong>Q28: Como fazer backup de dados importantes?</strong></h3>
+<p><strong>R</strong>:</p>
+<ul>
+<li><strong>Automático</strong>: Sistema faz backup diário</li>
+<li><strong>Manual</strong>: Usar função de exportação</li>
+<li><strong>Verificação</strong>: Confirmar integridade dos dados</li>
+<li><strong>Armazenamento</strong>: Local seguro e criptografado</li>
+</ul>
+<h3><strong>Q29: Como encerrar um projeto com compliance?</strong></h3>
+<p><strong>R</strong>:</p>
+<ol>
+<li>Finalizar todas as atividades</li>
+<li>Documentar resultados e lições aprendidas</li>
+<li>Arquivar dados conforme política</li>
+<li>Atualizar status para “Concluído”</li>
+<li>Gerar relatório final de compliance</li>
+</ol>
+<h3><strong>Q30: Como transferir responsabilidade de projeto?</strong></h3>
+<p><strong>R</strong>:</p>
+<ol>
+<li>Notificar lead de compliance</li>
+<li>Documentar transferência</li>
+<li>Treinar novo responsável</li>
+<li>Atualizar frontmatter</li>
+<li>Validar acesso e permissões</li>
+</ol>
+<hr>
+<h2>🔄 <strong>ATUALIZAÇÕES E MANUTENÇÃO</strong></h2>
+<h3><strong>Q31: Com que frequência as políticas são atualizadas?</strong></h3>
+<p><strong>R</strong>:</p>
+<ul>
+<li><strong>Revisão Mensal</strong>: Políticas internas</li>
+<li><strong>Revisão Trimestral</strong>: Procedimentos</li>
+<li><strong>Revisão Semestral</strong>: Treinamentos</li>
+<li><strong>Revisão Anual</strong>: Políticas principais</li>
+</ul>
+<h3><strong>Q32: Como ficar informado sobre mudanças?</strong></h3>
+<p><strong>R</strong>:</p>
+<ul>
+<li><strong>Email</strong>: Notificações automáticas</li>
+<li><strong>Slack</strong>: Canal #compliance-updates</li>
+<li><strong>Dashboard</strong>: Seção de alertas</li>
+<li><strong>Reuniões</strong>: Atualizações regulares</li>
+</ul>
+<h3><strong>Q33: Como sugerir melhorias no sistema?</strong></h3>
+<p><strong>R</strong>:</p>
+<ol>
+<li>Documentar sugestão</li>
+<li>Justificar benefício</li>
+<li>Avaliar impacto</li>
+<li>Submeter para análise</li>
+<li>Implementar se aprovada</li>
+</ol>
+<h3><strong>Q34: Como reportar problemas de performance?</strong></h3>
+<p><strong>R</strong>:</p>
+<ol>
+<li>Documentar sintomas</li>
+<li>Capturar métricas</li>
+<li>Identificar padrões</li>
+<li>Reportar para lead técnico</li>
+<li>Acompanhar resolução</li>
+</ol>
+<hr>
+<h2>📞 <strong>CONTATOS DE EMERGÊNCIA</strong></h2>
+<h3><strong>Emergências de Compliance</strong></h3>
+<ul>
+<li><strong>Lead Compliance</strong>: <a href="/stubs/">Participante 6</a></li>
+<li><strong>Email</strong>: <a href="mailto:compliance@empresa.com">compliance@empresa.com</a></li>
+<li><strong>Slack</strong>: #compliance-emergency</li>
+<li><strong>Telefone</strong>: (11) 99999-9999</li>
+</ul>
+<h3><strong>Emergências Técnicas</strong></h3>
+<ul>
+<li><strong>Lead Técnico</strong>: <a href="/stubs/">Pedro Vitor</a></li>
+<li><strong>Email</strong>: <a href="mailto:suporte@empresa.com">suporte@empresa.com</a></li>
+<li><strong>Slack</strong>: #suporte-emergency</li>
+<li><strong>Telefone</strong>: (11) 99999-9998</li>
+</ul>
+<h3><strong>Emergências de Segurança</strong></h3>
+<ul>
+<li><strong>Lead Segurança</strong>: <a href="/stubs/">Gui</a></li>
+<li><strong>Email</strong>: <a href="mailto:seguranca@empresa.com">seguranca@empresa.com</a></li>
+<li><strong>Slack</strong>: #seguranca-emergency</li>
+<li><strong>Telefone</strong>: (11) 99999-9997</li>
+</ul>
+<hr>
+<h2>📚 <strong>RECURSOS ADICIONAIS</strong></h2>
+<h3><strong>Documentação</strong></h3>
+<ul>
+<li><a href="/1-Governanca/Manual_Treinamento_Compliance/">Manual De Treinamento Compliance</a> - Manual completo</li>
+<li><a href="/1-Governanca/etica_uso_IA/">Etica Uso IA</a> - Política de IA</li>
+<li><a href="/stubs/">Template&lowbar;Compliance&lowbar;Log</a> - Template de logs</li>
+<li><a href="/stubs/">CHECKLIST&lowbar;FINAL</a> - Checklist de compliance</li>
+</ul>
+<h3><strong>Canais de Comunicação</strong></h3>
+<ul>
+<li><strong>Email Geral</strong>: <a href="mailto:info@empresa.com">info@empresa.com</a></li>
+<li><strong>Slack Geral</strong>: #geral</li>
+<li><strong>Slack Suporte</strong>: #suporte</li>
+<li><strong>Slack Compliance</strong>: #compliance</li>
+</ul>
+<h3><strong>Horários de Suporte</strong></h3>
+<ul>
+<li><strong>Segunda a Sexta</strong>: 8h às 18h</li>
+<li><strong>Sábados</strong>: 9h às 13h</li>
+<li><strong>Emergências</strong>: 24/7</li>
+</ul>
+<hr>
+<p><strong>Status</strong>: ✅ <strong>ATIVO</strong><br>
+<strong>Última Atualização</strong>: 31/08/2025<br>
+<strong>Próxima Revisão</strong>: 30/09/2025<br>
+<strong>Owner</strong>: <a href="/stubs/">Gui</a></p>
+
+        </div>
+
+        <!-- Legal Notice -->
+        
+
+        <!-- Version History -->
+        
+
+        <!-- Related Documents -->
+        <div class="related-documents">
+          <h3>🔗 Documentos Relacionados</h3>
+          <div class="related-links">
+            
+            
+              
+              <a href="/1-Governanca/Acordo_Socios_Final/" class="related-link">
+                <div class="related-icon">
+                  ⚖️
+                  
+                  
+                  
+                  
+                  
+                </div>
+                <div class="related-info">
+                  <div class="related-title">Acordo De Socios Final</div>
+                  <div class="related-type">documento-legal</div>
+                </div>
+                <div class="related-status">
+                  🔒
+                  
+                  
+                  
+                </div>
+              </a>
+              
+            
+              
+              <a href="/1-Governanca/Compliance_Log/" class="related-link">
+                <div class="related-icon">
+                  
+                  
+                  
+                  
+                  
+                  
+                </div>
+                <div class="related-info">
+                  <div class="related-title">Log de Compliance</div>
+                  <div class="related-type">log</div>
+                </div>
+                <div class="related-status">
+                  
+                  
+                  
+                  
+                </div>
+              </a>
+              
+            
+              
+            
+              
+              <a href="/1-Governanca/etica_uso_IA/" class="related-link">
+                <div class="related-icon">
+                  
+                  
+                  
+                  
+                  
+                  
+                </div>
+                <div class="related-info">
+                  <div class="related-title">Etica Uso IA</div>
+                  <div class="related-type">policy</div>
+                </div>
+                <div class="related-status">
+                  
+                  
+                  
+                  
+                </div>
+              </a>
+              
+            
+              
+              <a href="/1-Governanca/Manual_Treinamento_Compliance/" class="related-link">
+                <div class="related-icon">
+                  
+                  
+                  
+                  
+                  
+                  
+                </div>
+                <div class="related-info">
+                  <div class="related-title">Manual De Treinamento Compliance</div>
+                  <div class="related-type">manual</div>
+                </div>
+                <div class="related-status">
+                  
+                  
+                  
+                  
+                </div>
+              </a>
+              
+            
+          </div>
+        </div>
+
+      </article>
+    </div>
+  </main>
+
+  <!-- JavaScript -->
+  <script src="/scripts/main.js"></script>
+  <script src="/scripts/sidebar.js" defer></script>
+  <script>
+    // Governance-specific JavaScript
+    document.addEventListener('DOMContentLoaded', function() {
+      // Highlight governance navigation
+      const govNav = document.querySelector('.nav-links a[href="/governanca/"]');
+      if (govNav) {
+        govNav.classList.add('active');
+      }
+      
+      // Animate info cards
+      const infoCards = document.querySelectorAll('.info-card');
+      infoCards.forEach((card, index) => {
+        card.style.animationDelay = `${index * 0.1}s`;
+        card.classList.add('animate-in');
+      });
+      
+      // Auto-generate stakeholder avatars
+      const stakeholderBadges = document.querySelectorAll('.stakeholder-badge');
+      stakeholderBadges.forEach(badge => {
+        const avatar = badge.querySelector('.stakeholder-avatar');
+        const name = badge.querySelector('.stakeholder-name').textContent;
+        avatar.textContent = name.charAt(0).toUpperCase();
+      });
+      
+      // Add security warning for critical documents
+      const criticalDocs = document.querySelectorAll('.priority-critical');
+      if (criticalDocs.length > 0) {
+        console.warn('🔒 Documento crítico carregado. Acesso registrado para auditoria.');
+      }
+    });
+  </script>
+</body>
+</html>

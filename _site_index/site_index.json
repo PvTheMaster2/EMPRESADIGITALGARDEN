@@ -24,7 +24,7 @@
         },
         {
           "level": 2,
-          "text": "📁 Estrutura de Layouts",
+          "text": "📁 ESTRUTURA COMPLETA DO PROJETO",
           "id": null
         },
         {
@@ -53,6 +53,16 @@
           "id": null
         },
         {
+          "level": 2,
+          "text": "🏗️ SISTEMA COMPONENTIZADO",
+          "id": null
+        },
+        {
+          "level": 2,
+          "text": "🎨 CSS OBSIDIAN-LIKE",
+          "id": null
+        },
+        {
           "level": 3,
           "text": "Antes de Editar:",
           "id": null
@@ -64,7 +74,12 @@
         },
         {
           "level": 3,
-          "text": "Por Diretório:",
+          "text": "DIRETÓRIOS PRINCIPAIS:",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "LAYOUTS POR DIRETÓRIO:",
           "id": null
         },
         {
@@ -120,6 +135,31 @@
         {
           "level": 3,
           "text": "Build Status:",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Componentes Disponíveis:",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Como Usar Componentes:",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Vantagens do Sistema:",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Classes Principais:",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Variáveis CSS Disponíveis:",
           "id": null
         }
       ],

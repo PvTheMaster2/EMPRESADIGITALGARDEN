@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="theme-dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard Projetos Prazo - Digital Garden Empresarial</title>
+  <meta name="description" content="Sistema de Gestão de Conhecimento Empresarial" />
+  
+  <!-- CSS do tema Obsidian e customizações -->
+  <link rel="stylesheet" href="/styles/main.css" />
+  <link rel="stylesheet" href="/styles/sidebar.css" />
+  <link rel="stylesheet" href="/styles/dashboard.css" />
+  
+  <!-- Chart.js para gráficos -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  
+  <!-- Favicon e meta tags para PWA -->
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+  <meta name="theme-color" content="#1e1e1e" />
+</head>
+<body class="layout-dashboard">
+  
+  <header class="site-header">
+    <nav class="main-navigation">
+      <div class="nav-brand">
+        <button class="mobile-sidebar-toggle" onclick="toggleSidebar()">
+          <span class="hamburger"></span>
+        </button>
+        <a href="/" class="brand-link">
+          🌱 Digital Garden Empresarial
+        </a>
+      </div>
+      
+      <div class="nav-links">
+        <a href="/" class="active">Dashboard</a>
+        <a href="/1-Governanca/README/">Governança</a>
+        <a href="/4-Projetos/README/">Projetos</a>
+        <a href="/2-Equipes/README/">Equipes</a>
+        <a href="/5-Processos/README/">Processos</a>
+        <a href="/6-Reunioes/README/">Reuniões</a>
+        <a href="/7-Conhecimento/README/">Conhecimento</a>
+      </div>
+      
+      <div class="nav-tools">
+        <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
+        <button class="search-toggle" onclick="toggleSearch()">🔍</button>
+        <button class="refresh-dashboard" onclick="refreshDashboard()">🔄</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Sidebar Navigation -->
+  <aside class="sidebar" data-state="closed" aria-hidden="true">
+    <div class="sidebar-header">
+      <button class="sidebar-toggle" onclick="toggleSidebar()">
+        <span class="hamburger"></span>
+      </button>
+      <div class="sidebar-brand">
+        <a href="/" class="brand-link">🌱 Digital Garden</a>
+      </div>
+    </div>
+    
+    <div class="sidebar-content">
+      <div class="sidebar-search">
+        <input type="search" placeholder="Buscar páginas..." class="search-input" id="sidebar-search">
+      </div>
+      
+      <div class="sidebar-tree">
+        <!-- Navegação será carregada via JavaScript -->
+        <div id="navigation-tree"></div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Overlay para mobile -->
+  <div class="sidebar-overlay" aria-hidden="true"></div>
+
+  <!-- Main Content -->
+  <main id="main" class="site-main" tabindex="-1">
+    <div class="content-wrapper">
+      
+      <!-- Dashboard Header -->
+      <header class="dashboard-header">
+        <div class="dashboard-title-section">
+          
+          <h1 class="dashboard-title">Dashboard Projetos Prazo</h1>
+          
+          <div class="dashboard-subtitle">
+            <span class="last-updated">Última atualização: 2025-09-01</span>
+            <span class="auto-refresh">🔄 Atualização automática</span>
+          </div>
+        </div>
+        
+        <!-- Quick Stats -->
+        <div class="quick-stats">
+          <div class="stat-item projects">
+            <div class="stat-icon">📋</div>
+            <div class="stat-content">
+              <div class="stat-value" id="total-projects">8</div>
+              <div class="stat-label">Projetos</div>
+            </div>
+          </div>
+          <div class="stat-item budget">
+            <div class="stat-icon">💰</div>
+            <div class="stat-content">
+              <div class="stat-value" id="total-budget">R$ 297k</div>
+              <div class="stat-label">Budget</div>
+            </div>
+          </div>
+          <div class="stat-item roi">
+            <div class="stat-icon">📈</div>
+            <div class="stat-content">
+              <div class="stat-value" id="avg-roi">347%</div>
+              <div class="stat-label">ROI Médio</div>
+            </div>
+          </div>
+          <div class="stat-item status">
+            <div class="stat-icon">✅</div>
+            <div class="stat-content">
+              <div class="stat-value status-active">Online</div>
+              <div class="stat-label">Sistema</div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Main Dashboard Grid -->
+      <div class="dashboard-grid">
+        
+        <!-- KPI Cards Row -->
+        <div class="kpi-section">
+          <div class="kpi-card revenue">
+            <div class="kpi-header">
+              <div class="kpi-icon">💰</div>
+              <div class="kpi-title">Receita Total</div>
+              <div class="kpi-trend up">↗️</div>
+            </div>
+            <div class="kpi-value">R$ 1.2M</div>
+            <div class="kpi-subtitle">+23% vs mês anterior</div>
+            <div class="kpi-chart">
+              <canvas id="revenueChart" width="200" height="60"></canvas>
+            </div>
+          </div>
+
+          <div class="kpi-card projects-active">
+            <div class="kpi-header">
+              <div class="kpi-icon">🚀</div>
+              <div class="kpi-title">Projetos Ativos</div>
+              <div class="kpi-trend stable">→</div>
+            </div>
+            <div class="kpi-value">8</div>
+            <div class="kpi-subtitle">2 em desenvolvimento</div>
+            <div class="kpi-progress">
+              <div class="progress-bar">
+                <div class="progress-fill" style="width: 75%"></div>
+              </div>
+              <span class="progress-text">75% conclusão média</span>
+            </div>
+          </div>
+
+          <div class="kpi-card team-capacity">
+            <div class="kpi-header">
+              <div class="kpi-icon">👥</div>
+              <div class="kpi-title">Capacidade da Equipe</div>
+              <div class="kpi-trend up">↗️</div>
+            </div>
+            <div class="kpi-value">85%</div>
+            <div class="kpi-subtitle">Utilização atual</div>
+            <div class="capacity-indicators">
+              <div class="capacity-item">
+                <span class="capacity-label">Dev</span>
+                <div class="capacity-bar">
+                  <div class="capacity-fill" style="width: 90%"></div>
+                </div>
+              </div>
+              <div class="capacity-item">
+                <span class="capacity-label">Design</span>
+                <div class="capacity-bar">
+                  <div class="capacity-fill" style="width: 70%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="kpi-card performance">
+            <div class="kpi-header">
+              <div class="kpi-icon">⚡</div>
+              <div class="kpi-title">Performance</div>
+              <div class="kpi-trend up">↗️</div>
+            </div>
+            <div class="kpi-value">94%</div>
+            <div class="kpi-subtitle">Score geral</div>
+            <div class="performance-metrics">
+              <div class="metric-item">
+                <span class="metric-dot quality"></span>
+                <span class="metric-text">Qualidade: 96%</span>
+              </div>
+              <div class="metric-item">
+                <span class="metric-dot speed"></span>
+                <span class="metric-text">Velocidade: 92%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Charts Section -->
+        <div class="charts-section">
+          <div class="chart-card projects-timeline">
+            <div class="chart-header">
+              <h3>📊 Timeline de Projetos</h3>
+              <div class="chart-controls">
+                <button class="chart-filter active" data-period="month">Mês</button>
+                <button class="chart-filter" data-period="quarter">Trimestre</button>
+                <button class="chart-filter" data-period="year">Ano</button>
+              </div>
+            </div>
+            <div class="chart-container">
+              <canvas id="projectsTimelineChart"></canvas>
+            </div>
+          </div>
+
+          <div class="chart-card budget-distribution">
+            <div class="chart-header">
+              <h3>💰 Distribuição de Budget</h3>
+              <div class="budget-total">Total: R$ 297k</div>
+            </div>
+            <div class="chart-container">
+              <canvas id="budgetChart"></canvas>
+            </div>
+            <div class="budget-legend">
+              <div class="legend-item">
+                <span class="legend-dot" style="background: #667eea;"></span>
+                <span>Desenvolvimento (40%)</span>
+              </div>
+              <div class="legend-item">
+                <span class="legend-dot" style="background: #764ba2;"></span>
+                <span>Marketing (25%)</span>
+              </div>
+              <div class="legend-item">
+                <span class="legend-dot" style="background: #f093fb;"></span>
+                <span>Operações (35%)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Recent Activity & Alerts -->
+        <div class="activity-section">
+          <div class="activity-card recent-updates">
+            <div class="activity-header">
+              <h3>🔔 Atualizações Recentes</h3>
+              <span class="activity-count">5 novos</span>
+            </div>
+            <div class="activity-list">
+              <div class="activity-item">
+                <div class="activity-icon project">📋</div>
+                <div class="activity-content">
+                  <div class="activity-title">Projeto AERALYN atualizado</div>
+                  <div class="activity-time">há 2 horas</div>
+                </div>
+                <div class="activity-status success">✅</div>
+              </div>
+              <div class="activity-item">
+                <div class="activity-icon meeting">📅</div>
+                <div class="activity-content">
+                  <div class="activity-title">Reunião executiva concluída</div>
+                  <div class="activity-time">há 4 horas</div>
+                </div>
+                <div class="activity-status info">ℹ️</div>
+              </div>
+              <div class="activity-item">
+                <div class="activity-icon budget">💰</div>
+                <div class="activity-content">
+                  <div class="activity-title">Budget aprovado para Q4</div>
+                  <div class="activity-time">há 1 dia</div>
+                </div>
+                <div class="activity-status success">✅</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="activity-card alerts">
+            <div class="activity-header">
+              <h3>⚠️ Alertas</h3>
+              <span class="alert-count">2 ativos</span>
+            </div>
+            <div class="alerts-list">
+              <div class="alert-item warning">
+                <div class="alert-icon">⚠️</div>
+                <div class="alert-content">
+                  <div class="alert-title">Budget próximo do limite</div>
+                  <div class="alert-description">Projeto Trip Match: 85% utilizado</div>
+                </div>
+                <button class="alert-action">Ver</button>
+              </div>
+              <div class="alert-item info">
+                <div class="alert-icon">📋</div>
+                <div class="alert-content">
+                  <div class="alert-title">Revisão de compliance</div>
+                  <div class="alert-description">3 documentos pendentes</div>
+                </div>
+                <button class="alert-action">Revisar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Actions -->
+        <div class="actions-section">
+          <div class="actions-card">
+            <h3>⚡ Ações Rápidas</h3>
+            <div class="actions-grid">
+              <button class="action-btn primary">
+                <div class="action-icon">➕</div>
+                <div class="action-text">Novo Projeto</div>
+              </button>
+              <button class="action-btn secondary">
+                <div class="action-icon">📅</div>
+                <div class="action-text">Agendar Reunião</div>
+              </button>
+              <button class="action-btn secondary">
+                <div class="action-icon">📊</div>
+                <div class="action-text">Gerar Relatório</div>
+              </button>
+              <button class="action-btn secondary">
+                <div class="action-icon">⚙️</div>
+                <div class="action-text">Configurações</div>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Dashboard Content (for additional content from markdown) -->
+      
+      <div class="dashboard-content">
+        <h1>📊 <strong>DASHBOARD DE PROJETOS POR PRAZO</strong></h1>
+<blockquote>
+<p><em>Visão executiva dos projetos organizados por prazo de execução e prioridade</em></p>
+</blockquote>
+<hr>
+<h2>🎯 <strong>RESUMO EXECUTIVO</strong></h2>
+<h3><strong>Distribuição por Prazo</strong></h3>
+<ul>
+<li><strong>Curto Prazo (1-3 meses)</strong>: 4 projetos ativos</li>
+<li><strong>Médio Prazo (3-12 meses)</strong>: 2 projetos ativos</li>
+<li><strong>Longo Prazo (1-3 anos)</strong>: 2 projetos ativos</li>
+</ul>
+<h3><strong>Status Geral</strong></h3>
+<ul>
+<li><strong>Total de Projetos</strong>: 8 projetos ativos (excluindo templates)</li>
+<li><strong>Budget Total</strong>: R$ 297.000</li>
+<li><strong>ROI Projetado</strong>: 271% em 3 anos</li>
+</ul>
+<hr>
+<h2>⚡ <strong>CURTO PRAZO (1-3 MESES)</strong></h2>
+<h3><strong>🚀 Projetos Prioritários</strong></h3>
+<h4><strong>1. MVP da Plataforma de Cursos</strong></h4>
+<ul>
+<li><strong>Status</strong>: 🔄 Em desenvolvimento</li>
+<li><strong>Budget</strong>: R$ 40.000</li>
+<li><strong>Prazo</strong>: 3-4 meses</li>
+<li><strong>ROI</strong>: 500%</li>
+<li><strong>Responsável</strong>: <a href="/stubs/">Pedro Vitor</a></li>
+<li><strong>Progresso</strong>: 0% implementado</li>
+</ul>
+<h4><strong>2. MVP do App Desenvolvimento Cognitivo</strong></h4>
+<ul>
+<li><strong>Status</strong>: ✅ Ativo</li>
+<li><strong>Budget</strong>: R$ 20.000</li>
+<li><strong>Prazo</strong>: 2-3 meses</li>
+<li><strong>ROI</strong>: 350%</li>
+<li><strong>Responsável</strong>: <a href="/stubs/">Pedro Vitor</a></li>
+<li><strong>Progresso</strong>: 100% documentado, 0% implementado</li>
+</ul>
+<h4><strong>3. Template Site Portfólio para Outras Profissões</strong></h4>
+<ul>
+<li><strong>Status</strong>: 🔄 Em desenvolvimento</li>
+<li><strong>Budget</strong>: R$ 25.000</li>
+<li><strong>Prazo</strong>: 2-3 meses</li>
+<li><strong>ROI</strong>: 300%</li>
+<li><strong>Responsável</strong>: <a href="/stubs/">Pedro Vitor</a></li>
+<li><strong>Progresso</strong>: 100% funcional (base)</li>
+</ul>
+<h4><strong>4. WhatsBot para Outros Segmentos</strong></h4>
+<ul>
+<li><strong>Status</strong>: 🔄 Em desenvolvimento</li>
+<li><strong>Budget</strong>: R$ 15.000</li>
+<li><strong>Prazo</strong>: 1-2 meses</li>
+<li><strong>ROI</strong>: 250%</li>
+<li><strong>Responsável</strong>: <a href="/stubs/">Pedro Vitor</a></li>
+<li><strong>Progresso</strong>: 85% completo (base)</li>
+</ul>
+<hr>
+<h2>📈 <strong>MÉDIO PRAZO (3-12 MESES)</strong></h2>
+<h3><strong>🏗️ Projetos Estratégicos</strong></h3>
+<h4><strong>1. Sistema de Gestão de Projetos para Freelancers</strong></h4>
+<ul>
+<li><strong>Status</strong>: 💡 Ideia</li>
+<li><strong>Budget</strong>: R$ 12.000</li>
+<li><strong>Prazo</strong>: 2 meses</li>
+<li><strong>ROI</strong>: 200%</li>
+<li><strong>Responsável</strong>: <a href="/stubs/">Pedro Vitor</a></li>
+<li><strong>Progresso</strong>: 0% implementado</li>
+</ul>
+<h4><strong>2. Plugin de Automação para Obsidian</strong></h4>
+<ul>
+<li><strong>Status</strong>: 💡 Ideia</li>
+<li><strong>Budget</strong>: R$ 5.000</li>
+<li><strong>Prazo</strong>: 1 mês</li>
+<li><strong>ROI</strong>: 400%</li>
+<li><strong>Responsável</strong>: <a href="/stubs/">Pedro Vitor</a></li>
+<li><strong>Progresso</strong>: 0% implementado</li>
+</ul>
+<hr>
+<h2>🌟 <strong>LONGO PRAZO (1-3 ANOS)</strong></h2>
+<h3><strong>🎯 Projetos Visionários</strong></h3>
+<h4><strong>1. Vault Empresarial - Sistema de Gestão Completo</strong></h4>
+<ul>
+<li><strong>Status</strong>: ✅ Ativo</li>
+<li><strong>Budget</strong>: R$ 100.000</li>
+<li><strong>Prazo</strong>: 52 semanas</li>
+<li><strong>ROI</strong>: 300%</li>
+<li><strong>Responsável</strong>: <a href="/stubs/">Pedro Vitor</a></li>
+<li><strong>Progresso</strong>: 95% implementado</li>
+</ul>
+<h4><strong>2. AERALYN - Sistema de RPG e Criação Narrativa</strong></h4>
+<ul>
+<li><strong>Status</strong>: ✅ Ativo</li>
+<li><strong>Budget</strong>: R$ 80.000</li>
+<li><strong>Prazo</strong>: 40 semanas</li>
+<li><strong>ROI</strong>: 400%</li>
+<li><strong>Responsável</strong>: <a href="/stubs/">Pedro Vitor</a></li>
+<li><strong>Progresso</strong>: 100% implementado</li>
+</ul>
+<hr>
+<h2>📊 <strong>MÉTRICAS POR PRAZO</strong></h2>
+<h3><strong>Curto Prazo (1-3 meses)</strong></h3>
+<pre><code class="language-mermaid">pie title Distribuição de Budget - Curto Prazo
+    &quot;Plataforma de Cursos&quot; : 40
+    &quot;App Desenvolvimento Cognitivo&quot; : 20
+    &quot;Template Site Portfólio&quot; : 25
+    &quot;WhatsBot Outros Segmentos&quot; : 15
+</code></pre>
+<h3><strong>Médio Prazo (3-12 meses)</strong></h3>
+<pre><code class="language-mermaid">pie title Distribuição de Budget - Médio Prazo
+    &quot;Sistema Gestão Freelancers&quot; : 12
+    &quot;Plugin Obsidian&quot; : 5
+</code></pre>
+<h3><strong>Longo Prazo (1-3 anos)</strong></h3>
+<pre><code class="language-mermaid">pie title Distribuição de Budget - Longo Prazo
+    &quot;Vault Empresarial&quot; : 100
+    &quot;AERALYN&quot; : 80
+</code></pre>
+<hr>
+<h2>🎯 <strong>ROADMAP VISUAL</strong></h2>
+<h3><strong>Timeline de Execução</strong></h3>
+<pre><code class="language-mermaid">gantt
+    title Roadmap de Projetos por Prazo
+    dateFormat YYYY-MM-DD
+    section Curto Prazo
+    Plataforma de Cursos    :active, curso, 2025-09-01, 3m
+    App Desenvolvimento     :active, app, 2025-09-01, 2m
+    Template Portfólio      :active, template, 2025-09-01, 2m
+    WhatsBot Segmentos      :active, whatsbot, 2025-09-01, 1m
+    
+    section Médio Prazo
+    Sistema Freelancers     :idea, freelancers, 2025-10-01, 2m
+    Plugin Obsidian         :idea, plugin, 2025-10-01, 1m
+    
+    section Longo Prazo
+    Vault Empresarial       :active, vault, 2025-09-01, 12m
+    AERALYN                 :active, aeralyn, 2025-09-01, 10m
+</code></pre>
+<hr>
+<h2>💰 <strong>ANÁLISE FINANCEIRA</strong></h2>
+<h3><strong>Investimento por Prazo</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Prazo</th>
+<th>Projetos</th>
+<th>Budget Total</th>
+<th>ROI Médio</th>
+<th>Receita Projetada</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Curto Prazo</strong></td>
+<td>4</td>
+<td>R$ 100.000</td>
+<td>350%</td>
+<td>R$ 350.000</td>
+</tr>
+<tr>
+<td><strong>Médio Prazo</strong></td>
+<td>2</td>
+<td>R$ 17.000</td>
+<td>300%</td>
+<td>R$ 51.000</td>
+</tr>
+<tr>
+<td><strong>Longo Prazo</strong></td>
+<td>2</td>
+<td>R$ 180.000</td>
+<td>350%</td>
+<td>R$ 630.000</td>
+</tr>
+<tr>
+<td><strong>TOTAL</strong></td>
+<td><strong>8</strong></td>
+<td><strong>R$ 297.000</strong></td>
+<td><strong>347%</strong></td>
+<td><strong>R$ 1.031.000</strong></td>
+</tr>
+</tbody>
+</table>
+<h3><strong>Projeção de Receita (3 Anos)</strong></h3>
+<pre><code class="language-mermaid">graph LR
+    A[Ano 1] --&gt; B[R$ 350.000]
+    C[Ano 2] --&gt; D[R$ 400.000]
+    E[Ano 3] --&gt; F[R$ 281.000]
+    
+    B --&gt; G[Total: R$ 1.031.000]
+    D --&gt; G
+    F --&gt; G
+</code></pre>
+<hr>
+<h2>🚨 <strong>ALERTAS E RISCOS</strong></h2>
+<h3><strong>Projetos em Risco</strong></h3>
+<ul>
+<li><strong>Plataforma de Cursos</strong>: 0% implementado, prazo apertado</li>
+<li><strong>App Desenvolvimento</strong>: Apenas documentado, falta implementação</li>
+<li><strong>WhatsBot Segmentos</strong>: Depende de base existente</li>
+</ul>
+<h3><strong>Oportunidades</strong></h3>
+<ul>
+<li><strong>Vault Empresarial</strong>: 95% pronto, pronto para comercialização</li>
+<li><strong>AERALYN</strong>: 100% completo, pronto para lançamento</li>
+<li><strong>Template Portfólio</strong>: Base sólida para expansão</li>
+</ul>
+<hr>
+<h2>📈 <strong>KPIs POR PRAZO</strong></h2>
+<h3><strong>Curto Prazo (1-3 meses)</strong></h3>
+<ul>
+<li><strong>Meta</strong>: 4 MVPs funcionais</li>
+<li><strong>Receita</strong>: R$ 350.000</li>
+<li><strong>Usuários</strong>: 500+</li>
+<li><strong>Validação</strong>: 10+ clientes</li>
+</ul>
+<h3><strong>Médio Prazo (3-12 meses)</strong></h3>
+<ul>
+<li><strong>Meta</strong>: 2 produtos escaláveis</li>
+<li><strong>Receita</strong>: R$ 51.000</li>
+<li><strong>Usuários</strong>: 1.000+</li>
+<li><strong>Market Share</strong>: 5%</li>
+</ul>
+<h3><strong>Longo Prazo (1-3 anos)</strong></h3>
+<ul>
+<li><strong>Meta</strong>: 2 plataformas dominantes</li>
+<li><strong>Receita</strong>: R$ 630.000</li>
+<li><strong>Usuários</strong>: 10.000+</li>
+<li><strong>Valor da Empresa</strong>: R$ 10M+</li>
+</ul>
+<hr>
+<h2>🎯 <strong>PRÓXIMAS AÇÕES</strong></h2>
+<h3><strong>Esta Semana</strong></h3>
+<ol>
+<li><strong>Priorizar</strong> projetos de curto prazo</li>
+<li><strong>Iniciar</strong> desenvolvimento da Plataforma de Cursos</li>
+<li><strong>Validar</strong> mercado para App Desenvolvimento Cognitivo</li>
+</ol>
+<h3><strong>Próximo Mês</strong></h3>
+<ol>
+<li><strong>Finalizar</strong> 2 MVPs de curto prazo</li>
+<li><strong>Preparar</strong> lançamento do Vault Empresarial</li>
+<li><strong>Iniciar</strong> planejamento de projetos de médio prazo</li>
+</ol>
+<h3><strong>Próximo Trimestre</strong></h3>
+<ol>
+<li><strong>Lançar</strong> 3 produtos de curto prazo</li>
+<li><strong>Comercializar</strong> Vault Empresarial e AERALYN</li>
+<li><strong>Validar</strong> ideias de médio prazo</li>
+</ol>
+<hr>
+<h2>🔗 <strong>LINKS RÁPIDOS</strong></h2>
+<h3><strong>Projetos Ativos</strong></h3>
+<ul>
+<li><a href="/4-Projetos/Ativos/PRJ-Vault-Empresarial/">Vault Empresarial</a> - Sistema de gestão empresarial</li>
+<li><a href="/4-Projetos/Ativos/PRJ-AERALYN/">AERALYN</a> - Sistema de RPG</li>
+<li><a href="/4-Projetos/Ativos/PRJ-Plataforma-Cursos/">Plataforma Cursos</a> - Plataforma de cursos online</li>
+<li><a href="/4-Projetos/Ativos/PRJ-App-Desenvolvimento-Cognitivo/">App Desenvolvimento Cognitivo</a> - App de desenvolvimento cognitivo</li>
+</ul>
+<h3><strong>Projetos em Desenvolvimento</strong></h3>
+<ul>
+<li><a href="/4-Projetos/Em-Desenvolvimento/PRJ-Dev-WhatsBot-Academia/">Dev WhatsBot Academia</a> - WhatsBot para academias</li>
+<li><a href="/4-Projetos/Em-Desenvolvimento/PRJ-Web-Site-Portfolio-Engenharia/">Web Site Portfolio Engenharia</a> - Site portfólio</li>
+</ul>
+<h3><strong>Sistema de Ideias</strong></h3>
+<ul>
+<li><a href="/stubs/">SISTEMA&lowbar;GERACAO&lowbar;IDEIAS</a> - Sistema de geração de ideias</li>
+</ul>
+<hr>
+<p><strong>Status</strong>: ✅ <strong>ATIVO</strong><br>
+<strong>Última Atualização</strong>: 2025-09-01<br>
+<strong>Próxima Revisão</strong>: 2025-09-15</p>
+
+      </div>
+      
+
+    </div>
+  </main>
+
+  <!-- JavaScript -->
+  <script src="/scripts/main.js"></script>
+  <script src="/scripts/dashboard.js"></script>
+  <script>
+    // Dashboard-specific JavaScript
+    document.addEventListener('DOMContentLoaded', function() {
+      // Initialize dashboard
+      initializeDashboard();
+      
+      // Auto-refresh every 5 minutes
+      setInterval(refreshDashboard, 300000);
+      
+      // Real-time updates simulation
+      simulateRealTimeUpdates();
+    });
+
+    function initializeDashboard() {
+      // Initialize charts
+      initializeCharts();
+      
+      // Setup event listeners
+      setupEventListeners();
+      
+      // Load initial data
+      loadDashboardData();
+    }
+
+    function initializeCharts() {
+      // Revenue Chart (mini sparkline)
+      const revenueCtx = document.getElementById('revenueChart');
+      if (revenueCtx) {
+        new Chart(revenueCtx, {
+          type: 'line',
+          data: {
+            labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun'],
+            datasets: [{
+              data: [800, 950, 1100, 1050, 1150, 1200],
+              borderColor: '#10b981',
+              backgroundColor: 'rgba(16, 185, 129, 0.1)',
+              borderWidth: 2,
+              fill: true,
+              tension: 0.4
+            }]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: { legend: { display: false } },
+            scales: {
+              x: { display: false },
+              y: { display: false }
+            },
+            elements: { point: { radius: 0 } }
+          }
+        });
+      }
+
+      // Projects Timeline Chart
+      const timelineCtx = document.getElementById('projectsTimelineChart');
+      if (timelineCtx) {
+        new Chart(timelineCtx, {
+          type: 'bar',
+          data: {
+            labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun'],
+            datasets: [
+              {
+                label: 'Projetos Iniciados',
+                data: [2, 3, 1, 4, 2, 3],
+                backgroundColor: '#667eea'
+              },
+              {
+                label: 'Projetos Concluídos',
+                data: [1, 2, 3, 2, 3, 4],
+                backgroundColor: '#764ba2'
+              }
+            ]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              legend: { position: 'top' }
+            },
+            scales: {
+              y: { beginAtZero: true }
+            }
+          }
+        });
+      }
+
+      // Budget Distribution Chart
+      const budgetCtx = document.getElementById('budgetChart');
+      if (budgetCtx) {
+        new Chart(budgetCtx, {
+          type: 'doughnut',
+          data: {
+            labels: ['Desenvolvimento', 'Marketing', 'Operações'],
+            datasets: [{
+              data: [40, 25, 35],
+              backgroundColor: ['#667eea', '#764ba2', '#f093fb'],
+              borderWidth: 0
+            }]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              legend: { display: false }
+            }
+          }
+        });
+      }
+    }
+
+    function setupEventListeners() {
+      // Chart filter buttons
+      document.querySelectorAll('.chart-filter').forEach(btn => {
+        btn.addEventListener('click', function() {
+          document.querySelectorAll('.chart-filter').forEach(b => b.classList.remove('active'));
+          this.classList.add('active');
+          // Update chart based on period
+          updateChartPeriod(this.dataset.period);
+        });
+      });
+
+      // Action buttons
+      document.querySelectorAll('.action-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+          const action = this.querySelector('.action-text').textContent;
+          handleQuickAction(action);
+        });
+      });
+    }
+
+    function loadDashboardData() {
+      // Simulate data loading
+      console.log('📊 Dashboard data loaded');
+    }
+
+    function refreshDashboard() {
+      // Simulate refresh
+      console.log('🔄 Dashboard refreshed');
+      
+      // Update last updated time
+      const lastUpdated = document.querySelector('.last-updated');
+      if (lastUpdated) {
+        lastUpdated.textContent = `Última atualização: ${new Date().toLocaleString('pt-BR')}`;
+      }
+    }
+
+    function simulateRealTimeUpdates() {
+      // Simulate real-time updates every 30 seconds
+      setInterval(() => {
+        // Random small updates to metrics
+        const projectsCount = document.getElementById('total-projects');
+        const budgetTotal = document.getElementById('total-budget');
+        const avgROI = document.getElementById('avg-roi');
+        
+        // Small random variations
+        if (Math.random() > 0.7) {
+          // Occasionally update values slightly
+          console.log('📈 Real-time update simulated');
+        }
+      }, 30000);
+    }
+
+    function updateChartPeriod(period) {
+      console.log(`📊 Updating charts for period: ${period}`);
+      // Implementation for chart period updates
+    }
+
+    function handleQuickAction(action) {
+      console.log(`⚡ Quick action: ${action}`);
+      // Implementation for quick actions
+    }
+  </script>
+  
+  <!-- Sidebar JavaScript -->
+  <script src="/scripts/sidebar.js" defer></script>
+</body>
+</html>

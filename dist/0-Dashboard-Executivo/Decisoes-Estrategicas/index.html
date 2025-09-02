@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="theme-dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Decisões Estratégicas - Digital Garden Empresarial</title>
+  <meta name="description" content="Sistema de Gestão de Conhecimento Empresarial" />
+  
+  <!-- CSS do tema Obsidian e customizações -->
+  <link rel="stylesheet" href="/styles/main.css" />
+  <link rel="stylesheet" href="/styles/sidebar.css" />
+  <link rel="stylesheet" href="/styles/dashboard.css" />
+  
+  <!-- Chart.js para gráficos -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  
+  <!-- Favicon e meta tags para PWA -->
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+  <meta name="theme-color" content="#1e1e1e" />
+</head>
+<body class="layout-dashboard">
+  
+  <header class="site-header">
+    <nav class="main-navigation">
+      <div class="nav-brand">
+        <button class="mobile-sidebar-toggle" onclick="toggleSidebar()">
+          <span class="hamburger"></span>
+        </button>
+        <a href="/" class="brand-link">
+          🌱 Digital Garden Empresarial
+        </a>
+      </div>
+      
+      <div class="nav-links">
+        <a href="/" class="active">Dashboard</a>
+        <a href="/1-Governanca/README/">Governança</a>
+        <a href="/4-Projetos/README/">Projetos</a>
+        <a href="/2-Equipes/README/">Equipes</a>
+        <a href="/5-Processos/README/">Processos</a>
+        <a href="/6-Reunioes/README/">Reuniões</a>
+        <a href="/7-Conhecimento/README/">Conhecimento</a>
+      </div>
+      
+      <div class="nav-tools">
+        <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
+        <button class="search-toggle" onclick="toggleSearch()">🔍</button>
+        <button class="refresh-dashboard" onclick="refreshDashboard()">🔄</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Sidebar Navigation -->
+  <aside class="sidebar" data-state="closed" aria-hidden="true">
+    <div class="sidebar-header">
+      <button class="sidebar-toggle" onclick="toggleSidebar()">
+        <span class="hamburger"></span>
+      </button>
+      <div class="sidebar-brand">
+        <a href="/" class="brand-link">🌱 Digital Garden</a>
+      </div>
+    </div>
+    
+    <div class="sidebar-content">
+      <div class="sidebar-search">
+        <input type="search" placeholder="Buscar páginas..." class="search-input" id="sidebar-search">
+      </div>
+      
+      <div class="sidebar-tree">
+        <!-- Navegação será carregada via JavaScript -->
+        <div id="navigation-tree"></div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Overlay para mobile -->
+  <div class="sidebar-overlay" aria-hidden="true"></div>
+
+  <!-- Main Content -->
+  <main id="main" class="site-main" tabindex="-1">
+    <div class="content-wrapper">
+      
+      <!-- Dashboard Header -->
+      <header class="dashboard-header">
+        <div class="dashboard-title-section">
+          
+          <h1 class="dashboard-title">Decisões Estratégicas</h1>
+          
+          <div class="dashboard-subtitle">
+            <span class="last-updated">Última atualização: 2025-09-01</span>
+            <span class="auto-refresh">🔄 Atualização automática</span>
+          </div>
+        </div>
+        
+        <!-- Quick Stats -->
+        <div class="quick-stats">
+          <div class="stat-item projects">
+            <div class="stat-icon">📋</div>
+            <div class="stat-content">
+              <div class="stat-value" id="total-projects">8</div>
+              <div class="stat-label">Projetos</div>
+            </div>
+          </div>
+          <div class="stat-item budget">
+            <div class="stat-icon">💰</div>
+            <div class="stat-content">
+              <div class="stat-value" id="total-budget">R$ 297k</div>
+              <div class="stat-label">Budget</div>
+            </div>
+          </div>
+          <div class="stat-item roi">
+            <div class="stat-icon">📈</div>
+            <div class="stat-content">
+              <div class="stat-value" id="avg-roi">347%</div>
+              <div class="stat-label">ROI Médio</div>
+            </div>
+          </div>
+          <div class="stat-item status">
+            <div class="stat-icon">✅</div>
+            <div class="stat-content">
+              <div class="stat-value status-active">Online</div>
+              <div class="stat-label">Sistema</div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Main Dashboard Grid -->
+      <div class="dashboard-grid">
+        
+        <!-- KPI Cards Row -->
+        <div class="kpi-section">
+          <div class="kpi-card revenue">
+            <div class="kpi-header">
+              <div class="kpi-icon">💰</div>
+              <div class="kpi-title">Receita Total</div>
+              <div class="kpi-trend up">↗️</div>
+            </div>
+            <div class="kpi-value">R$ 1.2M</div>
+            <div class="kpi-subtitle">+23% vs mês anterior</div>
+            <div class="kpi-chart">
+              <canvas id="revenueChart" width="200" height="60"></canvas>
+            </div>
+          </div>
+
+          <div class="kpi-card projects-active">
+            <div class="kpi-header">
+              <div class="kpi-icon">🚀</div>
+              <div class="kpi-title">Projetos Ativos</div>
+              <div class="kpi-trend stable">→</div>
+            </div>
+            <div class="kpi-value">8</div>
+            <div class="kpi-subtitle">2 em desenvolvimento</div>
+            <div class="kpi-progress">
+              <div class="progress-bar">
+                <div class="progress-fill" style="width: 75%"></div>
+              </div>
+              <span class="progress-text">75% conclusão média</span>
+            </div>
+          </div>
+
+          <div class="kpi-card team-capacity">
+            <div class="kpi-header">
+              <div class="kpi-icon">👥</div>
+              <div class="kpi-title">Capacidade da Equipe</div>
+              <div class="kpi-trend up">↗️</div>
+            </div>
+            <div class="kpi-value">85%</div>
+            <div class="kpi-subtitle">Utilização atual</div>
+            <div class="capacity-indicators">
+              <div class="capacity-item">
+                <span class="capacity-label">Dev</span>
+                <div class="capacity-bar">
+                  <div class="capacity-fill" style="width: 90%"></div>
+                </div>
+              </div>
+              <div class="capacity-item">
+                <span class="capacity-label">Design</span>
+                <div class="capacity-bar">
+                  <div class="capacity-fill" style="width: 70%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="kpi-card performance">
+            <div class="kpi-header">
+              <div class="kpi-icon">⚡</div>
+              <div class="kpi-title">Performance</div>
+              <div class="kpi-trend up">↗️</div>
+            </div>
+            <div class="kpi-value">94%</div>
+            <div class="kpi-subtitle">Score geral</div>
+            <div class="performance-metrics">
+              <div class="metric-item">
+                <span class="metric-dot quality"></span>
+                <span class="metric-text">Qualidade: 96%</span>
+              </div>
+              <div class="metric-item">
+                <span class="metric-dot speed"></span>
+                <span class="metric-text">Velocidade: 92%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Charts Section -->
+        <div class="charts-section">
+          <div class="chart-card projects-timeline">
+            <div class="chart-header">
+              <h3>📊 Timeline de Projetos</h3>
+              <div class="chart-controls">
+                <button class="chart-filter active" data-period="month">Mês</button>
+                <button class="chart-filter" data-period="quarter">Trimestre</button>
+                <button class="chart-filter" data-period="year">Ano</button>
+              </div>
+            </div>
+            <div class="chart-container">
+              <canvas id="projectsTimelineChart"></canvas>
+            </div>
+          </div>
+
+          <div class="chart-card budget-distribution">
+            <div class="chart-header">
+              <h3>💰 Distribuição de Budget</h3>
+              <div class="budget-total">Total: R$ 297k</div>
+            </div>
+            <div class="chart-container">
+              <canvas id="budgetChart"></canvas>
+            </div>
+            <div class="budget-legend">
+              <div class="legend-item">
+                <span class="legend-dot" style="background: #667eea;"></span>
+                <span>Desenvolvimento (40%)</span>
+              </div>
+              <div class="legend-item">
+                <span class="legend-dot" style="background: #764ba2;"></span>
+                <span>Marketing (25%)</span>
+              </div>
+              <div class="legend-item">
+                <span class="legend-dot" style="background: #f093fb;"></span>
+                <span>Operações (35%)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Recent Activity & Alerts -->
+        <div class="activity-section">
+          <div class="activity-card recent-updates">
+            <div class="activity-header">
+              <h3>🔔 Atualizações Recentes</h3>
+              <span class="activity-count">5 novos</span>
+            </div>
+            <div class="activity-list">
+              <div class="activity-item">
+                <div class="activity-icon project">📋</div>
+                <div class="activity-content">
+                  <div class="activity-title">Projeto AERALYN atualizado</div>
+                  <div class="activity-time">há 2 horas</div>
+                </div>
+                <div class="activity-status success">✅</div>
+              </div>
+              <div class="activity-item">
+                <div class="activity-icon meeting">📅</div>
+                <div class="activity-content">
+                  <div class="activity-title">Reunião executiva concluída</div>
+                  <div class="activity-time">há 4 horas</div>
+                </div>
+                <div class="activity-status info">ℹ️</div>
+              </div>
+              <div class="activity-item">
+                <div class="activity-icon budget">💰</div>
+                <div class="activity-content">
+                  <div class="activity-title">Budget aprovado para Q4</div>
+                  <div class="activity-time">há 1 dia</div>
+                </div>
+                <div class="activity-status success">✅</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="activity-card alerts">
+            <div class="activity-header">
+              <h3>⚠️ Alertas</h3>
+              <span class="alert-count">2 ativos</span>
+            </div>
+            <div class="alerts-list">
+              <div class="alert-item warning">
+                <div class="alert-icon">⚠️</div>
+                <div class="alert-content">
+                  <div class="alert-title">Budget próximo do limite</div>
+                  <div class="alert-description">Projeto Trip Match: 85% utilizado</div>
+                </div>
+                <button class="alert-action">Ver</button>
+              </div>
+              <div class="alert-item info">
+                <div class="alert-icon">📋</div>
+                <div class="alert-content">
+                  <div class="alert-title">Revisão de compliance</div>
+                  <div class="alert-description">3 documentos pendentes</div>
+                </div>
+                <button class="alert-action">Revisar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Actions -->
+        <div class="actions-section">
+          <div class="actions-card">
+            <h3>⚡ Ações Rápidas</h3>
+            <div class="actions-grid">
+              <button class="action-btn primary">
+                <div class="action-icon">➕</div>
+                <div class="action-text">Novo Projeto</div>
+              </button>
+              <button class="action-btn secondary">
+                <div class="action-icon">📅</div>
+                <div class="action-text">Agendar Reunião</div>
+              </button>
+              <button class="action-btn secondary">
+                <div class="action-icon">📊</div>
+                <div class="action-text">Gerar Relatório</div>
+              </button>
+              <button class="action-btn secondary">
+                <div class="action-icon">⚙️</div>
+                <div class="action-text">Configurações</div>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Dashboard Content (for additional content from markdown) -->
+      
+      <div class="dashboard-content">
+        <h1>🎯 <strong>DECISÕES ESTRATÉGICAS</strong></h1>
+<blockquote>
+<p><em>Registro de decisões críticas e impacto nos negócios</em></p>
+</blockquote>
+<h2>📋 <strong>Decisões Recentes</strong></h2>
+<h3><strong>🚀 Aprovação do Sistema Multi-Agente</strong></h3>
+<ul>
+<li><strong>Data:</strong> 01/09/2025</li>
+<li><strong>Impacto:</strong> Alto</li>
+<li><strong>Investimento:</strong> R$ 100.000</li>
+<li><strong>Status:</strong> ✅ Aprovado</li>
+<li><strong>Responsável:</strong> Pedro Vitor</li>
+</ul>
+<h3><strong>🤖 Implementação de IA Generativa</strong></h3>
+<ul>
+<li><strong>Data:</strong> 30/08/2025</li>
+<li><strong>Impacto:</strong> Estratégico</li>
+<li><strong>ROI Projetado:</strong> 347%</li>
+<li><strong>Status:</strong> ✅ Em Execução</li>
+<li><strong>Prazo:</strong> Q4 2025</li>
+</ul>
+<h3><strong>📱 Foco em WhatsBot Academia</strong></h3>
+<ul>
+<li><strong>Data:</strong> 01/09/2025</li>
+<li><strong>Impacto:</strong> Comercial</li>
+<li><strong>Mercado-Alvo:</strong> Educação</li>
+<li><strong>Status:</strong> ✅ Desenvolvimento</li>
+<li><strong>Budget:</strong> R$ 15.000</li>
+</ul>
+<h2>🎯 <strong>Decisões Pendentes</strong></h2>
+<h3><strong>⚡ Expansão da Equipe Técnica</strong></h3>
+<ul>
+<li><strong>Prioridade:</strong> Alta</li>
+<li><strong>Investimento:</strong> R$ 50.000/mês</li>
+<li><strong>Impacto:</strong> Capacidade de entrega</li>
+<li><strong>Decisão até:</strong> 15/09/2025</li>
+</ul>
+<h3><strong>🌍 Entrada em Novos Mercados</strong></h3>
+<ul>
+<li><strong>Prioridade:</strong> Média</li>
+<li><strong>Análise:</strong> Em andamento</li>
+<li><strong>Potencial:</strong> Internacional</li>
+<li><strong>Decisão até:</strong> 30/09/2025</li>
+</ul>
+<h2>📊 <strong>Matriz de Impacto</strong></h2>
+<h3><strong>Alto Impacto, Alta Urgência</strong></h3>
+<ul>
+<li>Sistema Multi-Agente ✅</li>
+<li>IA Generativa ✅</li>
+<li>Expansão da Equipe ⏳</li>
+</ul>
+<h3><strong>Alto Impacto, Baixa Urgência</strong></h3>
+<ul>
+<li>Expansão Internacional ⏳</li>
+<li>Diversificação de Produtos 📋</li>
+<li>Parcerias Estratégicas 📋</li>
+</ul>
+<h3><strong>Baixo Impacto, Alta Urgência</strong></h3>
+<ul>
+<li>Otimizações de Sistema ✅</li>
+<li>Atualizações de Processo ✅</li>
+</ul>
+<h2>🔍 <strong>Critérios de Decisão</strong></h2>
+<h3><strong>Avaliação Estratégica:</strong></h3>
+<ol>
+<li><strong>ROI Projetado</strong> (&gt;200%)</li>
+<li><strong>Alinhamento com Visão</strong></li>
+<li><strong>Recursos Disponíveis</strong></li>
+<li><strong>Timing de Mercado</strong></li>
+<li><strong>Risco vs Retorno</strong></li>
+</ol>
+<h3><strong>Processo de Aprovação:</strong></h3>
+<ol>
+<li><strong>Análise Técnica</strong> - Equipe</li>
+<li><strong>Viabilidade Financeira</strong> - CFO</li>
+<li><strong>Aprovação Estratégica</strong> - CEO</li>
+<li><strong>Implementação</strong> - PM</li>
+<li><strong>Acompanhamento</strong> - KPIs</li>
+</ol>
+<h2>📈 <strong>Métricas de Decisão</strong></h2>
+<p><strong>🎯 Eficácia:</strong></p>
+<ul>
+<li>✅ <strong>95% Taxa de Sucesso</strong> - Decisões implementadas</li>
+<li>✅ <strong>&lt;7 dias</strong> - Tempo médio de decisão</li>
+<li>✅ <strong>347% ROI Médio</strong> - Retorno sobre investimento</li>
+<li>✅ <strong>100% Follow-up</strong> - Acompanhamento ativo</li>
+</ul>
+<h2>📅 <strong>Agenda Estratégica</strong></h2>
+<h3><strong>Setembro 2025</strong></h3>
+<ul>
+<li>[ ] Decisão sobre expansão da equipe</li>
+<li>[ ] Review de projetos ativos</li>
+<li>[ ] Planejamento Q4</li>
+</ul>
+<h3><strong>Outubro 2025</strong></h3>
+<ul>
+<li>[ ] Análise de novos mercados</li>
+<li>[ ] Avaliação de parcerias</li>
+<li>[ ] Orçamento 2026</li>
+</ul>
+<hr>
+<p><em>Decisões estratégicas moldam o futuro da empresa.</em></p>
+
+      </div>
+      
+
+    </div>
+  </main>
+
+  <!-- JavaScript -->
+  <script src="/scripts/main.js"></script>
+  <script src="/scripts/dashboard.js"></script>
+  <script>
+    // Dashboard-specific JavaScript
+    document.addEventListener('DOMContentLoaded', function() {
+      // Initialize dashboard
+      initializeDashboard();
+      
+      // Auto-refresh every 5 minutes
+      setInterval(refreshDashboard, 300000);
+      
+      // Real-time updates simulation
+      simulateRealTimeUpdates();
+    });
+
+    function initializeDashboard() {
+      // Initialize charts
+      initializeCharts();
+      
+      // Setup event listeners
+      setupEventListeners();
+      
+      // Load initial data
+      loadDashboardData();
+    }
+
+    function initializeCharts() {
+      // Revenue Chart (mini sparkline)
+      const revenueCtx = document.getElementById('revenueChart');
+      if (revenueCtx) {
+        new Chart(revenueCtx, {
+          type: 'line',
+          data: {
+            labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun'],
+            datasets: [{
+              data: [800, 950, 1100, 1050, 1150, 1200],
+              borderColor: '#10b981',
+              backgroundColor: 'rgba(16, 185, 129, 0.1)',
+              borderWidth: 2,
+              fill: true,
+              tension: 0.4
+            }]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: { legend: { display: false } },
+            scales: {
+              x: { display: false },
+              y: { display: false }
+            },
+            elements: { point: { radius: 0 } }
+          }
+        });
+      }
+
+      // Projects Timeline Chart
+      const timelineCtx = document.getElementById('projectsTimelineChart');
+      if (timelineCtx) {
+        new Chart(timelineCtx, {
+          type: 'bar',
+          data: {
+            labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun'],
+            datasets: [
+              {
+                label: 'Projetos Iniciados',
+                data: [2, 3, 1, 4, 2, 3],
+                backgroundColor: '#667eea'
+              },
+              {
+                label: 'Projetos Concluídos',
+                data: [1, 2, 3, 2, 3, 4],
+                backgroundColor: '#764ba2'
+              }
+            ]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              legend: { position: 'top' }
+            },
+            scales: {
+              y: { beginAtZero: true }
+            }
+          }
+        });
+      }
+
+      // Budget Distribution Chart
+      const budgetCtx = document.getElementById('budgetChart');
+      if (budgetCtx) {
+        new Chart(budgetCtx, {
+          type: 'doughnut',
+          data: {
+            labels: ['Desenvolvimento', 'Marketing', 'Operações'],
+            datasets: [{
+              data: [40, 25, 35],
+              backgroundColor: ['#667eea', '#764ba2', '#f093fb'],
+              borderWidth: 0
+            }]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              legend: { display: false }
+            }
+          }
+        });
+      }
+    }
+
+    function setupEventListeners() {
+      // Chart filter buttons
+      document.querySelectorAll('.chart-filter').forEach(btn => {
+        btn.addEventListener('click', function() {
+          document.querySelectorAll('.chart-filter').forEach(b => b.classList.remove('active'));
+          this.classList.add('active');
+          // Update chart based on period
+          updateChartPeriod(this.dataset.period);
+        });
+      });
+
+      // Action buttons
+      document.querySelectorAll('.action-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+          const action = this.querySelector('.action-text').textContent;
+          handleQuickAction(action);
+        });
+      });
+    }
+
+    function loadDashboardData() {
+      // Simulate data loading
+      console.log('📊 Dashboard data loaded');
+    }
+
+    function refreshDashboard() {
+      // Simulate refresh
+      console.log('🔄 Dashboard refreshed');
+      
+      // Update last updated time
+      const lastUpdated = document.querySelector('.last-updated');
+      if (lastUpdated) {
+        lastUpdated.textContent = `Última atualização: ${new Date().toLocaleString('pt-BR')}`;
+      }
+    }
+
+    function simulateRealTimeUpdates() {
+      // Simulate real-time updates every 30 seconds
+      setInterval(() => {
+        // Random small updates to metrics
+        const projectsCount = document.getElementById('total-projects');
+        const budgetTotal = document.getElementById('total-budget');
+        const avgROI = document.getElementById('avg-roi');
+        
+        // Small random variations
+        if (Math.random() > 0.7) {
+          // Occasionally update values slightly
+          console.log('📈 Real-time update simulated');
+        }
+      }, 30000);
+    }
+
+    function updateChartPeriod(period) {
+      console.log(`📊 Updating charts for period: ${period}`);
+      // Implementation for chart period updates
+    }
+
+    function handleQuickAction(action) {
+      console.log(`⚡ Quick action: ${action}`);
+      // Implementation for quick actions
+    }
+  </script>
+  
+  <!-- Sidebar JavaScript -->
+  <script src="/scripts/sidebar.js" defer></script>
+</body>
+</html>

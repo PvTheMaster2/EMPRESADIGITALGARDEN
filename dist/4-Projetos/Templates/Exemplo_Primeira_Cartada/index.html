@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="theme-dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exemplo Primeira Cartada - Digital Garden Empresarial</title>
+  <meta name="description" content="Sistema de Gestão de Conhecimento Empresarial" />
+  
+  <!-- CSS do tema Obsidian e customizações -->
+  <link rel="stylesheet" href="/styles/main.css" />
+  <link rel="stylesheet" href="/styles/sidebar.css" />
+  <link rel="stylesheet" href="/styles/projeto.css" />
+  
+  <!-- Favicon e meta tags para PWA -->
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+  <meta name="theme-color" content="#1e1e1e" />
+</head>
+<body class="layout-projeto">
+  
+  <header class="site-header">
+    <nav class="main-navigation">
+      <div class="nav-brand">
+        <button class="mobile-sidebar-toggle" onclick="toggleSidebar()">
+          <span class="hamburger"></span>
+        </button>
+        <a href="/" class="brand-link">
+          🌱 Digital Garden Empresarial
+        </a>
+      </div>
+      
+      <div class="nav-links">
+        <a href="/">Dashboard</a>
+        <a href="/1-Governanca/README/">Governança</a>
+        <a href="/4-Projetos/README/" class="active">Projetos</a>
+        <a href="/2-Equipes/README/">Equipes</a>
+        <a href="/5-Processos/README/">Processos</a>
+        <a href="/6-Reunioes/README/">Reuniões</a>
+        <a href="/7-Conhecimento/README/">Conhecimento</a>
+      </div>
+      
+      <div class="nav-tools">
+        <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
+        <button class="search-toggle" onclick="toggleSearch()">🔍</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Sidebar Navigation -->
+  <aside class="sidebar" data-state="closed" aria-hidden="true">
+    <div class="sidebar-header">
+      <button class="sidebar-toggle" onclick="toggleSidebar()">
+        <span class="hamburger"></span>
+      </button>
+      <div class="sidebar-brand">
+        <a href="/" class="brand-link">🌱 Digital Garden</a>
+      </div>
+    </div>
+    
+    <div class="sidebar-content">
+      <div class="sidebar-search">
+        <input type="search" placeholder="Buscar páginas..." class="search-input" id="sidebar-search">
+      </div>
+      
+      <div class="sidebar-tree">
+        <!-- Navegação será carregada via JavaScript -->
+        <div id="navigation-tree"></div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Overlay para mobile -->
+  <div class="sidebar-overlay" aria-hidden="true"></div>
+
+  <!-- Main Content -->
+  <main id="main" class="site-main" tabindex="-1">
+    <div class="content-wrapper">
+      
+      <!-- Breadcrumbs -->
+      
+
+      <!-- Project Header -->
+      <article class="project-page">
+        <header class="project-header">
+          
+          <h1 class="project-title">Exemplo Primeira Cartada</h1>
+          
+          
+          <!-- Project Status Bar -->
+          <div class="project-status-bar">
+            
+            <div class="status-badge status-template">
+              
+              
+              
+              
+              
+              
+            </div>
+            
+            
+            
+            
+            
+          </div>
+        </header>
+
+        <!-- Project Metrics Cards -->
+        
+
+        <!-- Project Details Grid -->
+        <div class="project-details">
+          
+          <!-- Main Content -->
+          <div class="project-content">
+            <h1>📝 <strong>NOVA IDEIA DE PROJETO</strong></h1>
+<blockquote>
+<p><em>Template simplificado para submeter ideias de projeto</em></p>
+</blockquote>
+<hr>
+<h2>🎯 <strong>INFORMAÇÕES BÁSICAS (OBRIGATÓRIO - PRIMEIRA CARTADA)</strong></h2>
+<h3><strong>Título do Projeto</strong></h3>
+<p>CRM para Clínicas Odontológicas</p>
+<h3><strong>Problema / Dor</strong></h3>
+<p>Clínicas odontológicas perdem pacientes por falta de follow-up e gestão de consultas. Muitas ainda usam agenda de papel e não têm sistema para lembrar pacientes de retornos.</p>
+<h3><strong>Público-alvo</strong></h3>
+<p>Clínicas odontológicas pequenas e médias (2-10 dentistas) que ainda não têm sistema de gestão digital</p>
+<h3><strong>Proposta de Solução</strong></h3>
+<p>Sistema simples de CRM com agenda digital, lembretes automáticos por WhatsApp, e gestão básica de pacientes</p>
+<h3><strong>Dono do Projeto</strong></h3>
+<p><a href="/stubs/">Lu&iacute;s</a></p>
+<hr>
+<h2>📊 <strong>DETALHES ADICIONAIS (A SER PREENCHIDO NA FASE DE DETALHAMENTO)</strong></h2>
+<h3><strong>Ativos de IA Reaproveitados</strong></h3>
+<p><em>Modelos, prompts, bases, conectores (N/A na primeira cartada)</em></p>
+<h3><strong>Esforço Estimado</strong></h3>
+<p><em>Estimativa do tempo (pessoas/semana) (N/A na primeira cartada)</em></p>
+<h3><strong>Riscos (LGPD/Reg.)</strong></h3>
+<p><em>Dados pessoais? Sensíveis? Mitigações? (N/A na primeira cartada)</em></p>
+<h3><strong>Métrica de Sucesso (1° mês)</strong></h3>
+<p><em>Ex.: 5 clientes-teste / R$ 5k / +20% produtividade (N/A na primeira cartada)</em></p>
+<h3><strong>Precificação Inicial</strong></h3>
+<p><em>Ticket, setup, recorrência (N/A na primeira cartada)</em></p>
+<hr>
+<h2>✅ <strong>CHECKLIST DE SUBMISSÃO</strong></h2>
+<ul>
+<li>[x] Todas as informações básicas preenchidas</li>
+<li>[x] Proposta de solução clara</li>
+<li>[x] Público-alvo definido</li>
+<li>[x] Dono do projeto identificado</li>
+</ul>
+<hr>
+<h2>📋 <strong>PRÓXIMOS PASSOS</strong></h2>
+<ol>
+<li><strong>Submeter</strong> este template no repositório central</li>
+<li><strong>Agendar</strong> reunião de discussão específica</li>
+<li><strong>Validar</strong> viabilidade técnica e comercial</li>
+<li><strong>Aprovar</strong> ou solicitar ajustes</li>
+</ol>
+<hr>
+<p><strong>Status</strong>: ✅ <strong>SUBMETIDO</strong><br>
+<strong>Submetido por</strong>: <a href="/stubs/">Lu&iacute;s</a><br>
+<strong>Data</strong>: 2025-08-31<br>
+<strong>Próxima Ação</strong>: Reunião de discussão</p>
+
+          </div>
+          
+          <!-- Sidebar with metadata -->
+          <div class="project-sidebar">
+            
+            <!-- Project Info -->
+            <div class="info-card">
+              <h3>📊 Informações do Projeto</h3>
+              <div class="info-grid">
+                
+                
+                
+                
+                <div class="info-item">
+                  <span class="info-label">📋 Tipo:</span>
+                  <span class="info-value">template</span>
+                </div>
+                
+                
+                
+                
+                
+                
+                
+                <div class="info-item">
+                  <span class="info-label">📅 Criado:</span>
+                  <span class="info-value">2025-08-31</span>
+                </div>
+                
+                
+                
+                <div class="info-item">
+                  <span class="info-label">🔄 Atualizado:</span>
+                  <span class="info-value">2025-09-01</span>
+                </div>
+                
+                
+              </div>
+            </div>
+
+            <!-- IA Assets -->
+            
+
+            <!-- Tags -->
+            
+            <div class="info-card">
+              <h3>🏷️ Tags</h3>
+              <div class="tags-container">
+                
+                <span class="tag tag-projeto">projeto</span>
+                
+                <span class="tag tag-projeto-template">projeto-template</span>
+                
+              </div>
+            </div>
+            
+
+          </div>
+        </div>
+
+        <!-- Decision Block -->
+        
+
+      </article>
+    </div>
+  </main>
+
+  <!-- JavaScript -->
+  <script src="/scripts/main.js"></script>
+  <script src="/scripts/sidebar.js" defer></script>
+  <script>
+    // Project-specific JavaScript
+    document.addEventListener('DOMContentLoaded', function() {
+      // Highlight project navigation
+      const projectNav = document.querySelector('.nav-links a[href="/projetos/"]');
+      if (projectNav) {
+        projectNav.classList.add('active');
+      }
+      
+      // Animate metric cards
+      const metricCards = document.querySelectorAll('.metric-card');
+      metricCards.forEach((card, index) => {
+        card.style.animationDelay = `${index * 0.1}s`;
+        card.classList.add('animate-in');
+      });
+    });
+  </script>
+</body>
+</html>

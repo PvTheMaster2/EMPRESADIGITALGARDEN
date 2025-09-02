@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="theme-dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plataforma Cursos - Digital Garden Empresarial</title>
+  <meta name="description" content="Sistema de Gestão de Conhecimento Empresarial" />
+  
+  <!-- CSS do tema Obsidian e customizações -->
+  <link rel="stylesheet" href="/styles/main.css" />
+  <link rel="stylesheet" href="/styles/sidebar.css" />
+  <link rel="stylesheet" href="/styles/projeto.css" />
+  
+  <!-- Favicon e meta tags para PWA -->
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+  <meta name="theme-color" content="#1e1e1e" />
+</head>
+<body class="layout-projeto">
+  
+  <header class="site-header">
+    <nav class="main-navigation">
+      <div class="nav-brand">
+        <button class="mobile-sidebar-toggle" onclick="toggleSidebar()">
+          <span class="hamburger"></span>
+        </button>
+        <a href="/" class="brand-link">
+          🌱 Digital Garden Empresarial
+        </a>
+      </div>
+      
+      <div class="nav-links">
+        <a href="/">Dashboard</a>
+        <a href="/1-Governanca/README/">Governança</a>
+        <a href="/4-Projetos/README/" class="active">Projetos</a>
+        <a href="/2-Equipes/README/">Equipes</a>
+        <a href="/5-Processos/README/">Processos</a>
+        <a href="/6-Reunioes/README/">Reuniões</a>
+        <a href="/7-Conhecimento/README/">Conhecimento</a>
+      </div>
+      
+      <div class="nav-tools">
+        <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
+        <button class="search-toggle" onclick="toggleSearch()">🔍</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Sidebar Navigation -->
+  <aside class="sidebar" data-state="closed" aria-hidden="true">
+    <div class="sidebar-header">
+      <button class="sidebar-toggle" onclick="toggleSidebar()">
+        <span class="hamburger"></span>
+      </button>
+      <div class="sidebar-brand">
+        <a href="/" class="brand-link">🌱 Digital Garden</a>
+      </div>
+    </div>
+    
+    <div class="sidebar-content">
+      <div class="sidebar-search">
+        <input type="search" placeholder="Buscar páginas..." class="search-input" id="sidebar-search">
+      </div>
+      
+      <div class="sidebar-tree">
+        <!-- Navegação será carregada via JavaScript -->
+        <div id="navigation-tree"></div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Overlay para mobile -->
+  <div class="sidebar-overlay" aria-hidden="true"></div>
+
+  <!-- Main Content -->
+  <main id="main" class="site-main" tabindex="-1">
+    <div class="content-wrapper">
+      
+      <!-- Breadcrumbs -->
+      
+
+      <!-- Project Header -->
+      <article class="project-page">
+        <header class="project-header">
+          
+          <h1 class="project-title">Plataforma Cursos</h1>
+          
+          
+          <!-- Project Status Bar -->
+          <div class="project-status-bar">
+            
+            <div class="status-badge status-active">
+              🟢 Ativo
+              
+              
+              
+              
+              
+            </div>
+            
+            
+            
+            <div class="priority-badge priority-high">
+              🔴 Alta
+              
+              
+              
+            </div>
+            
+            
+            
+            <div class="owner-badge">
+              👤 Pedro Vitor
+            </div>
+            
+          </div>
+        </header>
+
+        <!-- Project Metrics Cards -->
+        
+        <div class="project-metrics">
+          
+          
+          <div class="metric-card budget-card">
+            <div class="metric-icon">💰</div>
+            <div class="metric-content">
+              <div class="metric-label">Orçamento</div>
+              <div class="metric-value">R$ 40.000</div>
+            </div>
+          </div>
+          
+          
+          
+          <div class="metric-card effort-card">
+            <div class="metric-icon">⏱️</div>
+            <div class="metric-content">
+              <div class="metric-label">Esforço</div>
+              <div class="metric-value">100 semanas</div>
+            </div>
+          </div>
+          
+          
+          
+          
+          
+          
+        </div>
+        
+
+        <!-- Project Details Grid -->
+        <div class="project-details">
+          
+          <!-- Main Content -->
+          <div class="project-content">
+            <h1>🎓 <strong>Plataforma de Cursos Online</strong></h1>
+<blockquote>
+<p><em>Sistema completo de criação, gestão e distribuição de cursos online com IA integrada</em></p>
+</blockquote>
+<hr>
+<h2>📋 <strong>RESUMO EXECUTIVO</strong></h2>
+<p><strong>Objetivo</strong>: Criar uma plataforma completa de cursos online que permita a criação, gestão e distribuição de conteúdo educacional com recursos de IA para personalização e otimização.</p>
+<p><strong>Status</strong>: Planejamento inicial<br>
+<strong>Prioridade</strong>: Alta<br>
+<strong>Budget</strong>: R$ 40.000<br>
+<strong>Timeline</strong>: 16 semanas</p>
+<hr>
+<h2>🎯 <strong>OBJETIVOS E KPIs</strong></h2>
+<h3><strong>Objetivos Principais</strong></h3>
+<ol>
+<li><strong>MVP Funcional</strong>: Plataforma com 3 cursos básicos</li>
+<li><strong>Sistema de Pagamentos</strong>: Integração com gateways</li>
+<li><strong>Dashboard de Analytics</strong>: Métricas de engajamento</li>
+<li><strong>Sistema de IA</strong>: Recomendações personalizadas</li>
+</ol>
+<h3><strong>KPIs de Sucesso</strong></h3>
+<ul>
+<li><strong>Usuários ativos</strong>: 100+ no primeiro mês</li>
+<li><strong>Taxa de conclusão</strong>: 70%+</li>
+<li><strong>Receita mensal</strong>: R$ 5.000+</li>
+<li><strong>Satisfação</strong>: 4.5/5 estrelas</li>
+</ul>
+<hr>
+<h2>🏗️ <strong>ARQUITETURA TÉCNICA</strong></h2>
+<h3><strong>Frontend</strong></h3>
+<ul>
+<li><strong>Framework</strong>: React/Next.js</li>
+<li><strong>UI/UX</strong>: Tailwind CSS + Framer Motion</li>
+<li><strong>Estado</strong>: Redux Toolkit</li>
+<li><strong>Autenticação</strong>: NextAuth.js</li>
+</ul>
+<h3><strong>Backend</strong></h3>
+<ul>
+<li><strong>Runtime</strong>: Node.js/Express</li>
+<li><strong>Banco de Dados</strong>: PostgreSQL</li>
+<li><strong>Cache</strong>: Redis</li>
+<li><strong>Storage</strong>: AWS S3</li>
+</ul>
+<h3><strong>IA e Analytics</strong></h3>
+<ul>
+<li><strong>Recomendações</strong>: OpenAI GPT-4</li>
+<li><strong>Análise de Progresso</strong>: TensorFlow.js</li>
+<li><strong>Personalização</strong>: Algoritmos de ML</li>
+</ul>
+<hr>
+<h2>📚 <strong>FUNCIONALIDADES PRINCIPAIS</strong></h2>
+<h3><strong>Para Criadores de Cursos</strong></h3>
+<ol>
+<li>
+<p><strong>Editor de Cursos</strong></p>
+<ul>
+<li>Interface drag-and-drop</li>
+<li>Templates pré-definidos</li>
+<li>Upload de mídia</li>
+<li>Estrutura modular</li>
+</ul>
+</li>
+<li>
+<p><strong>Gestão de Conteúdo</strong></p>
+<ul>
+<li>Organização por módulos</li>
+<li>Sistema de avaliações</li>
+<li>Certificados automáticos</li>
+<li>Backup automático</li>
+</ul>
+</li>
+<li>
+<p><strong>Analytics Avançados</strong></p>
+<ul>
+<li>Métricas de engajamento</li>
+<li>Análise de progresso</li>
+<li>Relatórios detalhados</li>
+<li>Insights de IA</li>
+</ul>
+</li>
+</ol>
+<h3><strong>Para Alunos</strong></h3>
+<ol>
+<li>
+<p><strong>Experiência de Aprendizado</strong></p>
+<ul>
+<li>Interface intuitiva</li>
+<li>Progresso visual</li>
+<li>Notificações personalizadas</li>
+<li>Comunidade integrada</li>
+</ul>
+</li>
+<li>
+<p><strong>Recursos Interativos</strong></p>
+<ul>
+<li>Fórum de discussão</li>
+<li>Sistema de mentoria</li>
+<li>Gamificação</li>
+<li>Certificados</li>
+</ul>
+</li>
+<li>
+<p><strong>Personalização</strong></p>
+<ul>
+<li>Recomendações de IA</li>
+<li>Roteiros personalizados</li>
+<li>Adaptação ao ritmo</li>
+<li>Conteúdo complementar</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2>💰 <strong>MODELO DE NEGÓCIO</strong></h2>
+<h3><strong>Monetização</strong></h3>
+<ol>
+<li><strong>Comissão por Venda</strong>: 10-15% por curso vendido</li>
+<li><strong>Assinatura Mensal</strong>: R$ 99/mês para criadores</li>
+<li><strong>Planos Premium</strong>: R$ 199/mês com recursos avançados</li>
+<li><strong>Marketplace</strong>: Taxa de 5% sobre transações</li>
+</ol>
+<h3><strong>Projeções Financeiras</strong></h3>
+<ul>
+<li><strong>Ano 1</strong>: R$ 120.000 (100 criadores, 1.000 alunos)</li>
+<li><strong>Ano 2</strong>: R$ 500.000 (500 criadores, 5.000 alunos)</li>
+<li><strong>Ano 3</strong>: R$ 1.200.000 (1.000 criadores, 15.000 alunos)</li>
+</ul>
+<hr>
+<h2>🚀 <strong>PLANO DE AÇÃO</strong></h2>
+<h3><strong>Fase 1: MVP (Semanas 1-8)</strong></h3>
+<ol>
+<li><strong>Semanas 1-2</strong>: Setup do projeto e arquitetura</li>
+<li><strong>Semanas 3-4</strong>: Sistema de autenticação e usuários</li>
+<li><strong>Semanas 5-6</strong>: Editor básico de cursos</li>
+<li><strong>Semanas 7-8</strong>: Sistema de visualização e progresso</li>
+</ol>
+<h3><strong>Fase 2: Funcionalidades Avançadas (Semanas 9-12)</strong></h3>
+<ol>
+<li><strong>Semanas 9-10</strong>: Sistema de pagamentos</li>
+<li><strong>Semanas 11-12</strong>: Analytics e dashboard</li>
+</ol>
+<h3><strong>Fase 3: IA e Otimização (Semanas 13-16)</strong></h3>
+<ol>
+<li><strong>Semanas 13-14</strong>: Integração com IA</li>
+<li><strong>Semanas 15-16</strong>: Testes e lançamento</li>
+</ol>
+<hr>
+<h2>🎯 <strong>DIFERENCIAÇÃO COMPETITIVA</strong></h2>
+<h3><strong>Vantagens Únicas</strong></h3>
+<ol>
+<li><strong>IA Integrada</strong>: Recomendações personalizadas em tempo real</li>
+<li><strong>Templates Inteligentes</strong>: Geração automática de estrutura</li>
+<li><strong>Analytics Avançados</strong>: Insights profundos de comportamento</li>
+<li><strong>Comunidade Ativa</strong>: Sistema de mentoria e networking</li>
+</ol>
+<h3><strong>Posicionamento</strong></h3>
+<ul>
+<li><strong>Foco</strong>: Criadores de conteúdo independentes</li>
+<li><strong>Diferenciação</strong>: IA + Analytics + Comunidade</li>
+<li><strong>Preço</strong>: Competitivo com recursos premium</li>
+</ul>
+<hr>
+<h2>📊 <strong>MÉTRICAS E MONITORAMENTO</strong></h2>
+<h3><strong>Métricas de Produto</strong></h3>
+<ul>
+<li><strong>Engajamento</strong>: Tempo médio por sessão</li>
+<li><strong>Retenção</strong>: Taxa de retorno semanal</li>
+<li><strong>Conversão</strong>: Taxa de inscrição em cursos</li>
+<li><strong>Satisfação</strong>: NPS e avaliações</li>
+</ul>
+<h3><strong>Métricas de Negócio</strong></h3>
+<ul>
+<li><strong>Receita</strong>: MRR e LTV</li>
+<li><strong>Crescimento</strong>: Novos usuários e criadores</li>
+<li><strong>Eficiência</strong>: CAC e churn rate</li>
+<li><strong>Escalabilidade</strong>: Performance e custos</li>
+</ul>
+<hr>
+<h2>🔒 <strong>COMPLIANCE E SEGURANÇA</strong></h2>
+<h3><strong>Compliance</strong></h3>
+<ul>
+<li><strong>LGPD</strong>: Conformidade com proteção de dados</li>
+<li><strong>Educacional</strong>: Certificações reconhecidas</li>
+<li><strong>Pagamentos</strong>: PCI DSS compliance</li>
+<li><strong>Acessibilidade</strong>: WCAG 2.1 AA</li>
+</ul>
+<h3><strong>Segurança</strong></h3>
+<ul>
+<li><strong>Dados</strong>: Criptografia end-to-end</li>
+<li><strong>Autenticação</strong>: 2FA obrigatório</li>
+<li><strong>Backup</strong>: Redundância geográfica</li>
+<li><strong>Monitoramento</strong>: Detecção de fraudes</li>
+</ul>
+<hr>
+<h2>🚨 <strong>RISCOS E MITIGAÇÕES</strong></h2>
+<h3><strong>Risco 1: Concorrência Estabelecida</strong></h3>
+<ul>
+<li><strong>Mitigação</strong>: Foco em nichos específicos e IA</li>
+<li><strong>Monitoramento</strong>: Análise de concorrência mensal</li>
+</ul>
+<h3><strong>Risco 2: Complexidade Técnica</strong></h3>
+<ul>
+<li><strong>Mitigação</strong>: MVP simples e iteração rápida</li>
+<li><strong>Monitoramento</strong>: Métricas de performance</li>
+</ul>
+<h3><strong>Risco 3: Aquisição de Usuários</strong></h3>
+<ul>
+<li><strong>Mitigação</strong>: Parcerias estratégicas e marketing de conteúdo</li>
+<li><strong>Monitoramento</strong>: CAC e conversão</li>
+</ul>
+<hr>
+<h2>📝 <strong>PRÓXIMOS PASSOS</strong></h2>
+<h3><strong>Esta Semana</strong></h3>
+<ol>
+<li><strong>Definir</strong> arquitetura técnica detalhada</li>
+<li><strong>Criar</strong> wireframes e protótipos</li>
+<li><strong>Pesquisar</strong> concorrência e mercado</li>
+</ol>
+<h3><strong>Próximo Mês</strong></h3>
+<ol>
+<li><strong>Desenvolver</strong> MVP básico</li>
+<li><strong>Testar</strong> com 5 criadores beta</li>
+<li><strong>Validar</strong> modelo de negócio</li>
+</ol>
+<h3><strong>Próximo Trimestre</strong></h3>
+<ol>
+<li><strong>Lançar</strong> versão beta pública</li>
+<li><strong>Implementar</strong> sistema de pagamentos</li>
+<li><strong>Integrar</strong> recursos de IA</li>
+</ol>
+<hr>
+<h2>✅ <strong>CRITÉRIOS DE SUCESSO</strong></h2>
+<h3><strong>Curto Prazo (3 meses)</strong></h3>
+<ul>
+<li>✅ MVP funcional com 3 cursos</li>
+<li>✅ 50 usuários ativos</li>
+<li>✅ Sistema de pagamentos operacional</li>
+</ul>
+<h3><strong>Médio Prazo (6 meses)</strong></h3>
+<ul>
+<li>✅ 200 usuários ativos</li>
+<li>✅ R$ 10.000/mês de receita</li>
+<li>✅ 20 criadores de conteúdo</li>
+</ul>
+<h3><strong>Longo Prazo (12 meses)</strong></h3>
+<ul>
+<li>✅ 1.000 usuários ativos</li>
+<li>✅ R$ 50.000/mês de receita</li>
+<li>✅ 100 criadores de conteúdo</li>
+</ul>
+<hr>
+<p><strong>Versão</strong>: 1.0<br>
+<strong>Última Atualização</strong>: 2025-09-01<br>
+<strong>Status</strong>: 📋 <strong>EM PLANEJAMENTO</strong><br>
+<strong>Próxima Revisão</strong>: 2025-09-15</p>
+
+          </div>
+          
+          <!-- Sidebar with metadata -->
+          <div class="project-sidebar">
+            
+            <!-- Project Info -->
+            <div class="info-card">
+              <h3>📊 Informações do Projeto</h3>
+              <div class="info-grid">
+                
+                
+                <div class="info-item">
+                  <span class="info-label">🌍 Segmento:</span>
+                  <span class="info-value">Educação Online</span>
+                </div>
+                
+                
+                
+                <div class="info-item">
+                  <span class="info-label">📋 Tipo:</span>
+                  <span class="info-value">project</span>
+                </div>
+                
+                
+                
+                <div class="info-item">
+                  <span class="info-label">🔒 Compliance:</span>
+                  <span class="info-value">Nível 2</span>
+                </div>
+                
+                
+                
+                <div class="info-item">
+                  <span class="info-label">⚖️ Review Legal:</span>
+                  <span class="info-value">✅ Aprovado</span>
+                </div>
+                
+                
+                
+                <div class="info-item">
+                  <span class="info-label">📅 Criado:</span>
+                  <span class="info-value">2025-09-01</span>
+                </div>
+                
+                
+                
+                <div class="info-item">
+                  <span class="info-label">🔄 Atualizado:</span>
+                  <span class="info-value">2025-09-01</span>
+                </div>
+                
+                
+              </div>
+            </div>
+
+            <!-- IA Assets -->
+            
+            <div class="info-card">
+              <h3>🤖 Recursos de IA</h3>
+              
+              
+              <div class="ia-section">
+                <h4>💬 Prompts</h4>
+                <ul class="ia-list">
+                  
+                  <li>Sistema de geração de conteúdo de cursos</li>
+                  
+                  <li>Análise de progresso dos alunos</li>
+                  
+                  <li>Recomendações personalizadas</li>
+                  
+                </ul>
+              </div>
+              
+              
+              
+              <div class="ia-section">
+                <h4>🧠 Modelos</h4>
+                <ul class="ia-list">
+                  
+                  <li>React/Next.js Frontend</li>
+                  
+                  <li>Node.js/Express Backend</li>
+                  
+                  <li>PostgreSQL Database</li>
+                  
+                </ul>
+              </div>
+              
+              
+              
+              <div class="ia-section">
+                <h4>📊 Datasets</h4>
+                <ul class="ia-list">
+                  
+                  <li>Base de cursos existentes</li>
+                  
+                  <li>Métricas de engajamento</li>
+                  
+                </ul>
+              </div>
+              
+            </div>
+            
+
+            <!-- Tags -->
+            
+            <div class="info-card">
+              <h3>🏷️ Tags</h3>
+              <div class="tags-container">
+                
+                <span class="tag tag-projeto">projeto</span>
+                
+                <span class="tag tag-projeto-active">projeto-active</span>
+                
+                <span class="tag tag-prioridade-high">prioridade-high</span>
+                
+                <span class="tag tag-educao-online">educação-online</span>
+                
+              </div>
+            </div>
+            
+
+          </div>
+        </div>
+
+        <!-- Decision Block -->
+        
+
+      </article>
+    </div>
+  </main>
+
+  <!-- JavaScript -->
+  <script src="/scripts/main.js"></script>
+  <script src="/scripts/sidebar.js" defer></script>
+  <script>
+    // Project-specific JavaScript
+    document.addEventListener('DOMContentLoaded', function() {
+      // Highlight project navigation
+      const projectNav = document.querySelector('.nav-links a[href="/projetos/"]');
+      if (projectNav) {
+        projectNav.classList.add('active');
+      }
+      
+      // Animate metric cards
+      const metricCards = document.querySelectorAll('.metric-card');
+      metricCards.forEach((card, index) => {
+        card.style.animationDelay = `${index * 0.1}s`;
+        card.classList.add('animate-in');
+      });
+    });
+  </script>
+</body>
+</html>

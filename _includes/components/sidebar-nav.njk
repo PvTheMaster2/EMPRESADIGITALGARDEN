@@ -1,0 +1,45 @@
+<aside class="sidebar" data-state="closed" aria-hidden="true">
+  <div class="sidebar-header">
+    <h2 class="sidebar-title">Digital Garden</h2>
+    <button class="sidebar-close" onclick="closeSidebar()" aria-label="Fechar sidebar">×</button>
+  </div>
+  
+  <!-- Busca simples na sidebar -->
+  <div class="sidebar-search">
+    <input type="text" id="sidebar-search" class="search-input" placeholder="Buscar páginas..." />
+  </div>
+  
+  <!-- Navegação -->
+  <nav class="sidebar-navigation">
+    <div id="navigation-tree">
+      {% if navigation.tree %}
+        {% for section in navigation.tree %}
+        <div class="nav-section">
+          <h3 class="nav-section-title">
+            <span class="nav-icon">{{ section.icon }}</span>
+            <a href="{{ section.url }}">{{ section.title }}</a>
+          </h3>
+          {% if section.children %}
+          <ul class="nav-list">
+            {% for child in section.children %}
+            <li class="nav-item">
+              <a href="{{ child.url }}" class="nav-link">{{ child.title }}</a>
+              {% if child.children %}
+              <ul class="nav-sublist">
+                {% for subchild in child.children %}
+                <li class="nav-subitem">
+                  <a href="{{ subchild.url }}" class="nav-sublink">{{ subchild.title }}</a>
+                </li>
+                {% endfor %}
+              </ul>
+              {% endif %}
+            </li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+        </div>
+        {% endfor %}
+      {% endif %}
+    </div>
+  </nav>
+</aside>

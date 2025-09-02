@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="theme-dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AERALYN - Digital Garden Empresarial</title>
+  <meta name="description" content="Sistema de Gestão de Conhecimento Empresarial" />
+  
+  <!-- CSS do tema Obsidian e customizações -->
+  <link rel="stylesheet" href="/styles/main.css" />
+  <link rel="stylesheet" href="/styles/sidebar.css" />
+  <link rel="stylesheet" href="/styles/projeto.css" />
+  
+  <!-- Favicon e meta tags para PWA -->
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+  <meta name="theme-color" content="#1e1e1e" />
+</head>
+<body class="layout-projeto">
+  
+  <header class="site-header">
+    <nav class="main-navigation">
+      <div class="nav-brand">
+        <button class="mobile-sidebar-toggle" onclick="toggleSidebar()">
+          <span class="hamburger"></span>
+        </button>
+        <a href="/" class="brand-link">
+          🌱 Digital Garden Empresarial
+        </a>
+      </div>
+      
+      <div class="nav-links">
+        <a href="/">Dashboard</a>
+        <a href="/1-Governanca/README/">Governança</a>
+        <a href="/4-Projetos/README/" class="active">Projetos</a>
+        <a href="/2-Equipes/README/">Equipes</a>
+        <a href="/5-Processos/README/">Processos</a>
+        <a href="/6-Reunioes/README/">Reuniões</a>
+        <a href="/7-Conhecimento/README/">Conhecimento</a>
+      </div>
+      
+      <div class="nav-tools">
+        <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
+        <button class="search-toggle" onclick="toggleSearch()">🔍</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Sidebar Navigation -->
+  <aside class="sidebar" data-state="closed" aria-hidden="true">
+    <div class="sidebar-header">
+      <button class="sidebar-toggle" onclick="toggleSidebar()">
+        <span class="hamburger"></span>
+      </button>
+      <div class="sidebar-brand">
+        <a href="/" class="brand-link">🌱 Digital Garden</a>
+      </div>
+    </div>
+    
+    <div class="sidebar-content">
+      <div class="sidebar-search">
+        <input type="search" placeholder="Buscar páginas..." class="search-input" id="sidebar-search">
+      </div>
+      
+      <div class="sidebar-tree">
+        <!-- Navegação será carregada via JavaScript -->
+        <div id="navigation-tree"></div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Overlay para mobile -->
+  <div class="sidebar-overlay" aria-hidden="true"></div>
+
+  <!-- Main Content -->
+  <main id="main" class="site-main" tabindex="-1">
+    <div class="content-wrapper">
+      
+      <!-- Breadcrumbs -->
+      
+
+      <!-- Project Header -->
+      <article class="project-page">
+        <header class="project-header">
+          
+          <h1 class="project-title">AERALYN</h1>
+          
+          
+          <!-- Project Status Bar -->
+          <div class="project-status-bar">
+            
+            <div class="status-badge status-active">
+              🟢 Ativo
+              
+              
+              
+              
+              
+            </div>
+            
+            
+            
+            <div class="priority-badge priority-high">
+              🔴 Alta
+              
+              
+              
+            </div>
+            
+            
+            
+            <div class="owner-badge">
+              👤 Pedro Vitor
+            </div>
+            
+          </div>
+        </header>
+
+        <!-- Project Metrics Cards -->
+        
+        <div class="project-metrics">
+          
+          
+          <div class="metric-card budget-card">
+            <div class="metric-icon">💰</div>
+            <div class="metric-content">
+              <div class="metric-label">Orçamento</div>
+              <div class="metric-value">R$ 80.000</div>
+            </div>
+          </div>
+          
+          
+          
+          <div class="metric-card effort-card">
+            <div class="metric-icon">⏱️</div>
+            <div class="metric-content">
+              <div class="metric-label">Esforço</div>
+              <div class="metric-value">40 semanas</div>
+            </div>
+          </div>
+          
+          
+          
+          
+          
+          <div class="metric-card roi-card">
+            <div class="metric-icon">📈</div>
+            <div class="metric-content">
+              <div class="metric-label">ROI Esperado</div>
+              <div class="metric-value">598%</div>
+            </div>
+          </div>
+          
+          
+        </div>
+        
+
+        <!-- Project Details Grid -->
+        <div class="project-details">
+          
+          <!-- Main Content -->
+          <div class="project-content">
+            <h1>🌟 <strong>AERALYN - Sistema de RPG e Criação Narrativa</strong></h1>
+<blockquote>
+<p><em>Sistema completo de RPG baseado em Obsidian com universo próprio, worldbuilding avançado e automações inteligentes</em></p>
+</blockquote>
+<hr>
+<h2>📋 <strong>RESUMO EXECUTIVO</strong></h2>
+<p><strong>Objetivo</strong>: Desenvolver um sistema completo de RPG e criação narrativa com universo próprio (Aeralyn), integrando Obsidian, templates avançados, sistema de cores chakrais e automações para criação de conteúdo.</p>
+<p><strong>Status Atual</strong>: ✅ <strong>100% IMPLEMENTADO</strong> - Sistema completo com 46.514 linhas de documentação<br>
+<strong>Próximo Marco</strong>: Comercialização e expansão do universo</p>
+<hr>
+<h2>🎯 <strong>OBJETIVOS E KPIs</strong></h2>
+<h3><strong>Objetivo Primário</strong></h3>
+<p>Criar um sistema de RPG comercializável com universo próprio e ferramentas avançadas de criação narrativa</p>
+<h3><strong>KPIs de Sucesso</strong></h3>
+<ul>
+<li>✅ <strong>46.514 linhas</strong> de documentação completa</li>
+<li>✅ <strong>Sistema de cores chakrais</strong> implementado</li>
+<li>✅ <strong>Templates avançados</strong> para RPG</li>
+<li>✅ <strong>Worldbuilding completo</strong> do universo Aeralyn</li>
+<li>✅ <strong>Graph view otimizado</strong> para visualização</li>
+</ul>
+<h3><strong>Metas Quantitativas</strong></h3>
+<ul>
+<li><strong>Meta 1º Mês</strong>: Sistema base funcional ✅</li>
+<li><strong>Meta 2º Mês</strong>: Worldbuilding completo ✅</li>
+<li><strong>Meta 3º Mês</strong>: Templates avançados ✅</li>
+<li><strong>Meta 4º Mês</strong>: Documentação completa ✅</li>
+</ul>
+<hr>
+<h2>📋 <strong>FUNCIONALIDADES IMPLEMENTADAS</strong></h2>
+<h3><strong>✅ Sistema de RPG Completo</strong></h3>
+<ul>
+<li><strong>Universo Aeralyn</strong> com lore detalhado</li>
+<li><strong>Sistema de elementos</strong> (Fogo, Água, Ar, Terra, Éter)</li>
+<li><strong>Escolas yogicas</strong> e filosofias</li>
+<li><strong>Culturas chakrais</strong> e sociedades</li>
+</ul>
+<h3><strong>✅ Worldbuilding Avançado</strong></h3>
+<ul>
+<li><strong>Mapas energéticos</strong> interativos</li>
+<li><strong>Ambientes energéticos</strong> detalhados</li>
+<li><strong>Sistema solar</strong> e galáxias</li>
+<li><strong>Locais sagrados</strong> e pontos de poder</li>
+</ul>
+<h3><strong>✅ Templates e Automações</strong></h3>
+<ul>
+<li><strong>Templates conectados</strong> para personagens</li>
+<li><strong>Sistema de cores</strong> automático</li>
+<li><strong>Graph view otimizado</strong> com CSS customizado</li>
+<li><strong>Prompts automatizados</strong> para criação</li>
+</ul>
+<h3><strong>✅ Documentação Completa</strong></h3>
+<ul>
+<li><strong>Manual do usuário</strong> detalhado</li>
+<li><strong>Guia técnico</strong> completo</li>
+<li><strong>Exemplos práticos</strong> e casos de uso</li>
+<li><strong>API reference</strong> para desenvolvedores</li>
+</ul>
+<hr>
+<h2>🗓️ <strong>CRONOGRAMA EXECUTADO</strong></h2>
+<h3><strong>Fase 1: Conceituação (Semanas 1-8)</strong></h3>
+<ul>
+<li>✅ Definição do universo Aeralyn</li>
+<li>✅ Sistema de elementos e chakras</li>
+<li>✅ Estrutura base do vault</li>
+<li>✅ Templates iniciais</li>
+</ul>
+<h3><strong>Fase 2: Worldbuilding (Semanas 9-20)</strong></h3>
+<ul>
+<li>✅ Criação de mapas e locais</li>
+<li>✅ Desenvolvimento de culturas</li>
+<li>✅ Sistema de personagens</li>
+<li>✅ Lore e história</li>
+</ul>
+<h3><strong>Fase 3: Automações (Semanas 21-32)</strong></h3>
+<ul>
+<li>✅ Sistema de cores chakrais</li>
+<li>✅ Graph view otimizado</li>
+<li>✅ Templates avançados</li>
+<li>✅ Prompts automatizados</li>
+</ul>
+<h3><strong>Fase 4: Documentação (Semanas 33-40)</strong></h3>
+<ul>
+<li>✅ Manual completo do usuário</li>
+<li>✅ Guia técnico detalhado</li>
+<li>✅ Exemplos práticos</li>
+<li>✅ Preparação para comercialização</li>
+</ul>
+<hr>
+<h2>💰 <strong>ORÇAMENTO E RECURSOS</strong></h2>
+<h3><strong>Budget Total</strong>: R$ 80.000</h3>
+<h4><strong>Desenvolvimento (R$ 45.000)</strong></h4>
+<ul>
+<li>Conceituação e design: R$ 15.000</li>
+<li>Worldbuilding e lore: R$ 20.000</li>
+<li>Templates e automações: R$ 10.000</li>
+</ul>
+<h4><strong>Documentação (R$ 20.000)</strong></h4>
+<ul>
+<li>Manual do usuário: R$ 8.000</li>
+<li>Guia técnico: R$ 7.000</li>
+<li>Exemplos e casos: R$ 5.000</li>
+</ul>
+<h4><strong>Comercialização (R$ 15.000)</strong></h4>
+<ul>
+<li>Website e marketing: R$ 8.000</li>
+<li>Campanha de lançamento: R$ 5.000</li>
+<li>Suporte inicial: R$ 2.000</li>
+</ul>
+<hr>
+<h2>🔧 <strong>ARQUITETURA TÉCNICA</strong></h2>
+<h3><strong>Stack Tecnológico</strong></h3>
+<ul>
+<li><strong>Base</strong>: Obsidian + Markdown</li>
+<li><strong>Visualização</strong>: Graph view customizado</li>
+<li><strong>Automação</strong>: Templates + CSS avançado</li>
+<li><strong>Organização</strong>: Sistema de tags e links</li>
+</ul>
+<h3><strong>Estrutura do Sistema</strong></h3>
+<pre><code>AERALYN/
+├── 01_SISTEMA_AERALYN/        # Documentação técnica
+├── 02_PERSONAGENS/            # Sistema de personagens
+├── 03_WORLDBUILDING/          # Universo e lore
+├── 04_WORLDBUILDING_AERALYN/  # Worldbuilding específico
+├── 05_CRIACAO_NARRATIVA/      # Ferramentas de criação
+└── .obsidian/                 # Configurações e plugins
+</code></pre>
+<hr>
+<h2>📊 <strong>MÉTRICAS E RESULTADOS</strong></h2>
+<h3><strong>Métricas de Implementação</strong></h3>
+<ul>
+<li><strong>Linhas de documentação</strong>: 46.514</li>
+<li><strong>Arquivos criados</strong>: 200+</li>
+<li><strong>Templates</strong>: 15+ templates avançados</li>
+<li><strong>Automações</strong>: Sistema completo</li>
+</ul>
+<h3><strong>Métricas de Qualidade</strong></h3>
+<ul>
+<li><strong>Cobertura de lore</strong>: 100%</li>
+<li><strong>Templates funcionais</strong>: 100%</li>
+<li><strong>Documentação</strong>: Completa</li>
+<li><strong>Usabilidade</strong>: Alta</li>
+</ul>
+<hr>
+<h2>🔒 <strong>COMPLIANCE E SEGURANÇA</strong></h2>
+<h3><strong>Nível de Compliance</strong>: 1 (Básico)</h3>
+<ul>
+<li><strong>Dados</strong>: Conteúdo criativo próprio</li>
+<li><strong>Propriedade</strong>: Intelectual protegida</li>
+<li><strong>Licenciamento</strong>: Comercial</li>
+<li><strong>Segurança</strong>: Backup e versionamento</li>
+</ul>
+<h3><strong>Segurança</strong></h3>
+<ul>
+<li><strong>Backup</strong>: Versionamento Git</li>
+<li><strong>Propriedade</strong>: Copyright protegido</li>
+<li><strong>Licenciamento</strong>: Controle de uso</li>
+<li><strong>Distribuição</strong>: Controle de acesso</li>
+</ul>
+<hr>
+<h2>🚨 <strong>RISCOS E MITIGAÇÕES</strong></h2>
+<h3><strong>Risco 1: Complexidade para Usuários</strong></h3>
+<ul>
+<li><strong>Status</strong>: ✅ Mitigado</li>
+<li><strong>Solução</strong>: Documentação completa e exemplos práticos</li>
+</ul>
+<h3><strong>Risco 2: Dependência do Obsidian</strong></h3>
+<ul>
+<li><strong>Status</strong>: ⚠️ Monitorado</li>
+<li><strong>Solução</strong>: Exportação para outros formatos</li>
+</ul>
+<h3><strong>Risco 3: Mercado Nicho</strong></h3>
+<ul>
+<li><strong>Status</strong>: ✅ Mitigado</li>
+<li><strong>Solução</strong>: Foco em qualidade e diferenciação</li>
+</ul>
+<hr>
+<h2>📈 <strong>RESULTADOS ALCANÇADOS</strong></h2>
+<h3><strong>Impacto Imediato</strong></h3>
+<ul>
+<li><strong>Sistema de RPG</strong> 100% funcional</li>
+<li><strong>Universo completo</strong> com lore rico</li>
+<li><strong>Ferramentas avançadas</strong> de criação</li>
+<li><strong>Documentação profissional</strong> completa</li>
+</ul>
+<h3><strong>Impacto de Longo Prazo</strong></h3>
+<ul>
+<li><strong>Produto comercializável</strong> para RPG</li>
+<li><strong>Base sólida</strong> para expansão</li>
+<li><strong>Comunidade</strong> de usuários</li>
+<li><strong>Receita recorrente</strong> por licenciamento</li>
+</ul>
+<hr>
+<h2>📚 <strong>REFERÊNCIAS</strong></h2>
+<h3><strong>Documentação Técnica</strong></h3>
+<ul>
+<li><a href="/stubs/">GUIA&lowbar;TECNICO&lowbar;SISTEMA&lowbar;AERALYN</a> - Guia técnico completo</li>
+<li><a href="/stubs/">MANUAL&lowbar;USUARIO&lowbar;SISTEMA&lowbar;AERALYN</a> - Manual do usuário</li>
+<li><a href="/stubs/">EXEMPLOS&lowbar;PRATICOS&lowbar;SISTEMA&lowbar;AERALYN</a> - Exemplos práticos</li>
+</ul>
+<h3><strong>Arquivos do Sistema</strong></h3>
+<ul>
+<li><code>01_SISTEMA_AERALYN/</code> - Documentação técnica</li>
+<li><code>03_WORLDBUILDING/</code> - Universo e lore</li>
+<li><code>.obsidian/snippets/</code> - CSS customizado</li>
+<li><code>templates/</code> - Templates avançados</li>
+</ul>
+<hr>
+<h2>📝 <strong>LIÇÕES APRENDIDAS</strong></h2>
+<h3><strong>Sucessos</strong></h3>
+<ul>
+<li><strong>Obsidian</strong> é excelente para RPG e worldbuilding</li>
+<li><strong>Templates conectados</strong> aceleram criação</li>
+<li><strong>Sistema de cores</strong> melhora visualização</li>
+<li><strong>Documentação completa</strong> é essencial</li>
+</ul>
+<h3><strong>Melhorias Futuras</strong></h3>
+<ul>
+<li><strong>Interface web</strong> para não-técnicos</li>
+<li><strong>Integrações</strong> com outras ferramentas RPG</li>
+<li><strong>Comunidade</strong> de criadores</li>
+<li><strong>Marketplace</strong> de conteúdo</li>
+</ul>
+<hr>
+<h2>🎯 <strong>PRÓXIMOS PASSOS</strong></h2>
+<h3><strong>Oportunidades de Expansão</strong></h3>
+<ol>
+<li><strong>Comercialização</strong> para criadores de RPG</li>
+<li><strong>Versões especializadas</strong> por gênero</li>
+<li><strong>Consultoria</strong> de worldbuilding</li>
+<li><strong>Workshops</strong> de criação narrativa</li>
+</ol>
+<h3><strong>Monetização</strong></h3>
+<ol>
+<li><strong>Licenciamento</strong> do sistema</li>
+<li><strong>Serviços de worldbuilding</strong></li>
+<li><strong>Consultoria especializada</strong></li>
+<li><strong>Treinamentos</strong> e workshops</li>
+</ol>
+<hr>
+<p><strong>Versão</strong>: 1.0<br>
+<strong>Última Atualização</strong>: 2025-09-01<br>
+<strong>Status</strong>: ✅ <strong>100% IMPLEMENTADO - PRONTO PARA COMERCIALIZAÇÃO</strong><br>
+<strong>Próxima Revisão</strong>: 2025-09-15</p>
+
+          </div>
+          
+          <!-- Sidebar with metadata -->
+          <div class="project-sidebar">
+            
+            <!-- Project Info -->
+            <div class="info-card">
+              <h3>📊 Informações do Projeto</h3>
+              <div class="info-grid">
+                
+                
+                <div class="info-item">
+                  <span class="info-label">🌍 Segmento:</span>
+                  <span class="info-value">RPG e Criação Narrativa</span>
+                </div>
+                
+                
+                
+                <div class="info-item">
+                  <span class="info-label">📋 Tipo:</span>
+                  <span class="info-value">project</span>
+                </div>
+                
+                
+                
+                <div class="info-item">
+                  <span class="info-label">🔒 Compliance:</span>
+                  <span class="info-value">Nível 1</span>
+                </div>
+                
+                
+                
+                
+                
+                <div class="info-item">
+                  <span class="info-label">📅 Criado:</span>
+                  <span class="info-value">2025-09-01</span>
+                </div>
+                
+                
+                
+                <div class="info-item">
+                  <span class="info-label">🔄 Atualizado:</span>
+                  <span class="info-value">2025-09-01</span>
+                </div>
+                
+                
+              </div>
+            </div>
+
+            <!-- IA Assets -->
+            
+            <div class="info-card">
+              <h3>🤖 Recursos de IA</h3>
+              
+              
+              <div class="ia-section">
+                <h4>💬 Prompts</h4>
+                <ul class="ia-list">
+                  
+                  <li>Sistema de criação narrativa RPG</li>
+                  
+                  <li>Worldbuilding automatizado</li>
+                  
+                  <li>Geração de personagens e cenários</li>
+                  
+                </ul>
+              </div>
+              
+              
+              
+              <div class="ia-section">
+                <h4>🧠 Modelos</h4>
+                <ul class="ia-list">
+                  
+                  <li>Obsidian + Templates Avançados</li>
+                  
+                  <li>Sistema de cores chakrais</li>
+                  
+                  <li>Graph view otimizado</li>
+                  
+                </ul>
+              </div>
+              
+              
+              
+              <div class="ia-section">
+                <h4>📊 Datasets</h4>
+                <ul class="ia-list">
+                  
+                  <li>Base de conhecimento RPG</li>
+                  
+                  <li>Universo Aeralyn completo</li>
+                  
+                </ul>
+              </div>
+              
+            </div>
+            
+
+            <!-- Tags -->
+            
+            <div class="info-card">
+              <h3>🏷️ Tags</h3>
+              <div class="tags-container">
+                
+                <span class="tag tag-projeto">projeto</span>
+                
+                <span class="tag tag-projeto-active">projeto-active</span>
+                
+                <span class="tag tag-prioridade-high">prioridade-high</span>
+                
+                <span class="tag tag-rpg-e-criao-narrativa">rpg-e-criação-narrativa</span>
+                
+              </div>
+            </div>
+            
+
+          </div>
+        </div>
+
+        <!-- Decision Block -->
+        
+
+      </article>
+    </div>
+  </main>
+
+  <!-- JavaScript -->
+  <script src="/scripts/main.js"></script>
+  <script src="/scripts/sidebar.js" defer></script>
+  <script>
+    // Project-specific JavaScript
+    document.addEventListener('DOMContentLoaded', function() {
+      // Highlight project navigation
+      const projectNav = document.querySelector('.nav-links a[href="/projetos/"]');
+      if (projectNav) {
+        projectNav.classList.add('active');
+      }
+      
+      // Animate metric cards
+      const metricCards = document.querySelectorAll('.metric-card');
+      metricCards.forEach((card, index) => {
+        card.style.animationDelay = `${index * 0.1}s`;
+        card.classList.add('animate-in');
+      });
+    });
+  </script>
+</body>
+</html>

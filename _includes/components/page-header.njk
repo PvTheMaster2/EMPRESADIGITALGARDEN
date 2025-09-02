@@ -1,0 +1,40 @@
+<header class="page-header">
+  <div class="page-title-section">
+    <h1 class="page-title">{{ title or page.fileSlug }}</h1>
+    
+    <!-- Tags -->
+    {% if tags and tags.length > 0 %}
+    <div class="page-tags">
+      {% for tag in tags %}
+        {% if tag != 'template' %}
+        <span class="tag tag-{{ tag | slugify }}">{{ tag }}</span>
+        {% endif %}
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+  
+  <!-- Metadados específicos por tipo -->
+  <div class="page-metadata">
+    {% if status %}
+    <div class="meta-item">
+      <span class="meta-label">Status:</span>
+      <span class="meta-value status-{{ status | slugify }}">{{ status }}</span>
+    </div>
+    {% endif %}
+    
+    {% if effort_weeks %}
+    <div class="meta-item">
+      <span class="meta-label">Esforço:</span>
+      <span class="meta-value">{{ effort_weeks }} semanas</span>
+    </div>
+    {% endif %}
+    
+    {% if validation_score %}
+    <div class="meta-item">
+      <span class="meta-label">Score:</span>
+      <span class="meta-value">{{ validation_score }}/10</span>
+    </div>
+    {% endif %}
+  </div>
+</header>
