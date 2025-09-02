@@ -1,4 +1,4 @@
-# 🎯 Cursor Rules - Digital Garden Empresarial
+# 🎯 Cursor Rules - Digital Garden Empresarial [SISTEMA COMPONENTIZADO]
 
 ## 📋 Context Pack Integration
 

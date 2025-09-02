@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="theme-dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ title or page.fileSlug }} - {{ site.title }}</title>
+  <meta name="description" content="{{ description or site.description }}" />
+  
+  <!-- CSS do tema Obsidian e customizações -->
+  <link rel="stylesheet" href="/styles/main.css" />
+  <link rel="stylesheet" href="/styles/sidebar.css" />
+  
+  <!-- Favicon e meta tags para PWA -->
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+  <meta name="theme-color" content="#1e1e1e" />
+</head>
+<body class="has-sidebar">
+  
+  <header class="site-header">
+    <nav class="main-navigation">
+      <div class="nav-brand">
+        <button class="mobile-sidebar-toggle" onclick="toggleSidebar()">
+          <span class="hamburger"></span>
+        </button>
+        <a href="/" class="brand-link">
+          🌱 {{ site.title }}
+        </a>
+      </div>
+      
+      <div class="nav-links">
+        <a href="/">Dashboard</a>
+        <a href="/1-Governanca/README/">Governança</a>
+        <a href="/4-Projetos/README/">Projetos</a>
+        <a href="/2-Equipes/README/">Equipes</a>
+        <a href="/5-Processos/README/">Processos</a>
+        <a href="/6-Reunioes/README/">Reuniões</a>
+        <a href="/7-Conhecimento/README/">Conhecimento</a>
+      </div>
+      
+      <div class="nav-tools">
+        <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
+        <button class="search-toggle" onclick="toggleSearch()">🔍</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Sidebar Navigation -->
+  <aside class="sidebar" data-state="closed" aria-hidden="true">
+    <div class="sidebar-header">
+      <div class="sidebar-brand">
+        <a href="/" class="brand-link">🌱 Digital Garden</a>
+      </div>
+      <button class="sidebar-close" onclick="closeSidebar()" title="Fechar sidebar">
+        <span class="close-icon">✕</span>
+      </button>
+    </div>
+    
+    <div class="sidebar-content">
+      <div class="sidebar-search">
+        <input type="search" placeholder="Buscar páginas..." class="search-input" id="sidebar-search">
+      </div>
+      
+      <div class="sidebar-tree">
+        {% set navData = navigation.tree %}
+        {% for item in navData %}
+        <div class="tree-item" data-level="0">
+          <div class="tree-node">
+            <button class="tree-toggle" onclick="toggleTreeNode(this)" {% if not item.children %}style="visibility: hidden;"{% endif %}>
+              <span class="tree-icon">▶</span>
+            </button>
+            <a href="{{ item.url }}" class="tree-link {% if page.url == item.url %}active{% endif %}">
+              <span class="tree-label">{{ item.title }}</span>
+            </a>
+          </div>
+          
+          {% if item.children %}
+          <div class="tree-children">
+            {% for child in item.children %}
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" {% if not child.children %}style="visibility: hidden;"{% endif %}>
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="{{ child.url }}" class="tree-link {% if page.url == child.url %}active{% endif %}">
+                  <span class="tree-label">{{ child.title }}</span>
+                </a>
+              </div>
+              
+              {% if child.children %}
+              <div class="tree-children">
+                {% for grandchild in child.children %}
+                <div class="tree-item" data-level="2">
+                  <div class="tree-node">
+                    <span class="tree-spacer"></span>
+                    <a href="{{ grandchild.url }}" class="tree-link {% if page.url == grandchild.url %}active{% endif %}">
+                      <span class="tree-label">{{ grandchild.title }}</span>
+                    </a>
+                  </div>
+                </div>
+                {% endfor %}
+              </div>
+              {% endif %}
+            </div>
+            {% endfor %}
+          </div>
+          {% endif %}
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </aside>
+
+  <!-- Overlay para mobile -->
+  <div class="sidebar-overlay" aria-hidden="true"></div>
+
+  <main id="main" class="site-main" tabindex="-1">
+    <div class="content-wrapper">
+      
+      <!-- Breadcrumb navegação com eleventyNavigation -->
+      {% if page.url != '/' and eleventyNavigation %}
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">🏠 Home</a></li>
+          {% set breadcrumbNav = collections.all | eleventyNavigationBreadcrumb(eleventyNavigation.key) %}
+          {% for crumb in breadcrumbNav %}
+            <li>
+              {% if loop.last %}
+                <span aria-current="page">{{ crumb.title }}</span>
+              {% else %}
+                <a href="{{ crumb.url }}">{{ crumb.title }}</a>
+              {% endif %}
+            </li>
+          {% endfor %}
+        </ol>
+      </nav>
+      {% endif %}
+
+      <!-- Conteúdo principal da página -->
+      <article class="page-content">
+        {% if title %}
+        <header class="page-header">
+          <h1 class="page-title">{{ title }}</h1>
+          
+          <!-- Metadados da página se existirem -->
+          {% if tags or status or effort_weeks or validation_score %}
+          <div class="page-meta">
+            {% if tags %}
+            <div class="page-tags">
+              {% for tag in tags %}
+              <span class="tag tag-{{ tag | slugify }}">{{ tag }}</span>
+              {% endfor %}
+            </div>
+            {% endif %}
+            
+            {% if status %}
+            <div class="page-status">
+              <span class="status status-{{ status | slugify }}">{{ status }}</span>
+            </div>
+            {% endif %}
+            
+            {% if effort_weeks %}
+            <div class="page-effort">
+              ⏱️ {{ effort_weeks }} semana{% if effort_weeks > 1 %}s{% endif %}
+            </div>
+            {% endif %}
+            
+            {% if validation_score %}
+            <div class="page-score">
+              ⭐ {{ validation_score }}/10
+            </div>
+            {% endif %}
+          </div>
+          {% endif %}
+        </header>
+        {% endif %}
+
+        <!-- Conteúdo renderizado do Markdown -->
+        <div class="page-body">
+          {{ content | safe }}
+        </div>
+
+        <!-- Bloco de decisão destacado se existir -->
+        {% if decision %}
+        <div class="decision-block">
+          <div class="decision-header">
+            <span class="decision-icon">✅</span>
+            <strong>Decisão:</strong>
+          </div>
+          <div class="decision-content">
+            {{ decision | markdown | safe }}
+          </div>
+        </div>
+        {% endif %}
+      </article>
+
+      <!-- Sidebar com informações adicionais -->
+      <aside class="page-sidebar">
+        
+        <!-- Backlinks - páginas que referenciam esta -->
+        {% if backlinks and backlinks.length > 0 %}
+        <section class="backlinks-section">
+          <h3 class="sidebar-title">
+            <span class="sidebar-icon">🔗</span>
+            Referenciado em
+          </h3>
+          <ul class="backlinks-list">
+            {% for link in backlinks %}
+            <li class="backlink-item">
+              <a href="{{ link.url }}" class="backlink-link">
+                {{ link.title }}
+              </a>
+            </li>
+            {% endfor %}
+          </ul>
+        </section>
+        {% endif %}
+
+        <!-- Table of Contents (temporariamente desabilitado)
+        {% if content | length > 2000 %}
+        <section class="toc-section">
+          <h3 class="sidebar-title">
+            <span class="sidebar-icon">📋</span>
+            Conteúdo
+          </h3>
+          <div class="toc">
+            [TOC será implementado posteriormente]
+          </div>
+        </section>
+        {% endif %}
+        -->
+
+        <!-- Links relacionados por tags -->
+        {% if tags %}
+        <section class="related-section">
+          <h3 class="sidebar-title">
+            <span class="sidebar-icon">🏷️</span>
+            Relacionados
+          </h3>
+          <div class="related-links">
+            {% set relatedPages = collections.all | filterByTags(tags) | limit(5) %}
+            {% for relatedPage in relatedPages %}
+              {% if relatedPage.url != page.url %}
+              <a href="{{ relatedPage.url }}" class="related-link">
+                {{ relatedPage.data.title or relatedPage.fileSlug }}
+              </a>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </section>
+        {% endif %}
+
+        <!-- Metadados técnicos -->
+        <section class="meta-section">
+          <h3 class="sidebar-title">
+            <span class="sidebar-icon">ℹ️</span>
+            Informações
+          </h3>
+          <div class="page-meta-details">
+            {% if date %}
+            <div class="meta-item">
+              <span class="meta-label">Criado:</span>
+              <span class="meta-value">{{ date | date("dd/MM/yyyy") }}</span>
+            </div>
+            {% endif %}
+            
+            {% if modified %}
+            <div class="meta-item">
+              <span class="meta-label">Modificado:</span>
+              <span class="meta-value">{{ modified | date("dd/MM/yyyy") }}</span>
+            </div>
+            {% endif %}
+            
+            <div class="meta-item">
+              <span class="meta-label">Palavras:</span>
+              <span class="meta-value">{{ content | wordcount }}</span>
+            </div>
+          </div>
+        </section>
+
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p>&copy; {% year %} {{ site.title }} - Gerado com Obsidian + Eleventy</p>
+      <p>
+        <a href="/dashboard-executivo/">Dashboard</a> •
+        <a href="/governanca/">Governança</a> •
+        <a href="/projetos/">Projetos</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Search overlay -->
+  <div id="search-overlay" class="search-overlay">
+    <div class="search-container">
+      <input type="text" id="search-input" placeholder="Buscar no knowledge base..." />
+      <div id="search-results"></div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="/scripts/main.js"></script>
+  <script src="/scripts/search.js"></script>
+  <script src="/scripts/sidebar.js" defer></script>
+  
+</body>
+</html>
