@@ -43175,6 +43175,31 @@
         },
         {
           "level": 3,
+          "text": "📊 Timeline de Projetos",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "💰 Distribuição de Budget",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "🔔 Atualizações Recentes",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "⚠️ Alertas",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "⚡ Ações Rápidas",
+          "id": null
+        },
+        {
+          "level": 3,
           "text": "🚀 Projetos Ativos",
           "id": null
         },
@@ -43227,16 +43252,6 @@
           "level": 3,
           "text": "🧠 [Conhecimento](/7-conhecimento/)",
           "id": null
-        },
-        {
-          "level": 3,
-          "text": "🏷️\n            Relacionados",
-          "id": null
-        },
-        {
-          "level": 3,
-          "text": "ℹ️\n            Informações",
-          "id": null
         }
       ],
       "links": [
@@ -43281,7 +43296,7 @@
           "isInternal": true
         },
         {
-          "text": "🌱 Digital Garden",
+          "text": "🌱 Multisocios",
           "href": "/",
           "isInternal": true
         },
@@ -44004,56 +44019,11 @@
           "text": "wiki",
           "href": "/stubs/",
           "isInternal": true
-        },
-        {
-          "text": "Dashboard Projetos Prazo Visual",
-          "href": "/0-Dashboard-Executivo/Dashboard-Projetos-Prazo-Visual/",
-          "isInternal": true
-        },
-        {
-          "text": "Dashboard Projetos Prazo",
-          "href": "/0-Dashboard-Executivo/Dashboard-Projetos-Prazo/",
-          "isInternal": true
-        },
-        {
-          "text": "Dashboard Capacidade Equipe",
-          "href": "/0-Dashboard-Executivo/Dashboard_Capacidade_Equipe/",
-          "isInternal": true
-        },
-        {
-          "text": "Executive Auto",
-          "href": "/0-Dashboard-Executivo/Executive-Auto/",
-          "isInternal": true
-        },
-        {
-          "text": "Dashboard Executivo - Home",
-          "href": "/",
-          "isInternal": true
-        },
-        {
-          "text": "Dashboard",
-          "href": "/dashboard-executivo/",
-          "isInternal": true
-        },
-        {
-          "text": "Governança",
-          "href": "/governanca/",
-          "isInternal": true
-        },
-        {
-          "text": "Projetos",
-          "href": "/projetos/",
-          "isInternal": true
         }
       ],
-      "pageMetadata": {
-        "tags": [
-          "dashboard",
-          "executivo"
-        ]
-      },
+      "pageMetadata": {},
       "layoutType": "base",
-      "wordCount": 224
+      "wordCount": 0
     },
     {
       "url": "/dev/sidebar-check/",
@@ -44125,7 +44095,7 @@
           "isInternal": true
         },
         {
-          "text": "🌱 Digital Garden",
+          "text": "🌱 Multisocios",
           "href": "/",
           "isInternal": true
         },
@@ -48330,7 +48300,7 @@
     "pagesWithoutTitle": 43,
     "pagesWithoutH1": 5,
     "brokenLinks": 0,
-    "totalLinks": 6508
+    "totalLinks": 6500
   },
   "issues": [
     {
