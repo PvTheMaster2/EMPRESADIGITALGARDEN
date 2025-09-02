@@ -19255,7 +19255,7 @@
         },
         {
           "level": 3,
-          "text": "NO TITLE (27)",
+          "text": "NO TITLE (28)",
           "id": null
         },
         {
@@ -19293,7 +19293,7 @@
         },
         {
           "level": 3,
-          "text": "BASE Layout (45 pages)",
+          "text": "BASE Layout (46 pages)",
           "id": null
         },
         {
@@ -19347,6 +19347,11 @@
         {
           "level": 1,
           "text": "🌳 Site Structure Outline",
+          "id": null
+        },
+        {
+          "level": 2,
+          "text": "📁 .CURSOR",
           "id": null
         },
         {

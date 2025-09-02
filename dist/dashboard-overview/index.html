@@ -1181,18 +1181,31 @@
   <script>
     // Toggle Sidebar
     function toggleSidebar() {
+      console.log('toggleSidebar called'); // Debug
       const sidebar = document.getElementById('sidebar');
       const overlay = document.querySelector('.sidebar-overlay');
-      sidebar.classList.toggle('open');
-      overlay.classList.toggle('active');
+      
+      if (sidebar) {
+        sidebar.classList.toggle('open');
+        console.log('Sidebar classes:', sidebar.className); // Debug
+      }
+      if (overlay) {
+        overlay.classList.toggle('active');
+      }
       document.body.classList.toggle('sidebar-open');
     }
     
     function closeSidebar() {
+      console.log('closeSidebar called'); // Debug
       const sidebar = document.getElementById('sidebar');
       const overlay = document.querySelector('.sidebar-overlay');
-      sidebar.classList.remove('open');
-      overlay.classList.remove('active');
+      
+      if (sidebar) {
+        sidebar.classList.remove('open');
+      }
+      if (overlay) {
+        overlay.classList.remove('active');
+      }
       document.body.classList.remove('sidebar-open');
     }
     
@@ -1235,8 +1248,22 @@
       });
     });
     
-    // Auto-expand current page path
+    // Add event listeners
     document.addEventListener('DOMContentLoaded', function() {
+      // Overlay click to close
+      const overlay = document.querySelector('.sidebar-overlay');
+      if (overlay) {
+        overlay.addEventListener('click', closeSidebar);
+      }
+      
+      // ESC key to close
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+          closeSidebar();
+        }
+      });
+      
+      // Auto-expand current page path
       const activeLink = document.querySelector('.tree-link.active');
       if (activeLink) {
         let parent = activeLink.closest('.tree-item').parentElement?.closest('.tree-item');
