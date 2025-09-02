@@ -1,0 +1,25 @@
+<!-- Breadcrumb navegação com eleventyNavigation -->
+{% if page.url != '/' and eleventyNavigation %}
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <ol class="breadcrumb-list">
+    <li class="breadcrumb-item">
+      <a href="/" class="breadcrumb-link">
+        <span class="breadcrumb-icon">🏠</span>
+        <span class="breadcrumb-text">Home</span>
+      </a>
+    </li>
+    
+    {% set breadcrumbNav = collections.all | eleventyNavigationBreadcrumb(eleventyNavigation.key) %}
+    {% for crumb in breadcrumbNav %}
+      <li class="breadcrumb-item">
+        <span class="breadcrumb-separator">›</span>
+        {% if loop.last %}
+          <span class="breadcrumb-current" aria-current="page">{{ crumb.title }}</span>
+        {% else %}
+          <a href="{{ crumb.url }}" class="breadcrumb-link">{{ crumb.title }}</a>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ol>
+</nav>
+{% endif %}

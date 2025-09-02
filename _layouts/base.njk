@@ -116,24 +116,7 @@
   <main id="main" class="site-main" tabindex="-1">
     <div class="content-wrapper">
       
-      <!-- Breadcrumb navegação com eleventyNavigation -->
-      {% if page.url != '/' and eleventyNavigation %}
-      <nav class="breadcrumb" aria-label="Breadcrumb">
-        <ol>
-          <li><a href="/">🏠 Home</a></li>
-          {% set breadcrumbNav = collections.all | eleventyNavigationBreadcrumb(eleventyNavigation.key) %}
-          {% for crumb in breadcrumbNav %}
-            <li>
-              {% if loop.last %}
-                <span aria-current="page">{{ crumb.title }}</span>
-              {% else %}
-                <a href="{{ crumb.url }}">{{ crumb.title }}</a>
-              {% endif %}
-            </li>
-          {% endfor %}
-        </ol>
-      </nav>
-      {% endif %}
+      {% include "components/breadcrumbs.njk" %}
 
       <!-- Conteúdo principal da página -->
       <article class="page-content">
