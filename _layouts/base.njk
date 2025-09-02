@@ -14,7 +14,7 @@
   <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
   <meta name="theme-color" content="#1e1e1e" />
 </head>
-<body>
+<body class="has-sidebar">
   
   <header class="site-header">
     <nav class="main-navigation">
@@ -45,7 +45,7 @@
   </header>
 
   <!-- Sidebar Navigation -->
-  <nav class="sidebar" id="sidebar">
+  <aside class="sidebar" data-state="closed" aria-hidden="true">
     <div class="sidebar-header">
       <div class="sidebar-brand">
         <a href="/" class="brand-link">🌱 Digital Garden</a>
@@ -108,12 +108,12 @@
         {% endfor %}
       </div>
     </div>
-  </nav>
+  </aside>
 
   <!-- Overlay para mobile -->
-  <div class="sidebar-overlay" onclick="closeSidebar()"></div>
+  <div class="sidebar-overlay" aria-hidden="true"></div>
 
-  <main class="site-main">
+  <main id="main" class="site-main" tabindex="-1">
     <div class="content-wrapper">
       
       <!-- Breadcrumb navegação com eleventyNavigation -->

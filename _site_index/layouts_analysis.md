@@ -1,14 +1,14 @@
 ---
 created: 2025-09-01T19:58
-updated: 2025-09-01T21:14
+updated: 2025-09-01T21:20
 ---
 # 🎨 Layouts Analysis
 
-**Generated**: 2025-09-02T00:14:27.053Z
+**Generated**: 2025-09-02T00:20:09.684Z
 
 ## 📊 Layout Distribution
 
-### BASE Layout (46 pages)
+### BASE Layout (47 pages)
 
 **Example Page**: /.cursor/rules/
 **Title**: 
@@ -23,7 +23,7 @@ updated: 2025-09-01T21:14
 - /0-Dashboard-Executivo/KPIs-Principais/ - "KPIs Principais - Digital Garden Empresarial"
 - /0-Dashboard-Executivo/Sistema_Metricas_Avancadas/ - "Sistema Metricas Avancadas - Digital Garden Empresarial"
 - /1000 - REUNIOES/30_08-25 REUNIAO INICIAL/10 - Prompt organização atas de reuniao a partir de transcrição / - ""
-- ... and 36 more
+- ... and 37 more
 
 ### DASHBOARD Layout (1 pages)
 

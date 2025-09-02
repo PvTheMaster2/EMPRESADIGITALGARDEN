@@ -29,13 +29,13 @@ module.exports = function (eleventyConfig) {
   // Plugin para navegação hierárquica e breadcrumbs
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
 
-  // Copy static assets
+  // Copy static assets - GARANTINDO PUBLICAÇÃO
+  eleventyConfig.addPassthroughCopy({"styles": "styles"});
+  eleventyConfig.addPassthroughCopy({"scripts": "scripts"});
   eleventyConfig.addPassthroughCopy("99 - RESOURCES/Imagens");
   eleventyConfig.addPassthroughCopy("**/*.png");
   eleventyConfig.addPassthroughCopy("**/*.jpg");
   eleventyConfig.addPassthroughCopy("**/*.pdf");
-  eleventyConfig.addPassthroughCopy("styles");
-  eleventyConfig.addPassthroughCopy("scripts");
 
   // Configure markdown processing (basic for now)
   eleventyConfig.setLibrary(

@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dashboard Executivo - Digital Garden Empresarial</title>
-  <meta name="description" content="Visão geral do conhecimento empresarial e projetos em andamento" />
+  <title>Sidebar Self Test - Digital Garden Empresarial</title>
+  <meta name="description" content="Sistema de Gestão de Conhecimento Empresarial" />
   
   <!-- CSS do tema Obsidian e customizações -->
   <link rel="stylesheet" href="/styles/main.css" />
@@ -81,7 +81,7 @@
             <button class="tree-toggle" onclick="toggleTreeNode(this)" >
               <span class="tree-icon">▶</span>
             </button>
-            <a href="/dashboard-overview/" class="tree-link active">
+            <a href="/dashboard-overview/" class="tree-link ">
               <span class="tree-label">📊 Dashboard Executivo</span>
             </a>
           </div>
@@ -914,7 +914,7 @@
             <button class="tree-toggle" onclick="toggleTreeNode(this)" >
               <span class="tree-icon">▶</span>
             </button>
-            <a href="/dashboard-overview/" class="tree-link active">
+            <a href="/dashboard-overview/" class="tree-link ">
               <span class="tree-label">📊 Dashboard Executivo</span>
             </a>
           </div>
@@ -1746,154 +1746,71 @@
       <article class="page-content">
         
         <header class="page-header">
-          <h1 class="page-title">Dashboard Executivo</h1>
+          <h1 class="page-title">Sidebar Self Test</h1>
           
           <!-- Metadados da página se existirem -->
-          
-          <div class="page-meta">
-            
-            <div class="page-tags">
-              
-              <span class="tag tag-dashboard">dashboard</span>
-              
-              <span class="tag tag-executivo">executivo</span>
-              
-            </div>
-            
-            
-            
-            
-            
-            
-            
-          </div>
           
         </header>
         
 
         <!-- Conteúdo renderizado do Markdown -->
         <div class="page-body">
-          <h1>🌱 Digital Garden Empresarial</h1>
-<p>Bem-vindo ao sistema de gestão de conhecimento da empresa. Este ambiente integra todas as informações críticas para tomada de decisão e acompanhamento de projetos.</p>
-<h2>📊 Visão Geral</h2>
-<div class="dashboard-grid">
-<h3>🚀 Projetos Ativos</h3>
-<p><strong>7</strong> projetos em portfólio ativo</p>
-<ul>
-<li>
-<p><strong><a href="/4-Projetos/Ativos/PRJ-AERALYN/">AERALYN</a></strong></p>
-<ul>
-<li>Status: active</li>
-<li>40 semanas</li>
-</ul>
-</li>
-<li>
-<p><strong><a href="/4-Projetos/Ativos/PRJ-App-Desenvolvimento-Cognitivo/">App Desenvolvimento Cognitivo</a></strong></p>
-<ul>
-<li>Status: planning</li>
-<li>12 semanas</li>
-</ul>
-</li>
-<li>
-<p><strong><a href="/4-Projetos/Ativos/PRJ-Curso-IA-Inteligente/">Curso IA Inteligente</a></strong></p>
-<ul>
-<li>Status: active</li>
-<li>12 semanas</li>
-</ul>
-</li>
-<li>
-<p><strong><a href="/4-Projetos/Ativos/PRJ-Nostalgia-Musical/">Nostalgia Musical</a></strong></p>
-<ul>
-<li>Status: active</li>
-<li>12 semanas</li>
-</ul>
-</li>
-</ul>
-<p><a href="/4-projetos/ativos/" class="view-all-link">Ver todos os 7 projetos ativos →</a></p>
-<h3>⚡ Em Andamento</h3>
-<p><strong>0</strong> projetos em execução</p>
-<h3>⭐ Pilotos Validados</h3>
-<p><strong>0</strong> projetos com alta validação (8+)</p>
-<h3>📋 Governança</h3>
-<p><strong>7</strong> documentos de governança</p>
-<ul>
-<li>
-<p><strong><a href="/1-Governanca/Acordo_Socios_Final/">Acordo De Socios Final</a></strong></p>
-</li>
-<li>
-<p><strong><a href="/1-Governanca/Compliance_Log/">Log de Compliance</a></strong></p>
-</li>
-<li>
-<p><strong><a href="/1-Governanca/etica_uso_IA/">Etica Uso IA</a></strong></p>
-</li>
-</ul>
-<p><a href="/1-governanca/" class="view-all-link">Ver toda a governança →</a></p>
-<h3>🤝 Reuniões Recentes</h3>
-<p><strong>5</strong> atas e registros</p>
-<ul>
-<li>
-<p><strong><a href="/6-Reunioes/README/">Reuniões e Atas</a></strong></p>
-</li>
-<li>
-<p><strong><a href="/6-Reunioes/2025-09-01-Reuniao-Criacao-Sistema-Geracao-Ideias/">ReuniãO Criacao Sistema Geracao Ideias</a></strong></p>
-</li>
-<li>
-<p><strong><a href="/6-Reunioes/2025-09-01-Reuniao-Criacao-Projeto-WhatsBot/">ReuniãO Criacao Projeto WhatsBot</a></strong></p>
-</li>
-</ul>
-<p><a href="/6-reunioes/" class="view-all-link">Ver todas as reuniões →</a></p>
+          <p><button class="mobile-sidebar-toggle" onclick="toggleSidebar()">🔧 Abrir/Fechar Sidebar</button></p>
+<div style="padding:2rem;background:#f0f8ff;border:1px solid #007acc;border-radius:8px;margin:2rem 0;">
+  <h2>🧪 Diagnóstico Completo da Sidebar</h2>
+  <pre id="dbg" style="background:#1e1e1e;color:#00ff00;padding:1rem;border-radius:4px;overflow:auto;"></pre>
 </div>
-<h2>🗺️ Navegação Rápida</h2>
-<div class="navigation-grid">
-<div class="nav-card">
-  <h3>📈 [Projetos](/4-projetos/)</h3>
-  <p>Portfólio completo, pilotos, ideias e análises de ROI</p>
+<div style="padding:1rem;background:#fff3cd;border:1px solid #ffeaa7;border-radius:8px;">
+  <h3>📋 Checklist Manual:</h3>
+  <ul>
+    <li>✅ Botão acima deve abrir/fechar a sidebar</li>
+    <li>✅ No desktop: sidebar sempre visível à esquerda</li>
+    <li>✅ No mobile: sidebar escondida, overlay quando aberta</li>
+    <li>✅ Conteúdo deve ser empurrado no desktop</li>
+  </ul>
 </div>
-<div class="nav-card">
-  <h3>⚖️ [Governança](/1-governanca/)</h3>
-  <p>Políticas, compliance, acordo de sócios e ética</p>
-</div>
-<div class="nav-card">
-  <h3>👥 [Equipes](/2-equipes/)</h3>
-  <p>Estrutura organizacional e capacidades</p>
-</div>
-<div class="nav-card">
-  <h3>🎯 [Processos](/5-processos/)</h3>
-  <p>SOPs, workflows e sistemas de gestão</p>
-</div>
-<div class="nav-card">
-  <h3>🌍 [Mercado](/3-mercado/)</h3>
-  <p>Clientes, concorrentes e tendências</p>
-</div>
-<div class="nav-card">
-  <h3>🧠 [Conhecimento](/7-conhecimento/)</h3>
-  <p>Base de conhecimento e aprendizados</p>
-</div>
-</div>
-<h2>📊 Métricas Rápidas</h2>
-<div class="metrics-row">
-  <div class="metric-card">
-    <span class="metric-number">19</span>
-    <span class="metric-label">Total de Projetos</span>
-  </div>
-  <div class="metric-card">
-    <span class="metric-number">0</span>
-    <span class="metric-label">Em Execução</span>
-  </div>
-  <div class="metric-card">
-    <span class="metric-number">0</span>
-    <span class="metric-label">Validados (8+)</span>
-  </div>
-  <div class="metric-card">
-    <span class="metric-number">79</span>
-    <span class="metric-label">Total de Páginas</span>
-  </div>
-</div>
-<hr>
-<blockquote>
-<p><strong>💡 Dica:</strong> Use a busca (🔍) para encontrar rapidamente qualquer informação ou utilize os links <a href="/stubs/">wiki</a> para navegar entre páginas relacionadas.</p>
-</blockquote>
-<p><em>Última atualização: 01/09/2025</em></p>
+<script>
+(function(){
+  const d = document.getElementById('dbg');
+  const sidebar = document.querySelector('.sidebar');
+  const overlay = document.querySelector('.sidebar-overlay');
+  const main = document.querySelector('main');
+  
+  const diagnostico = {
+    // Elementos DOM
+    hasSidebar: !!sidebar,
+    hasOverlay: !!overlay,
+    hasMain: !!main,
+    
+    // Classes e IDs
+    sidebarClasses: sidebar?.className || 'SIDEBAR NÃO ENCONTRADA',
+    mainClass: main?.className || 'MAIN NÃO ENCONTRADO',
+    mainId: main?.id || 'sem ID',
+    
+    // JavaScript
+    toggleType: typeof window.toggleSidebar,
+    closeSidebarType: typeof window.closeSidebar,
+    
+    // CSS computado
+    sidebarWidth: sidebar ? getComputedStyle(sidebar).width : 'N/A',
+    sidebarLeft: sidebar ? getComputedStyle(sidebar).left : 'N/A',
+    mainMarginLeft: main ? getComputedStyle(main).marginLeft : 'N/A',
+    
+    // Viewport
+    windowWidth: window.innerWidth,
+    isMobile: window.innerWidth <= 768,
+    
+    // Assets carregados
+    scriptsCarregados: Array.from(document.scripts).map(s => s.src).filter(s => s.includes('sidebar')),
+    cssCarregados: Array.from(document.styleSheets).length
+  };
+  
+  d.textContent = JSON.stringify(diagnostico, null, 2);
+  
+  // Log adicional no console
+  console.log('🔍 DIAGNÓSTICO SIDEBAR:', diagnostico);
+})();
+</script>
 
         </div>
 
@@ -1923,47 +1840,6 @@
 
         <!-- Links relacionados por tags -->
         
-        <section class="related-section">
-          <h3 class="sidebar-title">
-            <span class="sidebar-icon">🏷️</span>
-            Relacionados
-          </h3>
-          <div class="related-links">
-            
-            
-              
-              <a href="/0-Dashboard-Executivo/Dashboard-Projetos-Prazo-Visual/" class="related-link">
-                Dashboard Projetos Prazo Visual
-              </a>
-              
-            
-              
-              <a href="/0-Dashboard-Executivo/Dashboard-Projetos-Prazo/" class="related-link">
-                Dashboard Projetos Prazo
-              </a>
-              
-            
-              
-              <a href="/0-Dashboard-Executivo/Dashboard_Capacidade_Equipe/" class="related-link">
-                Dashboard Capacidade Equipe
-              </a>
-              
-            
-              
-              <a href="/0-Dashboard-Executivo/Executive-Auto/" class="related-link">
-                Executive Auto
-              </a>
-              
-            
-              
-              <a href="/" class="related-link">
-                Dashboard Executivo - Home
-              </a>
-              
-            
-          </div>
-        </section>
-        
 
         <!-- Metadados técnicos -->
         <section class="meta-section">
@@ -1978,7 +1854,7 @@
             
             <div class="meta-item">
               <span class="meta-label">Palavras:</span>
-              <span class="meta-value">643</span>
+              <span class="meta-value">245</span>
             </div>
           </div>
         </section>

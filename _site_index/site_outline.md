@@ -1,11 +1,11 @@
 ---
 created: 2025-09-01T19:58
-updated: 2025-09-01T21:14
+updated: 2025-09-01T21:20
 ---
 # 🌳 Site Structure Outline
 
-**Generated**: 2025-09-02T00:14:27.046Z
-**Total Pages**: 78
+**Generated**: 2025-09-02T00:20:09.679Z
+**Total Pages**: 79
 
 ## 📁 .CURSOR
 
@@ -189,6 +189,11 @@ updated: 2025-09-01T21:14
 
   - **/dashboard-overview/** - "Dashboard Executivo - Digital Garden Empresarial" (base)
     - H1: Dashboard Executivo
+
+## 📁 DEV
+
+    - **/dev/sidebar-check/** - "Sidebar Self Test - Digital Garden Empresarial" (base)
+      - H1: Sidebar Self Test
 
 ## 📁 PROJETOS
 
