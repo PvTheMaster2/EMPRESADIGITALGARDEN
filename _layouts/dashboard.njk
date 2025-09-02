@@ -52,9 +52,7 @@
   <!-- Sidebar Navigation -->
   <aside class="sidebar" data-state="closed" aria-hidden="true">
     <div class="sidebar-header">
-      <button class="sidebar-toggle" onclick="toggleSidebar()">
-        <span class="hamburger"></span>
-      </button>
+      <button class="sidebar-close" onclick="closeSidebar()" aria-label="Fechar sidebar">×</button>
       <div class="sidebar-brand">
         <a href="/" class="brand-link">🌱 Multisocios</a>
       </div>
@@ -66,8 +64,53 @@
       </div>
       
       <div class="sidebar-tree">
-        <!-- Navegação será carregada via JavaScript -->
-        <div id="navigation-tree"></div>
+        {% set navData = navigation.tree %}
+        {% for item in navData %}
+        <div class="tree-item" data-level="0">
+          <div class="tree-node">
+            <button class="tree-toggle" onclick="toggleTreeNode(this)" {% if not item.children %}style="visibility: hidden;"{% endif %}>
+              <span class="tree-icon">▶</span>
+            </button>
+            <a href="{{ item.url }}" class="tree-link {% if page.url == item.url %}active{% endif %}">
+              <span class="tree-label">{{ item.title }}</span>
+            </a>
+          </div>
+          
+          {% if item.children %}
+          <div class="tree-children" style="display: none;">
+            {% for child in item.children %}
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" {% if not child.children %}style="visibility: hidden;"{% endif %}>
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="{{ child.url }}" class="tree-link {% if page.url == child.url %}active{% endif %}">
+                  <span class="tree-label">{{ child.title }}</span>
+                </a>
+              </div>
+              
+              {% if child.children %}
+              <div class="tree-children" style="display: none;">
+                {% for subchild in child.children %}
+                <div class="tree-item" data-level="2">
+                  <div class="tree-node">
+                    <button class="tree-toggle" style="visibility: hidden;">
+                      <span class="tree-icon">▶</span>
+                    </button>
+                    <a href="{{ subchild.url }}" class="tree-link {% if page.url == subchild.url %}active{% endif %}">
+                      <span class="tree-label">{{ subchild.title }}</span>
+                    </a>
+                  </div>
+                </div>
+                {% endfor %}
+              </div>
+              {% endif %}
+            </div>
+            {% endfor %}
+          </div>
+          {% endif %}
+        </div>
+        {% endfor %}
       </div>
     </div>
   </aside>
