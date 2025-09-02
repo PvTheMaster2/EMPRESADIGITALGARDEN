@@ -1,17 +1,17 @@
 ---
 created: 2025-09-01T19:58
-updated: 2025-09-01T22:11
+updated: 2025-09-01T22:20
 ---
 # 🔍 Site Audit Report
 
-**Generated**: 2025-09-02T01:11:37.670Z
+**Generated**: 2025-09-02T01:20:44.120Z
 
 ## 📊 Statistics
 
-- **Total Pages**: 94
+- **Total Pages**: 95
 - **Pages without Title**: 43
 - **Pages without H1**: 5
-- **Total Internal Links**: 1151
+- **Total Internal Links**: 1178
 - **Total Issues**: 48
 
 ## ⚠️ Issues Found

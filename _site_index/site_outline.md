@@ -1,11 +1,11 @@
 ---
 created: 2025-09-01T19:58
-updated: 2025-09-01T22:11
+updated: 2025-09-01T22:20
 ---
 # 🌳 Site Structure Outline
 
-**Generated**: 2025-09-02T01:11:37.668Z
-**Total Pages**: 94
+**Generated**: 2025-09-02T01:20:44.116Z
+**Total Pages**: 95
 
 ## 📁 .CURSOR
 
@@ -184,6 +184,11 @@ updated: 2025-09-01T22:11
       - H1: 🎨 Layouts Analysis
     - **/_site_index/site_outline/** - "" (base)
       - H1: 🌳 Site Structure Outline
+
+## 📁 DASHBOARD-DINAMICO
+
+  - **/dashboard-dinamico/** - "Dashboard Dinâmico - Métricas em Tempo Real - Digital Garden Empresarial" (base)
+    - H1: Dashboard Dinâmico - Métricas em Tempo Real
 
 ## 📁 DASHBOARD-OVERVIEW
 

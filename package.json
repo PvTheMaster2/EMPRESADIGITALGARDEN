@@ -57,7 +57,8 @@
     "markdown-it-multimd-table": "^4.2.3",
     "markdown-it-sub": "^2.0.0",
     "markdown-it-sup": "^2.0.0",
-    "markdown-it-task-lists": "^2.1.1"
+    "markdown-it-task-lists": "^2.1.1",
+    "mermaid": "^11.10.1"
   },
   "engines": {
     "node": ">=18.0.0"

@@ -145,6 +145,32 @@ module.exports = function (eleventyConfig) {
     return new Intl.NumberFormat("pt-BR").format(numValue);
   });
 
+  // Filtros para dashboards dinâmicos
+  eleventyConfig.addFilter("filterByStatus", function(collection, status) {
+    return collection.filter(item => item.data.status === status);
+  });
+
+  eleventyConfig.addFilter("recentPages", function(collection, days = 7) {
+    const cutoffDate = new Date();
+    cutoffDate.setDate(cutoffDate.getDate() - days);
+    
+    return collection.filter(item => {
+      if (!item.data.created && !item.data.updated) return false;
+      const itemDate = new Date(item.data.updated || item.data.created);
+      return itemDate >= cutoffDate;
+    });
+  });
+
+  eleventyConfig.addFilter("totalWordCount", function(collection) {
+    return collection.reduce((total, item) => {
+      if (item.templateContent) {
+        const words = item.templateContent.split(/\s+/).length;
+        return total + words;
+      }
+      return total;
+    }, 0);
+  });
+
   // Add shortcodes
   eleventyConfig.addShortcode("year", function () {
     return new Date().getFullYear();

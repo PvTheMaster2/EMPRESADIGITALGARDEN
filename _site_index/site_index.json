@@ -17543,6 +17543,255 @@
       "wordCount": 0
     },
     {
+      "url": "/dashboard-dinamico/",
+      "filePath": "dist\\dashboard-dinamico\\index.html",
+      "title": "Dashboard Dinâmico - Métricas em Tempo Real - Digital Garden Empresarial",
+      "h1": "Dashboard Dinâmico - Métricas em Tempo Real",
+      "metaDescription": "Sistema de Gestão de Conhecimento Empresarial",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Dashboard Dinâmico - Métricas em Tempo Real",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "📊 Timeline de Projetos",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "💰 Distribuição de Budget",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "🔔 Atualizações Recentes",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "⚠️ Alertas",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "⚡ Ações Rápidas",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "📋 Projetos",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "📊 Conteúdo",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Portfólio de Projetos",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "AERALYN",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Plataforma Cursos",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Vault Empresarial",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Curso IA Inteligente",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Trip Match",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Nostalgia Musical",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "📅 Páginas Mais Recentes",
+          "id": null
+        },
+        {
+          "level": 4,
+          "text": "📚 Conteúdo",
+          "id": null
+        },
+        {
+          "level": 4,
+          "text": "🔤 Palavras",
+          "id": null
+        },
+        {
+          "level": 4,
+          "text": "🏷️ Tags",
+          "id": null
+        },
+        {
+          "level": 4,
+          "text": "📊 Seções",
+          "id": null
+        }
+      ],
+      "links": [
+        {
+          "text": "🌱 Digital Garden Empresarial",
+          "href": "/",
+          "isInternal": true
+        },
+        {
+          "text": "Dashboard",
+          "href": "/",
+          "isInternal": true
+        },
+        {
+          "text": "Governança",
+          "href": "/1-Governanca/README/",
+          "isInternal": true
+        },
+        {
+          "text": "Projetos",
+          "href": "/4-Projetos/README/",
+          "isInternal": true
+        },
+        {
+          "text": "Equipes",
+          "href": "/2-Equipes/README/",
+          "isInternal": true
+        },
+        {
+          "text": "Processos",
+          "href": "/5-Processos/README/",
+          "isInternal": true
+        },
+        {
+          "text": "Reuniões",
+          "href": "/6-Reunioes/README/",
+          "isInternal": true
+        },
+        {
+          "text": "Conhecimento",
+          "href": "/7-Conhecimento/README/",
+          "isInternal": true
+        },
+        {
+          "text": "🌱 Digital Garden",
+          "href": "/",
+          "isInternal": true
+        },
+        {
+          "text": "Portfólio de Projetos",
+          "href": "/4-Projetos/README/",
+          "isInternal": true
+        },
+        {
+          "text": "AERALYN",
+          "href": "/4-Projetos/Ativos/PRJ-AERALYN/",
+          "isInternal": true
+        },
+        {
+          "text": "Plataforma Cursos",
+          "href": "/4-Projetos/Ativos/PRJ-Plataforma-Cursos/",
+          "isInternal": true
+        },
+        {
+          "text": "Vault Empresarial",
+          "href": "/4-Projetos/Ativos/PRJ-Vault-Empresarial/",
+          "isInternal": true
+        },
+        {
+          "text": "Curso IA Inteligente",
+          "href": "/4-Projetos/Ativos/PRJ-Curso-IA-Inteligente/",
+          "isInternal": true
+        },
+        {
+          "text": "Trip Match",
+          "href": "/4-Projetos/Ativos/PRJ-Trip-Match/",
+          "isInternal": true
+        },
+        {
+          "text": "Nostalgia Musical",
+          "href": "/4-Projetos/Ativos/PRJ-Nostalgia-Musical/",
+          "isInternal": true
+        },
+        {
+          "text": "projeto (20)",
+          "href": "/tags/projeto/",
+          "isInternal": true
+        },
+        {
+          "text": "reuniao (5)",
+          "href": "/tags/reuniao/",
+          "isInternal": true
+        },
+        {
+          "text": "dashboard (10)",
+          "href": "/tags/dashboard/",
+          "isInternal": true
+        },
+        {
+          "text": "active (7)",
+          "href": "/tags/active/",
+          "isInternal": true
+        },
+        {
+          "text": "completed (0)",
+          "href": "/tags/completed/",
+          "isInternal": true
+        },
+        {
+          "text": "Dashboard Dinâmico - Métricas em Tempo Real",
+          "href": "/dashboard-dinamico/",
+          "isInternal": true
+        },
+        {
+          "text": "Sidebar Self Test",
+          "href": "/dev/sidebar-check/",
+          "isInternal": true
+        },
+        {
+          "text": "layouts_analysis",
+          "href": "/_site_index/layouts_analysis/",
+          "isInternal": true
+        },
+        {
+          "text": "issues",
+          "href": "/_site_index/issues/",
+          "isInternal": true
+        },
+        {
+          "text": "site_outline",
+          "href": "/_site_index/site_outline/",
+          "isInternal": true
+        },
+        {
+          "text": "Decisões Estratégicas",
+          "href": "/0-Dashboard-Executivo/Decisoes-Estrategicas/",
+          "isInternal": true
+        }
+      ],
+      "pageMetadata": {},
+      "layoutType": "base",
+      "wordCount": 0
+    },
+    {
       "url": "/dashboard-overview/",
       "filePath": "dist\\dashboard-overview\\index.html",
       "title": "Dashboard Executivo - Digital Garden Empresarial",
@@ -21224,7 +21473,7 @@
         },
         {
           "level": 3,
-          "text": "NO TITLE (28)",
+          "text": "NO TITLE (43)",
           "id": null
         },
         {
@@ -21262,7 +21511,7 @@
         },
         {
           "level": 3,
-          "text": "BASE Layout (47 pages)",
+          "text": "BASE Layout (59 pages)",
           "id": null
         },
         {
@@ -21272,17 +21521,17 @@
         },
         {
           "level": 3,
-          "text": "GOVERNANCA Layout (7 pages)",
+          "text": "GOVERNANCA Layout (8 pages)",
           "id": null
         },
         {
           "level": 3,
-          "text": "PROJETO Layout (19 pages)",
+          "text": "PROJETO Layout (20 pages)",
           "id": null
         },
         {
           "level": 3,
-          "text": "REUNIAO Layout (5 pages)",
+          "text": "REUNIAO Layout (6 pages)",
           "id": null
         },
         {
@@ -21407,6 +21656,11 @@
           "level": 2,
           "text": "📁 SOBRE-SISTEMA",
           "id": null
+        },
+        {
+          "level": 2,
+          "text": "📁 TAGS",
+          "id": null
         }
       ],
       "links": [],
@@ -21417,11 +21671,11 @@
   ],
   "structure": {},
   "stats": {
-    "totalPages": 94,
+    "totalPages": 95,
     "pagesWithoutTitle": 43,
     "pagesWithoutH1": 5,
     "brokenLinks": 0,
-    "totalLinks": 1151
+    "totalLinks": 1178
   },
   "issues": [
     {

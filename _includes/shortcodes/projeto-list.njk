@@ -1,0 +1,100 @@
+<!-- Shortcode para listar projetos dinamicamente -->
+{% macro projetoList(status = "all", limit = 10, showMetrics = false) %}
+  {% set projetos = collections.all | filterByTags("projeto") %}
+  
+  {% if status != "all" %}
+    {% set projetos = projetos | filterByStatus(status) %}
+  {% endif %}
+  
+  {% if projetos.length > 0 %}
+  <div class="projeto-list">
+    {% if showMetrics %}
+    <div class="projeto-metrics">
+      <div class="metric-card metric-card-info">
+        <div class="metric-value">{{ projetos.length }}</div>
+        <div class="metric-label">Total Projetos</div>
+      </div>
+      
+      {% set ativosCount = 0 %}
+      {% set concluidosCount = 0 %}
+      {% for projeto in projetos %}
+        {% if projeto.data.status == "active" %}
+          {% set ativosCount = ativosCount + 1 %}
+        {% elif projeto.data.status == "completed" %}
+          {% set concluidosCount = concluidosCount + 1 %}
+        {% endif %}
+      {% endfor %}
+      
+      <div class="metric-card metric-card-success">
+        <div class="metric-value">{{ ativosCount }}</div>
+        <div class="metric-label">Ativos</div>
+      </div>
+      
+      <div class="metric-card metric-card-warning">
+        <div class="metric-value">{{ concluidosCount }}</div>
+        <div class="metric-label">Concluídos</div>
+      </div>
+    </div>
+    {% endif %}
+    
+    <div class="projeto-grid">
+      {% for projeto in projetos | limit(limit) %}
+      <article class="projeto-card">
+        <header class="projeto-header">
+          <h3 class="projeto-title">
+            <a href="{{ projeto.url }}">{{ projeto.data.title or projeto.fileSlug }}</a>
+          </h3>
+          {% if projeto.data.status %}
+          <span class="status status-{{ projeto.data.status | slugify }}">{{ projeto.data.status }}</span>
+          {% endif %}
+        </header>
+        
+        <div class="projeto-meta">
+          {% if projeto.data.owner %}
+          <span class="meta-owner">👤 {{ projeto.data.owner }}</span>
+          {% endif %}
+          
+          {% if projeto.data.effort_weeks %}
+          <span class="meta-effort">⏱️ {{ projeto.data.effort_weeks }}sem</span>
+          {% endif %}
+          
+          {% if projeto.data.budget %}
+          <span class="meta-budget">💰 {{ projeto.data.budget }}</span>
+          {% endif %}
+          
+          {% if projeto.data.validation_score %}
+          <span class="meta-score">⭐ {{ projeto.data.validation_score }}/10</span>
+          {% endif %}
+        </div>
+        
+        {% if projeto.data.tags %}
+        <div class="projeto-tags">
+          {% for tag in projeto.data.tags %}
+            {% if tag != 'projeto' %}
+            <span class="tag tag-{{ tag | slugify }}">{{ tag }}</span>
+            {% endif %}
+          {% endfor %}
+        </div>
+        {% endif %}
+        
+        {% if projeto.templateContent %}
+        <div class="projeto-excerpt">
+          {{ projeto.templateContent | striptags | truncate(120) }}
+        </div>
+        {% endif %}
+        
+        {% if projeto.data.created %}
+        <div class="projeto-footer">
+          <time class="projeto-date">{{ projeto.data.created | date("dd/MM/yyyy") }}</time>
+        </div>
+        {% endif %}
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+  {% else %}
+  <div class="empty-state">
+    <p>Nenhum projeto encontrado{% if status != "all" %} com status "{{ status }}"{% endif %}.</p>
+  </div>
+  {% endif %}
+{% endmacro %}

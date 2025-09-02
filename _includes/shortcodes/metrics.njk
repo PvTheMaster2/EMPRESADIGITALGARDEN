@@ -1,0 +1,109 @@
+<!-- Shortcode para métricas dinâmicas -->
+{% macro dashboardMetrics() %}
+  {% set allPages = collections.all %}
+  {% set projetos = allPages | filterByTags("projeto") %}
+  {% set reunioes = allPages | filterByTags("reuniao") %}
+  {% set dashboards = allPages | filterByTags("dashboard") %}
+  
+  <div class="metrics-dashboard">
+    <div class="metric-grid">
+      <!-- Métricas de Projetos -->
+      <div class="metric-section">
+        <h3 class="metric-section-title">📋 Projetos</h3>
+        <div class="metric-cards">
+          <div class="metric-card metric-card-info">
+            <div class="metric-value">{{ projetos.length }}</div>
+            <div class="metric-label">Total</div>
+          </div>
+          
+          {% set projetosAtivosCount = 0 %}
+          {% set projetosConcluidosCount = 0 %}
+          {% for projeto in projetos %}
+            {% if projeto.data.status == "active" %}
+              {% set projetosAtivosCount = projetosAtivosCount + 1 %}
+            {% elif projeto.data.status == "completed" %}
+              {% set projetosConcluidosCount = projetosConcluidosCount + 1 %}
+            {% endif %}
+          {% endfor %}
+          
+          <div class="metric-card metric-card-success">
+            <div class="metric-value">{{ projetosAtivosCount }}</div>
+            <div class="metric-label">Ativos</div>
+          </div>
+          
+          <div class="metric-card metric-card-warning">
+            <div class="metric-value">{{ projetosConcluidosCount }}</div>
+            <div class="metric-label">Concluídos</div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Métricas de Conteúdo -->
+      <div class="metric-section">
+        <h3 class="metric-section-title">📊 Conteúdo</h3>
+        <div class="metric-cards">
+          <div class="metric-card metric-card-info">
+            <div class="metric-value">{{ allPages.length }}</div>
+            <div class="metric-label">Total Páginas</div>
+          </div>
+          
+          <div class="metric-card metric-card-success">
+            <div class="metric-value">{{ reunioes.length }}</div>
+            <div class="metric-label">Reuniões</div>
+          </div>
+          
+          <div class="metric-card metric-card-warning">
+            <div class="metric-value">{{ dashboards.length }}</div>
+            <div class="metric-label">Dashboards</div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Métricas de Atividade -->
+      <div class="metric-section">
+        <h3 class="metric-section-title">⚡ Atividade</h3>
+        <div class="metric-cards">
+          {% set paginasRecentes = allPages | recentPages(7) %}
+          <div class="metric-card metric-card-info">
+            <div class="metric-value">{{ paginasRecentes.length }}</div>
+            <div class="metric-label">Última Semana</div>
+          </div>
+          
+          {% set totalTags = allPages | getAllTags %}
+          <div class="metric-card metric-card-success">
+            <div class="metric-value">{{ totalTags.length }}</div>
+            <div class="metric-label">Tags Únicas</div>
+          </div>
+          
+          {% set totalPalavras = allPages | totalWordCount %}
+          <div class="metric-card metric-card-warning">
+            <div class="metric-value">{{ (totalPalavras / 1000) | round }}k</div>
+            <div class="metric-label">Palavras</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endmacro %}
+
+{% macro statusChart(collection) %}
+  {% set statusCount = {} %}
+  {% for item in collection %}
+    {% if item.data.status %}
+      {% set currentStatus = item.data.status %}
+      {% set statusCount = statusCount | addToObject(currentStatus, (statusCount[currentStatus] or 0) + 1) %}
+    {% endif %}
+  {% endfor %}
+  
+  <div class="status-chart">
+    <h4>Status Distribution</h4>
+    <div class="chart-bars">
+      {% for status, count in statusCount %}
+      <div class="chart-bar">
+        <div class="bar-fill status-{{ status | slugify }}" style="width: {{ (count / collection.length * 100) }}%"></div>
+        <div class="bar-label">{{ status }}: {{ count }}</div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endmacro %}

@@ -9,10 +9,16 @@
 <link rel="stylesheet" href="/styles/markdown-content.css" />
 <link rel="stylesheet" href="/styles/breadcrumbs.css" />
 <link rel="stylesheet" href="/styles/tags.css" />
+<link rel="stylesheet" href="/styles/mermaid.css" />
 
 <!-- CSS específico por layout -->
 {% if layout_css %}
 <link rel="stylesheet" href="/styles/{{ layout_css }}.css" />
+{% endif %}
+
+<!-- CSS específico por página -->
+{% if page.fileSlug == "dashboard-dinamico" %}
+<link rel="stylesheet" href="/styles/dashboard-dinamico.css" />
 {% endif %}
 
 <!-- Favicon e meta tags para PWA -->
