@@ -1,6 +1,6 @@
 module.exports = {
-  title: "Digital Garden Empresarial",
-  description: "Sistema de Gestão de Conhecimento Empresarial",
+  title: "Multisocios Empresarial",
+  description: "Sistema de Gestão de Conhecimento Multisocios",
   url: "https://digital-garden-empresa.netlify.app",
   author: "Pedro Vitor",
   language: "pt-BR",

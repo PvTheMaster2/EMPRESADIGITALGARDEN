@@ -1,10 +1,10 @@
 ---
 created: 2025-09-01T19:58
-updated: 2025-09-01T22:20
+updated: 2025-09-01T22:28
 ---
 # 🌳 Site Structure Outline
 
-**Generated**: 2025-09-02T01:20:44.116Z
+**Generated**: 2025-09-02T01:28:07.564Z
 **Total Pages**: 95
 
 ## 📁 .CURSOR
@@ -14,38 +14,38 @@ updated: 2025-09-01T22:20
 
 ## 📁 0-DASHBOARD-EXECUTIVO
 
-    - **/0-Dashboard-Executivo/Dashboard-Projetos-Prazo/** - "Dashboard Projetos Prazo - Digital Garden Empresarial" (base)
+    - **/0-Dashboard-Executivo/Dashboard-Projetos-Prazo/** - "Dashboard Projetos Prazo - Multisocios Empresarial" (base)
       - H1: Dashboard Projetos Prazo
-    - **/0-Dashboard-Executivo/Dashboard-Projetos-Prazo-Visual/** - "Dashboard Projetos Prazo Visual - Digital Garden Empresarial" (base)
+    - **/0-Dashboard-Executivo/Dashboard-Projetos-Prazo-Visual/** - "Dashboard Projetos Prazo Visual - Multisocios Empresarial" (base)
       - H1: Dashboard Projetos Prazo Visual
-    - **/0-Dashboard-Executivo/Dashboard_Capacidade_Equipe/** - "Dashboard Capacidade Equipe - Digital Garden Empresarial" (base)
+    - **/0-Dashboard-Executivo/Dashboard_Capacidade_Equipe/** - "Dashboard Capacidade Equipe - Multisocios Empresarial" (base)
       - H1: Dashboard Capacidade Equipe
-    - **/0-Dashboard-Executivo/Decisoes-Estrategicas/** - "Decisões Estratégicas - Digital Garden Empresarial" (base)
+    - **/0-Dashboard-Executivo/Decisoes-Estrategicas/** - "Decisões Estratégicas - Multisocios Empresarial" (base)
       - H1: Decisões Estratégicas
-    - **/0-Dashboard-Executivo/Executive-Auto/** - "Executive Auto - Digital Garden Empresarial" (base)
+    - **/0-Dashboard-Executivo/Executive-Auto/** - "Executive Auto - Multisocios Empresarial" (base)
       - H1: Executive Auto
-    - **/0-Dashboard-Executivo/Innovation-Pipeline/** - "Innovation Pipeline - Digital Garden Empresarial" (base)
+    - **/0-Dashboard-Executivo/Innovation-Pipeline/** - "Innovation Pipeline - Multisocios Empresarial" (base)
       - H1: Innovation Pipeline
-    - **/0-Dashboard-Executivo/KPIs-Principais/** - "KPIs Principais - Digital Garden Empresarial" (base)
+    - **/0-Dashboard-Executivo/KPIs-Principais/** - "KPIs Principais - Multisocios Empresarial" (base)
       - H1: KPIs Principais
-    - **/0-Dashboard-Executivo/Sistema_Metricas_Avancadas/** - "Sistema Metricas Avancadas - Digital Garden Empresarial" (base)
+    - **/0-Dashboard-Executivo/Sistema_Metricas_Avancadas/** - "Sistema Metricas Avancadas - Multisocios Empresarial" (base)
       - H1: Sistema Metricas Avancadas
 
 ## 📁 1-GOVERNANCA
 
-    - **/1-Governanca/Acordo_Socios_Final/** - "Acordo De Socios Final - Digital Garden Empresarial" (governanca)
+    - **/1-Governanca/Acordo_Socios_Final/** - "Acordo De Socios Final - Multisocios Empresarial" (governanca)
       - H1: Acordo De Socios Final
-    - **/1-Governanca/Compliance_Log/** - "Log de Compliance - Digital Garden Empresarial" (governanca)
+    - **/1-Governanca/Compliance_Log/** - "Log de Compliance - Multisocios Empresarial" (governanca)
       - H1: Log de Compliance
-    - **/1-Governanca/etica_uso_IA/** - "Etica Uso IA - Digital Garden Empresarial" (governanca)
+    - **/1-Governanca/etica_uso_IA/** - "Etica Uso IA - Multisocios Empresarial" (governanca)
       - H1: Etica Uso IA
-    - **/1-Governanca/FAQ_Compliance/** - "FAQ   Compliance - Digital Garden Empresarial" (governanca)
+    - **/1-Governanca/FAQ_Compliance/** - "FAQ   Compliance - Multisocios Empresarial" (governanca)
       - H1: FAQ   Compliance
-    - **/1-Governanca/Manual_Treinamento_Compliance/** - "Manual De Treinamento Compliance - Digital Garden Empresarial" (governanca)
+    - **/1-Governanca/Manual_Treinamento_Compliance/** - "Manual De Treinamento Compliance - Multisocios Empresarial" (governanca)
       - H1: Manual De Treinamento Compliance
-    - **/1-Governanca/Playbook_Comercial_v0/** - "Playbook Comercial V0 - Digital Garden Empresarial" (governanca)
+    - **/1-Governanca/Playbook_Comercial_v0/** - "Playbook Comercial V0 - Multisocios Empresarial" (governanca)
       - H1: Playbook Comercial V0
-    - **/1-Governanca/README/** - "Governança Empresarial - Digital Garden Empresarial" (governanca)
+    - **/1-Governanca/README/** - "Governança Empresarial - Multisocios Empresarial" (governanca)
       - H1: Governança Empresarial
 
 ## 📁 1000 - REUNIOES
@@ -85,41 +85,41 @@ updated: 2025-09-01T22:20
 
 ## 📁 4-PROJETOS
 
-      - **/4-Projetos/Ativos/PRJ-AERALYN/** - "AERALYN - Digital Garden Empresarial" (projeto)
+      - **/4-Projetos/Ativos/PRJ-AERALYN/** - "AERALYN - Multisocios Empresarial" (projeto)
         - H1: AERALYN
-      - **/4-Projetos/Ativos/PRJ-App-Desenvolvimento-Cognitivo/** - "App Desenvolvimento Cognitivo - Digital Garden Empresarial" (projeto)
+      - **/4-Projetos/Ativos/PRJ-App-Desenvolvimento-Cognitivo/** - "App Desenvolvimento Cognitivo - Multisocios Empresarial" (projeto)
         - H1: App Desenvolvimento Cognitivo
-      - **/4-Projetos/Ativos/PRJ-Curso-IA-Inteligente/** - "Curso IA Inteligente - Digital Garden Empresarial" (projeto)
+      - **/4-Projetos/Ativos/PRJ-Curso-IA-Inteligente/** - "Curso IA Inteligente - Multisocios Empresarial" (projeto)
         - H1: Curso IA Inteligente
-      - **/4-Projetos/Ativos/PRJ-Nostalgia-Musical/** - "Nostalgia Musical - Digital Garden Empresarial" (projeto)
+      - **/4-Projetos/Ativos/PRJ-Nostalgia-Musical/** - "Nostalgia Musical - Multisocios Empresarial" (projeto)
         - H1: Nostalgia Musical
-      - **/4-Projetos/Ativos/PRJ-Plataforma-Cursos/** - "Plataforma Cursos - Digital Garden Empresarial" (projeto)
+      - **/4-Projetos/Ativos/PRJ-Plataforma-Cursos/** - "Plataforma Cursos - Multisocios Empresarial" (projeto)
         - H1: Plataforma Cursos
-      - **/4-Projetos/Ativos/PRJ-Trip-Match/** - "Trip Match - Digital Garden Empresarial" (projeto)
+      - **/4-Projetos/Ativos/PRJ-Trip-Match/** - "Trip Match - Multisocios Empresarial" (projeto)
         - H1: Trip Match
-      - **/4-Projetos/Ativos/PRJ-Vault-Empresarial/** - "Vault Empresarial - Digital Garden Empresarial" (projeto)
+      - **/4-Projetos/Ativos/PRJ-Vault-Empresarial/** - "Vault Empresarial - Multisocios Empresarial" (projeto)
         - H1: Vault Empresarial
-      - **/4-Projetos/Em-Desenvolvimento/PRJ-Dev-WhatsBot-Academia/** - "Dev WhatsBot Academia - Digital Garden Empresarial" (projeto)
+      - **/4-Projetos/Em-Desenvolvimento/PRJ-Dev-WhatsBot-Academia/** - "Dev WhatsBot Academia - Multisocios Empresarial" (projeto)
         - H1: Dev WhatsBot Academia
-      - **/4-Projetos/Em-Desenvolvimento/PRJ-Web-Site-Portfolio-Engenharia/** - "Web Site Portfolio Engenharia - Digital Garden Empresarial" (projeto)
+      - **/4-Projetos/Em-Desenvolvimento/PRJ-Web-Site-Portfolio-Engenharia/** - "Web Site Portfolio Engenharia - Multisocios Empresarial" (projeto)
         - H1: Web Site Portfolio Engenharia
-    - **/4-Projetos/README/** - "Portfólio de Projetos - Digital Garden Empresarial" (projeto)
+    - **/4-Projetos/README/** - "Portfólio de Projetos - Multisocios Empresarial" (projeto)
       - H1: Portfólio de Projetos
-      - **/4-Projetos/Templates/Exemplo_Intake_Preenchido/** - "Exemplo Intake Preenchido - Digital Garden Empresarial" (projeto)
+      - **/4-Projetos/Templates/Exemplo_Intake_Preenchido/** - "Exemplo Intake Preenchido - Multisocios Empresarial" (projeto)
         - H1: Exemplo Intake Preenchido
-      - **/4-Projetos/Templates/Exemplo_Minimalista/** - "Exemplo Minimalista - Digital Garden Empresarial" (projeto)
+      - **/4-Projetos/Templates/Exemplo_Minimalista/** - "Exemplo Minimalista - Multisocios Empresarial" (projeto)
         - H1: Exemplo Minimalista
-      - **/4-Projetos/Templates/Exemplo_Primeira_Cartada/** - "Exemplo Primeira Cartada - Digital Garden Empresarial" (projeto)
+      - **/4-Projetos/Templates/Exemplo_Primeira_Cartada/** - "Exemplo Primeira Cartada - Multisocios Empresarial" (projeto)
         - H1: Exemplo Primeira Cartada
-      - **/4-Projetos/Templates/README/** - "README - Digital Garden Empresarial" (projeto)
+      - **/4-Projetos/Templates/README/** - "README - Multisocios Empresarial" (projeto)
         - H1: README
-      - **/4-Projetos/Templates/TEMPLATE 2025-01-20 — projeto — Assistente-Transcricao-Juridica/** - "Assistente de Transcrição Jurídica com IA - Digital Garden Empresarial" (projeto)
+      - **/4-Projetos/Templates/TEMPLATE 2025-01-20 — projeto — Assistente-Transcricao-Juridica/** - "Assistente de Transcrição Jurídica com IA - Multisocios Empresarial" (projeto)
         - H1: Assistente de Transcrição Jurídica com IA
-      - **/4-Projetos/Templates/TEMPLATE Piloto-Exemplo-Sistema/** - "TEMPLATE Piloto Exemplo Sistema - Digital Garden Empresarial" (projeto)
+      - **/4-Projetos/Templates/TEMPLATE Piloto-Exemplo-Sistema/** - "TEMPLATE Piloto Exemplo Sistema - Multisocios Empresarial" (projeto)
         - H1: TEMPLATE Piloto Exemplo Sistema
-      - **/4-Projetos/Templates/TEMPLATE Piloto_CRM_Arquitetos/** - "TEMPLATE Piloto CRM Arquitetos - Digital Garden Empresarial" (projeto)
+      - **/4-Projetos/Templates/TEMPLATE Piloto_CRM_Arquitetos/** - "TEMPLATE Piloto CRM Arquitetos - Multisocios Empresarial" (projeto)
         - H1: TEMPLATE Piloto CRM Arquitetos
-      - **/4-Projetos/Templates/TEMPLATE Projeto-Exemplo-Sistema/** - "TEMPLATE Projeto Exemplo Sistema - Digital Garden Empresarial" (projeto)
+      - **/4-Projetos/Templates/TEMPLATE Projeto-Exemplo-Sistema/** - "TEMPLATE Projeto Exemplo Sistema - Multisocios Empresarial" (projeto)
         - H1: TEMPLATE Projeto Exemplo Sistema
 
 ## 📁 5-PROCESSOS
@@ -133,15 +133,15 @@ updated: 2025-09-01T22:20
 
 ## 📁 6-REUNIOES
 
-    - **/6-Reunioes/2025-08-31-Reuniao-Executiva-Sistema/** - "ReuniãO Executiva Sistema - Digital Garden Empresarial" (reuniao)
+    - **/6-Reunioes/2025-08-31-Reuniao-Executiva-Sistema/** - "ReuniãO Executiva Sistema - Multisocios Empresarial" (reuniao)
       - H1: ReuniãO Executiva Sistema
-    - **/6-Reunioes/2025-09-01-Reuniao-Analise-Pessimista-Projetos/** - "ReuniãO Analise Pessimista Projetos - Digital Garden Empresarial" (reuniao)
+    - **/6-Reunioes/2025-09-01-Reuniao-Analise-Pessimista-Projetos/** - "ReuniãO Analise Pessimista Projetos - Multisocios Empresarial" (reuniao)
       - H1: ReuniãO Analise Pessimista Projetos
-    - **/6-Reunioes/2025-09-01-Reuniao-Criacao-Projeto-WhatsBot/** - "ReuniãO Criacao Projeto WhatsBot - Digital Garden Empresarial" (reuniao)
+    - **/6-Reunioes/2025-09-01-Reuniao-Criacao-Projeto-WhatsBot/** - "ReuniãO Criacao Projeto WhatsBot - Multisocios Empresarial" (reuniao)
       - H1: ReuniãO Criacao Projeto WhatsBot
-    - **/6-Reunioes/2025-09-01-Reuniao-Criacao-Sistema-Geracao-Ideias/** - "ReuniãO Criacao Sistema Geracao Ideias - Digital Garden Empresarial" (reuniao)
+    - **/6-Reunioes/2025-09-01-Reuniao-Criacao-Sistema-Geracao-Ideias/** - "ReuniãO Criacao Sistema Geracao Ideias - Multisocios Empresarial" (reuniao)
       - H1: ReuniãO Criacao Sistema Geracao Ideias
-    - **/6-Reunioes/README/** - "Reuniões e Atas - Digital Garden Empresarial" (reuniao)
+    - **/6-Reunioes/README/** - "Reuniões e Atas - Multisocios Empresarial" (reuniao)
       - H1: Reuniões e Atas
 
 ## 📁 7-CONHECIMENTO
@@ -187,27 +187,27 @@ updated: 2025-09-01T22:20
 
 ## 📁 DASHBOARD-DINAMICO
 
-  - **/dashboard-dinamico/** - "Dashboard Dinâmico - Métricas em Tempo Real - Digital Garden Empresarial" (base)
-    - H1: Dashboard Dinâmico - Métricas em Tempo Real
+  - **/dashboard-dinamico/** - "Dashboard Dinâmico Multisocios - Métricas em Tempo Real - Multisocios Empresarial" (base)
+    - H1: Dashboard Dinâmico Multisocios - Métricas em Tempo Real
 
 ## 📁 DASHBOARD-OVERVIEW
 
-  - **/dashboard-overview/** - "Dashboard Executivo - Digital Garden Empresarial" (base)
+  - **/dashboard-overview/** - "Dashboard Executivo - Multisocios Empresarial" (base)
     - H1: Dashboard Executivo
 
 ## 📁 DEV
 
-    - **/dev/sidebar-check/** - "Sidebar Self Test - Digital Garden Empresarial" (base)
+    - **/dev/sidebar-check/** - "Sidebar Self Test - Multisocios Empresarial" (base)
       - H1: Sidebar Self Test
 
 ## 📁 PROJETOS
 
-    - **/projetos/templates-guia/** - "Templates de Projetos - Digital Garden Empresarial" (projeto)
+    - **/projetos/templates-guia/** - "Templates de Projetos - Multisocios Empresarial" (projeto)
       - H1: Templates de Projetos
 
 ## 📁 ROOT
 
-- **/** - "Dashboard Executivo - Home - Digital Garden Empresarial" (dashboard)
+- **/** - "Dashboard Executivo - Home - Multisocios Empresarial" (dashboard)
   - H1: Dashboard Executivo - Home
 
 ## 📁 SOBRE-SISTEMA

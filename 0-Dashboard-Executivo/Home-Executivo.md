@@ -2,7 +2,7 @@
 title: Dashboard Executivo - Home
 layout: dashboard.njk
 created: 2025-09-01
-updated: 2025-09-01T22:12
+updated: 2025-09-01T22:28
 type: dashboard
 status: active
 priority: high
@@ -15,7 +15,7 @@ eleventyNavigation:
   title: 🏠 Dashboard Executivo
   order: 0
 ---
-# 🏢 **DASHBOARD EXECUTIVO - MULTISÓCIOS**
+# 🏢 **DASHBOARD EXECUTIVO - MULTISOCIOS**
 
 > *Visão consolidada de todos os projetos, métricas e performance da empresa*
 

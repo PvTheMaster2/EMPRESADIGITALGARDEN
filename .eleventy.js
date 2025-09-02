@@ -185,8 +185,8 @@ module.exports = function (eleventyConfig) {
 
   // Add global data
   eleventyConfig.addGlobalData("site", {
-    title: "Digital Garden Empresarial",
-    description: "Sistema de Gestão de Conhecimento Empresarial",
+    title: "Multisocios Empresarial",
+    description: "Sistema de Gestão de Conhecimento Multisocios",
     url: "https://digital-garden-empresa.netlify.app",
     author: "Pedro Vitor",
   });
