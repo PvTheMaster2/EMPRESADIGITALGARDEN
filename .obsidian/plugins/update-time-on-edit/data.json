@@ -649,7 +649,7 @@
     "node_modules/@sindresorhus/slugify/readme.md": "34960149a0350c317b52c5bad687d2b01d3095874f157568e7ecb7af323b6074",
     "node_modules/markdown-it-mathjax3/README.md": "ea7d65ef58d173b6d9e66e41181bcfb47a47cea8940a7a069f5d79c6801fbc28",
     "node_modules/markdown-it-plantuml/README.md": "58a522a501daf8f30817692d08f379b25073a635cfac9a91063e2c6f458b723e",
-    "0-Dashboard-Executivo/index.md": "ba46c9b21388adfc53aba63227674aa7578403cc1772c782a9f44e2608cf64c2",
+    "0-Dashboard-Executivo/index.md": "7b9d0cfc22900dd50c635287b3113918fd60ec5e65fd1dd8272300140ac4c320",
     "node_modules/balanced-match/LICENSE.md": "307bfda5936ba1476d8178ca3243218b17951df45caeccc1401968dbfc0bb7ae",
     "node_modules/balanced-match/README.md": "ebada4faf02ae3faa6ebe1f8c76ff3ec1cf6d6349ae2a52dd5adb4ca800f6a19",
     "node_modules/yallist/README.md": "34a05333319689dab5b6400771506dbfaa5bf2b930429b8ff72bddd3bdc56e45",
@@ -939,6 +939,10 @@
     "node_modules/form-data/CHANGELOG.md": "948faf5bdafabc50a88a54c0d4549bec33f0f9286b9ac3c5483d1e71436e52b3",
     "node_modules/web-resource-inliner/node_modules/dom-serializer/README.md": "9e74ce1d15609fdd8809a0fd5c8cf10ff257323b7c174abb97e27bab777ab570",
     "node_modules/form-data/node_modules/mime-db/HISTORY.md": "725e7a10129df24492b7b3ae6f9e725e1d1a70d3e0cdbd4768cef90f42646e11",
-    "node_modules/juice/node_modules/commander/Readme.md": "b23abef8ada2f473c422ac5c3fae8a3cf8d2a3e9f12cd6c7b7d45ba8c9a15568"
+    "node_modules/juice/node_modules/commander/Readme.md": "b23abef8ada2f473c422ac5c3fae8a3cf8d2a3e9f12cd6c7b7d45ba8c9a15568",
+    "node_modules/cose-base/README.md": "917e30bf4bd55f5b000df04f06694459ea11542b54c7595ab924dab817544694",
+    "node_modules/d3-polygon/README.md": "df789f35b0a61aeec40130cc5562461451a35c1d2f2b3ae91f1d89e3c6efc846",
+    "node_modules/color-name/README.md": "5e3cbd1e2b2f6a45ad9ce8ea20a0f8e9894e76c26dbe0779037d758acc810031",
+    "node_modules/local-pkg/README.md": "ee056f2a3117c37c816ad8c973512196d9f181b33197f868dec800c4cec2fe51"
   }
 }

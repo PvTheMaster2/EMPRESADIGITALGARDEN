@@ -4,7 +4,7 @@ description: Visão geral do conhecimento empresarial e projetos em andamento
 permalink: /dashboard-overview/
 layout: dashboard.njk
 created: 2025-09-01T15:18
-updated: 2025-09-01T22:46
+updated: 2025-09-01T22:47
 ---
 
 # 🌱 Digital Garden Empresarial
