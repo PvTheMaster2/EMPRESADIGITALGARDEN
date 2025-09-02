@@ -23,9 +23,82 @@
 3. 🎯 **Aplicar Layout Correto** - Usar layout específico por seção
 4. 🎯 **Atualizar Frontmatter** - Sempre incluir `title:`
 
-## 📁 Estrutura de Layouts
+## 📁 ESTRUTURA COMPLETA DO PROJETO
 
-### Por Diretório:
+### **DIRETÓRIOS PRINCIPAIS:**
+```
+DIGITAL-GARDEN-EMPRESA/
+├── 0-Dashboard-Executivo/          # 📊 Dashboards e KPIs executivos
+├── 1-Governanca/                   # 🏛️ Compliance, políticas, acordos
+├── 2-Equipes/                      # 👥 Gestão de pessoas e capacidade
+├── 3-Mercado/                      # 📈 Análise de mercado e concorrentes
+├── 4-Projetos/                     # 📋 Projetos e iniciativas empresariais
+│   ├── Ativos/                     # Projetos em execução
+│   ├── Backlog/                    # Ideias aprovadas
+│   ├── Concluidos/                 # Projetos finalizados
+│   ├── Em-Desenvolvimento/         # Projetos em desenvolvimento
+│   ├── Pilotos/                    # Experimentos e validações
+│   └── Templates/                  # Templates de projetos
+├── 5-Processos/                    # ⚙️ Workflows, SOPs e automações
+├── 6-Reunioes/                     # 🤝 Atas de reunião e decisões
+├── 7-Conhecimento/                 # 📚 Base de conhecimento
+├── 99 - RESOURCES/                 # 🛠️ Templates e recursos auxiliares
+│   ├── 99 - TEMPLATE/              # Templates master
+│   └── Imagens/                    # Assets visuais
+├── 1000 - REUNIOES/               # 📝 Reuniões históricas (legado)
+├── _data/                         # 🗂️ Dados globais do Eleventy
+│   ├── company.js                 # Dados da empresa
+│   ├── navigation.js              # Estrutura de navegação
+│   └── site.js                    # Configurações do site
+├── _includes/                     # 🧩 Componentes e includes
+│   ├── components/                # Componentes reutilizáveis
+│   │   ├── meta-head.njk         # SEO e CSS universal
+│   │   ├── sidebar-nav.njk       # Navegação lateral
+│   │   ├── main-navigation.njk   # Header principal
+│   │   ├── page-header.njk       # Cabeçalho com metadados
+│   │   ├── page-sidebar.njk      # Sidebar de página
+│   │   └── scripts-bundle.njk    # Scripts universais
+│   └── project-card.njk          # Card de projeto
+├── _layouts/                      # 📄 Templates de layout
+│   ├── base.njk                  # Layout base universal
+│   ├── dashboard.njk             # Layout para dashboards
+│   ├── governanca.njk            # Layout para governança
+│   ├── projeto.njk               # Layout para projetos
+│   └── reuniao.njk               # Layout para reuniões
+├── _site_index/                   # 📊 Context pack gerado automaticamente
+│   ├── site_index.json           # Metadados machine-readable
+│   ├── site_outline.md           # Estrutura completa do site
+│   ├── issues.md                 # Issues identificados
+│   └── layouts_analysis.md       # Análise de layouts
+├── _cursor_context/               # 🤖 Context pack avançado para Cursor
+│   ├── project_patterns.md       # Padrões específicos do projeto
+│   ├── template_guide.md         # Guia completo de templates
+│   ├── business_rules.md         # Regras de negócio automatizadas
+│   └── troubleshooting.md        # Soluções para problemas comuns
+├── scripts/                       # 📜 Scripts JavaScript
+│   ├── main.js                   # Script principal
+│   ├── search.js                 # Funcionalidade de busca
+│   ├── sidebar.js                # Lógica da sidebar
+│   └── site-indexer.js           # Indexador automático
+├── styles/                        # 🎨 Arquivos CSS
+│   ├── main.css                  # Estilos principais
+│   ├── sidebar.css               # Estilos da sidebar
+│   ├── markdown-content.css      # Apresentação Obsidian-like
+│   ├── dashboard.css             # Estilos específicos dashboards
+│   ├── governanca.css            # Estilos específicos governança
+│   ├── projeto.css               # Estilos específicos projetos
+│   └── reuniao.css               # Estilos específicos reuniões
+├── dev/                          # 🧪 Ferramentas de desenvolvimento
+│   └── sidebar-check.md          # Página de diagnóstico da sidebar
+├── dist/                         # 📦 Site gerado (ignorado no git)
+├── node_modules/                 # 📚 Dependências (ignorado no git)
+├── .eleventy.js                  # ⚙️ Configuração do Eleventy
+├── package.json                  # 📋 Configuração do projeto
+├── netlify.toml                  # 🌐 Configuração do Netlify
+└── README.md                     # 📖 Documentação principal
+```
+
+### **LAYOUTS POR DIRETÓRIO:**
 - **`/0-Dashboard-Executivo/`** → `dashboard.njk`
 - **`/1-Governanca/`** → `governanca.njk`
 - **`/4-Projetos/`** → `projeto.njk`
@@ -102,10 +175,12 @@ Identifique discrepâncias de URLs e gere tabela de correções necessárias.
 - **Links funcionais**: 100% (atual: ~95%)
 
 ### Build Status:
-- **Total páginas**: 77
-- **Build time**: ~4 segundos
-- **Issues encontrados**: 32
-- **Layouts ativos**: 5
+- **Total páginas**: 79 (atualizado)
+- **Build time**: ~3 segundos
+- **Issues encontrados**: 33 (principalmente wikilinks)
+- **Layouts ativos**: 5 (base, dashboard, governanca, projeto, reuniao)
+- **Componentes**: 6 (sistema componentizado implementado)
+- **Assets copiados**: 92 arquivos
 
 ## 🔄 Workflow de Manutenção
 
@@ -115,6 +190,51 @@ Identifique discrepâncias de URLs e gere tabela de correções necessárias.
 4. **Correções** → Aplicar mudanças
 5. **Commit** → Git push (deploy automático)
 
+## 🏗️ SISTEMA COMPONENTIZADO
+
+### **Componentes Disponíveis:**
+- **`meta-head.njk`** - SEO, CSS e meta tags universais
+- **`sidebar-nav.njk`** - Navegação lateral completa
+- **`main-navigation.njk`** - Header e navegação principal
+- **`page-header.njk`** - Cabeçalho com metadados ricos
+- **`page-sidebar.njk`** - Sidebar de página com backlinks
+- **`scripts-bundle.njk`** - Scripts universais organizados
+
+### **Como Usar Componentes:**
+```nunjucks
+<!-- Em qualquer layout .njk -->
+{% include "components/meta-head.njk" %}
+{% include "components/sidebar-nav.njk" %}
+{% include "components/page-header.njk" %}
+```
+
+### **Vantagens do Sistema:**
+- ✅ **Zero duplicação** de código entre layouts
+- ✅ **Manutenção centralizada** - mudança em 1 lugar afeta todos
+- ✅ **Consistência garantida** - todos os layouts usam mesma base
+- ✅ **Cursor-friendly** - context pack completo para IA
+
+## 🎨 CSS OBSIDIAN-LIKE
+
+### **Classes Principais:**
+- **`.markdown-content`** - Container principal do conteúdo
+- **`.metric-grid`** - Grid responsivo para dashboards
+- **`.metric-card-success/warning/info/danger`** - Cards coloridos
+- **`.callout-info/warning/success/error`** - Blocos de destaque
+- **`.section-header`** - Cabeçalhos de seção estilizados
+
+### **Variáveis CSS Disponíveis:**
+```css
+--text-normal           /* Cor do texto principal */
+--text-title            /* Cor dos títulos */
+--text-accent           /* Cor de destaque */
+--background-primary    /* Fundo principal */
+--background-secondary  /* Fundo secundário */
+--interactive-accent    /* Cor de interação */
+```
+
 ---
 
 **📝 Lembre-se**: O Context Pack é atualizado automaticamente a cada build. Sempre consulte os arquivos mais recentes em `_site_index/` para decisões informadas.
+
+**🚀 Sistema 100% componentizado** - Use os componentes para máxima flexibilidade com zero duplicação!

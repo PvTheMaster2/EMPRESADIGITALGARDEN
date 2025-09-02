@@ -1,0 +1,55 @@
+<aside class="page-sidebar">
+  <!-- Tags da página -->
+  {% if tags and tags.length > 0 %}
+  <section class="tags-section">
+    <h3 class="sidebar-title">
+      <span class="sidebar-icon">🏷️</span>
+      Tags
+    </h3>
+    <div class="tags-list">
+      {% for tag in tags %}
+        {% if tag != 'template' %}
+        <span class="tag tag-{{ tag | slugify }}">{{ tag }}</span>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+  <!-- Metadados da página -->
+  <section class="page-meta-section">
+    <h3 class="sidebar-title">
+      <span class="sidebar-icon">📊</span>
+      Metadados
+    </h3>
+    <div class="meta-list">
+      {% if date %}
+      <div class="meta-item">
+        <span class="meta-label">Criado:</span>
+        <span class="meta-value">{{ date | date("dd/MM/yyyy") }}</span>
+      </div>
+      {% endif %}
+      
+      {% if modified %}
+      <div class="meta-item">
+        <span class="meta-label">Modificado:</span>
+        <span class="meta-value">{{ modified | date("dd/MM/yyyy") }}</span>
+      </div>
+      {% endif %}
+      
+      {% if page.inputPath %}
+      <div class="meta-item">
+        <span class="meta-label">Arquivo:</span>
+        <span class="meta-value">{{ page.inputPath | replace('./', '') }}</span>
+      </div>
+      {% endif %}
+      
+      {% if content %}
+      <div class="meta-item">
+        <span class="meta-label">Palavras:</span>
+        <span class="meta-value">{{ content | wordcount }}</span>
+      </div>
+      {% endif %}
+    </div>
+  </section>
+</aside>
