@@ -165,6 +165,9 @@ module.exports = function (eleventyConfig) {
     author: "Pedro Vitor",
   });
 
+  // Add navigation data globally
+  eleventyConfig.addGlobalData("navigation", require("./_data/navigation.js"));
+
   // Collections for dynamic content
   eleventyConfig.addCollection("projetos", function(collectionApi) {
     return collectionApi.getAll().filter(item => {
