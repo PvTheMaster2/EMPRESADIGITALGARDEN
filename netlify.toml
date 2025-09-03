@@ -2,10 +2,10 @@
   # Diretório onde está o código fonte
   base = "."
   
-  # Comando para instalar dependências
-  command = "npm install"
+  # Comando para fazer o build (instala dependências e executa build)
+  command = "npm install && npm run build"
   
-  # Comando para fazer o build
+  # Diretório onde está o código gerado
   publish = "dist"
   
   # Diretório onde está o código fonte (relativo ao base)
