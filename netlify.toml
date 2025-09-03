@@ -17,6 +17,7 @@
   NPM_FLAGS = "--legacy-peer-deps"
 
 # Configurações de redirecionamento para SPA
+# O arquivo _redirects será usado para redirects específicos
 [[redirects]]
   from = "/*"
   to = "/index.html"

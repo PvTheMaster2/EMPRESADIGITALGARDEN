@@ -7,17 +7,17 @@ module.exports = {
     },
     {
       title: "📊 Dashboard Executivo",
-      url: "/dashboard-overview/",
+      url: "/dashboard-executivo/",
       icon: "📊",
       children: [
-        { title: "💡 Innovation Pipeline", url: "/0-dashboard-executivo/innovation-pipeline/" },
-        { title: "📈 KPIs Principais", url: "/0-dashboard-executivo/kpis-principais/" },
-        { title: "🎯 Decisões Estratégicas", url: "/0-dashboard-executivo/decisoes-estrategicas/" },
-        { title: "📅 Projetos por Prazo", url: "/0-dashboard-executivo/dashboard-projetos-prazo/" },
-        { title: "🎨 Projetos Visuais", url: "/0-dashboard-executivo/dashboard-projetos-prazo-visual/" },
-        { title: "👥 Capacidade da Equipe", url: "/0-dashboard-executivo/dashboard_capacidade_equipe/" },
-        { title: "⚡ Executive Auto", url: "/0-dashboard-executivo/executive-auto/" },
-        { title: "📊 Métricas Avançadas", url: "/0-dashboard-executivo/sistema_metricas_avancadas/" }
+        { title: "💡 Innovation Pipeline", url: "/dashboard-executivo/innovation-pipeline/" },
+        { title: "📈 KPIs Principais", url: "/dashboard-executivo/kpis-principais/" },
+        { title: "🎯 Decisões Estratégicas", url: "/dashboard-executivo/decisoes-estrategicas/" },
+        { title: "📅 Projetos por Prazo", url: "/dashboard-executivo/dashboard-projetos-prazo/" },
+        { title: "🎨 Projetos Visuais", url: "/dashboard-executivo/dashboard-projetos-prazo-visual/" },
+        { title: "👥 Capacidade da Equipe", url: "/dashboard-executivo/dashboard-capacidade-equipe/" },
+        { title: "⚡ Executive Auto", url: "/dashboard-executivo/executive-auto/" },
+        { title: "📊 Métricas Avançadas", url: "/dashboard-executivo/sistema-metricas-avancadas/" }
       ]
     },
     {

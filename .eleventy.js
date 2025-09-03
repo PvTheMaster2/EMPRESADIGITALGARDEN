@@ -29,13 +29,16 @@ module.exports = function (eleventyConfig) {
   // Plugin para navegação hierárquica e breadcrumbs
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
 
-  // Copy static assets - NOVA ESTRUTURA
+  // Copy static assets - ESTRUTURA CORRIGIDA
   eleventyConfig.addPassthroughCopy({"src/styles": "styles"});
   eleventyConfig.addPassthroughCopy({"src/scripts": "scripts"});
   eleventyConfig.addPassthroughCopy({"src/assets/images": "images"});
   eleventyConfig.addPassthroughCopy("content/**/*.png");
   eleventyConfig.addPassthroughCopy("content/**/*.jpg");
   eleventyConfig.addPassthroughCopy("content/**/*.pdf");
+  
+  // Copy _redirects file for Netlify
+  eleventyConfig.addPassthroughCopy("_redirects");
 
   // Configure markdown processing
   eleventyConfig.setLibrary(
@@ -130,6 +133,9 @@ module.exports = function (eleventyConfig) {
     return "/" + path + "/";
   });
 
+  // Configuração de permalinks para URLs limpos - REMOVIDO (causava erro)
+  // Será implementado via transformação de dados
+
   // Filtro para formatação de números
   eleventyConfig.addFilter("number", function(num) {
     if (num === null || num === undefined || num === '') return '';
@@ -186,6 +192,16 @@ module.exports = function (eleventyConfig) {
 
   // Add navigation data globally - NOVA ESTRUTURA
   eleventyConfig.addGlobalData("navigation", require("./config/_data/navigation.js"));
+
+  // Transform para limpar URLs automaticamente
+  eleventyConfig.addTransform("clean-urls", function(content, outputPath) {
+    if (outputPath && outputPath.endsWith('.html')) {
+      // Remove prefixos numéricos das URLs nos links
+      content = content.replace(/href="\/\d+-([^"]+)"/g, 'href="/$1"');
+      content = content.replace(/href="\/\d+-([^"]+)\//g, 'href="/$1/');
+    }
+    return content;
+  });
 
   // Collections for dynamic content - NOVA ESTRUTURA
   eleventyConfig.addCollection("projetos", function(collectionApi) {

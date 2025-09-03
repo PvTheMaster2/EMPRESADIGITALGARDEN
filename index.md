@@ -1,9 +1,9 @@
 ---
-title: "Digital Garden Empresarial - Multisocios"
+title: Digital Garden Empresarial - Multisocios
 layout: base
-permalink: "/"
+permalink: /
 created: 2025-01-02
-updated: 2025-01-02T21:00
+updated: 2025-09-02T22:21
 type: base
 status: active
 ---
@@ -14,45 +14,43 @@ Bem-vindo ao **Sistema de Gestão de Conhecimento** da Multisocios! Este é seu 
 
 ## 🎯 Navegação Principal
 
-### 📊 [Dashboard Executivo](0-Dashboard-Executivo/)
-- **[Home Executivo](0-Dashboard-Executivo/Home-Executivo/)** - Visão geral completa
-- **[KPIs Principais](0-Dashboard-Executivo/KPIs-Principais/)** - Métricas em tempo real
-- **[Innovation Pipeline](0-Dashboard-Executivo/Innovation-Pipeline/)** - Pipeline de inovação
-- **[Executive Auto](0-Dashboard-Executivo/Executive-Auto/)** - Dashboard automático
+### 📊 [Dashboard Executivo](/dashboard-executivo/)
+- **[Home Executivo](/dashboard-executivo/)** - Visão geral completa
+- **[KPIs Principais](/dashboard-executivo/kpis-principais/)** - Métricas em tempo real
+- **[Innovation Pipeline](/dashboard-executivo/innovation-pipeline/)** - Pipeline de inovação
+- **[Executive Auto](/dashboard-executivo/executive-auto/)** - Dashboard automático
 
-### 🏛️ [Governança](1-Governanca/)
+### 🏛️ [Governança](/governanca/)
 - Compliance e políticas empresariais
 - Estrutura societária e acordos
 - Revisões legais e aprovações
 
-### 👥 [Equipes](2-Equipes/)
+### 👥 [Equipes](/equipes/)
 - Gestão de pessoas e capacidades
 - Organograma e responsabilidades
 - Avaliações e desenvolvimento
 
-### 📈 [Mercado](3-Mercado/)
+### 📈 [Mercado](/mercado/)
 - Análise de mercado e concorrentes
 - Tendências e oportunidades
 - Inteligência competitiva
 
-### 📋 [Projetos](4-Projetos/)
-- **[Ativos](4-Projetos/Ativos/)** - Projetos em execução
-- **[Backlog](4-Projetos/Backlog/)** - Ideias aprovadas
-- **[Em Desenvolvimento](4-Projetos/Em-Desenvolvimento/)** - Desenvolvimento ativo
-- **[Pilotos](4-Projetos/Pilotos/)** - Experimentos e validações
-- **[Concluídos](4-Projetos/Concluidos/)** - Projetos finalizados
+### 📋 [Projetos](/projetos/)
+- **[Ativos](/projetos/ativos/)** - Projetos em execução
+- **[Em Desenvolvimento](/projetos/em-desenvolvimento/)** - Desenvolvimento ativo
+- **[Templates](/projetos/templates/)** - Modelos e guias
 
-### ⚙️ [Processos](5-Processos/)
+### ⚙️ [Processos](/processos/)
 - Workflows e SOPs
 - Automações e integrações
 - Documentação técnica
 
-### 🤝 [Reuniões](6-Reunioes/)
+### 🤝 [Reuniões](/reunioes/)
 - Atas de reunião
 - Decisões e follow-ups
 - Calendário de eventos
 
-### 📚 [Conhecimento](7-Conhecimento/)
+### 📚 [Conhecimento](/conhecimento/)
 - Base de conhecimento
 - Documentação técnica
 - Melhores práticas
@@ -123,10 +121,10 @@ Bem-vindo ao **Sistema de Gestão de Conhecimento** da Multisocios! Este é seu 
 ## 🎯 Acesso Rápido
 
 ### 🔥 Páginas Mais Acessadas
-- [Executive Auto Dashboard](0-Dashboard-Executivo/Executive-Auto/)
-- [Home Executivo](0-Dashboard-Executivo/Home-Executivo/)
-- [Projetos Ativos](4-Projetos/Ativos/)
-- [Innovation Pipeline](0-Dashboard-Executivo/Innovation-Pipeline/)
+- [Executive Auto Dashboard](/dashboard-executivo/executive-auto/)
+- [Home Executivo](/dashboard-executivo/)
+- [Projetos Ativos](/projetos/ativos/)
+- [Innovation Pipeline](/dashboard-executivo/innovation-pipeline/)
 
 ### 📅 Atualizações Recentes
 {% for item in collections.all | recentPages(7) | limit(5) %}
