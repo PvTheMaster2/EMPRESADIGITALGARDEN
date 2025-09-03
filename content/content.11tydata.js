@@ -39,6 +39,11 @@ module.exports = {
         return `/${cleanSection}/`;
       }
       
+      // Caso especial para TEMPLATES.md em 4-Projetos
+      if (fileName === 'TEMPLATES' && section === '4-Projetos') {
+        return `/projetos/templates-guia/`;
+      }
+      
       // Para outros arquivos, criar URL limpa
       const cleanFileName = fileName.toLowerCase()
         .replace(/^prj-/, '')  // Remove prefixo PRJ-
