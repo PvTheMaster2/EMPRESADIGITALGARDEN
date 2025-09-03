@@ -102,74 +102,66 @@ module.exports = function (eleventyConfig) {
   });
 
   // Filtro para converter [[wikilinks]] para URLs limpas (OBSIDIAN → ELEVENTY)
-  eleventyConfig.addFilter("convertWikilinks", function (content) {
+  eleventyConfig.addFilter("convertWikilinks", function (content, collections) {
     if (!content || typeof content !== 'string') return content;
-
-    // Mapeamento de caminhos antigos para URLs limpas
-    const pathMap = {
-      // Dashboards
-      '0-Dashboard-Executivo': 'dashboard-executivo',
-      'Home-Executivo': 'dashboard-executivo',
-      'Innovation-Pipeline': 'dashboard-executivo/innovation-pipeline',
-      'KPIs-Principais': 'dashboard-executivo/kpis-principais',
-      'Dashboard-Projetos-Prazo': 'dashboard-executivo/dashboard-projetos-prazo',
-      'Dashboard_Capacidade_Equipe': 'dashboard-executivo/dashboard-capacidade-equipe',
-      'Decisoes-Estrategicas': 'dashboard-executivo/decisoes-estrategicas',
-      
-      // Governança
-      '1-Governanca': 'governanca',
-      
-      // Projetos
-      '4-Projetos': 'projetos',
-      'PRJ-AERALYN': 'projetos/aeralyn',
-      'PRJ-App-Desenvolvimento-Cognitivo': 'projetos/app-desenvolvimento-cognitivo',
-      'PRJ-Curso-IA-Inteligente': 'projetos/curso-ia-inteligente',
-      'PRJ-Nostalgia-Musical': 'projetos/nostalgia-musical',
-      'PRJ-Plataforma-Cursos': 'projetos/plataforma-cursos',
-      'PRJ-Trip-Match': 'projetos/trip-match',
-      'PRJ-Vault-Empresarial': 'projetos/vault-empresarial',
-      'PRJ-Dev-WhatsBot-Academia': 'projetos/dev-whatsbot-academia',
-      'PRJ-Web-Site-Portfolio-Engenharia': 'projetos/web-site-portfolio-engenharia',
-      
-      // Processos
-      '5-Processos': 'processos',
-      'Sistema_Gestao_Capacidade_Sprints': 'processos/sistema-gestao-capacidade-sprints',
-      
-      // Reuniões
-      '6-Reunioes': 'reunioes',
-      '1000-REUNIOES': 'reunioes-historicas'
-    };
+    
+    // Obter mapa de slugs se disponível
+    const urlMap = collections?.bySlug || {};
 
     // Regex para encontrar [[wikilinks]]
     return content.replace(/\[\[([^\]]+)\]\]/g, (match, linkContent) => {
       let cleanLink = linkContent.trim();
+      let displayName = cleanLink;
+      
+      // Suporte para [[link|texto]] 
+      if (cleanLink.includes('|')) {
+        [cleanLink, displayName] = cleanLink.split('|').map(s => s.trim());
+      }
       
       // Remover prefixos de pasta
       if (cleanLink.includes('/')) {
         cleanLink = cleanLink.split('/').pop();
       }
       
-      // Verificar mapeamento direto
-      if (pathMap[cleanLink]) {
-        return `<a href="/${pathMap[cleanLink]}/">${cleanLink}</a>`;
-      }
-      
-      // Conversão para projetos PRJ-
-      if (cleanLink.startsWith('PRJ-')) {
-        const projectSlug = cleanLink.toLowerCase()
-          .replace(/^prj-/, '')
-          .replace(/[-_]/g, '-');
-        return `<a href="/projetos/${projectSlug}/">${cleanLink.replace('PRJ-', '')}</a>`;
-      }
-      
-      // Conversão genérica
-      const genericSlug = cleanLink.toLowerCase()
+      // Tentar encontrar no mapa de URLs
+      const cleanSlug = cleanLink.toLowerCase()
         .replace(/^\d+-/, '')
+        .replace(/^prj-/, '')
         .replace(/[-_\s]+/g, '-')
         .replace(/[^a-z0-9-]/g, '')
         .replace(/^-+|-+$/g, '');
       
-      return `<a href="/${genericSlug}/">${cleanLink}</a>`;
+      // Verificar várias possibilidades
+      const possibleSlugs = [
+        cleanLink,           // Slug original
+        cleanSlug,           // Slug limpo
+        cleanLink.toLowerCase(),
+        cleanSlug.replace(/-/g, '')  // Sem hífens
+      ];
+      
+      for (const slug of possibleSlugs) {
+        if (urlMap[slug]) {
+          return `<a href="${urlMap[slug]}" class="wikilink resolved">${displayName}</a>`;
+        }
+      }
+      
+      // Fallback: gerar URL baseado em padrões conhecidos
+      if (cleanLink.startsWith('PRJ-')) {
+        const projectSlug = cleanLink.toLowerCase()
+          .replace(/^prj-/, '')
+          .replace(/[-_]/g, '-');
+        return `<a href="/projetos/${projectSlug}/" class="wikilink fallback">${displayName.replace('PRJ-', '')}</a>`;
+      }
+      
+      if (cleanLink.match(/^\d+-/)) {
+        const sectionSlug = cleanLink.toLowerCase()
+          .replace(/^\d+-/, '')
+          .replace(/[-_\s]+/g, '-');
+        return `<a href="/${sectionSlug}/" class="wikilink fallback">${displayName}</a>`;
+      }
+      
+      // Link não resolvido
+      return `<span class="wikilink unresolved" title="Link não encontrado: ${cleanLink}">${displayName}</span>`;
     });
   });
 
@@ -274,6 +266,35 @@ module.exports = function (eleventyConfig) {
   // });
 
   // Collections for dynamic content - NOVA ESTRUTURA
+  
+  // Collection bySlug para resolver wikilinks
+  eleventyConfig.addCollection('bySlug', function(collectionApi) {
+    const slugMap = {};
+    collectionApi.getAll().forEach(item => {
+      if (item.fileSlug && item.url) {
+        // Slug original
+        slugMap[item.fileSlug] = item.url;
+        
+        // Slug limpo (sem números)
+        const cleanSlug = item.fileSlug.replace(/^\d+-/, '').toLowerCase();
+        if (cleanSlug !== item.fileSlug) {
+          slugMap[cleanSlug] = item.url;
+        }
+        
+        // Título como slug (se existir)
+        if (item.data.title) {
+          const titleSlug = item.data.title.toLowerCase()
+            .replace(/[^a-z0-9\s-]/g, '')
+            .replace(/\s+/g, '-')
+            .replace(/-+/g, '-')
+            .replace(/^-|-$/g, '');
+          slugMap[titleSlug] = item.url;
+        }
+      }
+    });
+    return slugMap;
+  });
+
   eleventyConfig.addCollection("projetos", function(collectionApi) {
     return collectionApi.getAll().filter(item => {
       return item.inputPath.match(/content\/4-Projetos/) && item.data.title;

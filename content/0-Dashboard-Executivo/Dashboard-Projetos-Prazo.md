@@ -1,6 +1,6 @@
 ---
 created: 2025-09-01T02:30
-updated: 2025-09-02T21:24
+updated: 2025-09-03T00:25
 ---
 # 📊 **DASHBOARD DE PROJETOS POR PRAZO**
 
@@ -158,12 +158,12 @@ gantt
 ## 💰 **ANÁLISE FINANCEIRA**
 
 ### **Investimento por Prazo**
-| Prazo | Projetos | Budget Total | ROI Médio | Receita Projetada |
-|-------|----------|--------------|-----------|-------------------|
-| **Curto Prazo** | 4 | R$ 100.000 | 350% | R$ 350.000 |
-| **Médio Prazo** | 2 | R$ 17.000 | 300% | R$ 51.000 |
-| **Longo Prazo** | 2 | R$ 180.000 | 350% | R$ 630.000 |
-| **TOTAL** | **8** | **R$ 297.000** | **347%** | **R$ 1.031.000** |
+| Prazo           | Projetos | Budget Total   | ROI Médio | Receita Projetada |
+| --------------- | -------- | -------------- | --------- | ----------------- |
+| **Curto Prazo** | 4        | R$ 100.000     | 350%      | R$ 350.000        |
+| **Médio Prazo** | 2        | R$ 17.000      | 300%      | R$ 51.000         |
+| **Longo Prazo** | 2        | R$ 180.000     | 350%      | R$ 630.000        |
+| **TOTAL**       | **8**    | **R$ 297.000** | **347%**  | **R$ 1.031.000**  |
 
 ### **Projeção de Receita (3 Anos)**
 ```mermaid

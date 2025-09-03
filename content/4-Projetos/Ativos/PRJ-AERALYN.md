@@ -24,7 +24,7 @@ compliance_level: 1
 legal_review: false
 created: 2025-09-01
 modified: 2025-09-01
-updated: 2025-09-01T02:20
+updated: 2025-09-03T00:27
 ---
 
 # 🌟 **AERALYN - Sistema de RPG e Criação Narrativa**

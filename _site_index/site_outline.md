@@ -1,7 +1,11 @@
+---
+created: 2025-09-02T21:37
+updated: 2025-09-03T00:34
+---
 # 🌳 Site Structure Outline
 
-**Generated**: 2025-09-03T03:19:24.719Z
-**Total Pages**: 198
+**Generated**: 2025-09-03T03:34:19.409Z
+**Total Pages**: 199
 
 ## 📁 .CURSOR
 
@@ -437,6 +441,8 @@
     - **/tags/all/** - "Tags - Multisocios Empresarial" (base)
       - H1: Tags
     - **/tags/anlise/** - "Tags - Multisocios Empresarial" (base)
+      - H1: Tags
+    - **/tags/byslug/** - "Tags - Multisocios Empresarial" (base)
       - H1: Tags
     - **/tags/correo/** - "Tags - Multisocios Empresarial" (base)
       - H1: Tags

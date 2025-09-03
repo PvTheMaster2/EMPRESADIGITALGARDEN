@@ -163,7 +163,7 @@
 
         <!-- Conteúdo renderizado do Markdown -->
         <div class="page-body">
-          {{ content | convertWikilinks | safe }}
+          {{ content | convertWikilinks(collections) | safe }}
         </div>
 
         <!-- Bloco de decisão destacado se existir -->

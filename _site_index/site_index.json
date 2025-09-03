@@ -96527,11 +96527,6 @@
           "isInternal": true
         },
         {
-          "text": "Decisões Estratégicas",
-          "href": "/dashboard-executivo/decisoes-estrategicas/",
-          "isInternal": true
-        },
-        {
           "text": "Dashboard Projetos Prazo",
           "href": "/dashboard-executivo/dashboard-projetos-prazo/",
           "isInternal": true
@@ -96539,6 +96534,11 @@
         {
           "text": "Dashboard Capacidade Equipe",
           "href": "/dashboard-executivo/dashboard-capacidade-equipe/",
+          "isInternal": true
+        },
+        {
+          "text": "Decisões Estratégicas",
+          "href": "/dashboard-executivo/decisoes-estrategicas/",
           "isInternal": true
         },
         {
@@ -97469,6 +97469,670 @@
       "pageMetadata": {},
       "layoutType": "base",
       "wordCount": 11
+    },
+    {
+      "url": "/tags/byslug/",
+      "filePath": "build\\dist\\tags\\byslug\\index.html",
+      "title": "Tags - Multisocios Empresarial",
+      "h1": "Tags",
+      "metaDescription": "Sistema de Gestão de Conhecimento Multisocios",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Tags",
+          "id": null
+        },
+        {
+          "level": 1,
+          "text": "Tagged \"bySlug\"",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "🏷️\n            Relacionados",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "ℹ️\n            Informações",
+          "id": null
+        }
+      ],
+      "links": [
+        {
+          "text": "🌱 Multisocios Empresarial",
+          "href": "/",
+          "isInternal": true
+        },
+        {
+          "text": "🌱 Multisocios",
+          "href": "/",
+          "isInternal": true
+        },
+        {
+          "text": "🏠 Home",
+          "href": "/",
+          "isInternal": true
+        },
+        {
+          "text": "📊 Dashboard Executivo",
+          "href": "/dashboard-executivo/",
+          "isInternal": true
+        },
+        {
+          "text": "🎯 Decisões Estratégicas",
+          "href": "/dashboard-executivo/decisoes-estrategicas/",
+          "isInternal": true
+        },
+        {
+          "text": "📅 Projetos por Prazo",
+          "href": "/dashboard-executivo/dashboard-projetos-prazo/",
+          "isInternal": true
+        },
+        {
+          "text": "👥 Capacidade da Equipe",
+          "href": "/dashboard-executivo/dashboard-capacidade-equipe/",
+          "isInternal": true
+        },
+        {
+          "text": "🏛️ Governança",
+          "href": "/governanca/",
+          "isInternal": true
+        },
+        {
+          "text": "📜 Acordo de Sócios",
+          "href": "/governanca/acordo_socios_final/",
+          "isInternal": true
+        },
+        {
+          "text": "⚖️ Compliance Log",
+          "href": "/governanca/compliance_log/",
+          "isInternal": true
+        },
+        {
+          "text": "🤖 Ética no Uso de IA",
+          "href": "/governanca/etica_uso_ia/",
+          "isInternal": true
+        },
+        {
+          "text": "❓ FAQ Compliance",
+          "href": "/governanca/faq_compliance/",
+          "isInternal": true
+        },
+        {
+          "text": "📚 Manual de Treinamento",
+          "href": "/governanca/manual_treinamento_compliance/",
+          "isInternal": true
+        },
+        {
+          "text": "📈 Playbook Comercial",
+          "href": "/governanca/playbook_comercial_v0/",
+          "isInternal": true
+        },
+        {
+          "text": "👥 Equipes",
+          "href": "/equipes/",
+          "isInternal": true
+        },
+        {
+          "text": "💻 Desenvolvimento",
+          "href": "/equipes/desenvolvimento/",
+          "isInternal": true
+        },
+        {
+          "text": "🎯 Marketing",
+          "href": "/equipes/marketing/",
+          "isInternal": true
+        },
+        {
+          "text": "💼 Vendas",
+          "href": "/equipes/vendas/",
+          "isInternal": true
+        },
+        {
+          "text": "⚙️ Operações",
+          "href": "/equipes/operacoes/",
+          "isInternal": true
+        },
+        {
+          "text": "👔 Liderança",
+          "href": "/equipes/lideranca/",
+          "isInternal": true
+        },
+        {
+          "text": "🌍 Mercado",
+          "href": "/mercado/",
+          "isInternal": true
+        },
+        {
+          "text": "👥 Clientes",
+          "href": "/mercado/clientes/",
+          "isInternal": true
+        },
+        {
+          "text": "⚔️ Concorrentes",
+          "href": "/mercado/concorrentes/",
+          "isInternal": true
+        },
+        {
+          "text": "🤝 Fornecedores",
+          "href": "/mercado/fornecedores/",
+          "isInternal": true
+        },
+        {
+          "text": "🚀 Tendências",
+          "href": "/mercado/tendencias/",
+          "isInternal": true
+        },
+        {
+          "text": "📋 Projetos",
+          "href": "/projetos/",
+          "isInternal": true
+        },
+        {
+          "text": "🚀 Ativos",
+          "href": "/projetos/",
+          "isInternal": true
+        },
+        {
+          "text": "🌟 AERALYN",
+          "href": "/projetos/aeralyn/",
+          "isInternal": true
+        },
+        {
+          "text": "🎮 Trip-Match",
+          "href": "/projetos/trip-match/",
+          "isInternal": true
+        },
+        {
+          "text": "🏢 Vault Empresarial",
+          "href": "/projetos/vault-empresarial/",
+          "isInternal": true
+        },
+        {
+          "text": "🎓 Curso IA Inteligente",
+          "href": "/projetos/curso-ia-inteligente/",
+          "isInternal": true
+        },
+        {
+          "text": "📱 App Desenvolvimento",
+          "href": "/projetos/app-desenvolvimento-cognitivo/",
+          "isInternal": true
+        },
+        {
+          "text": "🎵 Nostalgia Musical",
+          "href": "/projetos/nostalgia-musical/",
+          "isInternal": true
+        },
+        {
+          "text": "🎓 Plataforma Cursos",
+          "href": "/projetos/plataforma-cursos/",
+          "isInternal": true
+        },
+        {
+          "text": "⚡ Em Desenvolvimento",
+          "href": "/projetos/",
+          "isInternal": true
+        },
+        {
+          "text": "🤖 WhatsBot Academia",
+          "href": "/projetos/dev-whatsbot-academia/",
+          "isInternal": true
+        },
+        {
+          "text": "🌐 Portfolio Engenharia",
+          "href": "/projetos/web-site-portfolio-engenharia/",
+          "isInternal": true
+        },
+        {
+          "text": "📝 Templates",
+          "href": "/projetos/templates-guia/",
+          "isInternal": true
+        },
+        {
+          "text": "📋 Exemplo Intake",
+          "href": "/projetos/exemplo-intake-preenchido/",
+          "isInternal": true
+        },
+        {
+          "text": "⚡ Minimalista",
+          "href": "/projetos/exemplo-minimalista/",
+          "isInternal": true
+        },
+        {
+          "text": "🎯 Primeira Cartada",
+          "href": "/projetos/exemplo-primeira-cartada/",
+          "isInternal": true
+        },
+        {
+          "text": "🏗️ Template Piloto",
+          "href": "/projetos/template-piloto-exemplo-sistema/",
+          "isInternal": true
+        },
+        {
+          "text": "🏢 CRM Arquitetos",
+          "href": "/projetos/template-piloto-crm-arquitetos/",
+          "isInternal": true
+        },
+        {
+          "text": "⚙️ Processos",
+          "href": "/processos/",
+          "isInternal": true
+        },
+        {
+          "text": "📈 Gestão de Sprints",
+          "href": "/processos/sistema_gestao_capacidade_sprints/",
+          "isInternal": true
+        },
+        {
+          "text": "📖 Guia do Sistema",
+          "href": "/processos/guia_uso_sistema_capacidade/",
+          "isInternal": true
+        },
+        {
+          "text": "📋 SOPs",
+          "href": "/processos/sops/",
+          "isInternal": true
+        },
+        {
+          "text": "⚡ Workflows",
+          "href": "/processos/workflows/",
+          "isInternal": true
+        },
+        {
+          "text": "📊 Métricas",
+          "href": "/processos/metricas/",
+          "isInternal": true
+        },
+        {
+          "text": "📅 Reuniões",
+          "href": "/reunioes/",
+          "isInternal": true
+        },
+        {
+          "text": "🎯 Reunião Executiva",
+          "href": "/reunioes/2025-08-31-reuniao-executiva-sistema/",
+          "isInternal": true
+        },
+        {
+          "text": "📊 Análise Pessimista",
+          "href": "/reunioes/2025-09-01-reuniao-analise-pessimista-projetos/",
+          "isInternal": true
+        },
+        {
+          "text": "🤖 Criação WhatsBot",
+          "href": "/reunioes/2025-09-01-reuniao-criacao-projeto-whatsbot/",
+          "isInternal": true
+        },
+        {
+          "text": "💡 Sistema de Ideias",
+          "href": "/reunioes/2025-09-01-reuniao-criacao-sistema-geracao-ideias/",
+          "isInternal": true
+        },
+        {
+          "text": "👔 Conselho",
+          "href": "/reunioes/conselho/",
+          "isInternal": true
+        },
+        {
+          "text": "⚡ Operacional",
+          "href": "/reunioes/operacional/",
+          "isInternal": true
+        },
+        {
+          "text": "📋 Projetos",
+          "href": "/reunioes/projetos/",
+          "isInternal": true
+        },
+        {
+          "text": "🧠 Conhecimento",
+          "href": "/conhecimento/",
+          "isInternal": true
+        },
+        {
+          "text": "🤖 Inteligência Artificial",
+          "href": "/conhecimento/ia/",
+          "isInternal": true
+        },
+        {
+          "text": "💻 Tecnologia",
+          "href": "/conhecimento/tecnologia/",
+          "isInternal": true
+        },
+        {
+          "text": "📈 Negócios",
+          "href": "/conhecimento/negocios/",
+          "isInternal": true
+        },
+        {
+          "text": "🏗️ Processos",
+          "href": "/conhecimento/processos/",
+          "isInternal": true
+        },
+        {
+          "text": "🏠 Home",
+          "href": "/",
+          "isInternal": true
+        },
+        {
+          "text": "📊 Dashboard Executivo",
+          "href": "/dashboard-executivo/",
+          "isInternal": true
+        },
+        {
+          "text": "🎯 Decisões Estratégicas",
+          "href": "/dashboard-executivo/decisoes-estrategicas/",
+          "isInternal": true
+        },
+        {
+          "text": "📅 Projetos por Prazo",
+          "href": "/dashboard-executivo/dashboard-projetos-prazo/",
+          "isInternal": true
+        },
+        {
+          "text": "👥 Capacidade da Equipe",
+          "href": "/dashboard-executivo/dashboard-capacidade-equipe/",
+          "isInternal": true
+        },
+        {
+          "text": "🏛️ Governança",
+          "href": "/governanca/",
+          "isInternal": true
+        },
+        {
+          "text": "📜 Acordo de Sócios",
+          "href": "/governanca/acordo_socios_final/",
+          "isInternal": true
+        },
+        {
+          "text": "⚖️ Compliance Log",
+          "href": "/governanca/compliance_log/",
+          "isInternal": true
+        },
+        {
+          "text": "🤖 Ética no Uso de IA",
+          "href": "/governanca/etica_uso_ia/",
+          "isInternal": true
+        },
+        {
+          "text": "❓ FAQ Compliance",
+          "href": "/governanca/faq_compliance/",
+          "isInternal": true
+        },
+        {
+          "text": "📚 Manual de Treinamento",
+          "href": "/governanca/manual_treinamento_compliance/",
+          "isInternal": true
+        },
+        {
+          "text": "📈 Playbook Comercial",
+          "href": "/governanca/playbook_comercial_v0/",
+          "isInternal": true
+        },
+        {
+          "text": "👥 Equipes",
+          "href": "/equipes/",
+          "isInternal": true
+        },
+        {
+          "text": "💻 Desenvolvimento",
+          "href": "/equipes/desenvolvimento/",
+          "isInternal": true
+        },
+        {
+          "text": "🎯 Marketing",
+          "href": "/equipes/marketing/",
+          "isInternal": true
+        },
+        {
+          "text": "💼 Vendas",
+          "href": "/equipes/vendas/",
+          "isInternal": true
+        },
+        {
+          "text": "⚙️ Operações",
+          "href": "/equipes/operacoes/",
+          "isInternal": true
+        },
+        {
+          "text": "👔 Liderança",
+          "href": "/equipes/lideranca/",
+          "isInternal": true
+        },
+        {
+          "text": "🌍 Mercado",
+          "href": "/mercado/",
+          "isInternal": true
+        },
+        {
+          "text": "👥 Clientes",
+          "href": "/mercado/clientes/",
+          "isInternal": true
+        },
+        {
+          "text": "⚔️ Concorrentes",
+          "href": "/mercado/concorrentes/",
+          "isInternal": true
+        },
+        {
+          "text": "🤝 Fornecedores",
+          "href": "/mercado/fornecedores/",
+          "isInternal": true
+        },
+        {
+          "text": "🚀 Tendências",
+          "href": "/mercado/tendencias/",
+          "isInternal": true
+        },
+        {
+          "text": "📋 Projetos",
+          "href": "/projetos/",
+          "isInternal": true
+        },
+        {
+          "text": "🚀 Ativos",
+          "href": "/projetos/",
+          "isInternal": true
+        },
+        {
+          "text": "🌟 AERALYN",
+          "href": "/projetos/aeralyn/",
+          "isInternal": true
+        },
+        {
+          "text": "🎮 Trip-Match",
+          "href": "/projetos/trip-match/",
+          "isInternal": true
+        },
+        {
+          "text": "🏢 Vault Empresarial",
+          "href": "/projetos/vault-empresarial/",
+          "isInternal": true
+        },
+        {
+          "text": "🎓 Curso IA Inteligente",
+          "href": "/projetos/curso-ia-inteligente/",
+          "isInternal": true
+        },
+        {
+          "text": "📱 App Desenvolvimento",
+          "href": "/projetos/app-desenvolvimento-cognitivo/",
+          "isInternal": true
+        },
+        {
+          "text": "🎵 Nostalgia Musical",
+          "href": "/projetos/nostalgia-musical/",
+          "isInternal": true
+        },
+        {
+          "text": "🎓 Plataforma Cursos",
+          "href": "/projetos/plataforma-cursos/",
+          "isInternal": true
+        },
+        {
+          "text": "⚡ Em Desenvolvimento",
+          "href": "/projetos/",
+          "isInternal": true
+        },
+        {
+          "text": "🤖 WhatsBot Academia",
+          "href": "/projetos/dev-whatsbot-academia/",
+          "isInternal": true
+        },
+        {
+          "text": "🌐 Portfolio Engenharia",
+          "href": "/projetos/web-site-portfolio-engenharia/",
+          "isInternal": true
+        },
+        {
+          "text": "📝 Templates",
+          "href": "/projetos/templates-guia/",
+          "isInternal": true
+        },
+        {
+          "text": "📋 Exemplo Intake",
+          "href": "/projetos/exemplo-intake-preenchido/",
+          "isInternal": true
+        },
+        {
+          "text": "⚡ Minimalista",
+          "href": "/projetos/exemplo-minimalista/",
+          "isInternal": true
+        },
+        {
+          "text": "🎯 Primeira Cartada",
+          "href": "/projetos/exemplo-primeira-cartada/",
+          "isInternal": true
+        },
+        {
+          "text": "🏗️ Template Piloto",
+          "href": "/projetos/template-piloto-exemplo-sistema/",
+          "isInternal": true
+        },
+        {
+          "text": "🏢 CRM Arquitetos",
+          "href": "/projetos/template-piloto-crm-arquitetos/",
+          "isInternal": true
+        },
+        {
+          "text": "⚙️ Processos",
+          "href": "/processos/",
+          "isInternal": true
+        },
+        {
+          "text": "📈 Gestão de Sprints",
+          "href": "/processos/sistema_gestao_capacidade_sprints/",
+          "isInternal": true
+        },
+        {
+          "text": "📖 Guia do Sistema",
+          "href": "/processos/guia_uso_sistema_capacidade/",
+          "isInternal": true
+        },
+        {
+          "text": "📋 SOPs",
+          "href": "/processos/sops/",
+          "isInternal": true
+        },
+        {
+          "text": "⚡ Workflows",
+          "href": "/processos/workflows/",
+          "isInternal": true
+        },
+        {
+          "text": "📊 Métricas",
+          "href": "/processos/metricas/",
+          "isInternal": true
+        },
+        {
+          "text": "📅 Reuniões",
+          "href": "/reunioes/",
+          "isInternal": true
+        },
+        {
+          "text": "🎯 Reunião Executiva",
+          "href": "/reunioes/2025-08-31-reuniao-executiva-sistema/",
+          "isInternal": true
+        },
+        {
+          "text": "📊 Análise Pessimista",
+          "href": "/reunioes/2025-09-01-reuniao-analise-pessimista-projetos/",
+          "isInternal": true
+        },
+        {
+          "text": "🤖 Criação WhatsBot",
+          "href": "/reunioes/2025-09-01-reuniao-criacao-projeto-whatsbot/",
+          "isInternal": true
+        },
+        {
+          "text": "💡 Sistema de Ideias",
+          "href": "/reunioes/2025-09-01-reuniao-criacao-sistema-geracao-ideias/",
+          "isInternal": true
+        },
+        {
+          "text": "👔 Conselho",
+          "href": "/reunioes/conselho/",
+          "isInternal": true
+        },
+        {
+          "text": "⚡ Operacional",
+          "href": "/reunioes/operacional/",
+          "isInternal": true
+        },
+        {
+          "text": "📋 Projetos",
+          "href": "/reunioes/projetos/",
+          "isInternal": true
+        },
+        {
+          "text": "🧠 Conhecimento",
+          "href": "/conhecimento/",
+          "isInternal": true
+        },
+        {
+          "text": "🤖 Inteligência Artificial",
+          "href": "/conhecimento/ia/",
+          "isInternal": true
+        },
+        {
+          "text": "💻 Tecnologia",
+          "href": "/conhecimento/tecnologia/",
+          "isInternal": true
+        },
+        {
+          "text": "📈 Negócios",
+          "href": "/conhecimento/negocios/",
+          "isInternal": true
+        },
+        {
+          "text": "🏗️ Processos",
+          "href": "/conhecimento/processos/",
+          "isInternal": true
+        },
+        {
+          "text": "← All tags",
+          "href": "/tags/",
+          "isInternal": true
+        },
+        {
+          "text": "Dashboard",
+          "href": "/dashboard-executivo/",
+          "isInternal": true
+        },
+        {
+          "text": "Governança",
+          "href": "/governanca/",
+          "isInternal": true
+        },
+        {
+          "text": "Projetos",
+          "href": "/projetos/",
+          "isInternal": true
+        }
+      ],
+      "pageMetadata": {},
+      "layoutType": "base",
+      "wordCount": 7
     },
     {
       "url": "/tags/correo/",
@@ -102858,11 +103522,6 @@
           "isInternal": true
         },
         {
-          "text": "Trip Match",
-          "href": "/projetos/trip-match/",
-          "isInternal": true
-        },
-        {
           "text": "Plataforma Cursos",
           "href": "/projetos/plataforma-cursos/",
           "isInternal": true
@@ -102870,6 +103529,11 @@
         {
           "text": "Vault Empresarial",
           "href": "/projetos/vault-empresarial/",
+          "isInternal": true
+        },
+        {
+          "text": "Trip Match",
+          "href": "/projetos/trip-match/",
           "isInternal": true
         },
         {
@@ -102908,13 +103572,13 @@
           "isInternal": true
         },
         {
-          "text": "TEMPLATE Projeto Exemplo Sistema",
-          "href": "/projetos/template-projeto-exemplo-sistema/",
+          "text": "TEMPLATE Piloto CRM Arquitetos",
+          "href": "/projetos/template-piloto-crm-arquitetos/",
           "isInternal": true
         },
         {
-          "text": "TEMPLATE Piloto CRM Arquitetos",
-          "href": "/projetos/template-piloto-crm-arquitetos/",
+          "text": "TEMPLATE Projeto Exemplo Sistema",
+          "href": "/projetos/template-projeto-exemplo-sistema/",
           "isInternal": true
         },
         {
@@ -104266,11 +104930,6 @@
           "isInternal": true
         },
         {
-          "text": "Trip Match",
-          "href": "/projetos/trip-match/",
-          "isInternal": true
-        },
-        {
           "text": "Plataforma Cursos",
           "href": "/projetos/plataforma-cursos/",
           "isInternal": true
@@ -104278,6 +104937,11 @@
         {
           "text": "Vault Empresarial",
           "href": "/projetos/vault-empresarial/",
+          "isInternal": true
+        },
+        {
+          "text": "Trip Match",
+          "href": "/projetos/trip-match/",
           "isInternal": true
         },
         {
@@ -107243,11 +107907,11 @@
   ],
   "structure": {},
   "stats": {
-    "totalPages": 198,
+    "totalPages": 199,
     "pagesWithoutTitle": 67,
     "pagesWithoutH1": 15,
     "brokenLinks": 0,
-    "totalLinks": 14454
+    "totalLinks": 14580
   },
   "issues": [
     {

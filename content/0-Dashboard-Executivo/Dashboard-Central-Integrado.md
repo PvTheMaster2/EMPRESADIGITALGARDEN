@@ -2,12 +2,12 @@
 title: Dashboard Executivo Central Integrado
 layout: dashboard.njk
 created: 2025-01-20
-updated: 2025-01-20
+updated: 2025-09-03T00:25
 type: dashboard
 status: active
 priority: critical
 owner: Pedro Vitor
-version: 2.0
+version: 2
 css_class: dashboard-central-integrado
 permalink: /dashboard-executivo/
 eleventyNavigation:

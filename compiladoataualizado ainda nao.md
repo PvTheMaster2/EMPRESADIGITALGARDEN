@@ -1,13 +1,13 @@
 # 📊 Project Analysis Report
 
-**Generated on:** 2025-09-03 00:12:25  
+**Generated on:** 2025-09-03 00:21:57  
 **Root directory:** `C:\Users\pedro\OneDrive\Área de Trabalho\DIGITAL-GARDEN-EMPRESA-GITHUB`  
 **Purpose:** Complete project structure documentation excluding CSV files
 
 ## 📈 Project Summary
 
-- **Total files analyzed:** 550
-- **📄 Code/Text files:** 449
+- **Total files analyzed:** 549
+- **📄 Code/Text files:** 448
 - **🖼️ Image files:** 93
 - **🚫 Excluded files (CSV):** 0
 - **⚠️ Large files (> 5MB):** 2
@@ -672,7 +672,7 @@
 │   │   ├── test-simple.html 📄
 │   │   └── teste.html 📄
 ├── combine_project.py 📄
-├── compilado site1.md 📄
+├── compiladoataualizado ainda nao.md 📄
 ├── config 📁
 │   └── _data 📁
 │       ├── company.js 📄
@@ -817,8 +817,7 @@
 │   │       │   ├── meta-head.njk 📄
 │   │       │   ├── page-header.njk 📄
 │   │       │   ├── page-sidebar.njk 📄
-│   │       │   ├── scripts-bundle.njk 📄
-│   │       │   └── sidebar-nav.njk 📄
+│   │       │   └── scripts-bundle.njk 📄
 │   │       ├── partials 📁
 │   │       │   ├── dashboard-data.json 📄
 │   │       │   ├── metrics-summary.njk 📄
@@ -1836,7 +1835,7 @@ Identifique discrepâncias de URLs e gere tabela de correções necessárias.
 
 ##### 📄 .eleventy.js
 *Path: `.eleventy.js`*  
-*Size: 9.64 KB*
+*Size: 12.45 KB*
 
 ```js
 const slugify = require("@sindresorhus/slugify");
@@ -1942,6 +1941,78 @@ module.exports = function (eleventyConfig) {
     });
   });
 
+  // Filtro para converter [[wikilinks]] para URLs limpas (OBSIDIAN → ELEVENTY)
+  eleventyConfig.addFilter("convertWikilinks", function (content) {
+    if (!content || typeof content !== 'string') return content;
+
+    // Mapeamento de caminhos antigos para URLs limpas
+    const pathMap = {
+      // Dashboards
+      '0-Dashboard-Executivo': 'dashboard-executivo',
+      'Home-Executivo': 'dashboard-executivo',
+      'Innovation-Pipeline': 'dashboard-executivo/innovation-pipeline',
+      'KPIs-Principais': 'dashboard-executivo/kpis-principais',
+      'Dashboard-Projetos-Prazo': 'dashboard-executivo/dashboard-projetos-prazo',
+      'Dashboard_Capacidade_Equipe': 'dashboard-executivo/dashboard-capacidade-equipe',
+      'Decisoes-Estrategicas': 'dashboard-executivo/decisoes-estrategicas',
+      
+      // Governança
+      '1-Governanca': 'governanca',
+      
+      // Projetos
+      '4-Projetos': 'projetos',
+      'PRJ-AERALYN': 'projetos/aeralyn',
+      'PRJ-App-Desenvolvimento-Cognitivo': 'projetos/app-desenvolvimento-cognitivo',
+      'PRJ-Curso-IA-Inteligente': 'projetos/curso-ia-inteligente',
+      'PRJ-Nostalgia-Musical': 'projetos/nostalgia-musical',
+      'PRJ-Plataforma-Cursos': 'projetos/plataforma-cursos',
+      'PRJ-Trip-Match': 'projetos/trip-match',
+      'PRJ-Vault-Empresarial': 'projetos/vault-empresarial',
+      'PRJ-Dev-WhatsBot-Academia': 'projetos/dev-whatsbot-academia',
+      'PRJ-Web-Site-Portfolio-Engenharia': 'projetos/web-site-portfolio-engenharia',
+      
+      // Processos
+      '5-Processos': 'processos',
+      'Sistema_Gestao_Capacidade_Sprints': 'processos/sistema-gestao-capacidade-sprints',
+      
+      // Reuniões
+      '6-Reunioes': 'reunioes',
+      '1000-REUNIOES': 'reunioes-historicas'
+    };
+
+    // Regex para encontrar [[wikilinks]]
+    return content.replace(/\[\[([^\]]+)\]\]/g, (match, linkContent) => {
+      let cleanLink = linkContent.trim();
+      
+      // Remover prefixos de pasta
+      if (cleanLink.includes('/')) {
+        cleanLink = cleanLink.split('/').pop();
+      }
+      
+      // Verificar mapeamento direto
+      if (pathMap[cleanLink]) {
+        return `<a href="/${pathMap[cleanLink]}/">${cleanLink}</a>`;
+      }
+      
+      // Conversão para projetos PRJ-
+      if (cleanLink.startsWith('PRJ-')) {
+        const projectSlug = cleanLink.toLowerCase()
+          .replace(/^prj-/, '')
+          .replace(/[-_]/g, '-');
+        return `<a href="/projetos/${projectSlug}/">${cleanLink.replace('PRJ-', '')}</a>`;
+      }
+      
+      // Conversão genérica
+      const genericSlug = cleanLink.toLowerCase()
+        .replace(/^\d+-/, '')
+        .replace(/[-_\s]+/g, '-')
+        .replace(/[^a-z0-9-]/g, '')
+        .replace(/^-+|-+$/g, '');
+      
+      return `<a href="/${genericSlug}/">${cleanLink}</a>`;
+    });
+  });
+
   // Add category URL filter
   eleventyConfig.addFilter("categoryUrl", function(category) {
     return category.replace(/^\d+-/, '');
@@ -2033,69 +2104,9 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addGlobalData("navigation", require("./config/_data/navigation.js"));
 
   // Transform clean-urls DESATIVADO - URLs limpas são geridas via permalinks em .11tydata.js
-  // eleventyConfig.addTransform("clean-urls", function(content, outputPath) {
-  //   if (outputPath && outputPath.endsWith('.html')) {
-  //     // Remove prefixos numéricos das URLs nos links
-  //     content = content.replace(/href="\/\d+-([^"]+)"/g, 'href="/$1"');
-  //     content = content.replace(/href="\/\d+-([^"]+)\//g, 'href="/$1/');
-  //   }
-  //   return content;
-  // });
+  // eleventyConfig.addTransform("clean-urls", function(co
 
-  // Collections for dynamic content - NOVA ESTRUTURA
-  eleventyConfig.addCollection("projetos", function(collectionApi) {
-    return collectionApi.getAll().filter(item => {
-      return item.inputPath.match(/content\/4-Projetos/) && item.data.title;
-    });
-  });
-
-  eleventyConfig.addCollection("projetos_ativos", function(collectionApi) {
-    return collectionApi.getAll().filter(item => {
-      return item.inputPath.match(/content\/4-Projetos\/Ativos/) && item.data.title;
-    });
-  });
-
-  eleventyConfig.addCollection("projetos_andamento", function(collectionApi) {
-    return collectionApi.getAll().filter(item => {
-      return item.inputPath.match(/content\/4-Projetos/) && 
-             item.data.status === "Em andamento";
-    });
-  });
-
-  eleventyConfig.addCollection("pilotos_validados", function(collectionApi) {
-    return collectionApi.getAll().filter(item => {
-      return item.inputPath.match(/content\/4-Projetos/) && 
-             item.data.validation_score && 
-             item.data.validation_score >= 8;
-    });
-  });
-
-  eleventyConfig.addCollection("reunioes", function(collectionApi) {
-    return collectionApi.getAll().filter(item => {
-      return item.inputPath.match(/content\/6-Reunioes/) && item.data.title;
-    });
-  });
-
-  eleventyConfig.addCollection("governanca", function(collectionApi) {
-    return collectionApi.getAll().filter(item => {
-      return item.inputPath.match(/content\/1-Governanca/) && item.data.title;
-    });
-  });
-
-  return {
-    dir: {
-      input: "content",              // ✅ NOVA ESTRUTURA: conteúdo em content/
-      output: "build/dist",          // ✅ NOVA ESTRUTURA: build em build/dist/
-      includes: "../src/components/_includes",  // ✅ NOVA ESTRUTURA: componentes em src/
-      layouts: "../src/layouts",     // ✅ NOVA ESTRUTURA: layouts em src/
-      data: "../config/_data",       // ✅ NOVA ESTRUTURA: dados em config/
-    },
-    templateFormats: ["njk", "md", "html"],
-    markdownTemplateEngine: "njk",
-    htmlTemplateEngine: "njk",
-    dataTemplateEngine: "njk",
-  };
-};
+... (Content truncated - file too large)
 ```
 
 ---
@@ -14299,7 +14310,7 @@ VaultEmpresarial/
 ```md
 # 🔍 Site Audit Report
 
-**Generated**: 2025-09-03T03:09:24.619Z
+**Generated**: 2025-09-03T03:19:24.722Z
 
 ## 📊 Statistics
 
@@ -14410,7 +14421,7 @@ VaultEmpresarial/
 ```md
 # 🎨 Layouts Analysis
 
-**Generated**: 2025-09-03T03:09:24.645Z
+**Generated**: 2025-09-03T03:19:24.725Z
 
 ## 📊 Layout Distribution
 
@@ -14973,7 +14984,7 @@ VaultEmpresarial/
 ```md
 # 🌳 Site Structure Outline
 
-**Generated**: 2025-09-03T03:09:24.589Z
+**Generated**: 2025-09-03T03:19:24.719Z
 **Total Pages**: 198
 
 ## 📁 .CURSOR
@@ -74196,21 +74207,21 @@ class ProjectAnalyzer:
 
 ---
 
-##### 📄 compilado site1.md
-*Path: `compilado site1.md`*  
+##### 📄 compiladoataualizado ainda nao.md
+*Path: `compiladoataualizado ainda nao.md`*  
 *Size: 2.52 MB*
 
 ```md
 # 📊 Project Analysis Report
 
-**Generated on:** 2025-09-03 00:12:25  
+**Generated on:** 2025-09-03 00:21:57  
 **Root directory:** `C:\Users\pedro\OneDrive\Área de Trabalho\DIGITAL-GARDEN-EMPRESA-GITHUB`  
 **Purpose:** Complete project structure documentation excluding CSV files
 
 ## 📈 Project Summary
 
-- **Total files analyzed:** 550
-- **📄 Code/Text files:** 449
+- **Total files analyzed:** 549
+- **📄 Code/Text files:** 448
 - **🖼️ Image files:** 93
 - **🚫 Excluded files (CSV):** 0
 - **⚠️ Large files (> 5MB):** 2
@@ -90915,60 +90926,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 ---
 
-##### 📄 sidebar-nav.njk
-*Path: `src\components\_includes\components\sidebar-nav.njk`*  
-*Size: 1.57 KB*
-
-```njk
-<aside class="sidebar" data-state="closed" aria-hidden="true">
-  <div class="sidebar-header">
-    <h2 class="sidebar-title">Multisocios</h2>
-    <button class="sidebar-close" onclick="closeSidebar()" aria-label="Fechar sidebar">×</button>
-  </div>
-  
-  <!-- Busca simples na sidebar -->
-  <div class="sidebar-search">
-    <input type="text" id="sidebar-search" class="search-input" placeholder="Buscar conteúdo..." />
-  </div>
-  
-  <!-- Navegação -->
-  <nav class="sidebar-navigation">
-    <div id="navigation-tree">
-      {% if navigation.tree %}
-        {% for section in navigation.tree %}
-        <div class="nav-section">
-          <h3 class="nav-section-title">
-            <span class="nav-icon">{{ section.icon }}</span>
-            <a href="{{ section.url }}">{{ section.title }}</a>
-          </h3>
-          {% if section.children %}
-          <ul class="nav-list">
-            {% for child in section.children %}
-            <li class="nav-item">
-              <a href="{{ child.url }}" class="nav-link">{{ child.title }}</a>
-              {% if child.children %}
-              <ul class="nav-sublist">
-                {% for subchild in child.children %}
-                <li class="nav-subitem">
-                  <a href="{{ subchild.url }}" class="nav-sublink">{{ subchild.title }}</a>
-                </li>
-                {% endfor %}
-              </ul>
-              {% endif %}
-            </li>
-            {% endfor %}
-          </ul>
-          {% endif %}
-        </div>
-        {% endfor %}
-      {% endif %}
-    </div>
-  </nav>
-</aside>
-```
-
----
-
 
 #### 📁 Directory: src\components\_includes\partials
 
@@ -91040,7 +90997,7 @@ document.addEventListener('DOMContentLoaded', () => {
     "activeProjects": 6,
     "totalProjects": 9
   },
-  "lastUpdated": "2025-09-03T03:09:13.067Z"
+  "lastUpdated": "2025-09-03T03:19:13.341Z"
 }
 ```
 
@@ -91812,7 +91769,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 ##### 📄 base.njk
 *Path: `src\layouts\base.njk`*  
-*Size: 10.22 KB*
+*Size: 10.24 KB*
 
 ```njk
 <!DOCTYPE html>
@@ -91980,7 +91937,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         <!-- Conteúdo renderizado do Markdown -->
         <div class="page-body">
-          {{ content | safe }}
+          {{ content | convertWikilinks | safe }}
         </div>
 
         <!-- Bloco de decisão destacado se existir -->
@@ -92105,8 +92062,7 @@ document.addEventListener('DOMContentLoaded', () => {
   </div>
 
   <!-- Scripts -->
-  <script src="/scripts/main.js"></script>
-  <script sr
+  <script src="/scripts/main.js"></s
 
 ... (Content truncated - file too large)
 ```

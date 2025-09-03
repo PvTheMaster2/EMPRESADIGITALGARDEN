@@ -1,7 +1,7 @@
 ---
 title: Decisões Estratégicas
 created: 2025-09-01
-updated: 2025-09-01T16:30
+updated: 2025-09-03T00:26
 type: dashboard
 status: active
 priority: high

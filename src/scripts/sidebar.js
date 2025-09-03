@@ -101,32 +101,49 @@
     console.error('❌ Erro ao configurar event listeners:', error);
   }
   
-  // Guard de resize - CRÍTICO
+  // Guard de resize - CORRIGIDO: Não força estado
   window.addEventListener('resize', function() {
+    const isPersistent = body.dataset.sidebarPersistent === 'true';
+    
     if (!isMobile()) {
-      // Desktop: sidebar sempre "aberta" e overlay desabilitado
-      sidebar.classList.add('open');
+      // Desktop: só força aberta se explicitamente marcado
+      if (isPersistent) {
+        sidebar.classList.add('open');
+        sidebar.setAttribute('data-state', 'open');
+        sidebar.setAttribute('aria-hidden', 'false');
+      }
+      // Sempre desabilita overlay no desktop
       overlay.classList.remove('active');
       body.classList.remove('sidebar-open');
-      sidebar.setAttribute('data-state', 'open');
-      sidebar.setAttribute('aria-hidden', 'false');
       overlay.setAttribute('aria-hidden', 'true');
     } else {
       // Mobile: respeitar estado atual
       if (sidebar.getAttribute('data-state') === 'closed') {
         sidebar.classList.remove('open');
+        sidebar.setAttribute('aria-hidden', 'true');
       }
     }
   });
   
-  // Estado inicial coerente
+  // Estado inicial coerente - CORRIGIDO: Usuário controla
   function setInitialState() {
+    const isPersistent = body.dataset.sidebarPersistent === 'true';
+    
     if (!isMobile()) {
-      // Desktop: sempre aberta
-      sidebar.classList.add('open');
-      sidebar.setAttribute('data-state', 'open');
-      sidebar.setAttribute('aria-hidden', 'false');
+      // Desktop: só abre se persistente, senão deixa fechada
+      if (isPersistent) {
+        sidebar.classList.add('open');
+        sidebar.setAttribute('data-state', 'open');
+        sidebar.setAttribute('aria-hidden', 'false');
+      } else {
+        sidebar.classList.remove('open');
+        sidebar.setAttribute('data-state', 'closed');
+        sidebar.setAttribute('aria-hidden', 'true');
+      }
+      // Overlay sempre desabilitado no desktop
       overlay.setAttribute('aria-hidden', 'true');
+      overlay.classList.remove('active');
+      body.classList.remove('sidebar-open');
     } else {
       // Mobile: fechada por padrão
       sidebar.classList.remove('open');

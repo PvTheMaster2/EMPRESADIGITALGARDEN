@@ -1,7 +1,7 @@
 ---
 title: Guia do Dashboard Central Integrado
 created: 2025-01-20
-updated: 2025-01-20
+updated: 2025-09-03T00:26
 type: documentation
 status: active
 priority: high

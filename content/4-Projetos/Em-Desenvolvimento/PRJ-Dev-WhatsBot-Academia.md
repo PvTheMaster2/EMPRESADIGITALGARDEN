@@ -24,7 +24,7 @@ compliance_level: 2
 legal_review: false
 created: 2025-09-01
 modified: 2025-09-01
-updated: 2025-09-01T01:46
+updated: 2025-09-03T00:27
 ---
 
 # 🤖 **WhatsBot Academia Funcional**
