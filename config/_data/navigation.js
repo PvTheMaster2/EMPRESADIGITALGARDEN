@@ -56,16 +56,38 @@ module.exports = {
       url: "/projetos/",
       icon: "📋",
       children: [
-        { title: "🌟 AERALYN", url: "/projetos/aeralyn/" },
-        { title: "🎮 Trip-Match", url: "/projetos/trip-match/" },
-        { title: "🏢 Vault Empresarial", url: "/projetos/vault-empresarial/" },
-        { title: "🎓 Curso IA Inteligente", url: "/projetos/curso-ia-inteligente/" },
-        { title: "📱 App Desenvolvimento", url: "/projetos/app-desenvolvimento-cognitivo/" },
-        { title: "🎵 Nostalgia Musical", url: "/projetos/nostalgia-musical/" },
-        { title: "🎓 Plataforma Cursos", url: "/projetos/plataforma-cursos/" },
-        { title: "🤖 WhatsBot Academia", url: "/projetos/dev-whatsbot-academia/" },
-        { title: "🌐 Portfolio Engenharia", url: "/projetos/web-site-portfolio-engenharia/" },
-        { title: "📝 Templates", url: "/projetos/templates-guia/" }
+        {
+          title: "🚀 Ativos",
+          url: "/projetos/",
+          children: [
+            { title: "🌟 AERALYN", url: "/projetos/aeralyn/" },
+            { title: "🎮 Trip-Match", url: "/projetos/trip-match/" },
+            { title: "🏢 Vault Empresarial", url: "/projetos/vault-empresarial/" },
+            { title: "🎓 Curso IA Inteligente", url: "/projetos/curso-ia-inteligente/" },
+            { title: "📱 App Desenvolvimento", url: "/projetos/app-desenvolvimento-cognitivo/" },
+            { title: "🎵 Nostalgia Musical", url: "/projetos/nostalgia-musical/" },
+            { title: "🎓 Plataforma Cursos", url: "/projetos/plataforma-cursos/" }
+          ]
+        },
+        {
+          title: "⚡ Em Desenvolvimento",
+          url: "/projetos/",
+          children: [
+            { title: "🤖 WhatsBot Academia", url: "/projetos/dev-whatsbot-academia/" },
+            { title: "🌐 Portfolio Engenharia", url: "/projetos/web-site-portfolio-engenharia/" }
+          ]
+        },
+        {
+          title: "📝 Templates",
+          url: "/projetos/templates-guia/",
+          children: [
+            { title: "📋 Exemplo Intake", url: "/projetos/exemplo-intake-preenchido/" },
+            { title: "⚡ Minimalista", url: "/projetos/exemplo-minimalista/" },
+            { title: "🎯 Primeira Cartada", url: "/projetos/exemplo-primeira-cartada/" },
+            { title: "🏗️ Template Piloto", url: "/projetos/template-piloto-exemplo-sistema/" },
+            { title: "🏢 CRM Arquitetos", url: "/projetos/template-piloto-crm-arquitetos/" }
+          ]
+        }
       ]
     },
     {
