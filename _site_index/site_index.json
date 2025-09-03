@@ -43122,21 +43122,6 @@
           "isInternal": true
         },
         {
-          "text": "site_outline",
-          "href": "/_site_index/site_outline/",
-          "isInternal": true
-        },
-        {
-          "text": "layouts_analysis",
-          "href": "/_site_index/layouts_analysis/",
-          "isInternal": true
-        },
-        {
-          "text": "issues",
-          "href": "/_site_index/issues/",
-          "isInternal": true
-        },
-        {
           "text": "Sistema Empresarial Multisócios",
           "href": "/sobre-sistema/",
           "isInternal": true
@@ -44965,13 +44950,13 @@
           "isInternal": true
         },
         {
-          "text": "Curso IA Inteligente",
-          "href": "/4-Projetos/Ativos/PRJ-Curso-IA-Inteligente/",
+          "text": "App Desenvolvimento Cognitivo",
+          "href": "/4-Projetos/Ativos/PRJ-App-Desenvolvimento-Cognitivo/",
           "isInternal": true
         },
         {
-          "text": "App Desenvolvimento Cognitivo",
-          "href": "/4-Projetos/Ativos/PRJ-App-Desenvolvimento-Cognitivo/",
+          "text": "Curso IA Inteligente",
+          "href": "/4-Projetos/Ativos/PRJ-Curso-IA-Inteligente/",
           "isInternal": true
         },
         {
@@ -48481,12 +48466,12 @@
         },
         {
           "level": 3,
-          "text": "Curso IA Inteligente",
+          "text": "App Desenvolvimento Cognitivo",
           "id": null
         },
         {
           "level": 3,
-          "text": "App Desenvolvimento Cognitivo",
+          "text": "Curso IA Inteligente",
           "id": null
         },
         {
@@ -48507,16 +48492,6 @@
         {
           "level": 3,
           "text": "Vault Empresarial",
-          "id": null
-        },
-        {
-          "level": 3,
-          "text": "Dev WhatsBot Academia",
-          "id": null
-        },
-        {
-          "level": 3,
-          "text": "Web Site Portfolio Engenharia",
           "id": null
         },
         {
@@ -48553,6 +48528,16 @@
           "level": 3,
           "text": "TEMPLATE Projeto Exemplo Sistema",
           "id": null
+        },
+        {
+          "level": 3,
+          "text": "Dev WhatsBot Academia",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Web Site Portfolio Engenharia",
+          "id": null
         }
       ],
       "links": [
@@ -48577,13 +48562,13 @@
           "isInternal": true
         },
         {
-          "text": "Curso IA Inteligente",
-          "href": "/4-Projetos/Ativos/PRJ-Curso-IA-Inteligente/",
+          "text": "App Desenvolvimento Cognitivo",
+          "href": "/4-Projetos/Ativos/PRJ-App-Desenvolvimento-Cognitivo/",
           "isInternal": true
         },
         {
-          "text": "App Desenvolvimento Cognitivo",
-          "href": "/4-Projetos/Ativos/PRJ-App-Desenvolvimento-Cognitivo/",
+          "text": "Curso IA Inteligente",
+          "href": "/4-Projetos/Ativos/PRJ-Curso-IA-Inteligente/",
           "isInternal": true
         },
         {
@@ -48604,16 +48589,6 @@
         {
           "text": "Vault Empresarial",
           "href": "/4-Projetos/Ativos/PRJ-Vault-Empresarial/",
-          "isInternal": true
-        },
-        {
-          "text": "Dev WhatsBot Academia",
-          "href": "/4-Projetos/Em-Desenvolvimento/PRJ-Dev-WhatsBot-Academia/",
-          "isInternal": true
-        },
-        {
-          "text": "Web Site Portfolio Engenharia",
-          "href": "/4-Projetos/Em-Desenvolvimento/PRJ-Web-Site-Portfolio-Engenharia/",
           "isInternal": true
         },
         {
@@ -48649,6 +48624,16 @@
         {
           "text": "TEMPLATE Projeto Exemplo Sistema",
           "href": "/4-Projetos/Templates/TEMPLATE Projeto-Exemplo-Sistema/",
+          "isInternal": true
+        },
+        {
+          "text": "Dev WhatsBot Academia",
+          "href": "/4-Projetos/Em-Desenvolvimento/PRJ-Dev-WhatsBot-Academia/",
+          "isInternal": true
+        },
+        {
+          "text": "Web Site Portfolio Engenharia",
+          "href": "/4-Projetos/Em-Desenvolvimento/PRJ-Web-Site-Portfolio-Engenharia/",
           "isInternal": true
         },
         {
@@ -48704,12 +48689,12 @@
         },
         {
           "level": 3,
-          "text": "Curso IA Inteligente",
+          "text": "App Desenvolvimento Cognitivo",
           "id": null
         },
         {
           "level": 3,
-          "text": "App Desenvolvimento Cognitivo",
+          "text": "Curso IA Inteligente",
           "id": null
         },
         {
@@ -48740,13 +48725,13 @@
           "isInternal": true
         },
         {
-          "text": "Curso IA Inteligente",
-          "href": "/4-Projetos/Ativos/PRJ-Curso-IA-Inteligente/",
+          "text": "App Desenvolvimento Cognitivo",
+          "href": "/4-Projetos/Ativos/PRJ-App-Desenvolvimento-Cognitivo/",
           "isInternal": true
         },
         {
-          "text": "App Desenvolvimento Cognitivo",
-          "href": "/4-Projetos/Ativos/PRJ-App-Desenvolvimento-Cognitivo/",
+          "text": "Curso IA Inteligente",
+          "href": "/4-Projetos/Ativos/PRJ-Curso-IA-Inteligente/",
           "isInternal": true
         },
         {
@@ -49037,7 +49022,7 @@
         },
         {
           "level": 3,
-          "text": "BASE Layout (60 pages)",
+          "text": "BASE Layout (61 pages)",
           "id": null
         },
         {
@@ -49165,6 +49150,11 @@
         },
         {
           "level": 2,
+          "text": "📁 DASHBOARD-EXECUTIVO",
+          "id": null
+        },
+        {
+          "level": 2,
           "text": "📁 DASHBOARD-OVERVIEW",
           "id": null
         },
@@ -49206,7 +49196,7 @@
     "pagesWithoutTitle": 43,
     "pagesWithoutH1": 5,
     "brokenLinks": 0,
-    "totalLinks": 6648
+    "totalLinks": 6645
   },
   "issues": [
     {

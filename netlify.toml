@@ -13,7 +13,7 @@
 
 [build.environment]
   # Variáveis de ambiente para o Eleventy
-  NODE_VERSION = "18"
+  NODE_VERSION = "20"
   NPM_FLAGS = "--legacy-peer-deps"
 
 # Configurações de redirecionamento para SPA
