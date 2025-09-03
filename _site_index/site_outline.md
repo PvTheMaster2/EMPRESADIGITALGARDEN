@@ -1,11 +1,11 @@
 ---
 created: 2025-09-02T21:37
-updated: 2025-09-03T14:03
+updated: 2025-09-03T15:50
 ---
 # 🌳 Site Structure Outline
 
-**Generated**: 2025-09-03T17:03:53.231Z
-**Total Pages**: 204
+**Generated**: 2025-09-03T18:50:26.473Z
+**Total Pages**: 205
 
 ## 📁 .CURSOR
 
@@ -234,6 +234,8 @@ updated: 2025-09-03T14:03
 
 ## 📁 CONHECIMENTO
 
+    - **/conhecimento/00-introduo-high-level-ai/** - "" (base)
+      - H1: Guia de Workflow de Desenvolvimento com Múltiplas IAs (High-Level) – Passo a Passo 📚
   - **/conhecimento/** - "" (base)
     - H1: 🧠 BASE DE CONHECIMENTO
 

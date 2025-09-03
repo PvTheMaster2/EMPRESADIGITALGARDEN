@@ -1,22 +1,22 @@
 ---
 created: 2025-09-02T21:37
-updated: 2025-09-03T14:03
+updated: 2025-09-03T15:50
 ---
 # 🔍 Site Audit Report
 
-**Generated**: 2025-09-03T17:03:53.232Z
+**Generated**: 2025-09-03T18:50:26.475Z
 
 ## 📊 Statistics
 
-- **Total Pages**: 204
-- **Pages without Title**: 71
+- **Total Pages**: 205
+- **Pages without Title**: 72
 - **Pages without H1**: 15
-- **Total Internal Links**: 14717
-- **Total Issues**: 86
+- **Total Internal Links**: 14705
+- **Total Issues**: 87
 
 ## ⚠️ Issues Found
 
-### NO TITLE (71)
+### NO TITLE (72)
 
 - **/.cursor/rules/**: Página sem título definido
 - **/1000 - REUNIOES/30_08-25 REUNIAO INICIAL/10 - Prompt organização atas de reuniao a partir de transcrição /**: Página sem título definido
@@ -57,6 +57,7 @@ updated: 2025-09-03T14:03
 - **/99-RESOURCES/99 - TEMPLATE/Template_Intake_Simples/**: Página sem título definido
 - **/99-RESOURCES/99 - TEMPLATE/Template_Projeto/**: Página sem título definido
 - **/99-RESOURCES/99 - TEMPLATE/TEMPLATE_R00/**: Página sem título definido
+- **/conhecimento/00-introduo-high-level-ai/**: Página sem título definido
 - **/conhecimento/**: Página sem título definido
 - **/equipes/ana-silva/**: Página sem título definido
 - **/equipes/arthur/**: Página sem título definido

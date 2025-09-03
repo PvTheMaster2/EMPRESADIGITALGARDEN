@@ -1931,102 +1931,266 @@
 </blockquote>
 <hr>
 <h2>🎯 <strong>RESUMO EXECUTIVO</strong></h2>
-<h3><strong>Status Geral</strong></h3>
-<ul>
-<li><strong>Total de Projetos</strong>:</li>
-<li><strong>Projetos Ativos</strong>:</li>
-<li><strong>Total de Pessoas</strong>:</li>
-<li><strong>Capacidade Total</strong>: h/sem</li>
-<li><strong>Utilização Média</strong>: %</li>
-</ul>
+<h1>🔍 <strong>DEBUG COMPLETO DO SISTEMA</strong></h1>
+<h2><strong>TESTE 1: Verificar se Dataview está funcionando</strong></h2>
+<pre><code class="language-dataview">TABLE file.name
+FROM &quot;&quot;
+LIMIT 3
+</code></pre>
+<h2><strong>TESTE 2: Verificar estrutura de pastas</strong></h2>
+<pre><code class="language-dataview">TABLE file.folder
+FROM &quot;&quot;
+WHERE file.folder != &quot;&quot;
+GROUP BY file.folder
+SORT file.folder
+LIMIT 10
+</code></pre>
+<h2><strong>TESTE 3: Verificar arquivos da equipe</strong></h2>
+<pre><code class="language-dataview">TABLE file.name, file.folder, type, status
+FROM &quot;content/2-Equipes&quot;
+LIMIT 5
+</code></pre>
+<h2><strong>TESTE 4: Verificar arquivos de projetos</strong></h2>
+<pre><code class="language-dataview">TABLE file.name, file.folder, type, status
+FROM &quot;content/4-Projetos/Ativos&quot;
+LIMIT 5
+</code></pre>
+<h2><strong>TESTE 5: Verificar arquivos em desenvolvimento</strong></h2>
+<pre><code class="language-dataview">TABLE file.name, file.folder, type, status
+FROM &quot;content/4-Projetos/Em-Desenvolvimento&quot;
+LIMIT 5
+</code></pre>
+<h2><strong>TESTE 6: Verificar campos de um arquivo da equipe</strong></h2>
+<pre><code class="language-dataview">TABLE file.name, type, status, name, role, department, availability_weekly, allocated_hours
+FROM &quot;content/2-Equipes&quot;
+WHERE file.name = &quot;Pedro-Vitor&quot;
+</code></pre>
+<h2><strong>TESTE 7: Verificar campos de um arquivo de projeto</strong></h2>
+<pre><code class="language-dataview">TABLE file.name, type, status, title, owner, budget, effort_weeks, priority
+FROM &quot;content/4-Projetos/Ativos&quot;
+WHERE file.name = &quot;PRJ-AERALYN&quot;
+</code></pre>
+<h2><strong>TESTE 8: Testar query simples sem agregações</strong></h2>
+<pre><code class="language-dataview">TABLE file.name, type, status
+FROM &quot;content/2-Equipes&quot;
+WHERE type = &quot;person&quot;
+</code></pre>
+<h2><strong>TESTE 9: Testar query simples para projetos</strong></h2>
+<pre><code class="language-dataview">TABLE file.name, type, status
+FROM &quot;content/4-Projetos/Ativos&quot;
+WHERE type = &quot;project&quot;
+</code></pre>
+<h2><strong>TESTE 10: Testar função length()</strong></h2>
+<pre><code class="language-dataview">TABLE WITHOUT ID
+  &quot;Total de Arquivos&quot; AS &quot;Métrica&quot;,
+  length(rows) AS &quot;Valor&quot;
+FROM &quot;content/2-Equipes&quot;
+</code></pre>
+<h2><strong>TESTE 11: Testar função sum()</strong></h2>
+<pre><code class="language-dataview">TABLE WITHOUT ID
+  &quot;Soma de Horas&quot; AS &quot;Métrica&quot;,
+  sum(availability_weekly) AS &quot;Valor&quot;
+FROM &quot;content/2-Equipes&quot;
+WHERE type = &quot;person&quot;
+</code></pre>
+<h2><strong>TESTE 12: Testar função choice()</strong></h2>
+<pre><code class="language-dataview">TABLE 
+  choice(status = &quot;active&quot;, &quot;✅ Ativo&quot;, &quot;❌ Inativo&quot;) AS &quot;Status&quot;,
+  file.name AS &quot;Nome&quot;
+FROM &quot;content/2-Equipes&quot;
+LIMIT 3
+</code></pre>
+<h2><strong>TESTE 13: Testar GROUP BY</strong></h2>
+<pre><code class="language-dataview">TABLE 
+  status AS &quot;Status&quot;,
+  length(rows) AS &quot;Quantidade&quot;
+FROM &quot;content/2-Equipes&quot;
+WHERE type = &quot;person&quot;
+GROUP BY status
+</code></pre>
+<h2><strong>TESTE 14: Testar sintaxe OR (que está falhando)</strong></h2>
+<pre><code class="language-dataview">TABLE file.name
+FROM &quot;content/4-Projetos&quot;
+WHERE contains(file.folder, &quot;Ativos&quot;) OR contains(file.folder, &quot;Em-Desenvolvimento&quot;)
+LIMIT 5
+</code></pre>
+<h2><strong>TESTE 15: Testar alternativa sem OR</strong></h2>
+<pre><code class="language-dataview">TABLE file.name, file.folder
+FROM &quot;content/4-Projetos&quot;
+WHERE contains(file.folder, &quot;Ativos&quot;) OR contains(file.folder, &quot;Em-Desenvolvimento&quot;)
+LIMIT 5
+</code></pre>
+<h2><strong>TESTE 16: Testar busca em toda pasta 4-Projetos</strong></h2>
+<pre><code class="language-dataview">TABLE file.name, file.folder
+FROM &quot;content/4-Projetos&quot;
+LIMIT 10
+</code></pre>
+<pre><code class="language-dataview">TABLE WITHOUT ID
+  &quot;Capacidade Total&quot; AS &quot;Métrica&quot;,
+  sum(availability_weekly) + &quot;h/sem&quot; AS &quot;Valor&quot;
+FROM &quot;content/2-Equipes&quot;
+WHERE type = &quot;person&quot; AND status = &quot;active&quot;
+</code></pre>
+<pre><code class="language-dataview">TABLE WITHOUT ID
+  &quot;Utilização Média&quot; AS &quot;Métrica&quot;,
+  round((sum(allocated_hours) / sum(availability_weekly)) * 100, 1) + &quot;%&quot; AS &quot;Valor&quot;
+FROM &quot;content/2-Equipes&quot;
+WHERE type = &quot;person&quot; AND status = &quot;active&quot;
+</code></pre>
 <h3><strong>Métricas Financeiras</strong></h3>
-<ul>
-<li><strong>Budget Total</strong>: R$</li>
-<li><strong>ROI Projetado</strong>: R$</li>
-<li><strong>ROI Médio</strong>: 347%</li>
-</ul>
+<pre><code class="language-dataview">TABLE WITHOUT ID
+  &quot;Budget Total&quot; AS &quot;Métrica&quot;,
+  &quot;R$ &quot; + sum(budget) AS &quot;Valor&quot;
+FROM &quot;content/4-Projetos&quot;
+WHERE type = &quot;project&quot; AND (contains(file.folder, &quot;Ativos&quot;) OR contains(file.folder, &quot;Em-Desenvolvimento&quot;))
+</code></pre>
+<pre><code class="language-dataview">TABLE WITHOUT ID
+  &quot;ROI Projetado&quot; AS &quot;Métrica&quot;,
+  &quot;R$ &quot; + sum(budget * 3.47) AS &quot;Valor&quot;
+FROM &quot;content/4-Projetos&quot;
+WHERE type = &quot;project&quot; AND (contains(file.folder, &quot;Ativos&quot;) OR contains(file.folder, &quot;Em-Desenvolvimento&quot;))
+</code></pre>
 <hr>
 <h2>📋 <strong>PROJETOS ATIVOS (DADOS REAIS)</strong></h2>
 <h3><strong>Lista de Projetos com Dados Reais</strong></h3>
+<pre><code class="language-dataview">TABLE 
+  status AS &quot;Status&quot;,
+  link(file.link, title) AS &quot;Projeto&quot;,
+  owner AS &quot;Owner&quot;,
+  &quot;R$ &quot; + budget AS &quot;Budget&quot;,
+  effort_weeks + &quot;w&quot; AS &quot;Esforço&quot;,
+  priority AS &quot;Prioridade&quot;
+FROM &quot;content/4-Projetos&quot;
+WHERE type = &quot;project&quot; AND (contains(file.folder, &quot;Ativos&quot;) OR contains(file.folder, &quot;Em-Desenvolvimento&quot;))
+SORT priority DESC, budget DESC
+</code></pre>
 <hr>
 <h2>👥 <strong>EQUIPE ATUAL (DADOS REAIS)</strong></h2>
 <h3><strong>Capacidade da Equipe</strong></h3>
+<pre><code class="language-dataview">TABLE 
+  name AS &quot;Nome&quot;,
+  role AS &quot;Cargo&quot;,
+  department AS &quot;Departamento&quot;,
+  availability_weekly + &quot;h/sem&quot; AS &quot;Disponível&quot;,
+  allocated_hours + &quot;h&quot; AS &quot;Alocado&quot;,
+  round((allocated_hours / availability_weekly) * 100, 1) + &quot;%&quot; AS &quot;Utilização&quot;
+FROM &quot;content/2-Equipes&quot;
+WHERE type = &quot;person&quot; AND status = &quot;active&quot;
+SORT allocated_hours DESC
+</code></pre>
 <hr>
 <h2>📊 <strong>MÉTRICAS CONSOLIDADAS</strong></h2>
 <h3><strong>Por Status de Projeto</strong></h3>
-<ul>
-<li><strong>Active</strong>: 0 projetos</li>
-<li><strong>In-Progress</strong>: 0 projetos</li>
-<li><strong>In-Development</strong>: 0 projetos</li>
-<li><strong>Planning</strong>: 0 projetos</li>
-</ul>
+<pre><code class="language-dataview">TABLE 
+  status AS &quot;Status&quot;,
+  length(rows) AS &quot;Quantidade&quot;
+FROM &quot;content/4-Projetos&quot;
+WHERE type = &quot;project&quot; AND (contains(file.folder, &quot;Ativos&quot;) OR contains(file.folder, &quot;Em-Desenvolvimento&quot;))
+GROUP BY status
+SORT length(rows) DESC
+</code></pre>
 <h3><strong>Por Owner</strong></h3>
-<ul>
-<li><strong>Pedro Vitor</strong>: 0 projetos (R$ 0)</li>
-<li><strong>Arthur</strong>: 0 projetos (R$ 0)</li>
-</ul>
+<pre><code class="language-dataview">TABLE 
+  owner AS &quot;Responsável&quot;,
+  length(rows) AS &quot;Projetos&quot;
+FROM &quot;content/4-Projetos&quot;
+WHERE type = &quot;project&quot; AND (contains(file.folder, &quot;Ativos&quot;) OR contains(file.folder, &quot;Em-Desenvolvimento&quot;))
+GROUP BY owner
+SORT length(rows) DESC
+</code></pre>
 <hr>
 <h2>💰 <strong>ANÁLISE FINANCEIRA DETALHADA</strong></h2>
 <h3><strong>Distribuição de Budget</strong></h3>
-<ul>
-<li><strong>Total Investido</strong>: R$</li>
-<li><strong>Receita Projetada</strong>: R$</li>
-<li><strong>Lucro Esperado</strong>: R$ NaN</li>
-</ul>
+<pre><code class="language-dataview">TABLE 
+  &quot;R$ &quot; + budget AS &quot;Budget por Projeto&quot;
+FROM &quot;content/4-Projetos&quot;
+WHERE type = &quot;project&quot; AND (contains(file.folder, &quot;Ativos&quot;) OR contains(file.folder, &quot;Em-Desenvolvimento&quot;))
+SORT budget DESC
+</code></pre>
 <h3><strong>Projetos por Faixa de Budget</strong></h3>
-<ul>
-<li><strong>R$ 0-25k</strong>: 0 projetos</li>
-<li><strong>R$ 25k-50k</strong>: 0 projetos</li>
-<li><strong>R$ 50k-100k</strong>: 0 projetos</li>
-<li><strong>R$ 100k+</strong>: 0 projetos</li>
-</ul>
+<pre><code class="language-dataview">TABLE 
+  &quot;R$ &quot; + budget AS &quot;Budget&quot;,
+  file.name AS &quot;Projeto&quot;
+FROM &quot;content/4-Projetos&quot;
+WHERE type = &quot;project&quot; AND (contains(file.folder, &quot;Ativos&quot;) OR contains(file.folder, &quot;Em-Desenvolvimento&quot;))
+SORT budget DESC
+</code></pre>
 <hr>
 <h2>🎯 <strong>CAPACIDADE E ALOCAÇÃO</strong></h2>
 <h3><strong>Resumo de Capacidade</strong></h3>
-<ul>
-<li><strong>Capacidade Total</strong>: h/sem</li>
-<li><strong>Horas Alocadas</strong>: h</li>
-<li><strong>Horas Livres</strong>: NaNh</li>
-<li><strong>Utilização Média</strong>: %</li>
-</ul>
+<pre><code class="language-dataview">TABLE 
+  name AS &quot;Nome&quot;,
+  availability_weekly + &quot;h/sem&quot; AS &quot;Capacidade&quot;,
+  allocated_hours + &quot;h&quot; AS &quot;Alocado&quot;,
+  (availability_weekly - allocated_hours) + &quot;h&quot; AS &quot;Livre&quot;
+FROM &quot;content/2-Equipes&quot;
+WHERE type = &quot;person&quot; AND status = &quot;active&quot; AND availability_weekly != null
+</code></pre>
 <h3><strong>Por Departamento</strong></h3>
-<h4><strong>Liderança</strong></h4>
-<ul>
-<li><strong>Pessoas</strong>: 1</li>
-<li><strong>Capacidade</strong>: 0h/sem</li>
-<li><strong>Alocado</strong>: 0h</li>
-<li><strong>Utilização</strong>: NaN%</li>
-</ul>
-<h4><strong>Desenvolvimento</strong></h4>
-<ul>
-<li><strong>Pessoas</strong>: 2</li>
-<li><strong>Capacidade</strong>: 0h/sem</li>
-<li><strong>Alocado</strong>: 0h</li>
-<li><strong>Utilização</strong>: NaN%</li>
-</ul>
-<h4><strong>Design</strong></h4>
-<ul>
-<li><strong>Pessoas</strong>: 1</li>
-<li><strong>Capacidade</strong>: 0h/sem</li>
-<li><strong>Alocado</strong>: 0h</li>
-<li><strong>Utilização</strong>: NaN%</li>
-</ul>
+<pre><code class="language-dataview">TABLE 
+  department AS &quot;Departamento&quot;,
+  length(rows) AS &quot;Pessoas&quot;
+FROM &quot;content/2-Equipes&quot;
+WHERE type = &quot;person&quot; AND status = &quot;active&quot;
+GROUP BY department
+SORT length(rows) DESC
+</code></pre>
 <hr>
 <h2>🚨 <strong>ALERTAS E INSIGHTS</strong></h2>
-<h3><strong>Alertas de Capacidade</strong></h3>
+<h3><strong>Alertas de Capacidade - Pessoas Sobrecarregadas</strong></h3>
+<pre><code class="language-dataview">TABLE 
+  name AS &quot;Nome&quot;,
+  role AS &quot;Cargo&quot;,
+  round((allocated_hours / availability_weekly) * 100, 1) + &quot;%&quot; AS &quot;Utilização&quot;
+FROM &quot;content/2-Equipes&quot;
+WHERE type = &quot;person&quot; AND status = &quot;active&quot; AND (allocated_hours / availability_weekly) &gt; 0.8
+SORT allocated_hours DESC
+</code></pre>
+<h3><strong>Alertas de Capacidade - Pessoas Subutilizadas</strong></h3>
+<pre><code class="language-dataview">TABLE 
+  name AS &quot;Nome&quot;,
+  role AS &quot;Cargo&quot;,
+  round((allocated_hours / availability_weekly) * 100, 1) + &quot;%&quot; AS &quot;Utilização&quot;
+FROM &quot;content/2-Equipes&quot;
+WHERE type = &quot;person&quot; AND status = &quot;active&quot; AND (allocated_hours / availability_weekly) &lt; 0.3
+SORT allocated_hours ASC
+</code></pre>
 <h3><strong>Projetos de Alto Valor</strong></h3>
+<pre><code class="language-dataview">TABLE 
+  link(file.link, title) AS &quot;Projeto&quot;,
+  &quot;R$ &quot; + budget AS &quot;Budget&quot;,
+  owner AS &quot;Owner&quot;,
+  status AS &quot;Status&quot;
+FROM &quot;content/4-Projetos&quot;
+WHERE type = &quot;project&quot; AND (contains(file.folder, &quot;Ativos&quot;) OR contains(file.folder, &quot;Em-Desenvolvimento&quot;)) AND budget &gt;= 50000
+SORT budget DESC
+</code></pre>
 <hr>
 <h2>📈 <strong>TENDÊNCIAS E RECOMENDAÇÕES</strong></h2>
 <h3><strong>Insights Baseados em Dados Reais</strong></h3>
-<ol>
-<li><strong>Concentração de Projetos</strong>: 0/ projetos estão com Pedro Vitor</li>
-<li><strong>Capacidade Disponível</strong>: NaNh livres por semana</li>
-<li><strong>ROI Médio</strong>: 347% com receita projetada de R$</li>
-</ol>
+<pre><code class="language-dataview">TABLE WITHOUT ID
+  &quot;Concentração de Projetos&quot; AS &quot;Insight&quot;,
+  &quot;Pedro Vitor gerencia &quot; + length(rows) + &quot; projetos&quot; AS &quot;Detalhe&quot;
+FROM &quot;content/4-Projetos&quot;
+WHERE type = &quot;project&quot; AND owner = &quot;[[Pedro Vitor]]&quot; AND (contains(file.folder, &quot;Ativos&quot;) OR contains(file.folder, &quot;Em-Desenvolvimento&quot;))
+</code></pre>
+<pre><code class="language-dataview">TABLE 
+  name AS &quot;Nome&quot;,
+  (availability_weekly - allocated_hours) + &quot;h livres&quot; AS &quot;Capacidade Disponível&quot;
+FROM &quot;content/2-Equipes&quot;
+WHERE type = &quot;person&quot; AND status = &quot;active&quot; AND availability_weekly != null
+</code></pre>
+<pre><code class="language-dataview">TABLE 
+  &quot;R$ &quot; + budget AS &quot;Budget por Projeto&quot;,
+  file.name AS &quot;Projeto&quot;
+FROM &quot;content/4-Projetos&quot;
+WHERE type = &quot;project&quot; AND (contains(file.folder, &quot;Ativos&quot;) OR contains(file.folder, &quot;Em-Desenvolvimento&quot;)) AND budget != null
+SORT budget DESC
+</code></pre>
 <h3><strong>Recomendações Imediatas</strong></h3>
 <ol>
 <li><strong>Redistribuir Carga</strong>: Considerar transferir projetos de Pedro Vitor para outros membros</li>
-<li><strong>Aproveitar Capacidade</strong>: NaNh disponíveis podem ser usadas para novos projetos</li>
+<li><strong>Aproveitar Capacidade</strong>: Usar horas livres para novos projetos</li>
 <li><strong>Foco em ROI</strong>: Projetos com budget &gt; R$ 50k têm maior potencial de retorno</li>
 </ol>
 <hr>
@@ -2045,8 +2209,8 @@
 </ul>
 <hr>
 <p><strong>Status</strong>: 🤖 <strong>GERADO AUTOMATICAMENTE COM DADOS REAIS</strong><br>
-<strong>Última Atualização</strong>:<br>
-<strong>Próxima Atualização</strong>: Automática a cada build<br>
+<strong>Última Atualização</strong>: 2025-09-03<br>
+<strong>Próxima Atualização</strong>: Automática no Obsidian<br>
 <strong>Owner</strong>: <a href="/stubs/">Pedro Vitor</a></p>
 
       </div>

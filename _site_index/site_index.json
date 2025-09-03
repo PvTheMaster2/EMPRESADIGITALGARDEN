@@ -46172,6 +46172,104 @@
       "wordCount": 0
     },
     {
+      "url": "/conhecimento/00-introduo-high-level-ai/",
+      "filePath": "build\\dist\\conhecimento\\00-introduo-high-level-ai\\index.html",
+      "title": "",
+      "h1": "Guia de Workflow de Desenvolvimento com Múltiplas IAs (High-Level) – Passo a Passo 📚",
+      "metaDescription": "",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Guia de Workflow de Desenvolvimento com Múltiplas IAs (High-Level) – Passo a Passo 📚",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "2.1 Ambiente de Desenvolvimento (Pré-requisitos Básicos)",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "2.2 OpenAI Codex (via ChatGPT) 🚀",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "2.3 Claude Code (Anthropic) 🤖",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "2.4 Cursor IDE 🖥️",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "2.5 Repo Prompt 🗂️",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "2.6 Super Whisper 🎤 (Opcional)",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "2.7 O3 Pro (Modelo de IA Avançado) 💡",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "5.1 Revisão Inicial do Pull Request",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "5.2 Iterando Correções com o Claude",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "5.3 Finalização da Revisão",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "6.1 Testando a Nova Funcionalidade",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "6.2 Teste de Regressão – Não quebrei nada em outro lugar?",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "6.3 O que fazer ao encontrar um bug?",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "6.4 Dicas gerais de teste no workflow IA",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "7.1 Preparando o Terreno: Repo Prompt Avançado",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "7.2 Executando o O3 Pro",
+          "id": null
+        }
+      ],
+      "links": [],
+      "pageMetadata": {},
+      "layoutType": "base",
+      "wordCount": 0
+    },
+    {
       "url": "/conhecimento/",
       "filePath": "build\\dist\\conhecimento\\index.html",
       "title": "",
@@ -48090,8 +48188,93 @@
           "id": null
         },
         {
+          "level": 1,
+          "text": "🔍 DEBUG COMPLETO DO SISTEMA",
+          "id": null
+        },
+        {
           "level": 2,
           "text": "🎯 RESUMO EXECUTIVO",
+          "id": null
+        },
+        {
+          "level": 2,
+          "text": "TESTE 1: Verificar se Dataview está funcionando",
+          "id": null
+        },
+        {
+          "level": 2,
+          "text": "TESTE 2: Verificar estrutura de pastas",
+          "id": null
+        },
+        {
+          "level": 2,
+          "text": "TESTE 3: Verificar arquivos da equipe",
+          "id": null
+        },
+        {
+          "level": 2,
+          "text": "TESTE 4: Verificar arquivos de projetos",
+          "id": null
+        },
+        {
+          "level": 2,
+          "text": "TESTE 5: Verificar arquivos em desenvolvimento",
+          "id": null
+        },
+        {
+          "level": 2,
+          "text": "TESTE 6: Verificar campos de um arquivo da equipe",
+          "id": null
+        },
+        {
+          "level": 2,
+          "text": "TESTE 7: Verificar campos de um arquivo de projeto",
+          "id": null
+        },
+        {
+          "level": 2,
+          "text": "TESTE 8: Testar query simples sem agregações",
+          "id": null
+        },
+        {
+          "level": 2,
+          "text": "TESTE 9: Testar query simples para projetos",
+          "id": null
+        },
+        {
+          "level": 2,
+          "text": "TESTE 10: Testar função length()",
+          "id": null
+        },
+        {
+          "level": 2,
+          "text": "TESTE 11: Testar função sum()",
+          "id": null
+        },
+        {
+          "level": 2,
+          "text": "TESTE 12: Testar função choice()",
+          "id": null
+        },
+        {
+          "level": 2,
+          "text": "TESTE 13: Testar GROUP BY",
+          "id": null
+        },
+        {
+          "level": 2,
+          "text": "TESTE 14: Testar sintaxe OR (que está falhando)",
+          "id": null
+        },
+        {
+          "level": 2,
+          "text": "TESTE 15: Testar alternativa sem OR",
+          "id": null
+        },
+        {
+          "level": 2,
+          "text": "TESTE 16: Testar busca em toda pasta 4-Projetos",
           "id": null
         },
         {
@@ -48161,11 +48344,6 @@
         },
         {
           "level": 3,
-          "text": "Status Geral",
-          "id": null
-        },
-        {
-          "level": 3,
           "text": "Métricas Financeiras",
           "id": null
         },
@@ -48211,7 +48389,12 @@
         },
         {
           "level": 3,
-          "text": "Alertas de Capacidade",
+          "text": "Alertas de Capacidade - Pessoas Sobrecarregadas",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Alertas de Capacidade - Pessoas Subutilizadas",
           "id": null
         },
         {
@@ -48237,21 +48420,6 @@
         {
           "level": 3,
           "text": "Próximo Mês",
-          "id": null
-        },
-        {
-          "level": 4,
-          "text": "Liderança",
-          "id": null
-        },
-        {
-          "level": 4,
-          "text": "Desenvolvimento",
-          "id": null
-        },
-        {
-          "level": 4,
-          "text": "Design",
           "id": null
         }
       ],
@@ -97676,71 +97844,6 @@
           "isInternal": true
         },
         {
-          "text": "",
-          "href": "/reunioes-historicas/10-prompt-organizao-atas-de-reuniao-a-partir-de-transcrio/",
-          "isInternal": true
-        },
-        {
-          "text": "",
-          "href": "/reunioes-historicas/ata-gemini/",
-          "isInternal": true
-        },
-        {
-          "text": "",
-          "href": "/reunioes-historicas/ata-30-08-25-reunioinicial-r00/",
-          "isInternal": true
-        },
-        {
-          "text": "",
-          "href": "/reunioes-historicas/ata-modernizada/",
-          "isInternal": true
-        },
-        {
-          "text": "",
-          "href": "/reunioes-historicas/manifestomultisocios/",
-          "isInternal": true
-        },
-        {
-          "text": "",
-          "href": "/reunioes-historicas/instrucoes-rapidas/",
-          "isInternal": true
-        },
-        {
-          "text": "",
-          "href": "/reunioes-historicas/readme-conversor/",
-          "isInternal": true
-        },
-        {
-          "text": "",
-          "href": "/reunioes-historicas/reunio-multiscios-hoje-25f0c1a9c7ee80d4958bc6efaebffa21/",
-          "isInternal": true
-        },
-        {
-          "text": "",
-          "href": "/reunioes-historicas/advanced-multisocios-components/",
-          "isInternal": true
-        },
-        {
-          "text": "",
-          "href": "/reunioes-historicas/ata-modernizada-antes/",
-          "isInternal": true
-        },
-        {
-          "text": "",
-          "href": "/reunioes-historicas/ata-modernizada-pos/",
-          "isInternal": true
-        },
-        {
-          "text": "",
-          "href": "/reunioes-historicas/plano-revista-multisocios/",
-          "isInternal": true
-        },
-        {
-          "text": "",
-          "href": "/reunioes-historicas/revista-multisocios-radar-edicao1/",
-          "isInternal": true
-        },
-        {
           "text": "Equipes Multisócios",
           "href": "/equipes/",
           "isInternal": true
@@ -97903,6 +98006,11 @@
         {
           "text": "Dashboard Auto Real",
           "href": "/dashboard-executivo/dashboard-auto-real/",
+          "isInternal": true
+        },
+        {
+          "text": "",
+          "href": "/conhecimento/00-introduo-high-level-ai/",
           "isInternal": true
         },
         {
@@ -104631,13 +104739,13 @@
           "isInternal": true
         },
         {
-          "text": "App Desenvolvimento Cognitivo",
-          "href": "/projetos/app-desenvolvimento-cognitivo/",
+          "text": "AERALYN",
+          "href": "/projetos/aeralyn/",
           "isInternal": true
         },
         {
-          "text": "AERALYN",
-          "href": "/projetos/aeralyn/",
+          "text": "App Desenvolvimento Cognitivo",
+          "href": "/projetos/app-desenvolvimento-cognitivo/",
           "isInternal": true
         },
         {
@@ -106039,13 +106147,13 @@
           "isInternal": true
         },
         {
-          "text": "App Desenvolvimento Cognitivo",
-          "href": "/projetos/app-desenvolvimento-cognitivo/",
+          "text": "AERALYN",
+          "href": "/projetos/aeralyn/",
           "isInternal": true
         },
         {
-          "text": "AERALYN",
-          "href": "/projetos/aeralyn/",
+          "text": "App Desenvolvimento Cognitivo",
+          "href": "/projetos/app-desenvolvimento-cognitivo/",
           "isInternal": true
         },
         {
@@ -109036,11 +109144,11 @@
   ],
   "structure": {},
   "stats": {
-    "totalPages": 204,
-    "pagesWithoutTitle": 71,
+    "totalPages": 205,
+    "pagesWithoutTitle": 72,
     "pagesWithoutH1": 15,
     "brokenLinks": 0,
-    "totalLinks": 14717
+    "totalLinks": 14705
   },
   "issues": [
     {
@@ -109286,6 +109394,11 @@
     {
       "type": "no_title",
       "url": "/99-RESOURCES/99 - TEMPLATE/TEMPLATE_R00/",
+      "message": "Página sem título definido"
+    },
+    {
+      "type": "no_title",
+      "url": "/conhecimento/00-introduo-high-level-ai/",
       "message": "Página sem título definido"
     },
     {
