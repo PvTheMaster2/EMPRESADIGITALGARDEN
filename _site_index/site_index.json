@@ -94133,41 +94133,6 @@
           "isInternal": true
         },
         {
-          "text": "Dashboard",
-          "href": "/",
-          "isInternal": true
-        },
-        {
-          "text": "Governança",
-          "href": "/governanca/",
-          "isInternal": true
-        },
-        {
-          "text": "Projetos",
-          "href": "/projetos/",
-          "isInternal": true
-        },
-        {
-          "text": "Equipes",
-          "href": "/equipes/",
-          "isInternal": true
-        },
-        {
-          "text": "Processos",
-          "href": "/processos/",
-          "isInternal": true
-        },
-        {
-          "text": "Reuniões",
-          "href": "/reunioes/",
-          "isInternal": true
-        },
-        {
-          "text": "Conhecimento",
-          "href": "/conhecimento/",
-          "isInternal": true
-        },
-        {
           "text": "🌱 Multisocios",
           "href": "/",
           "isInternal": true
@@ -95237,41 +95202,6 @@
           "isInternal": true
         },
         {
-          "text": "Dashboard",
-          "href": "/",
-          "isInternal": true
-        },
-        {
-          "text": "Governança",
-          "href": "/governanca/",
-          "isInternal": true
-        },
-        {
-          "text": "Projetos",
-          "href": "/projetos/",
-          "isInternal": true
-        },
-        {
-          "text": "Equipes",
-          "href": "/equipes/",
-          "isInternal": true
-        },
-        {
-          "text": "Processos",
-          "href": "/processos/",
-          "isInternal": true
-        },
-        {
-          "text": "Reuniões",
-          "href": "/reunioes/",
-          "isInternal": true
-        },
-        {
-          "text": "Conhecimento",
-          "href": "/conhecimento/",
-          "isInternal": true
-        },
-        {
           "text": "🌱 Multisocios",
           "href": "/",
           "isInternal": true
@@ -95983,41 +95913,6 @@
         {
           "text": "🌱 Multisocios Empresarial",
           "href": "/",
-          "isInternal": true
-        },
-        {
-          "text": "Dashboard",
-          "href": "/",
-          "isInternal": true
-        },
-        {
-          "text": "Governança",
-          "href": "/governanca/",
-          "isInternal": true
-        },
-        {
-          "text": "Projetos",
-          "href": "/projetos/",
-          "isInternal": true
-        },
-        {
-          "text": "Equipes",
-          "href": "/equipes/",
-          "isInternal": true
-        },
-        {
-          "text": "Processos",
-          "href": "/processos/",
-          "isInternal": true
-        },
-        {
-          "text": "Reuniões",
-          "href": "/reunioes/",
-          "isInternal": true
-        },
-        {
-          "text": "Conhecimento",
-          "href": "/conhecimento/",
           "isInternal": true
         },
         {
@@ -96735,41 +96630,6 @@
           "isInternal": true
         },
         {
-          "text": "Dashboard",
-          "href": "/",
-          "isInternal": true
-        },
-        {
-          "text": "Governança",
-          "href": "/governanca/",
-          "isInternal": true
-        },
-        {
-          "text": "Projetos",
-          "href": "/projetos/",
-          "isInternal": true
-        },
-        {
-          "text": "Equipes",
-          "href": "/equipes/",
-          "isInternal": true
-        },
-        {
-          "text": "Processos",
-          "href": "/processos/",
-          "isInternal": true
-        },
-        {
-          "text": "Reuniões",
-          "href": "/reunioes/",
-          "isInternal": true
-        },
-        {
-          "text": "Conhecimento",
-          "href": "/conhecimento/",
-          "isInternal": true
-        },
-        {
           "text": "🌱 Multisocios",
           "href": "/",
           "isInternal": true
@@ -97481,41 +97341,6 @@
         {
           "text": "🌱 Multisocios Empresarial",
           "href": "/",
-          "isInternal": true
-        },
-        {
-          "text": "Dashboard",
-          "href": "/",
-          "isInternal": true
-        },
-        {
-          "text": "Governança",
-          "href": "/governanca/",
-          "isInternal": true
-        },
-        {
-          "text": "Projetos",
-          "href": "/projetos/",
-          "isInternal": true
-        },
-        {
-          "text": "Equipes",
-          "href": "/equipes/",
-          "isInternal": true
-        },
-        {
-          "text": "Processos",
-          "href": "/processos/",
-          "isInternal": true
-        },
-        {
-          "text": "Reuniões",
-          "href": "/reunioes/",
-          "isInternal": true
-        },
-        {
-          "text": "Conhecimento",
-          "href": "/conhecimento/",
           "isInternal": true
         },
         {
@@ -98233,41 +98058,6 @@
           "isInternal": true
         },
         {
-          "text": "Dashboard",
-          "href": "/",
-          "isInternal": true
-        },
-        {
-          "text": "Governança",
-          "href": "/governanca/",
-          "isInternal": true
-        },
-        {
-          "text": "Projetos",
-          "href": "/projetos/",
-          "isInternal": true
-        },
-        {
-          "text": "Equipes",
-          "href": "/equipes/",
-          "isInternal": true
-        },
-        {
-          "text": "Processos",
-          "href": "/processos/",
-          "isInternal": true
-        },
-        {
-          "text": "Reuniões",
-          "href": "/reunioes/",
-          "isInternal": true
-        },
-        {
-          "text": "Conhecimento",
-          "href": "/conhecimento/",
-          "isInternal": true
-        },
-        {
           "text": "🌱 Multisocios",
           "href": "/",
           "isInternal": true
@@ -98948,13 +98738,13 @@
           "isInternal": true
         },
         {
-          "text": "Playbook Comercial V0",
-          "href": "/governanca/playbook-comercial-v0/",
+          "text": "Governança Empresarial",
+          "href": "/governanca/",
           "isInternal": true
         },
         {
-          "text": "Governança Empresarial",
-          "href": "/governanca/",
+          "text": "Playbook Comercial V0",
+          "href": "/governanca/playbook-comercial-v0/",
           "isInternal": true
         },
         {
@@ -99009,41 +98799,6 @@
         {
           "text": "🌱 Multisocios Empresarial",
           "href": "/",
-          "isInternal": true
-        },
-        {
-          "text": "Dashboard",
-          "href": "/",
-          "isInternal": true
-        },
-        {
-          "text": "Governança",
-          "href": "/governanca/",
-          "isInternal": true
-        },
-        {
-          "text": "Projetos",
-          "href": "/projetos/",
-          "isInternal": true
-        },
-        {
-          "text": "Equipes",
-          "href": "/equipes/",
-          "isInternal": true
-        },
-        {
-          "text": "Processos",
-          "href": "/processos/",
-          "isInternal": true
-        },
-        {
-          "text": "Reuniões",
-          "href": "/reunioes/",
-          "isInternal": true
-        },
-        {
-          "text": "Conhecimento",
-          "href": "/conhecimento/",
           "isInternal": true
         },
         {
@@ -99761,41 +99516,6 @@
           "isInternal": true
         },
         {
-          "text": "Dashboard",
-          "href": "/",
-          "isInternal": true
-        },
-        {
-          "text": "Governança",
-          "href": "/governanca/",
-          "isInternal": true
-        },
-        {
-          "text": "Projetos",
-          "href": "/projetos/",
-          "isInternal": true
-        },
-        {
-          "text": "Equipes",
-          "href": "/equipes/",
-          "isInternal": true
-        },
-        {
-          "text": "Processos",
-          "href": "/processos/",
-          "isInternal": true
-        },
-        {
-          "text": "Reuniões",
-          "href": "/reunioes/",
-          "isInternal": true
-        },
-        {
-          "text": "Conhecimento",
-          "href": "/conhecimento/",
-          "isInternal": true
-        },
-        {
           "text": "🌱 Multisocios",
           "href": "/",
           "isInternal": true
@@ -100502,41 +100222,6 @@
         {
           "text": "🌱 Multisocios Empresarial",
           "href": "/",
-          "isInternal": true
-        },
-        {
-          "text": "Dashboard",
-          "href": "/",
-          "isInternal": true
-        },
-        {
-          "text": "Governança",
-          "href": "/governanca/",
-          "isInternal": true
-        },
-        {
-          "text": "Projetos",
-          "href": "/projetos/",
-          "isInternal": true
-        },
-        {
-          "text": "Equipes",
-          "href": "/equipes/",
-          "isInternal": true
-        },
-        {
-          "text": "Processos",
-          "href": "/processos/",
-          "isInternal": true
-        },
-        {
-          "text": "Reuniões",
-          "href": "/reunioes/",
-          "isInternal": true
-        },
-        {
-          "text": "Conhecimento",
-          "href": "/conhecimento/",
           "isInternal": true
         },
         {
@@ -101259,41 +100944,6 @@
           "isInternal": true
         },
         {
-          "text": "Dashboard",
-          "href": "/",
-          "isInternal": true
-        },
-        {
-          "text": "Governança",
-          "href": "/governanca/",
-          "isInternal": true
-        },
-        {
-          "text": "Projetos",
-          "href": "/projetos/",
-          "isInternal": true
-        },
-        {
-          "text": "Equipes",
-          "href": "/equipes/",
-          "isInternal": true
-        },
-        {
-          "text": "Processos",
-          "href": "/processos/",
-          "isInternal": true
-        },
-        {
-          "text": "Reuniões",
-          "href": "/reunioes/",
-          "isInternal": true
-        },
-        {
-          "text": "Conhecimento",
-          "href": "/conhecimento/",
-          "isInternal": true
-        },
-        {
           "text": "🌱 Multisocios",
           "href": "/",
           "isInternal": true
@@ -101964,18 +101614,8 @@
           "isInternal": true
         },
         {
-          "text": "Dev WhatsBot Academia",
-          "href": "/projetos/dev-whatsbot-academia/",
-          "isInternal": true
-        },
-        {
           "text": "AERALYN",
           "href": "/projetos/aeralyn/",
-          "isInternal": true
-        },
-        {
-          "text": "Web Site Portfolio Engenharia",
-          "href": "/projetos/web-site-portfolio-engenharia/",
           "isInternal": true
         },
         {
@@ -102006,6 +101646,16 @@
         {
           "text": "Vault Empresarial",
           "href": "/projetos/vault-empresarial/",
+          "isInternal": true
+        },
+        {
+          "text": "Web Site Portfolio Engenharia",
+          "href": "/projetos/web-site-portfolio-engenharia/",
+          "isInternal": true
+        },
+        {
+          "text": "Dev WhatsBot Academia",
+          "href": "/projetos/dev-whatsbot-academia/",
           "isInternal": true
         },
         {
@@ -102095,41 +101745,6 @@
         {
           "text": "🌱 Multisocios Empresarial",
           "href": "/",
-          "isInternal": true
-        },
-        {
-          "text": "Dashboard",
-          "href": "/",
-          "isInternal": true
-        },
-        {
-          "text": "Governança",
-          "href": "/governanca/",
-          "isInternal": true
-        },
-        {
-          "text": "Projetos",
-          "href": "/projetos/",
-          "isInternal": true
-        },
-        {
-          "text": "Equipes",
-          "href": "/equipes/",
-          "isInternal": true
-        },
-        {
-          "text": "Processos",
-          "href": "/processos/",
-          "isInternal": true
-        },
-        {
-          "text": "Reuniões",
-          "href": "/reunioes/",
-          "isInternal": true
-        },
-        {
-          "text": "Conhecimento",
-          "href": "/conhecimento/",
           "isInternal": true
         },
         {
@@ -102839,41 +102454,6 @@
         {
           "text": "🌱 Multisocios Empresarial",
           "href": "/",
-          "isInternal": true
-        },
-        {
-          "text": "Dashboard",
-          "href": "/",
-          "isInternal": true
-        },
-        {
-          "text": "Governança",
-          "href": "/governanca/",
-          "isInternal": true
-        },
-        {
-          "text": "Projetos",
-          "href": "/projetos/",
-          "isInternal": true
-        },
-        {
-          "text": "Equipes",
-          "href": "/equipes/",
-          "isInternal": true
-        },
-        {
-          "text": "Processos",
-          "href": "/processos/",
-          "isInternal": true
-        },
-        {
-          "text": "Reuniões",
-          "href": "/reunioes/",
-          "isInternal": true
-        },
-        {
-          "text": "Conhecimento",
-          "href": "/conhecimento/",
           "isInternal": true
         },
         {
@@ -103621,41 +103201,6 @@
           "isInternal": true
         },
         {
-          "text": "Dashboard",
-          "href": "/",
-          "isInternal": true
-        },
-        {
-          "text": "Governança",
-          "href": "/governanca/",
-          "isInternal": true
-        },
-        {
-          "text": "Projetos",
-          "href": "/projetos/",
-          "isInternal": true
-        },
-        {
-          "text": "Equipes",
-          "href": "/equipes/",
-          "isInternal": true
-        },
-        {
-          "text": "Processos",
-          "href": "/processos/",
-          "isInternal": true
-        },
-        {
-          "text": "Reuniões",
-          "href": "/reunioes/",
-          "isInternal": true
-        },
-        {
-          "text": "Conhecimento",
-          "href": "/conhecimento/",
-          "isInternal": true
-        },
-        {
           "text": "🌱 Multisocios",
           "href": "/",
           "isInternal": true
@@ -104377,41 +103922,6 @@
         {
           "text": "🌱 Multisocios Empresarial",
           "href": "/",
-          "isInternal": true
-        },
-        {
-          "text": "Dashboard",
-          "href": "/",
-          "isInternal": true
-        },
-        {
-          "text": "Governança",
-          "href": "/governanca/",
-          "isInternal": true
-        },
-        {
-          "text": "Projetos",
-          "href": "/projetos/",
-          "isInternal": true
-        },
-        {
-          "text": "Equipes",
-          "href": "/equipes/",
-          "isInternal": true
-        },
-        {
-          "text": "Processos",
-          "href": "/processos/",
-          "isInternal": true
-        },
-        {
-          "text": "Reuniões",
-          "href": "/reunioes/",
-          "isInternal": true
-        },
-        {
-          "text": "Conhecimento",
-          "href": "/conhecimento/",
           "isInternal": true
         },
         {
@@ -105149,41 +104659,6 @@
           "isInternal": true
         },
         {
-          "text": "Dashboard",
-          "href": "/",
-          "isInternal": true
-        },
-        {
-          "text": "Governança",
-          "href": "/governanca/",
-          "isInternal": true
-        },
-        {
-          "text": "Projetos",
-          "href": "/projetos/",
-          "isInternal": true
-        },
-        {
-          "text": "Equipes",
-          "href": "/equipes/",
-          "isInternal": true
-        },
-        {
-          "text": "Processos",
-          "href": "/processos/",
-          "isInternal": true
-        },
-        {
-          "text": "Reuniões",
-          "href": "/reunioes/",
-          "isInternal": true
-        },
-        {
-          "text": "Conhecimento",
-          "href": "/conhecimento/",
-          "isInternal": true
-        },
-        {
           "text": "🌱 Multisocios",
           "href": "/",
           "isInternal": true
@@ -105895,41 +105370,6 @@
         {
           "text": "🌱 Multisocios Empresarial",
           "href": "/",
-          "isInternal": true
-        },
-        {
-          "text": "Dashboard",
-          "href": "/",
-          "isInternal": true
-        },
-        {
-          "text": "Governança",
-          "href": "/governanca/",
-          "isInternal": true
-        },
-        {
-          "text": "Projetos",
-          "href": "/projetos/",
-          "isInternal": true
-        },
-        {
-          "text": "Equipes",
-          "href": "/equipes/",
-          "isInternal": true
-        },
-        {
-          "text": "Processos",
-          "href": "/processos/",
-          "isInternal": true
-        },
-        {
-          "text": "Reuniões",
-          "href": "/reunioes/",
-          "isInternal": true
-        },
-        {
-          "text": "Conhecimento",
-          "href": "/conhecimento/",
           "isInternal": true
         },
         {
@@ -106853,7 +106293,7 @@
     "pagesWithoutTitle": 66,
     "pagesWithoutH1": 15,
     "brokenLinks": 0,
-    "totalLinks": 14689
+    "totalLinks": 14577
   },
   "issues": [
     {
