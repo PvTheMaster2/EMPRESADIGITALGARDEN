@@ -29,15 +29,15 @@ module.exports = function (eleventyConfig) {
   // Plugin para navegação hierárquica e breadcrumbs
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
 
-  // Copy static assets - GARANTINDO PUBLICAÇÃO
-  eleventyConfig.addPassthroughCopy({"styles": "styles"});
-  eleventyConfig.addPassthroughCopy({"scripts": "scripts"});
-  eleventyConfig.addPassthroughCopy("99 - RESOURCES/Imagens");
-  eleventyConfig.addPassthroughCopy("**/*.png");
-  eleventyConfig.addPassthroughCopy("**/*.jpg");
-  eleventyConfig.addPassthroughCopy("**/*.pdf");
+  // Copy static assets - NOVA ESTRUTURA
+  eleventyConfig.addPassthroughCopy({"src/styles": "styles"});
+  eleventyConfig.addPassthroughCopy({"src/scripts": "scripts"});
+  eleventyConfig.addPassthroughCopy({"src/assets/images": "images"});
+  eleventyConfig.addPassthroughCopy("content/**/*.png");
+  eleventyConfig.addPassthroughCopy("content/**/*.jpg");
+  eleventyConfig.addPassthroughCopy("content/**/*.pdf");
 
-  // Configure markdown processing (basic for now)
+  // Configure markdown processing
   eleventyConfig.setLibrary(
     "md",
     markdownIt({
@@ -47,13 +47,6 @@ module.exports = function (eleventyConfig) {
       typographer: true,
     })
   );
-
-  // Add plugins (comment out temporarily to fix the build)
-  // eleventyConfig.addPlugin(tocPlugin, {
-  //   tags: ["h1", "h2", "h3"],
-  //   wrapper: "div",
-  //   wrapperClass: "toc",
-  // });
 
   // Add filters
   eleventyConfig.addFilter("slugify", function (str) {
@@ -128,7 +121,7 @@ module.exports = function (eleventyConfig) {
     if (!inputPath) return '/';
     
     let path = inputPath
-      .replace('./DIGITAL-GARDEN-EMPRESA/', '')  // Remove pasta base
+      .replace('./content/', '')  // Remove pasta content
       .replace('.md', '')  // Remove extensão
       .split("/")
       .map(seg => seg.replace(/^\d+-/, "").toLowerCase())  // Remove números e converte para minúsculo
@@ -183,7 +176,7 @@ module.exports = function (eleventyConfig) {
   // Disable freeze reserved data to allow content property
   eleventyConfig.setFreezeReservedData(false);
 
-  // Add global data
+  // Add global data - NOVA ESTRUTURA
   eleventyConfig.addGlobalData("site", {
     title: "Multisocios Empresarial",
     description: "Sistema de Gestão de Conhecimento Multisocios",
@@ -191,32 +184,32 @@ module.exports = function (eleventyConfig) {
     author: "Pedro Vitor",
   });
 
-  // Add navigation data globally
-  eleventyConfig.addGlobalData("navigation", require("./_data/navigation.js"));
+  // Add navigation data globally - NOVA ESTRUTURA
+  eleventyConfig.addGlobalData("navigation", require("./config/_data/navigation.js"));
 
-  // Collections for dynamic content
+  // Collections for dynamic content - NOVA ESTRUTURA
   eleventyConfig.addCollection("projetos", function(collectionApi) {
     return collectionApi.getAll().filter(item => {
-      return item.inputPath.match(/4-Projetos/) && item.data.title;
+      return item.inputPath.match(/content\/4-Projetos/) && item.data.title;
     });
   });
 
   eleventyConfig.addCollection("projetos_ativos", function(collectionApi) {
     return collectionApi.getAll().filter(item => {
-      return item.inputPath.match(/4-Projetos\/Ativos/) && item.data.title;
+      return item.inputPath.match(/content\/4-Projetos\/Ativos/) && item.data.title;
     });
   });
 
   eleventyConfig.addCollection("projetos_andamento", function(collectionApi) {
     return collectionApi.getAll().filter(item => {
-      return item.inputPath.match(/4-Projetos/) && 
+      return item.inputPath.match(/content\/4-Projetos/) && 
              item.data.status === "Em andamento";
     });
   });
 
   eleventyConfig.addCollection("pilotos_validados", function(collectionApi) {
     return collectionApi.getAll().filter(item => {
-      return item.inputPath.match(/4-Projetos/) && 
+      return item.inputPath.match(/content\/4-Projetos/) && 
              item.data.validation_score && 
              item.data.validation_score >= 8;
     });
@@ -224,25 +217,23 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addCollection("reunioes", function(collectionApi) {
     return collectionApi.getAll().filter(item => {
-      return item.inputPath.match(/6-Reunioes/) && item.data.title;
+      return item.inputPath.match(/content\/6-Reunioes/) && item.data.title;
     });
   });
 
   eleventyConfig.addCollection("governanca", function(collectionApi) {
     return collectionApi.getAll().filter(item => {
-      return item.inputPath.match(/1-Governanca/) && item.data.title;
+      return item.inputPath.match(/content\/1-Governanca/) && item.data.title;
     });
   });
 
-  // This will be handled by the template files
-
   return {
     dir: {
-      input: ".",
-      output: "dist",
-      includes: "_includes",
-      layouts: "_layouts", 
-      data: "_data",
+      input: "content",              // ✅ NOVA ESTRUTURA: conteúdo em content/
+      output: "build/dist",          // ✅ NOVA ESTRUTURA: build em build/dist/
+      includes: "../src/components/_includes",  // ✅ NOVA ESTRUTURA: componentes em src/
+      layouts: "../src/layouts",     // ✅ NOVA ESTRUTURA: layouts em src/
+      data: "../config/_data",       // ✅ NOVA ESTRUTURA: dados em config/
     },
     templateFormats: ["njk", "md", "html"],
     markdownTemplateEngine: "njk",

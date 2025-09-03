@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "b45bb5c28bbbbff3",
+        "id": "7b294cdac8d8299b",
         "type": "tabs",
         "children": [
           {
-            "id": "eacfb2a7981353a9",
+            "id": "29028b5f4b751a36",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "0-Dashboard-Executivo/Home-Executivo.md",
+                "file": "content/0-Dashboard-Executivo/Dashboard_Capacidade_Equipe.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Home-Executivo"
+              "title": "Dashboard_Capacidade_Equipe"
             }
           }
         ]
@@ -405,6 +405,36 @@
             "id": "2eaf26fa1ce631c0",
             "type": "leaf",
             "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          },
+          {
+            "id": "7bdb9d4675d10748",
+            "type": "leaf",
+            "state": {
+              "type": "semantic-search-tab",
+              "state": {},
+              "icon": "lucide-ghost",
+              "title": "semantic-search-tab"
+            }
+          },
+          {
+            "id": "6e920dad67b0d62c",
+            "type": "leaf",
+            "state": {
+              "type": "copilot-tab",
+              "state": {},
+              "icon": "lucide-ghost",
+              "title": "copilot-tab"
+            }
+          },
+          {
+            "id": "4a1333008d0e1dda",
+            "type": "leaf",
+            "state": {
               "type": "graph-analysis",
               "state": {},
               "icon": "lucide-ghost",
@@ -412,7 +442,7 @@
             }
           },
           {
-            "id": "7bdb9d4675d10748",
+            "id": "303256da5c90468f",
             "type": "leaf",
             "state": {
               "type": "semantic-search-tab",
@@ -422,7 +452,7 @@
             }
           },
           {
-            "id": "6e920dad67b0d62c",
+            "id": "ab230ca469808d8c",
             "type": "leaf",
             "state": {
               "type": "copilot-tab",
@@ -432,7 +462,7 @@
             }
           },
           {
-            "id": "4a1333008d0e1dda",
+            "id": "94aae5f5b89224a4",
             "type": "leaf",
             "state": {
               "type": "graph-analysis",
@@ -442,7 +472,7 @@
             }
           }
         ],
-        "currentTab": 32
+        "currentTab": 35
       }
     ],
     "direction": "horizontal",
@@ -469,54 +499,54 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "eacfb2a7981353a9",
+  "active": "29028b5f4b751a36",
   "lastOpenFiles": [
-    "node_modules/@chevrotain/gast/src/visitor.ts",
-    "node_modules/@chevrotain/gast/src/model.ts",
-    "node_modules/@chevrotain/gast/src/helpers.ts",
-    "node_modules/@chevrotain/gast/src/api.ts",
-    "node_modules/@chevrotain/gast/src",
-    "node_modules/cytoscape-cose-bilkent/test/example.js",
-    "node_modules/cytoscape-cose-bilkent/test",
-    "node_modules/dayjs/plugin/weekYear.d.ts",
-    "node_modules/dayjs/plugin/weekYear.js",
-    "node_modules/dayjs/plugin/weekOfYear.js",
-    "node_modules/dayjs/plugin/weekOfYear.d.ts",
-    "node_modules/local-pkg/README.md",
-    "node_modules/color-name/README.md",
-    "node_modules/d3-polygon/README.md",
-    "node_modules/cose-base/README.md",
-    "dist/99 - RESOURCES/99 - TEMPLATE/Prompt2.md",
-    "dist/99 - RESOURCES/Imagens/Pasted image 20250424000327.png",
-    "dist/99 - RESOURCES/Imagens/Pasted image 20250424000034.png",
-    "dist/99 - RESOURCES/Imagens/Pasted image 20250423235440.png",
-    "dist/99 - RESOURCES/Imagens/Pasted image 20250424000643.png",
-    "dist/99 - RESOURCES/Imagens/Pasted image 20250424000810.png",
-    "dist/99 - RESOURCES/Imagens/Pasted image 20250424000052.png",
-    "dist/99 - RESOURCES/Imagens/Pasted image 20250423235820.png",
-    "dist/99 - RESOURCES/Imagens/Pasted image 20250424000420.png",
-    "dist/99 - RESOURCES/Imagens/Pasted image 20250424000449.png",
-    "dist/99 - RESOURCES/Imagens/Pasted image 20250423235845.png",
-    "node_modules/juice/node_modules/commander/Readme.md",
-    "node_modules/html-minifier-terser/README.md",
-    "node_modules/form-data/node_modules/mime-db/HISTORY.md",
-    "node_modules/web-resource-inliner/node_modules/dom-serializer/README.md",
-    "node_modules/form-data/CHANGELOG.md",
-    "node_modules/data-urls/README.md",
-    "node_modules/etag/HISTORY.md",
-    "node_modules/depd/Readme.md",
-    "node_modules/web-resource-inliner/node_modules/domutils/readme.md",
-    "node_modules/@jridgewell/source-map/README.md",
-    "node_modules/@xmldom/xmldom/SECURITY.md",
-    "node_modules/@xmldom/xmldom/CHANGELOG.md",
-    "node_modules/@csstools/css-calc/LICENSE.md",
-    "node_modules/@csstools/css-calc/CHANGELOG.md",
-    "node_modules/@csstools/css-tokenizer/CHANGELOG.md",
-    "node_modules/@mermaid-js/parser/README.md",
-    "node_modules/katex/src/metrics/README.md",
+    "build/dist/99-RESOURCES/99 - TEMPLATE/TEMPLATE OFICIAL/index.html",
+    "build/dist/99-RESOURCES/99 - TEMPLATE/Template_Projeto/index.html",
+    "build/dist/99-RESOURCES/99 - TEMPLATE/TEMPLATE_R00/index.html",
+    "build/dist/99-RESOURCES/99 - TEMPLATE/Template_Intake_Simples/index.html",
+    "build/dist/99-RESOURCES/99 - TEMPLATE/Prompt.txt/index.html",
+    "build/dist/99-RESOURCES/99 - TEMPLATE/Prompt2.md/index.html",
+    "build/dist/99-RESOURCES/99 - TEMPLATE/new_tamplate/index.html",
+    "build/dist/99-RESOURCES/99 - TEMPLATE/Dashboard-Visual-Template-Fixed/index.html",
+    "build/dist/99-RESOURCES/99 - TEMPLATE/Dashboard-Visual-Template/index.html",
+    "build/dist/99-RESOURCES/99 - TEMPLATE/Dashboard-Projetos-Prazo-Visual-Template/index.html",
+    "build/dist/99-RESOURCES/99 - TEMPLATE/5_Structure Template 1/index.html",
+    "build/dist/99-RESOURCES/99 - TEMPLATE/Prompt2.md",
+    "build/dist/images/Imagens/Pasted image 20250424000929.png",
+    "build/dist/images/Imagens/Pasted image 20250424000902.png",
+    "build/dist/images/Imagens/Pasted image 20250424000810.png",
+    "build/dist/images/Imagens/Pasted image 20250424000643.png",
+    "build/dist/images/Imagens/Pasted image 20250424000551.png",
+    "build/dist/images/Imagens/Pasted image 20250424000515.png",
+    "build/dist/images/Imagens/Pasted image 20250424000449.png",
+    "build/dist/images/Imagens/Pasted image 20250424000420.png",
+    "build/dist/images/Imagens/Pasted image 20250424000251.png",
+    "build/dist/images/Imagens/Pasted image 20250424000327.png",
     "node_modules/katex/contrib/mhchem/README.md",
     "node_modules/katex/contrib/mathtex-script-type/README.md",
-    "node_modules/katex/node_modules/commander/Readme.md",
+    "node_modules/katex/contrib/copy-tex/README.md",
+    "node_modules/katex/contrib/auto-render/README.md",
+    "node_modules/undici/types/README.md",
+    "node_modules/katex/dist/README.md",
+    "node_modules/undici/docs/docs/best-practices/writing-tests.md",
+    "node_modules/undici/docs/docs/best-practices/proxy.md",
+    "node_modules/undici/docs/docs/best-practices/mocking-request.md",
+    "node_modules/undici/docs/docs/best-practices/client-certificate.md",
+    "node_modules/undici/docs/docs/api/WebSocket.md",
+    "node_modules/undici/docs/docs/api/RetryHandler.md",
+    "node_modules/undici/docs/docs/api/SnapshotAgent.md",
+    "node_modules/undici/docs/docs/api/Util.md",
+    "node_modules/undici/docs/docs/api/RetryAgent.md",
+    "node_modules/undici/docs/docs/api/RedirectHandler.md",
+    "node_modules/undici/docs/docs/api/ProxyAgent.md",
+    "node_modules/undici/docs/docs/api/PoolStats.md",
+    "node_modules/undici/docs/docs/api/MockPool.md",
+    "node_modules/undici/docs/docs/api/Pool.md",
+    "node_modules/undici/docs/docs/api/MockErrors.md",
+    "node_modules/undici/docs/docs/api/MockClient.md",
+    "node_modules/undici/docs/docs/api/MockCallHistoryLog.md",
+    "node_modules/undici/docs/docs/api/MockCallHistory.md",
     "docs/CANVAS SISTEMA IDEIA.canvas",
     "teste.canvas",
     "CANVAS SISTEMA IDEIA.canvas",
