@@ -1,0 +1,2052 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="theme-dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Digital Garden Empresarial - Multisocios - Multisocios Empresarial</title>
+  <meta name="description" content="Sistema de Gestão de Conhecimento Multisocios" />
+  
+  <!-- CSS do tema Obsidian e customizações -->
+  <link rel="stylesheet" href="/styles/main.css" />
+  <link rel="stylesheet" href="/styles/sidebar.css" />
+  
+  <!-- Favicon e meta tags para PWA -->
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+  <meta name="theme-color" content="#1e1e1e" />
+</head>
+<body class="has-sidebar">
+  
+  <header class="site-header">
+    <nav class="main-navigation">
+      <div class="nav-brand">
+        <button class="mobile-sidebar-toggle" onclick="toggleSidebar()">
+          <span class="hamburger"></span>
+        </button>
+        <a href="/" class="brand-link">
+          🌱 Multisocios Empresarial
+        </a>
+      </div>
+      
+      <div class="nav-links">
+        <a href="/">Dashboard</a>
+        <a href="/1-Governanca/README/">Governança</a>
+        <a href="/4-Projetos/README/">Projetos</a>
+        <a href="/2-Equipes/README/">Equipes</a>
+        <a href="/5-Processos/README/">Processos</a>
+        <a href="/6-Reunioes/README/">Reuniões</a>
+        <a href="/7-Conhecimento/README/">Conhecimento</a>
+      </div>
+      
+      <div class="nav-tools">
+        <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
+        <button class="search-toggle" onclick="toggleSearch()">🔍</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Sidebar Navigation -->
+  <aside class="sidebar" data-state="closed" aria-hidden="true">
+    <div class="sidebar-header">
+      <div class="sidebar-brand">
+        <a href="/" class="brand-link">🌱 Multisocios</a>
+      </div>
+      <button class="sidebar-close" onclick="closeSidebar()" title="Fechar sidebar">
+        <span class="close-icon">✕</span>
+      </button>
+    </div>
+    
+    <div class="sidebar-content">
+      <div class="sidebar-search">
+        <input type="search" placeholder="Buscar conteúdo..." class="search-input" id="sidebar-search">
+      </div>
+      
+      <div class="sidebar-tree">
+        
+        
+        <div class="tree-item" data-level="0">
+          <div class="tree-node">
+            <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+              <span class="tree-icon">▶</span>
+            </button>
+            <a href="/" class="tree-link active">
+              <span class="tree-label">🏠 Home</span>
+            </a>
+          </div>
+          
+          
+        </div>
+        
+        <div class="tree-item" data-level="0">
+          <div class="tree-node">
+            <button class="tree-toggle" onclick="toggleTreeNode(this)" >
+              <span class="tree-icon">▶</span>
+            </button>
+            <a href="/dashboard-overview/" class="tree-link ">
+              <span class="tree-label">📊 Dashboard Executivo</span>
+            </a>
+          </div>
+          
+          
+          <div class="tree-children">
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/0-dashboard-executivo/innovation-pipeline/" class="tree-link ">
+                  <span class="tree-label">💡 Innovation Pipeline</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/0-dashboard-executivo/kpis-principais/" class="tree-link ">
+                  <span class="tree-label">📈 KPIs Principais</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/0-dashboard-executivo/decisoes-estrategicas/" class="tree-link ">
+                  <span class="tree-label">🎯 Decisões Estratégicas</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/0-dashboard-executivo/dashboard-projetos-prazo/" class="tree-link ">
+                  <span class="tree-label">📅 Projetos por Prazo</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/0-dashboard-executivo/dashboard-projetos-prazo-visual/" class="tree-link ">
+                  <span class="tree-label">🎨 Projetos Visuais</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/0-dashboard-executivo/dashboard_capacidade_equipe/" class="tree-link ">
+                  <span class="tree-label">👥 Capacidade da Equipe</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/0-dashboard-executivo/executive-auto/" class="tree-link ">
+                  <span class="tree-label">⚡ Executive Auto</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/0-dashboard-executivo/sistema_metricas_avancadas/" class="tree-link ">
+                  <span class="tree-label">📊 Métricas Avançadas</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+          </div>
+          
+        </div>
+        
+        <div class="tree-item" data-level="0">
+          <div class="tree-node">
+            <button class="tree-toggle" onclick="toggleTreeNode(this)" >
+              <span class="tree-icon">▶</span>
+            </button>
+            <a href="/1-governanca/" class="tree-link ">
+              <span class="tree-label">🏛️ Governança</span>
+            </a>
+          </div>
+          
+          
+          <div class="tree-children">
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/1-governanca/acordo_socios_final/" class="tree-link ">
+                  <span class="tree-label">📜 Acordo de Sócios</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/1-governanca/compliance_log/" class="tree-link ">
+                  <span class="tree-label">⚖️ Compliance Log</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/1-governanca/etica_uso_ia/" class="tree-link ">
+                  <span class="tree-label">🤖 Ética no Uso de IA</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/1-governanca/faq_compliance/" class="tree-link ">
+                  <span class="tree-label">❓ FAQ Compliance</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/1-governanca/manual_treinamento_compliance/" class="tree-link ">
+                  <span class="tree-label">📚 Manual de Treinamento</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/1-governanca/playbook_comercial_v0/" class="tree-link ">
+                  <span class="tree-label">📈 Playbook Comercial</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+          </div>
+          
+        </div>
+        
+        <div class="tree-item" data-level="0">
+          <div class="tree-node">
+            <button class="tree-toggle" onclick="toggleTreeNode(this)" >
+              <span class="tree-icon">▶</span>
+            </button>
+            <a href="/2-equipes/" class="tree-link ">
+              <span class="tree-label">👥 Equipes</span>
+            </a>
+          </div>
+          
+          
+          <div class="tree-children">
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/2-equipes/desenvolvimento/" class="tree-link ">
+                  <span class="tree-label">💻 Desenvolvimento</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/2-equipes/marketing/" class="tree-link ">
+                  <span class="tree-label">🎯 Marketing</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/2-equipes/vendas/" class="tree-link ">
+                  <span class="tree-label">💼 Vendas</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/2-equipes/operacoes/" class="tree-link ">
+                  <span class="tree-label">⚙️ Operações</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/2-equipes/lideranca/" class="tree-link ">
+                  <span class="tree-label">👔 Liderança</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+          </div>
+          
+        </div>
+        
+        <div class="tree-item" data-level="0">
+          <div class="tree-node">
+            <button class="tree-toggle" onclick="toggleTreeNode(this)" >
+              <span class="tree-icon">▶</span>
+            </button>
+            <a href="/3-mercado/" class="tree-link ">
+              <span class="tree-label">🌍 Mercado</span>
+            </a>
+          </div>
+          
+          
+          <div class="tree-children">
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/3-mercado/clientes/" class="tree-link ">
+                  <span class="tree-label">👥 Clientes</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/3-mercado/concorrentes/" class="tree-link ">
+                  <span class="tree-label">⚔️ Concorrentes</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/3-mercado/fornecedores/" class="tree-link ">
+                  <span class="tree-label">🤝 Fornecedores</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/3-mercado/tendencias/" class="tree-link ">
+                  <span class="tree-label">🚀 Tendências</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+          </div>
+          
+        </div>
+        
+        <div class="tree-item" data-level="0">
+          <div class="tree-node">
+            <button class="tree-toggle" onclick="toggleTreeNode(this)" >
+              <span class="tree-icon">▶</span>
+            </button>
+            <a href="/4-projetos/" class="tree-link ">
+              <span class="tree-label">📋 Projetos</span>
+            </a>
+          </div>
+          
+          
+          <div class="tree-children">
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" >
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/4-projetos/ativos/" class="tree-link ">
+                  <span class="tree-label">🚀 Ativos</span>
+                </a>
+              </div>
+              
+              
+              <div class="tree-children">
+                
+                <div class="tree-item" data-level="2">
+                  <div class="tree-node">
+                    <span class="tree-spacer"></span>
+                    <a href="/4-projetos/ativos/prj-aeralyn/" class="tree-link ">
+                      <span class="tree-label">🌟 PRJ-AERALYN</span>
+                    </a>
+                  </div>
+                </div>
+                
+                <div class="tree-item" data-level="2">
+                  <div class="tree-node">
+                    <span class="tree-spacer"></span>
+                    <a href="/4-projetos/ativos/prj-trip-match/" class="tree-link ">
+                      <span class="tree-label">🎮 Trip-Match</span>
+                    </a>
+                  </div>
+                </div>
+                
+                <div class="tree-item" data-level="2">
+                  <div class="tree-node">
+                    <span class="tree-spacer"></span>
+                    <a href="/4-projetos/ativos/prj-vault-empresarial/" class="tree-link ">
+                      <span class="tree-label">🏢 Vault Empresarial</span>
+                    </a>
+                  </div>
+                </div>
+                
+                <div class="tree-item" data-level="2">
+                  <div class="tree-node">
+                    <span class="tree-spacer"></span>
+                    <a href="/4-projetos/ativos/prj-curso-ia-inteligente/" class="tree-link ">
+                      <span class="tree-label">🎓 Curso IA Inteligente</span>
+                    </a>
+                  </div>
+                </div>
+                
+                <div class="tree-item" data-level="2">
+                  <div class="tree-node">
+                    <span class="tree-spacer"></span>
+                    <a href="/4-projetos/ativos/prj-app-desenvolvimento-cognitivo/" class="tree-link ">
+                      <span class="tree-label">📱 App Desenvolvimento</span>
+                    </a>
+                  </div>
+                </div>
+                
+                <div class="tree-item" data-level="2">
+                  <div class="tree-node">
+                    <span class="tree-spacer"></span>
+                    <a href="/4-projetos/ativos/prj-nostalgia-musical/" class="tree-link ">
+                      <span class="tree-label">🎵 Nostalgia Musical</span>
+                    </a>
+                  </div>
+                </div>
+                
+                <div class="tree-item" data-level="2">
+                  <div class="tree-node">
+                    <span class="tree-spacer"></span>
+                    <a href="/4-projetos/ativos/prj-plataforma-cursos/" class="tree-link ">
+                      <span class="tree-label">🎓 Plataforma Cursos</span>
+                    </a>
+                  </div>
+                </div>
+                
+              </div>
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" >
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/4-projetos/em-desenvolvimento/" class="tree-link ">
+                  <span class="tree-label">⚡ Em Desenvolvimento</span>
+                </a>
+              </div>
+              
+              
+              <div class="tree-children">
+                
+                <div class="tree-item" data-level="2">
+                  <div class="tree-node">
+                    <span class="tree-spacer"></span>
+                    <a href="/4-projetos/em-desenvolvimento/prj-dev-whatsbot-academia/" class="tree-link ">
+                      <span class="tree-label">🤖 WhatsBot Academia</span>
+                    </a>
+                  </div>
+                </div>
+                
+                <div class="tree-item" data-level="2">
+                  <div class="tree-node">
+                    <span class="tree-spacer"></span>
+                    <a href="/4-projetos/em-desenvolvimento/prj-web-site-portfolio-engenharia/" class="tree-link ">
+                      <span class="tree-label">🌐 Portfolio Engenharia</span>
+                    </a>
+                  </div>
+                </div>
+                
+              </div>
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" >
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/4-projetos/templates/" class="tree-link ">
+                  <span class="tree-label">📝 Templates</span>
+                </a>
+              </div>
+              
+              
+              <div class="tree-children">
+                
+                <div class="tree-item" data-level="2">
+                  <div class="tree-node">
+                    <span class="tree-spacer"></span>
+                    <a href="/4-projetos/templates/exemplo_intake_preenchido/" class="tree-link ">
+                      <span class="tree-label">📋 Exemplo Intake</span>
+                    </a>
+                  </div>
+                </div>
+                
+                <div class="tree-item" data-level="2">
+                  <div class="tree-node">
+                    <span class="tree-spacer"></span>
+                    <a href="/4-projetos/templates/exemplo_minimalista/" class="tree-link ">
+                      <span class="tree-label">⚡ Minimalista</span>
+                    </a>
+                  </div>
+                </div>
+                
+                <div class="tree-item" data-level="2">
+                  <div class="tree-node">
+                    <span class="tree-spacer"></span>
+                    <a href="/4-projetos/templates/exemplo_primeira_cartada/" class="tree-link ">
+                      <span class="tree-label">🎯 Primeira Cartada</span>
+                    </a>
+                  </div>
+                </div>
+                
+                <div class="tree-item" data-level="2">
+                  <div class="tree-node">
+                    <span class="tree-spacer"></span>
+                    <a href="/4-projetos/templates/template piloto-exemplo-sistema/" class="tree-link ">
+                      <span class="tree-label">🏗️ Template Piloto</span>
+                    </a>
+                  </div>
+                </div>
+                
+                <div class="tree-item" data-level="2">
+                  <div class="tree-node">
+                    <span class="tree-spacer"></span>
+                    <a href="/4-projetos/templates/template piloto_crm_arquitetos/" class="tree-link ">
+                      <span class="tree-label">🏢 CRM Arquitetos</span>
+                    </a>
+                  </div>
+                </div>
+                
+              </div>
+              
+            </div>
+            
+          </div>
+          
+        </div>
+        
+        <div class="tree-item" data-level="0">
+          <div class="tree-node">
+            <button class="tree-toggle" onclick="toggleTreeNode(this)" >
+              <span class="tree-icon">▶</span>
+            </button>
+            <a href="/5-processos/" class="tree-link ">
+              <span class="tree-label">⚙️ Processos</span>
+            </a>
+          </div>
+          
+          
+          <div class="tree-children">
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/5-processos/sistema_gestao_capacidade_sprints/" class="tree-link ">
+                  <span class="tree-label">📈 Gestão de Sprints</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/5-processos/guia_uso_sistema_capacidade/" class="tree-link ">
+                  <span class="tree-label">📖 Guia do Sistema</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/5-processos/sops/" class="tree-link ">
+                  <span class="tree-label">📋 SOPs</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/5-processos/workflows/" class="tree-link ">
+                  <span class="tree-label">⚡ Workflows</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/5-processos/metricas/" class="tree-link ">
+                  <span class="tree-label">📊 Métricas</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+          </div>
+          
+        </div>
+        
+        <div class="tree-item" data-level="0">
+          <div class="tree-node">
+            <button class="tree-toggle" onclick="toggleTreeNode(this)" >
+              <span class="tree-icon">▶</span>
+            </button>
+            <a href="/6-reunioes/" class="tree-link ">
+              <span class="tree-label">📅 Reuniões</span>
+            </a>
+          </div>
+          
+          
+          <div class="tree-children">
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/6-reunioes/2025-08-31-reuniao-executiva-sistema/" class="tree-link ">
+                  <span class="tree-label">🎯 Reunião Executiva</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/6-reunioes/2025-09-01-reuniao-analise-pessimista-projetos/" class="tree-link ">
+                  <span class="tree-label">📊 Análise Pessimista</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/6-reunioes/2025-09-01-reuniao-criacao-projeto-whatsbot/" class="tree-link ">
+                  <span class="tree-label">🤖 Criação WhatsBot</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/6-reunioes/2025-09-01-reuniao-criacao-sistema-geracao-ideias/" class="tree-link ">
+                  <span class="tree-label">💡 Sistema de Ideias</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/6-reunioes/conselho/" class="tree-link ">
+                  <span class="tree-label">👔 Conselho</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/6-reunioes/operacional/" class="tree-link ">
+                  <span class="tree-label">⚡ Operacional</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/6-reunioes/projetos/" class="tree-link ">
+                  <span class="tree-label">📋 Projetos</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+          </div>
+          
+        </div>
+        
+        <div class="tree-item" data-level="0">
+          <div class="tree-node">
+            <button class="tree-toggle" onclick="toggleTreeNode(this)" >
+              <span class="tree-icon">▶</span>
+            </button>
+            <a href="/7-conhecimento/" class="tree-link ">
+              <span class="tree-label">🧠 Conhecimento</span>
+            </a>
+          </div>
+          
+          
+          <div class="tree-children">
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/7-conhecimento/ia/" class="tree-link ">
+                  <span class="tree-label">🤖 Inteligência Artificial</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/7-conhecimento/tecnologia/" class="tree-link ">
+                  <span class="tree-label">💻 Tecnologia</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/7-conhecimento/negocios/" class="tree-link ">
+                  <span class="tree-label">📈 Negócios</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/7-conhecimento/processos/" class="tree-link ">
+                  <span class="tree-label">🏗️ Processos</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+          </div>
+          
+        </div>
+        
+        <div class="tree-item" data-level="0">
+          <div class="tree-node">
+            <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+              <span class="tree-icon">▶</span>
+            </button>
+            <a href="/" class="tree-link active">
+              <span class="tree-label">🏠 Home</span>
+            </a>
+          </div>
+          
+          
+        </div>
+        
+        <div class="tree-item" data-level="0">
+          <div class="tree-node">
+            <button class="tree-toggle" onclick="toggleTreeNode(this)" >
+              <span class="tree-icon">▶</span>
+            </button>
+            <a href="/dashboard-overview/" class="tree-link ">
+              <span class="tree-label">📊 Dashboard Executivo</span>
+            </a>
+          </div>
+          
+          
+          <div class="tree-children">
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/0-dashboard-executivo/innovation-pipeline/" class="tree-link ">
+                  <span class="tree-label">💡 Innovation Pipeline</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/0-dashboard-executivo/kpis-principais/" class="tree-link ">
+                  <span class="tree-label">📈 KPIs Principais</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/0-dashboard-executivo/decisoes-estrategicas/" class="tree-link ">
+                  <span class="tree-label">🎯 Decisões Estratégicas</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/0-dashboard-executivo/dashboard-projetos-prazo/" class="tree-link ">
+                  <span class="tree-label">📅 Projetos por Prazo</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/0-dashboard-executivo/dashboard-projetos-prazo-visual/" class="tree-link ">
+                  <span class="tree-label">🎨 Projetos Visuais</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/0-dashboard-executivo/dashboard_capacidade_equipe/" class="tree-link ">
+                  <span class="tree-label">👥 Capacidade da Equipe</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/0-dashboard-executivo/executive-auto/" class="tree-link ">
+                  <span class="tree-label">⚡ Executive Auto</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/0-dashboard-executivo/sistema_metricas_avancadas/" class="tree-link ">
+                  <span class="tree-label">📊 Métricas Avançadas</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+          </div>
+          
+        </div>
+        
+        <div class="tree-item" data-level="0">
+          <div class="tree-node">
+            <button class="tree-toggle" onclick="toggleTreeNode(this)" >
+              <span class="tree-icon">▶</span>
+            </button>
+            <a href="/1-governanca/" class="tree-link ">
+              <span class="tree-label">🏛️ Governança</span>
+            </a>
+          </div>
+          
+          
+          <div class="tree-children">
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/1-governanca/acordo_socios_final/" class="tree-link ">
+                  <span class="tree-label">📜 Acordo de Sócios</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/1-governanca/compliance_log/" class="tree-link ">
+                  <span class="tree-label">⚖️ Compliance Log</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/1-governanca/etica_uso_ia/" class="tree-link ">
+                  <span class="tree-label">🤖 Ética no Uso de IA</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/1-governanca/faq_compliance/" class="tree-link ">
+                  <span class="tree-label">❓ FAQ Compliance</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/1-governanca/manual_treinamento_compliance/" class="tree-link ">
+                  <span class="tree-label">📚 Manual de Treinamento</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/1-governanca/playbook_comercial_v0/" class="tree-link ">
+                  <span class="tree-label">📈 Playbook Comercial</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+          </div>
+          
+        </div>
+        
+        <div class="tree-item" data-level="0">
+          <div class="tree-node">
+            <button class="tree-toggle" onclick="toggleTreeNode(this)" >
+              <span class="tree-icon">▶</span>
+            </button>
+            <a href="/2-equipes/" class="tree-link ">
+              <span class="tree-label">👥 Equipes</span>
+            </a>
+          </div>
+          
+          
+          <div class="tree-children">
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/2-equipes/desenvolvimento/" class="tree-link ">
+                  <span class="tree-label">💻 Desenvolvimento</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/2-equipes/marketing/" class="tree-link ">
+                  <span class="tree-label">🎯 Marketing</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/2-equipes/vendas/" class="tree-link ">
+                  <span class="tree-label">💼 Vendas</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/2-equipes/operacoes/" class="tree-link ">
+                  <span class="tree-label">⚙️ Operações</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/2-equipes/lideranca/" class="tree-link ">
+                  <span class="tree-label">👔 Liderança</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+          </div>
+          
+        </div>
+        
+        <div class="tree-item" data-level="0">
+          <div class="tree-node">
+            <button class="tree-toggle" onclick="toggleTreeNode(this)" >
+              <span class="tree-icon">▶</span>
+            </button>
+            <a href="/3-mercado/" class="tree-link ">
+              <span class="tree-label">🌍 Mercado</span>
+            </a>
+          </div>
+          
+          
+          <div class="tree-children">
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/3-mercado/clientes/" class="tree-link ">
+                  <span class="tree-label">👥 Clientes</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/3-mercado/concorrentes/" class="tree-link ">
+                  <span class="tree-label">⚔️ Concorrentes</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/3-mercado/fornecedores/" class="tree-link ">
+                  <span class="tree-label">🤝 Fornecedores</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/3-mercado/tendencias/" class="tree-link ">
+                  <span class="tree-label">🚀 Tendências</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+          </div>
+          
+        </div>
+        
+        <div class="tree-item" data-level="0">
+          <div class="tree-node">
+            <button class="tree-toggle" onclick="toggleTreeNode(this)" >
+              <span class="tree-icon">▶</span>
+            </button>
+            <a href="/4-projetos/" class="tree-link ">
+              <span class="tree-label">📋 Projetos</span>
+            </a>
+          </div>
+          
+          
+          <div class="tree-children">
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" >
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/4-projetos/ativos/" class="tree-link ">
+                  <span class="tree-label">🚀 Ativos</span>
+                </a>
+              </div>
+              
+              
+              <div class="tree-children">
+                
+                <div class="tree-item" data-level="2">
+                  <div class="tree-node">
+                    <span class="tree-spacer"></span>
+                    <a href="/4-projetos/ativos/prj-aeralyn/" class="tree-link ">
+                      <span class="tree-label">🌟 PRJ-AERALYN</span>
+                    </a>
+                  </div>
+                </div>
+                
+                <div class="tree-item" data-level="2">
+                  <div class="tree-node">
+                    <span class="tree-spacer"></span>
+                    <a href="/4-projetos/ativos/prj-trip-match/" class="tree-link ">
+                      <span class="tree-label">🎮 Trip-Match</span>
+                    </a>
+                  </div>
+                </div>
+                
+                <div class="tree-item" data-level="2">
+                  <div class="tree-node">
+                    <span class="tree-spacer"></span>
+                    <a href="/4-projetos/ativos/prj-vault-empresarial/" class="tree-link ">
+                      <span class="tree-label">🏢 Vault Empresarial</span>
+                    </a>
+                  </div>
+                </div>
+                
+                <div class="tree-item" data-level="2">
+                  <div class="tree-node">
+                    <span class="tree-spacer"></span>
+                    <a href="/4-projetos/ativos/prj-curso-ia-inteligente/" class="tree-link ">
+                      <span class="tree-label">🎓 Curso IA Inteligente</span>
+                    </a>
+                  </div>
+                </div>
+                
+                <div class="tree-item" data-level="2">
+                  <div class="tree-node">
+                    <span class="tree-spacer"></span>
+                    <a href="/4-projetos/ativos/prj-app-desenvolvimento-cognitivo/" class="tree-link ">
+                      <span class="tree-label">📱 App Desenvolvimento</span>
+                    </a>
+                  </div>
+                </div>
+                
+                <div class="tree-item" data-level="2">
+                  <div class="tree-node">
+                    <span class="tree-spacer"></span>
+                    <a href="/4-projetos/ativos/prj-nostalgia-musical/" class="tree-link ">
+                      <span class="tree-label">🎵 Nostalgia Musical</span>
+                    </a>
+                  </div>
+                </div>
+                
+                <div class="tree-item" data-level="2">
+                  <div class="tree-node">
+                    <span class="tree-spacer"></span>
+                    <a href="/4-projetos/ativos/prj-plataforma-cursos/" class="tree-link ">
+                      <span class="tree-label">🎓 Plataforma Cursos</span>
+                    </a>
+                  </div>
+                </div>
+                
+              </div>
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" >
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/4-projetos/em-desenvolvimento/" class="tree-link ">
+                  <span class="tree-label">⚡ Em Desenvolvimento</span>
+                </a>
+              </div>
+              
+              
+              <div class="tree-children">
+                
+                <div class="tree-item" data-level="2">
+                  <div class="tree-node">
+                    <span class="tree-spacer"></span>
+                    <a href="/4-projetos/em-desenvolvimento/prj-dev-whatsbot-academia/" class="tree-link ">
+                      <span class="tree-label">🤖 WhatsBot Academia</span>
+                    </a>
+                  </div>
+                </div>
+                
+                <div class="tree-item" data-level="2">
+                  <div class="tree-node">
+                    <span class="tree-spacer"></span>
+                    <a href="/4-projetos/em-desenvolvimento/prj-web-site-portfolio-engenharia/" class="tree-link ">
+                      <span class="tree-label">🌐 Portfolio Engenharia</span>
+                    </a>
+                  </div>
+                </div>
+                
+              </div>
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" >
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/4-projetos/templates/" class="tree-link ">
+                  <span class="tree-label">📝 Templates</span>
+                </a>
+              </div>
+              
+              
+              <div class="tree-children">
+                
+                <div class="tree-item" data-level="2">
+                  <div class="tree-node">
+                    <span class="tree-spacer"></span>
+                    <a href="/4-projetos/templates/exemplo_intake_preenchido/" class="tree-link ">
+                      <span class="tree-label">📋 Exemplo Intake</span>
+                    </a>
+                  </div>
+                </div>
+                
+                <div class="tree-item" data-level="2">
+                  <div class="tree-node">
+                    <span class="tree-spacer"></span>
+                    <a href="/4-projetos/templates/exemplo_minimalista/" class="tree-link ">
+                      <span class="tree-label">⚡ Minimalista</span>
+                    </a>
+                  </div>
+                </div>
+                
+                <div class="tree-item" data-level="2">
+                  <div class="tree-node">
+                    <span class="tree-spacer"></span>
+                    <a href="/4-projetos/templates/exemplo_primeira_cartada/" class="tree-link ">
+                      <span class="tree-label">🎯 Primeira Cartada</span>
+                    </a>
+                  </div>
+                </div>
+                
+                <div class="tree-item" data-level="2">
+                  <div class="tree-node">
+                    <span class="tree-spacer"></span>
+                    <a href="/4-projetos/templates/template piloto-exemplo-sistema/" class="tree-link ">
+                      <span class="tree-label">🏗️ Template Piloto</span>
+                    </a>
+                  </div>
+                </div>
+                
+                <div class="tree-item" data-level="2">
+                  <div class="tree-node">
+                    <span class="tree-spacer"></span>
+                    <a href="/4-projetos/templates/template piloto_crm_arquitetos/" class="tree-link ">
+                      <span class="tree-label">🏢 CRM Arquitetos</span>
+                    </a>
+                  </div>
+                </div>
+                
+              </div>
+              
+            </div>
+            
+          </div>
+          
+        </div>
+        
+        <div class="tree-item" data-level="0">
+          <div class="tree-node">
+            <button class="tree-toggle" onclick="toggleTreeNode(this)" >
+              <span class="tree-icon">▶</span>
+            </button>
+            <a href="/5-processos/" class="tree-link ">
+              <span class="tree-label">⚙️ Processos</span>
+            </a>
+          </div>
+          
+          
+          <div class="tree-children">
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/5-processos/sistema_gestao_capacidade_sprints/" class="tree-link ">
+                  <span class="tree-label">📈 Gestão de Sprints</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/5-processos/guia_uso_sistema_capacidade/" class="tree-link ">
+                  <span class="tree-label">📖 Guia do Sistema</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/5-processos/sops/" class="tree-link ">
+                  <span class="tree-label">📋 SOPs</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/5-processos/workflows/" class="tree-link ">
+                  <span class="tree-label">⚡ Workflows</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/5-processos/metricas/" class="tree-link ">
+                  <span class="tree-label">📊 Métricas</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+          </div>
+          
+        </div>
+        
+        <div class="tree-item" data-level="0">
+          <div class="tree-node">
+            <button class="tree-toggle" onclick="toggleTreeNode(this)" >
+              <span class="tree-icon">▶</span>
+            </button>
+            <a href="/6-reunioes/" class="tree-link ">
+              <span class="tree-label">📅 Reuniões</span>
+            </a>
+          </div>
+          
+          
+          <div class="tree-children">
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/6-reunioes/2025-08-31-reuniao-executiva-sistema/" class="tree-link ">
+                  <span class="tree-label">🎯 Reunião Executiva</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/6-reunioes/2025-09-01-reuniao-analise-pessimista-projetos/" class="tree-link ">
+                  <span class="tree-label">📊 Análise Pessimista</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/6-reunioes/2025-09-01-reuniao-criacao-projeto-whatsbot/" class="tree-link ">
+                  <span class="tree-label">🤖 Criação WhatsBot</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/6-reunioes/2025-09-01-reuniao-criacao-sistema-geracao-ideias/" class="tree-link ">
+                  <span class="tree-label">💡 Sistema de Ideias</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/6-reunioes/conselho/" class="tree-link ">
+                  <span class="tree-label">👔 Conselho</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/6-reunioes/operacional/" class="tree-link ">
+                  <span class="tree-label">⚡ Operacional</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/6-reunioes/projetos/" class="tree-link ">
+                  <span class="tree-label">📋 Projetos</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+          </div>
+          
+        </div>
+        
+        <div class="tree-item" data-level="0">
+          <div class="tree-node">
+            <button class="tree-toggle" onclick="toggleTreeNode(this)" >
+              <span class="tree-icon">▶</span>
+            </button>
+            <a href="/7-conhecimento/" class="tree-link ">
+              <span class="tree-label">🧠 Conhecimento</span>
+            </a>
+          </div>
+          
+          
+          <div class="tree-children">
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/7-conhecimento/ia/" class="tree-link ">
+                  <span class="tree-label">🤖 Inteligência Artificial</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/7-conhecimento/tecnologia/" class="tree-link ">
+                  <span class="tree-label">💻 Tecnologia</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/7-conhecimento/negocios/" class="tree-link ">
+                  <span class="tree-label">📈 Negócios</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/7-conhecimento/processos/" class="tree-link ">
+                  <span class="tree-label">🏗️ Processos</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+          </div>
+          
+        </div>
+        
+      </div>
+    </div>
+  </aside>
+
+  <!-- Overlay para mobile -->
+  <div class="sidebar-overlay" aria-hidden="true"></div>
+
+  <main id="main" class="site-main" tabindex="-1">
+    <div class="content-wrapper">
+      
+      <!-- Breadcrumb navegação com eleventyNavigation -->
+
+
+
+      <!-- Conteúdo principal da página -->
+      <article class="page-content">
+        
+        <header class="page-header">
+          <h1 class="page-title">Digital Garden Empresarial - Multisocios</h1>
+          
+          <!-- Metadados da página se existirem -->
+          
+          <div class="page-meta">
+            
+            
+            
+            <div class="page-status">
+              <span class="status status-active">active</span>
+            </div>
+            
+            
+            
+            
+            
+          </div>
+          
+        </header>
+        
+
+        <!-- Conteúdo renderizado do Markdown -->
+        <div class="page-body">
+          <h1>🌱 Digital Garden Empresarial - Multisocios</h1>
+<p>Bem-vindo ao <strong>Sistema de Gestão de Conhecimento</strong> da Multisocios! Este é seu hub central para navegar por todas as informações, projetos e processos da empresa.</p>
+<h2>🎯 Navegação Principal</h2>
+<h3>📊 <a href="0-Dashboard-Executivo/">Dashboard Executivo</a></h3>
+<ul>
+<li><strong><a href="0-Dashboard-Executivo/Home-Executivo/">Home Executivo</a></strong> - Visão geral completa</li>
+<li><strong><a href="0-Dashboard-Executivo/KPIs-Principais/">KPIs Principais</a></strong> - Métricas em tempo real</li>
+<li><strong><a href="0-Dashboard-Executivo/Innovation-Pipeline/">Innovation Pipeline</a></strong> - Pipeline de inovação</li>
+<li><strong><a href="0-Dashboard-Executivo/Executive-Auto/">Executive Auto</a></strong> - Dashboard automático</li>
+</ul>
+<h3>🏛️ <a href="1-Governanca/">Governança</a></h3>
+<ul>
+<li>Compliance e políticas empresariais</li>
+<li>Estrutura societária e acordos</li>
+<li>Revisões legais e aprovações</li>
+</ul>
+<h3>👥 <a href="2-Equipes/">Equipes</a></h3>
+<ul>
+<li>Gestão de pessoas e capacidades</li>
+<li>Organograma e responsabilidades</li>
+<li>Avaliações e desenvolvimento</li>
+</ul>
+<h3>📈 <a href="3-Mercado/">Mercado</a></h3>
+<ul>
+<li>Análise de mercado e concorrentes</li>
+<li>Tendências e oportunidades</li>
+<li>Inteligência competitiva</li>
+</ul>
+<h3>📋 <a href="4-Projetos/">Projetos</a></h3>
+<ul>
+<li><strong><a href="4-Projetos/Ativos/">Ativos</a></strong> - Projetos em execução</li>
+<li><strong><a href="4-Projetos/Backlog/">Backlog</a></strong> - Ideias aprovadas</li>
+<li><strong><a href="4-Projetos/Em-Desenvolvimento/">Em Desenvolvimento</a></strong> - Desenvolvimento ativo</li>
+<li><strong><a href="4-Projetos/Pilotos/">Pilotos</a></strong> - Experimentos e validações</li>
+<li><strong><a href="4-Projetos/Concluidos/">Concluídos</a></strong> - Projetos finalizados</li>
+</ul>
+<h3>⚙️ <a href="5-Processos/">Processos</a></h3>
+<ul>
+<li>Workflows e SOPs</li>
+<li>Automações e integrações</li>
+<li>Documentação técnica</li>
+</ul>
+<h3>🤝 <a href="6-Reunioes/">Reuniões</a></h3>
+<ul>
+<li>Atas de reunião</li>
+<li>Decisões e follow-ups</li>
+<li>Calendário de eventos</li>
+</ul>
+<h3>📚 <a href="7-Conhecimento/">Conhecimento</a></h3>
+<ul>
+<li>Base de conhecimento</li>
+<li>Documentação técnica</li>
+<li>Melhores práticas</li>
+</ul>
+<h2>🚀 Funcionalidades</h2>
+<h3>🔍 Sistema de Busca</h3>
+<ul>
+<li>Busca global em todo o conteúdo</li>
+<li>Filtros por categoria e tags</li>
+<li>Links inteligentes entre páginas</li>
+</ul>
+<h3>📊 Dashboards Dinâmicos</h3>
+<ul>
+<li>Métricas atualizadas automaticamente</li>
+<li>Visualizações interativas</li>
+<li>Relatórios personalizados</li>
+</ul>
+<h3>🔗 Navegação Inteligente</h3>
+<ul>
+<li>Links bidirecionais automáticos</li>
+<li>Breadcrumbs contextuais</li>
+<li>Sidebar adaptativa</li>
+</ul>
+<h3>🛡️ Segurança e Compliance</h3>
+<ul>
+<li><strong>Política de IA - 3 Níveis</strong>:
+<ul>
+<li><strong>Nível 1</strong>: Aprovação do owner</li>
+<li><strong>Nível 2</strong>: Aprovação do owner + legal</li>
+<li><strong>Nível 3</strong>: Aprovação do conselho + legal + validação</li>
+</ul>
+</li>
+<li><strong>LGPD Compliance</strong> integrado</li>
+<li><strong>Audit Trail</strong> completo</li>
+</ul>
+<h2>📈 Métricas em Tempo Real</h2>
+<div class="metric-grid">
+  <div class="metric-card metric-card-info">
+    <h3>Projetos Ativos</h3>
+    <div class="metric-value">7</div>
+    <div class="metric-label">Em execução</div>
+  </div>
+  <div class="metric-card metric-card-success">
+    <h3>Pilotos Validados</h3>
+    <div class="metric-value">0</div>
+    <div class="metric-label">Score ≥ 8</div>
+  </div>
+  <div class="metric-card metric-card-warning">
+    <h3>Total de Páginas</h3>
+    <div class="metric-value">82</div>
+    <div class="metric-label">Documentos</div>
+  </div>
+</div>
+<h2>🔧 Ferramentas e Automações</h2>
+<h3>📝 Templates Master</h3>
+<ul>
+<li><strong><a href="99%20-%20RESOURCES/99%20-%20TEMPLATE/Empresariais/Template_Empresa_Master/">Template Empresa Master</a></strong> - Documento único da empresa</li>
+<li><strong><a href="99%20-%20RESOURCES/99%20-%20TEMPLATE/Reunioes/Template_Reuniao_Master/">Template Reunião Master</a></strong> - Documento único de reunião</li>
+</ul>
+<h3>🤖 Automações Inteligentes</h3>
+<ul>
+<li>Dashboard automático via GitHub Actions</li>
+<li>Validação de compliance</li>
+<li>Indexação automática de conteúdo</li>
+</ul>
+<h3>📊 Monitoramento</h3>
+<ul>
+<li>Health checks automáticos</li>
+<li>Logs centralizados</li>
+<li>Backup automático</li>
+</ul>
+<h2>🎯 Acesso Rápido</h2>
+<h3>🔥 Páginas Mais Acessadas</h3>
+<ul>
+<li><a href="0-Dashboard-Executivo/Executive-Auto/">Executive Auto Dashboard</a></li>
+<li><a href="0-Dashboard-Executivo/Home-Executivo/">Home Executivo</a></li>
+<li><a href="4-Projetos/Ativos/">Projetos Ativos</a></li>
+<li><a href="0-Dashboard-Executivo/Innovation-Pipeline/">Innovation Pipeline</a></li>
+</ul>
+<h3>📅 Atualizações Recentes</h3>
+<ul>
+<li>
+<p>[Assistente de Transcrição Jurídica com IA](/4-Projetos/Templates/TEMPLATE 2025-01-20 — projeto — Assistente-Transcricao-Juridica/) - 2025-09-01T01:46</p>
+</li>
+<li>
+<p><a href="/6-Reunioes/2025-08-31-Reuniao-Executiva-Sistema/">ReuniãO Executiva Sistema</a> - 2025-09-01T01:46</p>
+</li>
+<li>
+<p><a href="/6-Reunioes/2025-09-01-Reuniao-Analise-Pessimista-Projetos/">ReuniãO Analise Pessimista Projetos</a> - 2025-09-01T01:46</p>
+</li>
+<li>
+<p><a href="/6-Reunioes/2025-09-01-Reuniao-Criacao-Projeto-WhatsBot/">ReuniãO Criacao Projeto WhatsBot</a> - 2025-09-01T01:46</p>
+</li>
+<li>
+<p><a href="/6-Reunioes/2025-09-01-Reuniao-Criacao-Sistema-Geracao-Ideias/">ReuniãO Criacao Sistema Geracao Ideias</a> - 2025-09-01T01:46</p>
+</li>
+</ul>
+<h2>📞 Suporte e Contato</h2>
+<ul>
+<li><strong>Issues</strong>: GitHub Issues do repositório</li>
+<li><strong>Documentação</strong>: Este README e manuais técnicos</li>
+<li><strong>Logs</strong>: Arquivos de log em <code>automation/logs/</code></li>
+<li><strong>Owner</strong>: Pedro Vitor</li>
+</ul>
+<hr>
+<p><strong>Versão</strong>: 2.0 | <strong>Status</strong>: ✅ <strong>OPERACIONAL</strong> | <strong>Última Atualização</strong>: now</p>
+<style>
+.metric-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.metric-card {
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  border: 1px solid var(--background-modifier-border);
+}
+
+.metric-card-info { background: rgba(59, 130, 246, 0.1); }
+.metric-card-success { background: rgba(34, 197, 94, 0.1); }
+.metric-card-warning { background: rgba(251, 191, 36, 0.1); }
+
+.metric-value {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+
+.metric-label {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+</style>
+
+        </div>
+
+        <!-- Bloco de decisão destacado se existir -->
+        
+      </article>
+
+      <!-- Sidebar com informações adicionais -->
+      <aside class="page-sidebar">
+        
+        <!-- Backlinks - páginas que referenciam esta -->
+        
+        <section class="backlinks-section">
+          <h3 class="sidebar-title">
+            <span class="sidebar-icon">🔗</span>
+            Referenciado em
+          </h3>
+          <ul class="backlinks-list">
+            
+            <li class="backlink-item">
+              <a href="/tags/reunio/" class="backlink-link">
+                Tag: reunião
+              </a>
+            </li>
+            
+          </ul>
+        </section>
+        
+
+        <!-- Table of Contents (temporariamente desabilitado)
+        
+        <section class="toc-section">
+          <h3 class="sidebar-title">
+            <span class="sidebar-icon">📋</span>
+            Conteúdo
+          </h3>
+          <div class="toc">
+            [TOC será implementado posteriormente]
+          </div>
+        </section>
+        
+        -->
+
+        <!-- Links relacionados por tags -->
+        
+
+        <!-- Metadados técnicos -->
+        <section class="meta-section">
+          <h3 class="sidebar-title">
+            <span class="sidebar-icon">ℹ️</span>
+            Informações
+          </h3>
+          <div class="page-meta-details">
+            
+            
+            
+            
+            <div class="meta-item">
+              <span class="meta-label">Palavras:</span>
+              <span class="meta-value">1082</span>
+            </div>
+          </div>
+        </section>
+
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p>&copy; 2025 Multisocios Empresarial - Gerado com Obsidian + Eleventy</p>
+      <p>
+        <a href="/dashboard-executivo/">Dashboard</a> •
+        <a href="/governanca/">Governança</a> •
+        <a href="/projetos/">Projetos</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Search overlay -->
+  <div id="search-overlay" class="search-overlay">
+    <div class="search-container">
+      <input type="text" id="search-input" placeholder="Buscar no knowledge base..." />
+      <div id="search-results"></div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="/scripts/main.js"></script>
+  <script src="/scripts/search.js"></script>
+  <script src="/scripts/sidebar.js" defer></script>
+  
+</body>
+</html>

@@ -1,0 +1,41 @@
+# Redirects for clean URLs
+# Redirect old numbered URLs to clean URLs
+
+# Dashboard Executivo
+/0-Dashboard-Executivo/ /dashboard-executivo/ 301
+/0-Dashboard-Executivo/* /dashboard-executivo/:splat 301
+
+# Governança
+/1-Governanca/ /governanca/ 301
+/1-Governanca/* /governanca/:splat 301
+
+# Equipes
+/2-Equipes/ /equipes/ 301
+/2-Equipes/* /equipes/:splat 301
+
+# Mercado
+/3-Mercado/ /mercado/ 301
+/3-Mercado/* /mercado/:splat 301
+
+# Projetos
+/4-Projetos/ /projetos/ 301
+/4-Projetos/* /projetos/:splat 301
+
+# Processos
+/5-Processos/ /processos/ 301
+/5-Processos/* /processos/:splat 301
+
+# Reuniões
+/6-Reunioes/ /reunioes/ 301
+/6-Reunioes/* /reunioes/:splat 301
+
+# Conhecimento
+/7-Conhecimento/ /conhecimento/ 301
+/7-Conhecimento/* /conhecimento/:splat 301
+
+# Resources
+/99-RESOURCES/ /resources/ 301
+/99-RESOURCES/* /resources/:splat 301
+
+# SPA fallback for client-side routing
+/* /index.html 200

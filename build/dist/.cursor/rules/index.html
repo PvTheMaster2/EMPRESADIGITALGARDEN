@@ -1,0 +1,1050 @@
+<h1>🎯 Cursor Rules - Digital Garden Empresarial [SISTEMA COMPONENTIZADO]</h1>
+<h2>📋 Context Pack Integration</h2>
+<p><strong>SEMPRE consulte estes arquivos antes de propor mudanças:</strong></p>
+<ol>
+<li><strong><code>/_site_index/site_outline.md</code></strong> - Estrutura completa do site (77 páginas)</li>
+<li><strong><code>/_site_index/site_index.json</code></strong> - Metadados machine-readable</li>
+<li><strong><code>/_site_index/issues.md</code></strong> - Issues identificados (32 problemas)</li>
+<li><strong><code>/_site_index/layouts_analysis.md</code></strong> - Análise de layouts</li>
+</ol>
+<h2>🔍 Processo de Análise</h2>
+<h3>Antes de Editar:</h3>
+<ol>
+<li>✅ <strong>Ler Context Pack</strong> - Verificar estado atual</li>
+<li>✅ <strong>Identificar Layout</strong> - Qual layout a página usa</li>
+<li>✅ <strong>Verificar Issues</strong> - Se há problemas conhecidos</li>
+<li>✅ <strong>Mapear Estrutura</strong> - Onde a página se encaixa</li>
+</ol>
+<h3>Ao Propor Mudanças:</h3>
+<ol>
+<li>🎯 <strong>Respeitar URLs</strong> - Usar URLs do Eleventy/Netlify</li>
+<li>🎯 <strong>Manter Consistência</strong> - Seguir padrões existentes</li>
+<li>🎯 <strong>Aplicar Layout Correto</strong> - Usar layout específico por seção</li>
+<li>🎯 <strong>Atualizar Frontmatter</strong> - Sempre incluir <code>title:</code></li>
+</ol>
+<h2>📁 ESTRUTURA COMPLETA DO PROJETO</h2>
+<h3><strong>DIRETÓRIOS PRINCIPAIS:</strong></h3>
+<pre><code>DIGITAL-GARDEN-EMPRESA/
+├── 0-Dashboard-Executivo/          # 📊 Dashboards e KPIs executivos
+├── 1-Governanca/                   # 🏛️ Compliance, políticas, acordos
+├── 2-Equipes/                      # 👥 Gestão de pessoas e capacidade
+├── 3-Mercado/                      # 📈 Análise de mercado e concorrentes
+├── 4-Projetos/                     # 📋 Projetos e iniciativas empresariais
+│   ├── Ativos/                     # Projetos em execução
+│   ├── Backlog/                    # Ideias aprovadas
+│   ├── Concluidos/                 # Projetos finalizados
+│   ├── Em-Desenvolvimento/         # Projetos em desenvolvimento
+│   ├── Pilotos/                    # Experimentos e validações
+│   └── Templates/                  # Templates de projetos
+├── 5-Processos/                    # ⚙️ Workflows, SOPs e automações
+├── 6-Reunioes/                     # 🤝 Atas de reunião e decisões
+├── 7-Conhecimento/                 # 📚 Base de conhecimento
+├── 99 - RESOURCES/                 # 🛠️ Templates e recursos auxiliares
+│   ├── 99 - TEMPLATE/              # Templates master
+│   └── Imagens/                    # Assets visuais
+├── 1000 - REUNIOES/               # 📝 Reuniões históricas (legado)
+├── _data/                         # 🗂️ Dados globais do Eleventy
+│   ├── company.js                 # Dados da empresa
+│   ├── navigation.js              # Estrutura de navegação
+│   └── site.js                    # Configurações do site
+├── _includes/                     # 🧩 Componentes e includes
+│   ├── components/                # Componentes reutilizáveis
+│   │   ├── meta-head.njk         # SEO e CSS universal
+│   │   ├── sidebar-nav.njk       # Navegação lateral
+│   │   ├── main-navigation.njk   # Header principal
+│   │   ├── page-header.njk       # Cabeçalho com metadados
+│   │   ├── page-sidebar.njk      # Sidebar de página
+│   │   └── scripts-bundle.njk    # Scripts universais
+│   └── project-card.njk          # Card de projeto
+├── _layouts/                      # 📄 Templates de layout
+│   ├── base.njk                  # Layout base universal
+│   ├── dashboard.njk             # Layout para dashboards
+│   ├── governanca.njk            # Layout para governança
+│   ├── projeto.njk               # Layout para projetos
+│   └── reuniao.njk               # Layout para reuniões
+├── _site_index/                   # 📊 Context pack gerado automaticamente
+│   ├── site_index.json           # Metadados machine-readable
+│   ├── site_outline.md           # Estrutura completa do site
+│   ├── issues.md                 # Issues identificados
+│   └── layouts_analysis.md       # Análise de layouts
+├── _cursor_context/               # 🤖 Context pack avançado para Cursor
+│   ├── project_patterns.md       # Padrões específicos do projeto
+│   ├── template_guide.md         # Guia completo de templates
+│   ├── business_rules.md         # Regras de negócio automatizadas
+│   └── troubleshooting.md        # Soluções para problemas comuns
+├── scripts/                       # 📜 Scripts JavaScript
+│   ├── main.js                   # Script principal
+│   ├── search.js                 # Funcionalidade de busca
+│   ├── sidebar.js                # Lógica da sidebar
+│   └── site-indexer.js           # Indexador automático
+├── styles/                        # 🎨 Arquivos CSS
+│   ├── main.css                  # Estilos principais
+│   ├── sidebar.css               # Estilos da sidebar
+│   ├── markdown-content.css      # Apresentação Obsidian-like
+│   ├── dashboard.css             # Estilos específicos dashboards
+│   ├── governanca.css            # Estilos específicos governança
+│   ├── projeto.css               # Estilos específicos projetos
+│   └── reuniao.css               # Estilos específicos reuniões
+├── dev/                          # 🧪 Ferramentas de desenvolvimento
+│   └── sidebar-check.md          # Página de diagnóstico da sidebar
+├── dist/                         # 📦 Site gerado (ignorado no git)
+├── node_modules/                 # 📚 Dependências (ignorado no git)
+├── .eleventy.js                  # ⚙️ Configuração do Eleventy
+├── package.json                  # 📋 Configuração do projeto
+├── netlify.toml                  # 🌐 Configuração do Netlify
+└── README.md                     # 📖 Documentação principal
+</code></pre>
+<h3><strong>LAYOUTS POR DIRETÓRIO:</strong></h3>
+<ul>
+<li><strong><code>/0-Dashboard-Executivo/</code></strong> → <code>dashboard.njk</code></li>
+<li><strong><code>/1-Governanca/</code></strong> → <code>governanca.njk</code></li>
+<li><strong><code>/4-Projetos/</code></strong> → <code>projeto.njk</code></li>
+<li><strong><code>/6-Reunioes/</code></strong> → <code>reuniao.njk</code></li>
+<li><strong>Outros</strong> → <code>base.njk</code> (último recurso)</li>
+</ul>
+<h3>Campos Obrigatórios:</h3>
+<pre><code class="language-yaml">---
+title: &quot;Título da Página&quot;
+created: 2025-09-01
+updated: 2025-09-01T20:00
+type: [dashboard|governanca|projeto|reuniao|base]
+status: active
+---
+</code></pre>
+<h2>🚨 Issues Críticos (Prioridade)</h2>
+<h3>1. Títulos Ausentes (27 páginas)</h3>
+<ul>
+<li><strong>Localização</strong>: Principalmente <code>/99 - RESOURCES/</code>, <code>/_site_index/</code></li>
+<li><strong>Ação</strong>: Adicionar <code>title:</code> no frontmatter</li>
+<li><strong>Template</strong>: <code>title: &quot;Nome Descritivo - Digital Garden&quot;</code></li>
+</ul>
+<h3>2. Páginas sem H1 (5 páginas)</h3>
+<ul>
+<li><strong>Localização</strong>: Templates e recursos</li>
+<li><strong>Ação</strong>: Adicionar <code># Título Principal</code></li>
+<li><strong>Posição</strong>: Logo após o frontmatter</li>
+</ul>
+<h3>3. Layout Base Excessivo (45 páginas)</h3>
+<ul>
+<li><strong>Problema</strong>: Muitas páginas usando layout genérico</li>
+<li><strong>Ação</strong>: Migrar para layouts específicos</li>
+<li><strong>Prioridade</strong>: Dashboard &gt; Projetos &gt; Reuniões &gt; Governança</li>
+</ul>
+<h2>🔗 Links e Navegação</h2>
+<h3>URLs Corretas:</h3>
+<ul>
+<li>✅ <code>/4-Projetos/README/</code> (não <code>/projetos/</code>)</li>
+<li>✅ <code>/1-Governanca/README/</code> (não <code>/governanca/</code>)</li>
+<li>✅ <code>/6-Reunioes/README/</code> (não <code>/reunioes/</code>)</li>
+</ul>
+<h3>Sidebar Navigation:</h3>
+<ul>
+<li>Estrutura definida em <code>_data/navigation.js</code></li>
+<li>8 seções principais com sub-navegação</li>
+<li>3 níveis de profundidade máximo</li>
+</ul>
+<h2>🛠️ Comandos Úteis</h2>
+<h3>Auditoria Estrutural:</h3>
+<pre><code>Carregue /_site_index/site_outline.md e /_site_index/issues.md. 
+Liste: (a) páginas sem título, (b) páginas usando base.njk que deveriam usar layout específico, (c) links quebrados. 
+Proponha 3 correções mínimas.
+</code></pre>
+<h3>Plano de Layout:</h3>
+<pre><code>Com base em layouts_analysis.md, proponha migração de páginas de base.njk para layouts específicos. 
+Gere lista priorizada por impacto.
+</code></pre>
+<h3>Correção de Links:</h3>
+<pre><code>Compare navigation.js com site_index.json. 
+Identifique discrepâncias de URLs e gere tabela de correções necessárias.
+</code></pre>
+<h2>📊 Métricas de Qualidade</h2>
+<h3>Targets:</h3>
+<ul>
+<li><strong>Páginas com título</strong>: 100% (atual: 65%)</li>
+<li><strong>Páginas com H1</strong>: 100% (atual: 93%)</li>
+<li><strong>Layouts específicos</strong>: 80% (atual: 42%)</li>
+<li><strong>Links funcionais</strong>: 100% (atual: ~95%)</li>
+</ul>
+<h3>Build Status:</h3>
+<ul>
+<li><strong>Total páginas</strong>: 79 (atualizado)</li>
+<li><strong>Build time</strong>: ~3 segundos</li>
+<li><strong>Issues encontrados</strong>: 33 (principalmente wikilinks)</li>
+<li><strong>Layouts ativos</strong>: 5 (base, dashboard, governanca, projeto, reuniao)</li>
+<li><strong>Componentes</strong>: 6 (sistema componentizado implementado)</li>
+<li><strong>Assets copiados</strong>: 92 arquivos</li>
+</ul>
+<h2>🔄 Workflow de Manutenção</h2>
+<ol>
+<li><strong>Build</strong> → <code>npm run build</code></li>
+<li><strong>Index</strong> → <code>npm run site:index</code> (automático pós-build)</li>
+<li><strong>Análise</strong> → Ler <code>_site_index/*.md</code></li>
+<li><strong>Correções</strong> → Aplicar mudanças</li>
+<li><strong>Commit</strong> → Git push (deploy automático)</li>
+</ol>
+<h2>🏗️ SISTEMA COMPONENTIZADO</h2>
+<h3><strong>Componentes Disponíveis:</strong></h3>
+<ul>
+<li><strong><code>meta-head.njk</code></strong> - SEO, CSS e meta tags universais</li>
+<li><strong><code>sidebar-nav.njk</code></strong> - Navegação lateral completa</li>
+<li><strong><code>main-navigation.njk</code></strong> - Header e navegação principal</li>
+<li><strong><code>page-header.njk</code></strong> - Cabeçalho com metadados ricos</li>
+<li><strong><code>page-sidebar.njk</code></strong> - Sidebar de página com backlinks</li>
+<li><strong><code>scripts-bundle.njk</code></strong> - Scripts universais organizados</li>
+</ul>
+<h3><strong>Como Usar Componentes:</strong></h3>
+<pre><code class="language-nunjucks">&lt;!-- Em qualquer layout .njk --&gt;
+&lt;meta charset=&quot;UTF-8&quot; /&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+&lt;title&gt;rules - Multisocios Empresarial&lt;/title&gt;
+&lt;meta name=&quot;description&quot; content=&quot;Sistema de Gestão de Conhecimento Multisocios&quot; /&gt;
+
+&lt;!-- CSS do tema Obsidian e customizações --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;/styles/main.css&quot; /&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;/styles/sidebar.css&quot; /&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;/styles/markdown-content.css&quot; /&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;/styles/breadcrumbs.css&quot; /&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;/styles/tags.css&quot; /&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;/styles/mermaid.css&quot; /&gt;
+
+&lt;!-- CSS específico por layout --&gt;
+
+
+&lt;!-- CSS específico por página --&gt;
+
+
+&lt;!-- Favicon e meta tags para PWA --&gt;
+&lt;link rel=&quot;icon&quot; type=&quot;image/svg+xml&quot; href=&quot;/assets/favicon.svg&quot; /&gt;
+&lt;meta name=&quot;theme-color&quot; content=&quot;#1e1e1e&quot; /&gt;
+
+&lt;aside class=&quot;sidebar&quot; data-state=&quot;closed&quot; aria-hidden=&quot;true&quot;&gt;
+  &lt;div class=&quot;sidebar-header&quot;&gt;
+    &lt;h2 class=&quot;sidebar-title&quot;&gt;Multisocios&lt;/h2&gt;
+    &lt;button class=&quot;sidebar-close&quot; onclick=&quot;closeSidebar()&quot; aria-label=&quot;Fechar sidebar&quot;&gt;×&lt;/button&gt;
+  &lt;/div&gt;
+  
+  &lt;!-- Busca simples na sidebar --&gt;
+  &lt;div class=&quot;sidebar-search&quot;&gt;
+    &lt;input type=&quot;text&quot; id=&quot;sidebar-search&quot; class=&quot;search-input&quot; placeholder=&quot;Buscar conteúdo...&quot; /&gt;
+  &lt;/div&gt;
+  
+  &lt;!-- Navegação --&gt;
+  &lt;nav class=&quot;sidebar-navigation&quot;&gt;
+    &lt;div id=&quot;navigation-tree&quot;&gt;
+      
+        
+        &lt;div class=&quot;nav-section&quot;&gt;
+          &lt;h3 class=&quot;nav-section-title&quot;&gt;
+            &lt;span class=&quot;nav-icon&quot;&gt;🏠&lt;/span&gt;
+            &lt;a href=&quot;/&quot;&gt;🏠 Home&lt;/a&gt;
+          &lt;/h3&gt;
+          
+        &lt;/div&gt;
+        
+        &lt;div class=&quot;nav-section&quot;&gt;
+          &lt;h3 class=&quot;nav-section-title&quot;&gt;
+            &lt;span class=&quot;nav-icon&quot;&gt;📊&lt;/span&gt;
+            &lt;a href=&quot;/dashboard-overview/&quot;&gt;📊 Dashboard Executivo&lt;/a&gt;
+          &lt;/h3&gt;
+          
+          &lt;ul class=&quot;nav-list&quot;&gt;
+            
+            &lt;li class=&quot;nav-item&quot;&gt;
+              &lt;a href=&quot;/0-dashboard-executivo/innovation-pipeline/&quot; class=&quot;nav-link&quot;&gt;💡 Innovation Pipeline&lt;/a&gt;
+              
+            &lt;/li&gt;
+            
+            &lt;li class=&quot;nav-item&quot;&gt;
+              &lt;a href=&quot;/0-dashboard-executivo/kpis-principais/&quot; class=&quot;nav-link&quot;&gt;📈 KPIs Principais&lt;/a&gt;
+              
+            &lt;/li&gt;
+            
+            &lt;li class=&quot;nav-item&quot;&gt;
+              &lt;a href=&quot;/0-dashboard-executivo/decisoes-estrategicas/&quot; class=&quot;nav-link&quot;&gt;🎯 Decisões Estratégicas&lt;/a&gt;
+              
+            &lt;/li&gt;
+            
+            &lt;li class=&quot;nav-item&quot;&gt;
+              &lt;a href=&quot;/0-dashboard-executivo/dashboard-projetos-prazo/&quot; class=&quot;nav-link&quot;&gt;📅 Projetos por Prazo&lt;/a&gt;
+              
+            &lt;/li&gt;
+            
+            &lt;li class=&quot;nav-item&quot;&gt;
+              &lt;a href=&quot;/0-dashboard-executivo/dashboard-projetos-prazo-visual/&quot; class=&quot;nav-link&quot;&gt;🎨 Projetos Visuais&lt;/a&gt;
+              
+            &lt;/li&gt;
+            
+            &lt;li class=&quot;nav-item&quot;&gt;
+              &lt;a href=&quot;/0-dashboard-executivo/dashboard_capacidade_equipe/&quot; class=&quot;nav-link&quot;&gt;👥 Capacidade da Equipe&lt;/a&gt;
+              
+            &lt;/li&gt;
+            
+            &lt;li class=&quot;nav-item&quot;&gt;
+              &lt;a href=&quot;/0-dashboard-executivo/executive-auto/&quot; class=&quot;nav-link&quot;&gt;⚡ Executive Auto&lt;/a&gt;
+              
+            &lt;/li&gt;
+            
+            &lt;li class=&quot;nav-item&quot;&gt;
+              &lt;a href=&quot;/0-dashboard-executivo/sistema_metricas_avancadas/&quot; class=&quot;nav-link&quot;&gt;📊 Métricas Avançadas&lt;/a&gt;
+              
+            &lt;/li&gt;
+            
+          &lt;/ul&gt;
+          
+        &lt;/div&gt;
+        
+        &lt;div class=&quot;nav-section&quot;&gt;
+          &lt;h3 class=&quot;nav-section-title&quot;&gt;
+            &lt;span class=&quot;nav-icon&quot;&gt;🏛️&lt;/span&gt;
+            &lt;a href=&quot;/1-governanca/&quot;&gt;🏛️ Governança&lt;/a&gt;
+          &lt;/h3&gt;
+          
+          &lt;ul class=&quot;nav-list&quot;&gt;
+            
+            &lt;li class=&quot;nav-item&quot;&gt;
+              &lt;a href=&quot;/1-governanca/acordo_socios_final/&quot; class=&quot;nav-link&quot;&gt;📜 Acordo de Sócios&lt;/a&gt;
+              
+            &lt;/li&gt;
+            
+            &lt;li class=&quot;nav-item&quot;&gt;
+              &lt;a href=&quot;/1-governanca/compliance_log/&quot; class=&quot;nav-link&quot;&gt;⚖️ Compliance Log&lt;/a&gt;
+              
+            &lt;/li&gt;
+            
+            &lt;li class=&quot;nav-item&quot;&gt;
+              &lt;a href=&quot;/1-governanca/etica_uso_ia/&quot; class=&quot;nav-link&quot;&gt;🤖 Ética no Uso de IA&lt;/a&gt;
+              
+            &lt;/li&gt;
+            
+            &lt;li class=&quot;nav-item&quot;&gt;
+              &lt;a href=&quot;/1-governanca/faq_compliance/&quot; class=&quot;nav-link&quot;&gt;❓ FAQ Compliance&lt;/a&gt;
+              
+            &lt;/li&gt;
+            
+            &lt;li class=&quot;nav-item&quot;&gt;
+              &lt;a href=&quot;/1-governanca/manual_treinamento_compliance/&quot; class=&quot;nav-link&quot;&gt;📚 Manual de Treinamento&lt;/a&gt;
+              
+            &lt;/li&gt;
+            
+            &lt;li class=&quot;nav-item&quot;&gt;
+              &lt;a href=&quot;/1-governanca/playbook_comercial_v0/&quot; class=&quot;nav-link&quot;&gt;📈 Playbook Comercial&lt;/a&gt;
+              
+            &lt;/li&gt;
+            
+          &lt;/ul&gt;
+          
+        &lt;/div&gt;
+        
+        &lt;div class=&quot;nav-section&quot;&gt;
+          &lt;h3 class=&quot;nav-section-title&quot;&gt;
+            &lt;span class=&quot;nav-icon&quot;&gt;👥&lt;/span&gt;
+            &lt;a href=&quot;/2-equipes/&quot;&gt;👥 Equipes&lt;/a&gt;
+          &lt;/h3&gt;
+          
+          &lt;ul class=&quot;nav-list&quot;&gt;
+            
+            &lt;li class=&quot;nav-item&quot;&gt;
+              &lt;a href=&quot;/2-equipes/desenvolvimento/&quot; class=&quot;nav-link&quot;&gt;💻 Desenvolvimento&lt;/a&gt;
+              
+            &lt;/li&gt;
+            
+            &lt;li class=&quot;nav-item&quot;&gt;
+              &lt;a href=&quot;/2-equipes/marketing/&quot; class=&quot;nav-link&quot;&gt;🎯 Marketing&lt;/a&gt;
+              
+            &lt;/li&gt;
+            
+            &lt;li class=&quot;nav-item&quot;&gt;
+              &lt;a href=&quot;/2-equipes/vendas/&quot; class=&quot;nav-link&quot;&gt;💼 Vendas&lt;/a&gt;
+              
+            &lt;/li&gt;
+            
+            &lt;li class=&quot;nav-item&quot;&gt;
+              &lt;a href=&quot;/2-equipes/operacoes/&quot; class=&quot;nav-link&quot;&gt;⚙️ Operações&lt;/a&gt;
+              
+            &lt;/li&gt;
+            
+            &lt;li class=&quot;nav-item&quot;&gt;
+              &lt;a href=&quot;/2-equipes/lideranca/&quot; class=&quot;nav-link&quot;&gt;👔 Liderança&lt;/a&gt;
+              
+            &lt;/li&gt;
+            
+          &lt;/ul&gt;
+          
+        &lt;/div&gt;
+        
+        &lt;div class=&quot;nav-section&quot;&gt;
+          &lt;h3 class=&quot;nav-section-title&quot;&gt;
+            &lt;span class=&quot;nav-icon&quot;&gt;🌍&lt;/span&gt;
+            &lt;a href=&quot;/3-mercado/&quot;&gt;🌍 Mercado&lt;/a&gt;
+          &lt;/h3&gt;
+          
+          &lt;ul class=&quot;nav-list&quot;&gt;
+            
+            &lt;li class=&quot;nav-item&quot;&gt;
+              &lt;a href=&quot;/3-mercado/clientes/&quot; class=&quot;nav-link&quot;&gt;👥 Clientes&lt;/a&gt;
+              
+            &lt;/li&gt;
+            
+            &lt;li class=&quot;nav-item&quot;&gt;
+              &lt;a href=&quot;/3-mercado/concorrentes/&quot; class=&quot;nav-link&quot;&gt;⚔️ Concorrentes&lt;/a&gt;
+              
+            &lt;/li&gt;
+            
+            &lt;li class=&quot;nav-item&quot;&gt;
+              &lt;a href=&quot;/3-mercado/fornecedores/&quot; class=&quot;nav-link&quot;&gt;🤝 Fornecedores&lt;/a&gt;
+              
+            &lt;/li&gt;
+            
+            &lt;li class=&quot;nav-item&quot;&gt;
+              &lt;a href=&quot;/3-mercado/tendencias/&quot; class=&quot;nav-link&quot;&gt;🚀 Tendências&lt;/a&gt;
+              
+            &lt;/li&gt;
+            
+          &lt;/ul&gt;
+          
+        &lt;/div&gt;
+        
+        &lt;div class=&quot;nav-section&quot;&gt;
+          &lt;h3 class=&quot;nav-section-title&quot;&gt;
+            &lt;span class=&quot;nav-icon&quot;&gt;📋&lt;/span&gt;
+            &lt;a href=&quot;/4-projetos/&quot;&gt;📋 Projetos&lt;/a&gt;
+          &lt;/h3&gt;
+          
+          &lt;ul class=&quot;nav-list&quot;&gt;
+            
+            &lt;li class=&quot;nav-item&quot;&gt;
+              &lt;a href=&quot;/4-projetos/ativos/&quot; class=&quot;nav-link&quot;&gt;🚀 Ativos&lt;/a&gt;
+              
+              &lt;ul class=&quot;nav-sublist&quot;&gt;
+                
+                &lt;li class=&quot;nav-subitem&quot;&gt;
+                  &lt;a href=&quot;/4-projetos/ativos/prj-aeralyn/&quot; class=&quot;nav-sublink&quot;&gt;🌟 PRJ-AERALYN&lt;/a&gt;
+                &lt;/li&gt;
+                
+                &lt;li class=&quot;nav-subitem&quot;&gt;
+                  &lt;a href=&quot;/4-projetos/ativos/prj-trip-match/&quot; class=&quot;nav-sublink&quot;&gt;🎮 Trip-Match&lt;/a&gt;
+                &lt;/li&gt;
+                
+                &lt;li class=&quot;nav-subitem&quot;&gt;
+                  &lt;a href=&quot;/4-projetos/ativos/prj-vault-empresarial/&quot; class=&quot;nav-sublink&quot;&gt;🏢 Vault Empresarial&lt;/a&gt;
+                &lt;/li&gt;
+                
+                &lt;li class=&quot;nav-subitem&quot;&gt;
+                  &lt;a href=&quot;/4-projetos/ativos/prj-curso-ia-inteligente/&quot; class=&quot;nav-sublink&quot;&gt;🎓 Curso IA Inteligente&lt;/a&gt;
+                &lt;/li&gt;
+                
+                &lt;li class=&quot;nav-subitem&quot;&gt;
+                  &lt;a href=&quot;/4-projetos/ativos/prj-app-desenvolvimento-cognitivo/&quot; class=&quot;nav-sublink&quot;&gt;📱 App Desenvolvimento&lt;/a&gt;
+                &lt;/li&gt;
+                
+                &lt;li class=&quot;nav-subitem&quot;&gt;
+                  &lt;a href=&quot;/4-projetos/ativos/prj-nostalgia-musical/&quot; class=&quot;nav-sublink&quot;&gt;🎵 Nostalgia Musical&lt;/a&gt;
+                &lt;/li&gt;
+                
+                &lt;li class=&quot;nav-subitem&quot;&gt;
+                  &lt;a href=&quot;/4-projetos/ativos/prj-plataforma-cursos/&quot; class=&quot;nav-sublink&quot;&gt;🎓 Plataforma Cursos&lt;/a&gt;
+                &lt;/li&gt;
+                
+              &lt;/ul&gt;
+              
+            &lt;/li&gt;
+            
+            &lt;li class=&quot;nav-item&quot;&gt;
+              &lt;a href=&quot;/4-projetos/em-desenvolvimento/&quot; class=&quot;nav-link&quot;&gt;⚡ Em Desenvolvimento&lt;/a&gt;
+              
+              &lt;ul class=&quot;nav-sublist&quot;&gt;
+                
+                &lt;li class=&quot;nav-subitem&quot;&gt;
+                  &lt;a href=&quot;/4-projetos/em-desenvolvimento/prj-dev-whatsbot-academia/&quot; class=&quot;nav-sublink&quot;&gt;🤖 WhatsBot Academia&lt;/a&gt;
+                &lt;/li&gt;
+                
+                &lt;li class=&quot;nav-subitem&quot;&gt;
+                  &lt;a href=&quot;/4-projetos/em-desenvolvimento/prj-web-site-portfolio-engenharia/&quot; class=&quot;nav-sublink&quot;&gt;🌐 Portfolio Engenharia&lt;/a&gt;
+                &lt;/li&gt;
+                
+              &lt;/ul&gt;
+              
+            &lt;/li&gt;
+            
+            &lt;li class=&quot;nav-item&quot;&gt;
+              &lt;a href=&quot;/4-projetos/templates/&quot; class=&quot;nav-link&quot;&gt;📝 Templates&lt;/a&gt;
+              
+              &lt;ul class=&quot;nav-sublist&quot;&gt;
+                
+                &lt;li class=&quot;nav-subitem&quot;&gt;
+                  &lt;a href=&quot;/4-projetos/templates/exemplo_intake_preenchido/&quot; class=&quot;nav-sublink&quot;&gt;📋 Exemplo Intake&lt;/a&gt;
+                &lt;/li&gt;
+                
+                &lt;li class=&quot;nav-subitem&quot;&gt;
+                  &lt;a href=&quot;/4-projetos/templates/exemplo_minimalista/&quot; class=&quot;nav-sublink&quot;&gt;⚡ Minimalista&lt;/a&gt;
+                &lt;/li&gt;
+                
+                &lt;li class=&quot;nav-subitem&quot;&gt;
+                  &lt;a href=&quot;/4-projetos/templates/exemplo_primeira_cartada/&quot; class=&quot;nav-sublink&quot;&gt;🎯 Primeira Cartada&lt;/a&gt;
+                &lt;/li&gt;
+                
+                &lt;li class=&quot;nav-subitem&quot;&gt;
+                  &lt;a href=&quot;/4-projetos/templates/template piloto-exemplo-sistema/&quot; class=&quot;nav-sublink&quot;&gt;🏗️ Template Piloto&lt;/a&gt;
+                &lt;/li&gt;
+                
+                &lt;li class=&quot;nav-subitem&quot;&gt;
+                  &lt;a href=&quot;/4-projetos/templates/template piloto_crm_arquitetos/&quot; class=&quot;nav-sublink&quot;&gt;🏢 CRM Arquitetos&lt;/a&gt;
+                &lt;/li&gt;
+                
+              &lt;/ul&gt;
+              
+            &lt;/li&gt;
+            
+          &lt;/ul&gt;
+          
+        &lt;/div&gt;
+        
+        &lt;div class=&quot;nav-section&quot;&gt;
+          &lt;h3 class=&quot;nav-section-title&quot;&gt;
+            &lt;span class=&quot;nav-icon&quot;&gt;⚙️&lt;/span&gt;
+            &lt;a href=&quot;/5-processos/&quot;&gt;⚙️ Processos&lt;/a&gt;
+          &lt;/h3&gt;
+          
+          &lt;ul class=&quot;nav-list&quot;&gt;
+            
+            &lt;li class=&quot;nav-item&quot;&gt;
+              &lt;a href=&quot;/5-processos/sistema_gestao_capacidade_sprints/&quot; class=&quot;nav-link&quot;&gt;📈 Gestão de Sprints&lt;/a&gt;
+              
+            &lt;/li&gt;
+            
+            &lt;li class=&quot;nav-item&quot;&gt;
+              &lt;a href=&quot;/5-processos/guia_uso_sistema_capacidade/&quot; class=&quot;nav-link&quot;&gt;📖 Guia do Sistema&lt;/a&gt;
+              
+            &lt;/li&gt;
+            
+            &lt;li class=&quot;nav-item&quot;&gt;
+              &lt;a href=&quot;/5-processos/sops/&quot; class=&quot;nav-link&quot;&gt;📋 SOPs&lt;/a&gt;
+              
+            &lt;/li&gt;
+            
+            &lt;li class=&quot;nav-item&quot;&gt;
+              &lt;a href=&quot;/5-processos/workflows/&quot; class=&quot;nav-link&quot;&gt;⚡ Workflows&lt;/a&gt;
+              
+            &lt;/li&gt;
+            
+            &lt;li class=&quot;nav-item&quot;&gt;
+              &lt;a href=&quot;/5-processos/metricas/&quot; class=&quot;nav-link&quot;&gt;📊 Métricas&lt;/a&gt;
+              
+            &lt;/li&gt;
+            
+          &lt;/ul&gt;
+          
+        &lt;/div&gt;
+        
+        &lt;div class=&quot;nav-section&quot;&gt;
+          &lt;h3 class=&quot;nav-section-title&quot;&gt;
+            &lt;span class=&quot;nav-icon&quot;&gt;📅&lt;/span&gt;
+            &lt;a href=&quot;/6-reunioes/&quot;&gt;📅 Reuniões&lt;/a&gt;
+          &lt;/h3&gt;
+          
+          &lt;ul class=&quot;nav-list&quot;&gt;
+            
+            &lt;li class=&quot;nav-item&quot;&gt;
+              &lt;a href=&quot;/6-reunioes/2025-08-31-reuniao-executiva-sistema/&quot; class=&quot;nav-link&quot;&gt;🎯 Reunião Executiva&lt;/a&gt;
+              
+            &lt;/li&gt;
+            
+            &lt;li class=&quot;nav-item&quot;&gt;
+              &lt;a href=&quot;/6-reunioes/2025-09-01-reuniao-analise-pessimista-projetos/&quot; class=&quot;nav-link&quot;&gt;📊 Análise Pessimista&lt;/a&gt;
+              
+            &lt;/li&gt;
+            
+            &lt;li class=&quot;nav-item&quot;&gt;
+              &lt;a href=&quot;/6-reunioes/2025-09-01-reuniao-criacao-projeto-whatsbot/&quot; class=&quot;nav-link&quot;&gt;🤖 Criação WhatsBot&lt;/a&gt;
+              
+            &lt;/li&gt;
+            
+            &lt;li class=&quot;nav-item&quot;&gt;
+              &lt;a href=&quot;/6-reunioes/2025-09-01-reuniao-criacao-sistema-geracao-ideias/&quot; class=&quot;nav-link&quot;&gt;💡 Sistema de Ideias&lt;/a&gt;
+              
+            &lt;/li&gt;
+            
+            &lt;li class=&quot;nav-item&quot;&gt;
+              &lt;a href=&quot;/6-reunioes/conselho/&quot; class=&quot;nav-link&quot;&gt;👔 Conselho&lt;/a&gt;
+              
+            &lt;/li&gt;
+            
+            &lt;li class=&quot;nav-item&quot;&gt;
+              &lt;a href=&quot;/6-reunioes/operacional/&quot; class=&quot;nav-link&quot;&gt;⚡ Operacional&lt;/a&gt;
+              
+            &lt;/li&gt;
+            
+            &lt;li class=&quot;nav-item&quot;&gt;
+              &lt;a href=&quot;/6-reunioes/projetos/&quot; class=&quot;nav-link&quot;&gt;📋 Projetos&lt;/a&gt;
+              
+            &lt;/li&gt;
+            
+          &lt;/ul&gt;
+          
+        &lt;/div&gt;
+        
+        &lt;div class=&quot;nav-section&quot;&gt;
+          &lt;h3 class=&quot;nav-section-title&quot;&gt;
+            &lt;span class=&quot;nav-icon&quot;&gt;🧠&lt;/span&gt;
+            &lt;a href=&quot;/7-conhecimento/&quot;&gt;🧠 Conhecimento&lt;/a&gt;
+          &lt;/h3&gt;
+          
+          &lt;ul class=&quot;nav-list&quot;&gt;
+            
+            &lt;li class=&quot;nav-item&quot;&gt;
+              &lt;a href=&quot;/7-conhecimento/ia/&quot; class=&quot;nav-link&quot;&gt;🤖 Inteligência Artificial&lt;/a&gt;
+              
+            &lt;/li&gt;
+            
+            &lt;li class=&quot;nav-item&quot;&gt;
+              &lt;a href=&quot;/7-conhecimento/tecnologia/&quot; class=&quot;nav-link&quot;&gt;💻 Tecnologia&lt;/a&gt;
+              
+            &lt;/li&gt;
+            
+            &lt;li class=&quot;nav-item&quot;&gt;
+              &lt;a href=&quot;/7-conhecimento/negocios/&quot; class=&quot;nav-link&quot;&gt;📈 Negócios&lt;/a&gt;
+              
+            &lt;/li&gt;
+            
+            &lt;li class=&quot;nav-item&quot;&gt;
+              &lt;a href=&quot;/7-conhecimento/processos/&quot; class=&quot;nav-link&quot;&gt;🏗️ Processos&lt;/a&gt;
+              
+            &lt;/li&gt;
+            
+          &lt;/ul&gt;
+          
+        &lt;/div&gt;
+        
+        &lt;div class=&quot;nav-section&quot;&gt;
+          &lt;h3 class=&quot;nav-section-title&quot;&gt;
+            &lt;span class=&quot;nav-icon&quot;&gt;🏠&lt;/span&gt;
+            &lt;a href=&quot;/&quot;&gt;🏠 Home&lt;/a&gt;
+          &lt;/h3&gt;
+          
+        &lt;/div&gt;
+        
+        &lt;div class=&quot;nav-section&quot;&gt;
+          &lt;h3 class=&quot;nav-section-title&quot;&gt;
+            &lt;span class=&quot;nav-icon&quot;&gt;📊&lt;/span&gt;
+            &lt;a href=&quot;/dashboard-overview/&quot;&gt;📊 Dashboard Executivo&lt;/a&gt;
+          &lt;/h3&gt;
+          
+          &lt;ul class=&quot;nav-list&quot;&gt;
+            
+            &lt;li class=&quot;nav-item&quot;&gt;
+              &lt;a href=&quot;/0-dashboard-executivo/innovation-pipeline/&quot; class=&quot;nav-link&quot;&gt;💡 Innovation Pipeline&lt;/a&gt;
+              
+            &lt;/li&gt;
+            
+            &lt;li class=&quot;nav-item&quot;&gt;
+              &lt;a href=&quot;/0-dashboard-executivo/kpis-principais/&quot; class=&quot;nav-link&quot;&gt;📈 KPIs Principais&lt;/a&gt;
+              
+            &lt;/li&gt;
+            
+            &lt;li class=&quot;nav-item&quot;&gt;
+              &lt;a href=&quot;/0-dashboard-executivo/decisoes-estrategicas/&quot; class=&quot;nav-link&quot;&gt;🎯 Decisões Estratégicas&lt;/a&gt;
+              
+            &lt;/li&gt;
+            
+            &lt;li class=&quot;nav-item&quot;&gt;
+              &lt;a href=&quot;/0-dashboard-executivo/dashboard-projetos-prazo/&quot; class=&quot;nav-link&quot;&gt;📅 Projetos por Prazo&lt;/a&gt;
+              
+            &lt;/li&gt;
+            
+            &lt;li class=&quot;nav-item&quot;&gt;
+              &lt;a href=&quot;/0-dashboard-executivo/dashboard-projetos-prazo-visual/&quot; class=&quot;nav-link&quot;&gt;🎨 Projetos Visuais&lt;/a&gt;
+              
+            &lt;/li&gt;
+            
+            &lt;li class=&quot;nav-item&quot;&gt;
+              &lt;a href=&quot;/0-dashboard-executivo/dashboard_capacidade_equipe/&quot; class=&quot;nav-link&quot;&gt;👥 Capacidade da Equipe&lt;/a&gt;
+              
+            &lt;/li&gt;
+            
+            &lt;li class=&quot;nav-item&quot;&gt;
+              &lt;a href=&quot;/0-dashboard-executivo/executive-auto/&quot; class=&quot;nav-link&quot;&gt;⚡ Executive Auto&lt;/a&gt;
+              
+            &lt;/li&gt;
+            
+            &lt;li class=&quot;nav-item&quot;&gt;
+              &lt;a href=&quot;/0-dashboard-executivo/sistema_metricas_avancadas/&quot; class=&quot;nav-link&quot;&gt;📊 Métricas Avançadas&lt;/a&gt;
+              
+            &lt;/li&gt;
+            
+          &lt;/ul&gt;
+          
+        &lt;/div&gt;
+        
+        &lt;div class=&quot;nav-section&quot;&gt;
+          &lt;h3 class=&quot;nav-section-title&quot;&gt;
+            &lt;span class=&quot;nav-icon&quot;&gt;🏛️&lt;/span&gt;
+            &lt;a href=&quot;/1-governanca/&quot;&gt;🏛️ Governança&lt;/a&gt;
+          &lt;/h3&gt;
+          
+          &lt;ul class=&quot;nav-list&quot;&gt;
+            
+            &lt;li class=&quot;nav-item&quot;&gt;
+              &lt;a href=&quot;/1-governanca/acordo_socios_final/&quot; class=&quot;nav-link&quot;&gt;📜 Acordo de Sócios&lt;/a&gt;
+              
+            &lt;/li&gt;
+            
+            &lt;li class=&quot;nav-item&quot;&gt;
+              &lt;a href=&quot;/1-governanca/compliance_log/&quot; class=&quot;nav-link&quot;&gt;⚖️ Compliance Log&lt;/a&gt;
+              
+            &lt;/li&gt;
+            
+            &lt;li class=&quot;nav-item&quot;&gt;
+              &lt;a href=&quot;/1-governanca/etica_uso_ia/&quot; class=&quot;nav-link&quot;&gt;🤖 Ética no Uso de IA&lt;/a&gt;
+              
+            &lt;/li&gt;
+            
+            &lt;li class=&quot;nav-item&quot;&gt;
+              &lt;a href=&quot;/1-governanca/faq_compliance/&quot; class=&quot;nav-link&quot;&gt;❓ FAQ Compliance&lt;/a&gt;
+              
+            &lt;/li&gt;
+            
+            &lt;li class=&quot;nav-item&quot;&gt;
+              &lt;a href=&quot;/1-governanca/manual_treinamento_compliance/&quot; class=&quot;nav-link&quot;&gt;📚 Manual de Treinamento&lt;/a&gt;
+              
+            &lt;/li&gt;
+            
+            &lt;li class=&quot;nav-item&quot;&gt;
+              &lt;a href=&quot;/1-governanca/playbook_comercial_v0/&quot; class=&quot;nav-link&quot;&gt;📈 Playbook Comercial&lt;/a&gt;
+              
+            &lt;/li&gt;
+            
+          &lt;/ul&gt;
+          
+        &lt;/div&gt;
+        
+        &lt;div class=&quot;nav-section&quot;&gt;
+          &lt;h3 class=&quot;nav-section-title&quot;&gt;
+            &lt;span class=&quot;nav-icon&quot;&gt;👥&lt;/span&gt;
+            &lt;a href=&quot;/2-equipes/&quot;&gt;👥 Equipes&lt;/a&gt;
+          &lt;/h3&gt;
+          
+          &lt;ul class=&quot;nav-list&quot;&gt;
+            
+            &lt;li class=&quot;nav-item&quot;&gt;
+              &lt;a href=&quot;/2-equipes/desenvolvimento/&quot; class=&quot;nav-link&quot;&gt;💻 Desenvolvimento&lt;/a&gt;
+              
+            &lt;/li&gt;
+            
+            &lt;li class=&quot;nav-item&quot;&gt;
+              &lt;a href=&quot;/2-equipes/marketing/&quot; class=&quot;nav-link&quot;&gt;🎯 Marketing&lt;/a&gt;
+              
+            &lt;/li&gt;
+            
+            &lt;li class=&quot;nav-item&quot;&gt;
+              &lt;a href=&quot;/2-equipes/vendas/&quot; class=&quot;nav-link&quot;&gt;💼 Vendas&lt;/a&gt;
+              
+            &lt;/li&gt;
+            
+            &lt;li class=&quot;nav-item&quot;&gt;
+              &lt;a href=&quot;/2-equipes/operacoes/&quot; class=&quot;nav-link&quot;&gt;⚙️ Operações&lt;/a&gt;
+              
+            &lt;/li&gt;
+            
+            &lt;li class=&quot;nav-item&quot;&gt;
+              &lt;a href=&quot;/2-equipes/lideranca/&quot; class=&quot;nav-link&quot;&gt;👔 Liderança&lt;/a&gt;
+              
+            &lt;/li&gt;
+            
+          &lt;/ul&gt;
+          
+        &lt;/div&gt;
+        
+        &lt;div class=&quot;nav-section&quot;&gt;
+          &lt;h3 class=&quot;nav-section-title&quot;&gt;
+            &lt;span class=&quot;nav-icon&quot;&gt;🌍&lt;/span&gt;
+            &lt;a href=&quot;/3-mercado/&quot;&gt;🌍 Mercado&lt;/a&gt;
+          &lt;/h3&gt;
+          
+          &lt;ul class=&quot;nav-list&quot;&gt;
+            
+            &lt;li class=&quot;nav-item&quot;&gt;
+              &lt;a href=&quot;/3-mercado/clientes/&quot; class=&quot;nav-link&quot;&gt;👥 Clientes&lt;/a&gt;
+              
+            &lt;/li&gt;
+            
+            &lt;li class=&quot;nav-item&quot;&gt;
+              &lt;a href=&quot;/3-mercado/concorrentes/&quot; class=&quot;nav-link&quot;&gt;⚔️ Concorrentes&lt;/a&gt;
+              
+            &lt;/li&gt;
+            
+            &lt;li class=&quot;nav-item&quot;&gt;
+              &lt;a href=&quot;/3-mercado/fornecedores/&quot; class=&quot;nav-link&quot;&gt;🤝 Fornecedores&lt;/a&gt;
+              
+            &lt;/li&gt;
+            
+            &lt;li class=&quot;nav-item&quot;&gt;
+              &lt;a href=&quot;/3-mercado/tendencias/&quot; class=&quot;nav-link&quot;&gt;🚀 Tendências&lt;/a&gt;
+              
+            &lt;/li&gt;
+            
+          &lt;/ul&gt;
+          
+        &lt;/div&gt;
+        
+        &lt;div class=&quot;nav-section&quot;&gt;
+          &lt;h3 class=&quot;nav-section-title&quot;&gt;
+            &lt;span class=&quot;nav-icon&quot;&gt;📋&lt;/span&gt;
+            &lt;a href=&quot;/4-projetos/&quot;&gt;📋 Projetos&lt;/a&gt;
+          &lt;/h3&gt;
+          
+          &lt;ul class=&quot;nav-list&quot;&gt;
+            
+            &lt;li class=&quot;nav-item&quot;&gt;
+              &lt;a href=&quot;/4-projetos/ativos/&quot; class=&quot;nav-link&quot;&gt;🚀 Ativos&lt;/a&gt;
+              
+              &lt;ul class=&quot;nav-sublist&quot;&gt;
+                
+                &lt;li class=&quot;nav-subitem&quot;&gt;
+                  &lt;a href=&quot;/4-projetos/ativos/prj-aeralyn/&quot; class=&quot;nav-sublink&quot;&gt;🌟 PRJ-AERALYN&lt;/a&gt;
+                &lt;/li&gt;
+                
+                &lt;li class=&quot;nav-subitem&quot;&gt;
+                  &lt;a href=&quot;/4-projetos/ativos/prj-trip-match/&quot; class=&quot;nav-sublink&quot;&gt;🎮 Trip-Match&lt;/a&gt;
+                &lt;/li&gt;
+                
+                &lt;li class=&quot;nav-subitem&quot;&gt;
+                  &lt;a href=&quot;/4-projetos/ativos/prj-vault-empresarial/&quot; class=&quot;nav-sublink&quot;&gt;🏢 Vault Empresarial&lt;/a&gt;
+                &lt;/li&gt;
+                
+                &lt;li class=&quot;nav-subitem&quot;&gt;
+                  &lt;a href=&quot;/4-projetos/ativos/prj-curso-ia-inteligente/&quot; class=&quot;nav-sublink&quot;&gt;🎓 Curso IA Inteligente&lt;/a&gt;
+                &lt;/li&gt;
+                
+                &lt;li class=&quot;nav-subitem&quot;&gt;
+                  &lt;a href=&quot;/4-projetos/ativos/prj-app-desenvolvimento-cognitivo/&quot; class=&quot;nav-sublink&quot;&gt;📱 App Desenvolvimento&lt;/a&gt;
+                &lt;/li&gt;
+                
+                &lt;li class=&quot;nav-subitem&quot;&gt;
+                  &lt;a href=&quot;/4-projetos/ativos/prj-nostalgia-musical/&quot; class=&quot;nav-sublink&quot;&gt;🎵 Nostalgia Musical&lt;/a&gt;
+                &lt;/li&gt;
+                
+                &lt;li class=&quot;nav-subitem&quot;&gt;
+                  &lt;a href=&quot;/4-projetos/ativos/prj-plataforma-cursos/&quot; class=&quot;nav-sublink&quot;&gt;🎓 Plataforma Cursos&lt;/a&gt;
+                &lt;/li&gt;
+                
+              &lt;/ul&gt;
+              
+            &lt;/li&gt;
+            
+            &lt;li class=&quot;nav-item&quot;&gt;
+              &lt;a href=&quot;/4-projetos/em-desenvolvimento/&quot; class=&quot;nav-link&quot;&gt;⚡ Em Desenvolvimento&lt;/a&gt;
+              
+              &lt;ul class=&quot;nav-sublist&quot;&gt;
+                
+                &lt;li class=&quot;nav-subitem&quot;&gt;
+                  &lt;a href=&quot;/4-projetos/em-desenvolvimento/prj-dev-whatsbot-academia/&quot; class=&quot;nav-sublink&quot;&gt;🤖 WhatsBot Academia&lt;/a&gt;
+                &lt;/li&gt;
+                
+                &lt;li class=&quot;nav-subitem&quot;&gt;
+                  &lt;a href=&quot;/4-projetos/em-desenvolvimento/prj-web-site-portfolio-engenharia/&quot; class=&quot;nav-sublink&quot;&gt;🌐 Portfolio Engenharia&lt;/a&gt;
+                &lt;/li&gt;
+                
+              &lt;/ul&gt;
+              
+            &lt;/li&gt;
+            
+            &lt;li class=&quot;nav-item&quot;&gt;
+              &lt;a href=&quot;/4-projetos/templates/&quot; class=&quot;nav-link&quot;&gt;📝 Templates&lt;/a&gt;
+              
+              &lt;ul class=&quot;nav-sublist&quot;&gt;
+                
+                &lt;li class=&quot;nav-subitem&quot;&gt;
+                  &lt;a href=&quot;/4-projetos/templates/exemplo_intake_preenchido/&quot; class=&quot;nav-sublink&quot;&gt;📋 Exemplo Intake&lt;/a&gt;
+                &lt;/li&gt;
+                
+                &lt;li class=&quot;nav-subitem&quot;&gt;
+                  &lt;a href=&quot;/4-projetos/templates/exemplo_minimalista/&quot; class=&quot;nav-sublink&quot;&gt;⚡ Minimalista&lt;/a&gt;
+                &lt;/li&gt;
+                
+                &lt;li class=&quot;nav-subitem&quot;&gt;
+                  &lt;a href=&quot;/4-projetos/templates/exemplo_primeira_cartada/&quot; class=&quot;nav-sublink&quot;&gt;🎯 Primeira Cartada&lt;/a&gt;
+                &lt;/li&gt;
+                
+                &lt;li class=&quot;nav-subitem&quot;&gt;
+                  &lt;a href=&quot;/4-projetos/templates/template piloto-exemplo-sistema/&quot; class=&quot;nav-sublink&quot;&gt;🏗️ Template Piloto&lt;/a&gt;
+                &lt;/li&gt;
+                
+                &lt;li class=&quot;nav-subitem&quot;&gt;
+                  &lt;a href=&quot;/4-projetos/templates/template piloto_crm_arquitetos/&quot; class=&quot;nav-sublink&quot;&gt;🏢 CRM Arquitetos&lt;/a&gt;
+                &lt;/li&gt;
+                
+              &lt;/ul&gt;
+              
+            &lt;/li&gt;
+            
+          &lt;/ul&gt;
+          
+        &lt;/div&gt;
+        
+        &lt;div class=&quot;nav-section&quot;&gt;
+          &lt;h3 class=&quot;nav-section-title&quot;&gt;
+            &lt;span class=&quot;nav-icon&quot;&gt;⚙️&lt;/span&gt;
+            &lt;a href=&quot;/5-processos/&quot;&gt;⚙️ Processos&lt;/a&gt;
+          &lt;/h3&gt;
+          
+          &lt;ul class=&quot;nav-list&quot;&gt;
+            
+            &lt;li class=&quot;nav-item&quot;&gt;
+              &lt;a href=&quot;/5-processos/sistema_gestao_capacidade_sprints/&quot; class=&quot;nav-link&quot;&gt;📈 Gestão de Sprints&lt;/a&gt;
+              
+            &lt;/li&gt;
+            
+            &lt;li class=&quot;nav-item&quot;&gt;
+              &lt;a href=&quot;/5-processos/guia_uso_sistema_capacidade/&quot; class=&quot;nav-link&quot;&gt;📖 Guia do Sistema&lt;/a&gt;
+              
+            &lt;/li&gt;
+            
+            &lt;li class=&quot;nav-item&quot;&gt;
+              &lt;a href=&quot;/5-processos/sops/&quot; class=&quot;nav-link&quot;&gt;📋 SOPs&lt;/a&gt;
+              
+            &lt;/li&gt;
+            
+            &lt;li class=&quot;nav-item&quot;&gt;
+              &lt;a href=&quot;/5-processos/workflows/&quot; class=&quot;nav-link&quot;&gt;⚡ Workflows&lt;/a&gt;
+              
+            &lt;/li&gt;
+            
+            &lt;li class=&quot;nav-item&quot;&gt;
+              &lt;a href=&quot;/5-processos/metricas/&quot; class=&quot;nav-link&quot;&gt;📊 Métricas&lt;/a&gt;
+              
+            &lt;/li&gt;
+            
+          &lt;/ul&gt;
+          
+        &lt;/div&gt;
+        
+        &lt;div class=&quot;nav-section&quot;&gt;
+          &lt;h3 class=&quot;nav-section-title&quot;&gt;
+            &lt;span class=&quot;nav-icon&quot;&gt;📅&lt;/span&gt;
+            &lt;a href=&quot;/6-reunioes/&quot;&gt;📅 Reuniões&lt;/a&gt;
+          &lt;/h3&gt;
+          
+          &lt;ul class=&quot;nav-list&quot;&gt;
+            
+            &lt;li class=&quot;nav-item&quot;&gt;
+              &lt;a href=&quot;/6-reunioes/2025-08-31-reuniao-executiva-sistema/&quot; class=&quot;nav-link&quot;&gt;🎯 Reunião Executiva&lt;/a&gt;
+              
+            &lt;/li&gt;
+            
+            &lt;li class=&quot;nav-item&quot;&gt;
+              &lt;a href=&quot;/6-reunioes/2025-09-01-reuniao-analise-pessimista-projetos/&quot; class=&quot;nav-link&quot;&gt;📊 Análise Pessimista&lt;/a&gt;
+              
+            &lt;/li&gt;
+            
+            &lt;li class=&quot;nav-item&quot;&gt;
+              &lt;a href=&quot;/6-reunioes/2025-09-01-reuniao-criacao-projeto-whatsbot/&quot; class=&quot;nav-link&quot;&gt;🤖 Criação WhatsBot&lt;/a&gt;
+              
+            &lt;/li&gt;
+            
+            &lt;li class=&quot;nav-item&quot;&gt;
+              &lt;a href=&quot;/6-reunioes/2025-09-01-reuniao-criacao-sistema-geracao-ideias/&quot; class=&quot;nav-link&quot;&gt;💡 Sistema de Ideias&lt;/a&gt;
+              
+            &lt;/li&gt;
+            
+            &lt;li class=&quot;nav-item&quot;&gt;
+              &lt;a href=&quot;/6-reunioes/conselho/&quot; class=&quot;nav-link&quot;&gt;👔 Conselho&lt;/a&gt;
+              
+            &lt;/li&gt;
+            
+            &lt;li class=&quot;nav-item&quot;&gt;
+              &lt;a href=&quot;/6-reunioes/operacional/&quot; class=&quot;nav-link&quot;&gt;⚡ Operacional&lt;/a&gt;
+              
+            &lt;/li&gt;
+            
+            &lt;li class=&quot;nav-item&quot;&gt;
+              &lt;a href=&quot;/6-reunioes/projetos/&quot; class=&quot;nav-link&quot;&gt;📋 Projetos&lt;/a&gt;
+              
+            &lt;/li&gt;
+            
+          &lt;/ul&gt;
+          
+        &lt;/div&gt;
+        
+        &lt;div class=&quot;nav-section&quot;&gt;
+          &lt;h3 class=&quot;nav-section-title&quot;&gt;
+            &lt;span class=&quot;nav-icon&quot;&gt;🧠&lt;/span&gt;
+            &lt;a href=&quot;/7-conhecimento/&quot;&gt;🧠 Conhecimento&lt;/a&gt;
+          &lt;/h3&gt;
+          
+          &lt;ul class=&quot;nav-list&quot;&gt;
+            
+            &lt;li class=&quot;nav-item&quot;&gt;
+              &lt;a href=&quot;/7-conhecimento/ia/&quot; class=&quot;nav-link&quot;&gt;🤖 Inteligência Artificial&lt;/a&gt;
+              
+            &lt;/li&gt;
+            
+            &lt;li class=&quot;nav-item&quot;&gt;
+              &lt;a href=&quot;/7-conhecimento/tecnologia/&quot; class=&quot;nav-link&quot;&gt;💻 Tecnologia&lt;/a&gt;
+              
+            &lt;/li&gt;
+            
+            &lt;li class=&quot;nav-item&quot;&gt;
+              &lt;a href=&quot;/7-conhecimento/negocios/&quot; class=&quot;nav-link&quot;&gt;📈 Negócios&lt;/a&gt;
+              
+            &lt;/li&gt;
+            
+            &lt;li class=&quot;nav-item&quot;&gt;
+              &lt;a href=&quot;/7-conhecimento/processos/&quot; class=&quot;nav-link&quot;&gt;🏗️ Processos&lt;/a&gt;
+              
+            &lt;/li&gt;
+            
+          &lt;/ul&gt;
+          
+        &lt;/div&gt;
+        
+      
+    &lt;/div&gt;
+  &lt;/nav&gt;
+&lt;/aside&gt;
+
+&lt;header class=&quot;page-header&quot;&gt;
+  &lt;div class=&quot;page-title-section&quot;&gt;
+    &lt;h1 class=&quot;page-title&quot;&gt;rules&lt;/h1&gt;
+    
+    &lt;!-- Tags --&gt;
+    
+  &lt;/div&gt;
+  
+  &lt;!-- Metadados específicos por tipo --&gt;
+  &lt;div class=&quot;page-metadata&quot;&gt;
+    
+    
+    
+    
+    
+  &lt;/div&gt;
+&lt;/header&gt;
+
+</code></pre>
+<h3><strong>Vantagens do Sistema:</strong></h3>
+<ul>
+<li>✅ <strong>Zero duplicação</strong> de código entre layouts</li>
+<li>✅ <strong>Manutenção centralizada</strong> - mudança em 1 lugar afeta todos</li>
+<li>✅ <strong>Consistência garantida</strong> - todos os layouts usam mesma base</li>
+<li>✅ <strong>Cursor-friendly</strong> - context pack completo para IA</li>
+</ul>
+<h2>🎨 CSS OBSIDIAN-LIKE</h2>
+<h3><strong>Classes Principais:</strong></h3>
+<ul>
+<li><strong><code>.markdown-content</code></strong> - Container principal do conteúdo</li>
+<li><strong><code>.metric-grid</code></strong> - Grid responsivo para dashboards</li>
+<li><strong><code>.metric-card-success/warning/info/danger</code></strong> - Cards coloridos</li>
+<li><strong><code>.callout-info/warning/success/error</code></strong> - Blocos de destaque</li>
+<li><strong><code>.section-header</code></strong> - Cabeçalhos de seção estilizados</li>
+</ul>
+<h3><strong>Variáveis CSS Disponíveis:</strong></h3>
+<pre><code class="language-css">--text-normal           /* Cor do texto principal */
+--text-title            /* Cor dos títulos */
+--text-accent           /* Cor de destaque */
+--background-primary    /* Fundo principal */
+--background-secondary  /* Fundo secundário */
+--interactive-accent    /* Cor de interação */
+</code></pre>
+<hr>
+<p><strong>📝 Lembre-se</strong>: O Context Pack é atualizado automaticamente a cada build. Sempre consulte os arquivos mais recentes em <code>_site_index/</code> para decisões informadas.</p>
+<p><strong>🚀 Sistema 100% componentizado</strong> - Use os componentes para máxima flexibilidade com zero duplicação!</p>

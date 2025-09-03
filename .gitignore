@@ -1,5 +1,5 @@
 # Build outputs
-build/dist/
+# build/dist/ - REMOVIDO: Netlify precisa dos arquivos
 build/node_modules/
 build/.cache/
 build/_site_index/

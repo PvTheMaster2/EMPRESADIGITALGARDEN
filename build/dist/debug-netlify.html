@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Debug Netlify</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; background: #f5f5f5; }
+        .container { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .success { color: #28a745; font-size: 24px; font-weight: bold; }
+        .error { color: #dc3545; font-size: 24px; font-weight: bold; }
+        .info { background: #e7f3ff; padding: 15px; border-radius: 5px; margin: 15px 0; }
+        .test { background: #fff3cd; padding: 15px; border-radius: 5px; margin: 15px 0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="success">✅ DEBUG NETLIFY - FUNCIONANDO!</div>
+        
+        <h1>Teste de Debug para Netlify</h1>
+        
+        <div class="info">
+            <h3>Informações do Ambiente:</h3>
+            <p><strong>URL Atual:</strong> <span id="current-url"></span></p>
+            <p><strong>User Agent:</strong> <span id="user-agent"></span></p>
+            <p><strong>Timestamp:</strong> <span id="timestamp"></span></p>
+        </div>
+        
+        <div class="test">
+            <h3>Testes de Funcionalidade:</h3>
+            <p>✅ HTML carregado</p>
+            <p>✅ CSS aplicado</p>
+            <p>✅ JavaScript funcionando</p>
+        </div>
+        
+        <div class="info">
+            <h3>Próximos Passos:</h3>
+            <p>1. Se você vê esta página, o Netlify está funcionando</p>
+            <p>2. O problema pode estar no arquivo index.html principal</p>
+            <p>3. Verifique se há erros no console do navegador</p>
+        </div>
+        
+        <p><a href="/">← Testar página principal</a></p>
+        <p><a href="/teste.html">← Testar página simples</a></p>
+    </div>
+    
+    <script>
+        document.getElementById('current-url').textContent = window.location.href;
+        document.getElementById('user-agent').textContent = navigator.userAgent;
+        document.getElementById('timestamp').textContent = new Date().toLocaleString('pt-BR');
+    </script>
+</body>
+</html>
