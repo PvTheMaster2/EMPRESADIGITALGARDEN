@@ -1,7 +1,7 @@
 # 🌳 Site Structure Outline
 
-**Generated**: 2025-09-03T00:28:56.851Z
-**Total Pages**: 121
+**Generated**: 2025-09-03T00:37:02.281Z
+**Total Pages**: 122
 
 ## 📁 .CURSOR
 
@@ -266,34 +266,36 @@
 
 ## 📁 TAGS
 
-    - **/tags/anlise/** - "" (base)
-      - H1: 🏷️ Tag: análise
-    - **/tags/correo/** - "" (base)
-      - H1: 🏷️ Tag: correção
-    - **/tags/criao/** - "" (base)
-      - H1: 🏷️ Tag: criação
-    - **/tags/estratgia/** - "" (base)
-      - H1: 🏷️ Tag: estratégia
-    - **/tags/governanca/** - "" (governanca)
-      - H1: 🏷️ Tag: governanca
-    - **/tags/ideias/** - "" (base)
-      - H1: 🏷️ Tag: ideias
-    - **/tags/pilotosvalidados/** - "" (base)
-      - H1: 🏷️ Tag: pilotos_validados
-    - **/tags/projeto/** - "" (base)
-      - H1: 🏷️ Tag: projeto
-    - **/tags/projetos/** - "" (projeto)
-      - H1: 🏷️ Tag: projetos
-    - **/tags/projetosandamento/** - "" (base)
-      - H1: 🏷️ Tag: projetos_andamento
-    - **/tags/projetosativos/** - "" (base)
-      - H1: 🏷️ Tag: projetos_ativos
-    - **/tags/reunio/** - "" (base)
-      - H1: 🏷️ Tag: reunião
-    - **/tags/reunioes/** - "" (reuniao)
-      - H1: 🏷️ Tag: reunioes
-    - **/tags/sistema/** - "" (base)
-      - H1: 🏷️ Tag: sistema
-    - **/tags/whatsbot/** - "" (base)
-      - H1: 🏷️ Tag: whatsbot
+    - **/tags/all/** - "Tags - Multisocios Empresarial" (base)
+      - H1: Tags
+    - **/tags/anlise/** - "Tags - Multisocios Empresarial" (base)
+      - H1: Tags
+    - **/tags/correo/** - "Tags - Multisocios Empresarial" (base)
+      - H1: Tags
+    - **/tags/criao/** - "Tags - Multisocios Empresarial" (base)
+      - H1: Tags
+    - **/tags/estratgia/** - "Tags - Multisocios Empresarial" (base)
+      - H1: Tags
+    - **/tags/governanca/** - "Tags - Multisocios Empresarial" (governanca)
+      - H1: Tags
+    - **/tags/ideias/** - "Tags - Multisocios Empresarial" (base)
+      - H1: Tags
+    - **/tags/pilotosvalidados/** - "Tags - Multisocios Empresarial" (base)
+      - H1: Tags
+    - **/tags/projeto/** - "Tags - Multisocios Empresarial" (base)
+      - H1: Tags
+    - **/tags/projetos/** - "Tags - Multisocios Empresarial" (projeto)
+      - H1: Tags
+    - **/tags/projetosandamento/** - "Tags - Multisocios Empresarial" (base)
+      - H1: Tags
+    - **/tags/projetosativos/** - "Tags - Multisocios Empresarial" (base)
+      - H1: Tags
+    - **/tags/reunio/** - "Tags - Multisocios Empresarial" (base)
+      - H1: Tags
+    - **/tags/reunioes/** - "Tags - Multisocios Empresarial" (reuniao)
+      - H1: Tags
+    - **/tags/sistema/** - "Tags - Multisocios Empresarial" (base)
+      - H1: Tags
+    - **/tags/whatsbot/** - "Tags - Multisocios Empresarial" (base)
+      - H1: Tags
 

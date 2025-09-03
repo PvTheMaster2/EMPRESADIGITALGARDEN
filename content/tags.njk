@@ -1,0 +1,21 @@
+---
+title: Tags
+layout: base.njk
+pagination:
+  data: collections
+  size: 1
+  alias: tag
+permalink: /tags/{{ tag | slugify }}/
+eleventyExcludeFromCollections: true
+---
+
+<h1>Tagged "{{ tag }}"</h1>
+
+{% set taglist = collections[tag] %}
+<ul>
+{% for post in taglist %}
+  <li><a href="{{ post.url }}">{{ post.data.title }}</a></li>
+{% endfor %}
+</ul>
+
+<p><a href="/tags/">← All tags</a></p>

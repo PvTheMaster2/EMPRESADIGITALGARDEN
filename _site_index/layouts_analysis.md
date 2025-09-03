@@ -1,14 +1,14 @@
 ---
-created: 2025-09-02T21:28
-updated: 2025-09-02T21:28
+created: 2025-09-02T21:37
+updated: 2025-09-02T21:37
 ---
 # 🎨 Layouts Analysis
 
-**Generated**: 2025-09-03T00:28:56.854Z
+**Generated**: 2025-09-03T00:37:02.285Z
 
 ## 📊 Layout Distribution
 
-### BASE Layout (86 pages)
+### BASE Layout (87 pages)
 
 **Example Page**: /.cursor/rules/
 **Title**: 
@@ -23,7 +23,7 @@ updated: 2025-09-02T21:28
 - /0-Dashboard-Executivo/KPIs-Principais/ - "KPIs Principais - Multisocios Empresarial"
 - /0-Dashboard-Executivo/Sistema_Metricas_Avancadas/ - "Sistema Metricas Avancadas - Multisocios Empresarial"
 - /1000 - REUNIOES/30_08-25 REUNIAO INICIAL/10 - Prompt organização atas de reuniao a partir de transcrição / - ""
-- ... and 76 more
+- ... and 77 more
 
 ### DASHBOARD Layout (1 pages)
 
@@ -45,7 +45,7 @@ updated: 2025-09-02T21:28
 - /1-Governanca/Manual_Treinamento_Compliance/ - "Manual De Treinamento Compliance - Multisocios Empresarial"
 - /1-Governanca/Playbook_Comercial_v0/ - "Playbook Comercial V0 - Multisocios Empresarial"
 - /1-Governanca/README/ - "Governança Empresarial - Multisocios Empresarial"
-- /tags/governanca/ - ""
+- /tags/governanca/ - "Tags - Multisocios Empresarial"
 
 ### PROJETO Layout (20 pages)
 
@@ -74,7 +74,7 @@ updated: 2025-09-02T21:28
 - /6-Reunioes/2025-09-01-Reuniao-Criacao-Projeto-WhatsBot/ - "ReuniãO Criacao Projeto WhatsBot - Multisocios Empresarial"
 - /6-Reunioes/2025-09-01-Reuniao-Criacao-Sistema-Geracao-Ideias/ - "ReuniãO Criacao Sistema Geracao Ideias - Multisocios Empresarial"
 - /6-Reunioes/README/ - "Reuniões e Atas - Multisocios Empresarial"
-- /tags/reunioes/ - ""
+- /tags/reunioes/ - "Tags - Multisocios Empresarial"
 
 ## 💡 Layout Recommendations
 
