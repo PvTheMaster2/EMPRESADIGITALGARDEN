@@ -1,0 +1,15 @@
+[build]
+  # Configuração simplificada para debug
+  base = "."
+  command = "npm install && npm run build"
+  publish = "build/dist"
+
+[build.environment]
+  NODE_VERSION = "20"
+  NPM_FLAGS = "--legacy-peer-deps"
+
+# Redirects básicos
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

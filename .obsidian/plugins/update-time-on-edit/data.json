@@ -647,7 +647,7 @@
     "node_modules/markdown-it-footnote/README.md": "c2d27f096a4b94437646fe7440155d9cf3811042ba54330daa82f278a7a70c34",
     "4-Projetos/Ativos/PRJ-Nostalgia-Musical.md": "518c7a829b346c2e6c87522a7159d9e2276d50c7eebb86f5a276f719fd8ffec3",
     "node_modules/@sindresorhus/slugify/readme.md": "34960149a0350c317b52c5bad687d2b01d3095874f157568e7ecb7af323b6074",
-    "node_modules/markdown-it-mathjax3/README.md": "ea7d65ef58d173b6d9e66e41181bcfb47a47cea8940a7a069f5d79c6801fbc28",
+    "node_modules/markdown-it-mathjax3/README.md": "0167688042007ab6c421dc289a796b767ce5388210b240c27e2fd1f9b0b5690a",
     "node_modules/markdown-it-plantuml/README.md": "be5aac0f3678882c4b41a5c2b0f4d3869a200aee566c28a117e5a4ae0b7b93c5",
     "0-Dashboard-Executivo/index.md": "7b9d0cfc22900dd50c635287b3113918fd60ec5e65fd1dd8272300140ac4c320",
     "node_modules/balanced-match/LICENSE.md": "307bfda5936ba1476d8178ca3243218b17951df45caeccc1401968dbfc0bb7ae",
@@ -785,7 +785,7 @@
     "node_modules/markdown-it-task-lists/test/fixtures/ordered.md": "f45a7267fff74539ad99b7b94c9efd50432284ab7d231c3c4a45e5ded21cecaf",
     "node_modules/markdown-it-abbr/README.md": "51476938ad75a976fd74eabc4403556417ec596756bbc81229ba2b2a16fa3c71",
     "node_modules/markdown-it-deflist/README.md": "211214a3c983ffded41941c3c7ec11c6860113c1aa96a79c30ff2730bfcbdf56",
-    "node_modules/markdown-it-mark/README.md": "e32772e20271cda246b1db6512ea698c49b6885a8909b8c5c952a72d54ec7c49",
+    "node_modules/markdown-it-mark/README.md": "2a866259248193503ef0feb40b8a30032a90f395af618783d287e151bac82914",
     "node_modules/markdown-it-ins/README.md": "e922147b977446c202512dd6496abd8a944d3e159dc8ff44190a2e24f10d669c",
     "node_modules/markdown-it-sub/README.md": "772db6b574721bbb5e147705367d1e5e9b06bba24e09c95b8d946bef154f043e",
     "node_modules/markdown-it-sup/README.md": "11f2875f39ce2f49f494071d5e98caf26cd0d825a76d0066b8430f0d00569dd0",
@@ -967,10 +967,10 @@
     "content/0-Dashboard-Executivo/Dashboard-Projetos-Prazo.md": "924724b004161567567c7efa5b21a3e76a4caf55bc6780bd302a04f5c03daff0",
     "content/0-Dashboard-Executivo/Executive-Auto.md": "c6fd49ee61cf10bf696648c5269e0c790046d30669b32e1016fb419f22effd07",
     "content/0-Dashboard-Executivo/Home-Executivo.md": "e587ea4068681e8c4008fdd6b849fedb0fbe3ddf00f63f96c788975cecf5584c",
-    "_site_index/issues.md": "6dcef0be01e90c0790a5ef0e9d22f00dac8111879a105201df0562ae0c5e3bee",
-    "_site_index/layouts_analysis.md": "38989faa826b20e72a400863fa55ba1e9d49364db90c58716d67cd0e22b4aff5",
+    "_site_index/issues.md": "4d1fb8ccc2cc1ea26d6f2bd3f6addee99c7b5838dc5b26f78becd11e3abf0abc",
+    "_site_index/layouts_analysis.md": "f7db765e6cad63d1bf3a448b3fbf1e38f31ea5fa0958b214f614f1eac319e575",
     "compilado site.md": "5516188f4ae7409f832893bc015b6712e9722ea4b87579290055c4927994c02c",
-    "_site_index/site_outline.md": "6dff72d7269b7a7c675e3b534165371f36512d6542e5fb4a3298163add4358f3",
+    "_site_index/site_outline.md": "acb8853262e085082bb3545ddab8577a72494bcc1b8bfab03096544cdfc0479a",
     "index.md": "766db1619ffac5db985c09332faf82296ff1188ee49b4532263f97c13b388c64",
     "node_modules/has-flag/readme.md": "81d6a4d80ea8d05a9d36e1f41314c66290ddcbb402e89e8ac9c0dbfd24264e30",
     "node_modules/acorn-walk/CHANGELOG.md": "e45662c9291b12b8b2c69cb3248c301cbdf46d00c47c2aac84f87c3ee6ccbc91",
@@ -990,6 +990,7 @@
     "node_modules/mime-db/HISTORY.md": "4a37749a182834dbf84e32591175913f50bfe953784947ecad8eee36b0ca8d9e",
     "node_modules/mime-db/README.md": "a0f633eb095c5b12985b2f2fabaae77bbf5f7a28e52a9a6ce5957c45e00a7cff",
     "node_modules/range-parser/HISTORY.md": "47facf97cf5bb723ffd3447804ecf16d8a6268821afe5dc3ef95bf561c60d1e3",
-    "node_modules/range-parser/README.md": "9cb95f8de5e6e9cbadd12f7b8a1062677e1e74afc49bc0fba21d75068fb34a9e"
+    "node_modules/range-parser/README.md": "9cb95f8de5e6e9cbadd12f7b8a1062677e1e74afc49bc0fba21d75068fb34a9e",
+    "INSTRUCOES-DEBUG-NETLIFY.md": "02ba11fe991995042582dc3647f4eb8fbc35aa1889b9c850aaaedcab797785e9"
   }
 }
