@@ -501,6 +501,8 @@
   },
   "active": "29028b5f4b751a36",
   "lastOpenFiles": [
+    "compilado site.md",
+    "combine_project.py",
     "_site_index/layouts_analysis.md",
     "_site_index/issues.md",
     "_site_index/site_outline.md",
@@ -519,7 +521,6 @@
     "build/dist/1000-REUNIOES/30_08-25 REUNIAO INICIAL/EXECUTIVO/pessoas.png",
     "build/dist/1000-REUNIOES/30_08-25 REUNIAO INICIAL/EXECUTIVO/generation-957ba223-d832-4504-95cb-a4d49db4d0a8.png",
     "build/dist/scripts/search.js",
-    "build/dist/scripts/site-indexer.js",
     "content/0-Dashboard-Executivo/Home-Executivo.md",
     "content/0-Dashboard-Executivo/Executive-Auto.md",
     "content/0-Dashboard-Executivo/Dashboard-Projetos-Prazo.md",
