@@ -29,13 +29,11 @@ module.exports = function (eleventyConfig) {
   // Plugin para navegação hierárquica e breadcrumbs
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
 
-  // Copy static assets - ESTRUTURA CORRIGIDA
+  // Copy static assets - UNIFICADO (sem duplicatas)
   eleventyConfig.addPassthroughCopy({"src/styles": "styles"});
   eleventyConfig.addPassthroughCopy({"src/scripts": "scripts"});
   eleventyConfig.addPassthroughCopy({"src/assets/images": "images"});
-  eleventyConfig.addPassthroughCopy("content/**/*.png");
-  eleventyConfig.addPassthroughCopy("content/**/*.jpg");
-  eleventyConfig.addPassthroughCopy("content/**/*.pdf");
+  // REMOVIDO: content/**/*.png|jpg|pdf - usar apenas /images como origem única
   
   // Copy _redirects file for Netlify
   eleventyConfig.addPassthroughCopy("_redirects");
@@ -193,15 +191,15 @@ module.exports = function (eleventyConfig) {
   // Add navigation data globally - NOVA ESTRUTURA
   eleventyConfig.addGlobalData("navigation", require("./config/_data/navigation.js"));
 
-  // Transform para limpar URLs automaticamente
-  eleventyConfig.addTransform("clean-urls", function(content, outputPath) {
-    if (outputPath && outputPath.endsWith('.html')) {
-      // Remove prefixos numéricos das URLs nos links
-      content = content.replace(/href="\/\d+-([^"]+)"/g, 'href="/$1"');
-      content = content.replace(/href="\/\d+-([^"]+)\//g, 'href="/$1/');
-    }
-    return content;
-  });
+  // Transform clean-urls DESATIVADO - URLs limpas são geridas via permalinks em .11tydata.js
+  // eleventyConfig.addTransform("clean-urls", function(content, outputPath) {
+  //   if (outputPath && outputPath.endsWith('.html')) {
+  //     // Remove prefixos numéricos das URLs nos links
+  //     content = content.replace(/href="\/\d+-([^"]+)"/g, 'href="/$1"');
+  //     content = content.replace(/href="\/\d+-([^"]+)\//g, 'href="/$1/');
+  //   }
+  //   return content;
+  // });
 
   // Collections for dynamic content - NOVA ESTRUTURA
   eleventyConfig.addCollection("projetos", function(collectionApi) {

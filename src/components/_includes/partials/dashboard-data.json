@@ -1,0 +1,65 @@
+{
+  "projects": [
+    {
+      "status": "active",
+      "budget": 80000,
+      "owner": "[[Pedro Vitor]]",
+      "url": "/projetos/aeralyn/"
+    },
+    {
+      "status": "active",
+      "budget": 40000,
+      "owner": "[[Arthur]]",
+      "url": "/projetos/curso-ia-inteligente/"
+    },
+    {
+      "status": "active",
+      "budget": 40000,
+      "owner": "[[Pedro Vitor]]",
+      "url": "/projetos/plataforma-cursos/"
+    },
+    {
+      "status": "in-development",
+      "budget": 25000,
+      "owner": "[[Pedro Vitor]]",
+      "url": "/projetos/web-site-portfolio-engenharia/"
+    },
+    {
+      "status": "planning",
+      "budget": 20000,
+      "owner": "[[Pedro Vitor]]",
+      "url": "/projetos/app-desenvolvimento-cognitivo/"
+    },
+    {
+      "status": "in-progress",
+      "budget": 15000,
+      "owner": "[[Pedro Vitor]]",
+      "url": "/projetos/dev-whatsbot-academia/"
+    },
+    {
+      "status": "active",
+      "budget": 60000,
+      "owner": "[[Arthur]]",
+      "url": "/projetos/trip-match/"
+    },
+    {
+      "status": "active",
+      "budget": 35000,
+      "owner": "[[Arthur]]",
+      "url": "/projetos/nostalgia-musical/"
+    },
+    {
+      "status": "active",
+      "budget": 100000,
+      "owner": "[[Pedro Vitor]]",
+      "url": "/projetos/vault-empresarial/"
+    }
+  ],
+  "metrics": {
+    "totalBudget": 415000,
+    "totalROI": 1440050,
+    "activeProjects": 6,
+    "totalProjects": 9
+  },
+  "lastUpdated": "2025-09-03T03:09:13.067Z"
+}

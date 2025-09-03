@@ -8,8 +8,9 @@
     "start": "eleventy --serve",
     "dev": "eleventy --serve",
     "clean": "node -e \"const fs = require('fs'); if (fs.existsSync('dist')) fs.rmSync('dist', {recursive: true, force: true});\"",
-    "prebuild": "npm run clean",
+    "prebuild": "npm run clean && npm run generate:static",
     "postbuild": "npm run site:index",
+    "generate:static": "node scripts/generate-static-data.js",
     "site:index": "node src/scripts/site-indexer.js",
     "audit": "npm run build && echo Audit completed - check _site_index/ folder",
     "validate:urls": "node scripts/validate-urls.js"

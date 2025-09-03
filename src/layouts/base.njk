@@ -6,9 +6,21 @@
   <title>{{ title or page.fileSlug }} - {{ site.title }}</title>
   <meta name="description" content="{{ description or site.description }}" />
   
-  <!-- CSS do tema Obsidian e customizações -->
+  <!-- CSS base (tokens, reset, sidebar) -->
   <link rel="stylesheet" href="/styles/main.css" />
   <link rel="stylesheet" href="/styles/sidebar.css" />
+  
+  <!-- CSS específico por layout (evita vazamentos) -->
+  {% if layout == "dashboard.njk" %}
+    <link rel="stylesheet" href="/styles/dashboard.css" />
+    <link rel="stylesheet" href="/styles/dashboard-central.css" />
+  {% elif layout == "projeto.njk" %}
+    <link rel="stylesheet" href="/styles/projeto.css" />
+  {% elif layout == "reuniao.njk" %}
+    <link rel="stylesheet" href="/styles/reuniao.css" />
+  {% elif layout == "governanca.njk" %}
+    <link rel="stylesheet" href="/styles/governanca.css" />
+  {% endif %}
   
   <!-- Favicon e meta tags para PWA -->
   <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
