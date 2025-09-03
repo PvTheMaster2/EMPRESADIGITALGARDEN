@@ -501,6 +501,7 @@
   },
   "active": "29028b5f4b751a36",
   "lastOpenFiles": [
+    "SOLUCAO-FINAL-NETLIFY.md",
     "netlify-simples.toml",
     "teste-raiz.html",
     "TESTE-NETLIFY-AGORA.md",
@@ -514,7 +515,6 @@
     "node_modules/markdown-it-mathjax3/LICENSE",
     "node_modules/markdown-it-mathjax3/index.js",
     "node_modules/markdown-it-mathjax3/index.d.ts",
-    "node_modules/markdown-it-mathjax3",
     "node_modules/markdown-it-mark/README.md",
     "node_modules/speech-rule-engine/bin/README.md",
     "node_modules/range-parser/README.md",
