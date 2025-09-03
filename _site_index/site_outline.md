@@ -1,6 +1,6 @@
 # 🌳 Site Structure Outline
 
-**Generated**: 2025-09-03T02:03:35.887Z
+**Generated**: 2025-09-03T02:11:20.270Z
 **Total Pages**: 196
 
 ## 📁 .CURSOR

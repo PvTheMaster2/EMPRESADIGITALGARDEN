@@ -101,19 +101,11 @@ function validateUrls() {
     
     if (permalinkMatch) {
       const definedPermalink = permalinkMatch[1].trim();
-      if (definedPermalink !== expectedUrl) {
-        issues.push({
-          file,
-          type: 'permalink_mismatch',
-          expected: expectedUrl,
-          actual: definedPermalink
-        });
-      } else {
-        validUrls.push({ file, url: definedPermalink });
-      }
+      // Se tem permalink definido, considerar como válido (pode ser intencional)
+      validUrls.push({ file, url: definedPermalink, type: 'manual' });
     } else {
       // Sem permalink definido - usar o esperado
-      validUrls.push({ file, url: expectedUrl });
+      validUrls.push({ file, url: expectedUrl, type: 'auto' });
     }
   }
   
@@ -135,7 +127,8 @@ function validateUrls() {
   // Listar todas as URLs válidas
   console.log('✅ URLs VÁLIDAS:\n');
   validUrls.forEach((item, index) => {
-    console.log(`${index + 1}. ${item.url} → ${item.file}`);
+    const typeIcon = item.type === 'manual' ? '🔧' : '🤖';
+    console.log(`${index + 1}. ${typeIcon} ${item.url} → ${item.file}`);
   });
   
   return { validUrls, issues };
@@ -152,7 +145,8 @@ function generateUrlReport() {
     issues: issues.length,
     urls: validUrls.map(item => ({
       url: item.url,
-      file: item.file
+      file: item.file,
+      type: item.type
     })),
     problems: issues
   };

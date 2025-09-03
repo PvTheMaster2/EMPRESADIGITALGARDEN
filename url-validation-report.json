@@ -1,220 +1,264 @@
 {
-  "timestamp": "2025-09-03T02:03:08.856Z",
+  "timestamp": "2025-09-03T02:11:03.579Z",
   "totalFiles": 51,
-  "validUrls": 48,
-  "issues": 3,
+  "validUrls": 51,
+  "issues": 0,
   "urls": [
     {
       "url": "/content/dashboard-projetos-prazo-visual/",
-      "file": "content\\0-Dashboard-Executivo\\Dashboard-Projetos-Prazo-Visual.md"
+      "file": "content\\0-Dashboard-Executivo\\Dashboard-Projetos-Prazo-Visual.md",
+      "type": "auto"
     },
     {
       "url": "/content/dashboard-projetos-prazo/",
-      "file": "content\\0-Dashboard-Executivo\\Dashboard-Projetos-Prazo.md"
+      "file": "content\\0-Dashboard-Executivo\\Dashboard-Projetos-Prazo.md",
+      "type": "auto"
     },
     {
       "url": "/content/dashboard-capacidade-equipe/",
-      "file": "content\\0-Dashboard-Executivo\\Dashboard_Capacidade_Equipe.md"
+      "file": "content\\0-Dashboard-Executivo\\Dashboard_Capacidade_Equipe.md",
+      "type": "auto"
     },
     {
       "url": "/content/decisoes-estrategicas/",
-      "file": "content\\0-Dashboard-Executivo\\Decisoes-Estrategicas.md"
+      "file": "content\\0-Dashboard-Executivo\\Decisoes-Estrategicas.md",
+      "type": "auto"
     },
     {
       "url": "/content/executive-auto/",
-      "file": "content\\0-Dashboard-Executivo\\Executive-Auto.md"
+      "file": "content\\0-Dashboard-Executivo\\Executive-Auto.md",
+      "type": "auto"
+    },
+    {
+      "url": "/dashboard-executivo/",
+      "file": "content\\0-Dashboard-Executivo\\Home-Executivo.md",
+      "type": "manual"
+    },
+    {
+      "url": "/dashboard-overview/",
+      "file": "content\\0-Dashboard-Executivo\\index.md",
+      "type": "manual"
     },
     {
       "url": "/content/innovation-pipeline/",
-      "file": "content\\0-Dashboard-Executivo\\Innovation-Pipeline.md"
+      "file": "content\\0-Dashboard-Executivo\\Innovation-Pipeline.md",
+      "type": "auto"
     },
     {
       "url": "/content/kpis-principais/",
-      "file": "content\\0-Dashboard-Executivo\\KPIs-Principais.md"
+      "file": "content\\0-Dashboard-Executivo\\KPIs-Principais.md",
+      "type": "auto"
     },
     {
       "url": "/content/sistema-metricas-avancadas/",
-      "file": "content\\0-Dashboard-Executivo\\Sistema_Metricas_Avancadas.md"
+      "file": "content\\0-Dashboard-Executivo\\Sistema_Metricas_Avancadas.md",
+      "type": "auto"
     },
     {
       "url": "/content/acordo-socios-final/",
-      "file": "content\\1-Governanca\\Acordo_Socios_Final.md"
+      "file": "content\\1-Governanca\\Acordo_Socios_Final.md",
+      "type": "auto"
     },
     {
       "url": "/content/compliance-log/",
-      "file": "content\\1-Governanca\\Compliance_Log.md"
+      "file": "content\\1-Governanca\\Compliance_Log.md",
+      "type": "auto"
     },
     {
       "url": "/content/etica-uso-ia/",
-      "file": "content\\1-Governanca\\etica_uso_IA.md"
+      "file": "content\\1-Governanca\\etica_uso_IA.md",
+      "type": "auto"
     },
     {
       "url": "/content/faq-compliance/",
-      "file": "content\\1-Governanca\\FAQ_Compliance.md"
+      "file": "content\\1-Governanca\\FAQ_Compliance.md",
+      "type": "auto"
     },
     {
       "url": "/content/manual-treinamento-compliance/",
-      "file": "content\\1-Governanca\\Manual_Treinamento_Compliance.md"
+      "file": "content\\1-Governanca\\Manual_Treinamento_Compliance.md",
+      "type": "auto"
     },
     {
       "url": "/content/playbook-comercial-v0/",
-      "file": "content\\1-Governanca\\Playbook_Comercial_v0.md"
+      "file": "content\\1-Governanca\\Playbook_Comercial_v0.md",
+      "type": "auto"
     },
     {
       "url": "/content/1-governanca/",
-      "file": "content\\1-Governanca\\README.md"
+      "file": "content\\1-Governanca\\README.md",
+      "type": "auto"
     },
     {
       "url": "/content/10-prompt-organizao-atas-de-reuniao-a-partir-de-transcrio/",
-      "file": "content\\1000-REUNIOES\\30_08-25 REUNIAO INICIAL\\10 - Prompt organização atas de reuniao a partir de transcrição .md"
+      "file": "content\\1000-REUNIOES\\30_08-25 REUNIAO INICIAL\\10 - Prompt organização atas de reuniao a partir de transcrição .md",
+      "type": "auto"
     },
     {
       "url": "/content/instrucoes-rapidas/",
-      "file": "content\\1000-REUNIOES\\30_08-25 REUNIAO INICIAL\\INSTRUCOES_RAPIDAS.md"
+      "file": "content\\1000-REUNIOES\\30_08-25 REUNIAO INICIAL\\INSTRUCOES_RAPIDAS.md",
+      "type": "auto"
     },
     {
       "url": "/content/plano-revista-multisocios/",
-      "file": "content\\1000-REUNIOES\\30_08-25 REUNIAO INICIAL\\plano_revista_multisocios.md"
+      "file": "content\\1000-REUNIOES\\30_08-25 REUNIAO INICIAL\\plano_revista_multisocios.md",
+      "type": "auto"
     },
     {
       "url": "/content/readme-conversor/",
-      "file": "content\\1000-REUNIOES\\30_08-25 REUNIAO INICIAL\\README_CONVERSOR.md"
+      "file": "content\\1000-REUNIOES\\30_08-25 REUNIAO INICIAL\\README_CONVERSOR.md",
+      "type": "auto"
     },
     {
       "url": "/content/2-equipes/",
-      "file": "content\\2-Equipes\\README.md"
+      "file": "content\\2-Equipes\\README.md",
+      "type": "auto"
     },
     {
       "url": "/content/3-mercado/",
-      "file": "content\\3-Mercado\\README.md"
+      "file": "content\\3-Mercado\\README.md",
+      "type": "auto"
     },
     {
       "url": "/content/aeralyn/",
-      "file": "content\\4-Projetos\\Ativos\\PRJ-AERALYN.md"
+      "file": "content\\4-Projetos\\Ativos\\PRJ-AERALYN.md",
+      "type": "auto"
     },
     {
       "url": "/content/app-desenvolvimento-cognitivo/",
-      "file": "content\\4-Projetos\\Ativos\\PRJ-App-Desenvolvimento-Cognitivo.md"
+      "file": "content\\4-Projetos\\Ativos\\PRJ-App-Desenvolvimento-Cognitivo.md",
+      "type": "auto"
     },
     {
       "url": "/content/curso-ia-inteligente/",
-      "file": "content\\4-Projetos\\Ativos\\PRJ-Curso-IA-Inteligente.md"
+      "file": "content\\4-Projetos\\Ativos\\PRJ-Curso-IA-Inteligente.md",
+      "type": "auto"
     },
     {
       "url": "/content/nostalgia-musical/",
-      "file": "content\\4-Projetos\\Ativos\\PRJ-Nostalgia-Musical.md"
+      "file": "content\\4-Projetos\\Ativos\\PRJ-Nostalgia-Musical.md",
+      "type": "auto"
     },
     {
       "url": "/content/plataforma-cursos/",
-      "file": "content\\4-Projetos\\Ativos\\PRJ-Plataforma-Cursos.md"
+      "file": "content\\4-Projetos\\Ativos\\PRJ-Plataforma-Cursos.md",
+      "type": "auto"
     },
     {
       "url": "/content/trip-match/",
-      "file": "content\\4-Projetos\\Ativos\\PRJ-Trip-Match.md"
+      "file": "content\\4-Projetos\\Ativos\\PRJ-Trip-Match.md",
+      "type": "auto"
     },
     {
       "url": "/content/vault-empresarial/",
-      "file": "content\\4-Projetos\\Ativos\\PRJ-Vault-Empresarial.md"
+      "file": "content\\4-Projetos\\Ativos\\PRJ-Vault-Empresarial.md",
+      "type": "auto"
     },
     {
       "url": "/content/dev-whatsbot-academia/",
-      "file": "content\\4-Projetos\\Em-Desenvolvimento\\PRJ-Dev-WhatsBot-Academia.md"
+      "file": "content\\4-Projetos\\Em-Desenvolvimento\\PRJ-Dev-WhatsBot-Academia.md",
+      "type": "auto"
     },
     {
       "url": "/content/web-site-portfolio-engenharia/",
-      "file": "content\\4-Projetos\\Em-Desenvolvimento\\PRJ-Web-Site-Portfolio-Engenharia.md"
+      "file": "content\\4-Projetos\\Em-Desenvolvimento\\PRJ-Web-Site-Portfolio-Engenharia.md",
+      "type": "auto"
     },
     {
       "url": "/content/4-projetos/",
-      "file": "content\\4-Projetos\\README.md"
+      "file": "content\\4-Projetos\\README.md",
+      "type": "auto"
     },
     {
       "url": "/content/exemplo-intake-preenchido/",
-      "file": "content\\4-Projetos\\Templates\\Exemplo_Intake_Preenchido.md"
+      "file": "content\\4-Projetos\\Templates\\Exemplo_Intake_Preenchido.md",
+      "type": "auto"
     },
     {
       "url": "/content/exemplo-minimalista/",
-      "file": "content\\4-Projetos\\Templates\\Exemplo_Minimalista.md"
+      "file": "content\\4-Projetos\\Templates\\Exemplo_Minimalista.md",
+      "type": "auto"
     },
     {
       "url": "/content/exemplo-primeira-cartada/",
-      "file": "content\\4-Projetos\\Templates\\Exemplo_Primeira_Cartada.md"
+      "file": "content\\4-Projetos\\Templates\\Exemplo_Primeira_Cartada.md",
+      "type": "auto"
     },
     {
       "url": "/content/4-projetos/",
-      "file": "content\\4-Projetos\\Templates\\README.md"
+      "file": "content\\4-Projetos\\Templates\\README.md",
+      "type": "auto"
     },
     {
       "url": "/content/template-2025-01-20-projeto-assistente-transcricao-juridica/",
-      "file": "content\\4-Projetos\\Templates\\TEMPLATE 2025-01-20 — projeto — Assistente-Transcricao-Juridica.md"
+      "file": "content\\4-Projetos\\Templates\\TEMPLATE 2025-01-20 — projeto — Assistente-Transcricao-Juridica.md",
+      "type": "auto"
     },
     {
       "url": "/content/template-piloto-exemplo-sistema/",
-      "file": "content\\4-Projetos\\Templates\\TEMPLATE Piloto-Exemplo-Sistema.md"
+      "file": "content\\4-Projetos\\Templates\\TEMPLATE Piloto-Exemplo-Sistema.md",
+      "type": "auto"
     },
     {
       "url": "/content/template-piloto-crm-arquitetos/",
-      "file": "content\\4-Projetos\\Templates\\TEMPLATE Piloto_CRM_Arquitetos.md"
+      "file": "content\\4-Projetos\\Templates\\TEMPLATE Piloto_CRM_Arquitetos.md",
+      "type": "auto"
     },
     {
       "url": "/content/template-projeto-exemplo-sistema/",
-      "file": "content\\4-Projetos\\Templates\\TEMPLATE Projeto-Exemplo-Sistema.md"
+      "file": "content\\4-Projetos\\Templates\\TEMPLATE Projeto-Exemplo-Sistema.md",
+      "type": "auto"
+    },
+    {
+      "url": "/projetos/templates-guia/",
+      "file": "content\\4-Projetos\\TEMPLATES.md",
+      "type": "manual"
     },
     {
       "url": "/content/guia-uso-sistema-capacidade/",
-      "file": "content\\5-Processos\\Guia_Uso_Sistema_Capacidade.md"
+      "file": "content\\5-Processos\\Guia_Uso_Sistema_Capacidade.md",
+      "type": "auto"
     },
     {
       "url": "/content/5-processos/",
-      "file": "content\\5-Processos\\README.md"
+      "file": "content\\5-Processos\\README.md",
+      "type": "auto"
     },
     {
       "url": "/content/sistema-gestao-capacidade-sprints/",
-      "file": "content\\5-Processos\\Sistema_Gestao_Capacidade_Sprints.md"
+      "file": "content\\5-Processos\\Sistema_Gestao_Capacidade_Sprints.md",
+      "type": "auto"
     },
     {
       "url": "/content/2025-08-31-reuniao-executiva-sistema/",
-      "file": "content\\6-Reunioes\\2025-08-31-Reuniao-Executiva-Sistema.md"
+      "file": "content\\6-Reunioes\\2025-08-31-Reuniao-Executiva-Sistema.md",
+      "type": "auto"
     },
     {
       "url": "/content/2025-09-01-reuniao-analise-pessimista-projetos/",
-      "file": "content\\6-Reunioes\\2025-09-01-Reuniao-Analise-Pessimista-Projetos.md"
+      "file": "content\\6-Reunioes\\2025-09-01-Reuniao-Analise-Pessimista-Projetos.md",
+      "type": "auto"
     },
     {
       "url": "/content/2025-09-01-reuniao-criacao-projeto-whatsbot/",
-      "file": "content\\6-Reunioes\\2025-09-01-Reuniao-Criacao-Projeto-WhatsBot.md"
+      "file": "content\\6-Reunioes\\2025-09-01-Reuniao-Criacao-Projeto-WhatsBot.md",
+      "type": "auto"
     },
     {
       "url": "/content/2025-09-01-reuniao-criacao-sistema-geracao-ideias/",
-      "file": "content\\6-Reunioes\\2025-09-01-Reuniao-Criacao-Sistema-Geracao-Ideias.md"
+      "file": "content\\6-Reunioes\\2025-09-01-Reuniao-Criacao-Sistema-Geracao-Ideias.md",
+      "type": "auto"
     },
     {
       "url": "/content/6-reunioes/",
-      "file": "content\\6-Reunioes\\README.md"
+      "file": "content\\6-Reunioes\\README.md",
+      "type": "auto"
     },
     {
       "url": "/content/7-conhecimento/",
-      "file": "content\\7-Conhecimento\\README.md"
+      "file": "content\\7-Conhecimento\\README.md",
+      "type": "auto"
     }
   ],
-  "problems": [
-    {
-      "file": "content\\0-Dashboard-Executivo\\Home-Executivo.md",
-      "type": "permalink_mismatch",
-      "expected": "/content/home-executivo/",
-      "actual": "/dashboard-executivo/"
-    },
-    {
-      "file": "content\\0-Dashboard-Executivo\\index.md",
-      "type": "permalink_mismatch",
-      "expected": "/content/0-dashboard-executivo/",
-      "actual": "/dashboard-overview/"
-    },
-    {
-      "file": "content\\4-Projetos\\TEMPLATES.md",
-      "type": "permalink_mismatch",
-      "expected": "/content/templates/",
-      "actual": "/projetos/templates-guia/"
-    }
-  ]
+  "problems": []
 }
