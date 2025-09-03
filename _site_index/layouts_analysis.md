@@ -1,10 +1,10 @@
 # 🎨 Layouts Analysis
 
-**Generated**: 2025-09-03T02:23:38.397Z
+**Generated**: 2025-09-03T02:34:04.620Z
 
 ## 📊 Layout Distribution
 
-### BASE Layout (131 pages)
+### BASE Layout (132 pages)
 
 **Example Page**: /.cursor/rules/
 **Title**: 
@@ -19,7 +19,7 @@
 - /0-Dashboard-Executivo/KPIs-Principais/ - "KPIs Principais - Multisocios Empresarial"
 - /0-Dashboard-Executivo/Sistema_Metricas_Avancadas/ - "Sistema Metricas Avancadas - Multisocios Empresarial"
 - /1000 - REUNIOES/30_08-25 REUNIAO INICIAL/10 - Prompt organização atas de reuniao a partir de transcrição / - ""
-- ... and 121 more
+- ... and 122 more
 
 ### DASHBOARD Layout (1 pages)
 

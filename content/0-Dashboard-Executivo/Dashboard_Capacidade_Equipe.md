@@ -258,9 +258,9 @@ SORT sprint_number DESC
 - [[utils/forms/Formulario_Capacidade_Pessoas]] - Formulário de capacidade
 
 ### **Dashboards Relacionados**
-- [[0-Dashboard-Executivo/Home-Executivo]] - Dashboard principal
-- [[0-Dashboard-Executivo/KPIs-Principais]] - KPIs da empresa
-- [[0-Dashboard-Executivo/Sistema_Metricas_Avancadas]] - Métricas avançadas
+- [[0-Dashboard-Executivo/Dashboard-Central-Integrado]] - Dashboard principal
+- [[0-Dashboard-Executivo/Dashboard-Projetos-Prazo]] - Projetos por prazo
+- [[0-Dashboard-Executivo/Decisoes-Estrategicas]] - Decisões estratégicas
 
 ---
 

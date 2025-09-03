@@ -9,10 +9,10 @@ priority: critical
 owner: Pedro Vitor
 version: 2.0
 css_class: dashboard-central-integrado
-permalink: /dashboard-central/
+permalink: /dashboard-executivo/
 eleventyNavigation:
-  key: dashboard-central
-  title: 🎯 Dashboard Central
+  key: home
+  title: 🏠 Dashboard Executivo
   order: 0
 ---
 
@@ -352,11 +352,9 @@ LIMIT 5
 <div class="quick-nav">
 
 ### **Dashboards Específicos**
-- <span class="smart-link" data-popup="/dashboard-executivo/">🏠 Home Executivo</span>
-- <span class="smart-link" data-popup="/dashboard-executivo/innovation-pipeline/">🚀 Innovation Pipeline</span>
-- <span class="smart-link" data-popup="/dashboard-executivo/kpis-principais/">📊 KPIs Principais</span>
 - <span class="smart-link" data-popup="/dashboard-executivo/dashboard-projetos-prazo/">📅 Projetos por Prazo</span>
 - <span class="smart-link" data-popup="/dashboard-executivo/dashboard-capacidade-equipe/">👥 Capacidade da Equipe</span>
+- <span class="smart-link" data-popup="/dashboard-executivo/decisoes-estrategicas/">🎯 Decisões Estratégicas</span>
 
 ### **Projetos Principais**
 - <span class="smart-link" data-popup="/projetos/aeralyn/">🌟 AERALYN</span> - Sistema de RPG (R$ 80k)

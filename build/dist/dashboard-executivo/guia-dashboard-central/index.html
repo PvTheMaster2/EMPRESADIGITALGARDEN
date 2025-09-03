@@ -3,18 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tags - Multisocios Empresarial</title>
+  <title>Guia do Dashboard Central Integrado - Multisocios Empresarial</title>
   <meta name="description" content="Sistema de Gestão de Conhecimento Multisocios" />
   
   <!-- CSS do tema Obsidian e customizações -->
   <link rel="stylesheet" href="/styles/main.css" />
   <link rel="stylesheet" href="/styles/sidebar.css" />
+  <link rel="stylesheet" href="/styles/dashboard.css" />
+  
+  <!-- Chart.js para gráficos -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   
   <!-- Favicon e meta tags para PWA -->
   <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
   <meta name="theme-color" content="#1e1e1e" />
 </head>
-<body class="has-sidebar">
+<body class="layout-dashboard">
   
   <header class="site-header">
     <nav class="main-navigation">
@@ -27,11 +31,20 @@
         </a>
       </div>
       
-      <!-- Navegação removida - usando apenas sidebar -->
+      <div class="nav-links">
+        <a href="/" class="active">Dashboard</a>
+        <a href="/Governanca/README/">Governança</a>
+        <a href="/Projetos/README/">Projetos</a>
+        <a href="/Equipes/README/">Equipes</a>
+        <a href="/Processos/README/">Processos</a>
+        <a href="/Reunioes/README/">Reuniões</a>
+        <a href="/Conhecimento/README/">Conhecimento</a>
+      </div>
       
       <div class="nav-tools">
         <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
         <button class="search-toggle" onclick="toggleSearch()">🔍</button>
+        <button class="refresh-dashboard" onclick="refreshDashboard()">🔄</button>
       </div>
     </nav>
   </header>
@@ -39,12 +52,10 @@
   <!-- Sidebar Navigation -->
   <aside class="sidebar" data-state="closed" aria-hidden="true">
     <div class="sidebar-header">
+      <button class="sidebar-close" onclick="closeSidebar()" aria-label="Fechar sidebar">×</button>
       <div class="sidebar-brand">
         <a href="/" class="brand-link">🌱 Multisocios</a>
       </div>
-      <button class="sidebar-close" onclick="closeSidebar()" title="Fechar sidebar">
-        <span class="close-icon">✕</span>
-      </button>
     </div>
     
     <div class="sidebar-content">
@@ -79,7 +90,7 @@
           </div>
           
           
-          <div class="tree-children">
+          <div class="tree-children" style="display: none;">
             
             <div class="tree-item" data-level="1">
               <div class="tree-node">
@@ -135,7 +146,7 @@
           </div>
           
           
-          <div class="tree-children">
+          <div class="tree-children" style="display: none;">
             
             <div class="tree-item" data-level="1">
               <div class="tree-node">
@@ -230,7 +241,7 @@
           </div>
           
           
-          <div class="tree-children">
+          <div class="tree-children" style="display: none;">
             
             <div class="tree-item" data-level="1">
               <div class="tree-node">
@@ -312,7 +323,7 @@
           </div>
           
           
-          <div class="tree-children">
+          <div class="tree-children" style="display: none;">
             
             <div class="tree-item" data-level="1">
               <div class="tree-node">
@@ -381,7 +392,7 @@
           </div>
           
           
-          <div class="tree-children">
+          <div class="tree-children" style="display: none;">
             
             <div class="tree-item" data-level="1">
               <div class="tree-node">
@@ -394,11 +405,13 @@
               </div>
               
               
-              <div class="tree-children">
+              <div class="tree-children" style="display: none;">
                 
                 <div class="tree-item" data-level="2">
                   <div class="tree-node">
-                    <span class="tree-spacer"></span>
+                    <button class="tree-toggle" style="visibility: hidden;">
+                      <span class="tree-icon">▶</span>
+                    </button>
                     <a href="/projetos/aeralyn/" class="tree-link ">
                       <span class="tree-label">🌟 AERALYN</span>
                     </a>
@@ -407,7 +420,9 @@
                 
                 <div class="tree-item" data-level="2">
                   <div class="tree-node">
-                    <span class="tree-spacer"></span>
+                    <button class="tree-toggle" style="visibility: hidden;">
+                      <span class="tree-icon">▶</span>
+                    </button>
                     <a href="/projetos/trip-match/" class="tree-link ">
                       <span class="tree-label">🎮 Trip-Match</span>
                     </a>
@@ -416,7 +431,9 @@
                 
                 <div class="tree-item" data-level="2">
                   <div class="tree-node">
-                    <span class="tree-spacer"></span>
+                    <button class="tree-toggle" style="visibility: hidden;">
+                      <span class="tree-icon">▶</span>
+                    </button>
                     <a href="/projetos/vault-empresarial/" class="tree-link ">
                       <span class="tree-label">🏢 Vault Empresarial</span>
                     </a>
@@ -425,7 +442,9 @@
                 
                 <div class="tree-item" data-level="2">
                   <div class="tree-node">
-                    <span class="tree-spacer"></span>
+                    <button class="tree-toggle" style="visibility: hidden;">
+                      <span class="tree-icon">▶</span>
+                    </button>
                     <a href="/projetos/curso-ia-inteligente/" class="tree-link ">
                       <span class="tree-label">🎓 Curso IA Inteligente</span>
                     </a>
@@ -434,7 +453,9 @@
                 
                 <div class="tree-item" data-level="2">
                   <div class="tree-node">
-                    <span class="tree-spacer"></span>
+                    <button class="tree-toggle" style="visibility: hidden;">
+                      <span class="tree-icon">▶</span>
+                    </button>
                     <a href="/projetos/app-desenvolvimento-cognitivo/" class="tree-link ">
                       <span class="tree-label">📱 App Desenvolvimento</span>
                     </a>
@@ -443,7 +464,9 @@
                 
                 <div class="tree-item" data-level="2">
                   <div class="tree-node">
-                    <span class="tree-spacer"></span>
+                    <button class="tree-toggle" style="visibility: hidden;">
+                      <span class="tree-icon">▶</span>
+                    </button>
                     <a href="/projetos/nostalgia-musical/" class="tree-link ">
                       <span class="tree-label">🎵 Nostalgia Musical</span>
                     </a>
@@ -452,7 +475,9 @@
                 
                 <div class="tree-item" data-level="2">
                   <div class="tree-node">
-                    <span class="tree-spacer"></span>
+                    <button class="tree-toggle" style="visibility: hidden;">
+                      <span class="tree-icon">▶</span>
+                    </button>
                     <a href="/projetos/plataforma-cursos/" class="tree-link ">
                       <span class="tree-label">🎓 Plataforma Cursos</span>
                     </a>
@@ -474,11 +499,13 @@
               </div>
               
               
-              <div class="tree-children">
+              <div class="tree-children" style="display: none;">
                 
                 <div class="tree-item" data-level="2">
                   <div class="tree-node">
-                    <span class="tree-spacer"></span>
+                    <button class="tree-toggle" style="visibility: hidden;">
+                      <span class="tree-icon">▶</span>
+                    </button>
                     <a href="/projetos/dev-whatsbot-academia/" class="tree-link ">
                       <span class="tree-label">🤖 WhatsBot Academia</span>
                     </a>
@@ -487,7 +514,9 @@
                 
                 <div class="tree-item" data-level="2">
                   <div class="tree-node">
-                    <span class="tree-spacer"></span>
+                    <button class="tree-toggle" style="visibility: hidden;">
+                      <span class="tree-icon">▶</span>
+                    </button>
                     <a href="/projetos/web-site-portfolio-engenharia/" class="tree-link ">
                       <span class="tree-label">🌐 Portfolio Engenharia</span>
                     </a>
@@ -509,11 +538,13 @@
               </div>
               
               
-              <div class="tree-children">
+              <div class="tree-children" style="display: none;">
                 
                 <div class="tree-item" data-level="2">
                   <div class="tree-node">
-                    <span class="tree-spacer"></span>
+                    <button class="tree-toggle" style="visibility: hidden;">
+                      <span class="tree-icon">▶</span>
+                    </button>
                     <a href="/projetos/exemplo-intake-preenchido/" class="tree-link ">
                       <span class="tree-label">📋 Exemplo Intake</span>
                     </a>
@@ -522,7 +553,9 @@
                 
                 <div class="tree-item" data-level="2">
                   <div class="tree-node">
-                    <span class="tree-spacer"></span>
+                    <button class="tree-toggle" style="visibility: hidden;">
+                      <span class="tree-icon">▶</span>
+                    </button>
                     <a href="/projetos/exemplo-minimalista/" class="tree-link ">
                       <span class="tree-label">⚡ Minimalista</span>
                     </a>
@@ -531,7 +564,9 @@
                 
                 <div class="tree-item" data-level="2">
                   <div class="tree-node">
-                    <span class="tree-spacer"></span>
+                    <button class="tree-toggle" style="visibility: hidden;">
+                      <span class="tree-icon">▶</span>
+                    </button>
                     <a href="/projetos/exemplo-primeira-cartada/" class="tree-link ">
                       <span class="tree-label">🎯 Primeira Cartada</span>
                     </a>
@@ -540,7 +575,9 @@
                 
                 <div class="tree-item" data-level="2">
                   <div class="tree-node">
-                    <span class="tree-spacer"></span>
+                    <button class="tree-toggle" style="visibility: hidden;">
+                      <span class="tree-icon">▶</span>
+                    </button>
                     <a href="/projetos/template-piloto-exemplo-sistema/" class="tree-link ">
                       <span class="tree-label">🏗️ Template Piloto</span>
                     </a>
@@ -549,7 +586,9 @@
                 
                 <div class="tree-item" data-level="2">
                   <div class="tree-node">
-                    <span class="tree-spacer"></span>
+                    <button class="tree-toggle" style="visibility: hidden;">
+                      <span class="tree-icon">▶</span>
+                    </button>
                     <a href="/projetos/template-piloto-crm-arquitetos/" class="tree-link ">
                       <span class="tree-label">🏢 CRM Arquitetos</span>
                     </a>
@@ -575,7 +614,7 @@
           </div>
           
           
-          <div class="tree-children">
+          <div class="tree-children" style="display: none;">
             
             <div class="tree-item" data-level="1">
               <div class="tree-node">
@@ -657,7 +696,7 @@
           </div>
           
           
-          <div class="tree-children">
+          <div class="tree-children" style="display: none;">
             
             <div class="tree-item" data-level="1">
               <div class="tree-node">
@@ -765,7 +804,7 @@
           </div>
           
           
-          <div class="tree-children">
+          <div class="tree-children" style="display: none;">
             
             <div class="tree-item" data-level="1">
               <div class="tree-node">
@@ -847,7 +886,7 @@
           </div>
           
           
-          <div class="tree-children">
+          <div class="tree-children" style="display: none;">
             
             <div class="tree-item" data-level="1">
               <div class="tree-node">
@@ -903,7 +942,7 @@
           </div>
           
           
-          <div class="tree-children">
+          <div class="tree-children" style="display: none;">
             
             <div class="tree-item" data-level="1">
               <div class="tree-node">
@@ -998,7 +1037,7 @@
           </div>
           
           
-          <div class="tree-children">
+          <div class="tree-children" style="display: none;">
             
             <div class="tree-item" data-level="1">
               <div class="tree-node">
@@ -1080,7 +1119,7 @@
           </div>
           
           
-          <div class="tree-children">
+          <div class="tree-children" style="display: none;">
             
             <div class="tree-item" data-level="1">
               <div class="tree-node">
@@ -1149,7 +1188,7 @@
           </div>
           
           
-          <div class="tree-children">
+          <div class="tree-children" style="display: none;">
             
             <div class="tree-item" data-level="1">
               <div class="tree-node">
@@ -1162,11 +1201,13 @@
               </div>
               
               
-              <div class="tree-children">
+              <div class="tree-children" style="display: none;">
                 
                 <div class="tree-item" data-level="2">
                   <div class="tree-node">
-                    <span class="tree-spacer"></span>
+                    <button class="tree-toggle" style="visibility: hidden;">
+                      <span class="tree-icon">▶</span>
+                    </button>
                     <a href="/projetos/aeralyn/" class="tree-link ">
                       <span class="tree-label">🌟 AERALYN</span>
                     </a>
@@ -1175,7 +1216,9 @@
                 
                 <div class="tree-item" data-level="2">
                   <div class="tree-node">
-                    <span class="tree-spacer"></span>
+                    <button class="tree-toggle" style="visibility: hidden;">
+                      <span class="tree-icon">▶</span>
+                    </button>
                     <a href="/projetos/trip-match/" class="tree-link ">
                       <span class="tree-label">🎮 Trip-Match</span>
                     </a>
@@ -1184,7 +1227,9 @@
                 
                 <div class="tree-item" data-level="2">
                   <div class="tree-node">
-                    <span class="tree-spacer"></span>
+                    <button class="tree-toggle" style="visibility: hidden;">
+                      <span class="tree-icon">▶</span>
+                    </button>
                     <a href="/projetos/vault-empresarial/" class="tree-link ">
                       <span class="tree-label">🏢 Vault Empresarial</span>
                     </a>
@@ -1193,7 +1238,9 @@
                 
                 <div class="tree-item" data-level="2">
                   <div class="tree-node">
-                    <span class="tree-spacer"></span>
+                    <button class="tree-toggle" style="visibility: hidden;">
+                      <span class="tree-icon">▶</span>
+                    </button>
                     <a href="/projetos/curso-ia-inteligente/" class="tree-link ">
                       <span class="tree-label">🎓 Curso IA Inteligente</span>
                     </a>
@@ -1202,7 +1249,9 @@
                 
                 <div class="tree-item" data-level="2">
                   <div class="tree-node">
-                    <span class="tree-spacer"></span>
+                    <button class="tree-toggle" style="visibility: hidden;">
+                      <span class="tree-icon">▶</span>
+                    </button>
                     <a href="/projetos/app-desenvolvimento-cognitivo/" class="tree-link ">
                       <span class="tree-label">📱 App Desenvolvimento</span>
                     </a>
@@ -1211,7 +1260,9 @@
                 
                 <div class="tree-item" data-level="2">
                   <div class="tree-node">
-                    <span class="tree-spacer"></span>
+                    <button class="tree-toggle" style="visibility: hidden;">
+                      <span class="tree-icon">▶</span>
+                    </button>
                     <a href="/projetos/nostalgia-musical/" class="tree-link ">
                       <span class="tree-label">🎵 Nostalgia Musical</span>
                     </a>
@@ -1220,7 +1271,9 @@
                 
                 <div class="tree-item" data-level="2">
                   <div class="tree-node">
-                    <span class="tree-spacer"></span>
+                    <button class="tree-toggle" style="visibility: hidden;">
+                      <span class="tree-icon">▶</span>
+                    </button>
                     <a href="/projetos/plataforma-cursos/" class="tree-link ">
                       <span class="tree-label">🎓 Plataforma Cursos</span>
                     </a>
@@ -1242,11 +1295,13 @@
               </div>
               
               
-              <div class="tree-children">
+              <div class="tree-children" style="display: none;">
                 
                 <div class="tree-item" data-level="2">
                   <div class="tree-node">
-                    <span class="tree-spacer"></span>
+                    <button class="tree-toggle" style="visibility: hidden;">
+                      <span class="tree-icon">▶</span>
+                    </button>
                     <a href="/projetos/dev-whatsbot-academia/" class="tree-link ">
                       <span class="tree-label">🤖 WhatsBot Academia</span>
                     </a>
@@ -1255,7 +1310,9 @@
                 
                 <div class="tree-item" data-level="2">
                   <div class="tree-node">
-                    <span class="tree-spacer"></span>
+                    <button class="tree-toggle" style="visibility: hidden;">
+                      <span class="tree-icon">▶</span>
+                    </button>
                     <a href="/projetos/web-site-portfolio-engenharia/" class="tree-link ">
                       <span class="tree-label">🌐 Portfolio Engenharia</span>
                     </a>
@@ -1277,11 +1334,13 @@
               </div>
               
               
-              <div class="tree-children">
+              <div class="tree-children" style="display: none;">
                 
                 <div class="tree-item" data-level="2">
                   <div class="tree-node">
-                    <span class="tree-spacer"></span>
+                    <button class="tree-toggle" style="visibility: hidden;">
+                      <span class="tree-icon">▶</span>
+                    </button>
                     <a href="/projetos/exemplo-intake-preenchido/" class="tree-link ">
                       <span class="tree-label">📋 Exemplo Intake</span>
                     </a>
@@ -1290,7 +1349,9 @@
                 
                 <div class="tree-item" data-level="2">
                   <div class="tree-node">
-                    <span class="tree-spacer"></span>
+                    <button class="tree-toggle" style="visibility: hidden;">
+                      <span class="tree-icon">▶</span>
+                    </button>
                     <a href="/projetos/exemplo-minimalista/" class="tree-link ">
                       <span class="tree-label">⚡ Minimalista</span>
                     </a>
@@ -1299,7 +1360,9 @@
                 
                 <div class="tree-item" data-level="2">
                   <div class="tree-node">
-                    <span class="tree-spacer"></span>
+                    <button class="tree-toggle" style="visibility: hidden;">
+                      <span class="tree-icon">▶</span>
+                    </button>
                     <a href="/projetos/exemplo-primeira-cartada/" class="tree-link ">
                       <span class="tree-label">🎯 Primeira Cartada</span>
                     </a>
@@ -1308,7 +1371,9 @@
                 
                 <div class="tree-item" data-level="2">
                   <div class="tree-node">
-                    <span class="tree-spacer"></span>
+                    <button class="tree-toggle" style="visibility: hidden;">
+                      <span class="tree-icon">▶</span>
+                    </button>
                     <a href="/projetos/template-piloto-exemplo-sistema/" class="tree-link ">
                       <span class="tree-label">🏗️ Template Piloto</span>
                     </a>
@@ -1317,7 +1382,9 @@
                 
                 <div class="tree-item" data-level="2">
                   <div class="tree-node">
-                    <span class="tree-spacer"></span>
+                    <button class="tree-toggle" style="visibility: hidden;">
+                      <span class="tree-icon">▶</span>
+                    </button>
                     <a href="/projetos/template-piloto-crm-arquitetos/" class="tree-link ">
                       <span class="tree-label">🏢 CRM Arquitetos</span>
                     </a>
@@ -1343,7 +1410,7 @@
           </div>
           
           
-          <div class="tree-children">
+          <div class="tree-children" style="display: none;">
             
             <div class="tree-item" data-level="1">
               <div class="tree-node">
@@ -1425,7 +1492,7 @@
           </div>
           
           
-          <div class="tree-children">
+          <div class="tree-children" style="display: none;">
             
             <div class="tree-item" data-level="1">
               <div class="tree-node">
@@ -1533,7 +1600,7 @@
           </div>
           
           
-          <div class="tree-children">
+          <div class="tree-children" style="display: none;">
             
             <div class="tree-item" data-level="1">
               <div class="tree-node">
@@ -1598,127 +1665,724 @@
   <!-- Overlay para mobile -->
   <div class="sidebar-overlay" aria-hidden="true"></div>
 
+  <!-- Main Content -->
   <main id="main" class="site-main" tabindex="-1">
     <div class="content-wrapper">
       
-      <!-- Breadcrumb navegação com eleventyNavigation -->
-
-
-
-      <!-- Conteúdo principal da página -->
-      <article class="page-content">
-        
-        <header class="page-header">
-          <h1 class="page-title">Tags</h1>
+      <!-- Dashboard Header -->
+      <header class="dashboard-header">
+        <div class="dashboard-title-section">
           
-          <!-- Metadados da página se existirem -->
+          <h1 class="dashboard-title">Guia do Dashboard Central Integrado</h1>
           
-          <div class="page-meta">
-            
-            <div class="page-tags">
-              
-            </div>
-            
-            
-            
-            
-            
-            
-            
+          <div class="dashboard-subtitle">
+            <span class="last-updated">Última atualização: 2025-01-20</span>
+            <span class="auto-refresh">🔄 Atualização automática</span>
           </div>
-          
-        </header>
+        </div>
         
+        <!-- Quick Stats -->
+        <div class="quick-stats">
+          <div class="stat-item projects">
+            <div class="stat-icon">📋</div>
+            <div class="stat-content">
+              <div class="stat-value" id="total-projects">8</div>
+              <div class="stat-label">Projetos</div>
+            </div>
+          </div>
+          <div class="stat-item budget">
+            <div class="stat-icon">💰</div>
+            <div class="stat-content">
+              <div class="stat-value" id="total-budget">R$ 297k</div>
+              <div class="stat-label">Budget</div>
+            </div>
+          </div>
+          <div class="stat-item roi">
+            <div class="stat-icon">📈</div>
+            <div class="stat-content">
+              <div class="stat-value" id="avg-roi">347%</div>
+              <div class="stat-label">ROI Médio</div>
+            </div>
+          </div>
+          <div class="stat-item status">
+            <div class="stat-icon">✅</div>
+            <div class="stat-content">
+              <div class="stat-value status-active">Online</div>
+              <div class="stat-label">Sistema</div>
+            </div>
+          </div>
+        </div>
+      </header>
 
-        <!-- Conteúdo renderizado do Markdown -->
-        <div class="page-body">
-          
-<h1>Tagged "correção"</h1>
+      <!-- Main Dashboard Grid -->
+      <div class="dashboard-grid">
+        
+        <!-- KPI Cards Row -->
+        <div class="kpi-section">
+          <div class="kpi-card revenue">
+            <div class="kpi-header">
+              <div class="kpi-icon">💰</div>
+              <div class="kpi-title">Receita Total</div>
+              <div class="kpi-trend up">↗️</div>
+            </div>
+            <div class="kpi-value">R$ 1.2M</div>
+            <div class="kpi-subtitle">+23% vs mês anterior</div>
+            <div class="kpi-chart">
+              <canvas id="revenueChart" width="200" height="60"></canvas>
+            </div>
+          </div>
 
+          <div class="kpi-card projects-active">
+            <div class="kpi-header">
+              <div class="kpi-icon">🚀</div>
+              <div class="kpi-title">Projetos Ativos</div>
+              <div class="kpi-trend stable">→</div>
+            </div>
+            <div class="kpi-value">8</div>
+            <div class="kpi-subtitle">2 em desenvolvimento</div>
+            <div class="kpi-progress">
+              <div class="progress-bar">
+                <div class="progress-fill" style="width: 75%"></div>
+              </div>
+              <span class="progress-text">75% conclusão média</span>
+            </div>
+          </div>
 
-<ul>
+          <div class="kpi-card team-capacity">
+            <div class="kpi-header">
+              <div class="kpi-icon">👥</div>
+              <div class="kpi-title">Capacidade da Equipe</div>
+              <div class="kpi-trend up">↗️</div>
+            </div>
+            <div class="kpi-value">85%</div>
+            <div class="kpi-subtitle">Utilização atual</div>
+            <div class="capacity-indicators">
+              <div class="capacity-item">
+                <span class="capacity-label">Dev</span>
+                <div class="capacity-bar">
+                  <div class="capacity-fill" style="width: 90%"></div>
+                </div>
+              </div>
+              <div class="capacity-item">
+                <span class="capacity-label">Design</span>
+                <div class="capacity-bar">
+                  <div class="capacity-fill" style="width: 70%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
 
-  <li><a href="/reunioes/reuniao-analise-pessimista-projetos/">ReuniãO Analise Pessimista Projetos</a></li>
-
-</ul>
-
-<p><a href="/tags/">← All tags</a></p>
-
+          <div class="kpi-card performance">
+            <div class="kpi-header">
+              <div class="kpi-icon">⚡</div>
+              <div class="kpi-title">Performance</div>
+              <div class="kpi-trend up">↗️</div>
+            </div>
+            <div class="kpi-value">94%</div>
+            <div class="kpi-subtitle">Score geral</div>
+            <div class="performance-metrics">
+              <div class="metric-item">
+                <span class="metric-dot quality"></span>
+                <span class="metric-text">Qualidade: 96%</span>
+              </div>
+              <div class="metric-item">
+                <span class="metric-dot speed"></span>
+                <span class="metric-text">Velocidade: 92%</span>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <!-- Bloco de decisão destacado se existir -->
-        
-      </article>
-
-      <!-- Sidebar com informações adicionais -->
-      <aside class="page-sidebar">
-        
-        <!-- Backlinks - páginas que referenciam esta -->
-        
-
-        <!-- Table of Contents (temporariamente desabilitado)
-        
-        -->
-
-        <!-- Links relacionados por tags -->
-        
-        <section class="related-section">
-          <h3 class="sidebar-title">
-            <span class="sidebar-icon">🏷️</span>
-            Relacionados
-          </h3>
-          <div class="related-links">
-            
-            
-          </div>
-        </section>
-        
-
-        <!-- Metadados técnicos -->
-        <section class="meta-section">
-          <h3 class="sidebar-title">
-            <span class="sidebar-icon">ℹ️</span>
-            Informações
-          </h3>
-          <div class="page-meta-details">
-            
-            
-            
-            
-            <div class="meta-item">
-              <span class="meta-label">Palavras:</span>
-              <span class="meta-value">30</span>
+        <!-- Charts Section -->
+        <div class="charts-section">
+          <div class="chart-card projects-timeline">
+            <div class="chart-header">
+              <h3>📊 Timeline de Projetos</h3>
+              <div class="chart-controls">
+                <button class="chart-filter active" data-period="month">Mês</button>
+                <button class="chart-filter" data-period="quarter">Trimestre</button>
+                <button class="chart-filter" data-period="year">Ano</button>
+              </div>
+            </div>
+            <div class="chart-container">
+              <canvas id="projectsTimelineChart"></canvas>
             </div>
           </div>
-        </section>
 
-      </aside>
+          <div class="chart-card budget-distribution">
+            <div class="chart-header">
+              <h3>💰 Distribuição de Budget</h3>
+              <div class="budget-total">Total: R$ 297k</div>
+            </div>
+            <div class="chart-container">
+              <canvas id="budgetChart"></canvas>
+            </div>
+            <div class="budget-legend">
+              <div class="legend-item">
+                <span class="legend-dot" style="background: #667eea;"></span>
+                <span>Desenvolvimento (40%)</span>
+              </div>
+              <div class="legend-item">
+                <span class="legend-dot" style="background: #764ba2;"></span>
+                <span>Marketing (25%)</span>
+              </div>
+              <div class="legend-item">
+                <span class="legend-dot" style="background: #f093fb;"></span>
+                <span>Operações (35%)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Recent Activity & Alerts -->
+        <div class="activity-section">
+          <div class="activity-card recent-updates">
+            <div class="activity-header">
+              <h3>🔔 Atualizações Recentes</h3>
+              <span class="activity-count">5 novos</span>
+            </div>
+            <div class="activity-list">
+              <div class="activity-item">
+                <div class="activity-icon project">📋</div>
+                <div class="activity-content">
+                  <div class="activity-title">Projeto AERALYN atualizado</div>
+                  <div class="activity-time">há 2 horas</div>
+                </div>
+                <div class="activity-status success">✅</div>
+              </div>
+              <div class="activity-item">
+                <div class="activity-icon meeting">📅</div>
+                <div class="activity-content">
+                  <div class="activity-title">Reunião executiva concluída</div>
+                  <div class="activity-time">há 4 horas</div>
+                </div>
+                <div class="activity-status info">ℹ️</div>
+              </div>
+              <div class="activity-item">
+                <div class="activity-icon budget">💰</div>
+                <div class="activity-content">
+                  <div class="activity-title">Budget aprovado para Q4</div>
+                  <div class="activity-time">há 1 dia</div>
+                </div>
+                <div class="activity-status success">✅</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="activity-card alerts">
+            <div class="activity-header">
+              <h3>⚠️ Alertas</h3>
+              <span class="alert-count">2 ativos</span>
+            </div>
+            <div class="alerts-list">
+              <div class="alert-item warning">
+                <div class="alert-icon">⚠️</div>
+                <div class="alert-content">
+                  <div class="alert-title">Budget próximo do limite</div>
+                  <div class="alert-description">Projeto Trip Match: 85% utilizado</div>
+                </div>
+                <button class="alert-action">Ver</button>
+              </div>
+              <div class="alert-item info">
+                <div class="alert-icon">📋</div>
+                <div class="alert-content">
+                  <div class="alert-title">Revisão de compliance</div>
+                  <div class="alert-description">3 documentos pendentes</div>
+                </div>
+                <button class="alert-action">Revisar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Actions -->
+        <div class="actions-section">
+          <div class="actions-card">
+            <h3>⚡ Ações Rápidas</h3>
+            <div class="actions-grid">
+              <button class="action-btn primary">
+                <div class="action-icon">➕</div>
+                <div class="action-text">Novo Projeto</div>
+              </button>
+              <button class="action-btn secondary">
+                <div class="action-icon">📅</div>
+                <div class="action-text">Agendar Reunião</div>
+              </button>
+              <button class="action-btn secondary">
+                <div class="action-icon">📊</div>
+                <div class="action-text">Gerar Relatório</div>
+              </button>
+              <button class="action-btn secondary">
+                <div class="action-icon">⚙️</div>
+                <div class="action-text">Configurações</div>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Dashboard Content (for additional content from markdown) -->
+      
+      <div class="dashboard-content">
+        <h1>📖 <strong>GUIA DO DASHBOARD CENTRAL INTEGRADO</strong></h1>
+<blockquote>
+<p><em>Manual completo para usar o novo dashboard executivo centralizado com funcionalidades avançadas</em></p>
+</blockquote>
+<hr>
+<h2>🎯 <strong>O QUE FOI CRIADO</strong></h2>
+<h3><strong>Dashboard Central Integrado</strong></h3>
+<ul>
+<li><strong>URL</strong>: <code>/dashboard-central/</code></li>
+<li><strong>Arquivo</strong>: <code>Dashboard-Central-Integrado.md</code></li>
+<li><strong>Funcionalidades</strong>: Métricas em tempo real, popups interativos, navegação inteligente</li>
+</ul>
+<h3><strong>Arquivos Adicionais</strong></h3>
+<ul>
+<li><strong>CSS</strong>: <code>src/styles/dashboard-central.css</code></li>
+<li><strong>JavaScript</strong>: <code>src/scripts/dashboard-central.js</code></li>
+<li><strong>Guia</strong>: Este documento</li>
+</ul>
+<hr>
+<h2>🚀 <strong>FUNCIONALIDADES PRINCIPAIS</strong></h2>
+<h3><strong>1. Métricas Centralizadas</strong></h3>
+<ul>
+<li><strong>Todos os projetos</strong> em uma única visualização</li>
+<li><strong>Queries Dataview</strong> automáticas que puxam dados dos arquivos <code>.md</code></li>
+<li><strong>Cálculos automáticos</strong> de ROI, budget, eficiência</li>
+<li><strong>Atualização em tempo real</strong> das métricas</li>
+</ul>
+<h3><strong>2. Sistema de Popups (Estilo Obsidian)</strong></h3>
+<ul>
+<li><strong>Hover sobre links</strong> mostra preview instantâneo</li>
+<li><strong>Informações do projeto</strong> sem sair da página</li>
+<li><strong>Navegação rápida</strong> com um clique</li>
+<li><strong>Atalhos de teclado</strong> para melhor produtividade</li>
+</ul>
+<h3><strong>3. Análises Integradas</strong></h3>
+<ul>
+<li><strong>Por prazo</strong>: Curto, médio e longo prazo</li>
+<li><strong>Por prioridade</strong>: Alta, média, baixa</li>
+<li><strong>Por segmento</strong>: Mercados diferentes</li>
+<li><strong>Por owner</strong>: Distribuição de responsabilidades</li>
+</ul>
+<hr>
+<h2>📊 <strong>COMO USAR O DASHBOARD</strong></h2>
+<h3><strong>Navegação Principal</strong></h3>
+<ol>
+<li><strong>Acesse</strong>: <code>/dashboard-central/</code></li>
+<li><strong>Explore as seções</strong>:
+<ul>
+<li>Hero Metrics (topo)</li>
+<li>Pipeline de Projetos</li>
+<li>Análise Financeira</li>
+<li>Gestão de Equipe</li>
+<li>Compliance</li>
+<li>Alertas</li>
+</ul>
+</li>
+</ol>
+<h3><strong>Sistema de Popups</strong></h3>
+<ol>
+<li><strong>Passe o mouse</strong> sobre qualquer link azul</li>
+<li><strong>Aguarde 0.5s</strong> para o popup aparecer</li>
+<li><strong>Veja o preview</strong> com informações do projeto</li>
+<li><strong>Clique</strong> para navegar ou <strong>ESC</strong> para fechar</li>
+</ol>
+<h3><strong>Atalhos de Teclado</strong></h3>
+<ul>
+<li><strong>Ctrl/Cmd + K</strong>: Busca rápida</li>
+<li><strong>Ctrl/Cmd + R</strong>: Atualizar métricas</li>
+<li><strong>ESC</strong>: Fechar popups/modais</li>
+</ul>
+<hr>
+<h2>🔧 <strong>QUERIES DATAVIEW INTEGRADAS</strong></h2>
+<h3><strong>Pipeline de Projetos</strong></h3>
+<pre><code class="language-dataview">TABLE 
+  choice(status, &quot;💡&quot;,&quot;📋&quot;,&quot;🚧&quot;,&quot;🧪&quot;,&quot;🚀&quot;,&quot;✅&quot;) AS &quot;Status&quot;,
+  link(file.link, title) AS &quot;Projeto&quot;,
+  owner AS &quot;Owner&quot;,
+  effort_weeks + &quot;w&quot; AS &quot;Esforço&quot;,
+  &quot;R$ &quot; + budget AS &quot;Budget&quot;
+FROM &quot;4-Projetos&quot;
+WHERE (type = &quot;project&quot; OR type = &quot;pilot&quot;) AND status != &quot;template&quot;
+SORT priority DESC, budget DESC
+</code></pre>
+<h3><strong>Métricas por Status</strong></h3>
+<pre><code class="language-dataview">TABLE 
+  status AS &quot;Status&quot;,
+  length(rows) AS &quot;Qtd&quot;,
+  round(sum(budget) / 1000, 1) + &quot;k&quot; AS &quot;Budget (R$)&quot;
+FROM &quot;4-Projetos&quot;
+WHERE (type = &quot;project&quot; OR type = &quot;pilot&quot;) AND status != &quot;template&quot;
+GROUP BY status
+SORT length(rows) DESC
+</code></pre>
+<h3><strong>ROI por Projeto</strong></h3>
+<pre><code class="language-dataview">TABLE 
+  link(file.link, title) AS &quot;Projeto&quot;,
+  &quot;R$ &quot; + budget AS &quot;Investimento&quot;,
+  round(budget * 3.47, 0) AS &quot;Retorno Esperado&quot;
+FROM &quot;4-Projetos&quot;
+WHERE type = &quot;project&quot; AND budget &gt; 0
+SORT budget DESC
+</code></pre>
+<hr>
+<h2>💡 <strong>COMO FUNCIONA A INTEGRAÇÃO</strong></h2>
+<h3><strong>Dados Automáticos</strong></h3>
+<ul>
+<li><strong>Puxam de</strong>: Todos os arquivos <code>.md</code> em <code>4-Projetos/</code></li>
+<li><strong>Campos usados</strong>: <code>budget</code>, <code>status</code>, <code>priority</code>, <code>owner</code>, <code>market_segment</code></li>
+<li><strong>Cálculos</strong>: ROI automático (budget × 3.47), totais, médias</li>
+<li><strong>Filtros</strong>: Exclui templates e arquivos de configuração</li>
+</ul>
+<h3><strong>Sistema de Links Inteligentes</strong></h3>
+<ul>
+<li><strong>Smart Links</strong>: <code>&lt;span class=&quot;smart-link&quot; data-popup=&quot;/url/&quot;&gt;</code></li>
+<li><strong>Preview automático</strong>: JavaScript detecta hover</li>
+<li><strong>Dados do popup</strong>: Função <code>getMockPreviewData()</code></li>
+<li><strong>Navegação</strong>: Clique redireciona para a página</li>
+</ul>
+<h3><strong>Responsividade</strong></h3>
+<ul>
+<li><strong>Desktop</strong>: Layout completo em grid</li>
+<li><strong>Tablet</strong>: Adaptação automática</li>
+<li><strong>Mobile</strong>: Layout em coluna única</li>
+<li><strong>Print</strong>: Versão otimizada para impressão</li>
+</ul>
+<hr>
+<h2>🎨 <strong>PERSONALIZAÇÃO</strong></h2>
+<h3><strong>Cores e Temas</strong></h3>
+<pre><code class="language-css">:root {
+  --primary-color: #667eea;    /* Azul principal */
+  --secondary-color: #764ba2;  /* Roxo secundário */
+  --success-color: #2ed573;    /* Verde sucesso */
+  --warning-color: #ffa502;    /* Laranja aviso */
+  --danger-color: #ff4757;     /* Vermelho perigo */
+}
+</code></pre>
+<h3><strong>Métricas Personalizadas</strong></h3>
+<ul>
+<li><strong>Edite</strong>: <code>Dashboard-Central-Integrado.md</code></li>
+<li><strong>Adicione queries</strong>: Novas seções com <code>dataview</code></li>
+<li><strong>Modifique cálculos</strong>: Altere fórmulas de ROI</li>
+<li><strong>Novos campos</strong>: Use qualquer campo dos projetos</li>
+</ul>
+<h3><strong>Popups Customizados</strong></h3>
+<ul>
+<li><strong>Edite</strong>: <code>src/scripts/dashboard-central.js</code></li>
+<li><strong>Função</strong>: <code>getMockPreviewData()</code></li>
+<li><strong>Adicione dados</strong>: Novos campos nos popups</li>
+<li><strong>Modifique layout</strong>: CSS no arquivo de estilos</li>
+</ul>
+<hr>
+<h2>📱 <strong>FUNCIONALIDADES AVANÇADAS</strong></h2>
+<h3><strong>Auto-refresh</strong></h3>
+<ul>
+<li><strong>Métricas</strong>: Atualizam a cada 30 segundos</li>
+<li><strong>Indicador visual</strong>: Loading animation</li>
+<li><strong>Detecção de foco</strong>: Atualiza quando volta à aba</li>
+<li><strong>Manual</strong>: Ctrl/Cmd + R</li>
+</ul>
+<h3><strong>Busca Rápida</strong></h3>
+<ul>
+<li><strong>Atalho</strong>: Ctrl/Cmd + K</li>
+<li><strong>Busca em</strong>: Projetos, dashboards, métricas</li>
+<li><strong>Resultados</strong>: Preview instantâneo</li>
+<li><strong>Navegação</strong>: Clique para ir</li>
+</ul>
+<h3><strong>Sistema de Toasts</strong></h3>
+<ul>
+<li><strong>Notificações</strong>: Ações realizadas</li>
+<li><strong>Tipos</strong>: Success, info, warning, error</li>
+<li><strong>Auto-dismiss</strong>: 3 segundos</li>
+<li><strong>Posição</strong>: Canto superior direito</li>
+</ul>
+<hr>
+<h2>🔗 <strong>INTEGRAÇÃO COM OUTROS DASHBOARDS</strong></h2>
+<h3><strong>Links Inteligentes Para</strong></h3>
+<ul>
+<li><strong>Home Executivo</strong>: <code>/dashboard-executivo/</code></li>
+<li><strong>Innovation Pipeline</strong>: <code>/dashboard-executivo/innovation-pipeline/</code></li>
+<li><strong>KPIs Principais</strong>: <code>/dashboard-executivo/kpis-principais/</code></li>
+<li><strong>Capacidade Equipe</strong>: <code>/dashboard-executivo/dashboard-capacidade-equipe/</code></li>
+<li><strong>Projetos por Prazo</strong>: <code>/dashboard-executivo/dashboard-projetos-prazo/</code></li>
+</ul>
+<h3><strong>Dados Compartilhados</strong></h3>
+<ul>
+<li><strong>Projetos</strong>: <code>4-Projetos/</code> (fonte única)</li>
+<li><strong>Reuniões</strong>: <code>6-Reunioes/</code> (decisões)</li>
+<li><strong>Governança</strong>: <code>1-Governanca/</code> (compliance)</li>
+<li><strong>Processos</strong>: <code>5-Processos/</code> (capacidade)</li>
+</ul>
+<hr>
+<h2>⚠️ <strong>TROUBLESHOOTING</strong></h2>
+<h3><strong>Popups Não Aparecem</strong></h3>
+<ul>
+<li><strong>Verifique</strong>: JavaScript habilitado</li>
+<li><strong>Aguarde</strong>: 0.5s após hover</li>
+<li><strong>Console</strong>: F12 para ver erros</li>
+<li><strong>Cache</strong>: Ctrl+F5 para refresh completo</li>
+</ul>
+<h3><strong>Métricas Incorretas</strong></h3>
+<ul>
+<li><strong>Campos obrigatórios</strong>: <code>budget</code>, <code>status</code>, <code>type</code></li>
+<li><strong>Templates</strong>: Devem ter <code>type: &quot;template&quot;</code></li>
+<li><strong>Números</strong>: Budget deve ser numérico</li>
+<li><strong>Status</strong>: Usar valores padrão do sistema</li>
+</ul>
+<h3><strong>Layout Quebrado</strong></h3>
+<ul>
+<li><strong>CSS</strong>: Verificar se <code>dashboard-central.css</code> carregou</li>
+<li><strong>Responsive</strong>: Testar em diferentes tamanhos</li>
+<li><strong>Browser</strong>: Compatível com Chrome, Firefox, Safari</li>
+<li><strong>Cache</strong>: Limpar cache do navegador</li>
+</ul>
+<hr>
+<h2>🚀 <strong>PRÓXIMAS MELHORIAS</strong></h2>
+<h3><strong>Planejadas</strong></h3>
+<ul>
+<li><strong>Gráficos interativos</strong>: Chart.js integration</li>
+<li><strong>Exportação</strong>: PDF/Excel dos relatórios</li>
+<li><strong>Filtros dinâmicos</strong>: Por data, status, owner</li>
+<li><strong>Notificações push</strong>: Alertas em tempo real</li>
+</ul>
+<h3><strong>Possíveis</strong></h3>
+<ul>
+<li><strong>Integração API</strong>: Dados externos</li>
+<li><strong>Dashboard mobile</strong>: App nativo</li>
+<li><strong>IA insights</strong>: Análises automáticas</li>
+<li><strong>Colaboração</strong>: Comentários em tempo real</li>
+</ul>
+<hr>
+<h2>📋 <strong>CHECKLIST DE USO</strong></h2>
+<h3><strong>Para Usuários</strong></h3>
+<ul>
+<li>[ ] Acessar <code>/dashboard-central/</code></li>
+<li>[ ] Explorar popups nos links</li>
+<li>[ ] Usar atalhos de teclado</li>
+<li>[ ] Verificar métricas atualizadas</li>
+</ul>
+<h3><strong>Para Administradores</strong></h3>
+<ul>
+<li>[ ] Manter campos obrigatórios nos projetos</li>
+<li>[ ] Atualizar dados regularmente</li>
+<li>[ ] Monitorar performance</li>
+<li>[ ] Backup dos arquivos de configuração</li>
+</ul>
+<h3><strong>Para Desenvolvedores</strong></h3>
+<ul>
+<li>[ ] CSS e JS carregando corretamente</li>
+<li>[ ] Queries dataview funcionando</li>
+<li>[ ] Responsive em todos dispositivos</li>
+<li>[ ] Performance otimizada</li>
+</ul>
+<hr>
+<h2>📞 <strong>SUPORTE</strong></h2>
+<h3><strong>Problemas Técnicos</strong></h3>
+<ul>
+<li><strong>Desenvolvedor</strong>: Pedro Vitor</li>
+<li><strong>Arquivos</strong>: <code>Dashboard-Central-Integrado.md</code>, CSS, JS</li>
+<li><strong>Logs</strong>: Console do navegador (F12)</li>
+<li><strong>Build</strong>: <code>npm run build</code> para regenerar</li>
+</ul>
+<h3><strong>Novos Recursos</strong></h3>
+<ul>
+<li><strong>Solicitações</strong>: Via reuniões executivas</li>
+<li><strong>Priorização</strong>: Baseada no impacto</li>
+<li><strong>Timeline</strong>: Conforme roadmap do projeto</li>
+<li><strong>Testes</strong>: Beta com usuários selecionados</li>
+</ul>
+<hr>
+<p><strong>Status</strong>: ✅ <strong>ATIVO</strong><br>
+<strong>Versão</strong>: 2.0<br>
+<strong>Última Atualização</strong>: 2025-01-20<br>
+<strong>Próxima Revisão</strong>: 2025-01-27</p>
+
+      </div>
+      
+
     </div>
   </main>
 
-  <footer class="site-footer">
-    <div class="footer-content">
-      <p>&copy; 2025 Multisocios Empresarial - Gerado com Obsidian + Eleventy</p>
-      <p>
-        <a href="/dashboard-executivo/">Dashboard</a> •
-        <a href="/governanca/">Governança</a> •
-        <a href="/projetos/">Projetos</a>
-      </p>
-    </div>
-  </footer>
-
-  <!-- Search overlay -->
-  <div id="search-overlay" class="search-overlay">
-    <div class="search-container">
-      <input type="text" id="search-input" placeholder="Buscar no knowledge base..." />
-      <div id="search-results"></div>
-    </div>
-  </div>
-
-  <!-- Scripts -->
+  <!-- JavaScript -->
   <script src="/scripts/main.js"></script>
-  <script src="/scripts/search.js"></script>
-  <script src="/scripts/sidebar.js" defer></script>
+  <script src="/scripts/dashboard.js"></script>
+  <script>
+    // Dashboard-specific JavaScript
+    document.addEventListener('DOMContentLoaded', function() {
+      // Initialize dashboard
+      initializeDashboard();
+      
+      // Auto-refresh every 5 minutes
+      setInterval(refreshDashboard, 300000);
+      
+      // Real-time updates simulation
+      simulateRealTimeUpdates();
+    });
+
+    function initializeDashboard() {
+      // Initialize charts
+      initializeCharts();
+      
+      // Setup event listeners
+      setupEventListeners();
+      
+      // Load initial data
+      loadDashboardData();
+    }
+
+    function initializeCharts() {
+      // Revenue Chart (mini sparkline)
+      const revenueCtx = document.getElementById('revenueChart');
+      if (revenueCtx) {
+        new Chart(revenueCtx, {
+          type: 'line',
+          data: {
+            labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun'],
+            datasets: [{
+              data: [800, 950, 1100, 1050, 1150, 1200],
+              borderColor: '#10b981',
+              backgroundColor: 'rgba(16, 185, 129, 0.1)',
+              borderWidth: 2,
+              fill: true,
+              tension: 0.4
+            }]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: { legend: { display: false } },
+            scales: {
+              x: { display: false },
+              y: { display: false }
+            },
+            elements: { point: { radius: 0 } }
+          }
+        });
+      }
+
+      // Projects Timeline Chart
+      const timelineCtx = document.getElementById('projectsTimelineChart');
+      if (timelineCtx) {
+        new Chart(timelineCtx, {
+          type: 'bar',
+          data: {
+            labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun'],
+            datasets: [
+              {
+                label: 'Projetos Iniciados',
+                data: [2, 3, 1, 4, 2, 3],
+                backgroundColor: '#667eea'
+              },
+              {
+                label: 'Projetos Concluídos',
+                data: [1, 2, 3, 2, 3, 4],
+                backgroundColor: '#764ba2'
+              }
+            ]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              legend: { position: 'top' }
+            },
+            scales: {
+              y: { beginAtZero: true }
+            }
+          }
+        });
+      }
+
+      // Budget Distribution Chart
+      const budgetCtx = document.getElementById('budgetChart');
+      if (budgetCtx) {
+        new Chart(budgetCtx, {
+          type: 'doughnut',
+          data: {
+            labels: ['Desenvolvimento', 'Marketing', 'Operações'],
+            datasets: [{
+              data: [40, 25, 35],
+              backgroundColor: ['#667eea', '#764ba2', '#f093fb'],
+              borderWidth: 0
+            }]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              legend: { display: false }
+            }
+          }
+        });
+      }
+    }
+
+    function setupEventListeners() {
+      // Chart filter buttons
+      document.querySelectorAll('.chart-filter').forEach(btn => {
+        btn.addEventListener('click', function() {
+          document.querySelectorAll('.chart-filter').forEach(b => b.classList.remove('active'));
+          this.classList.add('active');
+          // Update chart based on period
+          updateChartPeriod(this.dataset.period);
+        });
+      });
+
+      // Action buttons
+      document.querySelectorAll('.action-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+          const action = this.querySelector('.action-text').textContent;
+          handleQuickAction(action);
+        });
+      });
+    }
+
+    function loadDashboardData() {
+      // Simulate data loading
+      console.log('📊 Dashboard data loaded');
+    }
+
+    function refreshDashboard() {
+      // Simulate refresh
+      console.log('🔄 Dashboard refreshed');
+      
+      // Update last updated time
+      const lastUpdated = document.querySelector('.last-updated');
+      if (lastUpdated) {
+        lastUpdated.textContent = `Última atualização: ${new Date().toLocaleString('pt-BR')}`;
+      }
+    }
+
+    function simulateRealTimeUpdates() {
+      // Simulate real-time updates every 30 seconds
+      setInterval(() => {
+        // Random small updates to metrics
+        const projectsCount = document.getElementById('total-projects');
+        const budgetTotal = document.getElementById('total-budget');
+        const avgROI = document.getElementById('avg-roi');
+        
+        // Small random variations
+        if (Math.random() > 0.7) {
+          // Occasionally update values slightly
+          console.log('📈 Real-time update simulated');
+        }
+      }, 30000);
+    }
+
+    function updateChartPeriod(period) {
+      console.log(`📊 Updating charts for period: ${period}`);
+      // Implementation for chart period updates
+    }
+
+    function handleQuickAction(action) {
+      console.log(`⚡ Quick action: ${action}`);
+      // Implementation for quick actions
+    }
+  </script>
   
+  <!-- Sidebar JavaScript -->
+  <script src="/scripts/sidebar.js" defer></script>
 </body>
 </html>

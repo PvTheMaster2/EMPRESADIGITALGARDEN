@@ -1,13 +1,13 @@
 {
-  "timestamp": "2025-09-03T02:17:41.792Z",
-  "totalFiles": 51,
-  "validUrls": 51,
+  "timestamp": "2025-09-03T02:34:11.328Z",
+  "totalFiles": 46,
+  "validUrls": 46,
   "issues": 0,
   "urls": [
     {
-      "url": "/content/dashboard-projetos-prazo-visual/",
-      "file": "content\\0-Dashboard-Executivo\\Dashboard-Projetos-Prazo-Visual.md",
-      "type": "auto"
+      "url": "/dashboard-executivo/",
+      "file": "content\\0-Dashboard-Executivo\\Dashboard-Central-Integrado.md",
+      "type": "manual"
     },
     {
       "url": "/content/dashboard-projetos-prazo/",
@@ -25,33 +25,8 @@
       "type": "auto"
     },
     {
-      "url": "/content/executive-auto/",
-      "file": "content\\0-Dashboard-Executivo\\Executive-Auto.md",
-      "type": "auto"
-    },
-    {
-      "url": "/dashboard-executivo/",
-      "file": "content\\0-Dashboard-Executivo\\Home-Executivo.md",
-      "type": "manual"
-    },
-    {
-      "url": "/dashboard-overview/",
-      "file": "content\\0-Dashboard-Executivo\\index.md",
-      "type": "manual"
-    },
-    {
-      "url": "/content/innovation-pipeline/",
-      "file": "content\\0-Dashboard-Executivo\\Innovation-Pipeline.md",
-      "type": "auto"
-    },
-    {
-      "url": "/content/kpis-principais/",
-      "file": "content\\0-Dashboard-Executivo\\KPIs-Principais.md",
-      "type": "auto"
-    },
-    {
-      "url": "/content/sistema-metricas-avancadas/",
-      "file": "content\\0-Dashboard-Executivo\\Sistema_Metricas_Avancadas.md",
+      "url": "/content/guia-dashboard-central/",
+      "file": "content\\0-Dashboard-Executivo\\GUIA-Dashboard-Central.md",
       "type": "auto"
     },
     {

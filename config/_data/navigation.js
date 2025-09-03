@@ -10,14 +10,9 @@ module.exports = {
       url: "/dashboard-executivo/",
       icon: "📊",
       children: [
-        { title: "💡 Innovation Pipeline", url: "/dashboard-executivo/innovation-pipeline/" },
-        { title: "📈 KPIs Principais", url: "/dashboard-executivo/kpis-principais/" },
         { title: "🎯 Decisões Estratégicas", url: "/dashboard-executivo/decisoes-estrategicas/" },
         { title: "📅 Projetos por Prazo", url: "/dashboard-executivo/dashboard-projetos-prazo/" },
-        { title: "🎨 Projetos Visuais", url: "/dashboard-executivo/dashboard-projetos-prazo-visual/" },
-        { title: "👥 Capacidade da Equipe", url: "/dashboard-executivo/dashboard-capacidade-equipe/" },
-        { title: "⚡ Executive Auto", url: "/dashboard-executivo/executive-auto/" },
-        { title: "📊 Métricas Avançadas", url: "/dashboard-executivo/sistema-metricas-avancadas/" }
+        { title: "👥 Capacidade da Equipe", url: "/dashboard-executivo/dashboard-capacidade-equipe/" }
       ]
     },
     {
@@ -65,32 +60,32 @@ module.exports = {
           title: "🚀 Ativos",
           url: "/projetos/ativos/",
           children: [
-            { title: "🌟 AERALYN", url: "/projetos/ativos/prj-aeralyn/" },
-            { title: "🎮 Trip-Match", url: "/projetos/ativos/prj-trip-match/" },
-            { title: "🏢 Vault Empresarial", url: "/projetos/ativos/prj-vault-empresarial/" },
-            { title: "🎓 Curso IA Inteligente", url: "/projetos/ativos/prj-curso-ia-inteligente/" },
-            { title: "📱 App Desenvolvimento", url: "/projetos/ativos/prj-app-desenvolvimento-cognitivo/" },
-            { title: "🎵 Nostalgia Musical", url: "/projetos/ativos/prj-nostalgia-musical/" },
-            { title: "🎓 Plataforma Cursos", url: "/projetos/ativos/prj-plataforma-cursos/" }
+            { title: "🌟 AERALYN", url: "/projetos/aeralyn/" },
+            { title: "🎮 Trip-Match", url: "/projetos/trip-match/" },
+            { title: "🏢 Vault Empresarial", url: "/projetos/vault-empresarial/" },
+            { title: "🎓 Curso IA Inteligente", url: "/projetos/curso-ia-inteligente/" },
+            { title: "📱 App Desenvolvimento", url: "/projetos/app-desenvolvimento-cognitivo/" },
+            { title: "🎵 Nostalgia Musical", url: "/projetos/nostalgia-musical/" },
+            { title: "🎓 Plataforma Cursos", url: "/projetos/plataforma-cursos/" }
           ]
         },
         {
           title: "⚡ Em Desenvolvimento",
           url: "/projetos/em-desenvolvimento/",
           children: [
-            { title: "🤖 WhatsBot Academia", url: "/projetos/em-desenvolvimento/prj-dev-whatsbot-academia/" },
-            { title: "🌐 Portfolio Engenharia", url: "/projetos/em-desenvolvimento/prj-web-site-portfolio-engenharia/" }
+            { title: "🤖 WhatsBot Academia", url: "/projetos/dev-whatsbot-academia/" },
+            { title: "🌐 Portfolio Engenharia", url: "/projetos/web-site-portfolio-engenharia/" }
           ]
         },
         {
           title: "📝 Templates",
           url: "/projetos/templates/",
           children: [
-            { title: "📋 Exemplo Intake", url: "/projetos/templates/exemplo_intake_preenchido/" },
-            { title: "⚡ Minimalista", url: "/projetos/templates/exemplo_minimalista/" },
-            { title: "🎯 Primeira Cartada", url: "/projetos/templates/exemplo_primeira_cartada/" },
-            { title: "🏗️ Template Piloto", url: "/projetos/templates/template piloto-exemplo-sistema/" },
-            { title: "🏢 CRM Arquitetos", url: "/projetos/templates/template piloto_crm_arquitetos/" }
+            { title: "📋 Exemplo Intake", url: "/projetos/exemplo-intake-preenchido/" },
+            { title: "⚡ Minimalista", url: "/projetos/exemplo-minimalista/" },
+            { title: "🎯 Primeira Cartada", url: "/projetos/exemplo-primeira-cartada/" },
+            { title: "🏗️ Template Piloto", url: "/projetos/template-piloto-exemplo-sistema/" },
+            { title: "🏢 CRM Arquitetos", url: "/projetos/template-piloto-crm-arquitetos/" }
           ]
         }
       ]

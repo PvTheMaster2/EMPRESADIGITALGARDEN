@@ -1,7 +1,7 @@
 # 🌳 Site Structure Outline
 
-**Generated**: 2025-09-03T02:23:38.391Z
-**Total Pages**: 197
+**Generated**: 2025-09-03T02:34:04.614Z
+**Total Pages**: 198
 
 ## 📁 .CURSOR
 
@@ -255,8 +255,10 @@
       - H1: Decisões Estratégicas
     - **/dashboard-executivo/executive-auto/** - "Executive Auto - Multisocios Empresarial" (base)
       - H1: Executive Auto
-  - **/dashboard-executivo/** - "Dashboard Executivo - Home - Multisocios Empresarial" (base)
-    - H1: Dashboard Executivo - Home
+    - **/dashboard-executivo/guia-dashboard-central/** - "Guia do Dashboard Central Integrado - Multisocios Empresarial" (base)
+      - H1: Guia do Dashboard Central Integrado
+  - **/dashboard-executivo/** - "Dashboard Executivo Central Integrado - Multisocios Empresarial" (base)
+    - H1: Dashboard Executivo Central Integrado
     - **/dashboard-executivo/innovation-pipeline/** - "Innovation Pipeline - Multisocios Empresarial" (base)
       - H1: Innovation Pipeline
     - **/dashboard-executivo/kpis-principais/** - "KPIs Principais - Multisocios Empresarial" (base)
