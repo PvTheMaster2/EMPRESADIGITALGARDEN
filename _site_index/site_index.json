@@ -46245,6 +46245,945 @@
       "wordCount": 0
     },
     {
+      "url": "/dashboard-central/",
+      "filePath": "build\\dist\\dashboard-central\\index.html",
+      "title": "Dashboard Executivo Central Integrado - Multisocios Empresarial",
+      "h1": "Dashboard Executivo Central Integrado",
+      "metaDescription": "Sistema de Gestão de Conhecimento Multisocios",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Dashboard Executivo Central Integrado",
+          "id": null
+        },
+        {
+          "level": 1,
+          "text": "🎯 DASHBOARD EXECUTIVO CENTRAL INTEGRADO",
+          "id": null
+        },
+        {
+          "level": 2,
+          "text": "🚀 PIPELINE DE PROJETOS INTEGRADO",
+          "id": null
+        },
+        {
+          "level": 2,
+          "text": "💰 ANÁLISE FINANCEIRA CONSOLIDADA",
+          "id": null
+        },
+        {
+          "level": 2,
+          "text": "👥 GESTÃO DE EQUIPE E CAPACIDADE",
+          "id": null
+        },
+        {
+          "level": 2,
+          "text": "📊 MÉTRICAS DE SEGMENTO DE MERCADO",
+          "id": null
+        },
+        {
+          "level": 2,
+          "text": "🔒 COMPLIANCE E GOVERNANÇA",
+          "id": null
+        },
+        {
+          "level": 2,
+          "text": "🎯 PROJETOS POR PRAZO E PRIORIDADE",
+          "id": null
+        },
+        {
+          "level": 2,
+          "text": "📈 ANÁLISE DE TENDÊNCIAS E INSIGHTS",
+          "id": null
+        },
+        {
+          "level": 2,
+          "text": "🚨 ALERTAS E NOTIFICAÇÕES CENTRALIZADAS",
+          "id": null
+        },
+        {
+          "level": 2,
+          "text": "📅 REUNIÕES E DECISÕES RECENTES",
+          "id": null
+        },
+        {
+          "level": 2,
+          "text": "🎯 METAS E OBJETIVOS 2025",
+          "id": null
+        },
+        {
+          "level": 2,
+          "text": "🔗 NAVEGAÇÃO RÁPIDA E LINKS INTELIGENTES",
+          "id": null
+        },
+        {
+          "level": 2,
+          "text": "📊 RESUMO EXECUTIVO FINAL",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "📊 Timeline de Projetos",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "💰 Distribuição de Budget",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "🔔 Atualizações Recentes",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "⚠️ Alertas",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "⚡ Ações Rápidas",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Visão Geral dos Projetos Ativos",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Métricas Consolidadas por Status",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Distribuição de Budget por Prioridade",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "ROI Detalhado por Projeto",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Performance por Owner",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Capacidade da Equipe (Simulada)",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Análise por Segmento",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Status de Compliance por Projeto",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Alertas de Compliance",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Curto Prazo (1-3 meses) - Prioridade Alta",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Médio Prazo (3-12 meses) - Estratégicos",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Longo Prazo (1+ anos) - Visionários",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Projetos Mais Rentáveis",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Análise de Risco por Compliance",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "🔴 Alertas Críticos",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "🟡 Alertas de Atenção",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "🟢 Sucessos",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Últimas Reuniões",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Decisões Estratégicas Pendentes",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Metas Trimestrais",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Objetivos Anuais",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Dashboards Específicos",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Projetos Principais",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Áreas Estratégicas",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Status Geral da Empresa",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Próximas Ações Prioritárias",
+          "id": null
+        },
+        {
+          "level": 3,
+          "text": "Recomendações Estratégicas",
+          "id": null
+        }
+      ],
+      "links": [
+        {
+          "text": "🌱 Multisocios Empresarial",
+          "href": "/",
+          "isInternal": true
+        },
+        {
+          "text": "Dashboard",
+          "href": "/",
+          "isInternal": true
+        },
+        {
+          "text": "Governança",
+          "href": "/Governanca/README/",
+          "isInternal": true
+        },
+        {
+          "text": "Projetos",
+          "href": "/Projetos/README/",
+          "isInternal": true
+        },
+        {
+          "text": "Equipes",
+          "href": "/Equipes/README/",
+          "isInternal": true
+        },
+        {
+          "text": "Processos",
+          "href": "/Processos/README/",
+          "isInternal": true
+        },
+        {
+          "text": "Reuniões",
+          "href": "/Reunioes/README/",
+          "isInternal": true
+        },
+        {
+          "text": "Conhecimento",
+          "href": "/Conhecimento/README/",
+          "isInternal": true
+        },
+        {
+          "text": "🌱 Multisocios",
+          "href": "/",
+          "isInternal": true
+        },
+        {
+          "text": "🏠 Home",
+          "href": "/",
+          "isInternal": true
+        },
+        {
+          "text": "📊 Dashboard Executivo",
+          "href": "/dashboard-executivo/",
+          "isInternal": true
+        },
+        {
+          "text": "💡 Innovation Pipeline",
+          "href": "/dashboard-executivo/innovation-pipeline/",
+          "isInternal": true
+        },
+        {
+          "text": "📈 KPIs Principais",
+          "href": "/dashboard-executivo/kpis-principais/",
+          "isInternal": true
+        },
+        {
+          "text": "🎯 Decisões Estratégicas",
+          "href": "/dashboard-executivo/decisoes-estrategicas/",
+          "isInternal": true
+        },
+        {
+          "text": "📅 Projetos por Prazo",
+          "href": "/dashboard-executivo/dashboard-projetos-prazo/",
+          "isInternal": true
+        },
+        {
+          "text": "🎨 Projetos Visuais",
+          "href": "/dashboard-executivo/dashboard-projetos-prazo-visual/",
+          "isInternal": true
+        },
+        {
+          "text": "👥 Capacidade da Equipe",
+          "href": "/dashboard-executivo/dashboard-capacidade-equipe/",
+          "isInternal": true
+        },
+        {
+          "text": "⚡ Executive Auto",
+          "href": "/dashboard-executivo/executive-auto/",
+          "isInternal": true
+        },
+        {
+          "text": "📊 Métricas Avançadas",
+          "href": "/dashboard-executivo/sistema-metricas-avancadas/",
+          "isInternal": true
+        },
+        {
+          "text": "🏛️ Governança",
+          "href": "/governanca/",
+          "isInternal": true
+        },
+        {
+          "text": "📜 Acordo de Sócios",
+          "href": "/governanca/acordo_socios_final/",
+          "isInternal": true
+        },
+        {
+          "text": "⚖️ Compliance Log",
+          "href": "/governanca/compliance_log/",
+          "isInternal": true
+        },
+        {
+          "text": "🤖 Ética no Uso de IA",
+          "href": "/governanca/etica_uso_ia/",
+          "isInternal": true
+        },
+        {
+          "text": "❓ FAQ Compliance",
+          "href": "/governanca/faq_compliance/",
+          "isInternal": true
+        },
+        {
+          "text": "📚 Manual de Treinamento",
+          "href": "/governanca/manual_treinamento_compliance/",
+          "isInternal": true
+        },
+        {
+          "text": "📈 Playbook Comercial",
+          "href": "/governanca/playbook_comercial_v0/",
+          "isInternal": true
+        },
+        {
+          "text": "👥 Equipes",
+          "href": "/equipes/",
+          "isInternal": true
+        },
+        {
+          "text": "💻 Desenvolvimento",
+          "href": "/equipes/desenvolvimento/",
+          "isInternal": true
+        },
+        {
+          "text": "🎯 Marketing",
+          "href": "/equipes/marketing/",
+          "isInternal": true
+        },
+        {
+          "text": "💼 Vendas",
+          "href": "/equipes/vendas/",
+          "isInternal": true
+        },
+        {
+          "text": "⚙️ Operações",
+          "href": "/equipes/operacoes/",
+          "isInternal": true
+        },
+        {
+          "text": "👔 Liderança",
+          "href": "/equipes/lideranca/",
+          "isInternal": true
+        },
+        {
+          "text": "🌍 Mercado",
+          "href": "/mercado/",
+          "isInternal": true
+        },
+        {
+          "text": "👥 Clientes",
+          "href": "/mercado/clientes/",
+          "isInternal": true
+        },
+        {
+          "text": "⚔️ Concorrentes",
+          "href": "/mercado/concorrentes/",
+          "isInternal": true
+        },
+        {
+          "text": "🤝 Fornecedores",
+          "href": "/mercado/fornecedores/",
+          "isInternal": true
+        },
+        {
+          "text": "🚀 Tendências",
+          "href": "/mercado/tendencias/",
+          "isInternal": true
+        },
+        {
+          "text": "📋 Projetos",
+          "href": "/projetos/",
+          "isInternal": true
+        },
+        {
+          "text": "🚀 Ativos",
+          "href": "/projetos/ativos/",
+          "isInternal": true
+        },
+        {
+          "text": "🌟 AERALYN",
+          "href": "/projetos/ativos/prj-aeralyn/",
+          "isInternal": true
+        },
+        {
+          "text": "🎮 Trip-Match",
+          "href": "/projetos/ativos/prj-trip-match/",
+          "isInternal": true
+        },
+        {
+          "text": "🏢 Vault Empresarial",
+          "href": "/projetos/ativos/prj-vault-empresarial/",
+          "isInternal": true
+        },
+        {
+          "text": "🎓 Curso IA Inteligente",
+          "href": "/projetos/ativos/prj-curso-ia-inteligente/",
+          "isInternal": true
+        },
+        {
+          "text": "📱 App Desenvolvimento",
+          "href": "/projetos/ativos/prj-app-desenvolvimento-cognitivo/",
+          "isInternal": true
+        },
+        {
+          "text": "🎵 Nostalgia Musical",
+          "href": "/projetos/ativos/prj-nostalgia-musical/",
+          "isInternal": true
+        },
+        {
+          "text": "🎓 Plataforma Cursos",
+          "href": "/projetos/ativos/prj-plataforma-cursos/",
+          "isInternal": true
+        },
+        {
+          "text": "⚡ Em Desenvolvimento",
+          "href": "/projetos/em-desenvolvimento/",
+          "isInternal": true
+        },
+        {
+          "text": "🤖 WhatsBot Academia",
+          "href": "/projetos/em-desenvolvimento/prj-dev-whatsbot-academia/",
+          "isInternal": true
+        },
+        {
+          "text": "🌐 Portfolio Engenharia",
+          "href": "/projetos/em-desenvolvimento/prj-web-site-portfolio-engenharia/",
+          "isInternal": true
+        },
+        {
+          "text": "📝 Templates",
+          "href": "/projetos/templates/",
+          "isInternal": true
+        },
+        {
+          "text": "📋 Exemplo Intake",
+          "href": "/projetos/templates/exemplo_intake_preenchido/",
+          "isInternal": true
+        },
+        {
+          "text": "⚡ Minimalista",
+          "href": "/projetos/templates/exemplo_minimalista/",
+          "isInternal": true
+        },
+        {
+          "text": "🎯 Primeira Cartada",
+          "href": "/projetos/templates/exemplo_primeira_cartada/",
+          "isInternal": true
+        },
+        {
+          "text": "🏗️ Template Piloto",
+          "href": "/projetos/templates/template piloto-exemplo-sistema/",
+          "isInternal": true
+        },
+        {
+          "text": "🏢 CRM Arquitetos",
+          "href": "/projetos/templates/template piloto_crm_arquitetos/",
+          "isInternal": true
+        },
+        {
+          "text": "⚙️ Processos",
+          "href": "/processos/",
+          "isInternal": true
+        },
+        {
+          "text": "📈 Gestão de Sprints",
+          "href": "/processos/sistema_gestao_capacidade_sprints/",
+          "isInternal": true
+        },
+        {
+          "text": "📖 Guia do Sistema",
+          "href": "/processos/guia_uso_sistema_capacidade/",
+          "isInternal": true
+        },
+        {
+          "text": "📋 SOPs",
+          "href": "/processos/sops/",
+          "isInternal": true
+        },
+        {
+          "text": "⚡ Workflows",
+          "href": "/processos/workflows/",
+          "isInternal": true
+        },
+        {
+          "text": "📊 Métricas",
+          "href": "/processos/metricas/",
+          "isInternal": true
+        },
+        {
+          "text": "📅 Reuniões",
+          "href": "/reunioes/",
+          "isInternal": true
+        },
+        {
+          "text": "🎯 Reunião Executiva",
+          "href": "/reunioes/2025-08-31-reuniao-executiva-sistema/",
+          "isInternal": true
+        },
+        {
+          "text": "📊 Análise Pessimista",
+          "href": "/reunioes/2025-09-01-reuniao-analise-pessimista-projetos/",
+          "isInternal": true
+        },
+        {
+          "text": "🤖 Criação WhatsBot",
+          "href": "/reunioes/2025-09-01-reuniao-criacao-projeto-whatsbot/",
+          "isInternal": true
+        },
+        {
+          "text": "💡 Sistema de Ideias",
+          "href": "/reunioes/2025-09-01-reuniao-criacao-sistema-geracao-ideias/",
+          "isInternal": true
+        },
+        {
+          "text": "👔 Conselho",
+          "href": "/reunioes/conselho/",
+          "isInternal": true
+        },
+        {
+          "text": "⚡ Operacional",
+          "href": "/reunioes/operacional/",
+          "isInternal": true
+        },
+        {
+          "text": "📋 Projetos",
+          "href": "/reunioes/projetos/",
+          "isInternal": true
+        },
+        {
+          "text": "🧠 Conhecimento",
+          "href": "/conhecimento/",
+          "isInternal": true
+        },
+        {
+          "text": "🤖 Inteligência Artificial",
+          "href": "/conhecimento/ia/",
+          "isInternal": true
+        },
+        {
+          "text": "💻 Tecnologia",
+          "href": "/conhecimento/tecnologia/",
+          "isInternal": true
+        },
+        {
+          "text": "📈 Negócios",
+          "href": "/conhecimento/negocios/",
+          "isInternal": true
+        },
+        {
+          "text": "🏗️ Processos",
+          "href": "/conhecimento/processos/",
+          "isInternal": true
+        },
+        {
+          "text": "🏠 Home",
+          "href": "/",
+          "isInternal": true
+        },
+        {
+          "text": "📊 Dashboard Executivo",
+          "href": "/dashboard-executivo/",
+          "isInternal": true
+        },
+        {
+          "text": "💡 Innovation Pipeline",
+          "href": "/dashboard-executivo/innovation-pipeline/",
+          "isInternal": true
+        },
+        {
+          "text": "📈 KPIs Principais",
+          "href": "/dashboard-executivo/kpis-principais/",
+          "isInternal": true
+        },
+        {
+          "text": "🎯 Decisões Estratégicas",
+          "href": "/dashboard-executivo/decisoes-estrategicas/",
+          "isInternal": true
+        },
+        {
+          "text": "📅 Projetos por Prazo",
+          "href": "/dashboard-executivo/dashboard-projetos-prazo/",
+          "isInternal": true
+        },
+        {
+          "text": "🎨 Projetos Visuais",
+          "href": "/dashboard-executivo/dashboard-projetos-prazo-visual/",
+          "isInternal": true
+        },
+        {
+          "text": "👥 Capacidade da Equipe",
+          "href": "/dashboard-executivo/dashboard-capacidade-equipe/",
+          "isInternal": true
+        },
+        {
+          "text": "⚡ Executive Auto",
+          "href": "/dashboard-executivo/executive-auto/",
+          "isInternal": true
+        },
+        {
+          "text": "📊 Métricas Avançadas",
+          "href": "/dashboard-executivo/sistema-metricas-avancadas/",
+          "isInternal": true
+        },
+        {
+          "text": "🏛️ Governança",
+          "href": "/governanca/",
+          "isInternal": true
+        },
+        {
+          "text": "📜 Acordo de Sócios",
+          "href": "/governanca/acordo_socios_final/",
+          "isInternal": true
+        },
+        {
+          "text": "⚖️ Compliance Log",
+          "href": "/governanca/compliance_log/",
+          "isInternal": true
+        },
+        {
+          "text": "🤖 Ética no Uso de IA",
+          "href": "/governanca/etica_uso_ia/",
+          "isInternal": true
+        },
+        {
+          "text": "❓ FAQ Compliance",
+          "href": "/governanca/faq_compliance/",
+          "isInternal": true
+        },
+        {
+          "text": "📚 Manual de Treinamento",
+          "href": "/governanca/manual_treinamento_compliance/",
+          "isInternal": true
+        },
+        {
+          "text": "📈 Playbook Comercial",
+          "href": "/governanca/playbook_comercial_v0/",
+          "isInternal": true
+        },
+        {
+          "text": "👥 Equipes",
+          "href": "/equipes/",
+          "isInternal": true
+        },
+        {
+          "text": "💻 Desenvolvimento",
+          "href": "/equipes/desenvolvimento/",
+          "isInternal": true
+        },
+        {
+          "text": "🎯 Marketing",
+          "href": "/equipes/marketing/",
+          "isInternal": true
+        },
+        {
+          "text": "💼 Vendas",
+          "href": "/equipes/vendas/",
+          "isInternal": true
+        },
+        {
+          "text": "⚙️ Operações",
+          "href": "/equipes/operacoes/",
+          "isInternal": true
+        },
+        {
+          "text": "👔 Liderança",
+          "href": "/equipes/lideranca/",
+          "isInternal": true
+        },
+        {
+          "text": "🌍 Mercado",
+          "href": "/mercado/",
+          "isInternal": true
+        },
+        {
+          "text": "👥 Clientes",
+          "href": "/mercado/clientes/",
+          "isInternal": true
+        },
+        {
+          "text": "⚔️ Concorrentes",
+          "href": "/mercado/concorrentes/",
+          "isInternal": true
+        },
+        {
+          "text": "🤝 Fornecedores",
+          "href": "/mercado/fornecedores/",
+          "isInternal": true
+        },
+        {
+          "text": "🚀 Tendências",
+          "href": "/mercado/tendencias/",
+          "isInternal": true
+        },
+        {
+          "text": "📋 Projetos",
+          "href": "/projetos/",
+          "isInternal": true
+        },
+        {
+          "text": "🚀 Ativos",
+          "href": "/projetos/ativos/",
+          "isInternal": true
+        },
+        {
+          "text": "🌟 AERALYN",
+          "href": "/projetos/ativos/prj-aeralyn/",
+          "isInternal": true
+        },
+        {
+          "text": "🎮 Trip-Match",
+          "href": "/projetos/ativos/prj-trip-match/",
+          "isInternal": true
+        },
+        {
+          "text": "🏢 Vault Empresarial",
+          "href": "/projetos/ativos/prj-vault-empresarial/",
+          "isInternal": true
+        },
+        {
+          "text": "🎓 Curso IA Inteligente",
+          "href": "/projetos/ativos/prj-curso-ia-inteligente/",
+          "isInternal": true
+        },
+        {
+          "text": "📱 App Desenvolvimento",
+          "href": "/projetos/ativos/prj-app-desenvolvimento-cognitivo/",
+          "isInternal": true
+        },
+        {
+          "text": "🎵 Nostalgia Musical",
+          "href": "/projetos/ativos/prj-nostalgia-musical/",
+          "isInternal": true
+        },
+        {
+          "text": "🎓 Plataforma Cursos",
+          "href": "/projetos/ativos/prj-plataforma-cursos/",
+          "isInternal": true
+        },
+        {
+          "text": "⚡ Em Desenvolvimento",
+          "href": "/projetos/em-desenvolvimento/",
+          "isInternal": true
+        },
+        {
+          "text": "🤖 WhatsBot Academia",
+          "href": "/projetos/em-desenvolvimento/prj-dev-whatsbot-academia/",
+          "isInternal": true
+        },
+        {
+          "text": "🌐 Portfolio Engenharia",
+          "href": "/projetos/em-desenvolvimento/prj-web-site-portfolio-engenharia/",
+          "isInternal": true
+        },
+        {
+          "text": "📝 Templates",
+          "href": "/projetos/templates/",
+          "isInternal": true
+        },
+        {
+          "text": "📋 Exemplo Intake",
+          "href": "/projetos/templates/exemplo_intake_preenchido/",
+          "isInternal": true
+        },
+        {
+          "text": "⚡ Minimalista",
+          "href": "/projetos/templates/exemplo_minimalista/",
+          "isInternal": true
+        },
+        {
+          "text": "🎯 Primeira Cartada",
+          "href": "/projetos/templates/exemplo_primeira_cartada/",
+          "isInternal": true
+        },
+        {
+          "text": "🏗️ Template Piloto",
+          "href": "/projetos/templates/template piloto-exemplo-sistema/",
+          "isInternal": true
+        },
+        {
+          "text": "🏢 CRM Arquitetos",
+          "href": "/projetos/templates/template piloto_crm_arquitetos/",
+          "isInternal": true
+        },
+        {
+          "text": "⚙️ Processos",
+          "href": "/processos/",
+          "isInternal": true
+        },
+        {
+          "text": "📈 Gestão de Sprints",
+          "href": "/processos/sistema_gestao_capacidade_sprints/",
+          "isInternal": true
+        },
+        {
+          "text": "📖 Guia do Sistema",
+          "href": "/processos/guia_uso_sistema_capacidade/",
+          "isInternal": true
+        },
+        {
+          "text": "📋 SOPs",
+          "href": "/processos/sops/",
+          "isInternal": true
+        },
+        {
+          "text": "⚡ Workflows",
+          "href": "/processos/workflows/",
+          "isInternal": true
+        },
+        {
+          "text": "📊 Métricas",
+          "href": "/processos/metricas/",
+          "isInternal": true
+        },
+        {
+          "text": "📅 Reuniões",
+          "href": "/reunioes/",
+          "isInternal": true
+        },
+        {
+          "text": "🎯 Reunião Executiva",
+          "href": "/reunioes/2025-08-31-reuniao-executiva-sistema/",
+          "isInternal": true
+        },
+        {
+          "text": "📊 Análise Pessimista",
+          "href": "/reunioes/2025-09-01-reuniao-analise-pessimista-projetos/",
+          "isInternal": true
+        },
+        {
+          "text": "🤖 Criação WhatsBot",
+          "href": "/reunioes/2025-09-01-reuniao-criacao-projeto-whatsbot/",
+          "isInternal": true
+        },
+        {
+          "text": "💡 Sistema de Ideias",
+          "href": "/reunioes/2025-09-01-reuniao-criacao-sistema-geracao-ideias/",
+          "isInternal": true
+        },
+        {
+          "text": "👔 Conselho",
+          "href": "/reunioes/conselho/",
+          "isInternal": true
+        },
+        {
+          "text": "⚡ Operacional",
+          "href": "/reunioes/operacional/",
+          "isInternal": true
+        },
+        {
+          "text": "📋 Projetos",
+          "href": "/reunioes/projetos/",
+          "isInternal": true
+        },
+        {
+          "text": "🧠 Conhecimento",
+          "href": "/conhecimento/",
+          "isInternal": true
+        },
+        {
+          "text": "🤖 Inteligência Artificial",
+          "href": "/conhecimento/ia/",
+          "isInternal": true
+        },
+        {
+          "text": "💻 Tecnologia",
+          "href": "/conhecimento/tecnologia/",
+          "isInternal": true
+        },
+        {
+          "text": "📈 Negócios",
+          "href": "/conhecimento/negocios/",
+          "isInternal": true
+        },
+        {
+          "text": "🏗️ Processos",
+          "href": "/conhecimento/processos/",
+          "isInternal": true
+        }
+      ],
+      "pageMetadata": {},
+      "layoutType": "base",
+      "wordCount": 0
+    },
+    {
       "url": "/dashboard-dinamico/",
       "filePath": "build\\dist\\dashboard-dinamico\\index.html",
       "title": "Dashboard Dinâmico Multisocios - Métricas em Tempo Real - Multisocios Empresarial",
@@ -47558,7 +48497,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -47883,7 +48822,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -48552,7 +49491,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -48877,7 +49816,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -50066,7 +51005,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -50391,7 +51330,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -51105,7 +52044,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -51430,7 +52369,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -51989,7 +52928,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -52314,7 +53253,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -52903,7 +53842,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -53228,7 +54167,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -53797,7 +54736,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -54122,7 +55061,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -54746,7 +55685,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -55071,7 +56010,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -55705,7 +56644,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -56030,7 +56969,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -56544,7 +57483,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -56869,7 +57808,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -57079,8 +58018,8 @@
           "isInternal": true
         },
         {
-          "text": "FAQ   Compliance",
-          "href": "/governanca/faq-compliance/",
+          "text": "Etica Uso IA",
+          "href": "/governanca/etica-uso-ia/",
           "isInternal": true
         },
         {
@@ -58436,7 +59375,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -58761,7 +59700,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -59450,7 +60389,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -59775,7 +60714,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -60424,7 +61363,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -60749,7 +61688,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -61493,7 +62432,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -61818,7 +62757,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -62362,7 +63301,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -62687,7 +63626,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -63536,7 +64475,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -63861,7 +64800,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -64595,7 +65534,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -64920,7 +65859,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -67529,7 +68468,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -67854,7 +68793,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -68513,7 +69452,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -68838,7 +69777,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -69477,7 +70416,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -69802,7 +70741,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -70506,7 +71445,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -70831,7 +71770,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -71315,7 +72254,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -71640,7 +72579,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -72124,7 +73063,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -72449,7 +73388,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -72943,7 +73882,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -73268,7 +74207,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -73752,7 +74691,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -74077,7 +75016,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -74911,7 +75850,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -75236,7 +76175,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -75865,7 +76804,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -76190,7 +77129,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -76729,7 +77668,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -77054,7 +77993,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -78687,7 +79626,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -79012,7 +79951,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -79671,7 +80610,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -79996,7 +80935,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -80745,7 +81684,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -81070,7 +82009,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -81564,7 +82503,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -81889,7 +82828,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -82428,7 +83367,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -82753,7 +83692,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -83572,7 +84511,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -83897,7 +84836,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -84556,7 +85495,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -84881,7 +85820,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -85545,7 +86484,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -85870,7 +86809,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -87679,7 +88618,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -88004,7 +88943,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -88668,7 +89607,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -88993,7 +89932,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -89537,7 +90476,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -89862,7 +90801,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -90441,7 +91380,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -90766,7 +91705,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -91440,7 +92379,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -91765,7 +92704,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -96014,7 +96953,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -96339,7 +97278,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -96584,11 +97523,6 @@
           "isInternal": true
         },
         {
-          "text": "Dashboard Executivo",
-          "href": "/dashboard-overview/",
-          "isInternal": true
-        },
-        {
           "text": "Acordo De Socios Final",
           "href": "/governanca/acordo-socios-final/",
           "isInternal": true
@@ -96814,6 +97748,11 @@
           "isInternal": true
         },
         {
+          "text": "Dashboard Executivo Central Integrado",
+          "href": "/dashboard-central/",
+          "isInternal": true
+        },
+        {
           "text": "← All tags",
           "href": "/tags/",
           "isInternal": true
@@ -96836,7 +97775,7 @@
       ],
       "pageMetadata": {},
       "layoutType": "base",
-      "wordCount": 153
+      "wordCount": 155
     },
     {
       "url": "/tags/anlise/",
@@ -97028,7 +97967,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -97353,7 +98292,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -97747,7 +98686,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -98072,7 +99011,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -98466,7 +99405,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -98791,7 +99730,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -99185,7 +100124,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -99510,7 +100449,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -99904,7 +100843,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -100229,7 +101168,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -100414,13 +101353,13 @@
           "isInternal": true
         },
         {
-          "text": "FAQ   Compliance",
-          "href": "/governanca/faq-compliance/",
+          "text": "Etica Uso IA",
+          "href": "/governanca/etica-uso-ia/",
           "isInternal": true
         },
         {
-          "text": "Etica Uso IA",
-          "href": "/governanca/etica-uso-ia/",
+          "text": "FAQ   Compliance",
+          "href": "/governanca/faq-compliance/",
           "isInternal": true
         },
         {
@@ -100653,7 +101592,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -100978,7 +101917,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -101372,7 +102311,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -101697,7 +102636,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -102086,7 +103025,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -102411,7 +103350,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -102810,7 +103749,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -103135,7 +104074,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -103315,13 +104254,13 @@
           "isInternal": true
         },
         {
-          "text": "Portfólio de Projetos",
-          "href": "/projetos/",
+          "text": "Templates de Projetos",
+          "href": "/projetos/templates-guia/",
           "isInternal": true
         },
         {
-          "text": "Templates de Projetos",
-          "href": "/projetos/templates-guia/",
+          "text": "Portfólio de Projetos",
+          "href": "/projetos/",
           "isInternal": true
         },
         {
@@ -103340,13 +104279,13 @@
           "isInternal": true
         },
         {
-          "text": "Nostalgia Musical",
-          "href": "/projetos/nostalgia-musical/",
+          "text": "Plataforma Cursos",
+          "href": "/projetos/plataforma-cursos/",
           "isInternal": true
         },
         {
-          "text": "Plataforma Cursos",
-          "href": "/projetos/plataforma-cursos/",
+          "text": "Nostalgia Musical",
+          "href": "/projetos/nostalgia-musical/",
           "isInternal": true
         },
         {
@@ -103365,13 +104304,13 @@
           "isInternal": true
         },
         {
-          "text": "Web Site Portfolio Engenharia",
-          "href": "/projetos/web-site-portfolio-engenharia/",
+          "text": "Exemplo Intake Preenchido",
+          "href": "/projetos/exemplo-intake-preenchido/",
           "isInternal": true
         },
         {
-          "text": "Exemplo Intake Preenchido",
-          "href": "/projetos/exemplo-intake-preenchido/",
+          "text": "Web Site Portfolio Engenharia",
+          "href": "/projetos/web-site-portfolio-engenharia/",
           "isInternal": true
         },
         {
@@ -103619,7 +104558,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -103944,7 +104883,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -104333,7 +105272,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -104658,7 +105597,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -104848,13 +105787,13 @@
           "isInternal": true
         },
         {
-          "text": "Nostalgia Musical",
-          "href": "/projetos/nostalgia-musical/",
+          "text": "Plataforma Cursos",
+          "href": "/projetos/plataforma-cursos/",
           "isInternal": true
         },
         {
-          "text": "Plataforma Cursos",
-          "href": "/projetos/plataforma-cursos/",
+          "text": "Nostalgia Musical",
+          "href": "/projetos/nostalgia-musical/",
           "isInternal": true
         },
         {
@@ -105082,7 +106021,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -105407,7 +106346,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -105811,7 +106750,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -106136,7 +107075,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -106550,7 +107489,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -106875,7 +107814,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -107269,7 +108208,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -107594,7 +108533,7 @@
           "isInternal": true
         },
         {
-          "text": "🌟 PRJ-AERALYN",
+          "text": "🌟 AERALYN",
           "href": "/projetos/ativos/prj-aeralyn/",
           "isInternal": true
         },
@@ -108030,11 +108969,11 @@
   ],
   "structure": {},
   "stats": {
-    "totalPages": 196,
+    "totalPages": 197,
     "pagesWithoutTitle": 67,
     "pagesWithoutH1": 15,
     "brokenLinks": 0,
-    "totalLinks": 14720
+    "totalLinks": 14859
   },
   "issues": [
     {

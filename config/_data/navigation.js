@@ -65,7 +65,7 @@ module.exports = {
           title: "🚀 Ativos",
           url: "/projetos/ativos/",
           children: [
-            { title: "🌟 PRJ-AERALYN", url: "/projetos/ativos/prj-aeralyn/" },
+            { title: "🌟 AERALYN", url: "/projetos/ativos/prj-aeralyn/" },
             { title: "🎮 Trip-Match", url: "/projetos/ativos/prj-trip-match/" },
             { title: "🏢 Vault Empresarial", url: "/projetos/ativos/prj-vault-empresarial/" },
             { title: "🎓 Curso IA Inteligente", url: "/projetos/ativos/prj-curso-ia-inteligente/" },

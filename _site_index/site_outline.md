@@ -1,7 +1,7 @@
 # 🌳 Site Structure Outline
 
-**Generated**: 2025-09-03T02:11:20.270Z
-**Total Pages**: 196
+**Generated**: 2025-09-03T02:23:38.391Z
+**Total Pages**: 197
 
 ## 📁 .CURSOR
 
@@ -232,6 +232,11 @@
 
   - **/conhecimento/** - "" (base)
     - H1: 🧠 BASE DE CONHECIMENTO
+
+## 📁 DASHBOARD-CENTRAL
+
+  - **/dashboard-central/** - "Dashboard Executivo Central Integrado - Multisocios Empresarial" (base)
+    - H1: Dashboard Executivo Central Integrado
 
 ## 📁 DASHBOARD-DINAMICO
 
