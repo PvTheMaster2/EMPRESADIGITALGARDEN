@@ -1,11 +1,7 @@
----
-created: 2025-09-02T21:37
-updated: 2025-09-02T22:47
----
 # 🌳 Site Structure Outline
 
-**Generated**: 2025-09-03T01:47:39.710Z
-**Total Pages**: 191
+**Generated**: 2025-09-03T02:03:35.887Z
+**Total Pages**: 196
 
 ## 📁 .CURSOR
 
@@ -331,6 +327,8 @@ updated: 2025-09-02T22:47
       - H1: Nostalgia Musical
     - **/projetos/plataforma-cursos/** - "Plataforma Cursos - Multisocios Empresarial" (projeto)
       - H1: Plataforma Cursos
+    - **/projetos/template-2025-01-20-projeto-assistente-transcricao-juridica/** - "Assistente de Transcrição Jurídica com IA - Multisocios Empresarial" (projeto)
+      - H1: Assistente de Transcrição Jurídica com IA
     - **/projetos/template-2025-01-20-—-projeto-—-assistente-transcricao-juridica/** - "Assistente de Transcrição Jurídica com IA - Multisocios Empresarial" (projeto)
       - H1: Assistente de Transcrição Jurídica com IA
     - **/projetos/template-piloto-crm-arquitetos/** - "TEMPLATE Piloto CRM Arquitetos - Multisocios Empresarial" (projeto)
@@ -389,12 +387,16 @@ updated: 2025-09-02T22:47
 
     - **/reunioes-historicas/10---prompt-organização-atas-de-reuniao-a-partir-de-transcrição-/** - "" (base)
       - H1: CABEÇALHO
+    - **/reunioes-historicas/10-prompt-organizao-atas-de-reuniao-a-partir-de-transcrio/** - "" (base)
+      - H1: CABEÇALHO
     - **/reunioes-historicas/advanced-multisocios-components/** - "MultiSócios - Componentes Avançados | Anime.js Timeline" (base)
       - H1: 🚀 MULTISÓCIOS
     - **/reunioes-historicas/ata-30-08-25---reuniãoinicial-r00/** - "ATA – Reunião de Fundação e Estruturação (v3.0)" (base)
+    - **/reunioes-historicas/ata-30-08-25-reunioinicial-r00/** - "ATA – Reunião de Fundação e Estruturação (v3.0)" (base)
     - **/reunioes-historicas/ata-gemini/** - "ATA – Reunião de Fundação e Estruturação (v3.0)" (base)
     - **/reunioes-historicas/ata-modernizada/** - "ATA – Reunião de Fundação e Estruturação (v3.0)" (base)
     - **/reunioes-historicas/ata-modernizada---antes/** - "ATA – Reunião de Fundação e Estruturação (v3.0)" (base)
+    - **/reunioes-historicas/ata-modernizada-antes/** - "ATA – Reunião de Fundação e Estruturação (v3.0)" (base)
     - **/reunioes-historicas/ata-modernizada-pos/** - "ATA - Reunião de Fundação MultiSócios (v4.0)" (base)
       - H1: ATA OFICIAL
     - **/reunioes-historicas/instrucoes-rapidas/** - "" (base)
@@ -405,6 +407,8 @@ updated: 2025-09-02T22:47
       - H1: 📰 PLANO DE LAYOUT - REVISTA MULTISÓCIOS RADAR
     - **/reunioes-historicas/readme-conversor/** - "" (base)
       - H1: 🚀 CONVERSOR REVISTA MULTISÓCIOS PARA PDF
+    - **/reunioes-historicas/reunio-multiscios-hoje-25f0c1a9c7ee80d4958bc6efaebffa21/** - "Reunião Multisócios @hoje" (base)
+      - H1: Reunião Multisócios @30 de agosto de 2025
     - **/reunioes-historicas/reunião-multisócios-@hoje-25f0c1a9c7ee80d4958bc6efaebffa21/** - "Reunião Multisócios @hoje" (base)
       - H1: Reunião Multisócios @30 de agosto de 2025
     - **/reunioes-historicas/revista-multisocios-radar-edicao1/** - "MultiSócios Radar - Edição 1" (base)

@@ -1,22 +1,18 @@
----
-created: 2025-09-02T21:37
-updated: 2025-09-02T22:47
----
 # 🔍 Site Audit Report
 
-**Generated**: 2025-09-03T01:47:39.714Z
+**Generated**: 2025-09-03T02:03:35.890Z
 
 ## 📊 Statistics
 
-- **Total Pages**: 191
-- **Pages without Title**: 66
+- **Total Pages**: 196
+- **Pages without Title**: 67
 - **Pages without H1**: 15
-- **Total Internal Links**: 14577
-- **Total Issues**: 81
+- **Total Internal Links**: 14720
+- **Total Issues**: 82
 
 ## ⚠️ Issues Found
 
-### NO TITLE (66)
+### NO TITLE (67)
 
 - **/.cursor/rules/**: Página sem título definido
 - **/1000 - REUNIOES/30_08-25 REUNIAO INICIAL/10 - Prompt organização atas de reuniao a partir de transcrição /**: Página sem título definido
@@ -77,6 +73,7 @@ updated: 2025-09-02T22:47
 - **/resources/template-projeto/**: Página sem título definido
 - **/resources/template-r00/**: Página sem título definido
 - **/reunioes-historicas/10---prompt-organização-atas-de-reuniao-a-partir-de-transcrição-/**: Página sem título definido
+- **/reunioes-historicas/10-prompt-organizao-atas-de-reuniao-a-partir-de-transcrio/**: Página sem título definido
 - **/reunioes-historicas/instrucoes-rapidas/**: Página sem título definido
 - **/reunioes-historicas/plano-revista-multisocios/**: Página sem título definido
 - **/reunioes-historicas/readme-conversor/**: Página sem título definido

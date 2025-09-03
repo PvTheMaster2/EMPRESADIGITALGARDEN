@@ -17,9 +17,30 @@
 /3-Mercado/ /mercado/ 301
 /3-Mercado/* /mercado/:splat 301
 
-# Projetos
+# Projetos - URLs específicas para projetos
 /4-Projetos/ /projetos/ 301
-/4-Projetos/* /projetos/:splat 301
+/4-Projetos/Ativos/ /projetos/ 301
+/4-Projetos/Em-Desenvolvimento/ /projetos/ 301
+/4-Projetos/Templates/ /projetos/templates/ 301
+
+# Projetos específicos - PRJ- para URLs limpas
+/4-Projetos/Ativos/PRJ-AERALYN/ /projetos/aeralyn/ 301
+/4-Projetos/Ativos/PRJ-App-Desenvolvimento-Cognitivo/ /projetos/app-desenvolvimento-cognitivo/ 301
+/4-Projetos/Ativos/PRJ-Curso-IA-Inteligente/ /projetos/curso-ia-inteligente/ 301
+/4-Projetos/Ativos/PRJ-Nostalgia-Musical/ /projetos/nostalgia-musical/ 301
+/4-Projetos/Ativos/PRJ-Plataforma-Cursos/ /projetos/plataforma-cursos/ 301
+/4-Projetos/Ativos/PRJ-Trip-Match/ /projetos/trip-match/ 301
+/4-Projetos/Ativos/PRJ-Vault-Empresarial/ /projetos/vault-empresarial/ 301
+
+# Projetos em desenvolvimento
+/4-Projetos/Em-Desenvolvimento/PRJ-Dev-WhatsBot-Academia/ /projetos/dev-whatsbot-academia/ 301
+/4-Projetos/Em-Desenvolvimento/PRJ-Web-Site-Portfolio-Engenharia/ /projetos/web-site-portfolio-engenharia/ 301
+
+# Templates
+/4-Projetos/Templates/Exemplo_Intake_Preenchido/ /projetos/exemplo-intake-preenchido/ 301
+/4-Projetos/Templates/Exemplo_Minimalista/ /projetos/exemplo-minimalista/ 301
+/4-Projetos/Templates/Exemplo_Primeira_Cartada/ /projetos/exemplo-primeira-cartada/ 301
+/4-Projetos/Templates/TEMPLATE* /projetos/templates/ 301
 
 # Processos
 /5-Processos/ /processos/ 301
@@ -36,6 +57,10 @@
 # Resources
 /99-RESOURCES/ /resources/ 301
 /99-RESOURCES/* /resources/:splat 301
+
+# Reuniões Históricas
+/1000-REUNIOES/ /reunioes-historicas/ 301
+/1000-REUNIOES/* /reunioes-historicas/:splat 301
 
 # SPA fallback for client-side routing
 /* /index.html 200

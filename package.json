@@ -11,7 +11,8 @@
     "prebuild": "npm run clean",
     "postbuild": "npm run site:index",
     "site:index": "node src/scripts/site-indexer.js",
-    "audit": "npm run build && echo Audit completed - check _site_index/ folder"
+    "audit": "npm run build && echo Audit completed - check _site_index/ folder",
+    "validate:urls": "node scripts/validate-urls.js"
   },
   "keywords": [
     "digital-garden",

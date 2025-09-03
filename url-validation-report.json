@@ -1,0 +1,220 @@
+{
+  "timestamp": "2025-09-03T02:03:08.856Z",
+  "totalFiles": 51,
+  "validUrls": 48,
+  "issues": 3,
+  "urls": [
+    {
+      "url": "/content/dashboard-projetos-prazo-visual/",
+      "file": "content\\0-Dashboard-Executivo\\Dashboard-Projetos-Prazo-Visual.md"
+    },
+    {
+      "url": "/content/dashboard-projetos-prazo/",
+      "file": "content\\0-Dashboard-Executivo\\Dashboard-Projetos-Prazo.md"
+    },
+    {
+      "url": "/content/dashboard-capacidade-equipe/",
+      "file": "content\\0-Dashboard-Executivo\\Dashboard_Capacidade_Equipe.md"
+    },
+    {
+      "url": "/content/decisoes-estrategicas/",
+      "file": "content\\0-Dashboard-Executivo\\Decisoes-Estrategicas.md"
+    },
+    {
+      "url": "/content/executive-auto/",
+      "file": "content\\0-Dashboard-Executivo\\Executive-Auto.md"
+    },
+    {
+      "url": "/content/innovation-pipeline/",
+      "file": "content\\0-Dashboard-Executivo\\Innovation-Pipeline.md"
+    },
+    {
+      "url": "/content/kpis-principais/",
+      "file": "content\\0-Dashboard-Executivo\\KPIs-Principais.md"
+    },
+    {
+      "url": "/content/sistema-metricas-avancadas/",
+      "file": "content\\0-Dashboard-Executivo\\Sistema_Metricas_Avancadas.md"
+    },
+    {
+      "url": "/content/acordo-socios-final/",
+      "file": "content\\1-Governanca\\Acordo_Socios_Final.md"
+    },
+    {
+      "url": "/content/compliance-log/",
+      "file": "content\\1-Governanca\\Compliance_Log.md"
+    },
+    {
+      "url": "/content/etica-uso-ia/",
+      "file": "content\\1-Governanca\\etica_uso_IA.md"
+    },
+    {
+      "url": "/content/faq-compliance/",
+      "file": "content\\1-Governanca\\FAQ_Compliance.md"
+    },
+    {
+      "url": "/content/manual-treinamento-compliance/",
+      "file": "content\\1-Governanca\\Manual_Treinamento_Compliance.md"
+    },
+    {
+      "url": "/content/playbook-comercial-v0/",
+      "file": "content\\1-Governanca\\Playbook_Comercial_v0.md"
+    },
+    {
+      "url": "/content/1-governanca/",
+      "file": "content\\1-Governanca\\README.md"
+    },
+    {
+      "url": "/content/10-prompt-organizao-atas-de-reuniao-a-partir-de-transcrio/",
+      "file": "content\\1000-REUNIOES\\30_08-25 REUNIAO INICIAL\\10 - Prompt organização atas de reuniao a partir de transcrição .md"
+    },
+    {
+      "url": "/content/instrucoes-rapidas/",
+      "file": "content\\1000-REUNIOES\\30_08-25 REUNIAO INICIAL\\INSTRUCOES_RAPIDAS.md"
+    },
+    {
+      "url": "/content/plano-revista-multisocios/",
+      "file": "content\\1000-REUNIOES\\30_08-25 REUNIAO INICIAL\\plano_revista_multisocios.md"
+    },
+    {
+      "url": "/content/readme-conversor/",
+      "file": "content\\1000-REUNIOES\\30_08-25 REUNIAO INICIAL\\README_CONVERSOR.md"
+    },
+    {
+      "url": "/content/2-equipes/",
+      "file": "content\\2-Equipes\\README.md"
+    },
+    {
+      "url": "/content/3-mercado/",
+      "file": "content\\3-Mercado\\README.md"
+    },
+    {
+      "url": "/content/aeralyn/",
+      "file": "content\\4-Projetos\\Ativos\\PRJ-AERALYN.md"
+    },
+    {
+      "url": "/content/app-desenvolvimento-cognitivo/",
+      "file": "content\\4-Projetos\\Ativos\\PRJ-App-Desenvolvimento-Cognitivo.md"
+    },
+    {
+      "url": "/content/curso-ia-inteligente/",
+      "file": "content\\4-Projetos\\Ativos\\PRJ-Curso-IA-Inteligente.md"
+    },
+    {
+      "url": "/content/nostalgia-musical/",
+      "file": "content\\4-Projetos\\Ativos\\PRJ-Nostalgia-Musical.md"
+    },
+    {
+      "url": "/content/plataforma-cursos/",
+      "file": "content\\4-Projetos\\Ativos\\PRJ-Plataforma-Cursos.md"
+    },
+    {
+      "url": "/content/trip-match/",
+      "file": "content\\4-Projetos\\Ativos\\PRJ-Trip-Match.md"
+    },
+    {
+      "url": "/content/vault-empresarial/",
+      "file": "content\\4-Projetos\\Ativos\\PRJ-Vault-Empresarial.md"
+    },
+    {
+      "url": "/content/dev-whatsbot-academia/",
+      "file": "content\\4-Projetos\\Em-Desenvolvimento\\PRJ-Dev-WhatsBot-Academia.md"
+    },
+    {
+      "url": "/content/web-site-portfolio-engenharia/",
+      "file": "content\\4-Projetos\\Em-Desenvolvimento\\PRJ-Web-Site-Portfolio-Engenharia.md"
+    },
+    {
+      "url": "/content/4-projetos/",
+      "file": "content\\4-Projetos\\README.md"
+    },
+    {
+      "url": "/content/exemplo-intake-preenchido/",
+      "file": "content\\4-Projetos\\Templates\\Exemplo_Intake_Preenchido.md"
+    },
+    {
+      "url": "/content/exemplo-minimalista/",
+      "file": "content\\4-Projetos\\Templates\\Exemplo_Minimalista.md"
+    },
+    {
+      "url": "/content/exemplo-primeira-cartada/",
+      "file": "content\\4-Projetos\\Templates\\Exemplo_Primeira_Cartada.md"
+    },
+    {
+      "url": "/content/4-projetos/",
+      "file": "content\\4-Projetos\\Templates\\README.md"
+    },
+    {
+      "url": "/content/template-2025-01-20-projeto-assistente-transcricao-juridica/",
+      "file": "content\\4-Projetos\\Templates\\TEMPLATE 2025-01-20 — projeto — Assistente-Transcricao-Juridica.md"
+    },
+    {
+      "url": "/content/template-piloto-exemplo-sistema/",
+      "file": "content\\4-Projetos\\Templates\\TEMPLATE Piloto-Exemplo-Sistema.md"
+    },
+    {
+      "url": "/content/template-piloto-crm-arquitetos/",
+      "file": "content\\4-Projetos\\Templates\\TEMPLATE Piloto_CRM_Arquitetos.md"
+    },
+    {
+      "url": "/content/template-projeto-exemplo-sistema/",
+      "file": "content\\4-Projetos\\Templates\\TEMPLATE Projeto-Exemplo-Sistema.md"
+    },
+    {
+      "url": "/content/guia-uso-sistema-capacidade/",
+      "file": "content\\5-Processos\\Guia_Uso_Sistema_Capacidade.md"
+    },
+    {
+      "url": "/content/5-processos/",
+      "file": "content\\5-Processos\\README.md"
+    },
+    {
+      "url": "/content/sistema-gestao-capacidade-sprints/",
+      "file": "content\\5-Processos\\Sistema_Gestao_Capacidade_Sprints.md"
+    },
+    {
+      "url": "/content/2025-08-31-reuniao-executiva-sistema/",
+      "file": "content\\6-Reunioes\\2025-08-31-Reuniao-Executiva-Sistema.md"
+    },
+    {
+      "url": "/content/2025-09-01-reuniao-analise-pessimista-projetos/",
+      "file": "content\\6-Reunioes\\2025-09-01-Reuniao-Analise-Pessimista-Projetos.md"
+    },
+    {
+      "url": "/content/2025-09-01-reuniao-criacao-projeto-whatsbot/",
+      "file": "content\\6-Reunioes\\2025-09-01-Reuniao-Criacao-Projeto-WhatsBot.md"
+    },
+    {
+      "url": "/content/2025-09-01-reuniao-criacao-sistema-geracao-ideias/",
+      "file": "content\\6-Reunioes\\2025-09-01-Reuniao-Criacao-Sistema-Geracao-Ideias.md"
+    },
+    {
+      "url": "/content/6-reunioes/",
+      "file": "content\\6-Reunioes\\README.md"
+    },
+    {
+      "url": "/content/7-conhecimento/",
+      "file": "content\\7-Conhecimento\\README.md"
+    }
+  ],
+  "problems": [
+    {
+      "file": "content\\0-Dashboard-Executivo\\Home-Executivo.md",
+      "type": "permalink_mismatch",
+      "expected": "/content/home-executivo/",
+      "actual": "/dashboard-executivo/"
+    },
+    {
+      "file": "content\\0-Dashboard-Executivo\\index.md",
+      "type": "permalink_mismatch",
+      "expected": "/content/0-dashboard-executivo/",
+      "actual": "/dashboard-overview/"
+    },
+    {
+      "file": "content\\4-Projetos\\TEMPLATES.md",
+      "type": "permalink_mismatch",
+      "expected": "/content/templates/",
+      "actual": "/projetos/templates-guia/"
+    }
+  ]
+}

@@ -1,14 +1,10 @@
----
-created: 2025-09-02T21:37
-updated: 2025-09-02T22:47
----
 # 🎨 Layouts Analysis
 
-**Generated**: 2025-09-03T01:47:39.716Z
+**Generated**: 2025-09-03T02:03:35.891Z
 
 ## 📊 Layout Distribution
 
-### BASE Layout (126 pages)
+### BASE Layout (130 pages)
 
 **Example Page**: /.cursor/rules/
 **Title**: 
@@ -23,7 +19,7 @@ updated: 2025-09-02T22:47
 - /0-Dashboard-Executivo/KPIs-Principais/ - "KPIs Principais - Multisocios Empresarial"
 - /0-Dashboard-Executivo/Sistema_Metricas_Avancadas/ - "Sistema Metricas Avancadas - Multisocios Empresarial"
 - /1000 - REUNIOES/30_08-25 REUNIAO INICIAL/10 - Prompt organização atas de reuniao a partir de transcrição / - ""
-- ... and 116 more
+- ... and 120 more
 
 ### DASHBOARD Layout (1 pages)
 
@@ -50,7 +46,7 @@ updated: 2025-09-02T22:47
 - /governanca/etica-uso-ia/ - "Etica Uso IA - Multisocios Empresarial"
 - ... and 5 more
 
-### PROJETO Layout (38 pages)
+### PROJETO Layout (39 pages)
 
 **Example Page**: /4-Projetos/Ativos/PRJ-AERALYN/
 **Title**: AERALYN - Multisocios Empresarial
@@ -65,7 +61,7 @@ updated: 2025-09-02T22:47
 - /4-Projetos/Em-Desenvolvimento/PRJ-Dev-WhatsBot-Academia/ - "Dev WhatsBot Academia - Multisocios Empresarial"
 - /4-Projetos/Em-Desenvolvimento/PRJ-Web-Site-Portfolio-Engenharia/ - "Web Site Portfolio Engenharia - Multisocios Empresarial"
 - /4-Projetos/README/ - "Portfólio de Projetos - Multisocios Empresarial"
-- ... and 28 more
+- ... and 29 more
 
 ### REUNIAO Layout (11 pages)
 
@@ -87,7 +83,7 @@ updated: 2025-09-02T22:47
 ## 💡 Layout Recommendations
 
 ### Projeto Layout
-- **Current**: 38 pages using base layout
+- **Current**: 39 pages using base layout
 - **Recommendation**: Create specific projeto.njk layout
 - **Fields to highlight**: status, budget, effort_weeks, owner
 
