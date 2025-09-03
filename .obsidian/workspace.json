@@ -501,6 +501,7 @@
   },
   "active": "29028b5f4b751a36",
   "lastOpenFiles": [
+    "content/content.11tydata.js",
     "compilado site.md",
     "combine_project.py",
     "_site_index/layouts_analysis.md",
@@ -546,7 +547,6 @@
     "node_modules/undici/docs/docs/api/Util.md",
     "node_modules/undici/docs/docs/api/RetryAgent.md",
     "node_modules/undici/docs/docs/api/RedirectHandler.md",
-    "node_modules/undici/docs/docs/api/ProxyAgent.md",
     "docs/CANVAS SISTEMA IDEIA.canvas",
     "teste.canvas",
     "CANVAS SISTEMA IDEIA.canvas",
