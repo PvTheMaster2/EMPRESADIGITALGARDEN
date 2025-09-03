@@ -1,13 +1,13 @@
 # 📊 Project Analysis Report
 
-**Generated on:** 2025-09-02 23:42:43  
+**Generated on:** 2025-09-03 00:12:25  
 **Root directory:** `C:\Users\pedro\OneDrive\Área de Trabalho\DIGITAL-GARDEN-EMPRESA-GITHUB`  
 **Purpose:** Complete project structure documentation excluding CSV files
 
 ## 📈 Project Summary
 
-- **Total files analyzed:** 545
-- **📄 Code/Text files:** 444
+- **Total files analyzed:** 550
+- **📄 Code/Text files:** 449
 - **🖼️ Image files:** 93
 - **🚫 Excluded files (CSV):** 0
 - **⚠️ Large files (> 5MB):** 2
@@ -151,7 +151,6 @@
 │       ├── Template_Projeto.md 📄
 │       ├── new_tamplate .txt 📄
 │       └── new_tamplate.md 📄
-├── COMPILADO SITE 1.md 📄
 ├── README.md 📄
 ├── _redirects 📄
 ├── _site_index 📁
@@ -673,6 +672,7 @@
 │   │   ├── test-simple.html 📄
 │   │   └── teste.html 📄
 ├── combine_project.py 📄
+├── compilado site1.md 📄
 ├── config 📁
 │   └── _data 📁
 │       ├── company.js 📄
@@ -776,6 +776,7 @@
 ├── package-lock.json 📄
 ├── package.json 📄
 ├── scripts 📁
+│   ├── generate-static-data.js 📄
 │   └── validate-urls.js 📄
 ├── src 📁
 │   ├── assets 📁
@@ -818,6 +819,11 @@
 │   │       │   ├── page-sidebar.njk 📄
 │   │       │   ├── scripts-bundle.njk 📄
 │   │       │   └── sidebar-nav.njk 📄
+│   │       ├── partials 📁
+│   │       │   ├── dashboard-data.json 📄
+│   │       │   ├── metrics-summary.njk 📄
+│   │       │   ├── projects-table.njk 📄
+│   │       │   └── recent-meetings.njk 📄
 │   │       ├── project-card.njk 📄
 │   │       └── shortcodes 📁
 │   │           ├── metrics.njk 📄
@@ -1830,7 +1836,7 @@ Identifique discrepâncias de URLs e gere tabela de correções necessárias.
 
 ##### 📄 .eleventy.js
 *Path: `.eleventy.js`*  
-*Size: 9.65 KB*
+*Size: 9.64 KB*
 
 ```js
 const slugify = require("@sindresorhus/slugify");
@@ -1864,13 +1870,11 @@ module.exports = function (eleventyConfig) {
   // Plugin para navegação hierárquica e breadcrumbs
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
 
-  // Copy static assets - ESTRUTURA CORRIGIDA
+  // Copy static assets - UNIFICADO (sem duplicatas)
   eleventyConfig.addPassthroughCopy({"src/styles": "styles"});
   eleventyConfig.addPassthroughCopy({"src/scripts": "scripts"});
   eleventyConfig.addPassthroughCopy({"src/assets/images": "images"});
-  eleventyConfig.addPassthroughCopy("content/**/*.png");
-  eleventyConfig.addPassthroughCopy("content/**/*.jpg");
-  eleventyConfig.addPassthroughCopy("content/**/*.pdf");
+  // REMOVIDO: content/**/*.png|jpg|pdf - usar apenas /images como origem única
   
   // Copy _redirects file for Netlify
   eleventyConfig.addPassthroughCopy("_redirects");
@@ -2028,15 +2032,15 @@ module.exports = function (eleventyConfig) {
   // Add navigation data globally - NOVA ESTRUTURA
   eleventyConfig.addGlobalData("navigation", require("./config/_data/navigation.js"));
 
-  // Transform para limpar URLs automaticamente
-  eleventyConfig.addTransform("clean-urls", function(content, outputPath) {
-    if (outputPath && outputPath.endsWith('.html')) {
-      // Remove prefixos numéricos das URLs nos links
-      content = content.replace(/href="\/\d+-([^"]+)"/g, 'href="/$1"');
-      content = content.replace(/href="\/\d+-([^"]+)\//g, 'href="/$1/');
-    }
-    return content;
-  });
+  // Transform clean-urls DESATIVADO - URLs limpas são geridas via permalinks em .11tydata.js
+  // eleventyConfig.addTransform("clean-urls", function(content, outputPath) {
+  //   if (outputPath && outputPath.endsWith('.html')) {
+  //     // Remove prefixos numéricos das URLs nos links
+  //     content = content.replace(/href="\/\d+-([^"]+)"/g, 'href="/$1"');
+  //     content = content.replace(/href="\/\d+-([^"]+)\//g, 'href="/$1/');
+  //   }
+  //   return content;
+  // });
 
   // Collections for dynamic content - NOVA ESTRUTURA
   eleventyConfig.addCollection("projetos", function(collectionApi) {
@@ -13953,311 +13957,6 @@ WORK ON THIS DOCUMENT
 
 ---
 
-##### 📄 COMPILADO SITE 1.md
-*Path: `COMPILADO SITE 1.md`*  
-*Size: 554.92 KB*
-
-```md
-# 📊 Project Analysis Report
-
-**Generated on:** 2025-09-02 23:42:43  
-**Root directory:** `C:\Users\pedro\OneDrive\Área de Trabalho\DIGITAL-GARDEN-EMPRESA-GITHUB`  
-**Purpose:** Complete project structure documentation excluding CSV files
-
-## 📈 Project Summary
-
-- **Total files analyzed:** 545
-- **📄 Code/Text files:** 444
-- **🖼️ Image files:** 93
-- **🚫 Excluded files (CSV):** 0
-- **⚠️ Large files (> 5MB):** 2
-- **📁 Other files:** 6
-
-## 🌳 Project Structure
-
-```
-├── .11tydata.js 📄
-├── .cursor 📁
-│   └── rules.md 📄
-├── .eleventy.js 📄
-├── .obsidian 📁
-│   ├── app.json 📄
-│   ├── appearance.json 📄
-│   ├── community-plugins.json 📄
-│   ├── copilot-index-b36420264f6817624f06c39a4cef58b4.json 📄
-│   ├── core-plugins.json 📄
-│   ├── graph.json 📄
-│   ├── plugins 📁
-│   │   ├── auto-note-mover 📁
-│   │   │   ├── data.json 📄
-│   │   │   ├── main.js 📄
-│   │   │   └── manifest.json 📄
-│   │   ├── better-export-pdf 📁
-│   │   │   ├── main.js 📄
-│   │   │   ├── manifest.json 📄
-│   │   │   └── styles.css 📄
-│   │   ├── breadcrumbs 📁
-│   │   │   ├── main.js 📄
-│   │   │   ├── manifest.json 📄
-│   │   │   └── styles.css 📄
-│   │   ├── calendar 📁
-│   │   │   ├── data.json 📄
-│   │   │   ├── main.js 📄
-│   │   │   └── manifest.json 📄
-│   │   ├── copilot 📁
-│   │   │   ├── data.json 📄
-│   │   │   ├── main.js 📄
-│   │   │   ├── manifest.json 📄
-│   │   │   └── styles.css 📄
-│   │   ├── dataview 📁
-│   │   │   ├── data.json 📄
-│   │   │   ├── main.js 📄
-│   │   │   ├── manifest.json 📄
-│   │   │   └── styles.css 📄
-│   │   ├── digitalgarden 📁
-│   │   │   ├── data.json 📄
-│   │   │   ├── main.js 📄
-│   │   │   ├── manifest.json 📄
-│   │   │   └── styles.css 📄
-│   │   ├── graph-analysis 📁
-│   │   │   ├── main.js 📄
-│   │   │   ├── manifest.json 📄
-│   │   │   └── styles.css 📄
-│   │   ├── obsidian-advanced-uri 📁
-│   │   │   ├── main.js 📄
-│   │   │   └── manifest.json 📄
-│   │   ├── obsidian-banners 📁
-│   │   │   ├── main.js 📄
-│   │   │   ├── manifest.json 📄
-│   │   │   └── styles.css 📄
-│   │   ├── obsidian-book-search-plugin 📁
-│   │   │   ├── main.js 📄
-│   │   │   ├── manifest.json 📄
-│   │   │   └── styles.css 📄
-│   │   ├── obsidian-charts 📁
-│   │   │   ├── main.js 📄
-│   │   │   ├── manifest.json 📄
-│   │   │   └── styles.css 📄
-│   │   ├── obsidian-excalidraw-plugin 📁
-│   │   │   ├── data.json 📄
-│   │   │   ├── main.js 📄
-│   │   │   ├── manifest.json 📄
-│   │   │   └── styles.css 📄
-│   │   ├── obsidian-frontmatter-tag-suggest 📁
-│   │   │   ├── main.js 📄
-│   │   │   └── manifest.json 📄
-│   │   ├── obsidian-kanban 📁
-│   │   │   ├── main.js 📄
-│   │   │   ├── manifest.json 📄
-│   │   │   └── styles.css 📄
-│   │   ├── obsidian-meta-bind-plugin 📁
-│   │   │   ├── data.json 📄
-│   │   │   ├── main.js 📄
-│   │   │   ├── manifest.json 📄
-│   │   │   └── styles.css 📄
-│   │   ├── obsidian-projects 📁
-│   │   │   ├── data.json 📄
-│   │   │   ├── main.js 📄
-│   │   │   ├── manifest.json 📄
-│   │   │   └── styles.css 📄
-│   │   ├── obsidian-tasks-plugin 📁
-│   │   │   ├── main.js 📄
-│   │   │   ├── manifest.json 📄
-│   │   │   └── styles.css 📄
-│   │   ├── obsidian-wikipedia 📁
-│   │   │   ├── main.js 📄
-│   │   │   └── manifest.json 📄
-│   │   ├── smart-connections 📁
-│   │   │   ├── data.json 📄
-│   │   │   ├── main.js 📄
-│   │   │   ├── manifest.json 📄
-│   │   │   └── styles.css 📄
-│   │   ├── tag-wrangler 📁
-│   │   │   ├── main.js 📄
-│   │   │   └── manifest.json 📄
-│   │   ├── templater-obsidian 📁
-│   │   │   ├── data.json 📄
-│   │   │   ├── main.js 📄
-│   │   │   ├── manifest.json 📄
-│   │   │   └── styles.css 📄
-│   │   ├── update-time-on-edit 📁
-│   │   │   ├── data.json 📄
-│   │   │   ├── main.js 📄
-│   │   │   ├── manifest.json 📄
-│   │   │   └── styles.css 📄
-│   │   └── zettelkasten-llm-tools 📁
-│   │       ├── main.js 📄
-│   │       ├── manifest.json 📄
-│   │       └── styles.css 📄
-│   ├── templates.json 📄
-│   ├── themes 📁
-│   │   └── Atom 📁
-│   │       ├── manifest.json 📄
-│   │       └── theme.css 📄
-│   └── workspace.json 📄
-├── 99-RESOURCES 📁
-│   └── 99 - TEMPLATE 📁
-│       ├── !TEMPLATE_R02.md 📄
-│       ├── 5_Structure Template 1.md 📄
-│       ├── 5_Structure Template 1.txt 📄
-│       ├── Dashboard-Projetos-Prazo-Visual-Template.md 📄
-│       ├── Dashboard-Visual-Template-Fixed.md 📄
-│       ├── Dashboard-Visual-Template.md 📄
-│       ├── Prompt.txt.md 📄
-│       ├── Prompt2.md.md 📄
-│       ├── TEMPLATE OFICIAL.md 📄
-│       ├── TEMPLATE_R00.md 📄
-│       ├── Template_Intake_Simples.md 📄
-│       ├── Template_Projeto.md 📄
-│       ├── new_tamplate .txt 📄
-│       └── new_tamplate.md 📄
-├── COMPILADO SITE 1.md 📄
-├── README.md 📄
-├── _redirects 📄
-├── _site_index 📁
-│   ├── issues.md 📄
-│   ├── layouts_analysis.md 📄
-│   ├── site_index.json 📄
-│   └── site_outline.md 📄
-├── _site_snapshots 📁
-├── build 📁
-│   ├── _site_index 📁
-│   │   ├── issues.md 📄
-│   │   ├── layouts_analysis.md 📄
-│   │   ├── site_index.json 📄
-│   │   └── site_outline.md 📄
-│   ├── dist 📁
-│   │   ├── .cursor 📁
-│   │   │   └── rules 📁
-│   │   │       └── index.html 📄
-│   │   ├── 0-Dashboard-Executivo 📁
-│   │   │   ├── Dashboard-Projetos-Prazo 📁
-│   │   │   │   └── index.html 📄
-│   │   │   ├── Dashboard-Projetos-Prazo-Visual 📁
-│   │   │   │   └── index.html 📄
-│   │   │   ├── Dashboard_Capacidade_Equipe 📁
-│   │   │   │   └── index.html 📄
-│   │   │   ├── Decisoes-Estrategicas 📁
-│   │   │   │   └── index.html 📄
-│   │   │   ├── Executive-Auto 📁
-│   │   │   │   └── index.html 📄
-│   │   │   ├── Innovation-Pipeline 📁
-│   │   │   │   └── index.html 📄
-│   │   │   ├── KPIs-Principais 📁
-│   │   │   │   └── index.html 📄
-│   │   │   └── Sistema_Metricas_Avancadas 📁
-│   │   │       └── index.html 📄
-│   │   ├── 1-Governanca 📁
-│   │   │   ├── Acordo_Socios_Final 📁
-│   │   │   │   └── index.html 📄
-│   │   │   ├── Compliance_Log 📁
-│   │   │   │   └── index.html 📄
-│   │   │   ├── FAQ_Compliance 📁
-│   │   │   │   └── index.html 📄
-│   │   │   ├── Manual_Treinamento_Compliance 📁
-│   │   │   │   └── index.html 📄
-│   │   │   ├── Playbook_Comercial_v0 📁
-│   │   │   │   └── index.html 📄
-│   │   │   ├── README 📁
-│   │   │   │   └── index.html 📄
-│   │   │   └── etica_uso_IA 📁
-│   │   │       └── index.html 📄
-│   │   ├── 1000 - REUNIOES 📁
-│   │   │   └── 30_08-25 REUNIAO INICIAL 📁
-│   │   │       ├── 10 - Prompt organização atas de reuniao a partir de transcrição  📁
-│   │   │       ├── ATA GEMINI 📁
-│   │   │       │   └── index.html 📄
-│   │   │       ├── ATA_MultiSocios_2025-08-30.pdf 📁
-│   │   │       ├── EXECUTIVO 📁
-│   │   │       │   ├── ATA-30_08_25 - REUNIÃOINICIAL-R00 📁
-│   │   │       │   │   └── index.html 📄
-│   │   │       │   ├── ata_modernizada 📁
-│   │   │       │   │   └── index.html 📄
-│   │   │       │   ├── generation-957ba223-d832-4504-95cb-a4d49db4d0a8.png 🖼️
-│   │   │       │   ├── generation-e6329cba-92f2-4576-b2c4-6ae7594ce644.png 🖼️
-│   │   │       │   ├── generation-ed140599-c364-47b1-988e-01557efb3010.png 🖼️
-│   │   │       │   ├── manifestomultisocios 📁
-│   │   │       │   │   └── index.html 📄
-│   │   │       │   └── pessoas.png 🖼️
-│   │   │       ├── INSTRUCOES_RAPIDAS 📁
-│   │   │       │   └── index.html 📄
-│   │   │       ├── MultiSócios_Radar_Edição1.pdf 📁
-│   │   │       ├── README_CONVERSOR 📁
-│   │   │       │   └── index.html 📄
-│   │   │       ├── Reunião Multisócios @hoje 25f0c1a9c7ee80d4958bc6efaebffa21 📁
-│   │   │       │   └── index.html 📄
-│   │   │       ├── advanced-multisocios-components 📁
-│   │   │       │   └── index.html 📄
-│   │   │       ├── ata_modernizada - ANTES 📁
-│   │   │       │   └── index.html 📄
-│   │   │       ├── ata_modernizada_pos 📁
-│   │   │       │   └── index.html 📄
-│   │   │       ├── plano_revista_multisocios 📁
-│   │   │       │   └── index.html 📄
-│   │   │       └── revista_multisocios_radar_edicao1 📁
-│   │   │           └── index.html 📄
-│   │   ├── 1000-REUNIOES 📁
-│   │   │   └── 30_08-25 REUNIAO INICIAL 📁
-│   │   │       ├── 10 - Prompt organização atas de reuniao a partir de transcrição  📁
-│   │   │       ├── ATA GEMINI 📁
-│   │   │       │   └── index.html 📄
-│   │   │       ├── ATA_MultiSocios_2025-08-30.pdf 📁
-│   │   │       ├── EXECUTIVO 📁
-│   │   │       │   ├── ATA-30_08_25 - REUNIÃOINICIAL-R00 📁
-│   │   │       │   │   └── index.html 📄
-│   │   │       │   ├── ata_modernizada 📁
-│   │   │       │   │   └── index.html 📄
-│   │   │       │   ├── generation-957ba223-d832-4504-95cb-a4d49db4d0a8.png 🖼️
-│   │   │       │   ├── generation-e6329cba-92f2-4576-b2c4-6ae7594ce644.png 🖼️
-│   │   │       │   ├── generation-ed140599-c364-47b1-988e-01557efb3010.png 🖼️
-│   │   │       │   ├── manifestomultisocios 📁
-│   │   │       │   │   └── index.html 📄
-│   │   │       │   └── pessoas.png 🖼️
-│   │   │       ├── INSTRUCOES_RAPIDAS 📁
-│   │   │       │   └── index.html 📄
-│   │   │       ├── MultiSócios_Radar_Edição1.pdf 📁
-│   │   │       ├── README_CONVERSOR 📁
-│   │   │       │   └── index.html 📄
-│   │   │       ├── Reunião Multisócios @hoje 25f0c1a9c7ee80d4958bc6efaebffa21 📁
-│   │   │       │   └── index.html 📄
-│   │   │       ├── advanced-multisocios-components 📁
-│   │   │       │   └── index.html 📄
-│   │   │       ├── ata_modernizada - ANTES 📁
-│   │   │       │   └── index.html 📄
-│   │   │       ├── ata_modernizada_pos 📁
-│   │   │       │   └── index.html 📄
-│   │   │       ├── plano_revista_multisocios 📁
-│   │   │       │   └── index.html 📄
-│   │   │       └── revista_multisocios_radar_edicao1 📁
-│   │   │           └── index.html 📄
-│   │   ├── 2-Equipes 📁
-│   │   │   └── README 📁
-│   │   │       └── index.html 📄
-│   │   ├── 3-Mercado 📁
-│   │   │   └── README 📁
-│   │   │       └── index.html 📄
-│   │   ├── 4-Projetos 📁
-│   │   │   ├── Ativos 📁
-│   │   │   │   ├── PRJ-AERALYN 📁
-│   │   │   │   │   └── index.html 📄
-│   │   │   │   ├── PRJ-Curso-IA-Inteligente 📁
-│   │   │   │   │   └── index.html 📄
-│   │   │   │   ├── PRJ-Nostalgia-Musical 📁
-│   │   │   │   │   └── index.html 📄
-│   │   │   │   ├── PRJ-Plataforma-Cursos 📁
-│   │   │   │   │   └── index.html 📄
-│   │   │   │   ├── PRJ-Trip-Match 📁
-│   │   │   │   │   └── index.html 📄
-│   │   │   │   └── PRJ-Vault-Empresarial 📁
-│   │   │   │       └── index.html 📄
-│   │   │   ├── README 📁
-│   │   │   
-
-... (Content truncated - file too large)
-```
-
----
-
 ##### 📄 README.md
 *Path: `README.md`*  
 *Size: 17.78 KB*
@@ -14600,7 +14299,7 @@ VaultEmpresarial/
 ```md
 # 🔍 Site Audit Report
 
-**Generated**: 2025-09-03T02:41:24.207Z
+**Generated**: 2025-09-03T03:09:24.619Z
 
 ## 📊 Statistics
 
@@ -14711,7 +14410,7 @@ VaultEmpresarial/
 ```md
 # 🎨 Layouts Analysis
 
-**Generated**: 2025-09-03T02:41:24.209Z
+**Generated**: 2025-09-03T03:09:24.645Z
 
 ## 📊 Layout Distribution
 
@@ -15274,7 +14973,7 @@ VaultEmpresarial/
 ```md
 # 🌳 Site Structure Outline
 
-**Generated**: 2025-09-03T02:41:24.205Z
+**Generated**: 2025-09-03T03:09:24.589Z
 **Total Pages**: 198
 
 ## 📁 .CURSOR
@@ -41990,7 +41689,7 @@ tags:</p>
 
 ##### 📄 index.html
 *Path: `build\dist\dashboard-executivo\dashboard-capacidade-equipe\index.html`*  
-*Size: 92.39 KB*
+*Size: 92.41 KB*
 
 ```html
 <!DOCTYPE html>
@@ -42028,12 +41727,12 @@ tags:</p>
       
       <div class="nav-links">
         <a href="/" class="active">Dashboard</a>
-        <a href="/Governanca/README/">Governança</a>
-        <a href="/Projetos/README/">Projetos</a>
-        <a href="/Equipes/README/">Equipes</a>
-        <a href="/Processos/README/">Processos</a>
-        <a href="/Reunioes/README/">Reuniões</a>
-        <a href="/Conhecimento/README/">Conhecimento</a>
+        <a href="/1-Governanca/README/">Governança</a>
+        <a href="/4-Projetos/README/">Projetos</a>
+        <a href="/2-Equipes/README/">Equipes</a>
+        <a href="/5-Processos/README/">Processos</a>
+        <a href="/6-Reunioes/README/">Reuniões</a>
+        <a href="/7-Conhecimento/README/">Conhecimento</a>
       </div>
       
       <div class="nav-tools">
@@ -42256,7 +41955,7 @@ tags:</p>
                 <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
                   <span class="tree-icon">▶</span>
                 </button>
-                <a href="/equipes/marketing
+                <a href="/equip
 
 ... (Content truncated - file too large)
 ```
@@ -42541,7 +42240,7 @@ tags:</p>
 
 ##### 📄 index.html
 *Path: `build\dist\dashboard-executivo\dashboard-projetos-prazo\index.html`*  
-*Size: 91.22 KB*
+*Size: 91.24 KB*
 
 ```html
 <!DOCTYPE html>
@@ -42579,12 +42278,12 @@ tags:</p>
       
       <div class="nav-links">
         <a href="/" class="active">Dashboard</a>
-        <a href="/Governanca/README/">Governança</a>
-        <a href="/Projetos/README/">Projetos</a>
-        <a href="/Equipes/README/">Equipes</a>
-        <a href="/Processos/README/">Processos</a>
-        <a href="/Reunioes/README/">Reuniões</a>
-        <a href="/Conhecimento/README/">Conhecimento</a>
+        <a href="/1-Governanca/README/">Governança</a>
+        <a href="/4-Projetos/README/">Projetos</a>
+        <a href="/2-Equipes/README/">Equipes</a>
+        <a href="/5-Processos/README/">Processos</a>
+        <a href="/6-Reunioes/README/">Reuniões</a>
+        <a href="/7-Conhecimento/README/">Conhecimento</a>
       </div>
       
       <div class="nav-tools">
@@ -42807,7 +42506,7 @@ tags:</p>
                 <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
                   <span class="tree-icon">▶</span>
                 </button>
-                <a href="/equipes/marketing/" 
+                <a href="/equipes/
 
 ... (Content truncated - file too large)
 ```
@@ -42819,7 +42518,7 @@ tags:</p>
 
 ##### 📄 index.html
 *Path: `build\dist\dashboard-executivo\decisoes-estrategicas\index.html`*  
-*Size: 84.91 KB*
+*Size: 84.92 KB*
 
 ```html
 <!DOCTYPE html>
@@ -42857,12 +42556,12 @@ tags:</p>
       
       <div class="nav-links">
         <a href="/" class="active">Dashboard</a>
-        <a href="/Governanca/README/">Governança</a>
-        <a href="/Projetos/README/">Projetos</a>
-        <a href="/Equipes/README/">Equipes</a>
-        <a href="/Processos/README/">Processos</a>
-        <a href="/Reunioes/README/">Reuniões</a>
-        <a href="/Conhecimento/README/">Conhecimento</a>
+        <a href="/1-Governanca/README/">Governança</a>
+        <a href="/4-Projetos/README/">Projetos</a>
+        <a href="/2-Equipes/README/">Equipes</a>
+        <a href="/5-Processos/README/">Processos</a>
+        <a href="/6-Reunioes/README/">Reuniões</a>
+        <a href="/7-Conhecimento/README/">Conhecimento</a>
       </div>
       
       <div class="nav-tools">
@@ -43085,7 +42784,7 @@ tags:</p>
                 <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
                   <span class="tree-icon">▶</span>
                 </button>
-                <a href="/equipes/marketing/" cla
+                <a href="/equipes/mar
 
 ... (Content truncated - file too large)
 ```
@@ -43370,7 +43069,7 @@ tags:</p>
 
 ##### 📄 index.html
 *Path: `build\dist\dashboard-executivo\guia-dashboard-central\index.html`*  
-*Size: 92.95 KB*
+*Size: 92.96 KB*
 
 ```html
 <!DOCTYPE html>
@@ -43408,12 +43107,12 @@ tags:</p>
       
       <div class="nav-links">
         <a href="/" class="active">Dashboard</a>
-        <a href="/Governanca/README/">Governança</a>
-        <a href="/Projetos/README/">Projetos</a>
-        <a href="/Equipes/README/">Equipes</a>
-        <a href="/Processos/README/">Processos</a>
-        <a href="/Reunioes/README/">Reuniões</a>
-        <a href="/Conhecimento/README/">Conhecimento</a>
+        <a href="/1-Governanca/README/">Governança</a>
+        <a href="/4-Projetos/README/">Projetos</a>
+        <a href="/2-Equipes/README/">Equipes</a>
+        <a href="/5-Processos/README/">Processos</a>
+        <a href="/6-Reunioes/README/">Reuniões</a>
+        <a href="/7-Conhecimento/README/">Conhecimento</a>
       </div>
       
       <div class="nav-tools">
@@ -43636,7 +43335,7 @@ tags:</p>
                 <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
                   <span class="tree-icon">▶</span>
                 </button>
-                <a href="/equipes/marketi
+                <a href="/equ
 
 ... (Content truncated - file too large)
 ```
@@ -43648,7 +43347,7 @@ tags:</p>
 
 ##### 📄 index.html
 *Path: `build\dist\dashboard-executivo\index.html`*  
-*Size: 100.16 KB*
+*Size: 100.18 KB*
 
 ```html
 <!DOCTYPE html>
@@ -43686,12 +43385,12 @@ tags:</p>
       
       <div class="nav-links">
         <a href="/" class="active">Dashboard</a>
-        <a href="/Governanca/README/">Governança</a>
-        <a href="/Projetos/README/">Projetos</a>
-        <a href="/Equipes/README/">Equipes</a>
-        <a href="/Processos/README/">Processos</a>
-        <a href="/Reunioes/README/">Reuniões</a>
-        <a href="/Conhecimento/README/">Conhecimento</a>
+        <a href="/1-Governanca/README/">Governança</a>
+        <a href="/4-Projetos/README/">Projetos</a>
+        <a href="/2-Equipes/README/">Equipes</a>
+        <a href="/5-Processos/README/">Processos</a>
+        <a href="/6-Reunioes/README/">Reuniões</a>
+        <a href="/7-Conhecimento/README/">Conhecimento</a>
       </div>
       
       <div class="nav-tools">
@@ -43914,7 +43613,7 @@ tags:</p>
                 <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
                   <span class="tree-icon">▶</span>
                 </button>
-                <a href="/equipes
+                <a hr
 
 ... (Content truncated - file too large)
 ```
@@ -45507,7 +45206,7 @@ tags:</p>
 
 ##### 📄 index.html
 *Path: `build\dist\governanca\acordo-socios-final\index.html`*  
-*Size: 86.60 KB*
+*Size: 86.61 KB*
 
 ```html
 <!DOCTYPE html>
@@ -45542,12 +45241,12 @@ tags:</p>
       
       <div class="nav-links">
         <a href="/">Dashboard</a>
-        <a href="/Governanca/README/" class="active">Governança</a>
-        <a href="/Projetos/README/">Projetos</a>
-        <a href="/Equipes/README/">Equipes</a>
-        <a href="/Processos/README/">Processos</a>
-        <a href="/Reunioes/README/">Reuniões</a>
-        <a href="/Conhecimento/README/">Conhecimento</a>
+        <a href="/1-Governanca/README/" class="active">Governança</a>
+        <a href="/4-Projetos/README/">Projetos</a>
+        <a href="/2-Equipes/README/">Equipes</a>
+        <a href="/5-Processos/README/">Processos</a>
+        <a href="/6-Reunioes/README/">Reuniões</a>
+        <a href="/7-Conhecimento/README/">Conhecimento</a>
       </div>
       
       <div class="nav-tools">
@@ -45777,7 +45476,7 @@ tags:</p>
               </div>
               
               
-            </d
+   
 
 ... (Content truncated - file too large)
 ```
@@ -45789,7 +45488,7 @@ tags:</p>
 
 ##### 📄 index.html
 *Path: `build\dist\governanca\compliance-log\index.html`*  
-*Size: 80.04 KB*
+*Size: 80.05 KB*
 
 ```html
 <!DOCTYPE html>
@@ -45824,12 +45523,12 @@ tags:</p>
       
       <div class="nav-links">
         <a href="/">Dashboard</a>
-        <a href="/Governanca/README/" class="active">Governança</a>
-        <a href="/Projetos/README/">Projetos</a>
-        <a href="/Equipes/README/">Equipes</a>
-        <a href="/Processos/README/">Processos</a>
-        <a href="/Reunioes/README/">Reuniões</a>
-        <a href="/Conhecimento/README/">Conhecimento</a>
+        <a href="/1-Governanca/README/" class="active">Governança</a>
+        <a href="/4-Projetos/README/">Projetos</a>
+        <a href="/2-Equipes/README/">Equipes</a>
+        <a href="/5-Processos/README/">Processos</a>
+        <a href="/6-Reunioes/README/">Reuniões</a>
+        <a href="/7-Conhecimento/README/">Conhecimento</a>
       </div>
       
       <div class="nav-tools">
@@ -46059,8 +45758,7 @@ tags:</p>
               </div>
               
               
-            </div>
- 
+        
 
 ... (Content truncated - file too large)
 ```
@@ -46072,7 +45770,7 @@ tags:</p>
 
 ##### 📄 index.html
 *Path: `build\dist\governanca\etica-uso-ia\index.html`*  
-*Size: 87.61 KB*
+*Size: 87.62 KB*
 
 ```html
 <!DOCTYPE html>
@@ -46107,12 +45805,12 @@ tags:</p>
       
       <div class="nav-links">
         <a href="/">Dashboard</a>
-        <a href="/Governanca/README/" class="active">Governança</a>
-        <a href="/Projetos/README/">Projetos</a>
-        <a href="/Equipes/README/">Equipes</a>
-        <a href="/Processos/README/">Processos</a>
-        <a href="/Reunioes/README/">Reuniões</a>
-        <a href="/Conhecimento/README/">Conhecimento</a>
+        <a href="/1-Governanca/README/" class="active">Governança</a>
+        <a href="/4-Projetos/README/">Projetos</a>
+        <a href="/2-Equipes/README/">Equipes</a>
+        <a href="/5-Processos/README/">Processos</a>
+        <a href="/6-Reunioes/README/">Reuniões</a>
+        <a href="/7-Conhecimento/README/">Conhecimento</a>
       </div>
       
       <div class="nav-tools">
@@ -46342,8 +46040,7 @@ tags:</p>
               </div>
               
               
-            </div>
-      
+            <
 
 ... (Content truncated - file too large)
 ```
@@ -46355,7 +46052,7 @@ tags:</p>
 
 ##### 📄 index.html
 *Path: `build\dist\governanca\faq-compliance\index.html`*  
-*Size: 88.45 KB*
+*Size: 88.46 KB*
 
 ```html
 <!DOCTYPE html>
@@ -46390,12 +46087,12 @@ tags:</p>
       
       <div class="nav-links">
         <a href="/">Dashboard</a>
-        <a href="/Governanca/README/" class="active">Governança</a>
-        <a href="/Projetos/README/">Projetos</a>
-        <a href="/Equipes/README/">Equipes</a>
-        <a href="/Processos/README/">Processos</a>
-        <a href="/Reunioes/README/">Reuniões</a>
-        <a href="/Conhecimento/README/">Conhecimento</a>
+        <a href="/1-Governanca/README/" class="active">Governança</a>
+        <a href="/4-Projetos/README/">Projetos</a>
+        <a href="/2-Equipes/README/">Equipes</a>
+        <a href="/5-Processos/README/">Processos</a>
+        <a href="/6-Reunioes/README/">Reuniões</a>
+        <a href="/7-Conhecimento/README/">Conhecimento</a>
       </div>
       
       <div class="nav-tools">
@@ -46625,8 +46322,7 @@ tags:</p>
               </div>
               
               
-            </div>
-  
+         
 
 ... (Content truncated - file too large)
 ```
@@ -46638,7 +46334,7 @@ tags:</p>
 
 ##### 📄 index.html
 *Path: `build\dist\governanca\index.html`*  
-*Size: 76.68 KB*
+*Size: 76.69 KB*
 
 ```html
 <!DOCTYPE html>
@@ -46673,12 +46369,12 @@ tags:</p>
       
       <div class="nav-links">
         <a href="/">Dashboard</a>
-        <a href="/Governanca/README/" class="active">Governança</a>
-        <a href="/Projetos/README/">Projetos</a>
-        <a href="/Equipes/README/">Equipes</a>
-        <a href="/Processos/README/">Processos</a>
-        <a href="/Reunioes/README/">Reuniões</a>
-        <a href="/Conhecimento/README/">Conhecimento</a>
+        <a href="/1-Governanca/README/" class="active">Governança</a>
+        <a href="/4-Projetos/README/">Projetos</a>
+        <a href="/2-Equipes/README/">Equipes</a>
+        <a href="/5-Processos/README/">Processos</a>
+        <a href="/6-Reunioes/README/">Reuniões</a>
+        <a href="/7-Conhecimento/README/">Conhecimento</a>
       </div>
       
       <div class="nav-tools">
@@ -46907,8 +46603,7 @@ tags:</p>
                 </a>
               </div>
               
-              
-         
+            
 
 ... (Content truncated - file too large)
 ```
@@ -46920,7 +46615,7 @@ tags:</p>
 
 ##### 📄 index.html
 *Path: `build\dist\governanca\manual-treinamento-compliance\index.html`*  
-*Size: 89.17 KB*
+*Size: 89.19 KB*
 
 ```html
 <!DOCTYPE html>
@@ -46955,12 +46650,12 @@ tags:</p>
       
       <div class="nav-links">
         <a href="/">Dashboard</a>
-        <a href="/Governanca/README/" class="active">Governança</a>
-        <a href="/Projetos/README/">Projetos</a>
-        <a href="/Equipes/README/">Equipes</a>
-        <a href="/Processos/README/">Processos</a>
-        <a href="/Reunioes/README/">Reuniões</a>
-        <a href="/Conhecimento/README/">Conhecimento</a>
+        <a href="/1-Governanca/README/" class="active">Governança</a>
+        <a href="/4-Projetos/README/">Projetos</a>
+        <a href="/2-Equipes/README/">Equipes</a>
+        <a href="/5-Processos/README/">Processos</a>
+        <a href="/6-Reunioes/README/">Reuniões</a>
+        <a href="/7-Conhecimento/README/">Conhecimento</a>
       </div>
       
       <div class="nav-tools">
@@ -47189,8 +46884,7 @@ tags:</p>
                 </a>
               </div>
               
-              
-     
+        
 
 ... (Content truncated - file too large)
 ```
@@ -47202,7 +46896,7 @@ tags:</p>
 
 ##### 📄 index.html
 *Path: `build\dist\governanca\playbook-comercial-v0\index.html`*  
-*Size: 85.89 KB*
+*Size: 85.91 KB*
 
 ```html
 <!DOCTYPE html>
@@ -47237,12 +46931,12 @@ tags:</p>
       
       <div class="nav-links">
         <a href="/">Dashboard</a>
-        <a href="/Governanca/README/" class="active">Governança</a>
-        <a href="/Projetos/README/">Projetos</a>
-        <a href="/Equipes/README/">Equipes</a>
-        <a href="/Processos/README/">Processos</a>
-        <a href="/Reunioes/README/">Reuniões</a>
-        <a href="/Conhecimento/README/">Conhecimento</a>
+        <a href="/1-Governanca/README/" class="active">Governança</a>
+        <a href="/4-Projetos/README/">Projetos</a>
+        <a href="/2-Equipes/README/">Equipes</a>
+        <a href="/5-Processos/README/">Processos</a>
+        <a href="/6-Reunioes/README/">Reuniões</a>
+        <a href="/7-Conhecimento/README/">Conhecimento</a>
       </div>
       
       <div class="nav-tools">
@@ -47472,7 +47166,7 @@ tags:</p>
               </div>
               
               
-            </di
+    
 
 ... (Content truncated - file too large)
 ```
@@ -48474,7 +48168,7 @@ SORT status, priority DESC
 
 ##### 📄 index.html
 *Path: `build\dist\projetos\aeralyn\index.html`*  
-*Size: 81.86 KB*
+*Size: 81.87 KB*
 
 ```html
 <!DOCTYPE html>
@@ -48509,1144 +48203,12 @@ SORT status, priority DESC
       
       <div class="nav-links">
         <a href="/">Dashboard</a>
-        <a href="/Governanca/README/">Governança</a>
-        <a href="/Projetos/README/" class="active">Projetos</a>
-        <a href="/Equipes/README/">Equipes</a>
-        <a href="/Processos/README/">Processos</a>
-        <a href="/Reunioes/README/">Reuniões</a>
-        <a href="/Conhecimento/README/">Conhecimento</a>
-      </div>
-      
-      <div class="nav-tools">
-        <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
-        <button class="search-toggle" onclick="toggleSearch()">🔍</button>
-      </div>
-    </nav>
-  </header>
-
-  <!-- Sidebar Navigation -->
-  <aside class="sidebar" data-state="closed" aria-hidden="true">
-    <div class="sidebar-header">
-      <button class="sidebar-toggle" onclick="toggleSidebar()">
-        <span class="hamburger"></span>
-      </button>
-      <div class="sidebar-brand">
-        <a href="/" class="brand-link">🌱 Multisocios</a>
-      </div>
-    </div>
-    
-    <div class="sidebar-content">
-      <div class="sidebar-search">
-        <input type="search" placeholder="Buscar conteúdo..." class="search-input" id="sidebar-search">
-      </div>
-      
-      <div class="sidebar-tree">
-        
-        
-        <div class="tree-item" data-level="0">
-          <div class="tree-node">
-            <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
-              <span class="tree-icon">▶</span>
-            </button>
-            <a href="/" class="tree-link ">
-              <span class="tree-label">🏠 Home</span>
-            </a>
-          </div>
-          
-          
-        </div>
-        
-        <div class="tree-item" data-level="0">
-          <div class="tree-node">
-            <button class="tree-toggle" onclick="toggleTreeNode(this)" >
-              <span class="tree-icon">▶</span>
-            </button>
-            <a href="/dashboard-executivo/" class="tree-link ">
-              <span class="tree-label">📊 Dashboard Executivo</span>
-            </a>
-          </div>
-          
-          
-          <div class="tree-children" style="display: none;">
-            
-            <div class="tree-item" data-level="1">
-              <div class="tree-node">
-                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
-                  <span class="tree-icon">▶</span>
-                </button>
-                <a href="/dashboard-executivo/decisoes-estrategicas/" class="tree-link ">
-                  <span class="tree-label">🎯 Decisões Estratégicas</span>
-                </a>
-              </div>
-              
-              
-            </div>
-            
-            <div class="tree-item" data-level="1">
-              <div class="tree-node">
-                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
-                  <span class="tree-icon">▶</span>
-                </button>
-                <a href="/dashboard-executivo/dashboard-projetos-prazo/" class="tree-link ">
-                  <span class="tree-label">📅 Projetos por Prazo</span>
-                </a>
-              </div>
-              
-              
-            </div>
-            
-            <div class="tree-item" data-level="1">
-              <div class="tree-node">
-                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
-                  <span class="tree-icon">▶</span>
-                </button>
-                <a href="/dashboard-executivo/dashboard-capacidade-equipe/" class="tree-link ">
-                  <span class="tree-label">👥 Capacidade da Equipe</span>
-                </a>
-              </div>
-              
-              
-            </div>
-            
-          </div>
-          
-        </div>
-        
-        <div class="tree-item" data-level="0">
-          <div class="tree-node">
-            <button class="tree-toggle" onclick="toggleTreeNode(this)" >
-              <span class="tree-icon">▶</span>
-            </button>
-            <a href="/governanca/" class="tree-link ">
-              <span class="tree-label">🏛️ Governança</span>
-            </a>
-          </div>
-          
-          
-          <div class="tree-children" style="display: none;">
-            
-            <div class="tree-item" data-level="1">
-              <div class="tree-node">
-                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
-                  <span class="tree-icon">▶</span>
-                </button>
-                <a href="/governanca/acordo_socios_final/" class="tree-link ">
-                  <span class="tree-label">📜 Acordo de Sócios</span>
-                </a>
-              </div>
-              
-              
-            </div>
-            
-            <div class="tree-item" data-level="1">
-              <div class="tree-node">
-                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
-                  <span class="tree-icon">▶</span>
-                </button>
-                <a href="/governanca/compliance_log/" class="tree-link ">
-                  <span class="tree-label">⚖️ Compliance Log</span>
-                </a>
-              </div>
-              
-              
-            </div>
-            
-            <div class="tree-item" data-level="1">
-              <div class="tree-node">
-                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
-                  <span class="tree-icon">▶</span>
-                </button>
-                <a href="/governanca/etica_uso_ia/" class="tree-link ">
-                  <span class="tree-label">🤖 Ética no Uso de IA</span>
-                </a>
-              </div>
-              
-              
-            </div>
-            
-            <div class="tree-item" data-level="1">
-              <div class="tree-node">
-                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
-                  <span class="tree-icon">▶</span>
-                </button>
-                <a href="/governanca/faq_compliance/" class="tree-link ">
-                  <span class="tree-label">❓ FAQ Compliance</span>
-                </a>
-              </div>
-              
-              
-            </div>
-            
-            <div class="tree-item" data-level="1">
-              <div class="tree-node">
-                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
-                  <span class="tree-icon">▶</span>
-                </button>
-                <a href="/governanca/manual_treinamento_compliance/" class="tree-link ">
-                  <span class="tree-label">📚 Manual de Treinamento</span>
-                </a>
-              </div>
-              
-              
-            </div>
-            
-            <div class="tree-item" data-level="1">
-              <div class="tree-node">
-                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
-                  <span class="tree-icon">▶</span>
-                </button>
-                <a href="/governanca/playbook_comercial_v0/" class="tree-link ">
-                  <span class="tree-label">📈 Playbook Comercial</span>
-                </a>
-              </div>
-              
-              
-            </div>
-            
-          </div>
-          
-        </div>
-        
-        <div class="tree-item" data-level="0">
-          <div class="tree-node">
-            <button class="tree-toggle" onclick="toggleTreeNode(this)" >
-              <span class="tree-icon">▶</span>
-            </button>
-            <a href="/equipes/" class="tree-link ">
-              <span class="tree-label">👥 Equipes</span>
-            </a>
-          </div>
-          
-          
-          <div class="tree-children" style="display: none;">
-            
-            <div class="tree-item" data-level="1">
-              <div class="tree-node">
-                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
-                  <span class="tree-icon">▶</span>
-                </button>
-                <a href="/equipes/desenvolvimento/" class="tree-link ">
-                  <span class="tree-label">💻 Desenvolvimento</span>
-                </a>
-              </div>
-              
-              
-            </div>
-            
-            <div class="tree-item" data-level="1">
-              <div class="tree-node">
-                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
-                  <span class="tree-icon">▶</span>
-                </button>
-                <a href="/equipes/marketing/" class="tree-link ">
-                  <span class="tree-label">🎯 Marketing</span>
-                </a>
-              </div>
-              
-              
-            </div>
-            
-    
-
-... (Content truncated - file too large)
-```
-
----
-
-
-#### 📁 Directory: build\dist\projetos\curso-ia-inteligente
-
-##### 📄 index.html
-*Path: `build\dist\projetos\curso-ia-inteligente\index.html`*  
-*Size: 85.10 KB*
-
-```html
-<!DOCTYPE html>
-<html lang="pt-BR" class="theme-dark">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Curso IA Inteligente - Multisocios Empresarial</title>
-  <meta name="description" content="Sistema de Gestão de Conhecimento Multisocios" />
-  
-  <!-- CSS do tema Obsidian e customizações -->
-  <link rel="stylesheet" href="/styles/main.css" />
-  <link rel="stylesheet" href="/styles/sidebar.css" />
-  <link rel="stylesheet" href="/styles/projeto.css" />
-  
-  <!-- Favicon e meta tags para PWA -->
-  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
-  <meta name="theme-color" content="#1e1e1e" />
-</head>
-<body class="layout-projeto">
-  
-  <header class="site-header">
-    <nav class="main-navigation">
-      <div class="nav-brand">
-        <button class="mobile-sidebar-toggle" onclick="toggleSidebar()">
-          <span class="hamburger"></span>
-        </button>
-        <a href="/" class="brand-link">
-          🌱 Multisocios Empresarial
-        </a>
-      </div>
-      
-      <div class="nav-links">
-        <a href="/">Dashboard</a>
-        <a href="/Governanca/README/">Governança</a>
-        <a href="/Projetos/README/" class="active">Projetos</a>
-        <a href="/Equipes/README/">Equipes</a>
-        <a href="/Processos/README/">Processos</a>
-        <a href="/Reunioes/README/">Reuniões</a>
-        <a href="/Conhecimento/README/">Conhecimento</a>
-      </div>
-      
-      <div class="nav-tools">
-        <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
-        <button class="search-toggle" onclick="toggleSearch()">🔍</button>
-      </div>
-    </nav>
-  </header>
-
-  <!-- Sidebar Navigation -->
-  <aside class="sidebar" data-state="closed" aria-hidden="true">
-    <div class="sidebar-header">
-      <button class="sidebar-toggle" onclick="toggleSidebar()">
-        <span class="hamburger"></span>
-      </button>
-      <div class="sidebar-brand">
-        <a href="/" class="brand-link">🌱 Multisocios</a>
-      </div>
-    </div>
-    
-    <div class="sidebar-content">
-      <div class="sidebar-search">
-        <input type="search" placeholder="Buscar conteúdo..." class="search-input" id="sidebar-search">
-      </div>
-      
-      <div class="sidebar-tree">
-        
-        
-        <div class="tree-item" data-level="0">
-          <div class="tree-node">
-            <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
-              <span class="tree-icon">▶</span>
-            </button>
-            <a href="/" class="tree-link ">
-              <span class="tree-label">🏠 Home</span>
-            </a>
-          </div>
-          
-          
-        </div>
-        
-        <div class="tree-item" data-level="0">
-          <div class="tree-node">
-            <button class="tree-toggle" onclick="toggleTreeNode(this)" >
-              <span class="tree-icon">▶</span>
-            </button>
-            <a href="/dashboard-executivo/" class="tree-link ">
-              <span class="tree-label">📊 Dashboard Executivo</span>
-            </a>
-          </div>
-          
-          
-          <div class="tree-children" style="display: none;">
-            
-            <div class="tree-item" data-level="1">
-              <div class="tree-node">
-                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
-                  <span class="tree-icon">▶</span>
-                </button>
-                <a href="/dashboard-executivo/decisoes-estrategicas/" class="tree-link ">
-                  <span class="tree-label">🎯 Decisões Estratégicas</span>
-                </a>
-              </div>
-              
-              
-            </div>
-            
-            <div class="tree-item" data-level="1">
-              <div class="tree-node">
-                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
-                  <span class="tree-icon">▶</span>
-                </button>
-                <a href="/dashboard-executivo/dashboard-projetos-prazo/" class="tree-link ">
-                  <span class="tree-label">📅 Projetos por Prazo</span>
-                </a>
-              </div>
-              
-              
-            </div>
-            
-            <div class="tree-item" data-level="1">
-              <div class="tree-node">
-                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
-                  <span class="tree-icon">▶</span>
-                </button>
-                <a href="/dashboard-executivo/dashboard-capacidade-equipe/" class="tree-link ">
-                  <span class="tree-label">👥 Capacidade da Equipe</span>
-                </a>
-              </div>
-              
-              
-            </div>
-            
-          </div>
-          
-        </div>
-        
-        <div class="tree-item" data-level="0">
-          <div class="tree-node">
-            <button class="tree-toggle" onclick="toggleTreeNode(this)" >
-              <span class="tree-icon">▶</span>
-            </button>
-            <a href="/governanca/" class="tree-link ">
-              <span class="tree-label">🏛️ Governança</span>
-            </a>
-          </div>
-          
-          
-          <div class="tree-children" style="display: none;">
-            
-            <div class="tree-item" data-level="1">
-              <div class="tree-node">
-                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
-                  <span class="tree-icon">▶</span>
-                </button>
-                <a href="/governanca/acordo_socios_final/" class="tree-link ">
-                  <span class="tree-label">📜 Acordo de Sócios</span>
-                </a>
-              </div>
-              
-              
-            </div>
-            
-            <div class="tree-item" data-level="1">
-              <div class="tree-node">
-                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
-                  <span class="tree-icon">▶</span>
-                </button>
-                <a href="/governanca/compliance_log/" class="tree-link ">
-                  <span class="tree-label">⚖️ Compliance Log</span>
-                </a>
-              </div>
-              
-              
-            </div>
-            
-            <div class="tree-item" data-level="1">
-              <div class="tree-node">
-                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
-                  <span class="tree-icon">▶</span>
-                </button>
-                <a href="/governanca/etica_uso_ia/" class="tree-link ">
-                  <span class="tree-label">🤖 Ética no Uso de IA</span>
-                </a>
-              </div>
-              
-              
-            </div>
-            
-            <div class="tree-item" data-level="1">
-              <div class="tree-node">
-                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
-                  <span class="tree-icon">▶</span>
-                </button>
-                <a href="/governanca/faq_compliance/" class="tree-link ">
-                  <span class="tree-label">❓ FAQ Compliance</span>
-                </a>
-              </div>
-              
-              
-            </div>
-            
-            <div class="tree-item" data-level="1">
-              <div class="tree-node">
-                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
-                  <span class="tree-icon">▶</span>
-                </button>
-                <a href="/governanca/manual_treinamento_compliance/" class="tree-link ">
-                  <span class="tree-label">📚 Manual de Treinamento</span>
-                </a>
-              </div>
-              
-              
-            </div>
-            
-            <div class="tree-item" data-level="1">
-              <div class="tree-node">
-                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
-                  <span class="tree-icon">▶</span>
-                </button>
-                <a href="/governanca/playbook_comercial_v0/" class="tree-link ">
-                  <span class="tree-label">📈 Playbook Comercial</span>
-                </a>
-              </div>
-              
-              
-            </div>
-            
-          </div>
-          
-        </div>
-        
-        <div class="tree-item" data-level="0">
-          <div class="tree-node">
-            <button class="tree-toggle" onclick="toggleTreeNode(this)" >
-              <span class="tree-icon">▶</span>
-            </button>
-            <a href="/equipes/" class="tree-link ">
-              <span class="tree-label">👥 Equipes</span>
-            </a>
-          </div>
-          
-          
-          <div class="tree-children" style="display: none;">
-            
-            <div class="tree-item" data-level="1">
-              <div class="tree-node">
-                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
-                  <span class="tree-icon">▶</span>
-                </button>
-                <a href="/equipes/desenvolvimento/" class="tree-link ">
-                  <span class="tree-label">💻 Desenvolvimento</span>
-                </a>
-              </div>
-              
-              
-            </div>
-            
-            <div class="tree-item" data-level="1">
-              <div class="tree-node">
-                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
-                  <span class="tree-icon">▶</span>
-                </button>
-                <a href="/equipes/marketing/" class="tree-link ">
-                  <span class="tree-label">🎯 Marketing</span>
-                </a>
-              </div>
-              
-              
-            </div>
-    
-
-... (Content truncated - file too large)
-```
-
----
-
-
-#### 📁 Directory: build\dist\projetos\dev-whatsbot-academia
-
-##### 📄 index.html
-*Path: `build\dist\projetos\dev-whatsbot-academia\index.html`*  
-*Size: 82.98 KB*
-
-```html
-<!DOCTYPE html>
-<html lang="pt-BR" class="theme-dark">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dev WhatsBot Academia - Multisocios Empresarial</title>
-  <meta name="description" content="Sistema de Gestão de Conhecimento Multisocios" />
-  
-  <!-- CSS do tema Obsidian e customizações -->
-  <link rel="stylesheet" href="/styles/main.css" />
-  <link rel="stylesheet" href="/styles/sidebar.css" />
-  <link rel="stylesheet" href="/styles/projeto.css" />
-  
-  <!-- Favicon e meta tags para PWA -->
-  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
-  <meta name="theme-color" content="#1e1e1e" />
-</head>
-<body class="layout-projeto">
-  
-  <header class="site-header">
-    <nav class="main-navigation">
-      <div class="nav-brand">
-        <button class="mobile-sidebar-toggle" onclick="toggleSidebar()">
-          <span class="hamburger"></span>
-        </button>
-        <a href="/" class="brand-link">
-          🌱 Multisocios Empresarial
-        </a>
-      </div>
-      
-      <div class="nav-links">
-        <a href="/">Dashboard</a>
-        <a href="/Governanca/README/">Governança</a>
-        <a href="/Projetos/README/" class="active">Projetos</a>
-        <a href="/Equipes/README/">Equipes</a>
-        <a href="/Processos/README/">Processos</a>
-        <a href="/Reunioes/README/">Reuniões</a>
-        <a href="/Conhecimento/README/">Conhecimento</a>
-      </div>
-      
-      <div class="nav-tools">
-        <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
-        <button class="search-toggle" onclick="toggleSearch()">🔍</button>
-      </div>
-    </nav>
-  </header>
-
-  <!-- Sidebar Navigation -->
-  <aside class="sidebar" data-state="closed" aria-hidden="true">
-    <div class="sidebar-header">
-      <button class="sidebar-toggle" onclick="toggleSidebar()">
-        <span class="hamburger"></span>
-      </button>
-      <div class="sidebar-brand">
-        <a href="/" class="brand-link">🌱 Multisocios</a>
-      </div>
-    </div>
-    
-    <div class="sidebar-content">
-      <div class="sidebar-search">
-        <input type="search" placeholder="Buscar conteúdo..." class="search-input" id="sidebar-search">
-      </div>
-      
-      <div class="sidebar-tree">
-        
-        
-        <div class="tree-item" data-level="0">
-          <div class="tree-node">
-            <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
-              <span class="tree-icon">▶</span>
-            </button>
-            <a href="/" class="tree-link ">
-              <span class="tree-label">🏠 Home</span>
-            </a>
-          </div>
-          
-          
-        </div>
-        
-        <div class="tree-item" data-level="0">
-          <div class="tree-node">
-            <button class="tree-toggle" onclick="toggleTreeNode(this)" >
-              <span class="tree-icon">▶</span>
-            </button>
-            <a href="/dashboard-executivo/" class="tree-link ">
-              <span class="tree-label">📊 Dashboard Executivo</span>
-            </a>
-          </div>
-          
-          
-          <div class="tree-children" style="display: none;">
-            
-            <div class="tree-item" data-level="1">
-              <div class="tree-node">
-                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
-                  <span class="tree-icon">▶</span>
-                </button>
-                <a href="/dashboard-executivo/decisoes-estrategicas/" class="tree-link ">
-                  <span class="tree-label">🎯 Decisões Estratégicas</span>
-                </a>
-              </div>
-              
-              
-            </div>
-            
-            <div class="tree-item" data-level="1">
-              <div class="tree-node">
-                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
-                  <span class="tree-icon">▶</span>
-                </button>
-                <a href="/dashboard-executivo/dashboard-projetos-prazo/" class="tree-link ">
-                  <span class="tree-label">📅 Projetos por Prazo</span>
-                </a>
-              </div>
-              
-              
-            </div>
-            
-            <div class="tree-item" data-level="1">
-              <div class="tree-node">
-                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
-                  <span class="tree-icon">▶</span>
-                </button>
-                <a href="/dashboard-executivo/dashboard-capacidade-equipe/" class="tree-link ">
-                  <span class="tree-label">👥 Capacidade da Equipe</span>
-                </a>
-              </div>
-              
-              
-            </div>
-            
-          </div>
-          
-        </div>
-        
-        <div class="tree-item" data-level="0">
-          <div class="tree-node">
-            <button class="tree-toggle" onclick="toggleTreeNode(this)" >
-              <span class="tree-icon">▶</span>
-            </button>
-            <a href="/governanca/" class="tree-link ">
-              <span class="tree-label">🏛️ Governança</span>
-            </a>
-          </div>
-          
-          
-          <div class="tree-children" style="display: none;">
-            
-            <div class="tree-item" data-level="1">
-              <div class="tree-node">
-                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
-                  <span class="tree-icon">▶</span>
-                </button>
-                <a href="/governanca/acordo_socios_final/" class="tree-link ">
-                  <span class="tree-label">📜 Acordo de Sócios</span>
-                </a>
-              </div>
-              
-              
-            </div>
-            
-            <div class="tree-item" data-level="1">
-              <div class="tree-node">
-                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
-                  <span class="tree-icon">▶</span>
-                </button>
-                <a href="/governanca/compliance_log/" class="tree-link ">
-                  <span class="tree-label">⚖️ Compliance Log</span>
-                </a>
-              </div>
-              
-              
-            </div>
-            
-            <div class="tree-item" data-level="1">
-              <div class="tree-node">
-                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
-                  <span class="tree-icon">▶</span>
-                </button>
-                <a href="/governanca/etica_uso_ia/" class="tree-link ">
-                  <span class="tree-label">🤖 Ética no Uso de IA</span>
-                </a>
-              </div>
-              
-              
-            </div>
-            
-            <div class="tree-item" data-level="1">
-              <div class="tree-node">
-                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
-                  <span class="tree-icon">▶</span>
-                </button>
-                <a href="/governanca/faq_compliance/" class="tree-link ">
-                  <span class="tree-label">❓ FAQ Compliance</span>
-                </a>
-              </div>
-              
-              
-            </div>
-            
-            <div class="tree-item" data-level="1">
-              <div class="tree-node">
-                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
-                  <span class="tree-icon">▶</span>
-                </button>
-                <a href="/governanca/manual_treinamento_compliance/" class="tree-link ">
-                  <span class="tree-label">📚 Manual de Treinamento</span>
-                </a>
-              </div>
-              
-              
-            </div>
-            
-            <div class="tree-item" data-level="1">
-              <div class="tree-node">
-                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
-                  <span class="tree-icon">▶</span>
-                </button>
-                <a href="/governanca/playbook_comercial_v0/" class="tree-link ">
-                  <span class="tree-label">📈 Playbook Comercial</span>
-                </a>
-              </div>
-              
-              
-            </div>
-            
-          </div>
-          
-        </div>
-        
-        <div class="tree-item" data-level="0">
-          <div class="tree-node">
-            <button class="tree-toggle" onclick="toggleTreeNode(this)" >
-              <span class="tree-icon">▶</span>
-            </button>
-            <a href="/equipes/" class="tree-link ">
-              <span class="tree-label">👥 Equipes</span>
-            </a>
-          </div>
-          
-          
-          <div class="tree-children" style="display: none;">
-            
-            <div class="tree-item" data-level="1">
-              <div class="tree-node">
-                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
-                  <span class="tree-icon">▶</span>
-                </button>
-                <a href="/equipes/desenvolvimento/" class="tree-link ">
-                  <span class="tree-label">💻 Desenvolvimento</span>
-                </a>
-              </div>
-              
-              
-            </div>
-            
-            <div class="tree-item" data-level="1">
-              <div class="tree-node">
-                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
-                  <span class="tree-icon">▶</span>
-                </button>
-                <a href="/equipes/marketing/" class="tree-link ">
-                  <span class="tree-label">🎯 Marketing</span>
-                </a>
-              </div>
-              
-              
-            </div>
-   
-
-... (Content truncated - file too large)
-```
-
----
-
-
-#### 📁 Directory: build\dist\projetos\exemplo-intake-preenchido
-
-##### 📄 index.html
-*Path: `build\dist\projetos\exemplo-intake-preenchido\index.html`*  
-*Size: 71.04 KB*
-
-```html
-<!DOCTYPE html>
-<html lang="pt-BR" class="theme-dark">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Exemplo Intake Preenchido - Multisocios Empresarial</title>
-  <meta name="description" content="Sistema de Gestão de Conhecimento Multisocios" />
-  
-  <!-- CSS do tema Obsidian e customizações -->
-  <link rel="stylesheet" href="/styles/main.css" />
-  <link rel="stylesheet" href="/styles/sidebar.css" />
-  <link rel="stylesheet" href="/styles/projeto.css" />
-  
-  <!-- Favicon e meta tags para PWA -->
-  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
-  <meta name="theme-color" content="#1e1e1e" />
-</head>
-<body class="layout-projeto">
-  
-  <header class="site-header">
-    <nav class="main-navigation">
-      <div class="nav-brand">
-        <button class="mobile-sidebar-toggle" onclick="toggleSidebar()">
-          <span class="hamburger"></span>
-        </button>
-        <a href="/" class="brand-link">
-          🌱 Multisocios Empresarial
-        </a>
-      </div>
-      
-      <div class="nav-links">
-        <a href="/">Dashboard</a>
-        <a href="/Governanca/README/">Governança</a>
-        <a href="/Projetos/README/" class="active">Projetos</a>
-        <a href="/Equipes/README/">Equipes</a>
-        <a href="/Processos/README/">Processos</a>
-        <a href="/Reunioes/README/">Reuniões</a>
-        <a href="/Conhecimento/README/">Conhecimento</a>
-      </div>
-      
-      <div class="nav-tools">
-        <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
-        <button class="search-toggle" onclick="toggleSearch()">🔍</button>
-      </div>
-    </nav>
-  </header>
-
-  <!-- Sidebar Navigation -->
-  <aside class="sidebar" data-state="closed" aria-hidden="true">
-    <div class="sidebar-header">
-      <button class="sidebar-toggle" onclick="toggleSidebar()">
-        <span class="hamburger"></span>
-      </button>
-      <div class="sidebar-brand">
-        <a href="/" class="brand-link">🌱 Multisocios</a>
-      </div>
-    </div>
-    
-    <div class="sidebar-content">
-      <div class="sidebar-search">
-        <input type="search" placeholder="Buscar conteúdo..." class="search-input" id="sidebar-search">
-      </div>
-      
-      <div class="sidebar-tree">
-        
-        
-        <div class="tree-item" data-level="0">
-          <div class="tree-node">
-            <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
-              <span class="tree-icon">▶</span>
-            </button>
-            <a href="/" class="tree-link ">
-              <span class="tree-label">🏠 Home</span>
-            </a>
-          </div>
-          
-          
-        </div>
-        
-        <div class="tree-item" data-level="0">
-          <div class="tree-node">
-            <button class="tree-toggle" onclick="toggleTreeNode(this)" >
-              <span class="tree-icon">▶</span>
-            </button>
-            <a href="/dashboard-executivo/" class="tree-link ">
-              <span class="tree-label">📊 Dashboard Executivo</span>
-            </a>
-          </div>
-          
-          
-          <div class="tree-children" style="display: none;">
-            
-            <div class="tree-item" data-level="1">
-              <div class="tree-node">
-                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
-                  <span class="tree-icon">▶</span>
-                </button>
-                <a href="/dashboard-executivo/decisoes-estrategicas/" class="tree-link ">
-                  <span class="tree-label">🎯 Decisões Estratégicas</span>
-                </a>
-              </div>
-              
-              
-            </div>
-            
-            <div class="tree-item" data-level="1">
-              <div class="tree-node">
-                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
-                  <span class="tree-icon">▶</span>
-                </button>
-                <a href="/dashboard-executivo/dashboard-projetos-prazo/" class="tree-link ">
-                  <span class="tree-label">📅 Projetos por Prazo</span>
-                </a>
-              </div>
-              
-              
-            </div>
-            
-            <div class="tree-item" data-level="1">
-              <div class="tree-node">
-                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
-                  <span class="tree-icon">▶</span>
-                </button>
-                <a href="/dashboard-executivo/dashboard-capacidade-equipe/" class="tree-link ">
-                  <span class="tree-label">👥 Capacidade da Equipe</span>
-                </a>
-              </div>
-              
-              
-            </div>
-            
-          </div>
-          
-        </div>
-        
-        <div class="tree-item" data-level="0">
-          <div class="tree-node">
-            <button class="tree-toggle" onclick="toggleTreeNode(this)" >
-              <span class="tree-icon">▶</span>
-            </button>
-            <a href="/governanca/" class="tree-link ">
-              <span class="tree-label">🏛️ Governança</span>
-            </a>
-          </div>
-          
-          
-          <div class="tree-children" style="display: none;">
-            
-            <div class="tree-item" data-level="1">
-              <div class="tree-node">
-                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
-                  <span class="tree-icon">▶</span>
-                </button>
-                <a href="/governanca/acordo_socios_final/" class="tree-link ">
-                  <span class="tree-label">📜 Acordo de Sócios</span>
-                </a>
-              </div>
-              
-              
-            </div>
-            
-            <div class="tree-item" data-level="1">
-              <div class="tree-node">
-                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
-                  <span class="tree-icon">▶</span>
-                </button>
-                <a href="/governanca/compliance_log/" class="tree-link ">
-                  <span class="tree-label">⚖️ Compliance Log</span>
-                </a>
-              </div>
-              
-              
-            </div>
-            
-            <div class="tree-item" data-level="1">
-              <div class="tree-node">
-                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
-                  <span class="tree-icon">▶</span>
-                </button>
-                <a href="/governanca/etica_uso_ia/" class="tree-link ">
-                  <span class="tree-label">🤖 Ética no Uso de IA</span>
-                </a>
-              </div>
-              
-              
-            </div>
-            
-            <div class="tree-item" data-level="1">
-              <div class="tree-node">
-                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
-                  <span class="tree-icon">▶</span>
-                </button>
-                <a href="/governanca/faq_compliance/" class="tree-link ">
-                  <span class="tree-label">❓ FAQ Compliance</span>
-                </a>
-              </div>
-              
-              
-            </div>
-            
-            <div class="tree-item" data-level="1">
-              <div class="tree-node">
-                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
-                  <span class="tree-icon">▶</span>
-                </button>
-                <a href="/governanca/manual_treinamento_compliance/" class="tree-link ">
-                  <span class="tree-label">📚 Manual de Treinamento</span>
-                </a>
-              </div>
-              
-              
-            </div>
-            
-            <div class="tree-item" data-level="1">
-              <div class="tree-node">
-                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
-                  <span class="tree-icon">▶</span>
-                </button>
-                <a href="/governanca/playbook_comercial_v0/" class="tree-link ">
-                  <span class="tree-label">📈 Playbook Comercial</span>
-                </a>
-              </div>
-              
-              
-            </div>
-            
-          </div>
-          
-        </div>
-        
-        <div class="tree-item" data-level="0">
-          <div class="tree-node">
-            <button class="tree-toggle" onclick="toggleTreeNode(this)" >
-              <span class="tree-icon">▶</span>
-            </button>
-            <a href="/equipes/" class="tree-link ">
-              <span class="tree-label">👥 Equipes</span>
-            </a>
-          </div>
-          
-          
-          <div class="tree-children" style="display: none;">
-            
-            <div class="tree-item" data-level="1">
-              <div class="tree-node">
-                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
-                  <span class="tree-icon">▶</span>
-                </button>
-                <a href="/equipes/desenvolvimento/" class="tree-link ">
-                  <span class="tree-label">💻 Desenvolvimento</span>
-                </a>
-              </div>
-              
-              
-            </div>
-            
-            <div class="tree-item" data-level="1">
-              <div class="tree-node">
-                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
-                  <span class="tree-icon">▶</span>
-                </button>
-                <a href="/equipes/marketing/" class="tree-link ">
-                  <span class="tree-label">🎯 Marketing</span>
-                </a>
-              </div>
-              
-              
-            </div>
-
-... (Content truncated - file too large)
-```
-
----
-
-
-#### 📁 Directory: build\dist\projetos\exemplo-minimalista
-
-##### 📄 index.html
-*Path: `build\dist\projetos\exemplo-minimalista\index.html`*  
-*Size: 71.02 KB*
-
-```html
-<!DOCTYPE html>
-<html lang="pt-BR" class="theme-dark">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Exemplo Minimalista - Multisocios Empresarial</title>
-  <meta name="description" content="Sistema de Gestão de Conhecimento Multisocios" />
-  
-  <!-- CSS do tema Obsidian e customizações -->
-  <link rel="stylesheet" href="/styles/main.css" />
-  <link rel="stylesheet" href="/styles/sidebar.css" />
-  <link rel="stylesheet" href="/styles/projeto.css" />
-  
-  <!-- Favicon e meta tags para PWA -->
-  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
-  <meta name="theme-color" content="#1e1e1e" />
-</head>
-<body class="layout-projeto">
-  
-  <header class="site-header">
-    <nav class="main-navigation">
-      <div class="nav-brand">
-        <button class="mobile-sidebar-toggle" onclick="toggleSidebar()">
-          <span class="hamburger"></span>
-        </button>
-        <a href="/" class="brand-link">
-          🌱 Multisocios Empresarial
-        </a>
-      </div>
-      
-      <div class="nav-links">
-        <a href="/">Dashboard</a>
-        <a href="/Governanca/README/">Governança</a>
-        <a href="/Projetos/README/" class="active">Projetos</a>
-        <a href="/Equipes/README/">Equipes</a>
-        <a href="/Processos/README/">Processos</a>
-        <a href="/Reunioes/README/">Reuniões</a>
-        <a href="/Conhecimento/README/">Conhecimento</a>
+        <a href="/1-Governanca/README/">Governança</a>
+        <a href="/4-Projetos/README/" class="active">Projetos</a>
+        <a href="/2-Equipes/README/">Equipes</a>
+        <a href="/5-Processos/README/">Processos</a>
+        <a href="/6-Reunioes/README/">Reuniões</a>
+        <a href="/7-Conhecimento/README/">Conhecimento</a>
       </div>
       
       <div class="nav-tools">
@@ -49885,11 +48447,1139 @@ SORT status, priority DESC
 ---
 
 
+#### 📁 Directory: build\dist\projetos\curso-ia-inteligente
+
+##### 📄 index.html
+*Path: `build\dist\projetos\curso-ia-inteligente\index.html`*  
+*Size: 85.11 KB*
+
+```html
+<!DOCTYPE html>
+<html lang="pt-BR" class="theme-dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Curso IA Inteligente - Multisocios Empresarial</title>
+  <meta name="description" content="Sistema de Gestão de Conhecimento Multisocios" />
+  
+  <!-- CSS do tema Obsidian e customizações -->
+  <link rel="stylesheet" href="/styles/main.css" />
+  <link rel="stylesheet" href="/styles/sidebar.css" />
+  <link rel="stylesheet" href="/styles/projeto.css" />
+  
+  <!-- Favicon e meta tags para PWA -->
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+  <meta name="theme-color" content="#1e1e1e" />
+</head>
+<body class="layout-projeto">
+  
+  <header class="site-header">
+    <nav class="main-navigation">
+      <div class="nav-brand">
+        <button class="mobile-sidebar-toggle" onclick="toggleSidebar()">
+          <span class="hamburger"></span>
+        </button>
+        <a href="/" class="brand-link">
+          🌱 Multisocios Empresarial
+        </a>
+      </div>
+      
+      <div class="nav-links">
+        <a href="/">Dashboard</a>
+        <a href="/1-Governanca/README/">Governança</a>
+        <a href="/4-Projetos/README/" class="active">Projetos</a>
+        <a href="/2-Equipes/README/">Equipes</a>
+        <a href="/5-Processos/README/">Processos</a>
+        <a href="/6-Reunioes/README/">Reuniões</a>
+        <a href="/7-Conhecimento/README/">Conhecimento</a>
+      </div>
+      
+      <div class="nav-tools">
+        <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
+        <button class="search-toggle" onclick="toggleSearch()">🔍</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Sidebar Navigation -->
+  <aside class="sidebar" data-state="closed" aria-hidden="true">
+    <div class="sidebar-header">
+      <button class="sidebar-toggle" onclick="toggleSidebar()">
+        <span class="hamburger"></span>
+      </button>
+      <div class="sidebar-brand">
+        <a href="/" class="brand-link">🌱 Multisocios</a>
+      </div>
+    </div>
+    
+    <div class="sidebar-content">
+      <div class="sidebar-search">
+        <input type="search" placeholder="Buscar conteúdo..." class="search-input" id="sidebar-search">
+      </div>
+      
+      <div class="sidebar-tree">
+        
+        
+        <div class="tree-item" data-level="0">
+          <div class="tree-node">
+            <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+              <span class="tree-icon">▶</span>
+            </button>
+            <a href="/" class="tree-link ">
+              <span class="tree-label">🏠 Home</span>
+            </a>
+          </div>
+          
+          
+        </div>
+        
+        <div class="tree-item" data-level="0">
+          <div class="tree-node">
+            <button class="tree-toggle" onclick="toggleTreeNode(this)" >
+              <span class="tree-icon">▶</span>
+            </button>
+            <a href="/dashboard-executivo/" class="tree-link ">
+              <span class="tree-label">📊 Dashboard Executivo</span>
+            </a>
+          </div>
+          
+          
+          <div class="tree-children" style="display: none;">
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/dashboard-executivo/decisoes-estrategicas/" class="tree-link ">
+                  <span class="tree-label">🎯 Decisões Estratégicas</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/dashboard-executivo/dashboard-projetos-prazo/" class="tree-link ">
+                  <span class="tree-label">📅 Projetos por Prazo</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/dashboard-executivo/dashboard-capacidade-equipe/" class="tree-link ">
+                  <span class="tree-label">👥 Capacidade da Equipe</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+          </div>
+          
+        </div>
+        
+        <div class="tree-item" data-level="0">
+          <div class="tree-node">
+            <button class="tree-toggle" onclick="toggleTreeNode(this)" >
+              <span class="tree-icon">▶</span>
+            </button>
+            <a href="/governanca/" class="tree-link ">
+              <span class="tree-label">🏛️ Governança</span>
+            </a>
+          </div>
+          
+          
+          <div class="tree-children" style="display: none;">
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/governanca/acordo_socios_final/" class="tree-link ">
+                  <span class="tree-label">📜 Acordo de Sócios</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/governanca/compliance_log/" class="tree-link ">
+                  <span class="tree-label">⚖️ Compliance Log</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/governanca/etica_uso_ia/" class="tree-link ">
+                  <span class="tree-label">🤖 Ética no Uso de IA</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/governanca/faq_compliance/" class="tree-link ">
+                  <span class="tree-label">❓ FAQ Compliance</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/governanca/manual_treinamento_compliance/" class="tree-link ">
+                  <span class="tree-label">📚 Manual de Treinamento</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/governanca/playbook_comercial_v0/" class="tree-link ">
+                  <span class="tree-label">📈 Playbook Comercial</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+          </div>
+          
+        </div>
+        
+        <div class="tree-item" data-level="0">
+          <div class="tree-node">
+            <button class="tree-toggle" onclick="toggleTreeNode(this)" >
+              <span class="tree-icon">▶</span>
+            </button>
+            <a href="/equipes/" class="tree-link ">
+              <span class="tree-label">👥 Equipes</span>
+            </a>
+          </div>
+          
+          
+          <div class="tree-children" style="display: none;">
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/equipes/desenvolvimento/" class="tree-link ">
+                  <span class="tree-label">💻 Desenvolvimento</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/equipes/marketing/" class="tree-link ">
+                  <span class="tree-label">🎯 Marketing</span>
+                </a>
+              </div>
+              
+              
+           
+
+... (Content truncated - file too large)
+```
+
+---
+
+
+#### 📁 Directory: build\dist\projetos\dev-whatsbot-academia
+
+##### 📄 index.html
+*Path: `build\dist\projetos\dev-whatsbot-academia\index.html`*  
+*Size: 82.99 KB*
+
+```html
+<!DOCTYPE html>
+<html lang="pt-BR" class="theme-dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dev WhatsBot Academia - Multisocios Empresarial</title>
+  <meta name="description" content="Sistema de Gestão de Conhecimento Multisocios" />
+  
+  <!-- CSS do tema Obsidian e customizações -->
+  <link rel="stylesheet" href="/styles/main.css" />
+  <link rel="stylesheet" href="/styles/sidebar.css" />
+  <link rel="stylesheet" href="/styles/projeto.css" />
+  
+  <!-- Favicon e meta tags para PWA -->
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+  <meta name="theme-color" content="#1e1e1e" />
+</head>
+<body class="layout-projeto">
+  
+  <header class="site-header">
+    <nav class="main-navigation">
+      <div class="nav-brand">
+        <button class="mobile-sidebar-toggle" onclick="toggleSidebar()">
+          <span class="hamburger"></span>
+        </button>
+        <a href="/" class="brand-link">
+          🌱 Multisocios Empresarial
+        </a>
+      </div>
+      
+      <div class="nav-links">
+        <a href="/">Dashboard</a>
+        <a href="/1-Governanca/README/">Governança</a>
+        <a href="/4-Projetos/README/" class="active">Projetos</a>
+        <a href="/2-Equipes/README/">Equipes</a>
+        <a href="/5-Processos/README/">Processos</a>
+        <a href="/6-Reunioes/README/">Reuniões</a>
+        <a href="/7-Conhecimento/README/">Conhecimento</a>
+      </div>
+      
+      <div class="nav-tools">
+        <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
+        <button class="search-toggle" onclick="toggleSearch()">🔍</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Sidebar Navigation -->
+  <aside class="sidebar" data-state="closed" aria-hidden="true">
+    <div class="sidebar-header">
+      <button class="sidebar-toggle" onclick="toggleSidebar()">
+        <span class="hamburger"></span>
+      </button>
+      <div class="sidebar-brand">
+        <a href="/" class="brand-link">🌱 Multisocios</a>
+      </div>
+    </div>
+    
+    <div class="sidebar-content">
+      <div class="sidebar-search">
+        <input type="search" placeholder="Buscar conteúdo..." class="search-input" id="sidebar-search">
+      </div>
+      
+      <div class="sidebar-tree">
+        
+        
+        <div class="tree-item" data-level="0">
+          <div class="tree-node">
+            <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+              <span class="tree-icon">▶</span>
+            </button>
+            <a href="/" class="tree-link ">
+              <span class="tree-label">🏠 Home</span>
+            </a>
+          </div>
+          
+          
+        </div>
+        
+        <div class="tree-item" data-level="0">
+          <div class="tree-node">
+            <button class="tree-toggle" onclick="toggleTreeNode(this)" >
+              <span class="tree-icon">▶</span>
+            </button>
+            <a href="/dashboard-executivo/" class="tree-link ">
+              <span class="tree-label">📊 Dashboard Executivo</span>
+            </a>
+          </div>
+          
+          
+          <div class="tree-children" style="display: none;">
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/dashboard-executivo/decisoes-estrategicas/" class="tree-link ">
+                  <span class="tree-label">🎯 Decisões Estratégicas</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/dashboard-executivo/dashboard-projetos-prazo/" class="tree-link ">
+                  <span class="tree-label">📅 Projetos por Prazo</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/dashboard-executivo/dashboard-capacidade-equipe/" class="tree-link ">
+                  <span class="tree-label">👥 Capacidade da Equipe</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+          </div>
+          
+        </div>
+        
+        <div class="tree-item" data-level="0">
+          <div class="tree-node">
+            <button class="tree-toggle" onclick="toggleTreeNode(this)" >
+              <span class="tree-icon">▶</span>
+            </button>
+            <a href="/governanca/" class="tree-link ">
+              <span class="tree-label">🏛️ Governança</span>
+            </a>
+          </div>
+          
+          
+          <div class="tree-children" style="display: none;">
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/governanca/acordo_socios_final/" class="tree-link ">
+                  <span class="tree-label">📜 Acordo de Sócios</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/governanca/compliance_log/" class="tree-link ">
+                  <span class="tree-label">⚖️ Compliance Log</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/governanca/etica_uso_ia/" class="tree-link ">
+                  <span class="tree-label">🤖 Ética no Uso de IA</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/governanca/faq_compliance/" class="tree-link ">
+                  <span class="tree-label">❓ FAQ Compliance</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/governanca/manual_treinamento_compliance/" class="tree-link ">
+                  <span class="tree-label">📚 Manual de Treinamento</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/governanca/playbook_comercial_v0/" class="tree-link ">
+                  <span class="tree-label">📈 Playbook Comercial</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+          </div>
+          
+        </div>
+        
+        <div class="tree-item" data-level="0">
+          <div class="tree-node">
+            <button class="tree-toggle" onclick="toggleTreeNode(this)" >
+              <span class="tree-icon">▶</span>
+            </button>
+            <a href="/equipes/" class="tree-link ">
+              <span class="tree-label">👥 Equipes</span>
+            </a>
+          </div>
+          
+          
+          <div class="tree-children" style="display: none;">
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/equipes/desenvolvimento/" class="tree-link ">
+                  <span class="tree-label">💻 Desenvolvimento</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/equipes/marketing/" class="tree-link ">
+                  <span class="tree-label">🎯 Marketing</span>
+                </a>
+              </div>
+              
+              
+          
+
+... (Content truncated - file too large)
+```
+
+---
+
+
+#### 📁 Directory: build\dist\projetos\exemplo-intake-preenchido
+
+##### 📄 index.html
+*Path: `build\dist\projetos\exemplo-intake-preenchido\index.html`*  
+*Size: 71.05 KB*
+
+```html
+<!DOCTYPE html>
+<html lang="pt-BR" class="theme-dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exemplo Intake Preenchido - Multisocios Empresarial</title>
+  <meta name="description" content="Sistema de Gestão de Conhecimento Multisocios" />
+  
+  <!-- CSS do tema Obsidian e customizações -->
+  <link rel="stylesheet" href="/styles/main.css" />
+  <link rel="stylesheet" href="/styles/sidebar.css" />
+  <link rel="stylesheet" href="/styles/projeto.css" />
+  
+  <!-- Favicon e meta tags para PWA -->
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+  <meta name="theme-color" content="#1e1e1e" />
+</head>
+<body class="layout-projeto">
+  
+  <header class="site-header">
+    <nav class="main-navigation">
+      <div class="nav-brand">
+        <button class="mobile-sidebar-toggle" onclick="toggleSidebar()">
+          <span class="hamburger"></span>
+        </button>
+        <a href="/" class="brand-link">
+          🌱 Multisocios Empresarial
+        </a>
+      </div>
+      
+      <div class="nav-links">
+        <a href="/">Dashboard</a>
+        <a href="/1-Governanca/README/">Governança</a>
+        <a href="/4-Projetos/README/" class="active">Projetos</a>
+        <a href="/2-Equipes/README/">Equipes</a>
+        <a href="/5-Processos/README/">Processos</a>
+        <a href="/6-Reunioes/README/">Reuniões</a>
+        <a href="/7-Conhecimento/README/">Conhecimento</a>
+      </div>
+      
+      <div class="nav-tools">
+        <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
+        <button class="search-toggle" onclick="toggleSearch()">🔍</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Sidebar Navigation -->
+  <aside class="sidebar" data-state="closed" aria-hidden="true">
+    <div class="sidebar-header">
+      <button class="sidebar-toggle" onclick="toggleSidebar()">
+        <span class="hamburger"></span>
+      </button>
+      <div class="sidebar-brand">
+        <a href="/" class="brand-link">🌱 Multisocios</a>
+      </div>
+    </div>
+    
+    <div class="sidebar-content">
+      <div class="sidebar-search">
+        <input type="search" placeholder="Buscar conteúdo..." class="search-input" id="sidebar-search">
+      </div>
+      
+      <div class="sidebar-tree">
+        
+        
+        <div class="tree-item" data-level="0">
+          <div class="tree-node">
+            <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+              <span class="tree-icon">▶</span>
+            </button>
+            <a href="/" class="tree-link ">
+              <span class="tree-label">🏠 Home</span>
+            </a>
+          </div>
+          
+          
+        </div>
+        
+        <div class="tree-item" data-level="0">
+          <div class="tree-node">
+            <button class="tree-toggle" onclick="toggleTreeNode(this)" >
+              <span class="tree-icon">▶</span>
+            </button>
+            <a href="/dashboard-executivo/" class="tree-link ">
+              <span class="tree-label">📊 Dashboard Executivo</span>
+            </a>
+          </div>
+          
+          
+          <div class="tree-children" style="display: none;">
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/dashboard-executivo/decisoes-estrategicas/" class="tree-link ">
+                  <span class="tree-label">🎯 Decisões Estratégicas</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/dashboard-executivo/dashboard-projetos-prazo/" class="tree-link ">
+                  <span class="tree-label">📅 Projetos por Prazo</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/dashboard-executivo/dashboard-capacidade-equipe/" class="tree-link ">
+                  <span class="tree-label">👥 Capacidade da Equipe</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+          </div>
+          
+        </div>
+        
+        <div class="tree-item" data-level="0">
+          <div class="tree-node">
+            <button class="tree-toggle" onclick="toggleTreeNode(this)" >
+              <span class="tree-icon">▶</span>
+            </button>
+            <a href="/governanca/" class="tree-link ">
+              <span class="tree-label">🏛️ Governança</span>
+            </a>
+          </div>
+          
+          
+          <div class="tree-children" style="display: none;">
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/governanca/acordo_socios_final/" class="tree-link ">
+                  <span class="tree-label">📜 Acordo de Sócios</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/governanca/compliance_log/" class="tree-link ">
+                  <span class="tree-label">⚖️ Compliance Log</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/governanca/etica_uso_ia/" class="tree-link ">
+                  <span class="tree-label">🤖 Ética no Uso de IA</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/governanca/faq_compliance/" class="tree-link ">
+                  <span class="tree-label">❓ FAQ Compliance</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/governanca/manual_treinamento_compliance/" class="tree-link ">
+                  <span class="tree-label">📚 Manual de Treinamento</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/governanca/playbook_comercial_v0/" class="tree-link ">
+                  <span class="tree-label">📈 Playbook Comercial</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+          </div>
+          
+        </div>
+        
+        <div class="tree-item" data-level="0">
+          <div class="tree-node">
+            <button class="tree-toggle" onclick="toggleTreeNode(this)" >
+              <span class="tree-icon">▶</span>
+            </button>
+            <a href="/equipes/" class="tree-link ">
+              <span class="tree-label">👥 Equipes</span>
+            </a>
+          </div>
+          
+          
+          <div class="tree-children" style="display: none;">
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/equipes/desenvolvimento/" class="tree-link ">
+                  <span class="tree-label">💻 Desenvolvimento</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/equipes/marketing/" class="tree-link ">
+                  <span class="tree-label">🎯 Marketing</span>
+                </a>
+              </div>
+              
+              
+      
+
+... (Content truncated - file too large)
+```
+
+---
+
+
+#### 📁 Directory: build\dist\projetos\exemplo-minimalista
+
+##### 📄 index.html
+*Path: `build\dist\projetos\exemplo-minimalista\index.html`*  
+*Size: 71.04 KB*
+
+```html
+<!DOCTYPE html>
+<html lang="pt-BR" class="theme-dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exemplo Minimalista - Multisocios Empresarial</title>
+  <meta name="description" content="Sistema de Gestão de Conhecimento Multisocios" />
+  
+  <!-- CSS do tema Obsidian e customizações -->
+  <link rel="stylesheet" href="/styles/main.css" />
+  <link rel="stylesheet" href="/styles/sidebar.css" />
+  <link rel="stylesheet" href="/styles/projeto.css" />
+  
+  <!-- Favicon e meta tags para PWA -->
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+  <meta name="theme-color" content="#1e1e1e" />
+</head>
+<body class="layout-projeto">
+  
+  <header class="site-header">
+    <nav class="main-navigation">
+      <div class="nav-brand">
+        <button class="mobile-sidebar-toggle" onclick="toggleSidebar()">
+          <span class="hamburger"></span>
+        </button>
+        <a href="/" class="brand-link">
+          🌱 Multisocios Empresarial
+        </a>
+      </div>
+      
+      <div class="nav-links">
+        <a href="/">Dashboard</a>
+        <a href="/1-Governanca/README/">Governança</a>
+        <a href="/4-Projetos/README/" class="active">Projetos</a>
+        <a href="/2-Equipes/README/">Equipes</a>
+        <a href="/5-Processos/README/">Processos</a>
+        <a href="/6-Reunioes/README/">Reuniões</a>
+        <a href="/7-Conhecimento/README/">Conhecimento</a>
+      </div>
+      
+      <div class="nav-tools">
+        <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
+        <button class="search-toggle" onclick="toggleSearch()">🔍</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Sidebar Navigation -->
+  <aside class="sidebar" data-state="closed" aria-hidden="true">
+    <div class="sidebar-header">
+      <button class="sidebar-toggle" onclick="toggleSidebar()">
+        <span class="hamburger"></span>
+      </button>
+      <div class="sidebar-brand">
+        <a href="/" class="brand-link">🌱 Multisocios</a>
+      </div>
+    </div>
+    
+    <div class="sidebar-content">
+      <div class="sidebar-search">
+        <input type="search" placeholder="Buscar conteúdo..." class="search-input" id="sidebar-search">
+      </div>
+      
+      <div class="sidebar-tree">
+        
+        
+        <div class="tree-item" data-level="0">
+          <div class="tree-node">
+            <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+              <span class="tree-icon">▶</span>
+            </button>
+            <a href="/" class="tree-link ">
+              <span class="tree-label">🏠 Home</span>
+            </a>
+          </div>
+          
+          
+        </div>
+        
+        <div class="tree-item" data-level="0">
+          <div class="tree-node">
+            <button class="tree-toggle" onclick="toggleTreeNode(this)" >
+              <span class="tree-icon">▶</span>
+            </button>
+            <a href="/dashboard-executivo/" class="tree-link ">
+              <span class="tree-label">📊 Dashboard Executivo</span>
+            </a>
+          </div>
+          
+          
+          <div class="tree-children" style="display: none;">
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/dashboard-executivo/decisoes-estrategicas/" class="tree-link ">
+                  <span class="tree-label">🎯 Decisões Estratégicas</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/dashboard-executivo/dashboard-projetos-prazo/" class="tree-link ">
+                  <span class="tree-label">📅 Projetos por Prazo</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/dashboard-executivo/dashboard-capacidade-equipe/" class="tree-link ">
+                  <span class="tree-label">👥 Capacidade da Equipe</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+          </div>
+          
+        </div>
+        
+        <div class="tree-item" data-level="0">
+          <div class="tree-node">
+            <button class="tree-toggle" onclick="toggleTreeNode(this)" >
+              <span class="tree-icon">▶</span>
+            </button>
+            <a href="/governanca/" class="tree-link ">
+              <span class="tree-label">🏛️ Governança</span>
+            </a>
+          </div>
+          
+          
+          <div class="tree-children" style="display: none;">
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/governanca/acordo_socios_final/" class="tree-link ">
+                  <span class="tree-label">📜 Acordo de Sócios</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/governanca/compliance_log/" class="tree-link ">
+                  <span class="tree-label">⚖️ Compliance Log</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/governanca/etica_uso_ia/" class="tree-link ">
+                  <span class="tree-label">🤖 Ética no Uso de IA</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/governanca/faq_compliance/" class="tree-link ">
+                  <span class="tree-label">❓ FAQ Compliance</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/governanca/manual_treinamento_compliance/" class="tree-link ">
+                  <span class="tree-label">📚 Manual de Treinamento</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/governanca/playbook_comercial_v0/" class="tree-link ">
+                  <span class="tree-label">📈 Playbook Comercial</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+          </div>
+          
+        </div>
+        
+        <div class="tree-item" data-level="0">
+          <div class="tree-node">
+            <button class="tree-toggle" onclick="toggleTreeNode(this)" >
+              <span class="tree-icon">▶</span>
+            </button>
+            <a href="/equipes/" class="tree-link ">
+              <span class="tree-label">👥 Equipes</span>
+            </a>
+          </div>
+          
+          
+          <div class="tree-children" style="display: none;">
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/equipes/desenvolvimento/" class="tree-link ">
+                  <span class="tree-label">💻 Desenvolvimento</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/equipes/marketing/" class="tree-link ">
+                  <span class="tree-label">🎯 Marketing</span>
+                </a>
+              </div>
+              
+              
+            
+
+... (Content truncated - file too large)
+```
+
+---
+
+
 #### 📁 Directory: build\dist\projetos\exemplo-primeira-cartada
 
 ##### 📄 index.html
 *Path: `build\dist\projetos\exemplo-primeira-cartada\index.html`*  
-*Size: 71.08 KB*
+*Size: 71.09 KB*
 
 ```html
 <!DOCTYPE html>
@@ -49924,12 +49614,12 @@ SORT status, priority DESC
       
       <div class="nav-links">
         <a href="/">Dashboard</a>
-        <a href="/Governanca/README/">Governança</a>
-        <a href="/Projetos/README/" class="active">Projetos</a>
-        <a href="/Equipes/README/">Equipes</a>
-        <a href="/Processos/README/">Processos</a>
-        <a href="/Reunioes/README/">Reuniões</a>
-        <a href="/Conhecimento/README/">Conhecimento</a>
+        <a href="/1-Governanca/README/">Governança</a>
+        <a href="/4-Projetos/README/" class="active">Projetos</a>
+        <a href="/2-Equipes/README/">Equipes</a>
+        <a href="/5-Processos/README/">Processos</a>
+        <a href="/6-Reunioes/README/">Reuniões</a>
+        <a href="/7-Conhecimento/README/">Conhecimento</a>
       </div>
       
       <div class="nav-tools">
@@ -50159,8 +49849,7 @@ SORT status, priority DESC
               </div>
               
               
-            </div>
-
+       
 
 ... (Content truncated - file too large)
 ```
@@ -50172,7 +49861,7 @@ SORT status, priority DESC
 
 ##### 📄 index.html
 *Path: `build\dist\projetos\index.html`*  
-*Size: 74.10 KB*
+*Size: 74.11 KB*
 
 ```html
 <!DOCTYPE html>
@@ -50207,12 +49896,12 @@ SORT status, priority DESC
       
       <div class="nav-links">
         <a href="/">Dashboard</a>
-        <a href="/Governanca/README/">Governança</a>
-        <a href="/Projetos/README/" class="active">Projetos</a>
-        <a href="/Equipes/README/">Equipes</a>
-        <a href="/Processos/README/">Processos</a>
-        <a href="/Reunioes/README/">Reuniões</a>
-        <a href="/Conhecimento/README/">Conhecimento</a>
+        <a href="/1-Governanca/README/">Governança</a>
+        <a href="/4-Projetos/README/" class="active">Projetos</a>
+        <a href="/2-Equipes/README/">Equipes</a>
+        <a href="/5-Processos/README/">Processos</a>
+        <a href="/6-Reunioes/README/">Reuniões</a>
+        <a href="/7-Conhecimento/README/">Conhecimento</a>
       </div>
       
       <div class="nav-tools">
@@ -50442,8 +50131,7 @@ SORT status, priority DESC
               </div>
               
               
-            </div>
-   
+          
 
 ... (Content truncated - file too large)
 ```
@@ -50455,7 +50143,7 @@ SORT status, priority DESC
 
 ##### 📄 index.html
 *Path: `build\dist\projetos\nostalgia-musical\index.html`*  
-*Size: 93.18 KB*
+*Size: 93.19 KB*
 
 ```html
 <!DOCTYPE html>
@@ -50490,12 +50178,12 @@ SORT status, priority DESC
       
       <div class="nav-links">
         <a href="/">Dashboard</a>
-        <a href="/Governanca/README/">Governança</a>
-        <a href="/Projetos/README/" class="active">Projetos</a>
-        <a href="/Equipes/README/">Equipes</a>
-        <a href="/Processos/README/">Processos</a>
-        <a href="/Reunioes/README/">Reuniões</a>
-        <a href="/Conhecimento/README/">Conhecimento</a>
+        <a href="/1-Governanca/README/">Governança</a>
+        <a href="/4-Projetos/README/" class="active">Projetos</a>
+        <a href="/2-Equipes/README/">Equipes</a>
+        <a href="/5-Processos/README/">Processos</a>
+        <a href="/6-Reunioes/README/">Reuniões</a>
+        <a href="/7-Conhecimento/README/">Conhecimento</a>
       </div>
       
       <div class="nav-tools">
@@ -50725,8 +50413,7 @@ SORT status, priority DESC
               </div>
               
               
-            </div>
-       
+            </
 
 ... (Content truncated - file too large)
 ```
@@ -50738,7 +50425,7 @@ SORT status, priority DESC
 
 ##### 📄 index.html
 *Path: `build\dist\projetos\plataforma-cursos\index.html`*  
-*Size: 80.75 KB*
+*Size: 80.76 KB*
 
 ```html
 <!DOCTYPE html>
@@ -50773,12 +50460,12 @@ SORT status, priority DESC
       
       <div class="nav-links">
         <a href="/">Dashboard</a>
-        <a href="/Governanca/README/">Governança</a>
-        <a href="/Projetos/README/" class="active">Projetos</a>
-        <a href="/Equipes/README/">Equipes</a>
-        <a href="/Processos/README/">Processos</a>
-        <a href="/Reunioes/README/">Reuniões</a>
-        <a href="/Conhecimento/README/">Conhecimento</a>
+        <a href="/1-Governanca/README/">Governança</a>
+        <a href="/4-Projetos/README/" class="active">Projetos</a>
+        <a href="/2-Equipes/README/">Equipes</a>
+        <a href="/5-Processos/README/">Processos</a>
+        <a href="/6-Reunioes/README/">Reuniões</a>
+        <a href="/7-Conhecimento/README/">Conhecimento</a>
       </div>
       
       <div class="nav-tools">
@@ -51008,8 +50695,7 @@ SORT status, priority DESC
               </div>
               
               
-            </div>
-       
+            </
 
 ... (Content truncated - file too large)
 ```
@@ -51021,7 +50707,7 @@ SORT status, priority DESC
 
 ##### 📄 index.html
 *Path: `build\dist\projetos\template-2025-01-20-projeto-assistente-transcricao-juridica\index.html`*  
-*Size: 76.49 KB*
+*Size: 76.50 KB*
 
 ```html
 <!DOCTYPE html>
@@ -51056,12 +50742,12 @@ SORT status, priority DESC
       
       <div class="nav-links">
         <a href="/">Dashboard</a>
-        <a href="/Governanca/README/">Governança</a>
-        <a href="/Projetos/README/" class="active">Projetos</a>
-        <a href="/Equipes/README/">Equipes</a>
-        <a href="/Processos/README/">Processos</a>
-        <a href="/Reunioes/README/">Reuniões</a>
-        <a href="/Conhecimento/README/">Conhecimento</a>
+        <a href="/1-Governanca/README/">Governança</a>
+        <a href="/4-Projetos/README/" class="active">Projetos</a>
+        <a href="/2-Equipes/README/">Equipes</a>
+        <a href="/5-Processos/README/">Processos</a>
+        <a href="/6-Reunioes/README/">Reuniões</a>
+        <a href="/7-Conhecimento/README/">Conhecimento</a>
       </div>
       
       <div class="nav-tools">
@@ -51290,8 +50976,7 @@ SORT status, priority DESC
                 </a>
               </div>
               
-              
-  
+     
 
 ... (Content truncated - file too large)
 ```
@@ -51576,7 +51261,7 @@ SORT status, priority DESC
 
 ##### 📄 index.html
 *Path: `build\dist\projetos\template-piloto-crm-arquitetos\index.html`*  
-*Size: 78.63 KB*
+*Size: 78.64 KB*
 
 ```html
 <!DOCTYPE html>
@@ -51611,12 +51296,12 @@ SORT status, priority DESC
       
       <div class="nav-links">
         <a href="/">Dashboard</a>
-        <a href="/Governanca/README/">Governança</a>
-        <a href="/Projetos/README/" class="active">Projetos</a>
-        <a href="/Equipes/README/">Equipes</a>
-        <a href="/Processos/README/">Processos</a>
-        <a href="/Reunioes/README/">Reuniões</a>
-        <a href="/Conhecimento/README/">Conhecimento</a>
+        <a href="/1-Governanca/README/">Governança</a>
+        <a href="/4-Projetos/README/" class="active">Projetos</a>
+        <a href="/2-Equipes/README/">Equipes</a>
+        <a href="/5-Processos/README/">Processos</a>
+        <a href="/6-Reunioes/README/">Reuniões</a>
+        <a href="/7-Conhecimento/README/">Conhecimento</a>
       </div>
       
       <div class="nav-tools">
@@ -51846,7 +51531,7 @@ SORT status, priority DESC
               </div>
               
               
-            <
+ 
 
 ... (Content truncated - file too large)
 ```
@@ -51858,7 +51543,7 @@ SORT status, priority DESC
 
 ##### 📄 index.html
 *Path: `build\dist\projetos\template-piloto-exemplo-sistema\index.html`*  
-*Size: 75.49 KB*
+*Size: 75.50 KB*
 
 ```html
 <!DOCTYPE html>
@@ -51893,12 +51578,12 @@ SORT status, priority DESC
       
       <div class="nav-links">
         <a href="/">Dashboard</a>
-        <a href="/Governanca/README/">Governança</a>
-        <a href="/Projetos/README/" class="active">Projetos</a>
-        <a href="/Equipes/README/">Equipes</a>
-        <a href="/Processos/README/">Processos</a>
-        <a href="/Reunioes/README/">Reuniões</a>
-        <a href="/Conhecimento/README/">Conhecimento</a>
+        <a href="/1-Governanca/README/">Governança</a>
+        <a href="/4-Projetos/README/" class="active">Projetos</a>
+        <a href="/2-Equipes/README/">Equipes</a>
+        <a href="/5-Processos/README/">Processos</a>
+        <a href="/6-Reunioes/README/">Reuniões</a>
+        <a href="/7-Conhecimento/README/">Conhecimento</a>
       </div>
       
       <div class="nav-tools">
@@ -52128,7 +51813,7 @@ SORT status, priority DESC
               </div>
               
               
-            
+
 
 ... (Content truncated - file too large)
 ```
@@ -52140,7 +51825,7 @@ SORT status, priority DESC
 
 ##### 📄 index.html
 *Path: `build\dist\projetos\template-projeto-exemplo-sistema\index.html`*  
-*Size: 77.75 KB*
+*Size: 77.77 KB*
 
 ```html
 <!DOCTYPE html>
@@ -52175,12 +51860,12 @@ SORT status, priority DESC
       
       <div class="nav-links">
         <a href="/">Dashboard</a>
-        <a href="/Governanca/README/">Governança</a>
-        <a href="/Projetos/README/" class="active">Projetos</a>
-        <a href="/Equipes/README/">Equipes</a>
-        <a href="/Processos/README/">Processos</a>
-        <a href="/Reunioes/README/">Reuniões</a>
-        <a href="/Conhecimento/README/">Conhecimento</a>
+        <a href="/1-Governanca/README/">Governança</a>
+        <a href="/4-Projetos/README/" class="active">Projetos</a>
+        <a href="/2-Equipes/README/">Equipes</a>
+        <a href="/5-Processos/README/">Processos</a>
+        <a href="/6-Reunioes/README/">Reuniões</a>
+        <a href="/7-Conhecimento/README/">Conhecimento</a>
       </div>
       
       <div class="nav-tools">
@@ -52410,7 +52095,6 @@ SORT status, priority DESC
               </div>
               
               
-           
 
 ... (Content truncated - file too large)
 ```
@@ -52422,7 +52106,7 @@ SORT status, priority DESC
 
 ##### 📄 index.html
 *Path: `build\dist\projetos\templates-guia\index.html`*  
-*Size: 75.34 KB*
+*Size: 75.35 KB*
 
 ```html
 <!DOCTYPE html>
@@ -52457,12 +52141,12 @@ SORT status, priority DESC
       
       <div class="nav-links">
         <a href="/">Dashboard</a>
-        <a href="/Governanca/README/">Governança</a>
-        <a href="/Projetos/README/" class="active">Projetos</a>
-        <a href="/Equipes/README/">Equipes</a>
-        <a href="/Processos/README/">Processos</a>
-        <a href="/Reunioes/README/">Reuniões</a>
-        <a href="/Conhecimento/README/">Conhecimento</a>
+        <a href="/1-Governanca/README/">Governança</a>
+        <a href="/4-Projetos/README/" class="active">Projetos</a>
+        <a href="/2-Equipes/README/">Equipes</a>
+        <a href="/5-Processos/README/">Processos</a>
+        <a href="/6-Reunioes/README/">Reuniões</a>
+        <a href="/7-Conhecimento/README/">Conhecimento</a>
       </div>
       
       <div class="nav-tools">
@@ -52692,8 +52376,7 @@ SORT status, priority DESC
               </div>
               
               
-            </div>
-   
+          
 
 ... (Content truncated - file too large)
 ```
@@ -52705,7 +52388,7 @@ SORT status, priority DESC
 
 ##### 📄 index.html
 *Path: `build\dist\projetos\templates\index.html`*  
-*Size: 69.92 KB*
+*Size: 69.93 KB*
 
 ```html
 <!DOCTYPE html>
@@ -52740,12 +52423,12 @@ SORT status, priority DESC
       
       <div class="nav-links">
         <a href="/">Dashboard</a>
-        <a href="/Governanca/README/">Governança</a>
-        <a href="/Projetos/README/" class="active">Projetos</a>
-        <a href="/Equipes/README/">Equipes</a>
-        <a href="/Processos/README/">Processos</a>
-        <a href="/Reunioes/README/">Reuniões</a>
-        <a href="/Conhecimento/README/">Conhecimento</a>
+        <a href="/1-Governanca/README/">Governança</a>
+        <a href="/4-Projetos/README/" class="active">Projetos</a>
+        <a href="/2-Equipes/README/">Equipes</a>
+        <a href="/5-Processos/README/">Processos</a>
+        <a href="/6-Reunioes/README/">Reuniões</a>
+        <a href="/7-Conhecimento/README/">Conhecimento</a>
       </div>
       
       <div class="nav-tools">
@@ -52976,8 +52659,7 @@ SORT status, priority DESC
               
               
             </div>
-            
-     
+      
 
 ... (Content truncated - file too large)
 ```
@@ -52989,7 +52671,7 @@ SORT status, priority DESC
 
 ##### 📄 index.html
 *Path: `build\dist\projetos\trip-match\index.html`*  
-*Size: 91.37 KB*
+*Size: 91.38 KB*
 
 ```html
 <!DOCTYPE html>
@@ -53024,12 +52706,12 @@ SORT status, priority DESC
       
       <div class="nav-links">
         <a href="/">Dashboard</a>
-        <a href="/Governanca/README/">Governança</a>
-        <a href="/Projetos/README/" class="active">Projetos</a>
-        <a href="/Equipes/README/">Equipes</a>
-        <a href="/Processos/README/">Processos</a>
-        <a href="/Reunioes/README/">Reuniões</a>
-        <a href="/Conhecimento/README/">Conhecimento</a>
+        <a href="/1-Governanca/README/">Governança</a>
+        <a href="/4-Projetos/README/" class="active">Projetos</a>
+        <a href="/2-Equipes/README/">Equipes</a>
+        <a href="/5-Processos/README/">Processos</a>
+        <a href="/6-Reunioes/README/">Reuniões</a>
+        <a href="/7-Conhecimento/README/">Conhecimento</a>
       </div>
       
       <div class="nav-tools">
@@ -53260,8 +52942,7 @@ SORT status, priority DESC
               
               
             </div>
-            
- 
+  
 
 ... (Content truncated - file too large)
 ```
@@ -53273,7 +52954,7 @@ SORT status, priority DESC
 
 ##### 📄 index.html
 *Path: `build\dist\projetos\vault-empresarial\index.html`*  
-*Size: 82.09 KB*
+*Size: 82.10 KB*
 
 ```html
 <!DOCTYPE html>
@@ -53308,295 +52989,12 @@ SORT status, priority DESC
       
       <div class="nav-links">
         <a href="/">Dashboard</a>
-        <a href="/Governanca/README/">Governança</a>
-        <a href="/Projetos/README/" class="active">Projetos</a>
-        <a href="/Equipes/README/">Equipes</a>
-        <a href="/Processos/README/">Processos</a>
-        <a href="/Reunioes/README/">Reuniões</a>
-        <a href="/Conhecimento/README/">Conhecimento</a>
-      </div>
-      
-      <div class="nav-tools">
-        <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
-        <button class="search-toggle" onclick="toggleSearch()">🔍</button>
-      </div>
-    </nav>
-  </header>
-
-  <!-- Sidebar Navigation -->
-  <aside class="sidebar" data-state="closed" aria-hidden="true">
-    <div class="sidebar-header">
-      <button class="sidebar-toggle" onclick="toggleSidebar()">
-        <span class="hamburger"></span>
-      </button>
-      <div class="sidebar-brand">
-        <a href="/" class="brand-link">🌱 Multisocios</a>
-      </div>
-    </div>
-    
-    <div class="sidebar-content">
-      <div class="sidebar-search">
-        <input type="search" placeholder="Buscar conteúdo..." class="search-input" id="sidebar-search">
-      </div>
-      
-      <div class="sidebar-tree">
-        
-        
-        <div class="tree-item" data-level="0">
-          <div class="tree-node">
-            <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
-              <span class="tree-icon">▶</span>
-            </button>
-            <a href="/" class="tree-link ">
-              <span class="tree-label">🏠 Home</span>
-            </a>
-          </div>
-          
-          
-        </div>
-        
-        <div class="tree-item" data-level="0">
-          <div class="tree-node">
-            <button class="tree-toggle" onclick="toggleTreeNode(this)" >
-              <span class="tree-icon">▶</span>
-            </button>
-            <a href="/dashboard-executivo/" class="tree-link ">
-              <span class="tree-label">📊 Dashboard Executivo</span>
-            </a>
-          </div>
-          
-          
-          <div class="tree-children" style="display: none;">
-            
-            <div class="tree-item" data-level="1">
-              <div class="tree-node">
-                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
-                  <span class="tree-icon">▶</span>
-                </button>
-                <a href="/dashboard-executivo/decisoes-estrategicas/" class="tree-link ">
-                  <span class="tree-label">🎯 Decisões Estratégicas</span>
-                </a>
-              </div>
-              
-              
-            </div>
-            
-            <div class="tree-item" data-level="1">
-              <div class="tree-node">
-                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
-                  <span class="tree-icon">▶</span>
-                </button>
-                <a href="/dashboard-executivo/dashboard-projetos-prazo/" class="tree-link ">
-                  <span class="tree-label">📅 Projetos por Prazo</span>
-                </a>
-              </div>
-              
-              
-            </div>
-            
-            <div class="tree-item" data-level="1">
-              <div class="tree-node">
-                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
-                  <span class="tree-icon">▶</span>
-                </button>
-                <a href="/dashboard-executivo/dashboard-capacidade-equipe/" class="tree-link ">
-                  <span class="tree-label">👥 Capacidade da Equipe</span>
-                </a>
-              </div>
-              
-              
-            </div>
-            
-          </div>
-          
-        </div>
-        
-        <div class="tree-item" data-level="0">
-          <div class="tree-node">
-            <button class="tree-toggle" onclick="toggleTreeNode(this)" >
-              <span class="tree-icon">▶</span>
-            </button>
-            <a href="/governanca/" class="tree-link ">
-              <span class="tree-label">🏛️ Governança</span>
-            </a>
-          </div>
-          
-          
-          <div class="tree-children" style="display: none;">
-            
-            <div class="tree-item" data-level="1">
-              <div class="tree-node">
-                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
-                  <span class="tree-icon">▶</span>
-                </button>
-                <a href="/governanca/acordo_socios_final/" class="tree-link ">
-                  <span class="tree-label">📜 Acordo de Sócios</span>
-                </a>
-              </div>
-              
-              
-            </div>
-            
-            <div class="tree-item" data-level="1">
-              <div class="tree-node">
-                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
-                  <span class="tree-icon">▶</span>
-                </button>
-                <a href="/governanca/compliance_log/" class="tree-link ">
-                  <span class="tree-label">⚖️ Compliance Log</span>
-                </a>
-              </div>
-              
-              
-            </div>
-            
-            <div class="tree-item" data-level="1">
-              <div class="tree-node">
-                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
-                  <span class="tree-icon">▶</span>
-                </button>
-                <a href="/governanca/etica_uso_ia/" class="tree-link ">
-                  <span class="tree-label">🤖 Ética no Uso de IA</span>
-                </a>
-              </div>
-              
-              
-            </div>
-            
-            <div class="tree-item" data-level="1">
-              <div class="tree-node">
-                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
-                  <span class="tree-icon">▶</span>
-                </button>
-                <a href="/governanca/faq_compliance/" class="tree-link ">
-                  <span class="tree-label">❓ FAQ Compliance</span>
-                </a>
-              </div>
-              
-              
-            </div>
-            
-            <div class="tree-item" data-level="1">
-              <div class="tree-node">
-                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
-                  <span class="tree-icon">▶</span>
-                </button>
-                <a href="/governanca/manual_treinamento_compliance/" class="tree-link ">
-                  <span class="tree-label">📚 Manual de Treinamento</span>
-                </a>
-              </div>
-              
-              
-            </div>
-            
-            <div class="tree-item" data-level="1">
-              <div class="tree-node">
-                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
-                  <span class="tree-icon">▶</span>
-                </button>
-                <a href="/governanca/playbook_comercial_v0/" class="tree-link ">
-                  <span class="tree-label">📈 Playbook Comercial</span>
-                </a>
-              </div>
-              
-              
-            </div>
-            
-          </div>
-          
-        </div>
-        
-        <div class="tree-item" data-level="0">
-          <div class="tree-node">
-            <button class="tree-toggle" onclick="toggleTreeNode(this)" >
-              <span class="tree-icon">▶</span>
-            </button>
-            <a href="/equipes/" class="tree-link ">
-              <span class="tree-label">👥 Equipes</span>
-            </a>
-          </div>
-          
-          
-          <div class="tree-children" style="display: none;">
-            
-            <div class="tree-item" data-level="1">
-              <div class="tree-node">
-                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
-                  <span class="tree-icon">▶</span>
-                </button>
-                <a href="/equipes/desenvolvimento/" class="tree-link ">
-                  <span class="tree-label">💻 Desenvolvimento</span>
-                </a>
-              </div>
-              
-              
-            </div>
-            
-            <div class="tree-item" data-level="1">
-              <div class="tree-node">
-                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
-                  <span class="tree-icon">▶</span>
-                </button>
-                <a href="/equipes/marketing/" class="tree-link ">
-                  <span class="tree-label">🎯 Marketing</span>
-                </a>
-              </div>
-              
-              
-            </div>
-       
-
-... (Content truncated - file too large)
-```
-
----
-
-
-#### 📁 Directory: build\dist\projetos\web-site-portfolio-engenharia
-
-##### 📄 index.html
-*Path: `build\dist\projetos\web-site-portfolio-engenharia\index.html`*  
-*Size: 82.08 KB*
-
-```html
-<!DOCTYPE html>
-<html lang="pt-BR" class="theme-dark">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Web Site Portfolio Engenharia - Multisocios Empresarial</title>
-  <meta name="description" content="Sistema de Gestão de Conhecimento Multisocios" />
-  
-  <!-- CSS do tema Obsidian e customizações -->
-  <link rel="stylesheet" href="/styles/main.css" />
-  <link rel="stylesheet" href="/styles/sidebar.css" />
-  <link rel="stylesheet" href="/styles/projeto.css" />
-  
-  <!-- Favicon e meta tags para PWA -->
-  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
-  <meta name="theme-color" content="#1e1e1e" />
-</head>
-<body class="layout-projeto">
-  
-  <header class="site-header">
-    <nav class="main-navigation">
-      <div class="nav-brand">
-        <button class="mobile-sidebar-toggle" onclick="toggleSidebar()">
-          <span class="hamburger"></span>
-        </button>
-        <a href="/" class="brand-link">
-          🌱 Multisocios Empresarial
-        </a>
-      </div>
-      
-      <div class="nav-links">
-        <a href="/">Dashboard</a>
-        <a href="/Governanca/README/">Governança</a>
-        <a href="/Projetos/README/" class="active">Projetos</a>
-        <a href="/Equipes/README/">Equipes</a>
-        <a href="/Processos/README/">Processos</a>
-        <a href="/Reunioes/README/">Reuniões</a>
-        <a href="/Conhecimento/README/">Conhecimento</a>
+        <a href="/1-Governanca/README/">Governança</a>
+        <a href="/4-Projetos/README/" class="active">Projetos</a>
+        <a href="/2-Equipes/README/">Equipes</a>
+        <a href="/5-Processos/README/">Processos</a>
+        <a href="/6-Reunioes/README/">Reuniões</a>
+        <a href="/7-Conhecimento/README/">Conhecimento</a>
       </div>
       
       <div class="nav-tools">
@@ -53827,6 +53225,288 @@ SORT status, priority DESC
               
               
             </
+
+... (Content truncated - file too large)
+```
+
+---
+
+
+#### 📁 Directory: build\dist\projetos\web-site-portfolio-engenharia
+
+##### 📄 index.html
+*Path: `build\dist\projetos\web-site-portfolio-engenharia\index.html`*  
+*Size: 82.09 KB*
+
+```html
+<!DOCTYPE html>
+<html lang="pt-BR" class="theme-dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Web Site Portfolio Engenharia - Multisocios Empresarial</title>
+  <meta name="description" content="Sistema de Gestão de Conhecimento Multisocios" />
+  
+  <!-- CSS do tema Obsidian e customizações -->
+  <link rel="stylesheet" href="/styles/main.css" />
+  <link rel="stylesheet" href="/styles/sidebar.css" />
+  <link rel="stylesheet" href="/styles/projeto.css" />
+  
+  <!-- Favicon e meta tags para PWA -->
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+  <meta name="theme-color" content="#1e1e1e" />
+</head>
+<body class="layout-projeto">
+  
+  <header class="site-header">
+    <nav class="main-navigation">
+      <div class="nav-brand">
+        <button class="mobile-sidebar-toggle" onclick="toggleSidebar()">
+          <span class="hamburger"></span>
+        </button>
+        <a href="/" class="brand-link">
+          🌱 Multisocios Empresarial
+        </a>
+      </div>
+      
+      <div class="nav-links">
+        <a href="/">Dashboard</a>
+        <a href="/1-Governanca/README/">Governança</a>
+        <a href="/4-Projetos/README/" class="active">Projetos</a>
+        <a href="/2-Equipes/README/">Equipes</a>
+        <a href="/5-Processos/README/">Processos</a>
+        <a href="/6-Reunioes/README/">Reuniões</a>
+        <a href="/7-Conhecimento/README/">Conhecimento</a>
+      </div>
+      
+      <div class="nav-tools">
+        <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
+        <button class="search-toggle" onclick="toggleSearch()">🔍</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Sidebar Navigation -->
+  <aside class="sidebar" data-state="closed" aria-hidden="true">
+    <div class="sidebar-header">
+      <button class="sidebar-toggle" onclick="toggleSidebar()">
+        <span class="hamburger"></span>
+      </button>
+      <div class="sidebar-brand">
+        <a href="/" class="brand-link">🌱 Multisocios</a>
+      </div>
+    </div>
+    
+    <div class="sidebar-content">
+      <div class="sidebar-search">
+        <input type="search" placeholder="Buscar conteúdo..." class="search-input" id="sidebar-search">
+      </div>
+      
+      <div class="sidebar-tree">
+        
+        
+        <div class="tree-item" data-level="0">
+          <div class="tree-node">
+            <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+              <span class="tree-icon">▶</span>
+            </button>
+            <a href="/" class="tree-link ">
+              <span class="tree-label">🏠 Home</span>
+            </a>
+          </div>
+          
+          
+        </div>
+        
+        <div class="tree-item" data-level="0">
+          <div class="tree-node">
+            <button class="tree-toggle" onclick="toggleTreeNode(this)" >
+              <span class="tree-icon">▶</span>
+            </button>
+            <a href="/dashboard-executivo/" class="tree-link ">
+              <span class="tree-label">📊 Dashboard Executivo</span>
+            </a>
+          </div>
+          
+          
+          <div class="tree-children" style="display: none;">
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/dashboard-executivo/decisoes-estrategicas/" class="tree-link ">
+                  <span class="tree-label">🎯 Decisões Estratégicas</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/dashboard-executivo/dashboard-projetos-prazo/" class="tree-link ">
+                  <span class="tree-label">📅 Projetos por Prazo</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/dashboard-executivo/dashboard-capacidade-equipe/" class="tree-link ">
+                  <span class="tree-label">👥 Capacidade da Equipe</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+          </div>
+          
+        </div>
+        
+        <div class="tree-item" data-level="0">
+          <div class="tree-node">
+            <button class="tree-toggle" onclick="toggleTreeNode(this)" >
+              <span class="tree-icon">▶</span>
+            </button>
+            <a href="/governanca/" class="tree-link ">
+              <span class="tree-label">🏛️ Governança</span>
+            </a>
+          </div>
+          
+          
+          <div class="tree-children" style="display: none;">
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/governanca/acordo_socios_final/" class="tree-link ">
+                  <span class="tree-label">📜 Acordo de Sócios</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/governanca/compliance_log/" class="tree-link ">
+                  <span class="tree-label">⚖️ Compliance Log</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/governanca/etica_uso_ia/" class="tree-link ">
+                  <span class="tree-label">🤖 Ética no Uso de IA</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/governanca/faq_compliance/" class="tree-link ">
+                  <span class="tree-label">❓ FAQ Compliance</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/governanca/manual_treinamento_compliance/" class="tree-link ">
+                  <span class="tree-label">📚 Manual de Treinamento</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/governanca/playbook_comercial_v0/" class="tree-link ">
+                  <span class="tree-label">📈 Playbook Comercial</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+          </div>
+          
+        </div>
+        
+        <div class="tree-item" data-level="0">
+          <div class="tree-node">
+            <button class="tree-toggle" onclick="toggleTreeNode(this)" >
+              <span class="tree-icon">▶</span>
+            </button>
+            <a href="/equipes/" class="tree-link ">
+              <span class="tree-label">👥 Equipes</span>
+            </a>
+          </div>
+          
+          
+          <div class="tree-children" style="display: none;">
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/equipes/desenvolvimento/" class="tree-link ">
+                  <span class="tree-label">💻 Desenvolvimento</span>
+                </a>
+              </div>
+              
+              
+            </div>
+            
+            <div class="tree-item" data-level="1">
+              <div class="tree-node">
+                <button class="tree-toggle" onclick="toggleTreeNode(this)" style="visibility: hidden;">
+                  <span class="tree-icon">▶</span>
+                </button>
+                <a href="/equipes/marketing/" class="tree-link ">
+                  <span class="tree-label">🎯 Marketing</span>
+                </a>
+              </div>
+              
+              
+  
 
 ... (Content truncated - file too large)
 ```
@@ -62126,7 +61806,7 @@ blockquote.quote-large {
 
 ##### 📄 index.html
 *Path: `build\dist\reunioes\index.html`*  
-*Size: 73.97 KB*
+*Size: 73.98 KB*
 
 ```html
 <!DOCTYPE html>
@@ -62161,12 +61841,12 @@ blockquote.quote-large {
       
       <div class="nav-links">
         <a href="/">Dashboard</a>
-        <a href="/Governanca/README/">Governança</a>
-        <a href="/Projetos/README/">Projetos</a>
-        <a href="/Equipes/README/">Equipes</a>
-        <a href="/Processos/README/">Processos</a>
-        <a href="/Reunioes/README/" class="active">Reuniões</a>
-        <a href="/Conhecimento/README/">Conhecimento</a>
+        <a href="/1-Governanca/README/">Governança</a>
+        <a href="/4-Projetos/README/">Projetos</a>
+        <a href="/2-Equipes/README/">Equipes</a>
+        <a href="/5-Processos/README/">Processos</a>
+        <a href="/6-Reunioes/README/" class="active">Reuniões</a>
+        <a href="/7-Conhecimento/README/">Conhecimento</a>
       </div>
       
       <div class="nav-tools">
@@ -62396,8 +62076,7 @@ blockquote.quote-large {
               </div>
               
               
-            </div>
-         
+            </di
 
 ... (Content truncated - file too large)
 ```
@@ -62409,7 +62088,7 @@ blockquote.quote-large {
 
 ##### 📄 index.html
 *Path: `build\dist\reunioes\reuniao-analise-pessimista-projetos\index.html`*  
-*Size: 79.58 KB*
+*Size: 79.60 KB*
 
 ```html
 <!DOCTYPE html>
@@ -62444,12 +62123,12 @@ blockquote.quote-large {
       
       <div class="nav-links">
         <a href="/">Dashboard</a>
-        <a href="/Governanca/README/">Governança</a>
-        <a href="/Projetos/README/">Projetos</a>
-        <a href="/Equipes/README/">Equipes</a>
-        <a href="/Processos/README/">Processos</a>
-        <a href="/Reunioes/README/" class="active">Reuniões</a>
-        <a href="/Conhecimento/README/">Conhecimento</a>
+        <a href="/1-Governanca/README/">Governança</a>
+        <a href="/4-Projetos/README/">Projetos</a>
+        <a href="/2-Equipes/README/">Equipes</a>
+        <a href="/5-Processos/README/">Processos</a>
+        <a href="/6-Reunioes/README/" class="active">Reuniões</a>
+        <a href="/7-Conhecimento/README/">Conhecimento</a>
       </div>
       
       <div class="nav-tools">
@@ -62678,8 +62357,7 @@ blockquote.quote-large {
                 </a>
               </div>
               
-              
-        
+           
 
 ... (Content truncated - file too large)
 ```
@@ -62691,7 +62369,7 @@ blockquote.quote-large {
 
 ##### 📄 index.html
 *Path: `build\dist\reunioes\reuniao-criacao-projeto-whatsbot\index.html`*  
-*Size: 77.37 KB*
+*Size: 77.38 KB*
 
 ```html
 <!DOCTYPE html>
@@ -62726,12 +62404,12 @@ blockquote.quote-large {
       
       <div class="nav-links">
         <a href="/">Dashboard</a>
-        <a href="/Governanca/README/">Governança</a>
-        <a href="/Projetos/README/">Projetos</a>
-        <a href="/Equipes/README/">Equipes</a>
-        <a href="/Processos/README/">Processos</a>
-        <a href="/Reunioes/README/" class="active">Reuniões</a>
-        <a href="/Conhecimento/README/">Conhecimento</a>
+        <a href="/1-Governanca/README/">Governança</a>
+        <a href="/4-Projetos/README/">Projetos</a>
+        <a href="/2-Equipes/README/">Equipes</a>
+        <a href="/5-Processos/README/">Processos</a>
+        <a href="/6-Reunioes/README/" class="active">Reuniões</a>
+        <a href="/7-Conhecimento/README/">Conhecimento</a>
       </div>
       
       <div class="nav-tools">
@@ -62961,7 +62639,6 @@ blockquote.quote-large {
               </div>
               
               
-           
 
 ... (Content truncated - file too large)
 ```
@@ -62973,7 +62650,7 @@ blockquote.quote-large {
 
 ##### 📄 index.html
 *Path: `build\dist\reunioes\reuniao-criacao-sistema-geracao-ideias\index.html`*  
-*Size: 77.72 KB*
+*Size: 77.73 KB*
 
 ```html
 <!DOCTYPE html>
@@ -63008,12 +62685,12 @@ blockquote.quote-large {
       
       <div class="nav-links">
         <a href="/">Dashboard</a>
-        <a href="/Governanca/README/">Governança</a>
-        <a href="/Projetos/README/">Projetos</a>
-        <a href="/Equipes/README/">Equipes</a>
-        <a href="/Processos/README/">Processos</a>
-        <a href="/Reunioes/README/" class="active">Reuniões</a>
-        <a href="/Conhecimento/README/">Conhecimento</a>
+        <a href="/1-Governanca/README/">Governança</a>
+        <a href="/4-Projetos/README/">Projetos</a>
+        <a href="/2-Equipes/README/">Equipes</a>
+        <a href="/5-Processos/README/">Processos</a>
+        <a href="/6-Reunioes/README/" class="active">Reuniões</a>
+        <a href="/7-Conhecimento/README/">Conhecimento</a>
       </div>
       
       <div class="nav-tools">
@@ -63242,8 +62919,7 @@ blockquote.quote-large {
                 </a>
               </div>
               
-              
-     
+        
 
 ... (Content truncated - file too large)
 ```
@@ -63255,7 +62931,7 @@ blockquote.quote-large {
 
 ##### 📄 index.html
 *Path: `build\dist\reunioes\reuniao-executiva-sistema\index.html`*  
-*Size: 83.82 KB*
+*Size: 83.83 KB*
 
 ```html
 <!DOCTYPE html>
@@ -63290,12 +62966,12 @@ blockquote.quote-large {
       
       <div class="nav-links">
         <a href="/">Dashboard</a>
-        <a href="/Governanca/README/">Governança</a>
-        <a href="/Projetos/README/">Projetos</a>
-        <a href="/Equipes/README/">Equipes</a>
-        <a href="/Processos/README/">Processos</a>
-        <a href="/Reunioes/README/" class="active">Reuniões</a>
-        <a href="/Conhecimento/README/">Conhecimento</a>
+        <a href="/1-Governanca/README/">Governança</a>
+        <a href="/4-Projetos/README/">Projetos</a>
+        <a href="/2-Equipes/README/">Equipes</a>
+        <a href="/5-Processos/README/">Processos</a>
+        <a href="/6-Reunioes/README/" class="active">Reuniões</a>
+        <a href="/7-Conhecimento/README/">Conhecimento</a>
       </div>
       
       <div class="nav-tools">
@@ -63525,7 +63201,7 @@ blockquote.quote-large {
               </div>
               
               
-            </div>
+      
 
 ... (Content truncated - file too large)
 ```
@@ -69661,7 +69337,7 @@ footer {
 
 ##### 📄 index.html
 *Path: `build\dist\tags\all\index.html`*  
-*Size: 68.95 KB*
+*Size: 69.01 KB*
 
 ```html
 <!DOCTYPE html>
@@ -69672,9 +69348,12 @@ footer {
   <title>Tags - Multisocios Empresarial</title>
   <meta name="description" content="Sistema de Gestão de Conhecimento Multisocios" />
   
-  <!-- CSS do tema Obsidian e customizações -->
+  <!-- CSS base (tokens, reset, sidebar) -->
   <link rel="stylesheet" href="/styles/main.css" />
   <link rel="stylesheet" href="/styles/sidebar.css" />
+  
+  <!-- CSS específico por layout (evita vazamentos) -->
+  
   
   <!-- Favicon e meta tags para PWA -->
   <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
@@ -69931,10 +69610,7 @@ footer {
                 </button>
                 <a href="/equipes/vendas/" class="tree-link ">
                   <span class="tree-label">💼 Vendas</span>
-                </a>
-              </div>
-              
-  
+
 
 ... (Content truncated - file too large)
 ```
@@ -69946,7 +69622,7 @@ footer {
 
 ##### 📄 index.html
 *Path: `build\dist\tags\anlise\index.html`*  
-*Size: 64.24 KB*
+*Size: 64.30 KB*
 
 ```html
 <!DOCTYPE html>
@@ -69957,9 +69633,12 @@ footer {
   <title>Tags - Multisocios Empresarial</title>
   <meta name="description" content="Sistema de Gestão de Conhecimento Multisocios" />
   
-  <!-- CSS do tema Obsidian e customizações -->
+  <!-- CSS base (tokens, reset, sidebar) -->
   <link rel="stylesheet" href="/styles/main.css" />
   <link rel="stylesheet" href="/styles/sidebar.css" />
+  
+  <!-- CSS específico por layout (evita vazamentos) -->
+  
   
   <!-- Favicon e meta tags para PWA -->
   <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
@@ -70216,10 +69895,7 @@ footer {
                 </button>
                 <a href="/equipes/vendas/" class="tree-link ">
                   <span class="tree-label">💼 Vendas</span>
-                </a>
-              </div>
-              
-  
+
 
 ... (Content truncated - file too large)
 ```
@@ -70231,7 +69907,7 @@ footer {
 
 ##### 📄 index.html
 *Path: `build\dist\tags\correo\index.html`*  
-*Size: 64.25 KB*
+*Size: 64.31 KB*
 
 ```html
 <!DOCTYPE html>
@@ -70242,9 +69918,12 @@ footer {
   <title>Tags - Multisocios Empresarial</title>
   <meta name="description" content="Sistema de Gestão de Conhecimento Multisocios" />
   
-  <!-- CSS do tema Obsidian e customizações -->
+  <!-- CSS base (tokens, reset, sidebar) -->
   <link rel="stylesheet" href="/styles/main.css" />
   <link rel="stylesheet" href="/styles/sidebar.css" />
+  
+  <!-- CSS específico por layout (evita vazamentos) -->
+  
   
   <!-- Favicon e meta tags para PWA -->
   <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
@@ -70501,10 +70180,7 @@ footer {
                 </button>
                 <a href="/equipes/vendas/" class="tree-link ">
                   <span class="tree-label">💼 Vendas</span>
-                </a>
-              </div>
-              
-  
+
 
 ... (Content truncated - file too large)
 ```
@@ -70516,7 +70192,7 @@ footer {
 
 ##### 📄 index.html
 *Path: `build\dist\tags\criao\index.html`*  
-*Size: 64.24 KB*
+*Size: 64.30 KB*
 
 ```html
 <!DOCTYPE html>
@@ -70527,9 +70203,12 @@ footer {
   <title>Tags - Multisocios Empresarial</title>
   <meta name="description" content="Sistema de Gestão de Conhecimento Multisocios" />
   
-  <!-- CSS do tema Obsidian e customizações -->
+  <!-- CSS base (tokens, reset, sidebar) -->
   <link rel="stylesheet" href="/styles/main.css" />
   <link rel="stylesheet" href="/styles/sidebar.css" />
+  
+  <!-- CSS específico por layout (evita vazamentos) -->
+  
   
   <!-- Favicon e meta tags para PWA -->
   <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
@@ -70786,10 +70465,7 @@ footer {
                 </button>
                 <a href="/equipes/vendas/" class="tree-link ">
                   <span class="tree-label">💼 Vendas</span>
-                </a>
-              </div>
-              
-  
+
 
 ... (Content truncated - file too large)
 ```
@@ -70801,7 +70477,7 @@ footer {
 
 ##### 📄 index.html
 *Path: `build\dist\tags\estratgia\index.html`*  
-*Size: 64.25 KB*
+*Size: 64.31 KB*
 
 ```html
 <!DOCTYPE html>
@@ -70812,9 +70488,12 @@ footer {
   <title>Tags - Multisocios Empresarial</title>
   <meta name="description" content="Sistema de Gestão de Conhecimento Multisocios" />
   
-  <!-- CSS do tema Obsidian e customizações -->
+  <!-- CSS base (tokens, reset, sidebar) -->
   <link rel="stylesheet" href="/styles/main.css" />
   <link rel="stylesheet" href="/styles/sidebar.css" />
+  
+  <!-- CSS específico por layout (evita vazamentos) -->
+  
   
   <!-- Favicon e meta tags para PWA -->
   <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
@@ -71071,10 +70750,7 @@ footer {
                 </button>
                 <a href="/equipes/vendas/" class="tree-link ">
                   <span class="tree-label">💼 Vendas</span>
-                </a>
-              </div>
-              
-  
+
 
 ... (Content truncated - file too large)
 ```
@@ -71086,7 +70762,7 @@ footer {
 
 ##### 📄 index.html
 *Path: `build\dist\tags\governanca\index.html`*  
-*Size: 64.68 KB*
+*Size: 64.74 KB*
 
 ```html
 <!DOCTYPE html>
@@ -71097,9 +70773,12 @@ footer {
   <title>Tags - Multisocios Empresarial</title>
   <meta name="description" content="Sistema de Gestão de Conhecimento Multisocios" />
   
-  <!-- CSS do tema Obsidian e customizações -->
+  <!-- CSS base (tokens, reset, sidebar) -->
   <link rel="stylesheet" href="/styles/main.css" />
   <link rel="stylesheet" href="/styles/sidebar.css" />
+  
+  <!-- CSS específico por layout (evita vazamentos) -->
+  
   
   <!-- Favicon e meta tags para PWA -->
   <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
@@ -71356,10 +71035,7 @@ footer {
                 </button>
                 <a href="/equipes/vendas/" class="tree-link ">
                   <span class="tree-label">💼 Vendas</span>
-                </a>
-              </div>
-              
-  
+
 
 ... (Content truncated - file too large)
 ```
@@ -71371,7 +71047,7 @@ footer {
 
 ##### 📄 index.html
 *Path: `build\dist\tags\ideias\index.html`*  
-*Size: 64.25 KB*
+*Size: 64.31 KB*
 
 ```html
 <!DOCTYPE html>
@@ -71382,9 +71058,12 @@ footer {
   <title>Tags - Multisocios Empresarial</title>
   <meta name="description" content="Sistema de Gestão de Conhecimento Multisocios" />
   
-  <!-- CSS do tema Obsidian e customizações -->
+  <!-- CSS base (tokens, reset, sidebar) -->
   <link rel="stylesheet" href="/styles/main.css" />
   <link rel="stylesheet" href="/styles/sidebar.css" />
+  
+  <!-- CSS específico por layout (evita vazamentos) -->
+  
   
   <!-- Favicon e meta tags para PWA -->
   <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
@@ -71641,10 +71320,7 @@ footer {
                 </button>
                 <a href="/equipes/vendas/" class="tree-link ">
                   <span class="tree-label">💼 Vendas</span>
-                </a>
-              </div>
-              
-  
+
 
 ... (Content truncated - file too large)
 ```
@@ -71656,7 +71332,7 @@ footer {
 
 ##### 📄 index.html
 *Path: `build\dist\tags\pilotosvalidados\index.html`*  
-*Size: 64.14 KB*
+*Size: 64.20 KB*
 
 ```html
 <!DOCTYPE html>
@@ -71667,9 +71343,12 @@ footer {
   <title>Tags - Multisocios Empresarial</title>
   <meta name="description" content="Sistema de Gestão de Conhecimento Multisocios" />
   
-  <!-- CSS do tema Obsidian e customizações -->
+  <!-- CSS base (tokens, reset, sidebar) -->
   <link rel="stylesheet" href="/styles/main.css" />
   <link rel="stylesheet" href="/styles/sidebar.css" />
+  
+  <!-- CSS específico por layout (evita vazamentos) -->
+  
   
   <!-- Favicon e meta tags para PWA -->
   <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
@@ -71926,10 +71605,7 @@ footer {
                 </button>
                 <a href="/equipes/vendas/" class="tree-link ">
                   <span class="tree-label">💼 Vendas</span>
-                </a>
-              </div>
-              
-  
+
 
 ... (Content truncated - file too large)
 ```
@@ -71941,7 +71617,7 @@ footer {
 
 ##### 📄 index.html
 *Path: `build\dist\tags\projeto\index.html`*  
-*Size: 64.38 KB*
+*Size: 64.44 KB*
 
 ```html
 <!DOCTYPE html>
@@ -71952,9 +71628,12 @@ footer {
   <title>Tags - Multisocios Empresarial</title>
   <meta name="description" content="Sistema de Gestão de Conhecimento Multisocios" />
   
-  <!-- CSS do tema Obsidian e customizações -->
+  <!-- CSS base (tokens, reset, sidebar) -->
   <link rel="stylesheet" href="/styles/main.css" />
   <link rel="stylesheet" href="/styles/sidebar.css" />
+  
+  <!-- CSS específico por layout (evita vazamentos) -->
+  
   
   <!-- Favicon e meta tags para PWA -->
   <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
@@ -72211,10 +71890,7 @@ footer {
                 </button>
                 <a href="/equipes/vendas/" class="tree-link ">
                   <span class="tree-label">💼 Vendas</span>
-                </a>
-              </div>
-              
-  
+
 
 ... (Content truncated - file too large)
 ```
@@ -72226,7 +71902,7 @@ footer {
 
 ##### 📄 index.html
 *Path: `build\dist\tags\projetos\index.html`*  
-*Size: 65.71 KB*
+*Size: 65.77 KB*
 
 ```html
 <!DOCTYPE html>
@@ -72237,9 +71913,12 @@ footer {
   <title>Tags - Multisocios Empresarial</title>
   <meta name="description" content="Sistema de Gestão de Conhecimento Multisocios" />
   
-  <!-- CSS do tema Obsidian e customizações -->
+  <!-- CSS base (tokens, reset, sidebar) -->
   <link rel="stylesheet" href="/styles/main.css" />
   <link rel="stylesheet" href="/styles/sidebar.css" />
+  
+  <!-- CSS específico por layout (evita vazamentos) -->
+  
   
   <!-- Favicon e meta tags para PWA -->
   <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
@@ -72496,10 +72175,7 @@ footer {
                 </button>
                 <a href="/equipes/vendas/" class="tree-link ">
                   <span class="tree-label">💼 Vendas</span>
-                </a>
-              </div>
-              
-  
+
 
 ... (Content truncated - file too large)
 ```
@@ -72511,7 +72187,7 @@ footer {
 
 ##### 📄 index.html
 *Path: `build\dist\tags\projetosandamento\index.html`*  
-*Size: 64.14 KB*
+*Size: 64.20 KB*
 
 ```html
 <!DOCTYPE html>
@@ -72522,9 +72198,12 @@ footer {
   <title>Tags - Multisocios Empresarial</title>
   <meta name="description" content="Sistema de Gestão de Conhecimento Multisocios" />
   
-  <!-- CSS do tema Obsidian e customizações -->
+  <!-- CSS base (tokens, reset, sidebar) -->
   <link rel="stylesheet" href="/styles/main.css" />
   <link rel="stylesheet" href="/styles/sidebar.css" />
+  
+  <!-- CSS específico por layout (evita vazamentos) -->
+  
   
   <!-- Favicon e meta tags para PWA -->
   <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
@@ -72781,10 +72460,7 @@ footer {
                 </button>
                 <a href="/equipes/vendas/" class="tree-link ">
                   <span class="tree-label">💼 Vendas</span>
-                </a>
-              </div>
-              
-  
+
 
 ... (Content truncated - file too large)
 ```
@@ -72796,7 +72472,7 @@ footer {
 
 ##### 📄 index.html
 *Path: `build\dist\tags\projetosativos\index.html`*  
-*Size: 64.65 KB*
+*Size: 64.71 KB*
 
 ```html
 <!DOCTYPE html>
@@ -72807,9 +72483,12 @@ footer {
   <title>Tags - Multisocios Empresarial</title>
   <meta name="description" content="Sistema de Gestão de Conhecimento Multisocios" />
   
-  <!-- CSS do tema Obsidian e customizações -->
+  <!-- CSS base (tokens, reset, sidebar) -->
   <link rel="stylesheet" href="/styles/main.css" />
   <link rel="stylesheet" href="/styles/sidebar.css" />
+  
+  <!-- CSS específico por layout (evita vazamentos) -->
+  
   
   <!-- Favicon e meta tags para PWA -->
   <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
@@ -73066,10 +72745,7 @@ footer {
                 </button>
                 <a href="/equipes/vendas/" class="tree-link ">
                   <span class="tree-label">💼 Vendas</span>
-                </a>
-              </div>
-              
-  
+
 
 ... (Content truncated - file too large)
 ```
@@ -73081,7 +72757,7 @@ footer {
 
 ##### 📄 index.html
 *Path: `build\dist\tags\reunio\index.html`*  
-*Size: 64.46 KB*
+*Size: 64.52 KB*
 
 ```html
 <!DOCTYPE html>
@@ -73092,9 +72768,12 @@ footer {
   <title>Tags - Multisocios Empresarial</title>
   <meta name="description" content="Sistema de Gestão de Conhecimento Multisocios" />
   
-  <!-- CSS do tema Obsidian e customizações -->
+  <!-- CSS base (tokens, reset, sidebar) -->
   <link rel="stylesheet" href="/styles/main.css" />
   <link rel="stylesheet" href="/styles/sidebar.css" />
+  
+  <!-- CSS específico por layout (evita vazamentos) -->
+  
   
   <!-- Favicon e meta tags para PWA -->
   <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
@@ -73351,10 +73030,7 @@ footer {
                 </button>
                 <a href="/equipes/vendas/" class="tree-link ">
                   <span class="tree-label">💼 Vendas</span>
-                </a>
-              </div>
-              
-  
+
 
 ... (Content truncated - file too large)
 ```
@@ -73366,7 +73042,7 @@ footer {
 
 ##### 📄 index.html
 *Path: `build\dist\tags\reunioes\index.html`*  
-*Size: 64.61 KB*
+*Size: 64.67 KB*
 
 ```html
 <!DOCTYPE html>
@@ -73377,9 +73053,12 @@ footer {
   <title>Tags - Multisocios Empresarial</title>
   <meta name="description" content="Sistema de Gestão de Conhecimento Multisocios" />
   
-  <!-- CSS do tema Obsidian e customizações -->
+  <!-- CSS base (tokens, reset, sidebar) -->
   <link rel="stylesheet" href="/styles/main.css" />
   <link rel="stylesheet" href="/styles/sidebar.css" />
+  
+  <!-- CSS específico por layout (evita vazamentos) -->
+  
   
   <!-- Favicon e meta tags para PWA -->
   <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
@@ -73636,10 +73315,7 @@ footer {
                 </button>
                 <a href="/equipes/vendas/" class="tree-link ">
                   <span class="tree-label">💼 Vendas</span>
-                </a>
-              </div>
-              
-  
+
 
 ... (Content truncated - file too large)
 ```
@@ -73651,7 +73327,7 @@ footer {
 
 ##### 📄 index.html
 *Path: `build\dist\tags\sistema\index.html`*  
-*Size: 64.25 KB*
+*Size: 64.31 KB*
 
 ```html
 <!DOCTYPE html>
@@ -73662,9 +73338,12 @@ footer {
   <title>Tags - Multisocios Empresarial</title>
   <meta name="description" content="Sistema de Gestão de Conhecimento Multisocios" />
   
-  <!-- CSS do tema Obsidian e customizações -->
+  <!-- CSS base (tokens, reset, sidebar) -->
   <link rel="stylesheet" href="/styles/main.css" />
   <link rel="stylesheet" href="/styles/sidebar.css" />
+  
+  <!-- CSS específico por layout (evita vazamentos) -->
+  
   
   <!-- Favicon e meta tags para PWA -->
   <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
@@ -73921,10 +73600,7 @@ footer {
                 </button>
                 <a href="/equipes/vendas/" class="tree-link ">
                   <span class="tree-label">💼 Vendas</span>
-                </a>
-              </div>
-              
-  
+
 
 ... (Content truncated - file too large)
 ```
@@ -73936,7 +73612,7 @@ footer {
 
 ##### 📄 index.html
 *Path: `build\dist\tags\whatsbot\index.html`*  
-*Size: 64.24 KB*
+*Size: 64.30 KB*
 
 ```html
 <!DOCTYPE html>
@@ -73947,9 +73623,12 @@ footer {
   <title>Tags - Multisocios Empresarial</title>
   <meta name="description" content="Sistema de Gestão de Conhecimento Multisocios" />
   
-  <!-- CSS do tema Obsidian e customizações -->
+  <!-- CSS base (tokens, reset, sidebar) -->
   <link rel="stylesheet" href="/styles/main.css" />
   <link rel="stylesheet" href="/styles/sidebar.css" />
+  
+  <!-- CSS específico por layout (evita vazamentos) -->
+  
   
   <!-- Favicon e meta tags para PWA -->
   <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
@@ -74206,10 +73885,7 @@ footer {
                 </button>
                 <a href="/equipes/vendas/" class="tree-link ">
                   <span class="tree-label">💼 Vendas</span>
-                </a>
-              </div>
-              
-  
+
 
 ... (Content truncated - file too large)
 ```
@@ -74514,6 +74190,311 @@ class ProjectAnalyzer:
             out.write(f"### 🖼️ Project Images\n\n")
             for file_path in sorted(image_files):
                 rel_path = os.path.relpath(file_path, s
+
+... (Content truncated - file too large)
+```
+
+---
+
+##### 📄 compilado site1.md
+*Path: `compilado site1.md`*  
+*Size: 2.52 MB*
+
+```md
+# 📊 Project Analysis Report
+
+**Generated on:** 2025-09-03 00:12:25  
+**Root directory:** `C:\Users\pedro\OneDrive\Área de Trabalho\DIGITAL-GARDEN-EMPRESA-GITHUB`  
+**Purpose:** Complete project structure documentation excluding CSV files
+
+## 📈 Project Summary
+
+- **Total files analyzed:** 550
+- **📄 Code/Text files:** 449
+- **🖼️ Image files:** 93
+- **🚫 Excluded files (CSV):** 0
+- **⚠️ Large files (> 5MB):** 2
+- **📁 Other files:** 6
+
+## 🌳 Project Structure
+
+```
+├── .11tydata.js 📄
+├── .cursor 📁
+│   └── rules.md 📄
+├── .eleventy.js 📄
+├── .obsidian 📁
+│   ├── app.json 📄
+│   ├── appearance.json 📄
+│   ├── community-plugins.json 📄
+│   ├── copilot-index-b36420264f6817624f06c39a4cef58b4.json 📄
+│   ├── core-plugins.json 📄
+│   ├── graph.json 📄
+│   ├── plugins 📁
+│   │   ├── auto-note-mover 📁
+│   │   │   ├── data.json 📄
+│   │   │   ├── main.js 📄
+│   │   │   └── manifest.json 📄
+│   │   ├── better-export-pdf 📁
+│   │   │   ├── main.js 📄
+│   │   │   ├── manifest.json 📄
+│   │   │   └── styles.css 📄
+│   │   ├── breadcrumbs 📁
+│   │   │   ├── main.js 📄
+│   │   │   ├── manifest.json 📄
+│   │   │   └── styles.css 📄
+│   │   ├── calendar 📁
+│   │   │   ├── data.json 📄
+│   │   │   ├── main.js 📄
+│   │   │   └── manifest.json 📄
+│   │   ├── copilot 📁
+│   │   │   ├── data.json 📄
+│   │   │   ├── main.js 📄
+│   │   │   ├── manifest.json 📄
+│   │   │   └── styles.css 📄
+│   │   ├── dataview 📁
+│   │   │   ├── data.json 📄
+│   │   │   ├── main.js 📄
+│   │   │   ├── manifest.json 📄
+│   │   │   └── styles.css 📄
+│   │   ├── digitalgarden 📁
+│   │   │   ├── data.json 📄
+│   │   │   ├── main.js 📄
+│   │   │   ├── manifest.json 📄
+│   │   │   └── styles.css 📄
+│   │   ├── graph-analysis 📁
+│   │   │   ├── main.js 📄
+│   │   │   ├── manifest.json 📄
+│   │   │   └── styles.css 📄
+│   │   ├── obsidian-advanced-uri 📁
+│   │   │   ├── main.js 📄
+│   │   │   └── manifest.json 📄
+│   │   ├── obsidian-banners 📁
+│   │   │   ├── main.js 📄
+│   │   │   ├── manifest.json 📄
+│   │   │   └── styles.css 📄
+│   │   ├── obsidian-book-search-plugin 📁
+│   │   │   ├── main.js 📄
+│   │   │   ├── manifest.json 📄
+│   │   │   └── styles.css 📄
+│   │   ├── obsidian-charts 📁
+│   │   │   ├── main.js 📄
+│   │   │   ├── manifest.json 📄
+│   │   │   └── styles.css 📄
+│   │   ├── obsidian-excalidraw-plugin 📁
+│   │   │   ├── data.json 📄
+│   │   │   ├── main.js 📄
+│   │   │   ├── manifest.json 📄
+│   │   │   └── styles.css 📄
+│   │   ├── obsidian-frontmatter-tag-suggest 📁
+│   │   │   ├── main.js 📄
+│   │   │   └── manifest.json 📄
+│   │   ├── obsidian-kanban 📁
+│   │   │   ├── main.js 📄
+│   │   │   ├── manifest.json 📄
+│   │   │   └── styles.css 📄
+│   │   ├── obsidian-meta-bind-plugin 📁
+│   │   │   ├── data.json 📄
+│   │   │   ├── main.js 📄
+│   │   │   ├── manifest.json 📄
+│   │   │   └── styles.css 📄
+│   │   ├── obsidian-projects 📁
+│   │   │   ├── data.json 📄
+│   │   │   ├── main.js 📄
+│   │   │   ├── manifest.json 📄
+│   │   │   └── styles.css 📄
+│   │   ├── obsidian-tasks-plugin 📁
+│   │   │   ├── main.js 📄
+│   │   │   ├── manifest.json 📄
+│   │   │   └── styles.css 📄
+│   │   ├── obsidian-wikipedia 📁
+│   │   │   ├── main.js 📄
+│   │   │   └── manifest.json 📄
+│   │   ├── smart-connections 📁
+│   │   │   ├── data.json 📄
+│   │   │   ├── main.js 📄
+│   │   │   ├── manifest.json 📄
+│   │   │   └── styles.css 📄
+│   │   ├── tag-wrangler 📁
+│   │   │   ├── main.js 📄
+│   │   │   └── manifest.json 📄
+│   │   ├── templater-obsidian 📁
+│   │   │   ├── data.json 📄
+│   │   │   ├── main.js 📄
+│   │   │   ├── manifest.json 📄
+│   │   │   └── styles.css 📄
+│   │   ├── update-time-on-edit 📁
+│   │   │   ├── data.json 📄
+│   │   │   ├── main.js 📄
+│   │   │   ├── manifest.json 📄
+│   │   │   └── styles.css 📄
+│   │   └── zettelkasten-llm-tools 📁
+│   │       ├── main.js 📄
+│   │       ├── manifest.json 📄
+│   │       └── styles.css 📄
+│   ├── templates.json 📄
+│   ├── themes 📁
+│   │   └── Atom 📁
+│   │       ├── manifest.json 📄
+│   │       └── theme.css 📄
+│   └── workspace.json 📄
+├── 99-RESOURCES 📁
+│   └── 99 - TEMPLATE 📁
+│       ├── !TEMPLATE_R02.md 📄
+│       ├── 5_Structure Template 1.md 📄
+│       ├── 5_Structure Template 1.txt 📄
+│       ├── Dashboard-Projetos-Prazo-Visual-Template.md 📄
+│       ├── Dashboard-Visual-Template-Fixed.md 📄
+│       ├── Dashboard-Visual-Template.md 📄
+│       ├── Prompt.txt.md 📄
+│       ├── Prompt2.md.md 📄
+│       ├── TEMPLATE OFICIAL.md 📄
+│       ├── TEMPLATE_R00.md 📄
+│       ├── Template_Intake_Simples.md 📄
+│       ├── Template_Projeto.md 📄
+│       ├── new_tamplate .txt 📄
+│       └── new_tamplate.md 📄
+├── README.md 📄
+├── _redirects 📄
+├── _site_index 📁
+│   ├── issues.md 📄
+│   ├── layouts_analysis.md 📄
+│   ├── site_index.json 📄
+│   └── site_outline.md 📄
+├── _site_snapshots 📁
+├── build 📁
+│   ├── _site_index 📁
+│   │   ├── issues.md 📄
+│   │   ├── layouts_analysis.md 📄
+│   │   ├── site_index.json 📄
+│   │   └── site_outline.md 📄
+│   ├── dist 📁
+│   │   ├── .cursor 📁
+│   │   │   └── rules 📁
+│   │   │       └── index.html 📄
+│   │   ├── 0-Dashboard-Executivo 📁
+│   │   │   ├── Dashboard-Projetos-Prazo 📁
+│   │   │   │   └── index.html 📄
+│   │   │   ├── Dashboard-Projetos-Prazo-Visual 📁
+│   │   │   │   └── index.html 📄
+│   │   │   ├── Dashboard_Capacidade_Equipe 📁
+│   │   │   │   └── index.html 📄
+│   │   │   ├── Decisoes-Estrategicas 📁
+│   │   │   │   └── index.html 📄
+│   │   │   ├── Executive-Auto 📁
+│   │   │   │   └── index.html 📄
+│   │   │   ├── Innovation-Pipeline 📁
+│   │   │   │   └── index.html 📄
+│   │   │   ├── KPIs-Principais 📁
+│   │   │   │   └── index.html 📄
+│   │   │   └── Sistema_Metricas_Avancadas 📁
+│   │   │       └── index.html 📄
+│   │   ├── 1-Governanca 📁
+│   │   │   ├── Acordo_Socios_Final 📁
+│   │   │   │   └── index.html 📄
+│   │   │   ├── Compliance_Log 📁
+│   │   │   │   └── index.html 📄
+│   │   │   ├── FAQ_Compliance 📁
+│   │   │   │   └── index.html 📄
+│   │   │   ├── Manual_Treinamento_Compliance 📁
+│   │   │   │   └── index.html 📄
+│   │   │   ├── Playbook_Comercial_v0 📁
+│   │   │   │   └── index.html 📄
+│   │   │   ├── README 📁
+│   │   │   │   └── index.html 📄
+│   │   │   └── etica_uso_IA 📁
+│   │   │       └── index.html 📄
+│   │   ├── 1000 - REUNIOES 📁
+│   │   │   └── 30_08-25 REUNIAO INICIAL 📁
+│   │   │       ├── 10 - Prompt organização atas de reuniao a partir de transcrição  📁
+│   │   │       ├── ATA GEMINI 📁
+│   │   │       │   └── index.html 📄
+│   │   │       ├── ATA_MultiSocios_2025-08-30.pdf 📁
+│   │   │       ├── EXECUTIVO 📁
+│   │   │       │   ├── ATA-30_08_25 - REUNIÃOINICIAL-R00 📁
+│   │   │       │   │   └── index.html 📄
+│   │   │       │   ├── ata_modernizada 📁
+│   │   │       │   │   └── index.html 📄
+│   │   │       │   ├── generation-957ba223-d832-4504-95cb-a4d49db4d0a8.png 🖼️
+│   │   │       │   ├── generation-e6329cba-92f2-4576-b2c4-6ae7594ce644.png 🖼️
+│   │   │       │   ├── generation-ed140599-c364-47b1-988e-01557efb3010.png 🖼️
+│   │   │       │   ├── manifestomultisocios 📁
+│   │   │       │   │   └── index.html 📄
+│   │   │       │   └── pessoas.png 🖼️
+│   │   │       ├── INSTRUCOES_RAPIDAS 📁
+│   │   │       │   └── index.html 📄
+│   │   │       ├── MultiSócios_Radar_Edição1.pdf 📁
+│   │   │       ├── README_CONVERSOR 📁
+│   │   │       │   └── index.html 📄
+│   │   │       ├── Reunião Multisócios @hoje 25f0c1a9c7ee80d4958bc6efaebffa21 📁
+│   │   │       │   └── index.html 📄
+│   │   │       ├── advanced-multisocios-components 📁
+│   │   │       │   └── index.html 📄
+│   │   │       ├── ata_modernizada - ANTES 📁
+│   │   │       │   └── index.html 📄
+│   │   │       ├── ata_modernizada_pos 📁
+│   │   │       │   └── index.html 📄
+│   │   │       ├── plano_revista_multisocios 📁
+│   │   │       │   └── index.html 📄
+│   │   │       └── revista_multisocios_radar_edicao1 📁
+│   │   │           └── index.html 📄
+│   │   ├── 1000-REUNIOES 📁
+│   │   │   └── 30_08-25 REUNIAO INICIAL 📁
+│   │   │       ├── 10 - Prompt organização atas de reuniao a partir de transcrição  📁
+│   │   │       ├── ATA GEMINI 📁
+│   │   │       │   └── index.html 📄
+│   │   │       ├── ATA_MultiSocios_2025-08-30.pdf 📁
+│   │   │       ├── EXECUTIVO 📁
+│   │   │       │   ├── ATA-30_08_25 - REUNIÃOINICIAL-R00 📁
+│   │   │       │   │   └── index.html 📄
+│   │   │       │   ├── ata_modernizada 📁
+│   │   │       │   │   └── index.html 📄
+│   │   │       │   ├── generation-957ba223-d832-4504-95cb-a4d49db4d0a8.png 🖼️
+│   │   │       │   ├── generation-e6329cba-92f2-4576-b2c4-6ae7594ce644.png 🖼️
+│   │   │       │   ├── generation-ed140599-c364-47b1-988e-01557efb3010.png 🖼️
+│   │   │       │   ├── manifestomultisocios 📁
+│   │   │       │   │   └── index.html 📄
+│   │   │       │   └── pessoas.png 🖼️
+│   │   │       ├── INSTRUCOES_RAPIDAS 📁
+│   │   │       │   └── index.html 📄
+│   │   │       ├── MultiSócios_Radar_Edição1.pdf 📁
+│   │   │       ├── README_CONVERSOR 📁
+│   │   │       │   └── index.html 📄
+│   │   │       ├── Reunião Multisócios @hoje 25f0c1a9c7ee80d4958bc6efaebffa21 📁
+│   │   │       │   └── index.html 📄
+│   │   │       ├── advanced-multisocios-components 📁
+│   │   │       │   └── index.html 📄
+│   │   │       ├── ata_modernizada - ANTES 📁
+│   │   │       │   └── index.html 📄
+│   │   │       ├── ata_modernizada_pos 📁
+│   │   │       │   └── index.html 📄
+│   │   │       ├── plano_revista_multisocios 📁
+│   │   │       │   └── index.html 📄
+│   │   │       └── revista_multisocios_radar_edicao1 📁
+│   │   │           └── index.html 📄
+│   │   ├── 2-Equipes 📁
+│   │   │   └── README 📁
+│   │   │       └── index.html 📄
+│   │   ├── 3-Mercado 📁
+│   │   │   └── README 📁
+│   │   │       └── index.html 📄
+│   │   ├── 4-Projetos 📁
+│   │   │   ├── Ativos 📁
+│   │   │   │   ├── PRJ-AERALYN 📁
+│   │   │   │   │   └── index.html 📄
+│   │   │   │   ├── PRJ-Curso-IA-Inteligente 📁
+│   │   │   │   │   └── index.html 📄
+│   │   │   │   ├── PRJ-Nostalgia-Musical 📁
+│   │   │   │   │   └── index.html 📄
+│   │   │   │   ├── PRJ-Plataforma-Cursos 📁
+│   │   │   │   │   └── index.html 📄
+│   │   │   │   ├── PRJ-Trip-Match 📁
+│   │   │   │   │   └── index.html 📄
+│   │   │   │   └── PRJ-Vault-Empresarial 📁
+│   │   │   │       └── index.html 📄
+│   │   │   ├── README 📁
+│   │   │   │   └── index.html 📄
+│   │
 
 ... (Content truncated - file too large)
 ```
@@ -89391,7 +89372,7 @@ eleventyNavigation:
 
 ##### 📄 content.11tydata.js
 *Path: `content\content.11tydata.js`*  
-*Size: 3.51 KB*
+*Size: 3.69 KB*
 
 ```js
 module.exports = {
@@ -89433,6 +89414,11 @@ module.exports = {
           return `/${cleanSection}/${subFolder}/`;
         }
         return `/${cleanSection}/`;
+      }
+      
+      // Caso especial para TEMPLATES.md em 4-Projetos
+      if (fileName === 'TEMPLATES' && section === '4-Projetos') {
+        return `/projetos/templates-guia/`;
       }
       
       // Para outros arquivos, criar URL limpa
@@ -90113,7 +90099,7 @@ Bem-vindo ao sistema de gestão de conhecimento da empresa. Este ambiente integr
 
 ##### 📄 package.json
 *Path: `package.json`*  
-*Size: 2.23 KB*
+*Size: 2.31 KB*
 
 ```json
 {
@@ -90126,8 +90112,9 @@ Bem-vindo ao sistema de gestão de conhecimento da empresa. Este ambiente integr
     "start": "eleventy --serve",
     "dev": "eleventy --serve",
     "clean": "node -e \"const fs = require('fs'); if (fs.existsSync('dist')) fs.rmSync('dist', {recursive: true, force: true});\"",
-    "prebuild": "npm run clean",
+    "prebuild": "npm run clean && npm run generate:static",
     "postbuild": "npm run site:index",
+    "generate:static": "node scripts/generate-static-data.js",
     "site:index": "node src/scripts/site-indexer.js",
     "audit": "npm run build && echo Audit completed - check _site_index/ folder",
     "validate:urls": "node scripts/validate-urls.js"
@@ -90189,6 +90176,287 @@ Bem-vindo ao sistema de gestão de conhecimento da empresa. Este ambiente integr
 
 
 #### 📁 Directory: scripts
+
+##### 📄 generate-static-data.js
+*Path: `scripts\generate-static-data.js`*  
+*Size: 7.58 KB*
+
+```js
+#!/usr/bin/env node
+
+/**
+ * Script para converter funcionalidades dinâmicas (Dataview) em dados estáticos
+ * Gera tabelas/listas HTML a partir do frontmatter dos arquivos .md
+ */
+
+const fs = require('fs');
+const path = require('path');
+const yaml = require('js-yaml');
+const glob = require('glob');
+
+// Configurações
+const CONTENT_DIR = './content';
+const INCLUDES_DIR = './src/components/_includes/partials';
+
+// Garantir que o diretório de partials existe
+if (!fs.existsSync(INCLUDES_DIR)) {
+  fs.mkdirSync(INCLUDES_DIR, { recursive: true });
+}
+
+/**
+ * Extrai frontmatter de um arquivo Markdown
+ */
+function extractFrontMatter(filePath) {
+  const content = fs.readFileSync(filePath, 'utf8');
+  const match = content.match(/^---\s*([\s\S]*?)\s*---/);
+  
+  if (match && match[1]) {
+    try {
+      const frontMatter = yaml.load(match[1]);
+      return {
+        ...frontMatter,
+        _filePath: filePath,
+        _fileName: path.basename(filePath, '.md'),
+        _section: path.dirname(filePath).replace(CONTENT_DIR + '/', '').split('/')[0]
+      };
+    } catch (e) {
+      console.error(`Erro ao parsear frontmatter em ${filePath}:`, e);
+      return {};
+    }
+  }
+  return {};
+}
+
+/**
+ * Coleta todos os dados dos projetos
+ */
+function collectProjectData() {
+  const projectFiles = glob.sync(`${CONTENT_DIR}/4-Projetos/**/*.md`);
+  const projects = [];
+
+  projectFiles.forEach(file => {
+    if (file.includes('README') || file.includes('TEMPLATE')) return;
+    
+    const data = extractFrontMatter(file);
+    if (data.type === 'project' || data.type === 'pilot') {
+      projects.push(data);
+    }
+  });
+
+  return projects.sort((a, b) => {
+    // Ordenar por prioridade e budget
+    const priorityOrder = { high: 3, medium: 2, low: 1 };
+    const aPriority = priorityOrder[a.priority] || 0;
+    const bPriority = priorityOrder[b.priority] || 0;
+    
+    if (aPriority !== bPriority) return bPriority - aPriority;
+    return (b.budget || 0) - (a.budget || 0);
+  });
+}
+
+/**
+ * Coleta dados das reuniões
+ */
+function collectMeetingData() {
+  const meetingFiles = glob.sync(`${CONTENT_DIR}/6-Reunioes/**/*.md`);
+  const meetings = [];
+
+  meetingFiles.forEach(file => {
+    if (file.includes('README')) return;
+    
+    const data = extractFrontMatter(file);
+    if (data.created || data.date) {
+      meetings.push(data);
+    }
+  });
+
+  return meetings.sort((a, b) => {
+    const aDate = new Date(a.created || a.date);
+    const bDate = new Date(b.created || b.date);
+    return bDate - aDate;
+  });
+}
+
+/**
+ * Gera tabela HTML de projetos por status
+ */
+function generateProjectsByStatusTable(projects) {
+  const statusGroups = {};
+  
+  projects.forEach(project => {
+    const status = project.status || 'unknown';
+    if (!statusGroups[status]) statusGroups[status] = [];
+    statusGroups[status].push(project);
+  });
+
+  let html = `<div class="projects-by-status">
+<table class="data-table">
+<thead>
+  <tr>
+    <th>Status</th>
+    <th>Projeto</th>
+    <th>Owner</th>
+    <th>Budget</th>
+    <th>Esforço</th>
+    <th>ROI</th>
+  </tr>
+</thead>
+<tbody>`;
+
+  Object.entries(statusGroups).forEach(([status, projectList]) => {
+    projectList.forEach((project, index) => {
+      const statusIcon = {
+        'idea': '💡',
+        'planning': '📋', 
+        'development': '🚧',
+        'testing': '🧪',
+        'active': '🚀',
+        'completed': '✅'
+      }[status] || '❓';
+
+      const roi = project.budget ? Math.round(project.budget * 3.47) : 0;
+      
+      html += `
+  <tr>
+    <td>${statusIcon} ${status}</td>
+    <td><a href="/projetos/${project._fileName.toLowerCase().replace(/^prj-/, '').replace(/[-_]/g, '-')}/">${project.title || project._fileName}</a></td>
+    <td>${project.owner || 'N/A'}</td>
+    <td>R$ ${project.budget || 0}</td>
+    <td>${project.effort_weeks || 0}w</td>
+    <td>R$ ${roi}</td>
+  </tr>`;
+    });
+  });
+
+  html += `
+</tbody>
+</table>
+</div>`;
+
+  return html;
+}
+
+/**
+ * Gera métricas consolidadas
+ */
+function generateMetricsSummary(projects) {
+  const totalBudget = projects.reduce((sum, p) => sum + (p.budget || 0), 0);
+  const totalROI = Math.round(totalBudget * 3.47);
+  const activeProjects = projects.filter(p => p.status === 'active').length;
+  const avgEffort = projects.reduce((sum, p) => sum + (p.effort_weeks || 0), 0) / projects.length;
+
+  return `<div class="metrics-summary">
+<div class="metric-card">
+  <h3>💰 Budget Total</h3>
+  <p class="metric-value">R$ ${totalBudget.toLocaleString()}</p>
+</div>
+<div class="metric-card">
+  <h3>📈 ROI Projetado</h3>
+  <p class="metric-value">R$ ${totalROI.toLocaleString()}</p>
+</div>
+<div class="metric-card">
+  <h3>🚀 Projetos Ativos</h3>
+  <p class="metric-value">${activeProjects}</p>
+</div>
+<div class="metric-card">
+  <h3>⏱️ Esforço Médio</h3>
+  <p class="metric-value">${Math.round(avgEffort)}w</p>
+</div>
+</div>`;
+}
+
+/**
+ * Gera lista de reuniões recentes
+ */
+function generateRecentMeetings(meetings) {
+  const recent = meetings.slice(0, 5);
+  
+  let html = `<div class="recent-meetings">
+<h3>📅 Reuniões Recentes</h3>
+<ul class="meeting-list">`;
+
+  recent.forEach(meeting => {
+    const date = new Date(meeting.created || meeting.date).toLocaleDateString('pt-BR');
+    const url = `/reunioes/${meeting._fileName.toLowerCase().replace(/\s+/g, '-')}/`;
+    
+    html += `
+  <li class="meeting-item">
+    <a href="${url}">${meeting.title || meeting._fileName}</a>
+    <span class="meeting-date">${date}</span>
+  </li>`;
+  });
+
+  html += `
+</ul>
+</div>`;
+
+  return html;
+}
+
+/**
+ * Função principal
+ */
+function generateStaticData() {
+  console.log('🔄 Gerando dados estáticos...');
+
+  try {
+    // Coletar dados
+    const projects = collectProjectData();
+    const meetings = collectMeetingData();
+
+    console.log(`📊 Encontrados ${projects.length} projetos e ${meetings.length} reuniões`);
+
+    // Gerar partials
+    const projectsTable = generateProjectsByStatusTable(projects);
+    const metricsSummary = generateMetricsSummary(projects);
+    const recentMeetings = generateRecentMeetings(meetings);
+
+    // Salvar arquivos
+    fs.writeFileSync(path.join(INCLUDES_DIR, 'projects-table.njk'), projectsTable);
+    fs.writeFileSync(path.join(INCLUDES_DIR, 'metrics-summary.njk'), metricsSummary);
+    fs.writeFileSync(path.join(INCLUDES_DIR, 'recent-meetings.njk'), recentMeetings);
+
+    // Calcular métricas
+    const totalBudget = projects.reduce((sum, p) => sum + (p.budget || 0), 0);
+    
+    // Gerar dados JSON para uso em JavaScript
+    const dataForJS = {
+      projects: projects.map(p => ({
+        title: p.title,
+        status: p.status,
+        budget: p.budget,
+        owner: p.owner,
+        url: `/projetos/${p._fileName.toLowerCase().replace(/^prj-/, '').replace(/[-_]/g, '-')}/`
+      })),
+      metrics: {
+        totalBudget,
+        totalROI: Math.round(totalBudget * 3.47),
+        activeProjects: projects.filter(p => p.status === 'active').length,
+        totalProjects: projects.length
+      },
+      lastUpdated: new Date().toISOString()
+    };
+
+    fs.writeFileSync(path.join(INCLUDES_DIR, 'dashboard-data.json'), JSON.stringify(dataForJS, null, 2));
+
+    console.log('✅ Dados estáticos gerados com sucesso!');
+    console.log(`📁 Arquivos salvos em: ${INCLUDES_DIR}`);
+
+  } catch (error) {
+    console.error('❌ Erro ao gerar dados estáticos:', error);
+    process.exit(1);
+  }
+}
+
+// Executar se chamado diretamente
+if (require.main === module) {
+  generateStaticData();
+}
+
+module.exports = { generateStaticData };
+```
+
+---
 
 ##### 📄 validate-urls.js
 *Path: `scripts\validate-urls.js`*  
@@ -90697,6 +90965,237 @@ document.addEventListener('DOMContentLoaded', () => {
     </div>
   </nav>
 </aside>
+```
+
+---
+
+
+#### 📁 Directory: src\components\_includes\partials
+
+##### 📄 dashboard-data.json
+*Path: `src\components\_includes\partials\dashboard-data.json`*  
+*Size: 1.43 KB*
+
+```json
+{
+  "projects": [
+    {
+      "status": "active",
+      "budget": 80000,
+      "owner": "[[Pedro Vitor]]",
+      "url": "/projetos/aeralyn/"
+    },
+    {
+      "status": "active",
+      "budget": 40000,
+      "owner": "[[Arthur]]",
+      "url": "/projetos/curso-ia-inteligente/"
+    },
+    {
+      "status": "active",
+      "budget": 40000,
+      "owner": "[[Pedro Vitor]]",
+      "url": "/projetos/plataforma-cursos/"
+    },
+    {
+      "status": "in-development",
+      "budget": 25000,
+      "owner": "[[Pedro Vitor]]",
+      "url": "/projetos/web-site-portfolio-engenharia/"
+    },
+    {
+      "status": "planning",
+      "budget": 20000,
+      "owner": "[[Pedro Vitor]]",
+      "url": "/projetos/app-desenvolvimento-cognitivo/"
+    },
+    {
+      "status": "in-progress",
+      "budget": 15000,
+      "owner": "[[Pedro Vitor]]",
+      "url": "/projetos/dev-whatsbot-academia/"
+    },
+    {
+      "status": "active",
+      "budget": 60000,
+      "owner": "[[Arthur]]",
+      "url": "/projetos/trip-match/"
+    },
+    {
+      "status": "active",
+      "budget": 35000,
+      "owner": "[[Arthur]]",
+      "url": "/projetos/nostalgia-musical/"
+    },
+    {
+      "status": "active",
+      "budget": 100000,
+      "owner": "[[Pedro Vitor]]",
+      "url": "/projetos/vault-empresarial/"
+    }
+  ],
+  "metrics": {
+    "totalBudget": 415000,
+    "totalROI": 1440050,
+    "activeProjects": 6,
+    "totalProjects": 9
+  },
+  "lastUpdated": "2025-09-03T03:09:13.067Z"
+}
+```
+
+---
+
+##### 📄 metrics-summary.njk
+*Path: `src\components\_includes\partials\metrics-summary.njk`*  
+*Size: 443 bytes*
+
+```njk
+<div class="metrics-summary">
+<div class="metric-card">
+  <h3>💰 Budget Total</h3>
+  <p class="metric-value">R$ 415.000</p>
+</div>
+<div class="metric-card">
+  <h3>📈 ROI Projetado</h3>
+  <p class="metric-value">R$ 1.440.050</p>
+</div>
+<div class="metric-card">
+  <h3>🚀 Projetos Ativos</h3>
+  <p class="metric-value">6</p>
+</div>
+<div class="metric-card">
+  <h3>⏱️ Esforço Médio</h3>
+  <p class="metric-value">29w</p>
+</div>
+</div>
+```
+
+---
+
+##### 📄 projects-table.njk
+*Path: `src\components\_includes\partials\projects-table.njk`*  
+*Size: 2.10 KB*
+
+```njk
+<div class="projects-by-status">
+<table class="data-table">
+<thead>
+  <tr>
+    <th>Status</th>
+    <th>Projeto</th>
+    <th>Owner</th>
+    <th>Budget</th>
+    <th>Esforço</th>
+    <th>ROI</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>🚀 active</td>
+    <td><a href="/projetos/aeralyn/">PRJ-AERALYN</a></td>
+    <td>[[Pedro Vitor]]</td>
+    <td>R$ 80000</td>
+    <td>40w</td>
+    <td>R$ 277600</td>
+  </tr>
+  <tr>
+    <td>🚀 active</td>
+    <td><a href="/projetos/curso-ia-inteligente/">PRJ-Curso-IA-Inteligente</a></td>
+    <td>[[Arthur]]</td>
+    <td>R$ 40000</td>
+    <td>12w</td>
+    <td>R$ 138800</td>
+  </tr>
+  <tr>
+    <td>🚀 active</td>
+    <td><a href="/projetos/plataforma-cursos/">PRJ-Plataforma-Cursos</a></td>
+    <td>[[Pedro Vitor]]</td>
+    <td>R$ 40000</td>
+    <td>100w</td>
+    <td>R$ 138800</td>
+  </tr>
+  <tr>
+    <td>🚀 active</td>
+    <td><a href="/projetos/trip-match/">PRJ-Trip-Match</a></td>
+    <td>[[Arthur]]</td>
+    <td>R$ 60000</td>
+    <td>16w</td>
+    <td>R$ 208200</td>
+  </tr>
+  <tr>
+    <td>🚀 active</td>
+    <td><a href="/projetos/nostalgia-musical/">PRJ-Nostalgia-Musical</a></td>
+    <td>[[Arthur]]</td>
+    <td>R$ 35000</td>
+    <td>12w</td>
+    <td>R$ 121450</td>
+  </tr>
+  <tr>
+    <td>🚀 active</td>
+    <td><a href="/projetos/vault-empresarial/">PRJ-Vault-Empresarial</a></td>
+    <td>[[Pedro Vitor]]</td>
+    <td>R$ 100000</td>
+    <td>52w</td>
+    <td>R$ 347000</td>
+  </tr>
+  <tr>
+    <td>❓ in-development</td>
+    <td><a href="/projetos/web-site-portfolio-engenharia/">PRJ-Web-Site-Portfolio-Engenharia</a></td>
+    <td>[[Pedro Vitor]]</td>
+    <td>R$ 25000</td>
+    <td>12w</td>
+    <td>R$ 86750</td>
+  </tr>
+  <tr>
+    <td>📋 planning</td>
+    <td><a href="/projetos/app-desenvolvimento-cognitivo/">PRJ-App-Desenvolvimento-Cognitivo</a></td>
+    <td>[[Pedro Vitor]]</td>
+    <td>R$ 20000</td>
+    <td>12w</td>
+    <td>R$ 69400</td>
+  </tr>
+  <tr>
+    <td>❓ in-progress</td>
+    <td><a href="/projetos/dev-whatsbot-academia/">PRJ-Dev-WhatsBot-Academia</a></td>
+    <td>[[Pedro Vitor]]</td>
+    <td>R$ 15000</td>
+    <td>8w</td>
+    <td>R$ 52050</td>
+  </tr>
+</tbody>
+</table>
+</div>
+```
+
+---
+
+##### 📄 recent-meetings.njk
+*Path: `src\components\_includes\partials\recent-meetings.njk`*  
+*Size: 913 bytes*
+
+```njk
+<div class="recent-meetings">
+<h3>📅 Reuniões Recentes</h3>
+<ul class="meeting-list">
+  <li class="meeting-item">
+    <a href="/reunioes/2025-09-01-reuniao-analise-pessimista-projetos/">2025-09-01-Reuniao-Analise-Pessimista-Projetos</a>
+    <span class="meeting-date">01/09/2025</span>
+  </li>
+  <li class="meeting-item">
+    <a href="/reunioes/2025-09-01-reuniao-criacao-sistema-geracao-ideias/">2025-09-01-Reuniao-Criacao-Sistema-Geracao-Ideias</a>
+    <span class="meeting-date">01/09/2025</span>
+  </li>
+  <li class="meeting-item">
+    <a href="/reunioes/2025-09-01-reuniao-criacao-projeto-whatsbot/">2025-09-01-Reuniao-Criacao-Projeto-WhatsBot</a>
+    <span class="meeting-date">01/09/2025</span>
+  </li>
+  <li class="meeting-item">
+    <a href="/reunioes/2025-08-31-reuniao-executiva-sistema/">2025-08-31-Reuniao-Executiva-Sistema</a>
+    <span class="meeting-date">30/08/2025</span>
+  </li>
+</ul>
+</div>
 ```
 
 ---
@@ -91313,7 +91812,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 ##### 📄 base.njk
 *Path: `src\layouts\base.njk`*  
-*Size: 9.70 KB*
+*Size: 10.22 KB*
 
 ```njk
 <!DOCTYPE html>
@@ -91324,9 +91823,21 @@ document.addEventListener('DOMContentLoaded', () => {
   <title>{{ title or page.fileSlug }} - {{ site.title }}</title>
   <meta name="description" content="{{ description or site.description }}" />
   
-  <!-- CSS do tema Obsidian e customizações -->
+  <!-- CSS base (tokens, reset, sidebar) -->
   <link rel="stylesheet" href="/styles/main.css" />
   <link rel="stylesheet" href="/styles/sidebar.css" />
+  
+  <!-- CSS específico por layout (evita vazamentos) -->
+  {% if layout == "dashboard.njk" %}
+    <link rel="stylesheet" href="/styles/dashboard.css" />
+    <link rel="stylesheet" href="/styles/dashboard-central.css" />
+  {% elif layout == "projeto.njk" %}
+    <link rel="stylesheet" href="/styles/projeto.css" />
+  {% elif layout == "reuniao.njk" %}
+    <link rel="stylesheet" href="/styles/reuniao.css" />
+  {% elif layout == "governanca.njk" %}
+    <link rel="stylesheet" href="/styles/governanca.css" />
+  {% endif %}
   
   <!-- Favicon e meta tags para PWA -->
   <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
@@ -91595,11 +92106,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   <!-- Scripts -->
   <script src="/scripts/main.js"></script>
-  <script src="/scripts/search.js"></script>
-  <script src="/scripts/sidebar.js" defer></script>
-  
-</body>
-</html>
+  <script sr
+
+... (Content truncated - file too large)
 ```
 
 ---
@@ -98196,7 +98705,7 @@ footer {
 
 ```json
 {
-  "timestamp": "2025-09-03T02:34:11.328Z",
+  "timestamp": "2025-09-03T02:56:25.473Z",
   "totalFiles": 46,
   "validUrls": 46,
   "issues": 0,
