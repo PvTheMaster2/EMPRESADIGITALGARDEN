@@ -1,11 +1,11 @@
 ---
 created: 2025-09-02T21:37
-updated: 2025-09-03T00:34
+updated: 2025-09-03T14:03
 ---
 # 🌳 Site Structure Outline
 
-**Generated**: 2025-09-03T03:34:19.409Z
-**Total Pages**: 199
+**Generated**: 2025-09-03T17:03:53.231Z
+**Total Pages**: 204
 
 ## 📁 .CURSOR
 
@@ -249,6 +249,8 @@ updated: 2025-09-03T00:34
 
 ## 📁 DASHBOARD-EXECUTIVO
 
+    - **/dashboard-executivo/dashboard-auto-real/** - "Dashboard Auto Real - Multisocios Empresarial" (base)
+      - H1: Dashboard Auto Real
     - **/dashboard-executivo/dashboard-capacidade-equipe/** - "Dashboard Capacidade Equipe - Multisocios Empresarial" (base)
       - H1: Dashboard Capacidade Equipe
     - **/dashboard-executivo/dashboard-projetos-prazo/** - "Dashboard Projetos Prazo - Multisocios Empresarial" (base)
@@ -282,8 +284,16 @@ updated: 2025-09-03T00:34
 
 ## 📁 EQUIPES
 
+    - **/equipes/ana-silva/** - "" (base)
+      - H1: 👩‍🎨 Ana Silva
+    - **/equipes/arthur/** - "" (base)
+      - H1: 👨‍💻 Arthur
+    - **/equipes/carlos-mendes/** - "" (base)
+      - H1: 👨‍💻 Carlos Mendes
   - **/equipes/** - "" (base)
     - H1: 👥 EQUIPES MULTISÓCIOS
+    - **/equipes/pedro-vitor/** - "" (base)
+      - H1: 👨‍💼 Pedro Vitor
 
 ## 📁 GOVERNANCA
 

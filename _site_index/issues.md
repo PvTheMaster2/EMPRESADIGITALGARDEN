@@ -1,22 +1,22 @@
 ---
 created: 2025-09-02T21:37
-updated: 2025-09-03T00:34
+updated: 2025-09-03T14:03
 ---
 # 🔍 Site Audit Report
 
-**Generated**: 2025-09-03T03:34:19.413Z
+**Generated**: 2025-09-03T17:03:53.232Z
 
 ## 📊 Statistics
 
-- **Total Pages**: 199
-- **Pages without Title**: 67
+- **Total Pages**: 204
+- **Pages without Title**: 71
 - **Pages without H1**: 15
-- **Total Internal Links**: 14580
-- **Total Issues**: 82
+- **Total Internal Links**: 14717
+- **Total Issues**: 86
 
 ## ⚠️ Issues Found
 
-### NO TITLE (67)
+### NO TITLE (71)
 
 - **/.cursor/rules/**: Página sem título definido
 - **/1000 - REUNIOES/30_08-25 REUNIAO INICIAL/10 - Prompt organização atas de reuniao a partir de transcrição /**: Página sem título definido
@@ -58,7 +58,11 @@ updated: 2025-09-03T00:34
 - **/99-RESOURCES/99 - TEMPLATE/Template_Projeto/**: Página sem título definido
 - **/99-RESOURCES/99 - TEMPLATE/TEMPLATE_R00/**: Página sem título definido
 - **/conhecimento/**: Página sem título definido
+- **/equipes/ana-silva/**: Página sem título definido
+- **/equipes/arthur/**: Página sem título definido
+- **/equipes/carlos-mendes/**: Página sem título definido
 - **/equipes/**: Página sem título definido
+- **/equipes/pedro-vitor/**: Página sem título definido
 - **/MAPA-URLS/**: Página sem título definido
 - **/mercado/**: Página sem título definido
 - **/processos/guia-uso-sistema-capacidade/**: Página sem título definido

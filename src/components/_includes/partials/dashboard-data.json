@@ -55,11 +55,49 @@
       "url": "/projetos/vault-empresarial/"
     }
   ],
+  "team": [
+    {
+      "name": "Arthur",
+      "role": "Desenvolvedor Sênior",
+      "department": "Desenvolvimento",
+      "availability_weekly": 35,
+      "allocated_hours": 28,
+      "utilization": 80
+    },
+    {
+      "name": "Carlos Mendes",
+      "role": "Desenvolvedor Backend",
+      "department": "Desenvolvimento",
+      "availability_weekly": 40,
+      "allocated_hours": 25,
+      "utilization": 63
+    },
+    {
+      "name": "Ana Silva",
+      "role": "Designer UX/UI",
+      "department": "Design",
+      "availability_weekly": 30,
+      "allocated_hours": 20,
+      "utilization": 67
+    },
+    {
+      "name": "Pedro Vitor",
+      "role": "CEO/Fundador",
+      "department": "Liderança",
+      "availability_weekly": 40,
+      "allocated_hours": 32,
+      "utilization": 80
+    }
+  ],
   "metrics": {
     "totalBudget": 415000,
     "totalROI": 1440050,
     "activeProjects": 6,
-    "totalProjects": 9
+    "totalProjects": 9,
+    "totalCapacity": 145,
+    "totalAllocated": 105,
+    "avgUtilization": 72,
+    "totalPeople": 4
   },
-  "lastUpdated": "2025-09-03T03:34:00.756Z"
+  "lastUpdated": "2025-09-03T17:03:40.664Z"
 }

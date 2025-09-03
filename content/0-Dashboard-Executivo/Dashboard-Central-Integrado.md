@@ -2,7 +2,7 @@
 title: Dashboard Executivo Central Integrado
 layout: dashboard.njk
 created: 2025-01-20
-updated: 2025-09-03T00:25
+updated: 2025-09-03T14:00
 type: dashboard
 status: active
 priority: critical
@@ -16,6 +16,8 @@ eleventyNavigation:
   order: 0
 ---
 
+{% include "partials/dashboard-metrics.njk" %}
+
 # 🎯 **DASHBOARD EXECUTIVO CENTRAL INTEGRADO**
 
 > *Visão completa e centralizada de todos os projetos, métricas, capacidades e decisões estratégicas da empresa*
@@ -27,27 +29,27 @@ eleventyNavigation:
 <div class="metric-card critical">
 ### 🚀 **STATUS GERAL**
 **Sistema Funcionando**
-8 Projetos Ativos
+{{ metrics.activeProjects }} Projetos Ativos
 **Eficiência**: 85%
 </div>
 
 <div class="metric-card success">
 ### 💰 **FINANCEIRO**
-**Budget**: R$ 297.000
+**Budget**: R$ {{ metrics.totalBudget }}
 **ROI Médio**: 347%
-**Receita Proj.**: R$ 1.031.000
+**Receita Proj.**: R$ {{ metrics.totalROI }}
 </div>
 
 <div class="metric-card warning">
 ### 👥 **EQUIPE**
-**Capacidade**: 0h/sem
-**Utilização**: 0%
-**Projetos/Pessoa**: 2
+**Capacidade**: {{ metrics.totalCapacity }}h/sem
+**Utilização**: {{ metrics.avgUtilization }}%
+**Projetos/Pessoa**: {{ (metrics.totalProjects / metrics.totalPeople) | round }}
 </div>
 
 <div class="metric-card info">
 ### 📊 **PERFORMANCE**
-**Prazo**: 6/8 projetos
+**Prazo**: 6/{{ metrics.totalProjects }} projetos
 **Qualidade**: ⭐⭐⭐⭐⭐
 **Compliance**: 100%
 </div>

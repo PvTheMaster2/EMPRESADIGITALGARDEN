@@ -1,0 +1,109 @@
+{# Dados dinâmicos para dashboards - gerados automaticamente pelo script generate-static-data.js #}
+
+{% set dashboardData = {
+  "projects": [
+    {
+      "status": "active",
+      "budget": 80000,
+      "owner": "[[Pedro Vitor]]",
+      "url": "/projetos/aeralyn/"
+    },
+    {
+      "status": "active",
+      "budget": 40000,
+      "owner": "[[Arthur]]",
+      "url": "/projetos/curso-ia-inteligente/"
+    },
+    {
+      "status": "active",
+      "budget": 40000,
+      "owner": "[[Pedro Vitor]]",
+      "url": "/projetos/plataforma-cursos/"
+    },
+    {
+      "status": "in-development",
+      "budget": 25000,
+      "owner": "[[Pedro Vitor]]",
+      "url": "/projetos/web-site-portfolio-engenharia/"
+    },
+    {
+      "status": "planning",
+      "budget": 20000,
+      "owner": "[[Pedro Vitor]]",
+      "url": "/projetos/app-desenvolvimento-cognitivo/"
+    },
+    {
+      "status": "in-progress",
+      "budget": 15000,
+      "owner": "[[Pedro Vitor]]",
+      "url": "/projetos/dev-whatsbot-academia/"
+    },
+    {
+      "status": "active",
+      "budget": 60000,
+      "owner": "[[Arthur]]",
+      "url": "/projetos/trip-match/"
+    },
+    {
+      "status": "active",
+      "budget": 35000,
+      "owner": "[[Arthur]]",
+      "url": "/projetos/nostalgia-musical/"
+    },
+    {
+      "status": "active",
+      "budget": 100000,
+      "owner": "[[Pedro Vitor]]",
+      "url": "/projetos/vault-empresarial/"
+    }
+  ],
+  "team": [
+    {
+      "name": "Arthur",
+      "role": "Desenvolvedor Sênior",
+      "department": "Desenvolvimento",
+      "availability_weekly": 35,
+      "allocated_hours": 28,
+      "utilization": 80
+    },
+    {
+      "name": "Carlos Mendes",
+      "role": "Desenvolvedor Backend",
+      "department": "Desenvolvimento",
+      "availability_weekly": 40,
+      "allocated_hours": 25,
+      "utilization": 63
+    },
+    {
+      "name": "Ana Silva",
+      "role": "Designer UX/UI",
+      "department": "Design",
+      "availability_weekly": 30,
+      "allocated_hours": 20,
+      "utilization": 67
+    },
+    {
+      "name": "Pedro Vitor",
+      "role": "CEO/Fundador",
+      "department": "Liderança",
+      "availability_weekly": 40,
+      "allocated_hours": 32,
+      "utilization": 80
+    }
+  ],
+  "metrics": {
+    "totalBudget": 415000,
+    "totalROI": 1440050,
+    "activeProjects": 6,
+    "totalProjects": 9,
+    "totalCapacity": 145,
+    "totalAllocated": 105,
+    "avgUtilization": 72,
+    "totalPeople": 4
+  },
+  "lastUpdated": "2025-09-03T17:03:40.664Z"
+} %}
+
+{% set metrics = dashboardData.metrics %}
+{% set team = dashboardData.team %}
+{% set projects = dashboardData.projects %}

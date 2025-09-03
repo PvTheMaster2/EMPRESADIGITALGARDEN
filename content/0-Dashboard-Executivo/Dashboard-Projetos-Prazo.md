@@ -1,7 +1,9 @@
 ---
 created: 2025-09-01T02:30
-updated: 2025-09-03T00:25
+updated: 2025-09-03T14:00
 ---
+
+{% include "partials/dashboard-metrics.njk" %}
 # 📊 **DASHBOARD DE PROJETOS POR PRAZO**
 
 > *Visão executiva dos projetos organizados por prazo de execução e prioridade*
@@ -16,9 +18,9 @@ updated: 2025-09-03T00:25
 - **Longo Prazo (1-3 anos)**: 2 projetos ativos
 
 ### **Status Geral**
-- **Total de Projetos**: 8 projetos ativos (excluindo templates)
-- **Budget Total**: R$ 297.000
-- **ROI Projetado**: 271% em 3 anos
+- **Total de Projetos**: {{ metrics.totalProjects }} projetos ativos (excluindo templates)
+- **Budget Total**: R$ {{ metrics.totalBudget }}
+- **ROI Projetado**: 347% em 3 anos
 
 ---
 

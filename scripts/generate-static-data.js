@@ -94,6 +94,31 @@ function collectMeetingData() {
 }
 
 /**
+ * Coleta dados da equipe
+ */
+function collectTeamData() {
+  const teamFiles = glob.sync(`${CONTENT_DIR}/2-Equipes/*.md`);
+  const team = [];
+
+  teamFiles.forEach(file => {
+    if (file.includes('README')) return;
+    
+    const data = extractFrontMatter(file);
+    if (data.type === 'person' && data.status === 'active') {
+      team.push(data);
+    }
+  });
+
+  return team.sort((a, b) => {
+    // Ordenar por departamento e depois por nome
+    if (a.department !== b.department) {
+      return a.department.localeCompare(b.department);
+    }
+    return a.name.localeCompare(b.name);
+  });
+}
+
+/**
  * Gera tabela HTML de projetos por status
  */
 function generateProjectsByStatusTable(projects) {
@@ -210,6 +235,77 @@ function generateRecentMeetings(meetings) {
 }
 
 /**
+ * Gera tabela HTML da equipe
+ */
+function generateTeamTable(team) {
+  let html = `<div class="team-overview">
+<table class="data-table">
+<thead>
+  <tr>
+    <th>Nome</th>
+    <th>Cargo</th>
+    <th>Departamento</th>
+    <th>Disponível</th>
+    <th>Alocado</th>
+    <th>Utilização</th>
+  </tr>
+</thead>
+<tbody>`;
+
+  team.forEach(person => {
+    const utilization = person.availability_weekly ? 
+      Math.round((person.allocated_hours / person.availability_weekly) * 100) : 0;
+    const freeHours = (person.availability_weekly || 0) - (person.allocated_hours || 0);
+    
+    html += `
+  <tr>
+    <td><strong>${person.name}</strong></td>
+    <td>${person.role}</td>
+    <td>${person.department}</td>
+    <td>${person.availability_weekly || 0}h/sem</td>
+    <td>${person.allocated_hours || 0}h</td>
+    <td>${utilization}%</td>
+  </tr>`;
+  });
+
+  html += `
+</tbody>
+</table>
+</div>`;
+
+  return html;
+}
+
+/**
+ * Gera métricas da equipe
+ */
+function generateTeamMetrics(team) {
+  const totalCapacity = team.reduce((sum, p) => sum + (p.availability_weekly || 0), 0);
+  const totalAllocated = team.reduce((sum, p) => sum + (p.allocated_hours || 0), 0);
+  const avgUtilization = totalCapacity > 0 ? Math.round((totalAllocated / totalCapacity) * 100) : 0;
+  const totalPeople = team.length;
+
+  return `<div class="team-metrics">
+<div class="metric-card">
+  <h3>👥 Total de Pessoas</h3>
+  <p class="metric-value">${totalPeople}</p>
+</div>
+<div class="metric-card">
+  <h3>⏰ Capacidade Total</h3>
+  <p class="metric-value">${totalCapacity}h/sem</p>
+</div>
+<div class="metric-card">
+  <h3>📊 Utilização Média</h3>
+  <p class="metric-value">${avgUtilization}%</p>
+</div>
+<div class="metric-card">
+  <h3>🆓 Horas Livres</h3>
+  <p class="metric-value">${totalCapacity - totalAllocated}h</p>
+</div>
+</div>`;
+}
+
+/**
  * Função principal
  */
 function generateStaticData() {
@@ -219,21 +315,28 @@ function generateStaticData() {
     // Coletar dados
     const projects = collectProjectData();
     const meetings = collectMeetingData();
+    const team = collectTeamData();
 
-    console.log(`📊 Encontrados ${projects.length} projetos e ${meetings.length} reuniões`);
+    console.log(`📊 Encontrados ${projects.length} projetos, ${meetings.length} reuniões e ${team.length} pessoas`);
 
     // Gerar partials
     const projectsTable = generateProjectsByStatusTable(projects);
     const metricsSummary = generateMetricsSummary(projects);
     const recentMeetings = generateRecentMeetings(meetings);
+    const teamTable = generateTeamTable(team);
+    const teamMetrics = generateTeamMetrics(team);
 
     // Salvar arquivos
     fs.writeFileSync(path.join(INCLUDES_DIR, 'projects-table.njk'), projectsTable);
     fs.writeFileSync(path.join(INCLUDES_DIR, 'metrics-summary.njk'), metricsSummary);
     fs.writeFileSync(path.join(INCLUDES_DIR, 'recent-meetings.njk'), recentMeetings);
+    fs.writeFileSync(path.join(INCLUDES_DIR, 'team-table.njk'), teamTable);
+    fs.writeFileSync(path.join(INCLUDES_DIR, 'team-metrics.njk'), teamMetrics);
 
     // Calcular métricas
     const totalBudget = projects.reduce((sum, p) => sum + (p.budget || 0), 0);
+    const totalCapacity = team.reduce((sum, p) => sum + (p.availability_weekly || 0), 0);
+    const totalAllocated = team.reduce((sum, p) => sum + (p.allocated_hours || 0), 0);
     
     // Gerar dados JSON para uso em JavaScript
     const dataForJS = {
@@ -244,16 +347,39 @@ function generateStaticData() {
         owner: p.owner,
         url: `/projetos/${p._fileName.toLowerCase().replace(/^prj-/, '').replace(/[-_]/g, '-')}/`
       })),
+      team: team.map(p => ({
+        name: p.name,
+        role: p.role,
+        department: p.department,
+        availability_weekly: p.availability_weekly,
+        allocated_hours: p.allocated_hours,
+        utilization: p.availability_weekly ? Math.round((p.allocated_hours / p.availability_weekly) * 100) : 0
+      })),
       metrics: {
         totalBudget,
         totalROI: Math.round(totalBudget * 3.47),
         activeProjects: projects.filter(p => p.status === 'active').length,
-        totalProjects: projects.length
+        totalProjects: projects.length,
+        totalCapacity,
+        totalAllocated,
+        avgUtilization: totalCapacity > 0 ? Math.round((totalAllocated / totalCapacity) * 100) : 0,
+        totalPeople: team.length
       },
       lastUpdated: new Date().toISOString()
     };
 
     fs.writeFileSync(path.join(INCLUDES_DIR, 'dashboard-data.json'), JSON.stringify(dataForJS, null, 2));
+
+    // Gerar arquivo de métricas para Nunjucks
+    const metricsContent = `{# Dados dinâmicos para dashboards - gerados automaticamente pelo script generate-static-data.js #}
+
+{% set dashboardData = ${JSON.stringify(dataForJS, null, 2)} %}
+
+{% set metrics = dashboardData.metrics %}
+{% set team = dashboardData.team %}
+{% set projects = dashboardData.projects %}`;
+
+    fs.writeFileSync(path.join(INCLUDES_DIR, 'dashboard-metrics.njk'), metricsContent);
 
     console.log('✅ Dados estáticos gerados com sucesso!');
     console.log(`📁 Arquivos salvos em: ${INCLUDES_DIR}`);

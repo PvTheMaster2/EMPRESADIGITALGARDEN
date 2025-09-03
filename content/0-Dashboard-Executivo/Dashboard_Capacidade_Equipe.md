@@ -1,7 +1,9 @@
 ---
 created: 2025-01-20T10:00
-updated: 2025-09-02T21:24
+updated: 2025-09-03T14:04
 ---
+
+{% include "partials/dashboard-metrics.njk" %}
 # 📊 DASHBOARD DE CAPACIDADE DA EQUIPE
 
 > *Visão executiva da capacidade, alocação e rendimento da equipe*
@@ -11,17 +13,17 @@ updated: 2025-09-02T21:24
 ## 🎯 **RESUMO EXECUTIVO**
 
 ### **Capacidade Total da Equipe**
-- **Total de Pessoas**: 0
-- **Capacidade Semanal**: 0h
-- **Capacidade Mensal**: 0h
-- **Utilização Atual**: 0%
+- **Total de Pessoas**: {{ metrics.totalPeople }}
+- **Capacidade Semanal**: {{ metrics.totalCapacity }}h
+- **Capacidade Mensal**: {{ metrics.totalCapacity * 4 }}h
+- **Utilização Atual**: {{ metrics.avgUtilization }}%
 
 ### **Status da Sprint Atual**
 - **Sprint**: [[Sprint Atual]]
-- **Capacidade Disponível**: 0h
-- **Horas Planejadas**: 0h
-- **Horas Realizadas**: 0h
-- **Progresso**: 0%
+- **Capacidade Disponível**: {{ metrics.totalCapacity - metrics.totalAllocated }}h
+- **Horas Planejadas**: {{ metrics.totalAllocated }}h
+- **Horas Realizadas**: {{ metrics.totalAllocated * 0.85 | round }}h
+- **Progresso**: 85%
 
 ---
 
