@@ -5,7 +5,7 @@
   # Comando para fazer o build (instala dependências e executa build)
   command = "npm install && npm run build"
   
-  # Diretório onde está o código gerado
+  # Diretório onde está o código gerado (DEVE SER build/dist NO PAINEL TAMBÉM)
   publish = "build/dist"
   
   # Diretório onde está o código fonte (relativo ao base)
