@@ -1,11 +1,11 @@
 ---
 created: 2025-09-02T21:37
-updated: 2025-09-02T21:58
+updated: 2025-09-02T22:09
 ---
 # 🌳 Site Structure Outline
 
-**Generated**: 2025-09-03T00:58:11.484Z
-**Total Pages**: 122
+**Generated**: 2025-09-03T01:09:47.913Z
+**Total Pages**: 191
 
 ## 📁 .CURSOR
 
@@ -232,6 +232,11 @@ updated: 2025-09-02T21:58
     - **/_site_index/site_outline/** - "" (base)
       - H1: 🌳 Site Structure Outline
 
+## 📁 CONHECIMENTO
+
+  - **/conhecimento/** - "" (base)
+    - H1: 🧠 BASE DE CONHECIMENTO
+
 ## 📁 DASHBOARD-DINAMICO
 
   - **/dashboard-dinamico/** - "Dashboard Dinâmico Multisocios - Métricas em Tempo Real - Multisocios Empresarial" (base)
@@ -239,8 +244,24 @@ updated: 2025-09-02T21:58
 
 ## 📁 DASHBOARD-EXECUTIVO
 
+    - **/dashboard-executivo/dashboard-capacidade-equipe/** - "Dashboard Capacidade Equipe - Multisocios Empresarial" (base)
+      - H1: Dashboard Capacidade Equipe
+    - **/dashboard-executivo/dashboard-projetos-prazo/** - "Dashboard Projetos Prazo - Multisocios Empresarial" (base)
+      - H1: Dashboard Projetos Prazo
+    - **/dashboard-executivo/dashboard-projetos-prazo-visual/** - "Dashboard Projetos Prazo Visual - Multisocios Empresarial" (base)
+      - H1: Dashboard Projetos Prazo Visual
+    - **/dashboard-executivo/decisoes-estrategicas/** - "Decisões Estratégicas - Multisocios Empresarial" (base)
+      - H1: Decisões Estratégicas
+    - **/dashboard-executivo/executive-auto/** - "Executive Auto - Multisocios Empresarial" (base)
+      - H1: Executive Auto
   - **/dashboard-executivo/** - "Dashboard Executivo - Home - Multisocios Empresarial" (base)
     - H1: Dashboard Executivo - Home
+    - **/dashboard-executivo/innovation-pipeline/** - "Innovation Pipeline - Multisocios Empresarial" (base)
+      - H1: Innovation Pipeline
+    - **/dashboard-executivo/kpis-principais/** - "KPIs Principais - Multisocios Empresarial" (base)
+      - H1: KPIs Principais
+    - **/dashboard-executivo/sistema-metricas-avancadas/** - "Sistema Metricas Avancadas - Multisocios Empresarial" (base)
+      - H1: Sistema Metricas Avancadas
 
 ## 📁 DASHBOARD-OVERVIEW
 
@@ -252,10 +273,142 @@ updated: 2025-09-02T21:58
     - **/dev/sidebar-check/** - "Sidebar Self Test - Multisocios Empresarial" (base)
       - H1: Sidebar Self Test
 
+## 📁 EQUIPES
+
+  - **/equipes/** - "" (base)
+    - H1: 👥 EQUIPES MULTISÓCIOS
+
+## 📁 GOVERNANCA
+
+    - **/governanca/acordo-socios-final/** - "Acordo De Socios Final - Multisocios Empresarial" (governanca)
+      - H1: Acordo De Socios Final
+    - **/governanca/compliance-log/** - "Log de Compliance - Multisocios Empresarial" (governanca)
+      - H1: Log de Compliance
+    - **/governanca/etica-uso-ia/** - "Etica Uso IA - Multisocios Empresarial" (governanca)
+      - H1: Etica Uso IA
+    - **/governanca/faq-compliance/** - "FAQ   Compliance - Multisocios Empresarial" (governanca)
+      - H1: FAQ   Compliance
+  - **/governanca/** - "Governança Empresarial - Multisocios Empresarial" (governanca)
+    - H1: Governança Empresarial
+    - **/governanca/manual-treinamento-compliance/** - "Manual De Treinamento Compliance - Multisocios Empresarial" (governanca)
+      - H1: Manual De Treinamento Compliance
+    - **/governanca/playbook-comercial-v0/** - "Playbook Comercial V0 - Multisocios Empresarial" (governanca)
+      - H1: Playbook Comercial V0
+
+## 📁 MERCADO
+
+  - **/mercado/** - "" (base)
+    - H1: 🌍 ANÁLISE DE MERCADO
+
+## 📁 PROCESSOS
+
+    - **/processos/guia-uso-sistema-capacidade/** - "" (base)
+      - H1: 🚀 GUIA DE USO RÁPIDO - SISTEMA DE CAPACIDADE
+  - **/processos/** - "" (base)
+    - H1: ⚙️ PROCESSOS EMPRESARIAIS
+    - **/processos/sistema-gestao-capacidade-sprints/** - "" (base)
+      - H1: 📊 SISTEMA DE GESTÃO DE CAPACIDADE E SPRINTS
+
 ## 📁 PROJETOS
 
+    - **/projetos/aeralyn/** - "AERALYN - Multisocios Empresarial" (projeto)
+      - H1: AERALYN
+    - **/projetos/app-desenvolvimento-cognitivo/** - "App Desenvolvimento Cognitivo - Multisocios Empresarial" (projeto)
+      - H1: App Desenvolvimento Cognitivo
+    - **/projetos/curso-ia-inteligente/** - "Curso IA Inteligente - Multisocios Empresarial" (projeto)
+      - H1: Curso IA Inteligente
+    - **/projetos/dev-whatsbot-academia/** - "Dev WhatsBot Academia - Multisocios Empresarial" (projeto)
+      - H1: Dev WhatsBot Academia
+    - **/projetos/exemplo-intake-preenchido/** - "Exemplo Intake Preenchido - Multisocios Empresarial" (projeto)
+      - H1: Exemplo Intake Preenchido
+    - **/projetos/exemplo-minimalista/** - "Exemplo Minimalista - Multisocios Empresarial" (projeto)
+      - H1: Exemplo Minimalista
+    - **/projetos/exemplo-primeira-cartada/** - "Exemplo Primeira Cartada - Multisocios Empresarial" (projeto)
+      - H1: Exemplo Primeira Cartada
+  - **/projetos/** - "Portfólio de Projetos - Multisocios Empresarial" (projeto)
+    - H1: Portfólio de Projetos
+    - **/projetos/nostalgia-musical/** - "Nostalgia Musical - Multisocios Empresarial" (projeto)
+      - H1: Nostalgia Musical
+    - **/projetos/plataforma-cursos/** - "Plataforma Cursos - Multisocios Empresarial" (projeto)
+      - H1: Plataforma Cursos
+    - **/projetos/template-2025-01-20-—-projeto-—-assistente-transcricao-juridica/** - "Assistente de Transcrição Jurídica com IA - Multisocios Empresarial" (projeto)
+      - H1: Assistente de Transcrição Jurídica com IA
+    - **/projetos/template-piloto-crm-arquitetos/** - "TEMPLATE Piloto CRM Arquitetos - Multisocios Empresarial" (projeto)
+      - H1: TEMPLATE Piloto CRM Arquitetos
+    - **/projetos/template-piloto-exemplo-sistema/** - "TEMPLATE Piloto Exemplo Sistema - Multisocios Empresarial" (projeto)
+      - H1: TEMPLATE Piloto Exemplo Sistema
+    - **/projetos/template-projeto-exemplo-sistema/** - "TEMPLATE Projeto Exemplo Sistema - Multisocios Empresarial" (projeto)
+      - H1: TEMPLATE Projeto Exemplo Sistema
+    - **/projetos/templates/** - "README - Multisocios Empresarial" (projeto)
+      - H1: README
     - **/projetos/templates-guia/** - "Templates de Projetos - Multisocios Empresarial" (projeto)
       - H1: Templates de Projetos
+    - **/projetos/trip-match/** - "Trip Match - Multisocios Empresarial" (projeto)
+      - H1: Trip Match
+    - **/projetos/vault-empresarial/** - "Vault Empresarial - Multisocios Empresarial" (projeto)
+      - H1: Vault Empresarial
+    - **/projetos/web-site-portfolio-engenharia/** - "Web Site Portfolio Engenharia - Multisocios Empresarial" (projeto)
+      - H1: Web Site Portfolio Engenharia
+
+## 📁 RESOURCES
+
+    - **/resources/!template-r02/** - "" (base)
+      - H1: Back Matter
+    - **/resources/5-structure-template-1/** - "" (base)
+    - **/resources/dashboard-projetos-prazo-visual-template/** - "" (base)
+      - H1: 📊 DASHBOARD DE PROJETOS POR PRAZO
+    - **/resources/dashboard-visual-template/** - "" (base)
+      - H1: 🏢 <%= tp.file.title %>
+    - **/resources/dashboard-visual-template-fixed/** - "" (base)
+      - H1: 🏢 <%= tp.file.title %>
+    - **/resources/new-tamplate/** - "" (base)
+    - **/resources/prompt.txt/** - "" (base)
+    - **/resources/prompt2.md/** - "" (base)
+    - **/resources/template-intake-simples/** - "" (base)
+      - H1: 📝 NOVA IDEIA DE PROJETO
+    - **/resources/template-oficial/** - "" (base)
+      - H1: Back Matter
+    - **/resources/template-projeto/** - "" (base)
+    - **/resources/template-r00/** - "" (base)
+      - H1: Back Matter
+
+## 📁 REUNIOES
+
+  - **/reunioes/** - "Reuniões e Atas - Multisocios Empresarial" (reuniao)
+    - H1: Reuniões e Atas
+    - **/reunioes/reuniao-analise-pessimista-projetos/** - "ReuniãO Analise Pessimista Projetos - Multisocios Empresarial" (reuniao)
+      - H1: ReuniãO Analise Pessimista Projetos
+    - **/reunioes/reuniao-criacao-projeto-whatsbot/** - "ReuniãO Criacao Projeto WhatsBot - Multisocios Empresarial" (reuniao)
+      - H1: ReuniãO Criacao Projeto WhatsBot
+    - **/reunioes/reuniao-criacao-sistema-geracao-ideias/** - "ReuniãO Criacao Sistema Geracao Ideias - Multisocios Empresarial" (reuniao)
+      - H1: ReuniãO Criacao Sistema Geracao Ideias
+    - **/reunioes/reuniao-executiva-sistema/** - "ReuniãO Executiva Sistema - Multisocios Empresarial" (reuniao)
+      - H1: ReuniãO Executiva Sistema
+
+## 📁 REUNIOES-HISTORICAS
+
+    - **/reunioes-historicas/10---prompt-organização-atas-de-reuniao-a-partir-de-transcrição-/** - "" (base)
+      - H1: CABEÇALHO
+    - **/reunioes-historicas/advanced-multisocios-components/** - "MultiSócios - Componentes Avançados | Anime.js Timeline" (base)
+      - H1: 🚀 MULTISÓCIOS
+    - **/reunioes-historicas/ata-30-08-25---reuniãoinicial-r00/** - "ATA – Reunião de Fundação e Estruturação (v3.0)" (base)
+    - **/reunioes-historicas/ata-gemini/** - "ATA – Reunião de Fundação e Estruturação (v3.0)" (base)
+    - **/reunioes-historicas/ata-modernizada/** - "ATA – Reunião de Fundação e Estruturação (v3.0)" (base)
+    - **/reunioes-historicas/ata-modernizada---antes/** - "ATA – Reunião de Fundação e Estruturação (v3.0)" (base)
+    - **/reunioes-historicas/ata-modernizada-pos/** - "ATA - Reunião de Fundação MultiSócios (v4.0)" (base)
+      - H1: ATA OFICIAL
+    - **/reunioes-historicas/instrucoes-rapidas/** - "" (base)
+      - H1: 🚀 CONVERSÃO RÁPIDA - REVISTA MULTISÓCIOS PARA PDF
+    - **/reunioes-historicas/manifestomultisocios/** - "📜 MANIFESTO MULTISÓCIOS - Visão e Propósito" (base)
+      - H1: 📜 MANIFESTO
+    - **/reunioes-historicas/plano-revista-multisocios/** - "" (base)
+      - H1: 📰 PLANO DE LAYOUT - REVISTA MULTISÓCIOS RADAR
+    - **/reunioes-historicas/readme-conversor/** - "" (base)
+      - H1: 🚀 CONVERSOR REVISTA MULTISÓCIOS PARA PDF
+    - **/reunioes-historicas/reunião-multisócios-@hoje-25f0c1a9c7ee80d4958bc6efaebffa21/** - "Reunião Multisócios @hoje" (base)
+      - H1: Reunião Multisócios @30 de agosto de 2025
+    - **/reunioes-historicas/revista-multisocios-radar-edicao1/** - "MultiSócios Radar - Edição 1" (base)
+      - H1: MultiSócios Radar
 
 ## 📁 ROOT
 

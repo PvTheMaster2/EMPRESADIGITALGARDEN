@@ -1,14 +1,14 @@
 ---
 created: 2025-09-02T21:37
-updated: 2025-09-02T21:58
+updated: 2025-09-02T22:09
 ---
 # 🎨 Layouts Analysis
 
-**Generated**: 2025-09-03T00:58:11.488Z
+**Generated**: 2025-09-03T01:09:47.920Z
 
 ## 📊 Layout Distribution
 
-### BASE Layout (87 pages)
+### BASE Layout (126 pages)
 
 **Example Page**: /.cursor/rules/
 **Title**: 
@@ -23,7 +23,7 @@ updated: 2025-09-02T21:58
 - /0-Dashboard-Executivo/KPIs-Principais/ - "KPIs Principais - Multisocios Empresarial"
 - /0-Dashboard-Executivo/Sistema_Metricas_Avancadas/ - "Sistema Metricas Avancadas - Multisocios Empresarial"
 - /1000 - REUNIOES/30_08-25 REUNIAO INICIAL/10 - Prompt organização atas de reuniao a partir de transcrição / - ""
-- ... and 77 more
+- ... and 116 more
 
 ### DASHBOARD Layout (1 pages)
 
@@ -33,7 +33,7 @@ updated: 2025-09-02T21:58
 **Pages using this layout**:
 - / - "Digital Garden Empresarial - Multisocios - Multisocios Empresarial"
 
-### GOVERNANCA Layout (8 pages)
+### GOVERNANCA Layout (15 pages)
 
 **Example Page**: /1-Governanca/Acordo_Socios_Final/
 **Title**: Acordo De Socios Final - Multisocios Empresarial
@@ -45,9 +45,12 @@ updated: 2025-09-02T21:58
 - /1-Governanca/Manual_Treinamento_Compliance/ - "Manual De Treinamento Compliance - Multisocios Empresarial"
 - /1-Governanca/Playbook_Comercial_v0/ - "Playbook Comercial V0 - Multisocios Empresarial"
 - /1-Governanca/README/ - "Governança Empresarial - Multisocios Empresarial"
-- /tags/governanca/ - "Tags - Multisocios Empresarial"
+- /governanca/acordo-socios-final/ - "Acordo De Socios Final - Multisocios Empresarial"
+- /governanca/compliance-log/ - "Log de Compliance - Multisocios Empresarial"
+- /governanca/etica-uso-ia/ - "Etica Uso IA - Multisocios Empresarial"
+- ... and 5 more
 
-### PROJETO Layout (20 pages)
+### PROJETO Layout (38 pages)
 
 **Example Page**: /4-Projetos/Ativos/PRJ-AERALYN/
 **Title**: AERALYN - Multisocios Empresarial
@@ -62,9 +65,9 @@ updated: 2025-09-02T21:58
 - /4-Projetos/Em-Desenvolvimento/PRJ-Dev-WhatsBot-Academia/ - "Dev WhatsBot Academia - Multisocios Empresarial"
 - /4-Projetos/Em-Desenvolvimento/PRJ-Web-Site-Portfolio-Engenharia/ - "Web Site Portfolio Engenharia - Multisocios Empresarial"
 - /4-Projetos/README/ - "Portfólio de Projetos - Multisocios Empresarial"
-- ... and 10 more
+- ... and 28 more
 
-### REUNIAO Layout (6 pages)
+### REUNIAO Layout (11 pages)
 
 **Example Page**: /6-Reunioes/2025-08-31-Reuniao-Executiva-Sistema/
 **Title**: ReuniãO Executiva Sistema - Multisocios Empresarial
@@ -74,22 +77,27 @@ updated: 2025-09-02T21:58
 - /6-Reunioes/2025-09-01-Reuniao-Criacao-Projeto-WhatsBot/ - "ReuniãO Criacao Projeto WhatsBot - Multisocios Empresarial"
 - /6-Reunioes/2025-09-01-Reuniao-Criacao-Sistema-Geracao-Ideias/ - "ReuniãO Criacao Sistema Geracao Ideias - Multisocios Empresarial"
 - /6-Reunioes/README/ - "Reuniões e Atas - Multisocios Empresarial"
-- /tags/reunioes/ - "Tags - Multisocios Empresarial"
+- /reunioes/ - "Reuniões e Atas - Multisocios Empresarial"
+- /reunioes/reuniao-analise-pessimista-projetos/ - "ReuniãO Analise Pessimista Projetos - Multisocios Empresarial"
+- /reunioes/reuniao-criacao-projeto-whatsbot/ - "ReuniãO Criacao Projeto WhatsBot - Multisocios Empresarial"
+- /reunioes/reuniao-criacao-sistema-geracao-ideias/ - "ReuniãO Criacao Sistema Geracao Ideias - Multisocios Empresarial"
+- /reunioes/reuniao-executiva-sistema/ - "ReuniãO Executiva Sistema - Multisocios Empresarial"
+- ... and 1 more
 
 ## 💡 Layout Recommendations
 
 ### Projeto Layout
-- **Current**: 20 pages using base layout
+- **Current**: 38 pages using base layout
 - **Recommendation**: Create specific projeto.njk layout
 - **Fields to highlight**: status, budget, effort_weeks, owner
 
 ### Reunião Layout
-- **Current**: 6 pages using base layout
+- **Current**: 11 pages using base layout
 - **Recommendation**: Create specific reuniao.njk layout
 - **Fields to highlight**: meeting_date, participants, duration
 
 ### Governança Layout
-- **Current**: 8 pages using base layout
+- **Current**: 15 pages using base layout
 - **Recommendation**: Create specific governanca.njk layout
 - **Fields to highlight**: version, legal_review, compliance_level
 

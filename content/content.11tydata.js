@@ -31,6 +31,11 @@ module.exports = {
       
       // Casos especiais para arquivos README e index
       if (fileName === 'README' || fileName === 'index') {
+        // Se está em subpasta (como Templates), criar URL específica
+        if (pathParts.length > 2) {
+          const subFolder = pathParts[1].toLowerCase().replace(/\s+/g, '-');
+          return `/${cleanSection}/${subFolder}/`;
+        }
         return `/${cleanSection}/`;
       }
       
