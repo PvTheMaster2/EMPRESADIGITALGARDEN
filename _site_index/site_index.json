@@ -98943,13 +98943,13 @@
           "isInternal": true
         },
         {
-          "text": "Manual De Treinamento Compliance",
-          "href": "/governanca/manual-treinamento-compliance/",
+          "text": "Playbook Comercial V0",
+          "href": "/governanca/playbook-comercial-v0/",
           "isInternal": true
         },
         {
-          "text": "Playbook Comercial V0",
-          "href": "/governanca/playbook-comercial-v0/",
+          "text": "Manual De Treinamento Compliance",
+          "href": "/governanca/manual-treinamento-compliance/",
           "isInternal": true
         },
         {
@@ -101999,6 +101999,11 @@
           "isInternal": true
         },
         {
+          "text": "Dev WhatsBot Academia",
+          "href": "/projetos/dev-whatsbot-academia/",
+          "isInternal": true
+        },
+        {
           "text": "Web Site Portfolio Engenharia",
           "href": "/projetos/web-site-portfolio-engenharia/",
           "isInternal": true
@@ -102006,11 +102011,6 @@
         {
           "text": "Exemplo Intake Preenchido",
           "href": "/projetos/exemplo-intake-preenchido/",
-          "isInternal": true
-        },
-        {
-          "text": "Dev WhatsBot Academia",
-          "href": "/projetos/dev-whatsbot-academia/",
           "isInternal": true
         },
         {
@@ -102029,13 +102029,13 @@
           "isInternal": true
         },
         {
-          "text": "TEMPLATE Piloto Exemplo Sistema",
-          "href": "/projetos/template-piloto-exemplo-sistema/",
+          "text": "TEMPLATE Piloto CRM Arquitetos",
+          "href": "/projetos/template-piloto-crm-arquitetos/",
           "isInternal": true
         },
         {
-          "text": "TEMPLATE Piloto CRM Arquitetos",
-          "href": "/projetos/template-piloto-crm-arquitetos/",
+          "text": "TEMPLATE Piloto Exemplo Sistema",
+          "href": "/projetos/template-piloto-exemplo-sistema/",
           "isInternal": true
         },
         {
