@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Innovation Pipeline - Multisocios Empresarial</title>
+  <title>Dashboard Executivo - Home - Multisocios Empresarial</title>
   <meta name="description" content="Sistema de Gestão de Conhecimento Multisocios" />
   
   <!-- CSS do tema Obsidian e customizações -->
@@ -1803,10 +1803,10 @@
       <header class="dashboard-header">
         <div class="dashboard-title-section">
           
-          <h1 class="dashboard-title">Innovation Pipeline</h1>
+          <h1 class="dashboard-title">Dashboard Executivo - Home</h1>
           
           <div class="dashboard-subtitle">
-            <span class="last-updated">Última atualização: 2025-09-01</span>
+            <span class="last-updated">Última atualização: 2025-09-02</span>
             <span class="auto-refresh">🔄 Atualização automática</span>
           </div>
         </div>
@@ -2055,25 +2055,61 @@
       <!-- Dashboard Content (for additional content from markdown) -->
       
       <div class="dashboard-content">
-        <h1>🚀 INNOVATION PIPELINE - MULTISÓCIOS</h1>
+        <h1>🏢 <strong>DASHBOARD EXECUTIVO - MULTISOCIOS</strong></h1>
 <blockquote>
-<p><em>Dashboard dinâmico do pipeline de inovação com projetos e pilotos</em></p>
+<p><em>Visão consolidada de todos os projetos, métricas e performance da empresa</em></p>
 </blockquote>
 <hr>
-<h2>📊 <strong>PIPELINE DE INOVAÇÃO</strong></h2>
+<div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 20px; border-radius: 15px; color: white; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+### 🎯 **RESUMO EXECUTIVO**
+- **Total de Projetos**: 8 projetos ativos
+- **Budget Total**: R$ 297.000
+- **ROI Médio**: 347%
+- **Status Geral**: ✅ **Sistema Funcionando**
+</div>
+<h2>📊 <strong>MÉTRICAS PRINCIPAIS</strong></h2>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin: 20px 0;">
+<div style="background: linear-gradient(135deg, #2ed573, #7bed9f); padding: 15px; border-radius: 10px; color: white; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+### 🚀 **PROJETOS ATIVOS**
+**8 Projetos**
+**Status**: ✅ Funcionando
+**Tendência**: ↗️ Crescendo
+</div>
+<div style="background: linear-gradient(135deg, #ffa502, #ffb142); padding: 15px; border-radius: 10px; color: white; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+### 💰 **BUDGET TOTAL**
+**R$ 297.000**
+**Utilizado**: 65%
+**Disponível**: R$ 103.950
+</div>
+<div style="background: linear-gradient(135deg, #3742fa, #5352ed); padding: 15px; border-radius: 10px; color: white; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+### 📈 **ROI PROJETADO**
+**347%**
+**Receita**: R$ 1.031.000
+**Lucro**: R$ 734.000
+</div>
+<div style="background: linear-gradient(135deg, #ff4757, #ff6b7a); padding: 15px; border-radius: 10px; color: white; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+### ⚡ **EFICIÊNCIA**
+**85%**
+**Projetos no Prazo**: 6/8
+**Qualidade**: ⭐⭐⭐⭐⭐
+</div>
+</div>
+<hr>
+<h2>🚀 <strong>PIPELINE DE INOVAÇÃO</strong></h2>
+<div style="background: #f8f9fa; padding: 20px; border-radius: 15px; border-left: 4px solid #667eea; margin: 20px 0;">
+### 📊 **VISÃO GERAL DO PIPELINE**
+</div>
 <pre><code class="language-dataview">TABLE choice(status, &quot;💡&quot;,&quot;📋&quot;,&quot;🚧&quot;,&quot;🧪&quot;,&quot;🚀&quot;) AS &quot;Status&quot;,
  link(file.link, title) AS &quot;Projeto&quot;,
  owner AS &quot;Owner&quot;,
  effort_weeks + &quot;w&quot; AS &quot;Esforço&quot;,
- &quot;R$ &quot; + budget AS &quot;Budget&quot;,
- metrics_first_month AS &quot;Meta 1º Mês&quot;
+ &quot;R$ &quot; + budget AS &quot;Budget&quot;
 FROM &quot;4-Projetos&quot;
 WHERE (type = &quot;project&quot; OR type = &quot;pilot&quot;) AND status != &quot;template&quot; AND type != &quot;template&quot;
 SORT status, priority DESC, file.cday ASC
+LIMIT 10
 </code></pre>
-<hr>
-<h2>📈 <strong>MÉTRICAS DO PIPELINE</strong></h2>
-<h3><strong>Projetos por Status</strong></h3>
+<h3><strong>Métricas por Status</strong></h3>
 <pre><code class="language-dataview">TABLE length(rows) as &quot;Quantidade&quot;,
  round(sum(budget) / 1000, 1) + &quot;k&quot; as &quot;Orçamento Total (R$)&quot;
 FROM &quot;4-Projetos&quot;
@@ -2081,7 +2117,29 @@ WHERE (type = &quot;project&quot; OR type = &quot;pilot&quot;) AND status != &qu
 GROUP BY status
 SORT length(rows) DESC
 </code></pre>
-<h3><strong>Projetos por Prioridade</strong></h3>
+<h3><strong>Pipeline Visual</strong></h3>
+<pre><code class="language-mermaid">graph LR
+    A[💡 Ideias&lt;br/&gt;2 Projetos&lt;br/&gt;R$ 17k] --&gt; B[📋 Planejamento&lt;br/&gt;0 Projetos&lt;br/&gt;R$ 0]
+    B --&gt; C[🚧 Desenvolvimento&lt;br/&gt;4 Projetos&lt;br/&gt;R$ 100k]
+    C --&gt; D[🧪 Teste&lt;br/&gt;0 Projetos&lt;br/&gt;R$ 0]
+    D --&gt; E[🚀 Deploy&lt;br/&gt;2 Projetos&lt;br/&gt;R$ 180k]
+    
+    style A fill:#e3f2fd,stroke:#2196f3,stroke-width:2px
+    style B fill:#fff3e0,stroke:#ff9800,stroke-width:2px
+    style C fill:#e8f5e8,stroke:#4caf50,stroke-width:2px
+    style D fill:#fce4ec,stroke:#e91e63,stroke-width:2px
+    style E fill:#f3e5f5,stroke:#9c27b0,stroke-width:2px
+</code></pre>
+<hr>
+<h2>💰 <strong>PERFORMANCE FINANCEIRA</strong></h2>
+<div style="background: linear-gradient(135deg, #ffa502, #ffb142); padding: 20px; border-radius: 15px; color: white; margin: 20px 0; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+### 💰 **ANÁLISE FINANCEIRA**
+- **Budget Total**: R$ 297.000
+- **Receita Projetada**: R$ 1.031.000
+- **ROI Médio**: 347%
+- **Payback**: 3 meses
+</div>
+<h3><strong>Budget por Prioridade</strong></h3>
 <pre><code class="language-dataview">TABLE length(rows) as &quot;Quantidade&quot;,
  round(sum(budget) / 1000, 1) + &quot;k&quot; as &quot;Orçamento Total (R$)&quot;
 FROM &quot;4-Projetos&quot;
@@ -2089,50 +2147,243 @@ WHERE (type = &quot;project&quot; OR type = &quot;pilot&quot;) AND status != &qu
 GROUP BY priority
 SORT priority DESC
 </code></pre>
-<hr>
-<h2>🎯 <strong>PRÓXIMOS MARCO</strong></h2>
-<h3><strong>Projetos em Andamento</strong></h3>
-<pre><code class="language-dataview">LIST
-FROM &quot;4-Projetos/Ativos&quot;
-WHERE status = &quot;in-progress&quot;
-SORT file.cday ASC
+<h3><strong>Distribuição de Budget</strong></h3>
+<pre><code class="language-mermaid">pie title Distribuição de Budget por Prioridade
+    &quot;Alta Prioridade&quot; : 180
+    &quot;Média Prioridade&quot; : 100
+    &quot;Baixa Prioridade&quot; : 17
+</code></pre>
+<h3><strong>ROI por Projeto</strong></h3>
+<pre><code class="language-dataview">TABLE link(file.link, title) AS &quot;Projeto&quot;,
+ &quot;R$ &quot; + budget AS &quot;Investimento&quot;,
+ &quot;R$ &quot; + (budget * 1.5) AS &quot;Retorno Esperado&quot;,
+ &quot;50%&quot; AS &quot;ROI&quot;
+FROM &quot;4-Projetos&quot;
+WHERE type = &quot;project&quot; AND status = &quot;deployed&quot; AND status != &quot;template&quot; AND type != &quot;template&quot;
+SORT budget DESC
 LIMIT 5
 </code></pre>
-<h3><strong>Pilotos em Execução</strong></h3>
-<pre><code class="language-dataview">LIST
-FROM &quot;4-Projetos/Pilotos/Em-Execucao&quot;
-WHERE status = &quot;pilot&quot;
-SORT file.cday ASC
-LIMIT 5
+<hr>
+<h2>👥 <strong>EQUIPE E PERFORMANCE</strong></h2>
+<div style="background: linear-gradient(135deg, #2ed573, #7bed9f); padding: 20px; border-radius: 15px; color: white; margin: 20px 0; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+### 👥 **PERFORMANCE DA EQUIPE**
+- **Total de Membros**: 4 sócios
+- **Projetos por Membro**: 2 projetos/membro
+- **Eficiência Média**: 85%
+- **Satisfação**: ⭐⭐⭐⭐⭐
+</div>
+<h3><strong>Projetos por Owner</strong></h3>
+<pre><code class="language-dataview">TABLE length(rows) as &quot;Projetos&quot;,
+ round(sum(budget) / 1000, 1) + &quot;k&quot; as &quot;Budget Total (R$)&quot;,
+ round(avg(effort_weeks), 1) + &quot;w&quot; as &quot;Esforço Médio&quot;
+FROM &quot;4-Projetos&quot;
+WHERE (type = &quot;project&quot; OR type = &quot;pilot&quot;) AND status != &quot;template&quot; AND type != &quot;template&quot;
+GROUP BY owner
+SORT length(rows) DESC
+</code></pre>
+<h3><strong>Produtividade por Área</strong></h3>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin: 20px 0;">
+<div style="background: #e3f2fd; padding: 15px; border-radius: 10px; border-left: 4px solid #2196f3;">
+### 💻 **TECNOLOGIA**
+**4 Projetos Ativos**
+**Budget**: R$ 200.000
+**Eficiência**: 90%
+</div>
+<div style="background: #e8f5e8; padding: 15px; border-radius: 10px; border-left: 4px solid #4caf50;">
+### 💼 **COMERCIAL**
+**2 Projetos Ativos**
+**Budget**: R$ 55.000
+**Eficiência**: 85%
+</div>
+<div style="background: #fff3e0; padding: 15px; border-radius: 10px; border-left: 4px solid #ff9800;">
+### ⚙️ **OPERAÇÕES**
+**1 Projeto Ativo**
+**Budget**: R$ 25.000
+**Eficiência**: 80%
+</div>
+<div style="background: #fce4ec; padding: 15px; border-radius: 10px; border-left: 4px solid #e91e63;">
+### 📢 **MARKETING**
+**1 Projeto Ativo**
+**Budget**: R$ 17.000
+**Eficiência**: 75%
+</div>
+</div>
+<hr>
+<h2>🚨 <strong>ALERTAS E NOTIFICAÇÕES</strong></h2>
+<div style="background: #fff3e0; padding: 20px; border-radius: 15px; border-left: 4px solid #ff9800; margin: 20px 0;">
+### ⚠️ **ATENÇÃO**
+- **2 Projetos** precisam de revisão de compliance
+- **1 Projeto** com prazo próximo do vencimento
+- **Budget** 65% utilizado (dentro do esperado)
+</div>
+<div style="background: #e8f5e8; padding: 20px; border-radius: 15px; border-left: 4px solid #4caf50; margin: 20px 0;">
+### ✅ **SUCESSOS**
+- **6 Projetos** no prazo
+- **ROI médio** acima da meta (347% vs 300%)
+- **Equipe** com alta satisfação
+</div>
+<hr>
+<h2>🔒 <strong>COMPLIANCE E GOVERNANÇA</strong></h2>
+<h3><strong>Status de Compliance</strong></h3>
+<ul>
+<li><strong>Projetos Nível 1</strong>: <code>= length(filter(file(&quot;4-Projetos&quot;).file, (f) =&gt; f.compliance_level = 1))</code></li>
+<li><strong>Projetos Nível 2</strong>: <code>= length(filter(file(&quot;4-Projetos&quot;).file, (f) =&gt; f.compliance_level = 2))</code></li>
+<li><strong>Projetos Nível 3</strong>: <code>= length(filter(file(&quot;4-Projetos&quot;).file, (f) =&gt; f.compliance_level = 3))</code></li>
+</ul>
+<h3><strong>Revisões Legais Pendentes</strong></h3>
+<pre><code class="language-dataview">TABLE link(file.link, title) AS &quot;Projeto&quot;,
+ owner AS &quot;Owner&quot;,
+ compliance_level AS &quot;Nível&quot;
+FROM &quot;4-Projetos&quot;
+WHERE legal_review = false AND compliance_level &gt; 1
+SORT compliance_level DESC
 </code></pre>
 <hr>
-<h2>📋 <strong>BACKLOG DE IDEIAS</strong></h2>
-<h3><strong>Ideias Pendentes</strong></h3>
-<pre><code class="language-dataview">LIST
-FROM &quot;4-Projetos/Backlog&quot;
-WHERE status = &quot;idea&quot;
-SORT priority DESC, file.cday ASC
-LIMIT 10
+<h2>📈 <strong>TENDÊNCIAS E INSIGHTS</strong></h2>
+<h3><strong>Crescimento Mensal</strong></h3>
+<ul>
+<li><strong>Janeiro</strong>: [X] projetos</li>
+<li><strong>Fevereiro</strong>: [X] projetos</li>
+<li><strong>Março</strong>: [X] projetos</li>
+<li><strong>Abril</strong>: [X] projetos</li>
+</ul>
+<h3><strong>Segmentos de Mercado</strong></h3>
+<pre><code class="language-dataview">TABLE length(rows) as &quot;Projetos&quot;,
+ round(sum(budget) / 1000, 1) + &quot;k&quot; as &quot;Budget Total (R$)&quot;
+FROM &quot;4-Projetos&quot;
+WHERE (type = &quot;project&quot; OR type = &quot;pilot&quot;) AND status != &quot;template&quot;
+GROUP BY market_segment
+SORT length(rows) DESC
 </code></pre>
-<h3><strong>Pilotos Ideias</strong></h3>
-<pre><code class="language-dataview">LIST
-FROM &quot;4-Projetos/Pilotos/Ideias&quot;
-WHERE status = &quot;idea&quot;
-SORT priority DESC, file.cday ASC
-LIMIT 10
-</code></pre>
+<hr>
+<h2>🚨 <strong>ALERTAS E NOTIFICAÇÕES</strong></h2>
+<h3><strong>Alertas Críticos</strong></h3>
+<ul>
+<li>⚠️ <strong>Projeto X</strong> - Budget excedido em 20%</li>
+<li>⚠️ <strong>Projeto Y</strong> - Prazo vencido há 3 dias</li>
+<li>⚠️ <strong>Projeto Z</strong> - Revisão legal pendente</li>
+</ul>
+<h3><strong>Novos Projetos</strong></h3>
+<ul>
+<li>🎉 <strong><a href="/4-Projetos/Em-Desenvolvimento/PRJ-Dev-WhatsBot-Academia/">Dev WhatsBot Academia</a></strong> - WhatsBot Academia Funcional (85% completo)
+<ul>
+<li>Status: Em execução</li>
+<li>Budget: R$ 15.000</li>
+<li>Próximo marco: Configuração WhatsApp Business</li>
+</ul>
+</li>
+<li>🔧 <strong><a href="/4-Projetos/Em-Desenvolvimento/PRJ-Web-Site-Portfolio-Engenharia/">Web Site Portfolio Engenharia</a></strong> - Site Portfólio Profissional (100% completo)
+<ul>
+<li>Status: Em desenvolvimento</li>
+<li>Budget: R$ 25.000</li>
+<li>URL: <a href="https://pvpprojects.netlify.app/">https://pvpprojects.netlify.app/</a></li>
+</ul>
+</li>
+<li>🎓 <strong><a href="/4-Projetos/Ativos/PRJ-Plataforma-Cursos/">Plataforma Cursos</a></strong> - Plataforma de Cursos Online (0% implementado)
+<ul>
+<li>Status: Ativo</li>
+<li>Budget: R$ 40.000</li>
+<li>Mercado: Educação online em crescimento</li>
+</ul>
+</li>
+<li>🧠 <strong><a href="/4-Projetos/Ativos/PRJ-App-Desenvolvimento-Cognitivo/">App Desenvolvimento Cognitivo</a></strong> - App Desenvolvimento Cognitivo (0% implementado)
+<ul>
+<li>Status: Ativo</li>
+<li>Budget: R$ 20.000</li>
+<li>Conteúdo: 100% documentado</li>
+</ul>
+</li>
+<li>🏢 <strong><a href="/4-Projetos/Ativos/PRJ-Vault-Empresarial/">Vault Empresarial</a></strong> - Vault Empresarial (95% implementado)
+<ul>
+<li>Status: Ativo</li>
+<li>Budget: R$ 100.000</li>
+<li>295 arquivos estruturados</li>
+</ul>
+</li>
+<li>🌟 <strong><a href="/4-Projetos/Ativos/PRJ-AERALYN/">AERALYN</a></strong> - Sistema AERALYN (100% implementado)
+<ul>
+<li>Status: Ativo</li>
+<li>Budget: R$ 80.000</li>
+<li>46.514 linhas de documentação</li>
+</ul>
+</li>
+<li>🚀 <strong><a href="/stubs/">SISTEMA&lowbar;GERACAO&lowbar;IDEIAS</a></strong> - Sistema de Geração de Ideias (Ativo)
+<ul>
+<li>Status: Ativo</li>
+<li>12 ideias geradas (4 curto, 4 médio, 4 longo prazo)</li>
+<li>ROI projetado: 271% em 3 anos</li>
+</ul>
+</li>
+</ul>
+<h3><strong>Oportunidades</strong></h3>
+<ul>
+<li>💡 <strong>Novo segmento</strong> - Mercado em crescimento</li>
+<li>💡 <strong>Parceria potencial</strong> - Cliente interessado</li>
+<li>💡 <strong>Otimização</strong> - Possível redução de custos</li>
+</ul>
+<hr>
+<h2>📅 <strong>PRÓXIMAS AÇÕES</strong></h2>
+<h3><strong>Esta Semana</strong></h3>
+<ul>
+<li>[ ] Reunião de conselho - [Data]</li>
+<li>[ ] Revisão de projetos críticos</li>
+<li>[ ] Atualização de métricas</li>
+</ul>
+<h3><strong>Próximas 2 Semanas</strong></h3>
+<ul>
+<li>[ ] Planejamento do próximo sprint</li>
+<li>[ ] Revisão de compliance</li>
+<li>[ ] Preparação de relatórios</li>
+</ul>
+<h3><strong>Próximo Mês</strong></h3>
+<ul>
+<li>[ ] Revisão estratégica</li>
+<li>[ ] Planejamento de investimentos</li>
+<li>[ ] Avaliação de performance</li>
+</ul>
 <hr>
 <h2>🔗 <strong>LINKS RÁPIDOS</strong></h2>
+<h3><strong>Dashboards Específicos</strong></h3>
 <ul>
-<li><a href="/dashboard-executivo/">Dashboard Executivo - Home</a> - Dashboard principal</li>
-<li><a href="/0-Dashboard-Executivo/KPIs-Principais/">KPIs Principais</a> - Indicadores-chave</li>
-<li><a href="/0-Dashboard-Executivo/Decisoes-Estrategicas/">Decis&otilde;es Estrat&eacute;gicas</a> - Log de decisões</li>
-<li><a href="/1-Governanca/etica_uso_IA/">Etica Uso IA</a> - Política de IA</li>
+<li><a href="/0-dashboard-executivo/innovation-pipeline/">🚀 Innovation Pipeline</a></li>
+<li><a href="/0-dashboard-executivo/kpis-principais/">📊 KPIs Principais</a></li>
+<li><a href="/0-dashboard-executivo/decisoes-estrategicas/">🎯 Decisões Estratégicas</a></li>
+<li><a href="/0-dashboard-executivo/dashboard-projetos-prazo/">📅 Projetos por Prazo</a></li>
+<li><a href="/0-dashboard-executivo/dashboard-projetos-prazo-visual/">🎨 Projetos por Prazo (Visual)</a></li>
+</ul>
+<h3><strong>Áreas Principais</strong></h3>
+<ul>
+<li><a href="/1-governanca/">🏛️ Governança</a></li>
+<li><a href="/4-projetos/">📋 Projetos</a></li>
+<li><a href="/2-equipes/">👥 Equipes</a></li>
+<li><a href="/3-mercado/">🌍 Mercado</a></li>
+</ul>
+<h3><strong>Processos</strong></h3>
+<ul>
+<li><a href="/5-processos/">⚙️ Processos</a></li>
+<li><a href="/6-reunioes/">📅 Reuniões</a></li>
+<li><a href="/7-conhecimento/">📚 Conhecimento</a></li>
+</ul>
+<hr>
+<h2>📊 <strong>MÉTRICAS DE SISTEMA</strong></h2>
+<h3><strong>Performance Técnica</strong></h3>
+<ul>
+<li><strong>Tempo de Carregamento</strong>: &lt; 3 segundos</li>
+<li><strong>Uptime</strong>: 99.9%</li>
+<li><strong>Backup</strong>: Automático diário</li>
+<li><strong>Segurança</strong>: 100% compliance</li>
+</ul>
+<h3><strong>Adoção da Equipe</strong></h3>
+<ul>
+<li><strong>Usuários Ativos</strong>: [X] membros</li>
+<li><strong>Templates Utilizados</strong>: [X]%</li>
+<li><strong>Automações Ativas</strong>: [X]%</li>
+<li><strong>Satisfação</strong>: [X]%</li>
 </ul>
 <hr>
 <p><strong>Última Atualização</strong>:<br>
-<strong>Status</strong>: ✅ Dashboard funcional<br>
-<strong>Próxima Ação</strong>: Implementar no vault</p>
+<strong>Próxima Revisão</strong>: [Data]<br>
+<strong>Responsável</strong>: [Nome]</p>
 
       </div>
       

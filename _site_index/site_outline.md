@@ -1,11 +1,7 @@
----
-created: 2025-09-01T19:58
-updated: 2025-09-01T22:46
----
 # 🌳 Site Structure Outline
 
-**Generated**: 2025-09-02T01:46:41.897Z
-**Total Pages**: 95
+**Generated**: 2025-09-03T00:01:44.836Z
+**Total Pages**: 96
 
 ## 📁 .CURSOR
 
@@ -190,6 +186,11 @@ updated: 2025-09-01T22:46
   - **/dashboard-dinamico/** - "Dashboard Dinâmico Multisocios - Métricas em Tempo Real - Multisocios Empresarial" (base)
     - H1: Dashboard Dinâmico Multisocios - Métricas em Tempo Real
 
+## 📁 DASHBOARD-EXECUTIVO
+
+  - **/dashboard-executivo/** - "Dashboard Executivo - Home - Multisocios Empresarial" (base)
+    - H1: Dashboard Executivo - Home
+
 ## 📁 DASHBOARD-OVERVIEW
 
   - **/dashboard-overview/** - "Dashboard Executivo - Multisocios Empresarial" (base)
@@ -207,8 +208,9 @@ updated: 2025-09-01T22:46
 
 ## 📁 ROOT
 
-- **/** - "Dashboard Executivo - Home - Multisocios Empresarial" (dashboard)
-  - H1: Dashboard Executivo - Home
+- **/** - "Digital Garden Empresarial - Multisocios - Multisocios Empresarial" (dashboard)
+  - H1: Digital Garden Empresarial - Multisocios
+  - Status: active
 
 ## 📁 SOBRE-SISTEMA
 

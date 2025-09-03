@@ -9,7 +9,7 @@ priority: high
 owner: Pedro Vitor
 version: 1
 css_class: dashboard-visual
-permalink: /
+permalink: /dashboard-executivo/
 eleventyNavigation:
   key: home
   title: 🏠 Dashboard Executivo
