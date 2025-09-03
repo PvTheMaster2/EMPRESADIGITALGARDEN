@@ -101964,16 +101964,6 @@
           "isInternal": true
         },
         {
-          "text": "Dev WhatsBot Academia",
-          "href": "/projetos/dev-whatsbot-academia/",
-          "isInternal": true
-        },
-        {
-          "text": "Web Site Portfolio Engenharia",
-          "href": "/projetos/web-site-portfolio-engenharia/",
-          "isInternal": true
-        },
-        {
           "text": "AERALYN",
           "href": "/projetos/aeralyn/",
           "isInternal": true
@@ -102009,8 +101999,18 @@
           "isInternal": true
         },
         {
+          "text": "Web Site Portfolio Engenharia",
+          "href": "/projetos/web-site-portfolio-engenharia/",
+          "isInternal": true
+        },
+        {
           "text": "Exemplo Intake Preenchido",
           "href": "/projetos/exemplo-intake-preenchido/",
+          "isInternal": true
+        },
+        {
+          "text": "Dev WhatsBot Academia",
+          "href": "/projetos/dev-whatsbot-academia/",
           "isInternal": true
         },
         {
