@@ -1,4 +1,9 @@
 ---
+created: 2025-09-03T14:02
+updated: 2025-09-03T16:19
+---
+
+---
 template: dashboard-auto
 type: dashboard
 status: auto-generated
@@ -9,7 +14,7 @@ version: 2
 automation_run: AUTO-2025-09-03-001
 updated: 2025-09-03T17:05
 ---
-
+|
 # 📊 **DASHBOARD EXECUTIVO AUTOMÁTICO - DADOS REAIS**
 
 > *Dashboard gerado automaticamente com métricas em tempo real baseadas nos dados reais dos projetos e equipe*
