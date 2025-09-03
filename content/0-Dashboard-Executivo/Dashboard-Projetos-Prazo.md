@@ -1,6 +1,6 @@
 ---
 created: 2025-09-01T02:30
-updated: 2025-09-01T02:30
+updated: 2025-09-02T21:24
 ---
 # 📊 **DASHBOARD DE PROJETOS POR PRAZO**
 

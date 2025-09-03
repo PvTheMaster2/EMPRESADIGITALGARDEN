@@ -1,6 +1,6 @@
 ---
 created: 2025-01-20T10:00
-updated: 2025-09-01T01:46
+updated: 2025-09-02T21:24
 ---
 # 📊 DASHBOARD DE CAPACIDADE DA EQUIPE
 

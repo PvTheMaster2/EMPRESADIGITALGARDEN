@@ -10,7 +10,7 @@ const path = require('path');
 const { JSDOM } = require('jsdom');
 
 class SiteIndexer {
-  constructor(distPath = './dist') {
+  constructor(distPath = './build/dist') {
     this.distPath = distPath;
     this.siteIndex = {
       pages: [],

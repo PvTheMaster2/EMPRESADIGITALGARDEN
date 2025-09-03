@@ -280,7 +280,7 @@
     "MANUAL_TECNICO_SISTEMA.md": "af6fdb39d98248ac5847d396776dd08411e9e10e657be8f05747a3de5c853055",
     "docs/Documentacao_Handover_Sprint4.md": "87b349c1782a452f6a2a4d90368ba1f9ade15107200d0b03ee1cbda3c0d24577",
     "docs/CHECKLIST_FINAL.md": "32c4be8a6abf8d50197a33f053c3b803ebee1cfd118271869a9e25c08d08b32c",
-    "docs/README.md": "eae2e89f8de8973237b87bf8fb83fe223f431674a0710a861ae91c2898de0daf",
+    "docs/README.md": "c03c17470f7666e0f7af1bc44e992097181c5965cf91490c8b6d6c9730e637e2",
     "docs/PLANO_FINAL.md": "c732788f5b97f76ee547cb89a470915b439b07920c34eba2c255801859000e6a",
     "README.md": "d736548f6c6644702940ca9f0d129471cd2072e4166554e1a2d1b09a61a3615d",
     "PROXIMAS_ACOES.md": "8b41455f5267e7fdd35dad389d95bd8f1095321446eed4c6c337154b19973cc5",
@@ -810,8 +810,8 @@
     "node_modules/@photogabble/eleventy-plugin-interlinker/node_modules/webidl-conversions/LICENSE.md": "a8178541ce078072de68715ab510844a711584b4bfad406ccb518123f69789b6",
     "node_modules/@photogabble/eleventy-plugin-interlinker/node_modules/webidl-conversions/README.md": "a3ed6baa481e2c77833727b6544c54f0f4341335b1f900de4f11b0da5dfdc548",
     "node_modules/@photogabble/eleventy-plugin-interlinker/node_modules/whatwg-url/README.md": "998a5003ac7627918b4b56cc730e918157f352592da8ec6d4eb2a6fe9d3d20ff",
-    "_site_index/issues.md": "7cac34d6498da59981d7aa1d74e7e882b493b22d2aea85ccf5aa64919fbcd1e7",
-    "_site_index/layouts_analysis.md": "b9d7035e90fad4c762e1604071e688e046b9d405f0772394cfe6da5dc61d0cf4",
+    "_site_index/issues.md": "e763fe4108c5b65b38feb35cd0d452afbdb23e970e50b679450e9baae5a7a693",
+    "_site_index/layouts_analysis.md": "2643503337e79217a600f3b17efe1f8f23cb54d87a5da3421874b180ce53c913",
     "_site_index/site_outline.md": "4e5bdb459e29da8e0f6fec7fa3df4d61e6220d384d84103b07197f333db20c36",
     "dev/sidebar-check.md": "89063e1612cb7d296b05be0bd86b5a23ae8e081978a12b22d7a425b254e9976d",
     "node_modules/pkg-types/README.md": "e9338eb16d6d9bc92c26873399dda61027d43fb9217627bcce5f72e4d6a91b59",
@@ -967,6 +967,10 @@
     "node_modules/tldts-core/README.md": "4e54f489bdc4cc0ff109d09861cbd24af4ef098e4b79e70a422fef7cd531fa14",
     "node_modules/cssstyle/README.md": "3918ca71e7d8856e8e479af80f75fa10e8550c09b6f0da4772bae94d5f687807",
     "node_modules/tldts/README.md": "280a7c7429352542e10c6359e70ad6c4920916392bcea0b85f185fd016014a2c",
-    "node_modules/khroma/readme.md": "5c046e1a4ca6e0ae82cba57b1314767f52ad0a705fe8dc467bc325472b2902f8"
+    "node_modules/khroma/readme.md": "5c046e1a4ca6e0ae82cba57b1314767f52ad0a705fe8dc467bc325472b2902f8",
+    "content/0-Dashboard-Executivo/Dashboard_Capacidade_Equipe.md": "f21d8b87444a68e1e93bdf1df03687893e22436b1143d582b65a45e83386eb95",
+    "content/0-Dashboard-Executivo/Dashboard-Projetos-Prazo.md": "924724b004161567567c7efa5b21a3e76a4caf55bc6780bd302a04f5c03daff0",
+    "content/0-Dashboard-Executivo/Executive-Auto.md": "c6fd49ee61cf10bf696648c5269e0c790046d30669b32e1016fb419f22effd07",
+    "content/0-Dashboard-Executivo/Home-Executivo.md": "e587ea4068681e8c4008fdd6b849fedb0fbe3ddf00f63f96c788975cecf5584c"
   }
 }

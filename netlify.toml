@@ -6,7 +6,7 @@
   command = "npm install && npm run build"
   
   # Diretório onde está o código gerado
-  publish = "build/dist"
+  publish = "dist"
   
   # Diretório onde está o código fonte (relativo ao base)
   functions = "netlify/functions"
