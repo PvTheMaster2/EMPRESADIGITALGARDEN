@@ -967,10 +967,10 @@
     "content/0-Dashboard-Executivo/Dashboard-Projetos-Prazo.md": "924724b004161567567c7efa5b21a3e76a4caf55bc6780bd302a04f5c03daff0",
     "content/0-Dashboard-Executivo/Executive-Auto.md": "c6fd49ee61cf10bf696648c5269e0c790046d30669b32e1016fb419f22effd07",
     "content/0-Dashboard-Executivo/Home-Executivo.md": "e587ea4068681e8c4008fdd6b849fedb0fbe3ddf00f63f96c788975cecf5584c",
-    "_site_index/issues.md": "4d1fb8ccc2cc1ea26d6f2bd3f6addee99c7b5838dc5b26f78becd11e3abf0abc",
-    "_site_index/layouts_analysis.md": "f7db765e6cad63d1bf3a448b3fbf1e38f31ea5fa0958b214f614f1eac319e575",
+    "_site_index/issues.md": "95a8fe6958ea18e394dab7394f74ed24de1449623b9179480d3df577ac4aadf2",
+    "_site_index/layouts_analysis.md": "0e99d7fc487a96391ab14a77c24ccf6e8b064d5646b69c90405de186ccf2e062",
     "compilado site.md": "5516188f4ae7409f832893bc015b6712e9722ea4b87579290055c4927994c02c",
-    "_site_index/site_outline.md": "acb8853262e085082bb3545ddab8577a72494bcc1b8bfab03096544cdfc0479a",
+    "_site_index/site_outline.md": "72aeb4cbb7a6b241df8916ad9bfa245c29b9c69eb4ab3235dded24e5ff2e7f65",
     "index.md": "766db1619ffac5db985c09332faf82296ff1188ee49b4532263f97c13b388c64",
     "node_modules/has-flag/readme.md": "81d6a4d80ea8d05a9d36e1f41314c66290ddcbb402e89e8ac9c0dbfd24264e30",
     "node_modules/acorn-walk/CHANGELOG.md": "e45662c9291b12b8b2c69cb3248c301cbdf46d00c47c2aac84f87c3ee6ccbc91",
@@ -991,6 +991,7 @@
     "node_modules/mime-db/README.md": "a0f633eb095c5b12985b2f2fabaae77bbf5f7a28e52a9a6ce5957c45e00a7cff",
     "node_modules/range-parser/HISTORY.md": "47facf97cf5bb723ffd3447804ecf16d8a6268821afe5dc3ef95bf561c60d1e3",
     "node_modules/range-parser/README.md": "9cb95f8de5e6e9cbadd12f7b8a1062677e1e74afc49bc0fba21d75068fb34a9e",
-    "INSTRUCOES-DEBUG-NETLIFY.md": "02ba11fe991995042582dc3647f4eb8fbc35aa1889b9c850aaaedcab797785e9"
+    "INSTRUCOES-DEBUG-NETLIFY.md": "02ba11fe991995042582dc3647f4eb8fbc35aa1889b9c850aaaedcab797785e9",
+    "TESTE-NETLIFY-AGORA.md": "00379f30a06e7d4ad983aea8069dd748bff03937412873b7971eaff02068e24c"
   }
 }
