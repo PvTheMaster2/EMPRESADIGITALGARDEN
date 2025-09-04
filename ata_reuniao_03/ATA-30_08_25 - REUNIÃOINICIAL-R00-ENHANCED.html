@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATA – Reunião de Fundação e Estruturação (v3.0) - Enhanced</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .card {
+            @apply bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden p-6 md:p-8 mb-8;
+        }
+        .section-title {
+            @apply text-2xl font-bold text-gray-900 mb-6 pb-2 border-b-2 border-blue-600;
+        }
+        .subsection-title {
+            @apply text-lg font-semibold text-gray-800 mb-3 mt-6;
+        }
+        .phase-timeline {
+            @apply relative border-l border-gray-200 ml-4;
+        }
+        .phase-item {
+            @apply relative mb-6;
+        }
+        .phase-dot {
+            @apply absolute w-3 h-3 bg-blue-600 rounded-full mt-1.5 -left-1.5 border-2 border-white;
+        }
+        .phase-content {
+            @apply ml-6;
+        }
+        .styled-table {
+            @apply w-full text-sm text-left text-gray-500;
+        }
+        .styled-table thead {
+            @apply text-xs text-gray-700 uppercase bg-gray-50;
+        }
+        .styled-table th, .styled-table td {
+            @apply px-6 py-3 border border-gray-200;
+        }
+        .styled-table tbody tr {
+            @apply bg-white;
+        }
+        .page-break-before {
+            page-break-before: always !important;
+        }
+        
+        /* === REGRAS DE PAGINAÇÃO PARA PDF === */
+        @media print {
+            /* Configurações gerais de impressão */
+            body {
+                font-size: 12pt;
+                line-height: 1.4;
+                background: white !important;
+                color: black !important;
+            }
+            
+            /* Container principal */
+            .container {
+                max-width: none !important;
+                padding: 0 !important;
+                margin: 0 !important;
+            }
+            
+            /* Cards com bordas suaves para impressão */
+            .card {
+                box-shadow: none !important;
+                border: 1px solid #e2e8f0 !important;
+                page-break-inside: avoid;
+                margin-bottom: 20pt !important;
+            }
+            
+            /* Quebras de página estratégicas */
+            .page-break-deliberacoes {
+                page-break-before: always !important;
+            }
+            
+            .page-break-encaminhamentos {
+                page-break-before: always !important;
+            }
+            
+            .page-break-tabelas {
+                page-break-before: always !important;
+            }
+            
+            .page-break-anexos {
+                page-break-before: always !important;
+            }
+            
+            .page-break-assinaturas {
+                page-break-before: always !important;
+            }
+            
+            /* Evitar quebras inadequadas */
+            .no-page-break {
+                page-break-inside: avoid !important;
+            }
+            
+            /* Títulos sempre com conteúdo */
+            h1, h2, h3, h4 {
+                page-break-after: avoid !important;
+                page-break-inside: avoid !important;
+            }
+            
+            /* Tabelas */
+            table {
+                page-break-inside: avoid !important;
+            }
+            
+            .styled-table {
+                font-size: 10pt !important;
+            }
+            
+            /* Timeline da pauta - ajustar para impressão */
+            .timeline-item {
+                page-break-inside: avoid !important;
+                margin-bottom: 15pt !important;
+            }
+            
+            /* Remover elementos interativos */
+            button, .interactive-element {
+                display: none !important;
+            }
+            
+            /* Ajustar cores para impressão */
+            .bg-blue-50, .bg-green-50, .bg-purple-50, .bg-gray-50 {
+                background-color: #f8f9fa !important;
+            }
+            
+            .text-blue-800, .text-green-800, .text-purple-800 {
+                color: #1a202c !important;
+            }
+            
+            /* Footer sempre na última página */
+            footer {
+                page-break-before: avoid !important;
+            }
+            
+            /* Margem de impressão */
+            @page {
+                margin: 2cm 1.5cm;
+                size: A4;
+            }
+            
+            /* Cabeçalho de página */
+            @page :first {
+                margin-top: 3cm;
+            }
+        }
+        
+        /* Regras específicas para conversão HTML para PDF (não @media print) */
+        .pdf-break-deliberacoes {
+            break-before: page;
+            page-break-before: always;
+        }
+        
+        .pdf-break-encaminhamentos {
+            break-before: page;
+            page-break-before: always;
+        }
+        
+        .pdf-break-tabelas {
+            break-before: page;
+            page-break-before: always;
+        }
+        
+        .pdf-break-anexos {
+            break-before: page;
+            page-break-before: always;
+        }
+        
+        .pdf-break-assinaturas {
+            break-before: page;
+            page-break-before: always;
+        }
+
+        /* Estilos para listas de tasks */
+        .task-list {
+            @apply space-y-4;
+        }
+        .task-item {
+            @apply bg-white p-4 rounded-lg border border-gray-200 hover:shadow-md transition-shadow;
+        }
+        .task-header {
+            @apply flex items-center justify-between mb-2;
+        }
+        .task-id {
+            @apply inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800;
+        }
+        .task-status {
+            @apply inline-flex items-center px-2 py-1 rounded-full text-xs font-medium;
+        }
+        .status-pending {
+            @apply bg-yellow-100 text-yellow-800;
+        }
+        .status-in-progress {
+            @apply bg-blue-100 text-blue-800;
+        }
+        .status-completed {
+            @apply bg-green-100 text-green-800;
+        }
+        .task-priority {
+            @apply inline-flex items-center px-2 py-1 rounded-full text-xs font-medium;
+        }
+        .priority-high {
+            @apply bg-red-100 text-red-800;
+        }
+        .priority-medium {
+            @apply bg-yellow-100 text-yellow-800;
+        }
+        .priority-low {
+            @apply bg-green-100 text-green-800;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <div class="container mx-auto p-4 sm:p-6 md:p-8 max-w-7xl relative">
+        <div class="absolute left-0 top-0 w-1 h-full bg-gradient-to-b from-blue-600 to-blue-800 hidden md:block"></div>
+
+        <header class="mb-12 text-center">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-blue-700">ATA – Reunião de Fundação e Estruturação (v3.0) - Enhanced</h1>
+            <p class="text-xl text-gray-600 mt-2">Projeto/Empresa: Nome provisório</p>
+        </header>
+
+        <section class="card bg-gradient-to-r from-blue-50 to-indigo-50">
+            <h2 class="section-title text-3xl font-extrabold text-blue-800 mb-8">Abertura e Dados da Reunião</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="font-bold text-lg mb-2">Abertura da Sessão</h3>
+                    <p class="text-gray-700 mb-4">
+                        Às 09:00h do dia 30 de agosto de 2025, o condutor da reunião (Participante 2) declara iniciada a sessão com o objetivo de realizar o alinhamento estratégico para a fundação de uma nova empresa, formada pela união de amigos e especialistas de várias áreas.
+                    </p>
+                    <div class="bg-blue-100 p-4 rounded-lg border border-blue-200">
+                        <p class="font-semibold text-blue-800">Nota de contexto:</p>
+                        <p class="text-sm text-blue-700">O objetivo é montar uma estrutura capaz de desenvolver múltiplos projetos, incluindo serviços e produtos, com foco em colaboração inteligente e uso de tecnologia de ponta, como Inteligência Artificial, para gerar impacto e aumentar a produtividade. A empresa nasce da transição de projetos informais para uma estrutura oficial e legal.</p>
+                        <p class="font-semibold text-blue-800 mt-2">Referência de conteúdo:</p>
+                        <p class="text-sm text-blue-700">A estrutura proposta é de uma empresa-mãe que centraliza governança, marca e tecnologia, e "empresas-filhas" ou núcleos que operam os projetos setoriais com autonomia, com parte da receita reinjetada na estrutura principal para fortalecer as capacidades do grupo.</p>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg">
+                    <h3 class="font-bold text-lg mb-4 text-center">Dados Gerais</h3>
+                    <div class="space-y-3 text-sm">
+                        <div class="flex justify-between"><span class="font-medium">Tipo:</span><span>Reunião de Sócios (Kickoff)</span></div>
+                        <div class="flex justify-between"><span class="font-medium">Data:</span><span>30/08/2025</span></div>
+                        <div class="flex justify-between"><span class="font-medium">Horário:</span><span>09:00 (duração aproximada de 2 horas)</span></div>
+                        <div class="flex justify-between"><span class="font-medium">Local/Plataforma:</span><span>Microsoft Teams</span></div>
+                        <div class="flex justify-between"><span class="font-medium">Secretário(a):</span><span>Gui</span></div>
+                        <div class="flex justify-between"><span class="font-medium">Conduzido por:</span><span>Participante 2 (PV)</span></div>
+                        <div class="flex justify-between"><span class="font-medium">Participantes:</span><span>Membros fundadores (sócios)</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2 class="section-title">Pauta da Reunião</h2>
+            <div class="grid md:grid-cols-1 gap-6">
+                <div class="relative">
+                    <div class="absolute left-8 top-0 bottom-0 w-0.5 bg-blue-200"></div>
+                    
+                    <div class="relative flex items-start mb-6">
+                        <div class="flex-shrink-0 w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold text-xl mr-6">1</div>
+                        <div class="flex-1 bg-blue-50 p-4 rounded-lg border border-blue-200">
+                            <h3 class="font-bold text-blue-800">Alinhamento Estratégico</h3>
+                            <p class="text-sm text-gray-700">Definir Missão, Visão, Valores e Propósito da empresa.</p>
+                            <div class="mt-2 text-xs text-blue-600">📋 Saída: Manifesto da marca + Lista de Valores consensuais</div>
+                        </div>
+                    </div>
+                    
+                    <div class="relative flex items-start mb-6">
+                        <div class="flex-shrink-0 w-16 h-16 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-xl mr-6">2</div>
+                        <div class="flex-1 bg-green-50 p-4 rounded-lg border border-green-200">
+                            <h3 class="font-bold text-green-800">Estrutura & Governança</h3>
+                            <p class="text-sm text-gray-700">Discutir o modelo de negócio (empresa-mãe + núcleos), políticas de receita e os primeiros aspectos jurídicos.</p>
+                            <div class="mt-2 text-xs text-green-600">📋 Saída: Diretrizes sobre o modelo de negócio e financeiro</div>
+                        </div>
+                    </div>
+                    
+                    <div class="relative flex items-start mb-6">
+                        <div class="flex-shrink-0 w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center text-white font-bold text-xl mr-6">3</div>
+                        <div class="flex-1 bg-purple-50 p-4 rounded-lg border border-purple-200">
+                            <h3 class="font-bold text-purple-800">Operação & Próximos Passos</h3>
+                            <p class="text-sm text-gray-700">Definir o processo para submissão de projetos piloto, papéis iniciais e o cronograma de ação para os próximos 30-60 dias.</p>
+                            <div class="mt-2 text-xs text-purple-600">📋 Saída: Processo de submissão de ideias + Cronograma inicial</div>
+                        </div>
+                    </div>
+                    
+                    <div class="relative flex items-start">
+                        <div class="flex-shrink-0 w-16 h-16 bg-gray-500 rounded-full flex items-center justify-center text-white font-bold text-xl mr-6">4</div>
+                        <div class="flex-1 bg-gray-50 p-4 rounded-lg border border-gray-200">
+                            <h3 class="font-bold text-gray-800">Encerramento</h3>
+                            <p class="text-sm text-gray-700">Resumo das decisões, consolidação do plano de ação e definição dos próximos encontros.</p>
+                            <div class="mt-2 text-xs text-gray-600">📋 Saída: Log de decisões + Data da próxima reunião</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- NOVA SEÇÃO: LISTA DE TASKS E AÇÕES -->
+        <section class="card page-break-before pdf-break-encaminhamentos">
+            <h2 class="section-title text-3xl font-extrabold text-blue-800 mb-8">📋 Lista de Tasks e Ações</h2>
+            
+            <!-- Tasks por Responsável -->
+            <div class="grid md:grid-cols-2 gap-8 mb-8">
+                <div class="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-xl border border-blue-200">
+                    <h3 class="subsection-title text-blue-700 !mt-0 mb-6">👤 Pedro Vitor (PV)</h3>
+                    <div class="task-list">
+                        <div class="task-item">
+                            <div class="task-header">
+                                <span class="task-id">A-001</span>
+                                <span class="task-status status-pending">Pendente</span>
+                            </div>
+                            <h4 class="font-semibold text-gray-800 mb-2">Redigir Manifesto final</h4>
+                            <p class="text-sm text-gray-600 mb-3">Criar a versão final do manifesto da empresa com missão, visão e propósito consolidados.</p>
+                            <div class="flex items-center justify-between">
+                                <span class="task-priority priority-high">Alta</span>
+                                <span class="text-xs text-gray-500">Prazo: 7 dias</span>
+                            </div>
+                        </div>
+                        
+                        <div class="task-item">
+                            <div class="task-header">
+                                <span class="task-id">A-003</span>
+                                <span class="task-status status-pending">Pendente</span>
+                            </div>
+                            <h4 class="font-semibold text-gray-800 mb-2">Criar template para submissão de projetos</h4>
+                            <p class="text-sm text-gray-600 mb-3">Desenvolver template formal contendo: Título, Problema, Público-Alvo, Solução Proposta.</p>
+                            <div class="flex items-center justify-between">
+                                <span class="task-priority priority-high">Alta</span>
+                                <span class="text-xs text-gray-500">Prazo: 5 dias</span>
+                            </div>
+                        </div>
+                        
+                        <div class="task-item">
+                            <div class="task-header">
+                                <span class="task-id">A-004</span>
+                                <span class="task-status status-pending">Pendente</span>
+                            </div>
+                            <h4 class="font-semibold text-gray-800 mb-2">Documentar fluxo de projetos (idea-to-launch)</h4>
+                            <p class="text-sm text-gray-600 mb-3">Definir e documentar o processo completo desde a ideia até o lançamento.</p>
+                            <div class="flex items-center justify-between">
+                                <span class="task-priority priority-medium">Média</span>
+                                <span class="text-xs text-gray-500">Prazo: 10 dias</span>
+                            </div>
+                        </div>
+                        
+                        <div class="task-item">
+                            <div class="task-header">
+                                <span class="task-id">A-006</span>
+                                <span class="task-status status-pending">Pendente</span>
+                            </div>
+                            <h4 class="font-semibold text-gray-800 mb-2">Agendar reunião de estrutura financeira</h4>
+                            <p class="text-sm text-gray-600 mb-3">Marcar reunião específica para debater divisão de lucros, capital de giro e modelo de rateio.</p>
+                            <div class="flex items-center justify-between">
+                                <span class="task-priority priority-high">Alta</span>
+                                <span class="text-xs text-gray-500">Prazo: 3 dias</span>
+                            </div>
+                        </div>
+                        
+                        <div class="task-item">
+                            <div class="task-header">
+                                <span class="task-id">A-008</span>
+                                <span class="task-status status-pending">Pendente</span>
+                            </div>
+                            <h4 class="font-semibold text-gray-800 mb-2">Incluir política de comissões na pauta da reunião financeira</h4>
+                            <p class="text-sm text-gray-600 mb-3">Adicionar discussão sobre percentuais e regras de comissão na agenda.</p>
+                            <div class="flex items-center justify-between">
+                                <span class="task-priority priority-medium">Média</span>
+                                <span class="text-xs text-gray-500">Prazo: 5 dias</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-xl border border-green-200">
+                    <h3 class="subsection-title text-green-700 !mt-0 mb-6">👤 Gui (Secretário)</h3>
+                    <div class="task-list">
+                        <div class="task-item">
+                            <div class="task-header">
+                                <span class="task-id">A-002</span>
+                                <span class="task-status status-pending">Pendente</span>
+                            </div>
+                            <h4 class="font-semibold text-gray-800 mb-2">Documentar lista de Valores</h4>
+                            <p class="text-sm text-gray-600 mb-3">Consolidar a nuvem de palavras da dinâmica e documentar a lista final de valores com breves descrições.</p>
+                            <div class="flex items-center justify-between">
+                                <span class="task-priority priority-high">Alta</span>
+                                <span class="text-xs text-gray-500">Prazo: 7 dias</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tasks por Equipe -->
+            <div class="grid md:grid-cols-2 gap-8 mb-8">
+                <div class="bg-gradient-to-br from-purple-50 to-violet-50 p-6 rounded-xl border border-purple-200">
+                    <h3 class="subsection-title text-purple-700 !mt-0 mb-6">⚖️ Equipe Jurídica (Rock, Tal, Lucas)</h3>
+                    <div class="task-list">
+                        <div class="task-item">
+                            <div class="task-header">
+                                <span class="task-id">A-007</span>
+                                <span class="task-status status-pending">Pendente</span>
+                            </div>
+                            <h4 class="font-semibold text-gray-800 mb-2">Mapear necessidades jurídicas iniciais</h4>
+                            <p class="text-sm text-gray-600 mb-3">Identificar requisitos e riscos legais da primeira fase de operação.</p>
+                            <div class="flex items-center justify-between">
+                                <span class="task-priority priority-high">Alta</span>
+                                <span class="text-xs text-gray-500">Prazo: 14 dias</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-gradient-to-br from-orange-50 to-red-50 p-6 rounded-xl border border-orange-200">
+                    <h3 class="subsection-title text-orange-700 !mt-0 mb-6">👥 Todos os Sócios</h3>
+                    <div class="task-list">
+                        <div class="task-item">
+                            <div class="task-header">
+                                <span class="task-id">A-009</span>
+                                <span class="task-status status-pending">Pendente</span>
+                            </div>
+                            <h4 class="font-semibold text-gray-800 mb-2">Iniciar preenchimento do template com ideias</h4>
+                            <p class="text-sm text-gray-600 mb-3">Todos os sócios devem começar a preencher o template de projeto para submissão.</p>
+                            <div class="flex items-center justify-between">
+                                <span class="task-priority priority-medium">Média</span>
+                                <span class="text-xs text-gray-500">Prazo: 30 dias</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tasks Pendentes de Definição -->
+            <div class="bg-gradient-to-br from-gray-50 to-slate-50 p-6 rounded-xl border border-gray-200">
+                <h3 class="subsection-title text-gray-700 !mt-0 mb-6">❓ A Definir Responsável</h3>
+                <div class="task-list">
+                    <div class="task-item">
+                        <div class="task-header">
+                            <span class="task-id">A-005</span>
+                            <span class="task-status status-pending">Pendente</span>
+                        </div>
+                        <h4 class="font-semibold text-gray-800 mb-2">Desenhar organograma macro</h4>
+                        <p class="text-sm text-gray-600 mb-3">Criar organograma representando a estrutura de empresa-mãe + núcleos de projeto.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="task-priority priority-medium">Média</span>
+                            <span class="text-xs text-gray-500">Prazo: 14 dias</span>
+                        </div>
+                    </div>
+                    
+                    <div class="task-item">
+                        <div class="task-header">
+                            <span class="task-id">A-010</span>
+                            <span class="task-status status-pending">Pendente</span>
+                        </div>
+                        <h4 class="font-semibold text-gray-800 mb-2">Disponibilizar template de projeto no repositório</h4>
+                        <p class="text-sm text-gray-600 mb-3">Participante 4, com apoio do PV - colocar template finalizado no repositório central.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="task-priority priority-high">Alta</span>
+                            <span class="text-xs text-gray-500">Prazo: 7 dias</span>
+                        </div>
+                    </div>
+                    
+                    <div class="task-item">
+                        <div class="task-header">
+                            <span class="task-id">A-011</span>
+                            <span class="task-status status-pending">Pendente</span>
+                        </div>
+                        <h4 class="font-semibold text-gray-800 mb-2">Criar e compartilhar repositório no Google Drive</h4>
+                        <p class="text-sm text-gray-600 mb-3">Criar pasta compartilhada com estrutura inicial para evitar perdas no WhatsApp.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="task-priority priority-high">Alta</span>
+                            <span class="text-xs text-gray-500">Prazo: 3 dias</span>
+                        </div>
+                    </div>
+                    
+                    <div class="task-item">
+                        <div class="task-header">
+                            <span class="task-id">A-012</span>
+                            <span class="task-status status-pending">Pendente</span>
+                        </div>
+                        <h4 class="font-semibold text-gray-800 mb-2">Estruturar o backup local das informações</h4>
+                        <p class="text-sm text-gray-600 mb-3">Configurar backup local em HD para informações críticas.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="task-priority priority-medium">Média</span>
+                            <span class="text-xs text-gray-500">Prazo: 10 dias</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Timeline de Encaminhamentos -->
+        <section class="card">
+            <h2 class="section-title text-3xl font-extrabold text-blue-800 mb-8">⏰ Timeline de Encaminhamentos</h2>
+            <div class="phase-timeline">
+                <div class="phase-item">
+                    <div class="phase-dot"></div>
+                    <div class="phase-content">
+                        <h3 class="font-bold text-lg text-blue-800">Semana 1 (31/08 - 06/09)</h3>
+                        <div class="space-y-2 text-sm">
+                            <p><strong>A-006:</strong> Agendar reunião de estrutura financeira (PV)</p>
+                            <p><strong>A-011:</strong> Criar repositório no Google Drive (A definir)</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="phase-item">
+                    <div class="phase-dot"></div>
+                    <div class="phase-content">
+                        <h3 class="font-bold text-lg text-blue-800">Semana 2 (07/09 - 13/09)</h3>
+                        <div class="space-y-2 text-sm">
+                            <p><strong>A-001:</strong> Redigir Manifesto final (PV)</p>
+                            <p><strong>A-002:</strong> Documentar lista de Valores (Gui)</p>
+                            <p><strong>A-003:</strong> Criar template para submissão de projetos (PV)</p>
+                            <p><strong>A-008:</strong> Incluir política de comissões na pauta (PV)</p>
+                            <p><strong>A-010:</strong> Disponibilizar template no repositório (Participante 4 + PV)</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="phase-item">
+                    <div class="phase-dot"></div>
+                    <div class="phase-content">
+                        <h3 class="font-bold text-lg text-blue-800">Semana 3-4 (14/09 - 27/09)</h3>
+                        <div class="space-y-2 text-sm">
+                            <p><strong>A-004:</strong> Documentar fluxo de projetos (PV)</p>
+                            <p><strong>A-005:</strong> Desenhar organograma macro (A definir)</p>
+                            <p><strong>A-007:</strong> Mapear necessidades jurídicas (Rock, Tal, Lucas)</p>
+                            <p><strong>A-012:</strong> Estruturar backup local (A definir)</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="phase-item">
+                    <div class="phase-dot"></div>
+                    <div class="phase-content">
+                        <h3 class="font-bold text-lg text-blue-800">Mês 1 (30 dias)</h3>
+                        <div class="space-y-2 text-sm">
+                            <p><strong>A-009:</strong> Iniciar preenchimento do template com ideias (Todos os sócios)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dashboard de Progresso -->
+        <section class="card">
+            <h2 class="section-title text-3xl font-extrabold text-blue-800 mb-8">📊 Dashboard de Progresso</h2>
+            
+            <div class="grid md:grid-cols-4 gap-6 mb-8">
+                <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-xl border border-blue-200 text-center">
+                    <div class="text-3xl font-bold text-blue-800 mb-2">12</div>
+                    <div class="text-sm text-blue-600 font-medium">Total de Ações</div>
+                </div>
+                
+                <div class="bg-gradient-to-br from-yellow-50 to-yellow-100 p-6 rounded-xl border border-yellow-200 text-center">
+                    <div class="text-3xl font-bold text-yellow-800 mb-2">12</div>
+                    <div class="text-sm text-yellow-600 font-medium">Pendentes</div>
+                </div>
+                
+                <div class="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-xl border border-green-200 text-center">
+                    <div class="text-3xl font-bold text-green-800 mb-2">0</div>
+                    <div class="text-sm text-green-600 font-medium">Concluídas</div>
+                </div>
+                
+                <div class="bg-gradient-to-br from-red-50 to-red-100 p-6 rounded-xl border border-red-200 text-center">
+                    <div class="text-3xl font-bold text-red-800 mb-2">4</div>
+                    <div class="text-sm text-red-600 font-medium">Alta Prioridade</div>
+                </div>
+            </div>
+            
+            <!-- Progresso por Responsável -->
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-lg border border-gray-200">
+                    <h3 class="font-bold text-gray-800 mb-4">Pedro Vitor (PV)</h3>
+                    <div class="space-y-2">
+                        <div class="flex justify-between text-sm">
+                            <span>Progresso:</span>
+                            <span class="font-semibold">0/5 (0%)</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div class="bg-blue-600 h-2 rounded-full" style="width: 0%"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg border border-gray-200">
+                    <h3 class="font-bold text-gray-800 mb-4">Gui (Secretário)</h3>
+                    <div class="space-y-2">
+                        <div class="flex justify-between text-sm">
+                            <span>Progresso:</span>
+                            <span class="font-semibold">0/1 (0%)</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div class="bg-green-600 h-2 rounded-full" style="width: 0%"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg border border-gray-200">
+                    <h3 class="font-bold text-gray-800 mb-4">Equipe Jurídica</h3>
+                    <div class="space-y-2">
+                        <div class="flex justify-between text-sm">
+                            <span>Progresso:</span>
+                            <span class="font-semibold">0/1 (0%)</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div class="bg-purple-600 h-2 rounded-full" style="width: 0%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Deliberações (mantida do original) -->
+        <section class="card page-break-before pdf-break-deliberacoes">
+            <h2 class="section-title text-blue-800">📝 Deliberações por Bloco</h2>
+            <div class="bg-blue-50 p-4 rounded-lg mb-6 border border-blue-200">
+                <p class="text-sm text-blue-700"><strong>📋 Formato padrão:</strong> Cada tópico apresenta → Resumo da Discussão → Decisão Tomada → Ações Definidas (com IDs)</p>
+            </div>
+            
+            <div class="space-y-8">
+                <div class="border-l-4 border-blue-500 pl-6 bg-blue-50 p-6 rounded-r-lg no-page-break">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-blue-500 text-white rounded-full flex items-center justify-center font-bold text-lg mr-4">1</div>
+                        <h3 class="text-xl font-bold text-blue-800">🎯 Alinhamento Estratégico</h3>
+                    </div>
+                    
+                    <div class="space-y-6">
+                        <div class="bg-white p-4 rounded-lg border border-blue-200">
+                            <h4 class="font-semibold text-blue-800 mb-3">1.1 🎨 Manifesto: Missão, Visão e Propósito</h4>
+                            <div class="space-y-2 text-sm">
+                                <p><strong class="text-gray-800">💬 Resumo:</strong> Foi apresentado um manifesto provisório com a missão de "transformar ideias de impacto através da colaboração inteligente e tecnologia". O propósito central é "promover o crescimento mútuo de pessoas e áreas através da tecnologia, colaboração e troca de ideias". A empresa combinará validação de especialistas (os próprios sócios) com o uso de IA para criar produtos e serviços escaláveis, formalizando uma parceria profissional entre amigos que compartilham sonhos e valores.</p>
+                                <p><strong class="text-gray-800">⚖️ Decisão D-001:</strong> <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800">✅ APROVADO</span> Aprovar o conceito do manifesto como a base da identidade da empresa.</p>
+                                <p><strong class="text-gray-800">🔧 Ação A-001:</strong> <span class="text-gray-600">Redigir a versão final do Manifesto para documentação interna. | 👤 Responsável: Participante 2 (PV)</span></p>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white p-4 rounded-lg border border-blue-200">
+                            <h4 class="font-semibold text-blue-800 mb-3">1.2 💎 Valores e Princípios</h4>
+                            <div class="space-y-2 text-sm">
+                                <p><strong class="text-gray-800">💬 Resumo:</strong> Foi realizada uma dinâmica colaborativa para levantar os valores positivos e negativos. Os valores positivos centrais identificados foram: **Inovação Responsável, Colaboração, Excelência Técnica, Ética e Transparência, Sustentabilidade e Conhecimento Mútuo**. Outros valores mencionados incluem lealdade, união, profissionalismo e proatividade. A discussão reforçou que a ética é um pilar fundamental e que o fracasso neste ponto comprometeria todo o projeto.</p>
+                                <p><strong class="text-gray-800">⚖️ Decisão D-002:</strong> <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800">✅ APROVADO</span> Adotar a lista de valores discutidos como os princípios norteadores da empresa.</p>
+                                <p><strong class="text-gray-800">🔧 Ação A-002:</strong> <span class="text-gray-600">Consolidar a nuvem de palavras da dinâmica e documentar a lista final de valores com breves descrições. | 👤 Responsável: Gui (Secretário)</span></p>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white p-4 rounded-lg border border-blue-200">
+                            <h4 class="font-semibold text-blue-800 mb-3">1.3 📋 Padrões de Projeto e Templates</h4>
+                            <div class="space-y-2 text-sm">
+                                <p><strong class="text-gray-800">💬 Resumo:</strong> Discutiu-se a necessidade crítica de organização e padronização desde o início. Foi definido um fluxo padrão para o desenvolvimento de projetos: 1) Ideia do especialista; 2) Estudo técnico e mapeamento; 3) Planejamento e prototipagem; 4) Validação interna pelos sócios; 5) Refinamento contínuo; 6) Lançamento de piloto no mercado. Todas as ideias devem ser formalizadas através de um template.</p>
+                                <p><strong class="text-gray-800">⚖️ Decisão D-003:</strong> <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800">✅ DEFINIDO</span> Implementar um sistema padronizado obrigatório para a proposição e gestão de todos os projetos.</p>
+                                <p><strong class="text-gray-800">🔧 Ação A-003:</strong> <span class="text-gray-600">Criar o template formal para submissão de ideias de projeto (contendo no mínimo: Título, Problema, Público-Alvo, Solução Proposta). | 👤 Responsável: Participante 2 (PV)</span></p>
+                                <p><strong class="text-gray-800">🔧 Ação A-004:</strong> <span class="text-gray-600">Definir e documentar o fluxo de projeto (idea-to-launch). | 👤 Responsável: Participante 2 (PV)</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Outras seções de deliberações... -->
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-center mt-12 py-8 border-t-2 border-blue-200 bg-gradient-to-r from-blue-50 to-indigo-50">
+            <div class="max-w-4xl mx-auto">
+                <h3 class="text-lg font-bold text-blue-800 mb-2">📄 ATA OFICIAL - ENHANCED</h3>
+                <p class="text-sm text-gray-600 mb-4">Registro formal da Reunião de Fundação e Estruturação com Lista de Tasks</p>
+                
+                <div class="bg-blue-100 p-4 rounded-lg border border-blue-300">
+                    <p class="text-sm text-blue-800">
+                        <strong>🔒 Confidencialidade:</strong> Este documento contém informações confidenciais. 
+                        Distribuição restrita aos participantes autorizados.
+                    </p>
+                </div>
+                
+                <div class="mt-6 text-xs text-gray-500">
+                    <p>Documento gerado em: <span id="timestamp"></span></p>
+                </div>
+            </div>
+        </footer>
+        
+        <script>
+            // Atualizar timestamp automaticamente
+            document.getElementById('timestamp').textContent = new Date().toLocaleString('pt-BR');
+        </script>
+
+    </div>
+</body>
+</html>

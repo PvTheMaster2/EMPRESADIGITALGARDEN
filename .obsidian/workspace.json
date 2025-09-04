@@ -11,17 +11,14 @@
             "id": "4ca5e60f82f92c3e",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "content/canvas multisocios.canvas",
-                "viewState": {
-                  "x": 1519.4923049854126,
-                  "y": 1048.9662384453718,
-                  "zoom": -2.360563538940987
-                }
+                "file": "content/4-Projetos/Ativos/PRJ-OCR-Text-Generator.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-layout-dashboard",
-              "title": "canvas multisocios"
+              "icon": "lucide-file",
+              "title": "PRJ-OCR-Text-Generator"
             }
           }
         ]
@@ -522,31 +519,40 @@
       "smart-connections:Open: Smart Chat Conversation": false
     }
   },
-  "active": "4ca5e60f82f92c3e",
+  "active": "3e6d224aebbb97dc",
   "lastOpenFiles": [
-    "content/0-Dashboard-Executivo/📊 Análise Crítica das Queries Dataview do Vault Empresarial.pdf",
-    "content/canvas.canvas",
-    "content/canvas multisocios.canvas",
-    "content/canvas multisocios.txt",
-    "content/Novo(a) Documento de Texto.txt",
+    "ata_reuniao_03/teamplate ata.html",
+    "ata_reuniao_03/cazer.html",
+    "ata_reuniao_03/ATA-30_08_25 - REUNIÃOINICIAL-R00-ENHANCED.html",
+    "content.zip",
+    "ata_reuniao_03/ATA-30_08_25 - REUNIÃOINICIAL-R00.html",
+    "ata_reuniao_03/cazer.canvas",
+    "ata_reuniao_03/09",
+    "ata_reuniao_03",
     "content/0-Dashboard-Executivo/Executive-Auto.md",
-    "content/0-Dashboard-Executivo/GUIA-Dashboard-Central.md",
-    "content/canvas.txt",
-    "content/canvas.tx",
-    "build/dist/conhecimento/00-introduo-high-level-ai/index.html",
-    "build/dist/conhecimento/00-introduo-high-level-ai",
-    "build/dist/_redirects",
+    "content/4-Projetos/Ativos/PRJ-OCR-Text-Generator.md",
+    "content/0-Dashboard-Executivo/Decisoes-Estrategicas.md",
     "content/0-Dashboard-Executivo/Dashboard-Auto-Real.md",
+    "content/0-Dashboard-Executivo/Dashboard_Capacidade_Equipe.md",
+    "content/0-Dashboard-Executivo/📊 Análise Crítica das Queries Dataview do Vault Empresarial.pdf",
+    "content/canvas multisocios.canvas",
+    "Template_Decisao.md",
+    "Template_Reuniao_Conselho.md",
+    "Template_Reuniao.md",
+    "Template_FollowUp.md",
+    "content/1-Governanca/Acordo_Socios_Final.md",
+    "content/1-Governanca/Compliance_Log.md",
+    "content/1-Governanca/FAQ_Compliance.md",
+    "docs/teste/scriptpython.py",
+    "docs/teste",
+    "content/canvas.canvas",
+    "content/canvas multisocios.txt",
+    "content/0-Dashboard-Executivo/GUIA-Dashboard-Central.md",
     "compilado vault.md",
     "content/0-Dashboard-Executivo/Dashboard-Central-Integrado.md",
     "content/0-Dashboard-Executivo/Dashboard-Projetos-Prazo.md",
-    "content/0-Dashboard-Executivo/Dashboard_Capacidade_Equipe.md",
-    "content/0-Dashboard-Executivo/Decisoes-Estrategicas.md",
     "content/7-Conhecimento/00 - INTRODUÇÃOÀ HIGH LEVEL AI.md",
     "content/2-Equipes/Pedro-Vitor.md",
-    "build/dist/dashboard-executivo/dashboard-auto-real/index.html",
-    "build/dist/dashboard-executivo/dashboard-auto-real",
-    "build/dist/equipes/pedro-vitor/index.html",
     "content/2-Equipes/Carlos-Mendes.md",
     "content/2-Equipes/Ana-Silva.md",
     "content/2-Equipes/Arthur.md",
@@ -554,14 +560,6 @@
     "TESTE-VALIDACAO-FINAL.md",
     "PLANO.md",
     "compile projeto whastbot.md",
-    "content/4-Projetos/Em-Desenvolvimento/PRJ-Dev-WhatsBot-Academia.md",
-    "content/4-Projetos/Ativos/PRJ-AERALYN.md",
-    "index.md",
-    "99-RESOURCES/99 - TEMPLATE/TEMPLATE_R00.md",
-    "99-RESOURCES/99 - TEMPLATE/Template_Projeto.md",
-    "99-RESOURCES/99 - TEMPLATE/TEMPLATE OFICIAL.md",
-    "99-RESOURCES/99 - TEMPLATE/Template_Intake_Simples.md",
-    "99-RESOURCES/99 - TEMPLATE/Prompt2.md.md",
     "build/dist/1000-REUNIOES/30_08-25 REUNIAO INICIAL/EXECUTIVO/generation-ed140599-c364-47b1-988e-01557efb3010.png",
     "build/dist/1000-REUNIOES/30_08-25 REUNIAO INICIAL/EXECUTIVO/generation-e6329cba-92f2-4576-b2c4-6ae7594ce644.png",
     "build/dist/images/Imagens/Pasted image 20250422070031.png",
@@ -578,7 +576,6 @@
     "00 - INBOX/00 - ANTIGOS/Untitled.canvas",
     "Untitled.canvas",
     "Untitled 2.canvas",
-    "Untitled 1.canvas",
-    "utils/00 - INBOX/00 - ANTIGOS/Untitled.canvas"
+    "Untitled 1.canvas"
   ]
 }

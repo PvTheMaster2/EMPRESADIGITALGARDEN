@@ -10,7 +10,7 @@ modified: 2025-08-31
 version: "1.0"
 target_audience: Equipe completa
 last_updated: 2025-08-31
-updated: 2025-09-01T01:46
+updated: 2025-09-03T18:53
 ---
 
 # ❓ **FAQ - COMPLIANCE E SISTEMA**

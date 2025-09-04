@@ -8,7 +8,7 @@ created: 2025-08-31
 modified: 2025-08-31
 version: 1
 legal_review: true
-updated: 2025-09-01T01:46
+updated: 2025-09-03T18:53
 ---
 
 # 🤝 **ACORDO SOCIETÁRIO FINAL**
